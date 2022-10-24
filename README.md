@@ -332,7 +332,7 @@ The various types of literals available in Python are as follows:
 
 Numeric literals are used for representing numeric values in the source code. They can be of three types - integers, float point numbers and imaginary numbers.
 
-#### a) Integer Literals
+#### Integer Literals
 
 Integer literals are numbers without any fractional component. 
 
@@ -383,7 +383,7 @@ They are ignored while determining the actual numerical value of the literal.
 
 Some valid underscore usages are - `10_00_00_000`, `0b_1110_0101`, `0x23_123`.
 
-#### b) Floating Point Literals
+#### Floating Point Literals
 
 Floating point literals are real numbers present in the source code. They contain fractional component and/or exponential component.
 
@@ -405,7 +405,7 @@ The exponential component can be identified by the letter `e` or `E` followed by
 
 For example, `3.4E2` is equivalent to `3.4 x 10^2` or `340.0`, whereas `3.4e-2` is equivalent to `3.4 x 10^-2` or `.034`.
 
-#### c) Imaginary Literals
+#### Imaginary Literals
 
 To specify complex numbers and perform complex number mathematics, Python supports imaginary literals which are given by real or integer number followed by the letter `j` or `J` which represents the unit imaginary number.
 
@@ -921,21 +921,21 @@ Often sequence, set and mapping types are also collectively known as **iterables
 
 Numeric data types are used for storing the following types of numbers:
 
-#### i. Integer Numbers
+#### Integer Numbers
 
 Objects holding integer numbers like `-1, 0, 200` are of `int` data type.
 
-#### ii. Real or Floating-point Numbers
+#### Real or Floating-point Numbers
 
 Objects holding real or floating point numbers like `-1.1, 3e2, 20.0` are of `float` data type.
 
-#### iii. Complex Numbers
+#### Complex Numbers
 
 Objects storing complex numbers like `2 + 1j, -3j, -1 + 2J` are of type `complex`. 
 
 Each complex number has two parts, the real part which is a numeric integer or floating point literal, and the imaginary part which is an imaginary literal.
 
-#### iv. Boolean
+#### Boolean
 
 The boolean data type (`bool`) is a subtype of `int`. It stores the evaluated value of expressions represented as keywords - `True` (integer value `1`) and `False` (integer value `0`).
 
@@ -943,19 +943,19 @@ The boolean data type (`bool`) is a subtype of `int`. It stores the evaluated va
 
 An ordered collection of items where each item can be accessed using an integer index is known as a sequence. The following three sequence data types are available in Python:
 
-#### i. String
+#### String
 
 A string (`str` data type) is a sequence of zero or more unicode characters enclosed within a pair of single (`'`) or double (`"`) quotes.
 
 Some example strings are - `"42", 'hello', "python"`.
 
-#### ii. List
+#### List
 
 A `list` is sequence of items of same or different data types which are enclosed within brackets - `[ ]`.
 
 Some example lists are - `[1, 2, 3]`, `['abc', 23, 3.14]`, `['edpunk', 'python']`.
 
-#### iii. Tuple
+#### Tuple
 
 A `tuple` is an immutable sequence of items of same or different data types which are enclosed within parentheses - `( )`. 
 
