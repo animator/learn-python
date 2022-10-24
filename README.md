@@ -19,19 +19,7 @@ This led to the invention of **high-level programming languages** in which progr
 
 There are many high-level programming languages that are currently in wide use. 
 
-Some of the popular languages are:
-
-- Java 
-- C 
-- C++
-- C#
-- Go
-- Swift
-- JavaScript
-- PHP
-- Dart
-- Kotlin
-- Python
+Some of the popular languages are Java, C, C++, C#, Go, Swift, JavaScript, PHP, Dart, Kotlin and Python.
 
 # Python Programming Language
 
@@ -39,11 +27,11 @@ Guido van Rossum started the development of Python in December 1989. He released
 
 The language evolved over the next few decades and so did its definition, the current version of which is stated below:  
 
-**Python is a high-level, interpreted, object-oriented programming language with dynamic semantics.**
+> Python is a high-level, interpreted, object-oriented programming language with dynamic semantics.
 
 Let us break down and analyze the above definition to gain a better understanding of Python:
 
-## High-level
+**High-level**
 
 Python is a **high-level programming language** which can be used to write a program in natural language (english) making it readable, writable, shareable and manageable. 
 
@@ -51,7 +39,7 @@ While developing a Python program one is not required to handle the various comp
 
 Python includes high-level language features like variables, data structures (lists, dictionaries, etc.), objects, expressions, modules, classes, functions, loops, threads, file handling, string handling, error handling and other computer science abstraction concepts.  
 
-## Interpreted
+**Interpreted**
 
 In traditional programming languages like C or C++, codes are compiled into computer-readable machine code before it can be executed. 
 
@@ -59,7 +47,7 @@ Python is an **interpreted language** where the Python interpreter reads and exe
 
 The process is more time consuming compared to compiled code execution, but allows faster development as one does not have to go through the entire compilation step during testing and debugging. Also, the code can run on any platform as long as it has a valid Python installation (which includes interpreter) as there is no generation of platform dependent binaries.
 
-## Object-oriented
+**Object-oriented**
 
 Python does not enforce **Object-oriented programming (OOP)**, but completely supports it. 
 
@@ -67,7 +55,7 @@ A programmer can define Classes specifying the data in the form of attributes (o
 
 In Python, everything (`int`, `list`, `dict`, etc.) is an object. We will cover more about objects in detail in the later sections.
 
-## Dynamic Semantics
+**Dynamic Semantics**
 
 As Python is an interpreted language in which the code is executed line-by-line, a python statement or expression is evaluated during run-time. This allows **dynamic typing** (type of a variable can change over its lifetime) and creation of dynamic objects during run-time, which provides more flexibility, usability and fewer lines of code as compared to statically-typed compiled languages like C/C++.
 
@@ -75,11 +63,11 @@ As Python is an interpreted language in which the code is executed line-by-line,
 
 The key advantages of Python are as follows:  
 
-## 1. Easy to Learn
+**1. Easy to Learn**
 
 The Python programming language is easy to learn with low technical and conceptual overhead. This makes it an ideal language for beginners to learn programming.
 
-## 2. Clear Syntax & Fewer Lines of Code
+**2. Clear Syntax & Fewer Lines of Code**
 
 Python's simple and easy to learn syntax increases code readability and leads to fewer lines of code. 
 
@@ -87,21 +75,21 @@ A typical task which requires an average of twenty lines of code in C and seven 
 
 Also, due to fewer lines of code the chances of making any error is significantly reduced.
 
-## 3. Open Source
+**3. Open Source**
 
 Python is an open source programming language, so anyone can view and contribute to its source code.
 
-## 4. Portable & Platform Independent
+**4. Portable & Platform Independent**
 
 The Python programming language is portable & platform independent as it can work on any Linux, MacOS or Windows device.
 
-## 5. Standard Library & Python Packages
+**5. Standard Library & Python Packages**
 
 Python has a rich and extensive Standard Library, a collection of predefined functions for various tasks. 
 
 Python programmers also have at their disposal the vast ecosystem of more than 250,000 community contributed libraries in the Python Package Index (PyPI), where one can find a solution to every conceivable task.
 
-## 6. Web Application Development
+**6. Web Application Development**
 
 Some of the most popular web development frameworks (django, flask, etc.) are written in Python. This coupled with the availablity of packages to connect to any database makes Python a great choice for web application development.
 
@@ -109,13 +97,13 @@ Some of the most popular web development frameworks (django, flask, etc.) are wr
 
 Let's start with the Python 3 installation process on Windows operating system.
 
-## Step 1: Download Installer
+**Step 1: Download Installer**
 
 Download the latest Windows installer from the [Python Software Foundation website](https://www.python.org/downloads/).
 
 ![Step 1: Download Installer](images/0201a.png)
 
-## Step 2: Install Python 3
+**Step 2: Install Python 3**
 
 Once the download is complete double-click and run it.
 
@@ -125,7 +113,7 @@ Select the checkbox ✅ `Add Python 3.9 to PATH`. This will enable you to instal
 
 Hit 🛡️ `Install Now` and complete the setup.
 
-## Step 3: Verify Installation
+**Step 3: Verify Installation**
 
 Once the setup is complete, click on the `Start` menu and open `Python 3.9 -> IDLE (Python 3.9 64 bit)` to launch the Python interpreter.
 
@@ -139,13 +127,13 @@ Python 3.9 is now successfully installed on your computer.
 
 Let's start with the Python 3 installation process on macOS operating system.
 
-## Step 1: Download Installer
+**Step 1: Download Installer**
 
 Download the latest macOS installer from the [Python Software Foundation website](https://www.python.org/downloads/).
 
 ![Step 1: Download Installer](images/0202a.png)
 
-## Step 2: Install Python 3
+**Step 2: Install Python 3**
 
 Once the download is complete double-click and run it.
 
@@ -153,7 +141,7 @@ Once the download is complete double-click and run it.
 
 Hit `Continue` and complete the setup.
 
-## Step 3: Verify Installation
+**Step 3: Verify Installation**
 
 Once the setup is complete, click on the `Launchpad -> IDLE` to launch the Python interpreter.
 
@@ -172,7 +160,7 @@ There are two ways to execute a Python program:
 
 # Interactive Mode
 
-In this section, we will execute some basic Python statements and interact with the Python shell.
+Let us execute some basic Python statements and interact with the Python shell.
 
 ## Launching the Python Shell
 
@@ -458,7 +446,7 @@ Example imaginary literals:
 3.5e-10j
 ```
 
-### Points to Note
+**Points to Note**
 
 In Python,
 
@@ -576,7 +564,7 @@ They can be classified based on utility as follows:
 - creating collection of literals like list display, dictionary display, set display.
 - creating parenthesized sub-expression having the highest operator precedence (evaluated first) in a complex expression.
 
-Example:
+**Example**
 
 ``` python
 days = ['Sunday', 'Monday', 
@@ -629,9 +617,9 @@ Each code block contains one or more statements which are enclosed between brace
 
 A sample C++/Java code is provided below which checks for an input `x`.
 
-## C++
+**C++**
 
-```c++
+``` c++
 if (x < 10) {
     cout << "x is less than 10" << endl;
     if (x <= 5) {
@@ -646,9 +634,9 @@ else {
 }
 ```
 
-## Java
+**Java**
 
-```java
+``` java
 if (x < 10) {
     System.out.println("x is less than 10");
     if (x <= 5) {
@@ -2235,7 +2223,7 @@ This error has to be rectified to execute the program correctly.
 
 When a syntactically incorrect statement is executed in the Python console (interactive mode), the Python interpreter displays it and also adds a little arrow (`^`) pointing at the entry point or token where the error was detected.
 
-### Example
+**Example**
 
 ``` python
 >>> while True print('Hi!')
