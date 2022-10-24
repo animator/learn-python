@@ -292,7 +292,7 @@ Python is a new age programming language which supports Unicode encoding standar
 
 This makes Python one of the very few programming languages that support multiple languages as shown in the example below:
 
-#### Code
+**Code**
 
 ``` python
 message = "हिन्दी में print करे"
@@ -305,7 +305,7 @@ print(message)
 print(क + ক + க + ક)
 ```
 
-#### Output
+**Output**
 
 ```
 हिन्दी में print करे
@@ -1302,7 +1302,7 @@ The built-in `print()` function is used to display an output (value of variables
 
 Let us go through a program which computes the area of a rectangle and displays it:
 
-#### Code
+**Code**
 
 ``` python
 length = 10
@@ -1311,7 +1311,7 @@ area = length * breadth
 print("Area:", area)
 ```
 
-#### Output
+**Output**
 
 ```
 Area: 50
@@ -1319,7 +1319,7 @@ Area: 50
 
 `print()` function can also be used to output the value of multiple objects when they are provided as arguments to the function.
 
-#### Code
+**Code**
 
 ``` python
 a = 2 + 2
@@ -1327,7 +1327,7 @@ b = 2 * 3.5
 print(a, b)
 ```
 
-#### Output
+**Output**
 
 ```
 4 7.0
@@ -1339,7 +1339,7 @@ This property can be modified by providing any user defined separator using the 
 
 Let us modify the code and provide `","` as the separator.
 
-#### Code
+**Code**
 
 ``` python
 a = 2 + 2
@@ -1347,7 +1347,7 @@ b = 2 * 3.5
 print(a, b, sep=",")
 ```
 
-#### Output
+**Output**
 
 ```
 4,7.0
@@ -1357,7 +1357,7 @@ When expressions are provided as arguments to the `print()` function, output is 
 
 For example,
 
-#### Code
+**Code**
 
 ``` python
 print(2 + 2)
@@ -1365,7 +1365,7 @@ print(2 * 3.5)
 print("Hello, " + "world!")
 ```
 
-#### Output
+**Output**
 
 ```
 4
@@ -1377,7 +1377,7 @@ In the above code snippet, each `print()` function invocation creates a new line
 
 This can be modified by the user as shown below:
 
-#### Code
+**Code**
 
 ``` python
 print(2 + 2, end=",")
@@ -1385,7 +1385,7 @@ print(2 * 3.5, end=";")
 print("Hello, " + "world!")
 ```
 
-#### Output
+**Output**
 
 ```
 4,7.0;Hello, world!
@@ -2348,7 +2348,7 @@ The `raise` statement can be used to throw an exception in a program. The except
 
 Let us consider a program which accepts two numbers (`a` and `b`) from the user and prints the result `a/b`.
 
-#### Code
+**Code**
 
 ``` python
 a = int(input("Enter a: "))
@@ -2356,7 +2356,7 @@ b = int(input("Enter b: "))
 print("a/b =", a/b)
 ```
 
-#### Output
+**Output**
 
 ```
 Enter a: 10
@@ -2372,7 +2372,7 @@ It can be observed that the Python interpreter raises a `ZeroDivisionError` when
 
 Now we can modify the above code to raise an exception for such scenarios.
 
-#### Code
+**Code**
 
 ``` python
 a = int(input("Enter a: "))
@@ -2382,7 +2382,7 @@ if b==0:
 print("a/b =", a/b)
 ```
 
-#### Output
+**Output**
 
 ```
 Enter a: 10
@@ -2398,7 +2398,7 @@ An exception is raised, but it is not helpful.
 
 Let us add some custom error message.
 
-#### Code
+**Code**
 
 ``` python
 a = int(input("Enter a: "))
@@ -2408,7 +2408,7 @@ if b==0:
 print("a/b =", a/b)
 ```
 
-#### Output
+**Output**
 
 ```
 Enter a: 10
@@ -2422,7 +2422,7 @@ Exception: b is zero
 
 We can also raise any specific type of error as per the program logic as shown below:
 
-#### Code
+**Code**
 
 ``` python
 a = int(input("Enter a: "))
@@ -2432,7 +2432,7 @@ if b==0:
 print("a/b =", a/b)
 ```
 
-#### Output
+**Output**
 
 ```
 Enter a: 10
@@ -2452,7 +2452,7 @@ If the test expression’s value is `True`, the code execution continues normall
 
 An `AssertionError` is raised if the value is `False`.
 
-#### Code
+**Code**
 
 ``` python
 a = 3
@@ -2461,7 +2461,7 @@ assert a == b
 c = 5
 ```
 
-#### Output
+**Output**
 
 ```
 Traceback (most recent call last):
@@ -2473,7 +2473,7 @@ AssertionError
 
 The statement also allows for a message to be attached to the `AssertionError`.
 
-#### Code
+**Code**
 
 ``` python
 a = 3
@@ -2610,7 +2610,7 @@ Let us go through some programming problems which utilize selection statements.
 
 Write a program to output the magnitude of difference between two numbers using conditional statement.
 
-#### Code
+**Code**
 
 ``` python
 n1 = int(input("Enter 1st number: "))
@@ -2624,7 +2624,7 @@ else:
 print("The difference of", n1, "and", n2, "is", diff)
 ```
 
-#### Output
+**Output**
 
 ```
 Enter 1st number: 12
@@ -2636,7 +2636,7 @@ The difference of 12 and 15 is 3
 
 Write a program to accept 3 numbers from the user and print them in ascending order of value.
 
-#### Code
+**Code**
 
 ``` python
 a = int(input("Enter 1st number: "))
@@ -2655,7 +2655,7 @@ if c < b:
 print("The numbers in sorted order:", a, ",", b, ",", c)
 ```
 
-#### Output
+**Output**
 
 ```
 Enter 1st number: 9
@@ -2668,7 +2668,7 @@ The numbers in sorted order: 2 , 6 , 9
 
 Write a program to accept two numbers and test if the first number is divisible by the second number.
 
-#### Code
+**Code**
 
 ``` python
 a = int(input("Enter 1st number: "))
@@ -2680,7 +2680,7 @@ else:
     print(a, "is not divisible by", b)
 ```
 
-#### Output
+**Output**
 
 ```
 Enter 1st number: 9
@@ -2707,7 +2707,7 @@ Let us go through some code examples to demonstrate how `for` statement can be u
 
 ## List Iteration
 
-### Code
+**Code**
 
 ``` python
 cars = ["Hyundai", "Honda", 
@@ -2717,7 +2717,7 @@ for make in cars:
     print(make)
 ```
 
-### Output
+**Output**
 
 ```
 Hyundai
@@ -2730,7 +2730,7 @@ Volkswagen
 
 ## Tuple Iteration
 
-### Code
+**Code**
 
 ``` python
 cars = ("Hyundai", "Honda", 
@@ -2740,7 +2740,7 @@ for make in cars:
     print(make)
 ```
 
-### Output
+**Output**
 
 ```
 Hyundai
@@ -2753,7 +2753,7 @@ Volkswagen
 
 ## String Iteration
 
-### Code
+**Code**
 
 ``` python
 name = "python"
@@ -2761,7 +2761,7 @@ for char in name:
     print(char)
 ```
 
-### Output
+**Output**
 
 ```
 p
@@ -2794,14 +2794,14 @@ range(0, 10)
 
 Print multiples of 5 starting from 0 to 20.
 
-#### Code
+**Code**
 
 ``` python
 for i in range(5):
     print(i*5)
 ```
 
-#### Output
+**Output**
 
 ```
 0
@@ -2815,14 +2815,14 @@ for i in range(5):
 
 Print all integers from 2 to 5 including the boundary values.
 
-#### Code
+**Code**
 
 ``` python
 for i in range(2, 6):
     print(i)
 ```
 
-#### Output
+**Output**
 
 ```
 2
@@ -2835,7 +2835,7 @@ for i in range(2, 6):
 
 Print all odd numbers between 2 and 10.
 
-#### Code
+**Code**
 
 ``` python
 for i in range(3, 10, 2):
@@ -2850,7 +2850,7 @@ for i in range(2, 10):
         print(i)
 ```
 
-#### Output
+**Output**
 
 ```
 3
@@ -2863,7 +2863,7 @@ for i in range(2, 10):
 
 Print the index of all occurrences of `o` in `python programming`.
 
-#### Code
+**Code**
 
 ``` python
 s = "python programming"
@@ -2872,7 +2872,7 @@ for i in range(len(s)):
         print(i)
 ```
 
-#### Output
+**Output**
 
 ```
 4
@@ -2887,7 +2887,7 @@ Let us go through some programming problems which utilize the `for` iteration st
 
 Write a program to calculate the total compound interest payable for given principal, interest rate (compounded annually) and total time (in years).
 
-#### Code
+**Code**
 
 ``` python
 prin = float(input("Enter the principal amount: "))
@@ -2901,7 +2901,7 @@ for n in range(time):
 print("Total interest payable:", amt - prin)
 ```
 
-#### Output
+**Output**
 
 ```
 Enter the principal amount: 500000
@@ -2916,7 +2916,7 @@ The factorial of a positive integer `n`, denoted by `n!`, is the product of all 
 `n! = n×(n-1)×(n-2)...3×2×1`  
 Write a program to calculate `n!` for a given `n` (assume `n` is greater than `0`).
 
-#### Code
+**Code**
 
 ``` python
 n = int(input("Enter n: "))
@@ -2928,7 +2928,7 @@ for i in range(1, n+1):
 print("n! :", factorial)
 ```
 
-#### Output
+**Output**
 
 ```
 Enter n: 6
@@ -2946,7 +2946,7 @@ A flowchart of the process is provided below:
 
 For example, let us traverse a list and print the position(index) and value of each element until we reach the end of the list.
 
-#### Code
+**Code**
 
 ``` python
 cars = ["Hyundai", "Honda", 
@@ -2958,7 +2958,7 @@ while i<len(cars):
     i+=1
 ```
 
-#### Output
+**Output**
 
 ```
 0 Hyundai
@@ -2979,7 +2979,7 @@ Let us go through some programming problems which utilize the `while` iteration 
 
 Write a program to calculate the total compound interest payable for given principal, interest rate (compounded annually) and total time (in years).
 
-#### Code
+**Code**
 
 ``` python
 prin = float(input("Enter the principal amount: "))
@@ -2994,7 +2994,7 @@ while time > 0:
 print("Total interest payable:", amt - prin)
 ```
 
-#### Output
+**Output**
 
 ```
 Enter the principal amount: 500000
@@ -3009,7 +3009,7 @@ The factorial of a positive integer `n`, denoted by `n!`, is the product of all 
 `n! = n×(n-1)×(n-2)...3×2×1`   
 Write a program to calculate `n!` for a given `n` (assume `n` is greater than `0`).
 
-#### Code
+**Code**
 
 ``` python
 n = int(input("Enter n: "))
@@ -3022,7 +3022,7 @@ while n > 0:
 print("n! :", factorial)
 ```
 
-#### Output
+**Output**
 
 ```
 Enter n: 6
@@ -3094,7 +3094,7 @@ SyntaxError: unexpected EOF while parsing
 
 For example,
 
-#### Code
+**Code**
 
 ``` python
 l = [2, 3, 4, 5, 6]
@@ -3105,7 +3105,7 @@ for i in l:
         print(i, "is not divisible by 3")
 ```
 
-#### Output
+**Output**
 
 ```
 2 is not divisible by 3
@@ -3202,7 +3202,7 @@ Let us go through a nested loop example:
 
 Write a program to print the factorial of all numbers in the range `1` to `10` (inclusive).
 
-#### Code
+**Code**
 
 ``` python
 for n in range(1, 11):
@@ -3212,7 +3212,7 @@ for n in range(1, 11):
     print(n,"! =", factorial)
 ```
 
-#### Output
+**Output**
 
 ```
 1 ! = 1
@@ -3233,7 +3233,7 @@ A `break` statement inside the inner loop terminates only the inner loop whereas
 
 To develop a better understanding, let us write a program to find all prime numbers between 2 and 40.
 
-#### Code
+**Code**
 
 ``` python
 for n in range(2, 40):
@@ -3246,7 +3246,7 @@ for n in range(2, 40):
         print(n,"is prime")
 ```
 
-#### Output
+**Output**
 
 ```
 2 is prime
@@ -3853,7 +3853,7 @@ ValueError: substring not found
 
 As a string is a sequence of characters, the `for` statement can be used to iterate over a string as shown below.
 
-#### Code
+**Code**
 
 ``` python
 name = "python"
@@ -3861,7 +3861,7 @@ for char in name:
     print(char)
 ```
 
-#### Output
+**Output**
 
 ```
 p
@@ -3876,7 +3876,7 @@ n
 
 A `while` statement can be used to traverse a string by iterating on the value of index till the last character index.
 
-#### Code
+**Code**
 
 ``` python
 name = "python"
@@ -3886,7 +3886,7 @@ while i < len(name):
     i += 1
 ```
 
-#### Output
+**Output**
 
 ```
 p
@@ -4140,7 +4140,7 @@ Python provides 2 ways to traverse a list:
 
 As a list is an ordered collection of items, the `for` statement can be used to directly and sequentially access each item.
 
-#### Code
+**Code**
 
 ``` python
 l = ["BMW", "Z4", 2019, 
@@ -4149,7 +4149,7 @@ for item in l:
     print(item)
 ```
 
-#### Output
+**Output**
 
 ```
 BMW
@@ -4168,7 +4168,7 @@ This index value can be used to access the item at that index in a list using th
 
 `for` statement can be used to iterate over the index of the list using the `range()` and `len()` functions. 
 
-#### Code
+**Code**
 
 ``` python
 l = ["BMW", "Z4", 2019, 
@@ -4177,7 +4177,7 @@ for i in range(len(l)):
     print(i, l[i])
 ```
 
-#### Output
+**Output**
 
 ```
 0 BMW
@@ -4192,7 +4192,7 @@ This method is also useful when you need to modify the items of a list (without 
 
 For example, let us convert each item of the list into a string.
 
-#### Code
+**Code**
 
 ``` python
 l = ["BMW", "Z4", 2019, 
@@ -4203,7 +4203,7 @@ for i in range(len(l)):
 print(l)
 ```
 
-#### Output
+**Output**
 
 ```
 ['BMW', 'Z4', '2019', '4', 'Red', 'True']
@@ -4211,7 +4211,7 @@ print(l)
 
 A `while` statement can be used to traverse a list by iterating on the value of index till the last item index.
 
-#### Code
+**Code**
 
 ``` python
 l = ["BMW", "Z4", 2019, 
@@ -4222,7 +4222,7 @@ while i < len(l):
     i += 1
 ```
 
-#### Output
+**Output**
 
 ```
 BMW
@@ -4539,7 +4539,7 @@ Write a program to find the minimum, maximum and mean of values stored in a list
 
 ### Without Using Built-in Functions
 
-#### Code
+**Code**
 
 ``` python
 #create an empty list
@@ -4571,7 +4571,7 @@ print("Maximum :", maxval)
 print("Mean :", s/n)
 ```
 
-#### Output
+**Output**
 
 ```
 Enter length of list: 5
@@ -4587,7 +4587,7 @@ Mean : 4.2
 
 ### Using Built-in Functions
 
-#### Code
+**Code**
 
 ``` python
 #create an empty list
@@ -4604,7 +4604,7 @@ print("Maximum :", max(l))
 print("Mean :", sum(l)/n)
 ```
 
-#### Output
+**Output**
 
 ```
 Enter length of list: 5
@@ -4622,7 +4622,7 @@ Mean : 4.2
 
 Write a program to enter a list and then check if the number entered by a user is present in that list.
 
-#### Code
+**Code**
 
 ``` python
 #create an empty list
@@ -4647,7 +4647,7 @@ else:
     print("Search value not found")
 ```
 
-#### Output
+**Output**
 
 ```
 Enter length of list: 4
@@ -4673,7 +4673,7 @@ Write a program to enter a list and then print the frequency of elements present
 
 ### Without Using Built-in Functions
 
-#### Code
+**Code**
 
 ``` python
 #create an empty list
@@ -4705,7 +4705,7 @@ for idx in range(len(items)):
     print(items[idx], "-", counts[idx])
 ```
 
-#### Output
+**Output**
 
 ```
 Enter length of list: 8
@@ -4727,7 +4727,7 @@ Frequency of Elements
 
 ### Using Built-in Functions
 
-#### Code
+**Code**
 
 ``` python
 l = []
@@ -4748,7 +4748,7 @@ for val in l:
         print(val, "-", l.count(val))
 ```
 
-#### Output
+**Output**
 
 ```
 Enter length of list: 8
@@ -4976,7 +4976,7 @@ Python provides 2 ways to traverse a tuple:
 
 As a tuple is an ordered collection of items, the `for` statement can be used to directly and sequentially access each item.
 
-#### Code
+**Code**
 
 ``` python
 t = ("BMW", "Z4", 2019, 
@@ -4985,7 +4985,7 @@ for item in t:
     print(item)
 ```
 
-#### Output
+**Output**
 
 ```
 BMW
@@ -5004,7 +5004,7 @@ This index value can be used to access the item at that index in a tuple using t
 
 `for` statement can be used to iterate over the index of the tuple using the `range()` and `len()` functions. 
 
-#### Code
+**Code**
 
 ``` python
 t = ("BMW", "Z4", 2019, 
@@ -5013,7 +5013,7 @@ for i in range(len(t)):
     print(t[i])
 ```
 
-#### Output
+**Output**
 
 ```
 BMW
@@ -5026,7 +5026,7 @@ True
 
 A `while` statement can be used to traverse a tuple by iterating on the value of index.
 
-#### Code
+**Code**
 
 ``` python
 t = ("BMW", "Z4", 2019, 
@@ -5037,7 +5037,7 @@ while index < len(t):
     index += 1
 ```
 
-#### Output
+**Output**
 
 ```
 BMW
@@ -5533,7 +5533,7 @@ for key in d:
     print(key,":", d[key])
 ```
 
-#### Output
+**Output**
 
 ```
 yr : 20
@@ -5558,7 +5558,7 @@ dict_items([('yr', 20), ('name', 'Ed'), (18, True)])
 
 `dict_keys`, `dict_values` and `dict_items` are iterables that can be used in a `for` statement to traverse the dictionary.
 
-#### Code
+**Code**
 
 ``` python
 d = {"yr": 20, "name": "Ed", 
@@ -5567,7 +5567,7 @@ for key in d.keys():
     print(key)
 ```
 
-#### Output
+**Output**
 
 ```
 yr
@@ -5575,7 +5575,7 @@ name
 18
 ```
 
-#### Code
+**Code**
 
 ``` python
 d = {"yr": 20, "name": "Ed", 
@@ -5584,7 +5584,7 @@ for value in d.values():
     print(value)
 ```
 
-#### Output
+**Output**
 
 ```
 20
@@ -5592,7 +5592,7 @@ Ed
 True
 ```
 
-#### Code
+**Code**
 
 ``` python
 d = {"yr": 20, "name": "Ed", 
@@ -5601,7 +5601,7 @@ for key, value in d.items():
     print(key,":", value)
 ```
 
-#### Output
+**Output**
 
 ```
 yr : 20
@@ -5679,7 +5679,7 @@ print(d[1])
 print(d[2]["name"])
 ```
 
-#### Output
+**Output**
 
 ``` python
 {'name': 'Amar', 'age': 19}
@@ -5691,7 +5691,7 @@ Ria
 
 Write a program to count the number of times a character appears in a given string.
 
-#### Code
+**Code**
 
 ``` python
 d = {}
@@ -5707,7 +5707,7 @@ for key in d:
     print(key, "-", d[key])
 ```
 
-#### Output
+**Output**
 
 ```
 Enter string: pythondata
@@ -5726,7 +5726,7 @@ a - 2
 
 Write a program to enter employee names and their salaries as input and store them in a dictionary.
 
-#### Code
+**Code**
 
 ``` python
 n = int(input("Enter number of employees: "))
@@ -5741,7 +5741,7 @@ for key in emp:
     print(key, '-', emp[key])
 ```
 
-#### Output
+**Output**
 
 ```
 Enter number of employees: 3
@@ -5912,14 +5912,14 @@ Python provides the following built-in functions to handle user input and result
 
 When this function is encountered in the code, the python interpreter waits for the user to type a response which is read as a string.
 
-#### Code
+**Code**
 
 ``` python
 name = input("Enter name: ")
 print("Hello,", name)
 ```
 
-#### Output
+**Output**
 
 ```
 Enter name: Python
@@ -5932,7 +5932,7 @@ The built-in `print()` function can be used to display an output (value of varia
 
 For example, the below code computes the area of a rectangle and displays it:
 
-#### Code
+**Code**
 
 ``` python
 length = 10
@@ -5941,7 +5941,7 @@ area = length * breadth
 print("Area:", area)
 ```
 
-#### Output
+**Output**
 
 ```
 Area: 50
@@ -6370,7 +6370,7 @@ Hello World
 Thank You
 ```
 
-#### Code
+**Code**
 
 ``` python
 >>> f = open('info.txt', 'r')
@@ -6402,7 +6402,7 @@ Hello World
 Thank You
 ```
 
-#### Code
+**Code**
 
 ``` python
 >>> f = open('info.txt', 'r')
@@ -6423,7 +6423,7 @@ Thank You
 
 Since `readline()` returns one row at a time, it can be used in a `while` statement to iterate over the data row-wise. Once it reaches the end of file it returns an empty string.
 
-#### Code
+**Code**
 
 ``` python
 f = open('info.txt', 'r')
@@ -6441,7 +6441,7 @@ while line:
 f.close()
 ```
 
-#### Output
+**Output**
 
 ```
 Hello World
@@ -6450,7 +6450,7 @@ Thank You
 
 `for` statement can also be used to traverse the file row-wise without any requirement of the `readline()` method. Simply iterating over the file object returns the data one row at a time.
 
-#### Code
+**Code**
 
 ``` python
 f = open('info.txt', 'r')
@@ -6463,7 +6463,7 @@ for line in f:
 f.close()
 ```
 
-#### Output
+**Output**
 
 ```
 Hello World
@@ -6483,7 +6483,7 @@ Hello World
 Thank You
 ```
 
-#### Code
+**Code**
 
 ``` python
 >>> f = open('info.txt', 'r')
@@ -6657,7 +6657,7 @@ Write a program which performs the following Record Keeping activities:
 - add some more data to the file
 - show the entire contents of the file
 
-#### Code
+**Code**
 
 ``` python
 import pickle
@@ -6798,7 +6798,7 @@ Akash,Science,92.0
 Ira,Science,99.0
 ```
 
-#### Code
+**Code**
 
 ``` python
 import csv
@@ -6809,7 +6809,7 @@ with open('marks.csv',
         print(row)
 ```
 
-#### Output
+**Output**
 
 ```
 ['Name', 'Subject', 'Marks']
@@ -6835,7 +6835,7 @@ Akash|^Physics|Chemistry|Biology^|92.0
 Ira|^Physics|Chemistry|Biology^|99.0
 ```
 
-#### Code
+**Code**
 
 ``` python
 import csv
@@ -6848,7 +6848,7 @@ with open('marks2.csv',
         print(row)
 ```
 
-#### Output
+**Output**
 
 ```
 ['Name', 'Average Of', 'Marks']
@@ -6919,7 +6919,7 @@ with open('marks.csv', 'w',
     writer.writerows(marks)
 ```
 
-#### Output - marks.csv
+**Output** - marks.csv
 
 ```
 Name;Subject;Marks
@@ -7060,7 +7060,7 @@ Local variables are defined inside a function or a code block and can only be ac
 
 They exist only during the execution of the function or the code block.
 
-#### Code
+**Code**
 
 ``` python
 def triple(a):
@@ -7079,7 +7079,7 @@ triple(3)
 print("outside:", result)
 ```
 
-#### Output
+**Output**
 
 ```
 local: 9
@@ -7096,7 +7096,7 @@ They are often used to specify mathematical constants, file path or other such v
 
 Below example demonstrates how the global variable `n` can be accessed by all the functions.
 
-#### Code
+**Code**
 
 ``` python
 n = 10
@@ -7111,7 +7111,7 @@ uno()
 tres()
 ```
 
-#### Output
+**Output**
 
 ```
 10
@@ -7120,7 +7120,7 @@ tres()
 
 In case a variable is defined inside a function with the same name as that of a global variable, then the variable is considered as a local variable and all references made to the variable point to this local variable. 
 
-#### Code
+**Code**
 
 ``` python
 n = 10
@@ -7140,7 +7140,7 @@ uno()
 tres()
 ```
 
-#### Output
+**Output**
 
 ```
 5
@@ -7151,7 +7151,7 @@ Any changes made to a global variable inside a code block or a function can modi
 
 To modify the value of a global variable one can use the `global` keyword as shown in the example below.
 
-#### Code
+**Code**
 
 ``` python
 n = 10
@@ -7170,7 +7170,7 @@ uno()
 tres()
 ```
 
-#### Output
+**Output**
 
 ```
 5
@@ -7184,7 +7184,7 @@ Hence, care should be taken while passing mutable objects.
 
 ## List
 
-#### Code
+**Code**
 
 ``` python
 def repeat(l):
@@ -7198,7 +7198,7 @@ repeat(l)
 print(l)
 ```
 
-#### Output
+**Output**
 
 ```
 [1, 2, 3]
@@ -7207,7 +7207,7 @@ print(l)
 
 ## Dictionary
 
-#### Code
+**Code**
 
 ``` python
 def repeat(d):
@@ -7221,7 +7221,7 @@ repeat(d)
 print(d)
 ```
 
-#### Output
+**Output**
 
 ```
 {'a': 1, 'b': 2, 'c': 3}
@@ -7274,7 +7274,7 @@ import basics
 
 The above `import` statement loads all the functions available in the `basics` module. To access any function in the module, simply type the module name followed by a period (`.`), followed by the function name.
 
-#### Code
+**Code**
 
 ``` python
 import basics
@@ -7284,7 +7284,7 @@ print(sa)
 print(st)
 ```
 
-### Output
+**Output**
 
 ```
 40
@@ -7293,7 +7293,7 @@ print(st)
 
 The `as` keyword can also be used to create an alias which makes it easier and more manageable to use in the program.
 
-#### Code
+**Code**
 
 ``` python
 import basics as ba
@@ -7303,7 +7303,7 @@ print(sa)
 print(st)
 ```
 
-### Output
+**Output**
 
 ```
 40
@@ -7312,7 +7312,7 @@ print(st)
 
 Instead of loading all the functions in a module, the `from` statement can be used to access only specified functions.
 
-#### Code
+**Code**
 
 ``` python
 from basics import adder
@@ -7320,7 +7320,7 @@ sa = adder(20, 10, 10)
 print(sa)
 ```
 
-### Output
+**Output**
 
 ```
 40
@@ -7328,7 +7328,7 @@ print(sa)
 
 To import all functions and global variables in the module the `*` wildcard character can be used.
 
-#### Code
+**Code**
 
 ``` python
 from basics import *
@@ -7336,7 +7336,7 @@ sa = adder(20, 10, 10)
 st = tripler(20)
 ```
 
-### Output
+**Output**
 
 ```
 40
