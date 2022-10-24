@@ -1,393 +1,5 @@
-Learn Python - Table of Contents
+Learn Python by [EdPunk](https://edpunk.com)
 =================
-
-* [Introduction](#introduction)
-   * [Introduction to Programming Languages](#introduction-to-programming-languages)
-   * [Introduction to Python](#introduction-to-python)
-   * [Advantages of Python](#advantages-of-python)
-   * [Installing Python in Windows](#installing-python-in-windows)
-   * [Installing Python in macOS (Apple)](#installing-python-in-macos-apple)
-   * [Execution Modes](#execution-modes)
-   * [Interactive Mode of Execution](#interactive-mode-of-execution)
-   * [Script Mode of Execution](#script-mode-of-execution)
-* [Python Fundamentals](#python-fundamentals)
-   * [Tokens: Introduction](#tokens-introduction)
-   * [Tokens: Keywords](#tokens-keywords)
-   * [Tokens: Identifiers](#tokens-identifiers)
-   * [Tokens: Literals](#tokens-literals)
-      * [Numeric Literals](#numeric-literals)
-         * [Integer Literals](#integer-literals)
-         * [Floating Point Literals](#floating-point-literals)
-         * [Imaginary Literals](#imaginary-literals)
-      * [Boolean Literals](#boolean-literals)
-      * [String Literals](#string-literals)
-      * [Special Literal](#special-literal)
-      * [Collection of Literals](#collection-of-literals)
-   * [Tokens: Operators](#tokens-operators)
-   * [Tokens: Delimiters](#tokens-delimiters)
-      * [Grouping](#grouping)
-      * [Punctuation, Decoration and Annotation](#punctuation-decoration-and-annotation)
-      * [Assignment/Binding](#assignmentbinding)
-   * [Character Set](#character-set)
-   * [Blocks and Indentation](#blocks-and-indentation)
-   * [Comments](#comments)
-      * [Single Line Comments](#single-line-comments)
-      * [Multiline comments](#multiline-comments)
-* [Variables, Objects &amp; Data Types](#variables-objects--data-types)
-   * [What are Objects &amp; Variables?](#what-are-objects--variables)
-   * [Variables &amp; Assignment Statements](#variables--assignment-statements)
-      * [Assignment](#assignment)
-      * [Deletion](#deletion)
-      * [Multiple Assignment](#multiple-assignment)
-      * [Tuple Swapping](#tuple-swapping)
-   * [Built-in Data Types](#built-in-data-types)
-      * [Numeric Types](#numeric-types)
-         * [Integer Numbers](#integer-numbers)
-         * [Real or Floating-point Numbers](#real-or-floating-point-numbers)
-         * [Complex Numbers](#complex-numbers)
-         * [Boolean](#boolean)
-      * [Sequence Types](#sequence-types)
-         * [String](#string)
-         * [List](#list)
-         * [Tuple](#tuple)
-      * [Set Type](#set-type)
-      * [Mapping Type](#mapping-type)
-      * [Special Type](#special-type)
-   * [Type Checking](#type-checking)
-   * [Type Casting](#type-casting)
-      * [Implicit Type Casting](#implicit-type-casting)
-      * [Explicit Type Casting](#explicit-type-casting)
-         * [int()](#int)
-         * [float()](#float)
-         * [str()](#str)
-         * [tuple()](#tuple-1)
-         * [list()](#list-1)
-         * [set()](#set)
-   * [Mutable &amp; Immutable Data Types](#mutable--immutable-data-types)
-      * [Immutable Data Types](#immutable-data-types)
-      * [Mutable Data Types](#mutable-data-types)
-* [Input / Output](#input--output)
-   * [How to Accept User Input](#how-to-accept-user-input)
-   * [Displaying Output](#displaying-output)
-* [Operators &amp; Expressions](#operators--expressions)
-   * [Introduction to Operators](#introduction-to-operators)
-      * [Unary Operators](#unary-operators)
-      * [Binary Operators](#binary-operators)
-      * [Operators in Python](#operators-in-python)
-   * [Arithmetic Operators](#arithmetic-operators)
-      * [Addition](#addition)
-      * [Subtraction](#subtraction)
-      * [Multiplication](#multiplication)
-      * [Division](#division)
-      * [Floor Division](#floor-division)
-      * [Modulus](#modulus)
-      * [Exponent](#exponent)
-   * [Relational Operators](#relational-operators)
-      * [Equals to](#equals-to)
-      * [Not equal to](#not-equal-to)
-      * [Greater than](#greater-than)
-      * [Greater than or equal to](#greater-than-or-equal-to)
-      * [Less than](#less-than)
-      * [Less than or equal to](#less-than-or-equal-to)
-   * [Assignment Operators](#assignment-operators)
-      * [-=](#-)
-      * [*=](#-1)
-      * [/=](#-2)
-      * [//=](#-3)
-      * [**=](#-4)
-      * [%=](#-5)
-   * [Logical Operators](#logical-operators)
-      * [Logical State of Operands](#logical-state-of-operands)
-      * [not](#not)
-      * [or](#or)
-      * [and](#and)
-   * [Identity Operators](#identity-operators)
-   * [Membership Operators](#membership-operators)
-   * [Expressions](#expressions)
-      * [Chained Expression](#chained-expression)
-      * [Conditional Expression](#conditional-expression)
-   * [Operator Precedence with Examples](#operator-precedence-with-examples)
-      * [Exercises](#exercises)
-         * [Example 1](#example-1)
-         * [Example 2](#example-2)
-         * [Example 3](#example-3)
-         * [Example 4](#example-4)
-         * [Example 5](#example-5)
-         * [Example 6](#example-6)
-* [Errors &amp; Exception Handling](#errors--exception-handling)
-   * [Error Types](#error-types)
-   * [Syntax Error](#syntax-error)
-      * [Script Mode](#script-mode)
-      * [Interactive Mode](#interactive-mode)
-   * [Runtime Error](#runtime-error)
-      * [Examples](#examples)
-         * [ZeroDivisionError](#zerodivisionerror)
-         * [NameError](#nameerror)
-         * [KeyError](#keyerror)
-         * [TypeError](#typeerror)
-   * [Logical Error](#logical-error)
-      * [Example](#example)
-   * [Exceptions](#exceptions)
-      * [raise](#raise)
-      * [assert](#assert)
-   * [Exception Handling](#exception-handling)
-* [Control Flow](#control-flow)
-   * [Introduction to Control Flow](#introduction-to-control-flow)
-   * [Sequential Flow](#sequential-flow)
-   * [Selection Statements: if .. else](#selection-statements-if--else)
-      * [Examples](#examples-1)
-         * [Absolute Value](#absolute-value)
-         * [Sorting 3 Numbers](#sorting-3-numbers)
-         * [Divisibility](#divisibility)
-   * [Iteration: for](#iteration-for)
-      * [List Iteration](#list-iteration)
-      * [Tuple Iteration](#tuple-iteration)
-      * [String Iteration](#string-iteration)
-      * [Range Iteration](#range-iteration)
-         * [Example #1](#example-1-1)
-         * [Example #2](#example-2-1)
-         * [Example #3](#example-3-1)
-         * [Example #4](#example-4-1)
-      * [Exercises](#exercises-1)
-         * [Compound Interest](#compound-interest)
-         * [Factorial](#factorial)
-   * [Iteration: while](#iteration-while)
-      * [Exercises](#exercises-2)
-         * [Compound Interest](#compound-interest-1)
-         * [Factorial](#factorial-1)
-   * [Jump Statements](#jump-statements)
-      * [pass](#pass)
-         * [Syntactical Requirement](#syntactical-requirement)
-         * [Skipping Code Execution](#skipping-code-execution)
-         * [Placeholders](#placeholders)
-      * [break](#break)
-      * [continue](#continue)
-   * [Nested Loops](#nested-loops)
-      * [Factorial](#factorial-2)
-      * [Nested Loop - break](#nested-loop---break)
-* [Strings](#strings)
-   * [Strings: Introduction &amp; Creation](#strings-introduction--creation)
-      * [Escape Characters](#escape-characters)
-      * [Unicode Support](#unicode-support)
-      * [Other Types to String](#other-types-to-string)
-   * [Accessing Characters of a String](#accessing-characters-of-a-string)
-      * [Length of String](#length-of-string)
-   * [String Operations](#string-operations)
-      * [Slicing](#slicing)
-      * [Membership](#membership)
-      * [Concatenation](#concatenation)
-      * [Repetition](#repetition)
-   * [Introduction to String Methods](#introduction-to-string-methods)
-   * [Convert Case of Strings](#convert-case-of-strings)
-      * [lower()](#lower)
-      * [upper()](#upper)
-      * [swapcase()](#swapcase)
-      * [capitalize()](#capitalize)
-      * [title()](#title)
-   * [Check Characters of a String](#check-characters-of-a-string)
-      * [isalpha()](#isalpha)
-      * [isdigit()](#isdigit)
-      * [isalnum()](#isalnum)
-      * [isascii()](#isascii)
-      * [islower()](#islower)
-      * [isupper()](#isupper)
-      * [isspace()](#isspace)
-      * [istitle()](#istitle)
-   * [Split a String](#split-a-string)
-      * [partition()](#partition)
-      * [split()](#split)
-   * [Strip Characters from a String](#strip-characters-from-a-string)
-      * [lstrip()](#lstrip)
-      * [rstrip()](#rstrip)
-      * [strip()](#strip)
-   * [Check Prefix or Suffix in a String](#check-prefix-or-suffix-in-a-string)
-   * [Find &amp; Replace Characters in a String](#find--replace-characters-in-a-string)
-      * [count()](#count)
-      * [find()](#find)
-      * [rfind()](#rfind)
-      * [index()](#index)
-      * [rindex()](#rindex)
-      * [replace()](#replace)
-   * [Traversing a String](#traversing-a-string)
-      * [for](#for)
-      * [while](#while)
-* [List](#list-2)
-   * [What is a Python List? How to Create a List?](#what-is-a-python-list-how-to-create-a-list)
-   * [Accessing Items of a List](#accessing-items-of-a-list)
-      * [Length of List](#length-of-list)
-      * [Negative Indexing](#negative-indexing)
-   * [Modifying a List](#modifying-a-list)
-   * [Removing Item from a List](#removing-item-from-a-list)
-   * [List Operations](#list-operations)
-      * [Membership](#membership-1)
-      * [Concatenation](#concatenation-1)
-      * [Repetition](#repetition-1)
-      * [Slicing](#slicing-1)
-   * [Traversing a List](#traversing-a-list)
-      * [Direct Traversal](#direct-traversal)
-      * [Location or Index Based Traversal](#location-or-index-based-traversal)
-   * [Built-in Functions that can be used for a List](#built-in-functions-that-can-be-used-for-a-list)
-   * [Introduction to List Methods](#introduction-to-list-methods)
-   * [Adding Items to a List](#adding-items-to-a-list)
-   * [Removing Items from a List](#removing-items-from-a-list)
-   * [Counting or Locating Items in a List](#counting-or-locating-items-in-a-list)
-   * [Reversing Items](#reversing-items)
-   * [Sorting a List](#sorting-a-list)
-   * [Copying a List](#copying-a-list)
-   * [Nested List](#nested-list)
-   * [List Comprehension](#list-comprehension)
-      * [Member-wise Operation](#member-wise-operation)
-      * [Filtering or Subsequence](#filtering-or-subsequence)
-   * [Sample Programs](#sample-programs)
-      * [Min, Max and Mean](#min-max-and-mean)
-         * [Without Using Built-in Functions](#without-using-built-in-functions)
-         * [Using Built-in Functions](#using-built-in-functions)
-      * [Linear Search](#linear-search)
-      * [Frequency of Elements](#frequency-of-elements)
-         * [Without Using Built-in Functions](#without-using-built-in-functions-1)
-         * [Using Built-in Functions](#using-built-in-functions-1)
-* [Tuple](#tuple-2)
-   * [List vs Tuple](#list-vs-tuple)
-   * [How to Create Tuple?](#how-to-create-tuple)
-      * [tuple()](#tuple-3)
-   * [What is a Singleton?](#what-is-a-singleton)
-   * [Accessing Items of a Tuple](#accessing-items-of-a-tuple)
-      * [Length of Tuple](#length-of-tuple)
-      * [Negative Indexing](#negative-indexing-1)
-   * [Tuples are Immutable](#tuples-are-immutable)
-   * [Tuple Operations](#tuple-operations)
-      * [Membership](#membership-2)
-      * [Concatenation](#concatenation-2)
-      * [Repetition](#repetition-2)
-      * [Tuple Slicing](#tuple-slicing)
-   * [Traversing a Tuple](#traversing-a-tuple)
-      * [Direct Traversal](#direct-traversal-1)
-      * [Location or Index Based Traversal](#location-or-index-based-traversal-1)
-   * [Built-in Functions that can be used for a Tuple](#built-in-functions-that-can-be-used-for-a-tuple)
-   * [Locating Items in a Tuple](#locating-items-in-a-tuple)
-   * [Counting the Occurrence of an Item](#counting-the-occurrence-of-an-item)
-   * [New Tuple with Reversed Items](#new-tuple-with-reversed-items)
-   * [New Tuple with Sorted Items](#new-tuple-with-sorted-items)
-   * [Nested Tuple](#nested-tuple)
-   * [Understanding the Immutable Nature of Tuples](#understanding-the-immutable-nature-of-tuples)
-* [Dictionary](#dictionary)
-   * [What is a Dictionary?](#what-is-a-dictionary)
-   * [How to Create a Dictionary](#how-to-create-a-dictionary)
-      * [Key: Value Pairs](#key-value-pairs)
-      * [Sequence of (key, value) Tuples](#sequence-of-key-value-tuples)
-      * [Keyword/Named Arguments](#keywordnamed-arguments)
-      * [Key and Value Lists](#key-and-value-lists)
-      * [Keys with Default Value](#keys-with-default-value)
-   * [Accessing Items (Key:Value) of a Dictionary](#accessing-items-keyvalue-of-a-dictionary)
-      * [Index Operator []](#index-operator-)
-      * [get()](#get)
-   * [Updating a Dictionary](#updating-a-dictionary)
-      * [Index Operator []](#index-operator--1)
-      * [update()](#update)
-      * [setdefault()](#setdefault)
-   * [Removing an Item (Key:Value) from a Dictionary](#removing-an-item-keyvalue-from-a-dictionary)
-      * [del](#del)
-      * [clear()](#clear)
-      * [pop()](#pop)
-      * [popitem()](#popitem)
-   * [Dictionary Operations](#dictionary-operations)
-      * [Membership](#membership-3)
-      * [Union](#union)
-   * [Traversing a Dictionary](#traversing-a-dictionary)
-      * [Direct Traversal](#direct-traversal-2)
-      * [Traversing Using Dictionary Methods](#traversing-using-dictionary-methods)
-   * [Built-in Functions for a Dictionary](#built-in-functions-for-a-dictionary)
-      * [Number of Items](#number-of-items)
-      * [Min and Max](#min-and-max)
-   * [Creating a Copy of a Dictionary](#creating-a-copy-of-a-dictionary)
-   * [Nested Dictionary](#nested-dictionary)
-   * [Sample Programs](#sample-programs-1)
-      * [Frequency of Characters](#frequency-of-characters)
-      * [Salary Book](#salary-book)
-* [Python Standard Library](#python-standard-library)
-   * [Built-in Functions](#built-in-functions)
-   * [Mathematical Functions](#mathematical-functions)
-      * [abs()](#abs)
-      * [round()](#round)
-      * [sum()](#sum)
-      * [min()](#min)
-      * [max()](#max)
-      * [pow()](#pow)
-      * [divmod()](#divmod)
-   * [Type Functions](#type-functions)
-      * [Type Checking](#type-checking-1)
-      * [Built-in Type Functions](#built-in-type-functions)
-   * [I/O Functions](#io-functions)
-      * [input()](#input)
-      * [print()](#print)
-      * [open()](#open)
-   * [Base/Unicode Conversion Functions](#baseunicode-conversion-functions)
-      * [bin()](#bin)
-      * [oct()](#oct)
-      * [hex()](#hex)
-      * [ord()](#ord)
-      * [chr()](#chr)
-   * [What are Built-in Modules?](#what-are-built-in-modules)
-   * [math Module](#math-module)
-      * [Constants](#constants)
-      * [Functions](#functions)
-         * [fabs()](#fabs)
-         * [gcd()](#gcd)
-         * [ceil()](#ceil)
-         * [floor()](#floor)
-         * [fmod()](#fmod)
-         * [pow()](#pow-1)
-         * [sqrt()](#sqrt)
-         * [sin(), cos() &amp; tan()](#sin-cos--tan)
-         * [factorial()](#factorial-3)
-   * [random Module](#random-module)
-      * [random()](#random)
-      * [Random Integer from Range](#random-integer-from-range)
-   * [statistics Module](#statistics-module)
-      * [Mean](#mean)
-      * [Median](#median)
-      * [Mode](#mode)
-* [File Handling](#file-handling)
-   * [File Handling in Python - Introduction &amp; Overview](#file-handling-in-python---introduction--overview)
-   * [Text Files vs Binary Files - Use Case, File Formats, Examples](#text-files-vs-binary-files---use-case-file-formats-examples)
-   * [File Opening &amp; Closing](#file-opening--closing)
-   * [File Reading](#file-reading)
-      * [Sequential Reading](#sequential-reading)
-         * [read()](#read)
-         * [readline()](#readline)
-         * [readlines()](#readlines)
-      * [Ad-hoc Reading](#ad-hoc-reading)
-         * [tell()](#tell)
-         * [seek()](#seek)
-   * [Writing a File](#writing-a-file)
-         * [write()](#write)
-         * [writelines()](#writelines)
-   * [Reading &amp; Writing Binary Files using pickle Module](#reading--writing-binary-files-using-pickle-module)
-      * [Dumping Data](#dumping-data)
-      * [Loading Data](#loading-data)
-      * [Example: Traversing a Binary File](#example-traversing-a-binary-file)
-   * [Reading &amp; Writing a CSV File using csv Module](#reading--writing-a-csv-file-using-csv-module)
-      * [Reading CSV File](#reading-csv-file)
-         * [Example 1](#example-1-2)
-         * [Example 2](#example-2-2)
-      * [Writing CSV File](#writing-csv-file)
-         * [Example 3](#example-3-2)
-* [User Defined Functions, Modules &amp; Packages](#user-defined-functions-modules--packages)
-   * [User Defined Functions](#user-defined-functions)
-   * [Function Structure](#function-structure)
-      * [Function Header](#function-header)
-      * [Function Body](#function-body)
-   * [Parameters and Arguments](#parameters-and-arguments)
-   * [Scope of Variables](#scope-of-variables)
-      * [Local Variables](#local-variables)
-      * [Global Variables](#global-variables)
-   * [Passing Objects of Mutable Type to a Function](#passing-objects-of-mutable-type-to-a-function)
-      * [List](#list-3)
-      * [Dictionary](#dictionary-1)
-   * [What is a Module? How to Create a Module?](#what-is-a-module-how-to-create-a-module)
-   * [Executable Scripts / Modules](#executable-scripts--modules)
-   * [What is a Package? Introduction to PyPi. How to Create a Python Package?](#what-is-a-package-introduction-to-pypi-how-to-create-a-python-package)
-
 
 # Introduction
 
@@ -1308,57 +920,57 @@ The following built-in data types are available in Python:
 
 Often sequence, set and mapping types are also collectively known as **iterables** as they are a collection of items on which a user can traverse (iterate).
 
-### Numeric Types
+### Numeric Types - `int`, `float`, `complex`, `bool`
 
 Numeric data types are used for storing the following types of numbers:
 
-#### Integer Numbers
+**Integer Numbers**
 
 Objects holding integer numbers like `-1, 0, 200` are of `int` data type.
 
-#### Real or Floating-point Numbers
+**Real or Floating-point Numbers**
 
 Objects holding real or floating point numbers like `-1.1, 3e2, 20.0` are of `float` data type.
 
-#### Complex Numbers
+**Complex Numbers**
 
 Objects storing complex numbers like `2 + 1j, -3j, -1 + 2J` are of type `complex`. 
 
 Each complex number has two parts, the real part which is a numeric integer or floating point literal, and the imaginary part which is an imaginary literal.
 
-#### Boolean
+**Boolean**
 
 The boolean data type (`bool`) is a subtype of `int`. It stores the evaluated value of expressions represented as keywords - `True` (integer value `1`) and `False` (integer value `0`).
 
-### Sequence Types
+### Sequence Types - `str`, `list`, `tuple`
 
 An ordered collection of items where each item can be accessed using an integer index is known as a sequence. The following three sequence data types are available in Python:
 
-#### String
+**String**
 
 A string (`str` data type) is a sequence of zero or more unicode characters enclosed within a pair of single (`'`) or double (`"`) quotes.
 
 Some example strings are - `"42", 'hello', "python"`.
 
-#### List
+**List**
 
 A `list` is sequence of items of same or different data types which are enclosed within brackets - `[ ]`.
 
 Some example lists are - `[1, 2, 3]`, `['abc', 23, 3.14]`, `['edpunk', 'python']`.
 
-#### Tuple
+**Tuple**
 
 A `tuple` is an immutable sequence of items of same or different data types which are enclosed within parentheses - `( )`. 
 
 Some example tuples are - `(1, 2, 3)`, `('abc', 23, 3.14)`, `('edpunk', 'python')`.
 
-### Set Type
+### Set Type - `set`
 
 A `set` is an unordered collection of unique items of same of different data types which are enclosed in curly braces - `{ }`. 
 
 Some example sets are - `{1, 2, 3}`, `{'abc', 23, 3.14}`, `{'edpunk', 'python'}`.
 
-### Mapping Type
+### Mapping Type - `dict`
 
 `dict` is a mapping data type which stores values in the form of key-value pairs. 
 
@@ -1370,7 +982,7 @@ The key-value pairs are separated by comma (`,`) and enclosed within curly brace
 
 Some example dictionaries are - `{1: "a", 2: "b", 3: "c"}`, `{"name": "edpunk", "language": "python"}`.
 
-### Special Type
+### Special Type - `None`
 
 `None` is a special data type which is used to denote the absence of value in an object. 
 
@@ -1440,7 +1052,7 @@ When the type conversion is explicitly specified by the user using the various b
 
 The built-in functions which can be used for explicit type casting are as follows:
 
-#### int()
+**1. `int()`**
 
 Creates an `int` from a `bool`, `float` or `str` containing integer characters (with or without sign).
 
@@ -1453,7 +1065,7 @@ Creates an `int` from a `bool`, `float` or `str` containing integer characters (
 2
 ```
 
-#### float()
+**2. `float()`**
 
 Creates a `float` from a `bool`, `int` or `str` containing floating point literals (with or without sign).
 
@@ -1495,7 +1107,7 @@ Floating point literals can also contain the following characters -
 3.14e-10
 ```
 
-#### str()
+**3. `str()`**
 
 Converts any object into a `str`.
 
@@ -1506,7 +1118,7 @@ Converts any object into a `str`.
 '[1, 2, 3, 4]'
 ```
 
-#### tuple()
+**4. `tuple()`**
 
 Creates a `tuple` from an iterable of type `str`, `list`, `set` or `range`.
 
@@ -1519,7 +1131,7 @@ Creates a `tuple` from an iterable of type `str`, `list`, `set` or `range`.
 (0, 1, 2, 3, 4, 5)
 ```
 
-#### list()
+**5. `list()`**
 
 Creates a `list` from an iterable of type `str`, `tuple`, `set` or `range`.
 
@@ -1532,7 +1144,7 @@ Creates a `list` from an iterable of type `str`, `tuple`, `set` or `range`.
 [0, 1, 2, 3, 4, 5]
 ```
 
-#### set()
+**6. `set()`**
 
 Creates a `set` from an iterable of type `str`, `tuple`, `list` or `range`.
 
@@ -1851,7 +1463,7 @@ A rich set of operators are available in Python which can be categorized as foll
 
 Arithmetic operations can be performed in Python using the following arithmetic operators:
 
-### Addition
+**Addition**
 
 The `+` operator adds the values of numeric operands.
 
@@ -1871,7 +1483,7 @@ In case the operands are of type `str`, `list` or `tuple`, the `+` operator conc
 ['ed', 'punk', 'python'] 
 ```
 
-### Subtraction
+**Subtraction**
 
 The `-` operator subtracts the value of operand on right from the value of operand on left.
 
@@ -1880,7 +1492,7 @@ The `-` operator subtracts the value of operand on right from the value of opera
 -1
 ```
 
-### Multiplication
+**Multiplication**
 
 The `*` operator multiplies the values of numeric operands.
 
@@ -1898,7 +1510,7 @@ In case the operands are of type `str`, `list` or `tuple`, the `*` operator retu
 ['ed', 'py', 'ed', 'py', 'ed', 'py']
 ```
 
-### Division
+**Division**
 
 The `/` operator divides the value of operand on left by the value of operand on right and returns the real number quotient.
 
@@ -1909,7 +1521,7 @@ The `/` operator divides the value of operand on left by the value of operand on
 2.5  
 ```
 
-### Floor Division
+**Floor Division**
 
 The `//` operator divides the value of operand on left by the value of operand on right and returns the integer quotient.
 
@@ -1918,7 +1530,7 @@ The `//` operator divides the value of operand on left by the value of operand o
 2
 ```
 
-### Modulus
+**Modulus**
 
 The `%` operator divides the value of operand on left by the value of operand on right and returns the remainder.
 
@@ -1927,7 +1539,7 @@ The `%` operator divides the value of operand on left by the value of operand on
 1
 ```
 
-### Exponent
+**Exponent**
 
 The `**` operator raises the left operand to the power of the right operand.
 
@@ -1940,7 +1552,7 @@ The `**` operator raises the left operand to the power of the right operand.
 
 Relational operators are useful for comparing the values of the operands to determine their relationship. Following relational operators are available in Python:
 
-### Equals to
+**Equals to**
 
 The `==` operator returns `True` if the value of operand on left is same as the value of operand on right.
 
@@ -1969,7 +1581,7 @@ As a sequence is an ordered collection of items, so the order in which the items
 False
 ```
 
-### Not equal to
+**Not equal to**
 
 The `!=` operator returns `True` if the value of operand on left is not equal to the value of operand on right.
 
@@ -1986,7 +1598,7 @@ True
 False
 ```
 
-### Greater than
+**Greater than**
 
 The `>` operator returns `True` if the value of operand on left is greater than the value of operand on right.
 
@@ -2048,7 +1660,7 @@ If two sequences are of unequal lengths and the smaller sequence is the starting
 True
 ```
 
-### Greater than or equal to
+**Greater than or equal to**
 
 The `>=` operator returns `True` if the value of operand on left is greater than or equal to the value of operand on right.
 
@@ -2074,7 +1686,7 @@ True
 True
 ```
 
-### Less than
+**Less than**
 
 The `<` operator returns `True` if the value of operand on left is less than the value of operand on right.
 
@@ -2101,7 +1713,7 @@ True
 True
 ```
 
-### Less than or equal to
+**Less than or equal to**
 
 The `<=` operator returns `True` if the value of operand on left is lesser than or equal to the value of operand on right.
 
@@ -2152,7 +1764,7 @@ These operators perform the binary operation on the two operands and assign the 
 
 If `<op>` is a binary operator, then the expression `a <op>= b` containing the augmented assignment operator is equivalent to `a = a <op> b`.
 
-### +=
+**`+=`**
 
 The `+=` operator adds a value (right operand) to the variable (left operand) and assigns the result to that variable.
 
@@ -2168,7 +1780,7 @@ The `+=` operator adds a value (right operand) to the variable (left operand) an
 'helloworld'
 ```
 
-### -=
+**`-=`**
 
 The `-=` operator subtracts a value (right operand) from the variable (left operand) and assigns the result to that variable.
 
@@ -2179,7 +1791,7 @@ The `-=` operator subtracts a value (right operand) from the variable (left oper
 1
 ```
 
-### *=
+**`*=`**
 
 The `*=` operator multiplies a value (right operand) to the variable (left operand) and assigns the result to that variable.
 
@@ -2194,7 +1806,7 @@ The `*=` operator multiplies a value (right operand) to the variable (left opera
 'hihihi'
 ```
 
-### /=
+**`/=`**
 
 The `/=` operator divides the variable (left operand) by a value (right operand) and assigns the result to that variable.
 
@@ -2205,7 +1817,7 @@ The `/=` operator divides the variable (left operand) by a value (right operand)
 2.0
 ```
 
-### //=
+**`//=`**
 
 The `//=` operator floor divides the variable (left operand) by a value (right operand) and assigns the result to that variable.
 
@@ -2216,7 +1828,7 @@ The `//=` operator floor divides the variable (left operand) by a value (right o
 2
 ```
 
-### **=
+**`**=`**
 
 The `**=` operator raises the variable (left operand) to a power (right operand) and assigns the result to that variable.
 
@@ -2227,7 +1839,7 @@ The `**=` operator raises the variable (left operand) to a power (right operand)
 16
 ```
 
-### %=
+**`%=`**
 
 The `%=` operator computes modulus of the variable (left operand) and a value (right operand) and assigns the result to that variable.
 
@@ -2286,7 +1898,7 @@ True
 True
 ```
 
-### not
+**`not`**
 
 The logical state of an operand can be reversed (`False` to `True`, and vice versa) using the logical `not` operator.
 
@@ -2298,7 +1910,7 @@ True
 False
 ```
 
-### or
+**`or`**
 
 The logical `or` operator returns `True` if the logical state of any of the two operands is `True`.
 
@@ -2311,7 +1923,7 @@ True
 False
 ```
 
-### and
+**`and`**
 
 The logical `and` operator returns `True` if the logical state of both the operands is `True`.
 
@@ -2463,7 +2075,7 @@ The table below presents the precedence of operators in Python from highest to l
 
 ### Exercises
 
-#### Example 1
+**Example 1**
 
 Evaluate the expression 
 
@@ -2476,7 +2088,7 @@ Step: `*` has higher precedence over `-`
 = `15 - 8`  
 = `7`
 
-#### Example 2
+**Example 2**
 
 Evaluate the expression 
 
@@ -2489,7 +2101,7 @@ Step: `-` and `+` have the same order of precedence so the expression is evaluat
 = `13 + 4`  
 = `17`
 
-#### Example 3
+**Example 3**
 
 Evaluate the expression 
 
@@ -2502,7 +2114,7 @@ Parantesized expression `(...)` has the highest precedence so `+` is evaluated f
 = `15 - 6`  
 = `9`
 
-#### Example 4
+**Example 4**
 
 Evaluate the expression 
 
@@ -2526,7 +2138,7 @@ Evaluate the expression
 `6 + 2.25 - 2`  
 = `6.25`
 
-#### Example 5
+**Example 5**
 
 Evaluate the expression 
 
@@ -2546,7 +2158,7 @@ Evaluate the expression
 `4 - 4 + 20`  
 = `20`
 
-#### Example 6
+**Example 6**
 
 Evaluate the expression 
 
@@ -2652,9 +2264,9 @@ Some runtime error examples are:
 - **TypeError**: Raised while performing an operation on incompatible types.
 - **IndentationError**: Raised when the indentation of a statement or code block is incorrect.
 
-### Examples
+### Runtime Error Examples
 
-#### ZeroDivisionError
+**ZeroDivisionError**
 
 ``` python
 n = 100
@@ -2669,7 +2281,7 @@ Traceback (most recent call last):
 ZeroDivisionError: division by zero
 ```
 
-#### NameError
+**NameError**
 
 ``` python
 n = 100
@@ -2683,7 +2295,7 @@ Traceback (most recent call last):
 NameError: name 'd' is not defined
 ```
 
-#### KeyError
+**KeyError**
 
 ``` python
 d = {1: "1st", 2: "2nd"}
@@ -2697,7 +2309,7 @@ Traceback (most recent call last):
 KeyError: 3
 ```
 
-#### TypeError
+**TypeError**
 
 ``` python
 n =1
@@ -3036,7 +2648,7 @@ The control flow view of the above code is:
 
 Let us go through some programming problems which utilize selection statements.
 
-#### Absolute Value
+**1. Absolute Value**
 
 Write a program to output the magnitude of difference between two numbers using conditional statement.
 
@@ -3062,7 +2674,7 @@ Enter 2nd number: 15
 The difference of 12 and 15 is 3
 ```
 
-#### Sorting 3 Numbers
+**2. Sorting 3 Numbers**
 
 Write a program to accept 3 numbers from the user and print them in ascending order of value.
 
@@ -3094,7 +2706,7 @@ Enter 3rd number: 6
 The numbers in sorted order: 2 , 6 , 9
 ```
 
-#### Divisibility
+**3. Divisibility**
 
 Write a program to accept two numbers and test if the first number is divisible by the second number.
 
@@ -3221,7 +2833,7 @@ range(0, 10)
 
 `range()` function is widely used in a `for` statement to control the number of iterations and provide the index value (`i`) of each iteration.
 
-#### Example #1
+**Example #1**
 
 Print multiples of 5 starting from 0 to 20.
 
@@ -3242,7 +2854,7 @@ for i in range(5):
 20
 ```
 
-#### Example #2
+**Example #2**
 
 Print all integers from 2 to 5 including the boundary values.
 
@@ -3262,7 +2874,7 @@ for i in range(2, 6):
 5
 ```
 
-#### Example #3
+**Example #3**
 
 Print all odd numbers between 2 and 10.
 
@@ -3290,7 +2902,7 @@ for i in range(2, 10):
 9
 ```
 
-#### Example #4
+**Example #4**
 
 Print the index of all occurrences of `o` in `python programming`.
 
@@ -3314,7 +2926,7 @@ for i in range(len(s)):
 
 Let us go through some programming problems which utilize the `for` iteration statement.
 
-#### Compound Interest
+**1. Compound Interest**
 
 Write a program to calculate the total compound interest payable for given principal, interest rate (compounded annually) and total time (in years).
 
@@ -3341,7 +2953,7 @@ Enter the loan duration (in years): 3
 Total interest payable: 78812.5
 ```
 
-#### Factorial
+**2. Factorial**
 
 The factorial of a positive integer `n`, denoted by `n!`, is the product of all positive integers less than or equal to `n`.  
 `n! = n×(n-1)×(n-2)...3×2×1`  
@@ -3407,7 +3019,7 @@ In the above example, the test condition is `i<len(cars)` and the update stateme
 
 Let us go through some programming problems which utilize the `while` iteration statement.
 
-#### Compound Interest
+**1. Compound Interest**
 
 Write a program to calculate the total compound interest payable for given principal, interest rate (compounded annually) and total time (in years).
 
@@ -3435,7 +3047,7 @@ Enter the loan duration (in years): 3
 Total interest payable: 78812.5
 ```
 
-#### Factorial
+**2. Factorial**
 
 The factorial of a positive integer `n`, denoted by `n!`, is the product of all positive integers less than or equal to `n`.  
 `n! = n×(n-1)×(n-2)...3×2×1`   
@@ -3473,7 +3085,7 @@ A `pass` statement acts as a placeholder and performs null (no) operation.
 
 Various reasons for using the keyword `pass` are provided below:
 
-#### Syntactical Requirement
+**1. Syntactical Requirement**
 
 Using `pass` becomes a syntactical requirement for cases where the Python interpreter can raise a `SyntaxError` due to missing statements.  
 
@@ -3521,7 +3133,7 @@ File "<ipython-input-20-068861cce0a8>", line 1
 SyntaxError: unexpected EOF while parsing
 ```
 
-#### Skipping Code Execution
+**2. Skipping Code Execution**
 
 `pass` can be used to skip code execution for certain cases. 
 
@@ -3546,7 +3158,7 @@ for i in l:
 5 is not divisible by 3
 ```
 
-#### Placeholders
+**3. Placeholders**
 
 `pass` can be used to create valid empty functions and classes as placeholders which can be modified in the future versions of code.
 
@@ -4299,7 +3911,7 @@ ValueError: substring not found
 
 `for` and `while` statements are useful for traversing a string.
 
-### for
+### Using `for`
 
 As a string is a sequence of characters, the `for` statement can be used to iterate over a string as shown below.
 
@@ -4322,7 +3934,7 @@ o
 n
 ```
 
-### while
+### Using `while`
 
 A `while` statement can be used to traverse a string by iterating on the value of index till the last character index.
 
@@ -5005,11 +4617,11 @@ For example, to create a new list where each item is divisible by 2.
 
 ## Sample Programs
 
-### Min, Max and Mean
+### 1. Min, Max and Mean
 
 Write a program to find the minimum, maximum and mean of values stored in a list input by user.
 
-#### Without Using Built-in Functions
+**a) Without Using Built-in Functions**
 
 **Code**
 
@@ -5057,7 +4669,7 @@ Maximum : 9.0
 Mean : 4.2
 ```
 
-#### Using Built-in Functions
+**b) Using Built-in Functions**
 
 **Code**
 
@@ -5090,7 +4702,7 @@ Maximum : 9.0
 Mean : 4.2
 ```
 
-### Linear Search
+### 2. Linear Search
 
 Write a program to enter a list and then check if the number entered by a user is present in that list.
 
@@ -5139,11 +4751,11 @@ Enter search value: 1
 Search value not found
 ```
 
-### Frequency of Elements
+### 3. Frequency of Elements
 
 Write a program to enter a list and then print the frequency of elements present in that list.
 
-#### Without Using Built-in Functions
+**a) Without Using Built-in Functions**
 
 **Code**
 
@@ -5197,7 +4809,7 @@ Frequency of Elements
 6 - 2
 ```
 
-#### Using Built-in Functions
+**b) Using Built-in Functions**
 
 **Code**
 
@@ -6576,7 +6188,7 @@ The following frequently used mathematical constants are available in `math` mod
 
 Following useful mathematical functions are available in the `math` module:
 
-#### fabs()
+**fabs()**
 
 `fabs(x)` returns the absolute value of `x`.
 
@@ -6586,7 +6198,7 @@ Following useful mathematical functions are available in the `math` module:
 3.24
 ```
 
-#### gcd()
+**gcd()**
 
 `gcd(a, b)` returns the greatest common divisor of integers `a` and `b`.
 
@@ -6596,7 +6208,7 @@ Following useful mathematical functions are available in the `math` module:
 6
 ```
 
-#### ceil()
+**ceil()**
 
 `ceil(x)` returns the smallest integer greater than or equal to `x`.
 
@@ -6606,7 +6218,7 @@ Following useful mathematical functions are available in the `math` module:
 3
 ```
 
-#### floor()
+**floor()**
 
 `floor(x)` returns the largest integer less than or equal to `x`.
 
@@ -6616,7 +6228,7 @@ Following useful mathematical functions are available in the `math` module:
 2
 ```
 
-#### fmod()
+**fmod()**
 
 `fmod(x, y)` returns the value of the expression `x - n*y` such that the result has the same sign as `x` and magnitude less than `|y|` for some integer `n`.
 
@@ -6630,7 +6242,7 @@ This function should be preferred when working with floating point numbers as co
 -0.14000000000000012
 ```
 
-#### pow()
+**pow()**
 
 `pow(x, y)` raises `x` to the power of `y`.
 
@@ -6640,7 +6252,7 @@ This function should be preferred when working with floating point numbers as co
 25.0
 ```
 
-#### sqrt()
+**sqrt()**
 
 `sqrt(x)` returns the square root of `x`.
 
@@ -6650,7 +6262,7 @@ This function should be preferred when working with floating point numbers as co
 5.0
 ```
 
-#### sin(), cos() & tan()
+**sin(), cos() & tan()**
 
 `sin(x)`, `cos(x)` and `tan(x)` return the sine, cosine and tangent of `x` (radians) respectively.
 
@@ -6664,7 +6276,7 @@ This function should be preferred when working with floating point numbers as co
 0.9999999999999999
 ```
 
-#### factorial()
+**factorial()**
 
 `factorial(n)` computes the factorial of a positive integer `n` which is the product of all positive integers less than or equal to `n`.  
 `n! = n×(n-1)×(n-2)...3×2×1`,  
@@ -7273,7 +6885,7 @@ The main rules for creating a CSV file are:
 
 An example CSV file containing the marks data is given below:
 
-``` csv
+```
 Name,Subject,Marks
 Anita,Maths,83.0
 Amar,Maths,95.0
@@ -7283,7 +6895,7 @@ Ira,Science,99.0
 
 To demonstrate why quote characters are required, let us have a look at the below contents of a CSV file which contains the average marks of some subjects (separated by comma) for each student.
 
-``` csv
+```
 Name,Average Of,Marks
 Anita,"Accounting,Maths",83.0
 Amar,"Accounting,Maths",95.0
@@ -7299,13 +6911,13 @@ Python has built-in `csv` module which provides utilities to read and write CSV 
 
 The `csvfile` file object should be opened with `newline=''` argument as the `csv` module has its own newline handling which correctly interprets the newlines depending on platform or in case they are embedded inside quoted fields.
 
-#### Example 1
+**Example #1**
 
 Let us write a program to read the contents of `marks.csv`.
 
 **marks.csv**
 
-``` csv
+```
 Name,Subject,Marks
 Anita,Maths,83.0
 Amar,Maths,95.0
@@ -7334,7 +6946,7 @@ with open('marks.csv',
 ['Ira', 'Science', '99.0']
 ```
 
-#### Example 2
+**Example #2**
 
 Let us write a program to read the contents of `marks2.csv`. 
 
@@ -7381,7 +6993,7 @@ All non-string data in the list are automatically converted into string before i
 
 The methods `writerow(row)` or `writerows(rows)` can be used to write a row (list of strings) or list of rows to a CSV file.
 
-#### Example 3
+**Example #3**
 
 Write a program to create a CSV file containing subject-wise marks of students delimited by semi-colon (`;`).
 
@@ -7704,7 +7316,7 @@ When mutable objects (`list`, `dict`) are provided as an argument to a function,
 
 Hence, care should be taken while passing mutable objects.
 
-### List
+### Passing a List
 
 **Code**
 
@@ -7727,7 +7339,7 @@ print(l)
 [2, 4, 6]
 ```
 
-### Dictionary
+### Passing a Dictionary
 
 **Code**
 
