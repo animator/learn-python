@@ -1,4 +1,4 @@
-# Programming Languages
+## Programming Languages
 
 In today's digital era, we depend on computers, smartphones and the internet to perform a plethora of tasks, like:
 
@@ -21,7 +21,7 @@ There are many high-level programming languages that are currently in wide use.
 
 Some of the popular languages are Java, C, C++, C#, Go, Swift, JavaScript, PHP, Dart, Kotlin and Python.
 
-# Python Programming Language
+## Python Programming Language
 
 Guido van Rossum started the development of Python in December 1989. He released the first version (0.9.9) of Python for general public on February 20, 1991. 
 
@@ -59,7 +59,7 @@ In Python, everything (`int`, `list`, `dict`, etc.) is an object. We will cover 
 
 As Python is an interpreted language in which the code is executed line-by-line, a python statement or expression is evaluated during run-time. This allows **dynamic typing** (type of a variable can change over its lifetime) and creation of dynamic objects during run-time, which provides more flexibility, usability and fewer lines of code as compared to statically-typed compiled languages like C/C++.
 
-# Advantages of Python
+## Advantages of Python
 
 The key advantages of Python are as follows:  
 
@@ -93,7 +93,7 @@ Python programmers also have at their disposal the vast ecosystem of more than 2
 
 Some of the most popular web development frameworks (django, flask, etc.) are written in Python. This coupled with the availablity of packages to connect to any database makes Python a great choice for web application development.
 
-# Windows
+## Windows
 
 Let's start with the Python 3 installation process on Windows operating system.
 
@@ -123,7 +123,7 @@ Python 3.9 is now successfully installed on your computer.
 
 ![Step 3: Verify Installation](images/0201d.png)
 
-# macOS (Apple)
+## macOS (Apple)
 
 Let's start with the Python 3 installation process on macOS operating system.
 
@@ -149,7 +149,7 @@ Once the setup is complete, click on the `Launchpad -> IDLE` to launch the Pytho
 
 Python 3.9 is now successfully installed on your computer.
 
-# Python Execution Modes
+## Python Execution Modes
 
 After installing the latest version of the Python interpreter, we can now write and execute some basic Python codes.
 
@@ -158,11 +158,11 @@ There are two ways to execute a Python program:
 1. **Interactive Mode**: When the IDLE application is launched, the Python interpreter or the Python shell pops up on the screen. User can interact with the Python interpreter and execute statements (single line or multiline code snippets) directly in this Python shell.
 2. **Script Mode**: This is the most commonly used method for executing a Python program. The entire Python program is written and saved in a file (`.py` extension) which can be executed using the IDLE application.
 
-# Interactive Mode
+## Interactive Mode
 
 Let us execute some basic Python statements and interact with the Python shell.
 
-## Launching the Python Shell
+### Launching the Python Shell
 
 To launch the IDLE application click `[Windows Start Menu Button] -> [Python 3.9 Folder] -> [IDLE (Python 3.9 64 bit)]`.
 
@@ -176,7 +176,7 @@ The version (`3.9`) of the Python interpreter is displayed at the top of the win
 
 Python commands or statements can be input on this prompt. The input statements are executed instantaneously and any variable assignments are retained as long as the session is not terminated.
 
-## Basic Arithmetic
+### Basic Arithmetic
 
 Let us perform some basic arithmetic operations in the interactive mode using an integer number (`2`) and a floating-point number (`3.5`):
 
@@ -189,7 +189,7 @@ Let us perform some basic arithmetic operations in the interactive mode using an
 
 It can be observed that the results of each of the above computations are displayed immediately in the shell.
 
-## Storing Values/Results
+### Storing Values/Results
 
 Instead of immediately displaying the results, they can also be stored in variables using the assignment symbol (`=`) as shown below:
 
@@ -211,7 +211,7 @@ The values of `a` and `b` can be accessed later for future calculations as shown
 2.3333333333333335
 ```
 
-## Basic String Operation
+### Basic String Operation
 
 Interactive mode is not just restricted to basic arithmetic or assignments. Let us join two strings - `"Hello, "` and `"world!"`.
 
@@ -220,7 +220,7 @@ Interactive mode is not just restricted to basic arithmetic or assignments. Let 
 'Hello, world!'
 ```
 
-## Conclusion
+### Conclusion
 
 The complete functionality of Python is easily accessible to a user via the **Interactive Mode**. 
 
@@ -228,11 +228,11 @@ This makes it convenient for testing and instant execution of small code snippet
 
 But, the statements cannot be saved for future use and have to retyped for re-execution. This disadvantage is overcome by the use of Python in **Script Mode** as described in the next section.
 
-# Script Mode
+## Script Mode
 
 To write reusable codes, script mode is the most preferred mode of code execution.
 
-## File Creation
+### File Creation
 
 To create a new file using the IDLE application click `[File] -> [New File]`
 
@@ -249,7 +249,7 @@ and save the script as `example.py` (`.py` file extension for all Python scripts
 
 ![Save File](images/0303b.png)
 
-## Script Execution
+### Script Execution
 
 Now run this script using `[Run] -> [Run Module]`.
 
@@ -266,7 +266,7 @@ print(a)
 
 Now, when you run the script you will observe that the value of `a`, that is `4`, is now displayed on the console.
 
-# Tokens
+## Tokens
 
 When a Python code is executed, the Python interpreter reads each logical line and breaks it into a sequence of lexical units. 
 
@@ -278,7 +278,7 @@ These lexical units are better known as **tokens** - the smallest individual uni
 - **Delimiters** : Symbols that denote grouping, punctuation, and assignment/binding.
 - **Operators** : Symbols that can operate on data and compute results.
 
-# Character Set
+## Character Set
 
 A set of valid characters that a programming language recognizes is known as its **character set**. 
 
@@ -306,7 +306,7 @@ print(क + ক + க + ક)
 10
 ```
 
-# Keywords
+## Keywords
 
 Keywords are reserved words that have special meaning when processed by the Python interpreter. They are case-sensitive and cannot be used for naming identifiers (class, function, variable or structure names).
 
@@ -327,7 +327,7 @@ The list of keywords in Python are provided below:
 | `assert` | `return` | `yield` |
 | `async` | `await` | |
 
-# Identifiers
+## Identifiers
 
 Identifiers are used for defining the names of Python objects such as variables, functions, classes, modules, etc. The naming convention for identifiers is as follows:
 
@@ -348,17 +348,17 @@ It is also a good practice (although not compulsory) to follow the following pro
 - Identifiers starting with an underscore have special meaning in a program.
 - Variable, function and method names should be in lowercase characters, with underscores separating multiple words like `area_of_square`, `area_of_triangle`, etc.
 
-# Literals
+## Literals
 
 Literals are tokens in the source code which represent fixed or constant values. They are often used in assignment statements for initializing variables or in comparison expressions.
 
 The various types of literals available in Python are as follows:
 
-## 1. Numeric Literals
+### 1. Numeric Literals
 
 Numeric literals are used for representing numeric values in the source code. They can be of three types - integers, float point numbers and imaginary numbers.
 
-### a) Integer Literals
+#### a) Integer Literals
 
 Integer literals are numbers without any fractional component. 
 
@@ -409,7 +409,7 @@ They are ignored while determining the actual numerical value of the literal.
 
 Some valid underscore usages are - `10_00_00_000`, `0b_1110_0101`, `0x23_123`.
 
-### b) Floating Point Literals
+#### b) Floating Point Literals
 
 Floating point literals are real numbers present in the source code. They contain fractional component and/or exponential component.
 
@@ -431,7 +431,7 @@ The exponential component can be identified by the letter `e` or `E` followed by
 
 For example, `3.4E2` is equivalent to `3.4 x 10^2` or `340.0`, whereas `3.4e-2` is equivalent to `3.4 x 10^-2` or `.034`.
 
-### c) Imaginary Literals
+#### c) Imaginary Literals
 
 To specify complex numbers and perform complex number mathematics, Python supports imaginary literals which are given by real or integer number followed by the letter `j` or `J` which represents the unit imaginary number.
 
@@ -453,11 +453,11 @@ In Python,
 - there is no specialized literal such as a complex literal. A complex number is actually represented in the program using an expression comprising a real number (integer/float numeric literal) and an imaginary number (imaginary literal). For example, `1 + 2j` consists of an integer literal (`1`) and a imaginary literal (`2j`).
 - numeric literals do not include the minus sign (`-`). `-` is actually a unary operator it combines with a numeric literal to represent negative numbers. For example, in `-3.14` the numeric literal is `3.14` and `-` is an operator.
 
-## 2. Boolean Literals
+### 2. Boolean Literals
 
 The reserved words `True` and `False` are also boolean literals which can be used to specify the truth value in a program.
 
-## 3. String Literals
+### 3. String Literals
 
 String literals are texts which can be specified in a variety of ways in Python:
 
@@ -507,7 +507,7 @@ E = mc²
 
 In the above example, `\u00B2` is the unicode character which represents the 'SUPERSCRIPT TWO'. 
 
-## 4. Special Literal
+### 4. Special Literal
 
 `None` is a special literal which is used to denote the absence of value. 
 
@@ -521,7 +521,7 @@ It should not be confused with `0` as `0` is an integer literal with a defined f
 
 In the above example, the Python shell does not display any value of `a` as it is assigned as `None` which has no value.
 
-## 5. Collection of Literals
+### 5. Collection of Literals
 
 Python has the provision for specifying a collection of literals in the source code using a special syntax known as **"displays"**. 
 
@@ -535,7 +535,7 @@ Some example collection of literals (displays) are provided below:
 
 List, set and dictionary will be covered in detail in later chapters.
 
-# Operators
+## Operators
 
 Operators are tokens which can be combined with values and variables to create expressions which evaluate to a single value. Python supports a rich set of operators:
 
@@ -550,13 +550,13 @@ Operators are tokens which can be combined with values and variables to create e
 
 Each of the above operators are covered in detail in the chapter - Operators.
 
-# Delimiters
+## Delimiters
 
 Delimiters are tokens which are useful for organizing a program and are used in statements, expressions, functions, literal collections, and various other code structures.
 
 They can be classified based on utility as follows:
 
-## Grouping
+### Grouping
 
 `()`, `[]` and `{}` are delimiters used for:
 
@@ -585,7 +585,7 @@ days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Satur
 sum_6 = (1 + 2 + 3 + 4 + 5 + 6)
 ```
 
-## Punctuation, Decoration and Annotation
+### Punctuation, Decoration and Annotation
 
 Tokens in Python which are used for punctuation, decoration and annotation are:
 
@@ -594,7 +594,7 @@ Tokens in Python which are used for punctuation, decoration and annotation are:
 ;       @       ->
 ```  
 
-## Assignment/Binding
+### Assignment/Binding
 
 The assignment or binding delimiters are used for binding objects to names via assignment statements. The complete list of tokens are provided below:
 
@@ -609,7 +609,7 @@ Except `=`, the rest of the tokens have an operator followed by `=` character.
 
 These delimiters are also known as augmented assignment operators as they perform an operation in combination with assignment.
 
-# Blocks and Indentation
+## Blocks and Indentation
 
 In traditional programming languages like C++ or Java, programs are organised in form of code blocks. 
 
@@ -653,7 +653,7 @@ else {
 
 It can be seen how indentations (`tab` at the beginning of line) are added (not required by programming language) to the code to increase readability, which helps in guiding readers through the code.
 
-## Python
+### Python
 
 Code blocks in Python are inspired by this idea as it makes it easier to understand a Python code.
 
@@ -674,11 +674,11 @@ else:
     print("x is not less than 10")
 ```
 
-# Comments
+## Comments
 
 Python supports single-line comments and multi-line comments to enhance code readability via adding documentation.
 
-## Single Line Comments
+### Single Line Comments
 
 A single line comment begins with `#`. Everything between `#` and the end of line is ignored by the Python interpreter.
 
@@ -687,7 +687,7 @@ A single line comment begins with `#`. Everything between `#` and the end of lin
 a = 1 # assign a
 ```
 
-## Multiline comments
+### Multiline comments
 
 A multiline comment begins with `'''` or `"""` and ends with the same.
 
@@ -740,7 +740,7 @@ else:
     print("x is not less than 10")
 ```
 
-# Objects and Variables
+## Objects and Variables
 
 A program is a sequence of instructions which often acts on information (data) provided by the user. 
 
@@ -823,7 +823,7 @@ In the above example, the ID of `a` changes as it points to a new object (`2`).
 
 Also, when `a` is assigned to `b`, instead of creating a new copy, `b` points to the same object as `a`.
 
-# Creating a Variable
+## Creating a Variable
 
 A variable is uniquely identified by a name (identifier) and follows the same naming convention:
 
@@ -832,7 +832,7 @@ A variable is uniquely identified by a name (identifier) and follows the same na
 - Should not be a keyword.
 - No special symbols are allowed like `!`, `@`, `#`, `$`, `%`, etc.
 
-## Assignment
+### Assignment
 
 Variables can be bound to a reference of an object (of any type) using assignment statements. 
 
@@ -854,7 +854,7 @@ a = 3.141     # real number
 a = "Python"  # string
 ```
 
-## Deletion
+### Deletion
 
 The `del` statement can be used to unbind the reference to an object.
 
@@ -871,7 +871,7 @@ Accessing `a` results in a `NameError` as the reference (variable) to the object
 
 The object is also automatically cleaned up from the memory if there is no other variable referencing to it (garbage collection).
 
-## Multiple Assignment
+### Multiple Assignment
 
 In Python, multiple assignment can be used to condense variables which are set to the same value:
 
@@ -885,7 +885,7 @@ In Python, multiple assignment can be used to condense variables which are set t
 'foo'
 ```
 
-## Tuple Swapping
+### Tuple Swapping
 
 In Python, a temporary variable is not required to swap values of two variables. Values can be directly swapped (tuple swapping) as shown below:
 
@@ -899,7 +899,7 @@ In Python, a temporary variable is not required to swap values of two variables.
 'Hello'
 ```
 
-# Built-in Data Types
+## Built-in Data Types
 
 In Python, the `type` of a data (or value) is not linked to the variable, but to the actual object which contains it. This type is also known as the object's data type and is used for identifying the operations that can be performed on the data.
 
@@ -913,57 +913,57 @@ The following built-in data types are available in Python:
 
 Often sequence, set and mapping types are also collectively known as **iterables** as they are a collection of items on which a user can traverse (iterate).
 
-## 1. Numeric Types
+### 1. Numeric Types
 
 Numeric data types are used for storing the following types of numbers:
 
-### i. Integer Numbers
+#### i. Integer Numbers
 
 Objects holding integer numbers like `-1, 0, 200` are of `int` data type.
 
-### ii. Real or Floating-point Numbers
+#### ii. Real or Floating-point Numbers
 
 Objects holding real or floating point numbers like `-1.1, 3e2, 20.0` are of `float` data type.
 
-### iii. Complex Numbers
+#### iii. Complex Numbers
 
 Objects storing complex numbers like `2 + 1j, -3j, -1 + 2J` are of type `complex`. 
 
 Each complex number has two parts, the real part which is a numeric integer or floating point literal, and the imaginary part which is an imaginary literal.
 
-### iv. Boolean
+#### iv. Boolean
 
 The boolean data type (`bool`) is a subtype of `int`. It stores the evaluated value of expressions represented as keywords - `True` (integer value `1`) and `False` (integer value `0`).
 
-## 2. Sequence Types
+### 2. Sequence Types
 
 An ordered collection of items where each item can be accessed using an integer index is known as a sequence. The following three sequence data types are available in Python:
 
-### i. String
+#### i. String
 
 A string (`str` data type) is a sequence of zero or more unicode characters enclosed within a pair of single (`'`) or double (`"`) quotes.
 
 Some example strings are - `"42", 'hello', "python"`.
 
-### ii. List
+#### ii. List
 
 A `list` is sequence of items of same or different data types which are enclosed within brackets - `[ ]`.
 
 Some example lists are - `[1, 2, 3]`, `['abc', 23, 3.14]`, `['edpunk', 'python']`.
 
-### iii. Tuple
+#### iii. Tuple
 
 A `tuple` is an immutable sequence of items of same or different data types which are enclosed within parentheses - `( )`. 
 
 Some example tuples are - `(1, 2, 3)`, `('abc', 23, 3.14)`, `('edpunk', 'python')`.
 
-## 3. Set Type
+### 3. Set Type
 
 A `set` is an unordered collection of unique items of same of different data types which are enclosed in curly braces - `{ }`. 
 
 Some example sets are - `{1, 2, 3}`, `{'abc', 23, 3.14}`, `{'edpunk', 'python'}`.
 
-## 4. Mapping Type
+### 4. Mapping Type
 
 `dict` is a mapping data type which stores values in the form of key-value pairs. 
 
@@ -975,13 +975,13 @@ The key-value pairs are separated by comma (`,`) and enclosed within curly brace
 
 Some example dictionaries are - `{1: "a", 2: "b", 3: "c"}`, `{"name": "edpunk", "language": "python"}`.
 
-## 5. Special Type
+### 5. Special Type
 
 `None` is a special data type which is used to denote the absence of value in an object. 
 
 It is neither `0` nor `False` as these are defined finite values, whereas `None` implies nothingness.
 
-# Type Checking
+## Type Checking
 
 The built-in `type()` function can be used to fetch the data type of an object.
 
@@ -1017,13 +1017,13 @@ The `in` operator can be used along with the `type()` function to test if the da
 True
 ```
 
-# Type Casting
+## Type Casting
 
 The process of converting the data type of an object from one type to another is known as **Type Casting** or **Type Conversion**. 
 
 The two kinds of type casting supported in Python are:
 
-## Implicit Type Casting
+### Implicit Type Casting
 
 The Python interpreter automatically converts the data type without the need of user intervention when evaluating expressions to determine the final data type.
 
@@ -1039,13 +1039,13 @@ In the below example the final type of `c` is automatically determined as `float
 <class 'float'>
 ```
 
-## Explicit Type Casting
+### Explicit Type Casting
 
 When the type conversion is explicitly specified by the user using the various built-in functions available in Python, it is known as explicit type casting. 
 
 The built-in functions which can be used for explicit type casting are as follows:
 
-### int()
+#### int()
 
 Creates an `int` from a `bool`, `float` or `str` containing integer characters (with or without sign).
 
@@ -1058,7 +1058,7 @@ Creates an `int` from a `bool`, `float` or `str` containing integer characters (
 2
 ```
 
-### float()
+#### float()
 
 Creates a `float` from a `bool`, `int` or `str` containing floating point literals (with or without sign).
 
@@ -1100,7 +1100,7 @@ Floating point literals can also contain the following characters -
 3.14e-10
 ```
 
-### str()
+#### str()
 
 Converts any object into a `str`.
 
@@ -1111,7 +1111,7 @@ Converts any object into a `str`.
 '[1, 2, 3, 4]'
 ```
 
-### tuple()
+#### tuple()
 
 Creates a `tuple` from an iterable of type `str`, `list`, `set` or `range`.
 
@@ -1124,7 +1124,7 @@ Creates a `tuple` from an iterable of type `str`, `list`, `set` or `range`.
 (0, 1, 2, 3, 4, 5)
 ```
 
-### list()
+#### list()
 
 Creates a `list` from an iterable of type `str`, `tuple`, `set` or `range`.
 
@@ -1137,7 +1137,7 @@ Creates a `list` from an iterable of type `str`, `tuple`, `set` or `range`.
 [0, 1, 2, 3, 4, 5]
 ```
 
-### set()
+#### set()
 
 Creates a `set` from an iterable of type `str`, `tuple`, `list` or `range`.
 
@@ -1150,9 +1150,9 @@ Creates a `set` from an iterable of type `str`, `tuple`, `list` or `range`.
 {0, 1, 2, 3, 4, 5}
 ```
 
-# Mutability & Immutability
+## Mutability & Immutability
 
-## Immutable Data Types
+### Immutable Data Types
 
 A data type is said to be immutable when the value of an object of that type cannot be modified.
 
@@ -1216,7 +1216,7 @@ False
 False
 ```
 
-## Mutable Data Types
+### Mutable Data Types
 
 In Python, the following data types are mutable, i.e., any modification does not create a new object but modifies the existing object:
 
@@ -1265,7 +1265,7 @@ True
 
 In the above examples, the `id` of the objects (`list`, `dict`, `set`) do not change, which implies that no new objects are created and the original objects are modified.
 
-# Standard Input - input()
+## Standard Input - input()
 
 `input()` function is used to accept new input data from the user. 
 
@@ -1305,7 +1305,7 @@ Enter pi: 3.14
 3.14
 ```
 
-# Standard Output - print()
+## Standard Output - print()
 
 The built-in `print()` function is used to display an output (value of variables, expressions, etc.) on the standard output.
 
@@ -1400,17 +1400,17 @@ print("Hello, " + "world!")
 4,7.0;Hello, world!
 ```
 
-## Summary
+### Summary
 
 All non-keyword arguments or expressions are converted to strings and written to the output stream by the `print()` function. They are separated by `sep` and followed by `end`. An empty `print()` invocation writes `end` parameter (an empty line as `end` defaults to the newline character `'\n'`).
 
-# Types of Operators
+## Types of Operators
 
 Operators are symbols that perform a single simple task or operation on one or more values resulting in a single evaluated value. 
 
 The values on which these operators are applied are called **operands**.
 
-## Unary Operators
+### Unary Operators
 
 Unary operators are applied on a single operand positioned on right side of the operator. 
 
@@ -1430,13 +1430,13 @@ Following are some unary operators available in Python:
 -6
 ```
 
-## Binary Operators
+### Binary Operators
 
 Binary operators are applied on two operands. 
 
 For example, arithmetic operators (`+`, `–`, `*`, `/`) evaluate the result of mathematical computation of two values.
 
-## Operators in Python
+### Operators in Python
 
 A rich set of operators are available in Python which can be categorized as follows:
 
@@ -1448,11 +1448,11 @@ A rich set of operators are available in Python which can be categorized as foll
 - Membership Operators - `in`, `not in`
 - Bitwise and Shift Operators - `&`, `|`, `^`, `~`, `<<`, `>>`
 
-# Arithmetic Operators
+## Arithmetic Operators
 
 Arithmetic operations can be performed in Python using the following arithmetic operators:
 
-## Addition
+### Addition
 
 The `+` operator adds the values of numeric operands.
 
@@ -1472,7 +1472,7 @@ In case the operands are of type `str`, `list` or `tuple`, the `+` operator conc
 ['ed', 'punk', 'python'] 
 ```
 
-## Subtraction
+### Subtraction
 
 The `-` operator subtracts the value of operand on right from the value of operand on left.
 
@@ -1481,7 +1481,7 @@ The `-` operator subtracts the value of operand on right from the value of opera
 -1
 ```
 
-## Multiplication
+### Multiplication
 
 The `*` operator multiplies the values of numeric operands.
 
@@ -1499,7 +1499,7 @@ In case the operands are of type `str`, `list` or `tuple`, the `*` operator retu
 ['ed', 'py', 'ed', 'py', 'ed', 'py']
 ```
 
-## Division
+### Division
 
 The `/` operator divides the value of operand on left by the value of operand on right and returns the real number quotient.
 
@@ -1510,7 +1510,7 @@ The `/` operator divides the value of operand on left by the value of operand on
 2.5  
 ```
 
-## Floor Division
+### Floor Division
 
 The `//` operator divides the value of operand on left by the value of operand on right and returns the integer quotient.
 
@@ -1519,7 +1519,7 @@ The `//` operator divides the value of operand on left by the value of operand o
 2
 ```
 
-## Modulus
+### Modulus
 
 The `%` operator divides the value of operand on left by the value of operand on right and returns the remainder.
 
@@ -1528,7 +1528,7 @@ The `%` operator divides the value of operand on left by the value of operand on
 1
 ```
 
-## Exponent
+### Exponent
 
 The `**` operator raises the left operand to the power of the right operand.
 
@@ -1537,11 +1537,11 @@ The `**` operator raises the left operand to the power of the right operand.
 25  
 ```
 
-# Relational Operators
+## Relational Operators
 
 Relational operators are useful for comparing the values of the operands to determine their relationship. Following relational operators are available in Python:
 
-## Equals to
+### Equals to
 
 The `==` operator returns `True` if the value of operand on left is same as the value of operand on right.
 
@@ -1570,7 +1570,7 @@ As a sequence is an ordered collection of items, so the order in which the items
 False
 ```
 
-## Not equal to
+### Not equal to
 
 The `!=` operator returns `True` if the value of operand on left is not equal to the value of operand on right.
 
@@ -1587,7 +1587,7 @@ True
 False
 ```
 
-## Greater than
+### Greater than
 
 The `>` operator returns `True` if the value of operand on left is greater than the value of operand on right.
 
@@ -1649,7 +1649,7 @@ If two sequences are of unequal lengths and the smaller sequence is the starting
 True
 ```
 
-## Greater than or equal to
+### Greater than or equal to
 
 The `>=` operator returns `True` if the value of operand on left is greater than or equal to the value of operand on right.
 
@@ -1675,7 +1675,7 @@ True
 True
 ```
 
-## Less than
+### Less than
 
 The `<` operator returns `True` if the value of operand on left is less than the value of operand on right.
 
@@ -1702,7 +1702,7 @@ True
 True
 ```
 
-## Less than or equal to
+### Less than or equal to
 
 The `<=` operator returns `True` if the value of operand on left is lesser than or equal to the value of operand on right.
 
@@ -1729,7 +1729,7 @@ True
 True
 ```
 
-# Assignment Operators
+## Assignment Operators
 
 The assignment symbol (`=`) serves as a delimiter between the name and value in an assignment statement. 
 
@@ -1753,7 +1753,7 @@ These operators perform the binary operation on the two operands and assign the 
 
 If `<op>` is a binary operator, then the expression `a <op>= b` containing the augmented assignment operator is equivalent to `a = a <op> b`.
 
-## +=
+### +=
 
 The `+=` operator adds a value (right operand) to the variable (left operand) and assigns the result to that variable.
 
@@ -1769,7 +1769,7 @@ The `+=` operator adds a value (right operand) to the variable (left operand) an
 'helloworld'
 ```
 
-## -=
+### -=
 
 The `-=` operator subtracts a value (right operand) from the variable (left operand) and assigns the result to that variable.
 
@@ -1780,7 +1780,7 @@ The `-=` operator subtracts a value (right operand) from the variable (left oper
 1
 ```
 
-## *=
+### *=
 
 The `*=` operator multiplies a value (right operand) to the variable (left operand) and assigns the result to that variable.
 
@@ -1795,7 +1795,7 @@ The `*=` operator multiplies a value (right operand) to the variable (left opera
 'hihihi'
 ```
 
-## /=
+### /=
 
 The `/=` operator divides the variable (left operand) by a value (right operand) and assigns the result to that variable.
 
@@ -1806,7 +1806,7 @@ The `/=` operator divides the variable (left operand) by a value (right operand)
 2.0
 ```
 
-## //=
+### //=
 
 The `//=` operator floor divides the variable (left operand) by a value (right operand) and assigns the result to that variable.
 
@@ -1817,7 +1817,7 @@ The `//=` operator floor divides the variable (left operand) by a value (right o
 2
 ```
 
-## **=
+### **=
 
 The `**=` operator raises the variable (left operand) to a power (right operand) and assigns the result to that variable.
 
@@ -1828,7 +1828,7 @@ The `**=` operator raises the variable (left operand) to a power (right operand)
 16
 ```
 
-## %=
+### %=
 
 The `%=` operator computes modulus of the variable (left operand) and a value (right operand) and assigns the result to that variable.
 
@@ -1839,11 +1839,11 @@ The `%=` operator computes modulus of the variable (left operand) and a value (r
 1
 ```
 
-# Logical Operators
+## Logical Operators
 
 Expressions using logical operators evaluate to a boolean value (`True` or `False`) based on the logical state of the operands. 
 
-## Logical State of Operands
+### Logical State of Operands
 
 In Python, all values except `0`, `None`, `False`, `""`, `''`, `()`, `[]`, `{}` have their logical state as `True`.
 
@@ -1887,7 +1887,7 @@ True
 True
 ```
 
-## not
+### not
 
 The logical state of an operand can be reversed (`False` to `True`, and vice versa) using the logical `not` operator.
 
@@ -1899,7 +1899,7 @@ True
 False
 ```
 
-## or
+### or
 
 The logical `or` operator returns `True` if the logical state of any of the two operands is `True`.
 
@@ -1912,7 +1912,7 @@ True
 False
 ```
 
-## and
+### and
 
 The logical `and` operator returns `True` if the logical state of both the operands is `True`.
 
@@ -1927,7 +1927,7 @@ True
 False
 ```
 
-# Identity Operators
+## Identity Operators
 
 We have already witnessed how Python treats every value or data item as an object. 
 
@@ -1966,7 +1966,7 @@ False
 
 In the above example, both lists `l` and `l2` although contain items with same values, are actually two different objects occupying different memory locations.
 
-# Membership Operators
+## Membership Operators
 
 The operators `in` and `not in` test whether a value is present or not present in an iterable (string, list, tuple, set, dictionary).
 
@@ -1986,7 +1986,7 @@ True
 False
 ```
 
-# Expression
+## Expression
 
 Literals (constants), identifiers (variables) and operators can be combined to form an expression which always evaluates to a single value. 
 
@@ -2009,7 +2009,7 @@ Some valid expressions are provided below:
 
 As shown above, standalone literals (like `10`) and variables (like `a`) are considered as expressions, but standalone operators are not expressions.
 
-## Chained Expression
+### Chained Expression
 
 Comparison operators can be chained together in Python. 
 
@@ -2019,7 +2019,7 @@ For example, `lower <= age <= upper` is a valid chained expression which is equi
 
 If `a`, `b`, `c`, …, `y`, `z` are expressions and `op1`, `op2`, …, `opN` are comparison operators, then the chained expression `a op1 b op2 c ... y opN z` is equivalent to `a op1 b and b op2 c and ... y opN z`.
 
-## Conditional Expression
+### Conditional Expression
 
 Python does not have ternary operators (`?:`) like other programming languages. Hence, the keywords `if` and `else` are used to create conditional expressions which evaluates to a value based on the given condition.
 
@@ -2037,7 +2037,7 @@ If the above condition `cond` evaluates to `True`, then the variable `var` is as
 -1
 ```
 
-# Precedence of Operators
+## Precedence of Operators
 
 While studying mathematics in middle school, we came across the **BODMAS** (Bracket, Of, Division, Multiplication, Addition, and Subtraction) rule which helps us in understanding how mathematical expressions are computed in the presence of multiple operators (`of`, `x`, `/`, `+`, `-`).
 
@@ -2062,9 +2062,9 @@ The table below presents the precedence of operators in Python from highest to l
 | `or` | Boolean `OR` |
 | `:=` | Assignment expression |
 
-## Exercise
+### Exercise
 
-### Example 1
+#### Example 1
 
 Evaluate the expression 
 
@@ -2077,7 +2077,7 @@ Step: `*` has higher precedence over `-`
 = `15 - 8`  
 = `7`
 
-### Example 2
+#### Example 2
 
 Evaluate the expression 
 
@@ -2090,7 +2090,7 @@ Step: `-` and `+` have the same order of precedence so the expression is evaluat
 = `13 + 4`  
 = `17`
 
-### Example 3
+#### Example 3
 
 Evaluate the expression 
 
@@ -2103,7 +2103,7 @@ Parantesized expression `(...)` has the highest precedence so `+` is evaluated f
 = `15 - 6`  
 = `9`
 
-### Example 4
+#### Example 4
 
 Evaluate the expression 
 
@@ -2127,7 +2127,7 @@ Evaluate the expression
 `6 + 2.25 - 2`  
 = `6.25`
 
-### Example 5
+#### Example 5
 
 Evaluate the expression 
 
@@ -2147,7 +2147,7 @@ Evaluate the expression
 `4 - 4 + 20`  
 = `20`
 
-### Example 6
+#### Example 6
 
 Evaluate the expression 
 
@@ -2183,7 +2183,7 @@ Boolean `AND` is evaluated
 `True and True`  
 = `True`
 
-# Error Types
+## Error Types
 
 A program contains **"bug(s)"** when it is unable to execute or produces an output which is different from what is expected. These bugs are generally introduced by a programmer unknowingly. 
 
@@ -2195,7 +2195,7 @@ The three major types of errors are:
 - Runtime Error
 - Logical Error
 
-# Syntax Error
+## Syntax Error
 
 Syntax error occurs when the program contains any statement that does not follow the prescribed Python rules or syntax which makes it difficult for the Python interpreter to parse (understand) and execute it.
 
@@ -2207,7 +2207,7 @@ Some common syntax errors are:
 - Incorrect position of keyword
 - Incorrect block indentation
 
-## Script Mode
+### Script Mode
 
 When a code containing syntactically incorrect statement is executed using script mode via IDLE, an error dialog box is displayed.
 
@@ -2219,7 +2219,7 @@ On closing the dialog box, the incorrect part of the code, the potential cause o
 
 This error has to be rectified to execute the program correctly.
 
-## Interactive Mode
+### Interactive Mode
 
 When a syntactically incorrect statement is executed in the Python console (interactive mode), the Python interpreter displays it and also adds a little arrow (`^`) pointing at the entry point or token where the error was detected.
 
@@ -2235,7 +2235,7 @@ SyntaxError: invalid syntax
 
 In the above example there is a syntax error with `^` pointing to `print` function which the parser is unable to understand as there is a missing `:` (colon) after `True`.
 
-# Runtime Error
+## Runtime Error
 
 A runtime error occurs when the program is terminated prematurely by the Python interpreter as it is unable to execute a statement although it is correct syntactically.
 
@@ -2251,9 +2251,9 @@ Some runtime error examples are:
 - **TypeError**: Raised while performing an operation on incompatible types.
 - **IndentationError**: Raised when the indentation of a statement or code block is incorrect.
 
-## Examples
+### Examples
 
-### ZeroDivisionError
+#### ZeroDivisionError
 
 ``` python
 n = 100
@@ -2268,7 +2268,7 @@ Traceback (most recent call last):
 ZeroDivisionError: division by zero
 ```
 
-### NameError
+#### NameError
 
 ``` python
 n = 100
@@ -2282,7 +2282,7 @@ Traceback (most recent call last):
 NameError: name 'd' is not defined
 ```
 
-### KeyError
+#### KeyError
 
 ``` python
 d = {1: "1st", 2: "2nd"}
@@ -2296,7 +2296,7 @@ Traceback (most recent call last):
 KeyError: 3
 ```
 
-### TypeError
+#### TypeError
 
 ``` python
 n =1
@@ -2311,7 +2311,7 @@ Traceback (most recent call last):
 TypeError: unsupported operand type(s) for +: 'int' and 'str'
 ```
 
-# Logical Error
+## Logical Error
 
 Logical error or Semantic error is caused when the issue lies in the underlying meaning of the code which leads to an incorrect output. 
 
@@ -2319,7 +2319,7 @@ As compared to syntax or runtime error there is no termination of the program.
 
 Debugging a logical error requires inspection of the entire code as no guiding error message is displayed.
 
-## Example
+### Example
 
 Let us write a program to calculate the average of two numbers
 
@@ -2355,7 +2355,7 @@ On executing the script, we now obtain the correct result
 Average: 15.0
 ```
 
-# Exceptions
+## Exceptions
 
 We have witnessed that even if a program is syntactically correct, its execution may lead to a run-time error. 
 
@@ -2365,7 +2365,7 @@ Some of the built-in exceptions that are raised by the Python interpreter are - 
 
 Apart from the Python interpreter, a programmer can also trigger and raise an exception (along with a custom message) in the code using `raise` or `assert` statement.
 
-## raise
+### raise
 
 The `raise` statement can be used to throw an exception in a program. The exception may or may not contain the custom error message (recommended).
 
@@ -2467,7 +2467,7 @@ Traceback (most recent call last):
 ValueError: The value of b cannot be zero
 ```
 
-## assert
+### assert
 
 An `assert` statement is often used during code development to act like a safety valve which notifies the programmer in case the test expression is evaluated as `False`. 
 
@@ -2515,7 +2515,7 @@ Traceback (most recent call last):
 AssertionError: a is not equal to b
 ```
 
-# Exception Handling
+## Exception Handling
 
 Exception handling is the process of properly handling an exception which can potentially crash a program during execution.
 
@@ -2549,7 +2549,7 @@ finally:
     [code block always executed]
 ```
 
-# Control Flow Statements
+## Control Flow Statements
 
 A simple Python program can be treated as a block of code where each statement is executed by the Python interpreter in a sequential order from top to bottom. 
 
@@ -2572,7 +2572,7 @@ They can be categorized as:
 - Recursion - Calling a method/function in the same method/function
 - Exception Handling
 
-# Sequential
+## Sequential
 
 By default the code statements in Python are executed in Sequential order.
 
@@ -2593,7 +2593,7 @@ The above code will be executed in the following sequential order:
 
 ![Sequential Flow of Code](images/0802b.png)
 
-# Selection: if..else
+## Selection: if..else
 
 Selection statements, also known as Decision making statements, control the flow of a program based on the outcome of one or many test expression(s). If the condition is satisfied (`True`) then the code block is executed. There is also a provision to execute another code block if the condition is not satisfied.
 
@@ -2629,11 +2629,11 @@ The control flow view of the above code is:
 
 ![Selection in Flow of Code](images/0803b.png)
 
-## Examples
+### Examples
 
 Let us go through some programming problems which utilize selection statements.
 
-### Absolute Value
+#### Absolute Value
 
 Write a program to output the magnitude of difference between two numbers using conditional statement.
 
@@ -2659,7 +2659,7 @@ Enter 2nd number: 15
 The difference of 12 and 15 is 3
 ```
 
-### Sorting 3 Numbers
+#### Sorting 3 Numbers
 
 Write a program to accept 3 numbers from the user and print them in ascending order of value.
 
@@ -2691,7 +2691,7 @@ Enter 3rd number: 6
 The numbers in sorted order: 2 , 6 , 9
 ```
 
-### Divisibility
+#### Divisibility
 
 Write a program to accept two numbers and test if the first number is divisible by the second number.
 
@@ -2719,7 +2719,7 @@ Enter 2nd number: 3
 9 is divisible by 3
 ```
 
-# Iteration: for
+## Iteration: for
 
 Iteration statements, also known as Looping statements, allow repeated execution of a code block. 
 
@@ -2733,7 +2733,7 @@ This process can be demonstrated using the below flowchart:
 
 Let us go through some code examples to demonstrate how `for` statement can be used to iterate over sequences.
 
-## List Iteration
+### List Iteration
 
 **Code**
 
@@ -2756,7 +2756,7 @@ BMW
 Volkswagen
 ```
 
-## Tuple Iteration
+### Tuple Iteration
 
 **Code**
 
@@ -2779,7 +2779,7 @@ BMW
 Volkswagen
 ```
 
-## String Iteration
+### String Iteration
 
 **Code**
 
@@ -2800,7 +2800,7 @@ o
 n
 ```
 
-## Range Iteration
+### Range Iteration
 
 The `range` type represents an immutable sequence of numbers that is usually used in for loops for looping a certain number of times. `range` object always take the same (small) amount of memory, no matter the size of the range it represents, which is an advantage over a regular `list` or `tuple`.
 
@@ -2818,7 +2818,7 @@ range(0, 10)
 
 `range()` function is widely used in a `for` statement to control the number of iterations and provide the index value (`i`) of each iteration.
 
-### Example #1
+#### Example #1
 
 Print multiples of 5 starting from 0 to 20.
 
@@ -2839,7 +2839,7 @@ for i in range(5):
 20
 ```
 
-### Example #2
+#### Example #2
 
 Print all integers from 2 to 5 including the boundary values.
 
@@ -2859,7 +2859,7 @@ for i in range(2, 6):
 5
 ```
 
-### Example #3
+#### Example #3
 
 Print all odd numbers between 2 and 10.
 
@@ -2887,7 +2887,7 @@ for i in range(2, 10):
 9
 ```
 
-### Example #4
+#### Example #4
 
 Print the index of all occurrences of `o` in `python programming`.
 
@@ -2907,11 +2907,11 @@ for i in range(len(s)):
 9
 ```
 
-## Exercises
+### Exercises
 
 Let us go through some programming problems which utilize the `for` iteration statement.
 
-### Compound Interest
+#### Compound Interest
 
 Write a program to calculate the total compound interest payable for given principal, interest rate (compounded annually) and total time (in years).
 
@@ -2938,7 +2938,7 @@ Enter the loan duration (in years): 3
 Total interest payable: 78812.5
 ```
 
-### Factorial
+#### Factorial
 
 The factorial of a positive integer `n`, denoted by `n!`, is the product of all positive integers less than or equal to `n`.  
 `n! = n×(n-1)×(n-2)...3×2×1`  
@@ -2963,7 +2963,7 @@ Enter n: 6
 n! : 720
 ```
 
-# Iteration: while
+## Iteration: while
 
 `while` statement repeatedly executes a code block as long as the test condition is satisfied. 
 
@@ -3000,11 +3000,11 @@ while i<len(cars):
 
 In the above example, the test condition is `i<len(cars)` and the update statement is `i+=1`.
 
-## Exercises
+### Exercises
 
 Let us go through some programming problems which utilize the `while` iteration statement.
 
-### Compound Interest
+#### Compound Interest
 
 Write a program to calculate the total compound interest payable for given principal, interest rate (compounded annually) and total time (in years).
 
@@ -3032,7 +3032,7 @@ Enter the loan duration (in years): 3
 Total interest payable: 78812.5
 ```
 
-### Factorial
+#### Factorial
 
 The factorial of a positive integer `n`, denoted by `n!`, is the product of all positive integers less than or equal to `n`.  
 `n! = n×(n-1)×(n-2)...3×2×1`   
@@ -3058,19 +3058,19 @@ Enter n: 6
 n! : 720
 ```
 
-# Jump Statements
+## Jump Statements
 
 Jump statements are used to (abruptly) alter the flow of execution. 
 
 Some of the jump statements available in Python are:
 
-## pass
+### pass
 
 A `pass` statement acts as a placeholder and performs null (no) operation.
 
 Various reasons for using the keyword `pass` are provided below:
 
-### 1. Syntactical Requirement
+#### 1. Syntactical Requirement
 
 Using `pass` becomes a syntactical requirement for cases where the Python interpreter can raise a `SyntaxError` due to missing statements.  
 
@@ -3118,7 +3118,7 @@ File "<ipython-input-20-068861cce0a8>", line 1
 SyntaxError: unexpected EOF while parsing
 ```
 
-### 2. Skipping Code Execution
+#### 2. Skipping Code Execution
 
 `pass` can be used to skip code execution for certain cases. 
 
@@ -3143,7 +3143,7 @@ for i in l:
 5 is not divisible by 3
 ```
 
-### Placeholders
+#### Placeholders
 
 `pass` can be used to create valid empty functions and classes as placeholders which can be modified in the future versions of code.
 
@@ -3155,7 +3155,7 @@ class EmptyClass:
     pass
 ```
 
-## break
+### break
 
 The `break` statement is used to terminate the execution of immediately enclosing `for` or `while` statement.
 
@@ -3197,7 +3197,7 @@ while i <10:
 4
 ```
 
-## continue
+### continue
 
 `continue` statement is used to skip the execution of successive statements and start the next iteration.
 
@@ -3221,7 +3221,7 @@ ABC is selected for interview
 JKL is selected for interview
 ```
 
-# Nested Loops
+## Nested Loops
 
 When a loop is present inside another loop, it is known as a nested loop. 
 
@@ -3229,7 +3229,7 @@ For each iteration of the outer loop, the inner loop undergoes complete iteratio
 
 Let us go through a nested loop example:
 
-## Factorial
+### Factorial
 
 Write a program to print the factorial of all numbers in the range `1` to `10` (inclusive).
 
@@ -3258,7 +3258,7 @@ for n in range(1, 11):
 10 ! = 3628800
 ```
 
-## Nested Loop - break
+### Nested Loop - break
 
 A `break` statement inside the inner loop terminates only the inner loop whereas the outer loop is not affected.
 
@@ -3294,7 +3294,7 @@ for n in range(2, 40):
 37 is prime
 ```
 
-# Creating a String
+## Creating a String
 
 A String (`str`) is an **immutable** sequence of Unicode characters which is used to handle textual data in Python.
 
@@ -3320,7 +3320,7 @@ multiline
 String'''
 ```
 
-## Escape Characters
+### Escape Characters
 
 The backslash (`\`) character can be used in a string to escape characters that otherwise have a special meaning, such as newline, linefeed, or the quote character.
 
@@ -3339,7 +3339,7 @@ The backslash (`\`) character can be used in a string to escape characters that 
 
 Although `\'` and `\"` can be used to specify quote characters, Python allows embedding double quotes inside a single-quoted string (`'My name is "Python".'`) and single quotes inside a double-quoted string (`"Python's World"`).
 
-## Unicode Support
+### Unicode Support
 
 Python string objects support Unicode characters. 
 
@@ -3352,7 +3352,7 @@ E = mc²
 
 In the above example, `\u00B2` is the unicode character which represents the 'SUPERSCRIPT TWO'. 
 
-## Other Types to String
+### Other Types to String
 
 In case you want to create a string object from other data types, just use the built-in `str()` function as follows:
 
@@ -3364,7 +3364,7 @@ In case you want to create a string object from other data types, just use the b
 '10.0'
 ```
 
-# Accessing Characters
+## Accessing Characters
 
 Python strings are "immutable", i.e., the state (value) of the objects cannot be modified after they are created. 
 
@@ -3387,7 +3387,7 @@ If `s = "hello"`,
 - `s[-4]` will result in `e`
 - `s[-6]` will result in `IndexError: string index out of range` as the length of string is `5` (negative index `-1` to `-5`)
 
-## Length of String
+### Length of String
 
 The built-in function `len()` returns the length of a string which is useful during string traversal or other string operations.
 
@@ -3405,11 +3405,11 @@ The built-in function `len()` returns the length of a string which is useful dur
 'n'
 ```
 
-# String Operations
+## String Operations
 
 We can perform various operations on a string (sequence of characters) such as slicing, membership, concatenation and repetition.
 
-## Slicing
+### Slicing
 
 In Python, a character in a string can be easily accessed using its index.
 
@@ -3459,7 +3459,7 @@ The slice operator also allows the usage of a third index which is known as step
 
 In the above example, the substring begins at the start of the string, takes a step size of `2` skipping `e` and ends at the last character again skipping the 4th character `l`.
 
-## Membership
+### Membership
 
 `in` and `not in` operators can be used to determine whether a substring is present/not present in a string.
 
@@ -3471,7 +3471,7 @@ True
 True
 ```
 
-## Concatenation
+### Concatenation
 
 The `+` operator can be used to join two strings.
 
@@ -3484,7 +3484,7 @@ The `+` operator can be used to join two strings.
 'HelloWorld'
 ```
 
-## Repetition
+### Repetition
 
 The `*` operator repeats a string the number of times as specified by the integer operand.
 
@@ -3494,15 +3494,15 @@ The `*` operator repeats a string the number of times as specified by the intege
 'HelloHelloHello'
 ```
 
-# String Methods
+## String Methods
 
 Apart from the built-in function `len()` which returns the length of the string, String objects have access to several specialized functions (methods) which are described below:
 
-## 1. Convert Case
+### 1. Convert Case
 
 The following methods are useful in converting the case of the characters in a string:
 
-### i. lower()
+#### i. lower()
 
 All cased characters are converted into lowercase.
 
@@ -3511,7 +3511,7 @@ All cased characters are converted into lowercase.
 'python'
 ```
 
-### ii. upper()
+#### ii. upper()
 
 All cased characters are converted into uppercase.
 
@@ -3520,7 +3520,7 @@ All cased characters are converted into uppercase.
 'PYTHON'
 ```
 
-### iii. swapcase()
+#### iii. swapcase()
 
 Uppercase characters are converted into lowercase and lowercase characters are converted into uppercase.
 
@@ -3529,7 +3529,7 @@ Uppercase characters are converted into lowercase and lowercase characters are c
 'pyTHON'
 ```
 
-### iv. capitalize()
+#### iv. capitalize()
 
 First character is capitalized and rest all characters are lowercased.
 
@@ -3538,7 +3538,7 @@ First character is capitalized and rest all characters are lowercased.
 'Hello py'
 ```
 
-### v. title()
+#### v. title()
 
 For each word present in the string, the first character is uppercased and the remaining characters are lowercased.
 
@@ -3547,11 +3547,11 @@ For each word present in the string, the first character is uppercased and the r
 'Hello Python'
 ```
 
-## 2. Check Characters
+### 2. Check Characters
 
 The following methods are used to check the type of characters in a string.
 
-### i. isalpha()
+#### i. isalpha()
 
 Returns `True` if all characters in the string are letters (`A-Z a-z`).
 
@@ -3566,7 +3566,7 @@ False  # contains whitespace
 False  # contains digit
 ```
 
-### ii. isdigit()
+#### ii. isdigit()
 
 Returns `True` if all characters in the string are digits.
 
@@ -3577,7 +3577,7 @@ False  # contains alphabets
 True
 ```
 
-### iii. isalnum()
+#### iii. isalnum()
 
 Returns `True` if all characters in the string are alphanumeric (Alphabets or Numeric).
 
@@ -3592,7 +3592,7 @@ False  # contains whitespace
 True
 ```
 
-### iv. isascii()
+#### iv. isascii()
 
 Returns `True` if the string is empty or all characters in the string are ASCII.
 
@@ -3607,7 +3607,7 @@ False
 False
 ```
 
-### v. islower()
+#### v. islower()
 
 Returns `True` if all characters are lowercase.
 
@@ -3618,7 +3618,7 @@ True
 False
 ```
 
-### vi. isupper()
+#### vi. isupper()
 
 Returns `True` if all characters are uppercase.
 
@@ -3629,7 +3629,7 @@ True
 False
 ```
 
-### vii. isspace()
+#### vii. isspace()
 
 Returns `True` if there are only whitespace characters in the string. Some popular whitespace characters are ` ` (space), `\t` (tab), `\n` (newline), `\r` (carriage return), `\f` (form feed) and `\v` (vertical tab).
 
@@ -3638,7 +3638,7 @@ Returns `True` if there are only whitespace characters in the string. Some popul
 True
 ```
 
-### viii. istitle()
+#### viii. istitle()
 
 Returns `True` if the string is title-cased, i.e., the first character of every word in the string is uppercased and the remaining characters are lowercased.
 
@@ -3651,11 +3651,11 @@ False
 False
 ```
 
-## 3. Split Methods
+### 3. Split Methods
 
 Split methods help in splitting/partitioning a string.
 
-### i. partition()
+#### i. partition()
 
 `partition(sep)` method splits the string when the separator (`sep`) is encountered for the first time, and returns a tuple with three items `(string before separator, separator, string after separator)`.
 
@@ -3664,7 +3664,7 @@ Split methods help in splitting/partitioning a string.
 ('Hi', '|', 'Ed|Punk')
 ```
 
-### ii. split()
+#### ii. split()
 
 `split(sep=None, maxsplit=-1)` method splits a string into a list based on a string separator (`sep`). 
 
@@ -3688,7 +3688,7 @@ If `maxsplit` is provided, at most `maxsplit` number of splits are performed and
 ['Hi', 'Ed', 'Punk|v2']
 ```
 
-## 4. Strip Methods
+### 4. Strip Methods
 
 Strip methods are useful in removing leading and/or trailing characters in a string. 
 
@@ -3696,7 +3696,7 @@ They accept an optional argument `chars` which specifies the set of characters w
 
 If no arguments are provided then `chars` defaults to ASCII whitespace and the method removes all leading and/or trailing spaces from the string.
 
-### i. lstrip()
+#### i. lstrip()
 
 All leading (on the left) characters are removed from the string.
 
@@ -3707,7 +3707,7 @@ All leading (on the left) characters are removed from the string.
 'edpunk.cc'
 ```
 
-### ii. rstrip()
+#### ii. rstrip()
 
 All trailing (on the right) characters are removed from the string.
 
@@ -3718,7 +3718,7 @@ All trailing (on the right) characters are removed from the string.
 'www.edpunk'
 ```
 
-### iii. strip()
+#### iii. strip()
 
 All leading and trailing characters are removed from the string.
 
@@ -3729,7 +3729,7 @@ All leading and trailing characters are removed from the string.
 'edpunk'
 ```
 
-## 5. Check Prefix/Suffix
+### 5. Check Prefix/Suffix
 
 `startswith()` and `endswith()` methods are used check whether a string starts or ends with the provided substring (or a tuple of substrings).
 
@@ -3748,11 +3748,11 @@ True
 True
 ```
 
-## 6. Search/Replace Methods
+### 6. Search/Replace Methods
 
 The following string methods are useful for locating substring in a string.
 
-### i. count()
+#### i. count()
 
 `count(sub[, start[, end]])` returns the number of non-overlapping occurrences of a substring `sub` in the range `[start, end]`. 
 
@@ -3782,7 +3782,7 @@ It has to be noted that the method counts non-overlapping occurrences, so it doe
 
 In the above example, `ala` is counted twice as the first occurence is in `valh"ala"` and the next occurance is in `"ala"la`. Although `ala` can be located again in `al"ala"`, it overlaps with the occurance `"ala"la`, hence it is not counted.  
 
-### ii. find()
+#### ii. find()
 
 `find(sub[, start[, end]])` returns the lowest index in the string where substring `sub` is located in the range `[start, end]`. 
 
@@ -3804,7 +3804,7 @@ The method returns `-1` in case the substring is not present.
 14
 ```
 
-### iii. rfind()
+#### iii. rfind()
 
 `rfind(sub[, start[, end]])` returns the highest index in the string where substring `sub` is located in the range `[start, end]`. 
 
@@ -3824,7 +3824,7 @@ The method returns `-1` in case the substring is not present.
 14
 ```
 
-### iv. index()
+#### iv. index()
 
 `index(sub[, start[, end]])` is similar to `find(sub[, start[, end]])`, but instead of returning `-1` it raises `ValueError` when the substring is not found.
 
@@ -3848,7 +3848,7 @@ ValueError: substring not found
 14
 ```
 
-### v. rindex()
+#### v. rindex()
 
 `s.rindex(sub[, start[, end]])` is similar to `rfind(sub[, start[, end]])`, but instead of returning `-1` it raises `ValueError` when the substring is not found.
 
@@ -3867,7 +3867,7 @@ ValueError: substring not found
 14
 ```
 
-### vi. replace()
+#### vi. replace()
 
 `replace(oldsub, newsub[, count])` returns a copy of the string with all occurrences of `oldsub` substring replaced by `newsub`. 
 
@@ -3881,11 +3881,11 @@ ValueError: substring not found
 'Hi Python! Oh'
 ```
 
-# Traversing a String
+## Traversing a String
 
 `for` and `while` statements are useful for traversing a string.
 
-## for
+### for
 
 As a string is a sequence of characters, the `for` statement can be used to iterate over a string as shown below.
 
@@ -3908,7 +3908,7 @@ o
 n
 ```
 
-## while
+### while
 
 A `while` statement can be used to traverse a string by iterating on the value of index till the last character index.
 
@@ -3933,7 +3933,7 @@ o
 n
 ```
 
-# Creating a List
+## Creating a List
 
 The most common and widely used collections in Python are **lists** which store an ordered group of objects (of any datatype) which might have some logical relation. This marks a considerable difference from arrays (in traditional languages) and makes Python an ideal language for handling real-life data which is not type-bound.  
 
@@ -3957,7 +3957,7 @@ This method of creating a list from a collection of literals is known as **list 
 
 Notice, how this list contains items of multiple data types - `str`, `int` and `bool`.
 
-## list()
+### list()
 
 Apart from the list display shown above, the built-in `list()` function can also be used to create new lists.
 
@@ -3983,7 +3983,7 @@ If a string, tuple or set is passed as an argument, `list()` functions converts 
 [1, 2, 3, 4]
 ```
 
-# Accessing Items
+## Accessing Items
 
 Lists use zero-based indexing, where 0 is the index of the first element and `len(list) - 1` is the index of the last element.
 
@@ -3998,7 +3998,7 @@ For example,
 2019
 ```
 
-## Length of List
+### Length of List
 
 The built-in `len()` function can be used to return the length of the list.
 
@@ -4009,7 +4009,7 @@ The built-in `len()` function can be used to return the length of the list.
 6
 ```
 
-## Negative Indexing
+### Negative Indexing
 
 Just like `str`, sequence types like `list` support negative indexing, i.e., you can access the values of list from the end. 
 
@@ -4024,7 +4024,7 @@ True
 4
 ```
 
-# Modifying an Item
+## Modifying an Item
 
 As lists are mutable, the assignment operator can be used to modify or replace a single item in the list at a given index.
 
@@ -4035,7 +4035,7 @@ As lists are mutable, the assignment operator can be used to modify or replace a
 ['BMW', 'Z4', 'Black']
 ```
 
-# Removing an Item
+## Removing an Item
 
 `del` statement can be used to delete an item at a given index of a list.
 
@@ -4046,11 +4046,11 @@ As lists are mutable, the assignment operator can be used to modify or replace a
 ['BMW', 'Red']
 ```
 
-# List Operations
+## List Operations
 
 We can perform various operations on a list (collection of items) such as membership, concatenation, repetition and slicing.
 
-## Membership
+### Membership
 
 `in` and `not in` can be used to detect the membership of an item in a list.
 
@@ -4064,7 +4064,7 @@ False
 True    
 ```
 
-## Concatenation
+### Concatenation
 
 `+` operator can be used to join two lists to create a new list.
 
@@ -4084,7 +4084,7 @@ True
 ['BMW', 'Z4', 2019, 'Red']  
 ```
 
-## Repetition
+### Repetition
 
 The `*` operator repeats the items of a list the number of times as specified by the integer operand.
 
@@ -4094,7 +4094,7 @@ The `*` operator repeats the items of a list the number of times as specified by
 [1, 2, 1, 2, 1, 2]
 ```
 
-## Slicing
+### Slicing
 
 A subset of list `l` can be obtained using the list slice notation given as `l[i:j]`, where the item at start index `i` is included, but the item at end index `j` is excluded. 
 
@@ -4172,13 +4172,13 @@ Slice notation can also be used to delete multiple items in a list.
 ['Z4', 4, True]
 ```
 
-# Traversing a List
+## Traversing a List
 
 List Traversal is the process of visiting every item in a list, usually from the first item to the last item, and executing some instruction on the accessed item. 
 
 Python provides 2 ways to traverse a list: 
 
-## Direct Traversal
+### Direct Traversal
 
 As a list is an ordered collection of items, the `for` statement can be used to directly and sequentially access each item.
 
@@ -4202,7 +4202,7 @@ Red
 True
 ```
 
-## Location or Index Based Traversal
+### Location or Index Based Traversal
 
 In location based or index based traversal the value of index starts at `0` and increments as long as it is lesser than the length of the list. 
 
@@ -4275,9 +4275,9 @@ Red
 True
 ```
 
-# List Methods & Functions
+## List Methods & Functions
 
-## Simple Aggregations
+### Simple Aggregations
 
 Built-in functions `max()`, `min()` and `sum()` are used to calculate the maximum, minimum and sum of items in a list, respectively.  
 
@@ -4291,7 +4291,7 @@ Built-in functions `max()`, `min()` and `sum()` are used to calculate the maximu
 18
 ```
 
-## Adding Items
+### Adding Items
 
 `append()` method adds an item (passed as an argument) to the end of a list.
 
@@ -4320,7 +4320,7 @@ If the item has to be added at a particular index, `insert()` method can be used
 ['T', 'C', 2, 4, 2.5, 'SE']  
 ```
 
-## Locating Items
+### Locating Items
 
 An item `x` can be located in a list using the `index(x[, i[, j]])` method which returns the first occurrence of the item at or after index `i` and before index `j`. 
 
@@ -4347,7 +4347,7 @@ In case `i` and `j` are not specified they default to `i=0` and `j=len(l)`.
 2
 ```
 
-## Removing Items
+### Removing Items
 
 `clear()` method removes all items from the list.
 
@@ -4385,7 +4385,7 @@ If an index is provided, `pop()` method removes the item at that index, else the
 ['T', 'C', 4, 'S']
 ```
 
-## Reversing Items
+### Reversing Items
 
 `reverse()` method can be used to reverse a list in-place.
 
@@ -4407,7 +4407,7 @@ If you do not wish to modify the existing list and create a new list with items 
 ['T', 'C', 2, 4, 'S']
 ```
 
-## Sorting Items
+### Sorting Items
 
 Python lists have a built-in `sort()` method which sorts the items in-place using `<` comparisons between items. 
 
@@ -4447,7 +4447,7 @@ If you do not wish to modify the existing list and create a new list with sorted
 [4, 6, 23, 34]
 ```
 
-# Nested List
+## Nested List
 
 A list of lists is also known as a nested list.
 
@@ -4474,7 +4474,7 @@ Thus, nested list is useful in representing a dataset where each item is a list 
 'Z4'
 ```
 
-# Copying a List
+## Copying a List
 
 In Python, we can create an object (data) and bind its reference to a variable using the assignment operator (`=`). 
 
@@ -4546,13 +4546,13 @@ False
 [1, 2, 3]
 ```
 
-# List Comprehension
+## List Comprehension
 
 A short and succinct way of creating a new list by transforming an existing list is via list comprehension.
 
 Also, due to the optimizations present in the Python interpreter, there are performance benefits of using list comprehension.
 
-## Member-wise Operation
+### Member-wise Operation
 
 List comprehension can be used to make a new list where each element is the result of some operations applied to each member of another sequence or iterable.
 
@@ -4565,7 +4565,7 @@ For example, to create a new list where each item is squared.
 [4, 9, 16, 25, 36, 64]
 ```
 
-## Filtering or Subsequence
+### Filtering or Subsequence
 
 List comprehension can also be used to create a subsequence of those elements that satisfy a certain condition.
 
@@ -4578,13 +4578,13 @@ For example, to create a new list where each item is divisible by 2.
 [2, 4, 6, 8]
 ```
 
-# Sample Programs
+## Sample Programs
 
-## Min, Max and Mean
+### Min, Max and Mean
 
 Write a program to find the minimum, maximum and mean of values stored in a list input by user.
 
-### Without Using Built-in Functions
+#### Without Using Built-in Functions
 
 **Code**
 
@@ -4632,7 +4632,7 @@ Maximum : 9.0
 Mean : 4.2
 ```
 
-### Using Built-in Functions
+#### Using Built-in Functions
 
 **Code**
 
@@ -4665,7 +4665,7 @@ Maximum : 9.0
 Mean : 4.2
 ```
 
-## Linear Search
+### Linear Search
 
 Write a program to enter a list and then check if the number entered by a user is present in that list.
 
@@ -4714,11 +4714,11 @@ Enter search value: 1
 Search value not found
 ```
 
-## Frequency of Elements
+### Frequency of Elements
 
 Write a program to enter a list and then print the frequency of elements present in that list.
 
-### Without Using Built-in Functions
+#### Without Using Built-in Functions
 
 **Code**
 
@@ -4772,7 +4772,7 @@ Frequency of Elements
 6 - 2
 ```
 
-### Using Built-in Functions
+#### Using Built-in Functions
 
 **Code**
 
@@ -4815,7 +4815,7 @@ Frequency of Elements
 6 - 2
 ```
 
-# Creating a Tuple
+## Creating a Tuple
 
 Tuples are like lists, with a difference - they are immutable. This means that once initialized a user cannot modify its value, which makes it a useful feature to ensure the sanctity of data and guarantee that it is not being modified by the program.
 
@@ -4827,7 +4827,7 @@ Tuples are declared using parentheses `( )`, with successive items separated by 
 <class 'tuple'>
 ```
 
-## tuple()
+### tuple()
 
 Apart from the method shown above, the built-in `tuple()` function can also be used to create new tuples.
 
@@ -4853,7 +4853,7 @@ If a string, tuple or set is passed as an argument, `tuple()` functions converts
 (1, 2, 3, 4)
 ```
 
-## Singleton
+### Singleton
 
 In case a tuple has only 1 item, it is known as a singleton. 
 
@@ -4881,7 +4881,7 @@ It is a good practice to include a trailing comma to avoid the Python interprete
 <class 'tuple'>
 ```
 
-# Accessing Items
+## Accessing Items
 
 Tuples use zero-based indexing, where 0 is the index of the first element and `len(tuple) - 1` is the index of the last element.
 
@@ -4894,7 +4894,7 @@ Tuples use zero-based indexing, where 0 is the index of the first element and `l
 2019
 ```
 
-## Length of Tuple
+### Length of Tuple
 
 The built-in `len()` function can be used to return the length of the tuple.
 
@@ -4905,7 +4905,7 @@ The built-in `len()` function can be used to return the length of the tuple.
 6
 ```
 
-## Negative Indexing
+### Negative Indexing
 
 Just like `list`, `tuple` supports negative indexing, i.e., you can access the values of tuple from the end. Index of -1 denotes the last item in the tuple, -2 is the second last item and so forth.
 
@@ -4918,7 +4918,7 @@ True
 4
 ```
 
-# Tuples are Immutable
+## Tuples are Immutable
 
 Tuples are immutable, i.e., no modifications are permitted once it is created and any attempt to do so raises an error.
 
@@ -4930,11 +4930,11 @@ Traceback (most recent call last):
 TypeError: 'tuple' object does not support item assignment
 ```
 
-# Tuple Operations
+## Tuple Operations
 
 We can perform various operations on a tuple such as membership, concatenation, repetition and slicing.
 
-## Membership
+### Membership
 
 `in` and `not in` can be used to detect the membership of an item in a tuple.
 
@@ -4949,7 +4949,7 @@ False
 True    
 ```
 
-## Concatenation
+### Concatenation
 
 `+` operator can be used to join two tuples to create a new tuple.
 
@@ -4960,7 +4960,7 @@ True
 ('BMW', 'Z4', 2019, 'Red')
 ```
 
-## Repetition
+### Repetition
 
 The `*` operator creates a new tuple with items of a tuple repeated the number of times as specified by the integer operand.
 
@@ -4970,7 +4970,7 @@ The `*` operator creates a new tuple with items of a tuple repeated the number o
 (1, 2, 1, 2, 1, 2)
 ```
 
-## Tuple Slicing
+### Tuple Slicing
 
 A subset of tuple `t` can be obtained using the tuple slice notation given as `t[i:j]`, where the item at index `i` is included, but the item at index `j` is excluded. 
 
@@ -5018,13 +5018,13 @@ Slice notation also supports negative indexing.
 (2019, 4, 'Red')
 ```
 
-# Traversing a Tuple
+## Traversing a Tuple
 
 Tuple Traversal is the process of visiting every item in a tuple, usually from the first item to the last item, and executing some instruction on the accessed item. 
 
 Python provides 2 ways to traverse a tuple: 
 
-## Direct Traversal
+### Direct Traversal
 
 As a tuple is an ordered collection of items, the `for` statement can be used to directly and sequentially access each item.
 
@@ -5048,7 +5048,7 @@ Red
 True
 ```
 
-## Location or Index Based Traversal
+### Location or Index Based Traversal
 
 In location based or index based traversal the value of index starts at `0` and increments as long as it is lesser than the length of the tuple. 
 
@@ -5100,11 +5100,11 @@ Red
 True
 ```
 
-# Tuple Methods & Functions
+## Tuple Methods & Functions
 
 `tuple` supports all the features available in a `list`, barring the methods/operations which try to modify it.
 
-## Simple Aggregations
+### Simple Aggregations
 
 Built-in functions `max()`, `min()` and `sum()` can be used to calculate the maximum, minimum and sum of items in a tuple, respectively.
 
@@ -5118,7 +5118,7 @@ Built-in functions `max()`, `min()` and `sum()` can be used to calculate the max
 18
 ```
 
-## Locating Items
+### Locating Items
 
 An item `x` can be located in a tuple using the `index(x[, i[, j]])` method which returns the first occurrence of the item at or after index `i` and before index `j`. In case `i` and `j` are not specified they default to `i=0` and `j=len(t)`.
 
@@ -5143,7 +5143,7 @@ An item `x` can be located in a tuple using the `index(x[, i[, j]])` method whic
 2
 ```
 
-## Reversing Items
+### Reversing Items
 
 To create a new tuple with items in reverse order, use the built-in function `reversed()` nested in the built-in `tuple()`.
 
@@ -5156,7 +5156,7 @@ To create a new tuple with items in reverse order, use the built-in function `re
 ('T', 'C', 2, 4, 'S')
 ```
 
-## Sorting Items
+### Sorting Items
 
 To create a new tuple with sorted items, use the built-in `sorted(x,[key, reverse])` function which returns a new sorted tuple. 
 
@@ -5179,7 +5179,7 @@ The method optionally accepts 2 keyword (named) arguments:
 ('Hi', 'it', 'Oh', 'Py')
 ```
 
-# Nested Tuple
+## Nested Tuple
 
 A tuple of tuples is also known as a nested tuple.
 
@@ -5217,7 +5217,7 @@ Just like lists, the `+=` operation works for a tuple and adds new item(s) to it
 But tuples are immutable right?  
 Then how are we able to modify it.
 
-## List
+### List
 
 To understand it better, let us revisit what happens when we apply `+=` operator on a list.
 
@@ -5233,7 +5233,7 @@ True
 
 In case of a list, the modified list `l` still points at the same object.
 
-## Tuple
+### Tuple
 
 Now, let us add items to a tuple.
 
@@ -5266,7 +5266,7 @@ Traceback (most recent call last):
 AttributeError: 'tuple' object has no attribute 'extend'
 ```
 
-# What is a Dictionary?
+## What is a Dictionary?
 
 Python provides a mapping type collection which contains keys, and values corresponding to those keys. 
 
@@ -5274,7 +5274,7 @@ This collection is known as a `dictionary` (type `dict`) , where each key is uni
 
 Dictionaries are indexed by keys (any immutable type - numbers, string, tuple) as compared to lists which are indexed by a range of numbers.
 
-# Creating a Dictionary
+## Creating a Dictionary
 
 An empty dictionary can be created using a pair of braces - `{}` or using the built-in function `dict()` which is also a constructor.
 
@@ -5292,7 +5292,7 @@ An empty dictionary can be created using a pair of braces - `{}` or using the bu
 
 To create a new dictionary with some initial values, one can use:
 
-## Key: Value Pairs
+### Key: Value Pairs
 
 A sequence of `key: value` pairs separated by commas in braces - `{}`.
 
@@ -5303,7 +5303,7 @@ A sequence of `key: value` pairs separated by commas in braces - `{}`.
 {'yr': 20, 'name': 'Ed', 18: True}
 ```
 
-## Sequence of (key, value) Tuples
+### Sequence of (key, value) Tuples
 
 A sequence of (key, value) tuples can be passed as an argument to the `dict()` function.
 
@@ -5315,7 +5315,7 @@ A sequence of (key, value) tuples can be passed as an argument to the `dict()` f
 {'yr': 20, 'name': 'Ed', 18: True}
 ```
 
-## Keyword/Named Arguments
+### Keyword/Named Arguments
 
 Keys and values can be passed as keyword arguments to the `dict()` function.
 
@@ -5328,7 +5328,7 @@ Keys and values can be passed as keyword arguments to the `dict()` function.
 
 One of the limitations of this method is that the keys of the dictionary are only of type string and their names must be within the namespace of an identifier.
 
-## Key and Value Lists
+### Key and Value Lists
 
 There might cases when there is a need to combine two lists where keys are in one list and the corresponding values are available in another list.
 
@@ -5345,7 +5345,7 @@ The zipped iterator can be passed as an argument to the `dict()` to create a new
 {'yr': 20, 'name': 'Ed', 18: True}
 ```
 
-## Keys with Default Value
+### Keys with Default Value
 
 `dict.fromkeys(iterable[, value])` can be used to create new dictionary with items of an `iterable` as keys with an optional value (default - `None`) corresponding to the keys.
 
@@ -5357,9 +5357,9 @@ The zipped iterator can be passed as an argument to the `dict()` to create a new
 {'yr': 0, 'name': 0, 18: 0}
 ```
 
-# Accessing Dictionary Items
+## Accessing Dictionary Items
 
-## Index Operator []
+### Index Operator []
 
 `d[x]` can be used to access the value corresponding to a key `x` in a dictionary `d`.
 
@@ -5370,7 +5370,7 @@ The zipped iterator can be passed as an argument to the `dict()` to create a new
 20
 ```
 
-## get()
+### get()
 
 `get(key[, default])` method can also be used to fetch the value for a key if key is in the dictionary, else a `default` value is returned. 
 
@@ -5389,9 +5389,9 @@ True
 
 This is an elegant method of fetching a value from a dictionary and it should be used in real life software codes as it never raises a `KeyError`.
 
-# Updating/Adding Items
+## Updating/Adding Items
 
-## Index Operator []
+### Index Operator []
 
 `d[x] = y` can be used to add the value `y` corresponding to a key `x` in a dictionary `d`. 
 
@@ -5408,13 +5408,13 @@ In case key `x` already exists, assignment updates or overwrites the value corre
 {'yr': 20, 18: True, 'name': 'Py'}
 ```
 
-## update()
+### update()
 
 `update()` method can be used to add new items or update existing items in a `dict`. 
 
 This method accepts the following:
 
-### 1. Dictionary
+#### 1. Dictionary
 
 ``` python
 >>> d = {"yr": 20, 18: True}
@@ -5427,7 +5427,7 @@ This method accepts the following:
 {'yr': 15, 18: False, 'name': 'Ed'}
 ```
 
-### 2. Sequence of (key, value) pairs
+#### 2. Sequence of (key, value) pairs
 
 ``` python
 >>> d = {"yr": 20, 18: True}
@@ -5437,7 +5437,7 @@ This method accepts the following:
 {'yr': 15, 18: True, 'name': 'Ed'}
 ```
 
-### 3. Keyworded arguments
+#### 3. Keyworded arguments
 
 ``` python
 >>> d = {"yr": 20, 18: True}
@@ -5446,7 +5446,7 @@ This method accepts the following:
 {'yr': 15, 18: True, 'name': 'Ed'}
 ```
 
-## setdefault()
+### setdefault()
 
 `setdefault(key[, default])` method returns a value corresponding to a key. 
 
@@ -5467,9 +5467,9 @@ If no default value is provided, the value is set as `None`.
 {'yr': 20, 18: True, 'name': 'Ed'}
 ```
 
-# Removing an Item
+## Removing an Item
 
-## del
+### del
 
 `del` keyword can be used to remove a `key: value` pair.
 
@@ -5481,7 +5481,7 @@ If no default value is provided, the value is set as `None`.
 {'yr': 20, 18: True}
 ```
 
-## clear()
+### clear()
 
 `clear()` method can be used to clear all values of a dictionary.
 
@@ -5493,7 +5493,7 @@ If no default value is provided, the value is set as `None`.
 {}
 ```
 
-## pop()
+### pop()
 
 `pop(key[, default])` method can be used to remove a `key: value` pair. 
 
@@ -5516,7 +5516,7 @@ KeyError: 'name'
 'Punk'
 ```
 
-## popitem()
+### popitem()
 
 `popitem()` can be used to destructively iterate over a dictionary removing and returning a `(key, value)` pair in LIFO (Last Item First Out) order.
 
@@ -5538,9 +5538,9 @@ KeyError: 'name'
 {}
 ```
 
-# Dictionary Operations
+## Dictionary Operations
 
-## Membership
+### Membership
 
 `in` keyword can be used to test the presence of a `key` in a dictionary.
 
@@ -5557,7 +5557,7 @@ Similarly, `not in` can be used to determine the absence of a `key`.
 True
 ```
 
-## Union
+### Union
 
 The `|` (union) operator can be used to merge two dictionaries.
 
@@ -5579,11 +5579,11 @@ In case of common keys between the two operands (dictionaries), the values of th
 
 In the above example, both `d` and `n` shared a common key `yr`. The value corresponding to `yr` in `n` gets priority.
 
-# Traversing a Dictionary
+## Traversing a Dictionary
 
 Compared to position based indexing of `list` or `tuple`, dictionaries are indexed based on the key.
 
-## Direct Traversal
+### Direct Traversal
 
 `for` loop can be used to directly iterate over the keys of a `dict`.
 
@@ -5602,7 +5602,7 @@ name : Ed
 18 : True
 ```
 
-## Traversing Using Dictionary Methods
+### Traversing Using Dictionary Methods
 
 Dictionary methods `items()`, `keys()` and `values()` can be used to fetch the items, keys and values in a dictionary, respectively.
 
@@ -5670,9 +5670,9 @@ name : Ed
 18 : True
 ```
 
-# Dictionary Methods & Functions
+## Dictionary Methods & Functions
 
-## Number of Items
+### Number of Items
 
 `len()` can be used to fetch the number of items in the dictionary.
 
@@ -5683,7 +5683,7 @@ name : Ed
 3
 ```
 
-## Min and Max
+### Min and Max
 
 The `min()` and `max()` built-in functions return the minimum and maximum value among the keys of a dictionary. 
 
@@ -5704,7 +5704,7 @@ In case of string keys, they return the first and last occurring strings alphabe
 3
 ```
 
-## Copy
+### Copy
 
 A new copy of a dictionary can be made using `copy()` method:
 
@@ -5725,7 +5725,7 @@ False
 {'a': 1, 'b': 2}
 ```
 
-# Nested Dictionary
+## Nested Dictionary
 
 When the value in a `key:value` pair of a dictionary is of type `dict`, it is known as a nested dictionary. 
 
@@ -5749,9 +5749,9 @@ print(d[2]["name"])
 Ria
 ```
 
-# Sample Programs
+## Sample Programs
 
-## Frequency of Characters
+### Frequency of Characters
 
 Write a program to count the number of times a character appears in a given string.
 
@@ -5786,7 +5786,7 @@ d - 1
 a - 2
 ```
 
-## Salary Book
+### Salary Book
 
 Write a program to enter employee names and their salaries as input and store them in a dictionary.
 
@@ -5821,7 +5821,7 @@ Dinesh Kumar - 15000
 Sam Singh - 10000
 ```
 
-# Built-in Functions
+## Built-in Functions
 
 Python has a rich and extensive **Standard Library** which gives it an edge over traditional programming languages.
 
@@ -5836,9 +5836,9 @@ Some of the widely used functions can be categorized as follows:
 - Input/Output Functions
 - Base/Unicode Functions
 
-# Mathematical Functions
+## Mathematical Functions
 
-## abs()
+### abs()
 
 `abs(x)` returns the absolute value or magnitude of `x` of type `int`, `float` or `complex` number.
 
@@ -5851,7 +5851,7 @@ Some of the widely used functions can be categorized as follows:
 2.8284271247461903
 ```
 
-## round()
+### round()
 
 `round(x [,ndigits])` rounds off `x` (`float`) to `ndigits` precision after the decimal point. 
 
@@ -5864,7 +5864,7 @@ In case `ndigits` is not provided, it rounds off to the nearest integer.
 2.335
 ```
 
-## sum()
+### sum()
 
 `sum(sequence [,start])` returns the sum of items in a `sequence` of type `list`, `tuple`, `range` or `set`. 
 
@@ -5879,7 +5879,7 @@ If a second argument `start` is provided, it is added to the sum.
 12
 ```
 
-## min()
+### min()
 
 `min(sequence)` returns the minimum value of items in a `sequence` of type `list`, `tuple`, `range`, `str` or `set`. 
 
@@ -5897,7 +5897,7 @@ Apart from iterables, `min(arg1, arg2, ..)` also accepts multiple arguments `arg
 'e'
 ```
 
-## max()
+### max()
 
 `max(sequence)` returns the maximum value of items in a `sequence` of type `list`, `tuple`, `range`, `str` or `set`. 
 
@@ -5915,7 +5915,7 @@ Apart from iterables, `max(arg1, arg2, ..)` also accepts multiple arguments `arg
 'o'
 ```
 
-## pow()
+### pow()
 
 `pow(base, exp [,mod])` raises a `base` (`int`, `float`) to the power `exp` (`int`, `float`), i.e. `base**exp`. 
 
@@ -5928,7 +5928,7 @@ If `mod` (`int`) is provided `(base**exp) % mod` is returned.
 1.9996788099999998
 ```
 
-## divmod()
+### divmod()
 
 `divmod(a, b)` returns a tuple `(a // b, a % b)` consisting of the quotient and remainder when `a` (`int`, `float`) is divided by `b` (`int`, `float`).
 
@@ -5939,17 +5939,17 @@ If `mod` (`int`) is provided `(base**exp) % mod` is returned.
 (-2, 4)
 ```
 
-# Type Functions
+## Type Functions
 
 Python has built-in functions to handle various aspects of datatypes such as checking and conversion.
 
-## Type Checking
+### Type Checking
 
 `type()` and `isinstance()` builtin functions are used for checking the data type of objects.  
 
 Check out the **Type Checking** section in the chapter **Variable, Objects & Data Types** to learn more about it in detail.
 
-## Built-in Type Functions
+### Built-in Type Functions
 
 We have previously discussed the various built-in data types available in Python. 
 
@@ -5970,11 +5970,11 @@ The following functions are often used to assign a default value or create an em
 
 The **Type Casting** section of the chapter **Variable, Objects & Data Types** covers these functions in detail in case any argument is passed.
 
-# I/O Functions
+## I/O Functions
 
 Python provides the following built-in functions to handle user input and result output:
 
-## input()
+### input()
 
 `input()` function can be used to accept a user input and assign it to a variable. 
 
@@ -5994,7 +5994,7 @@ Enter name: Python
 Hello, Python
 ```
 
-## print()
+### print()
   
 The built-in `print()` function can be used to display an output (value of variables, expressions, etc.) on the standard output.
 
@@ -6017,7 +6017,7 @@ Area: 50
 
 Both, `input()` and `print()` functions are covered in detail in the chapter **Input & Output**.
 
-## open()
+### open()
 
 `open()` function is used to open a file and return the corresponding file object. 
 
@@ -6034,9 +6034,9 @@ f = open('data.txt', 'r+')
 
 This function is covered in detail in the chapter **File Handling**.
 
-# Base/Unicode Conversion Functions
+## Base/Unicode Conversion Functions
 
-## bin()
+### bin()
 
 Converts an `int` to a binary (base-2) string prefixed with `'0b'`.
 
@@ -6045,7 +6045,7 @@ Converts an `int` to a binary (base-2) string prefixed with `'0b'`.
 '0b1001'
 ```
 
-## oct()
+### oct()
 
 Converts an `int` to an octal (base-8) string prefixed with `'0o'`.
 
@@ -6054,7 +6054,7 @@ Converts an `int` to an octal (base-8) string prefixed with `'0o'`.
 '0o11'
 ```
 
-## hex()
+### hex()
 
 Converts an `int` to a lowercase hexadecimal (base-16) string prefixed with `"0x"`.
 
@@ -6063,7 +6063,7 @@ Converts an `int` to a lowercase hexadecimal (base-16) string prefixed with `"0x
 '0x1d'
 ```
 
-## ord()
+### ord()
 
 Returns the integer Unicode code point for the given Unicode character `str`.
 
@@ -6074,7 +6074,7 @@ Returns the integer Unicode code point for the given Unicode character `str`.
 946
 ```
 
-## chr()
+### chr()
 
 Converts the integer Unicode code point into the corresponding Unicode string.
 
@@ -6085,7 +6085,7 @@ Converts the integer Unicode code point into the corresponding Unicode string.
 'β'
 ```
 
-# Built-in Modules
+## Built-in Modules
 
 Apart from built-in functions, the **Python Standard Library** also contains a wide range of built-in modules which are a group of functions organized based on functionality. 
 
@@ -6095,7 +6095,7 @@ Some of the commonly used modules are mentioned below:
 - `random` - Generate pseudo-random numbers
 - `statistics` - Statistical functions
 
-## Accessing Modules
+### Accessing Modules
 
 A module can be accessed in a program using the `import` statement.
 
@@ -6119,11 +6119,11 @@ Instead of loading all the functions in a module, the `from` statement can be us
 9.0
 ```
 
-# math
+## math
 
 `math` module provides mathematical functions and constants as defined by the C standard.
 
-## Constants
+### Constants
 
 The following frequently used mathematical constants are available in `math` module:
 
@@ -6141,11 +6141,11 @@ The following frequently used mathematical constants are available in `math` mod
 6.283185307179586
 ```
 
-## Functions
+### Functions
 
 Following useful mathematical functions are available in the `math` module:
 
-### fabs()
+#### fabs()
 
 `fabs(x)` returns the absolute value of `x`.
 
@@ -6155,7 +6155,7 @@ Following useful mathematical functions are available in the `math` module:
 3.24
 ```
 
-### gcd()
+#### gcd()
 
 `gcd(a, b)` returns the greatest common divisor of integers `a` and `b`.
 
@@ -6165,7 +6165,7 @@ Following useful mathematical functions are available in the `math` module:
 6
 ```
 
-### ceil()
+#### ceil()
 
 `ceil(x)` returns the smallest integer greater than or equal to `x`.
 
@@ -6175,7 +6175,7 @@ Following useful mathematical functions are available in the `math` module:
 3
 ```
 
-### floor()
+#### floor()
 
 `floor(x)` returns the largest integer less than or equal to `x`.
 
@@ -6185,7 +6185,7 @@ Following useful mathematical functions are available in the `math` module:
 2
 ```
 
-### fmod()
+#### fmod()
 
 `fmod(x, y)` returns the value of the expression `x - n*y` such that the result has the same sign as `x` and magnitude less than `|y|` for some integer `n`.
 
@@ -6199,7 +6199,7 @@ This function should be preferred when working with floating point numbers as co
 -0.14000000000000012
 ```
 
-### pow()
+#### pow()
 
 `pow(x, y)` raises `x` to the power of `y`.
 
@@ -6209,7 +6209,7 @@ This function should be preferred when working with floating point numbers as co
 25.0
 ```
 
-### sqrt()
+#### sqrt()
 
 `sqrt(x)` returns the square root of `x`.
 
@@ -6219,7 +6219,7 @@ This function should be preferred when working with floating point numbers as co
 5.0
 ```
 
-### sin(), cos() & tan()
+#### sin(), cos() & tan()
 
 `sin(x)`, `cos(x)` and `tan(x)` return the sine, cosine and tangent of `x` (radians) respectively.
 
@@ -6233,7 +6233,7 @@ This function should be preferred when working with floating point numbers as co
 0.9999999999999999
 ```
 
-### factorial()
+#### factorial()
 
 `factorial(n)` computes the factorial of a positive integer `n` which is the product of all positive integers less than or equal to `n`.  
 `n! = n×(n-1)×(n-2)...3×2×1`,  
@@ -6245,11 +6245,11 @@ where `0! = 1`
 120
 ```
 
-# random
+## random
 
 `random` module provides access to functions which can generate random numbers.
 
-## random()
+### random()
 
 `random()` function draws a random float in the half open interval `[0.0, 1.0)` with a uniform probability.
 
@@ -6259,7 +6259,7 @@ where `0! = 1`
 0.6857133962949904
 ```
 
-## Random Integer from Range
+### Random Integer from Range
 
 `randrange(stop)` is used to randomly select an integer from a range `0` to `stop` (excluding).
 
@@ -6285,11 +6285,11 @@ where `0! = 1`
 12
 ```
 
-# statistics
+## statistics
 
 `statistics` module provides functions that are useful for calculating mathematical statistics of numeric (Real-valued) data.
 
-## Mean
+### Mean
 
 `mean(data)` returns the arithmetic mean or average value of `data` (`list` or `tuple` of `int` or `float`).
 
@@ -6299,7 +6299,7 @@ where `0! = 1`
 3
 ```
 
-## Median
+### Median
 
 `median(data)` returns the median or middle value of `data` (`list` or `tuple` of `int` or `float`) using the common "mean of middle two" method.
 
@@ -6309,7 +6309,7 @@ where `0! = 1`
 2.5
 ```
 
-## Mode
+### Mode
 
 `mode(data)` returns the most commonly occurring value in the `data` (`list` or `tuple` of `int`, `str` or `float`). 
 
@@ -6325,7 +6325,7 @@ If there are multiple modes with the same count, the first occurrence in the seq
 'a'
 ```
 
-# Need for File Handling
+## Need for File Handling
 
 So far we have written programs which accept input from the user via keyboard and display the generated output on the standard output (console).
 
@@ -6339,11 +6339,11 @@ Just like words can be written on a piece of paper, information can be stored on
 
 Python comes with the in-built ability to interact with files. Through file handling, Python programs can read a file to provide input data and output the results into a file for later use.
 
-# File Types
+## File Types
 
 Primarily, there are two types of files:
 
-## Text File
+### Text File
 
 A text file is the simplest way to store information in a human readable text format (sequence of ASCII or Unicode characters), which includes numeric values. 
 
@@ -6358,7 +6358,7 @@ Although text files do not have any structure, there are international standards
 - `.xml` and `.json` are popular web data exchange formats.
 - `.html` files are text files with contents written in the Hypertext Markup Language designed to display contents in a web browser.
 
-## Binary File
+### Binary File
 
 Although the contents of a text file is human readable, in reality this information is stored on the disk in form of machine readable bytes (1s and 0s) one character at a time. This makes the format simple to be operated by any application, but it is less efficient and consumes more memory (greater file size).
 
@@ -6377,13 +6377,13 @@ As there is no simple rule to determine the basic unit of information, so openin
 
 Python has a built-in `pickle` module which has implemented protocols to read and write binary files having `.dat` or `.pickle` file extension. `pickle` is a Python specific binary file format which can serialize any Python data structure (lists, dictionaries, etc) or code object into a binary file. This byte-content of this file can then be de-serialized and used later in any computer running Python.
 
-# File Opening & Closing
+## File Opening & Closing
 
 A text or binary file can be opened using the built-in `open(file_name, mode='r')` function. 
 
 The parameters of the function are explained below:
 
-### file_name
+#### file_name
 
 `file_name` is a required string parameter specifying the path of the file to be opened.
 
@@ -6393,7 +6393,7 @@ It can either be an absolute path or a relative path as shown below:
 - `'../fname.txt'` is the relative path of a text file outside the current directory where the python script is being executed.
 - `'/Users/edpunk/Documents/fname.txt'` is the absolute path of a text file which can be opened by the python script from any location as long as it is in the same system.
 
-### mode
+#### mode
 
 `mode` is an optional string parameter which specifies the mode in which the file has to be opened. It defaults to `'r'` which means open for reading in text mode.
 
@@ -6424,15 +6424,15 @@ f = open('data.txt', 'a+')
 f.close()
 ```
 
-# File Reading
+## File Reading
 
 Opening a file using the `open()` function creates and returns a file object on which the following activities can be performed:
 
-## 1. Sequential Reading
+### 1. Sequential Reading
 
 The following three methods can be used on a file object to sequentially read the contents of a file:
 
-### read()
+#### read()
 
 `read(size = -1)` method is used to read `size` numbers of bytes of data from a file at a time. 
 
@@ -6464,7 +6464,7 @@ Thank You
 >>> f.close()
 ```
 
-### readline()
+#### readline()
 
 `readline(size = -1)` method without any arguments is used to read and return one line at a time from the given file. 
 
@@ -6547,7 +6547,7 @@ Hello World
 Thank You
 ```
 
-### readlines()
+#### readlines()
 
 `readlines()` method returns a list of strings representing the lines (along with the newline character) of text file content.
 
@@ -6568,11 +6568,11 @@ Thank You
 ['Hello World\n', 'Thank You']
 ```
 
-## 2. Random Access
+### 2. Random Access
 
 The following two methods can be used on a file object to randomly access contents of a file:
 
-### tell()
+#### tell()
 
 `tell()` returns the current byte position (integer) of the file object in the file.
 
@@ -6586,7 +6586,7 @@ Let us consider the same file `info.txt` for the below example:
 4
 ```
 
-### seek()
+#### seek()
 
 `seek(offset, reference=0)` can be used to seek a location in the file object which is `offset` bytes from the provided `reference`. 
 
@@ -6627,7 +6627,7 @@ Let us consider the same file `info.txt` for the below example:
 'Thank You'
 ```
 
-# File Writing
+## File Writing
 
 The following modes support file writing:
 
@@ -6636,7 +6636,7 @@ The following modes support file writing:
 
 The following methods can be used to write data in a file:
 
-### write()
+#### write()
 
 `write(s)` method is useful for writing a string `s` into a file.
 
@@ -6657,7 +6657,7 @@ Hi World
 Thank You
 ```
 
-### writelines()
+#### writelines()
 
 `writelines(lines)` method writes a list of strings into a file. 
 
@@ -6681,7 +6681,7 @@ Thank You
 
 Note the empty line at the end which is added due to the `\n` at the end of the last string.
 
-# Pickle
+## Pickle
 
 In Python, the protocols to read and write binary files (`.dat` or `.pickle` file extension) have been implemented in the built-in `pickle` module.
 
@@ -6689,7 +6689,7 @@ In Python, the protocols to read and write binary files (`.dat` or `.pickle` fil
 
 This process of translating data structures (lists, dictionaries, etc.) and code objects (classes, functions, etc.) into bytes that can be stored in a binary file is known as **Serialization**. This binary file can be stored on disk or shared and it can be de-serialized and used later via Python.
 
-## Dumping Data
+### Dumping Data
 
 The `dump()` function can be used to write the pickled representation of any data or object into a file.
 
@@ -6710,7 +6710,7 @@ where:
 >>> f.close()
 ```
 
-## Loading Data
+### Loading Data
 
 The `load()` function can be used to read the pickled representation of an object or data from a file.
 
@@ -6727,7 +6727,7 @@ where `file` is an open file object (opened in binary read mode `rb`).
 [['Anita', 'Maths', 83], ['Amar', 'Maths', 95], ['Ani', 'Maths', 90]]
 ```
 
-## Example: Traversing a Binary File
+### Example: Traversing a Binary File
 
 Write a program which performs the following Record Keeping activities:
 
@@ -6826,7 +6826,7 @@ File contents after appending:
 End of file reached
 ```
 
-# CSV
+## CSV
 
 Comma-separated value (CSV) file format is one of the most common data serialization and exchange format where each row is a set of values separated by a delimiter.
 
@@ -6858,13 +6858,13 @@ Ira,"Physics,Chemistry,Biology",99.0
 
 Python has built-in `csv` module which provides utilities to read and write CSV files.
 
-## Reading CSV File
+### Reading CSV File
 
 `csv.reader(csvfile, delimiter=',', quotechar='"')` function is used to return the reader object which iterates over CSV file line-by-line and returns it as a list of strings. 
 
 The `csvfile` file object should be opened with `newline=''` argument as the `csv` module has its own newline handling which correctly interprets the newlines depending on platform or in case they are embedded inside quoted fields.
 
-### Example 1
+#### Example 1
 
 Let us write a program to read the contents of `marks.csv`.
 
@@ -6899,7 +6899,7 @@ with open('marks.csv',
 ['Ira', 'Science', '99.0']
 ```
 
-### Example 2
+#### Example 2
 
 Let us write a program to read the contents of `marks2.csv`. 
 
@@ -6938,7 +6938,7 @@ with open('marks2.csv',
 ['Ira', 'Physics|Chemistry|Biology', '99.0']
 ```
 
-## Writing CSV File
+### Writing CSV File
 
 `csv.writer(csvfile, delimiter=',', quotechar='"')` function returns a writer object which converts data in form of a list into delimited strings which is passed down to the file object for writing. 
 
@@ -6946,7 +6946,7 @@ All non-string data in the list are automatically converted into string before i
 
 The methods `writerow(row)` or `writerows(rows)` can be used to write a row (list of strings) or list of rows to a CSV file.
 
-### Example 3
+#### Example 3
 
 Write a program to create a CSV file containing subject-wise marks of students delimited by semi-colon (`;`).
 
@@ -7009,7 +7009,7 @@ Akash;Science;92.0
 Ira;Science;99.0
 ```
 
-# User Defined Functions
+## User Defined Functions
 
 The built-in functions and modules of the Python Standard Library add tremendous value by performing generic operations and can be utilised by developers for any task. 
 
@@ -7021,7 +7021,7 @@ But, at times a programmer needs to perform a set of operations for a specific t
 - **Manageable**, due to reduction of code length.
 - **Reusable**, as the user defined function can be used anywhere in the current program or it can also be imported in another program.
 
-# Function Structure
+## Function Structure
 
 Let us take a deep dive into a user defined function (provided below) and understand its various components:
 
@@ -7038,7 +7038,7 @@ def adder(f, s, t = None):
     return s
 ```
 
-## Function Header
+### Function Header
 
 ``` python
 def adder(f, s, t = None):
@@ -7054,7 +7054,7 @@ In case any parameters are required by the function, they are enclosed inside th
 
 Finally, the function header ends with a colon.
 
-## Function Body
+### Function Body
 
 The body of the function consists of one or more Python statements which have the same amount of indentation (4 spaces) from the function header.
 
@@ -7086,7 +7086,7 @@ In the above example the value of `s` is returned which is the sum.
 
 A missing `return` statement or a `return` statement returning no value implies that the function returns `None`. These functions are known as void functions which display the result of statements via `print()` function. 
 
-# Parameters and Arguments
+## Parameters and Arguments
 
 ``` python
 def adder(f, s, t = None):
@@ -7132,13 +7132,13 @@ The values of `sm1` and `sm2` after executing the script are:
 30
 ```
 
-# Variable Scope
+## Variable Scope
 
 In Python, every variable has a well defined scope, i.e., it is accessible by a part of the program and it cannot be accessed from outside its scope. 
 
 Based on their scope, there are two types of variables:
 
-## Local Variables
+### Local Variables
 
 Local variables are defined inside a function or a code block and can only be accessed where they are defined. 
 
@@ -7172,7 +7172,7 @@ Traceback (most recent call last):
 NameError: name 'result' is not defined
 ```
 
-## Global Variables
+### Global Variables
 
 Variables defined outside any function or code block are known as global variables. 
 
@@ -7261,13 +7261,13 @@ tres()
 15
 ```
 
-# Passing Mutable Objects
+## Passing Mutable Objects
 
 When mutable objects (`list`, `dict`) are provided as an argument to a function, any modification made to the corresponding parameters in the body of the function leads to the modification of the original object. 
 
 Hence, care should be taken while passing mutable objects.
 
-## List
+### List
 
 **Code**
 
@@ -7290,7 +7290,7 @@ print(l)
 [2, 4, 6]
 ```
 
-## Dictionary
+### Dictionary
 
 **Code**
 
@@ -7313,7 +7313,7 @@ print(d)
 {'a': 2, 'b': 4, 'c': 6}
 ```
 
-# Creating a Module
+## Creating a Module
 
 Once a function is defined in the Python interpreter, it can be called any number of times. But, these function definitions are lost upon exiting the interpreter. 
 
@@ -7431,7 +7431,7 @@ st = tripler(20)
 
 The above method of using `*` to import the contents of a module is not recommended as it can clutter the namespace and cause issues if there are conflicts between the identifiers defined by the programmer and those defined in the module/package.
 
-# Executable Scripts/Modules
+## Executable Scripts/Modules
 
 Apart from containing definitions, a module can also contain block of code which is executed whenever the stand-alone script is run in script mode. The block has to be enclosed in an `if` statement as shown below:
 
@@ -7483,7 +7483,7 @@ Now, the block will execute only if the script is executed directly and not when
 20
 ```
 
-# Creating a Package
+## Creating a Package
 
 A collection of modules which can work together to provide a common functionality is known as a **package**. 
 
