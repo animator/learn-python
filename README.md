@@ -164,7 +164,7 @@ There are two ways to execute a Python program:
 
 Let us execute some basic Python statements and interact with the Python shell.
 
-### Launching the Python Shell
+**Launching the Python Shell**
 
 To launch the IDLE application click `[Windows Start Menu Button] -> [Python 3.9 Folder] -> [IDLE (Python 3.9 64 bit)]`.
 
@@ -178,7 +178,7 @@ The version (`3.9`) of the Python interpreter is displayed at the top of the win
 
 Python commands or statements can be input on this prompt. The input statements are executed instantaneously and any variable assignments are retained as long as the session is not terminated.
 
-### Basic Arithmetic
+**Basic Arithmetic**
 
 Let us perform some basic arithmetic operations in the interactive mode using an integer number (`2`) and a floating-point number (`3.5`):
 
@@ -191,7 +191,7 @@ Let us perform some basic arithmetic operations in the interactive mode using an
 
 It can be observed that the results of each of the above computations are displayed immediately in the shell.
 
-### Storing Values/Results
+**Storing Values/Results**
 
 Instead of immediately displaying the results, they can also be stored in variables using the assignment symbol (`=`) as shown below:
 
@@ -213,7 +213,7 @@ The values of `a` and `b` can be accessed later for future calculations as shown
 2.3333333333333335
 ```
 
-### Basic String Operation
+**Basic String Operation**
 
 Interactive mode is not just restricted to basic arithmetic or assignments. Let us join two strings - `"Hello, "` and `"world!"`.
 
@@ -232,7 +232,7 @@ But, the statements cannot be saved for future use and have to retyped for re-ex
 
 To write reusable codes, script mode is the most preferred mode of code execution.
 
-### File Creation
+**File Creation**
 
 To create a new file using the IDLE application click `[File] -> [New File]`
 
@@ -249,7 +249,7 @@ and save the script as `example.py` (`.py` file extension for all Python scripts
 
 ![Save File](images/0303b.png)
 
-### Script Execution
+**Script Execution**
 
 Now run this script using `[Run] -> [Run Module]`.
 
@@ -328,7 +328,7 @@ Literals are tokens in the source code which represent fixed or constant values.
 
 The various types of literals available in Python are as follows:
 
-### 1. Numeric Literals
+### Numeric Literals
 
 Numeric literals are used for representing numeric values in the source code. They can be of three types - integers, float point numbers and imaginary numbers.
 
@@ -427,11 +427,11 @@ In Python,
 - there is no specialized literal such as a complex literal. A complex number is actually represented in the program using an expression comprising a real number (integer/float numeric literal) and an imaginary number (imaginary literal). For example, `1 + 2j` consists of an integer literal (`1`) and a imaginary literal (`2j`).
 - numeric literals do not include the minus sign (`-`). `-` is actually a unary operator it combines with a numeric literal to represent negative numbers. For example, in `-3.14` the numeric literal is `3.14` and `-` is an operator.
 
-### 2. Boolean Literals
+### Boolean Literals
 
 The reserved words `True` and `False` are also boolean literals which can be used to specify the truth value in a program.
 
-### 3. String Literals
+### String Literals
 
 String literals are texts which can be specified in a variety of ways in Python:
 
@@ -481,7 +481,7 @@ E = mc²
 
 In the above example, `\u00B2` is the unicode character which represents the 'SUPERSCRIPT TWO'. 
 
-### 4. Special Literal
+### Special Literal
 
 `None` is a special literal which is used to denote the absence of value. 
 
@@ -495,7 +495,7 @@ It should not be confused with `0` as `0` is an integer literal with a defined f
 
 In the above example, the Python shell does not display any value of `a` as it is assigned as `None` which has no value.
 
-### 5. Collection of Literals
+### Collection of Literals
 
 Python has the provision for specifying a collection of literals in the source code using a special syntax known as **"displays"**. 
 
@@ -655,7 +655,7 @@ else {
 
 It can be seen how indentations (`tab` at the beginning of line) are added (not required by programming language) to the code to increase readability, which helps in guiding readers through the code.
 
-### Python
+**Python**
 
 Code blocks in Python are inspired by this idea as it makes it easier to understand a Python code.
 
@@ -917,7 +917,7 @@ The following built-in data types are available in Python:
 
 Often sequence, set and mapping types are also collectively known as **iterables** as they are a collection of items on which a user can traverse (iterate).
 
-### 1. Numeric Types
+### Numeric Types
 
 Numeric data types are used for storing the following types of numbers:
 
@@ -939,7 +939,7 @@ Each complex number has two parts, the real part which is a numeric integer or f
 
 The boolean data type (`bool`) is a subtype of `int`. It stores the evaluated value of expressions represented as keywords - `True` (integer value `1`) and `False` (integer value `0`).
 
-### 2. Sequence Types
+### Sequence Types
 
 An ordered collection of items where each item can be accessed using an integer index is known as a sequence. The following three sequence data types are available in Python:
 
@@ -961,13 +961,13 @@ A `tuple` is an immutable sequence of items of same or different data types whic
 
 Some example tuples are - `(1, 2, 3)`, `('abc', 23, 3.14)`, `('edpunk', 'python')`.
 
-### 3. Set Type
+### Set Type
 
 A `set` is an unordered collection of unique items of same of different data types which are enclosed in curly braces - `{ }`. 
 
 Some example sets are - `{1, 2, 3}`, `{'abc', 23, 3.14}`, `{'edpunk', 'python'}`.
 
-### 4. Mapping Type
+### Mapping Type
 
 `dict` is a mapping data type which stores values in the form of key-value pairs. 
 
@@ -979,13 +979,13 @@ The key-value pairs are separated by comma (`,`) and enclosed within curly brace
 
 Some example dictionaries are - `{1: "a", 2: "b", 3: "c"}`, `{"name": "edpunk", "language": "python"}`.
 
-### 5. Special Type
+### Special Type
 
 `None` is a special data type which is used to denote the absence of value in an object. 
 
 It is neither `0` nor `False` as these are defined finite values, whereas `None` implies nothingness.
 
-## Type Checking: Checking the Data Type of a Python Object
+## Type Checking
 
 The built-in `type()` function can be used to fetch the data type of an object.
 
@@ -1406,7 +1406,7 @@ print("Hello, " + "world!")
 4,7.0;Hello, world!
 ```
 
-### Note
+***Note***
 
 All non-keyword arguments or expressions are converted to strings and written to the output stream by the `print()` function. They are separated by `sep` and followed by `end`. An empty `print()` invocation writes `end` parameter (an empty line as `end` defaults to the newline character `'\n'`).
 
@@ -2070,7 +2070,7 @@ The table below presents the precedence of operators in Python from highest to l
 | `or` | Boolean `OR` |
 | `:=` | Assignment expression |
 
-### Exercise
+### Exercises
 
 #### Example 1
 
@@ -3082,7 +3082,7 @@ A `pass` statement acts as a placeholder and performs null (no) operation.
 
 Various reasons for using the keyword `pass` are provided below:
 
-#### 1. Syntactical Requirement
+#### Syntactical Requirement
 
 Using `pass` becomes a syntactical requirement for cases where the Python interpreter can raise a `SyntaxError` due to missing statements.  
 
@@ -3130,7 +3130,7 @@ File "<ipython-input-20-068861cce0a8>", line 1
 SyntaxError: unexpected EOF while parsing
 ```
 
-#### 2. Skipping Code Execution
+#### Skipping Code Execution
 
 `pass` can be used to skip code execution for certain cases. 
 
@@ -3525,7 +3525,7 @@ Let us discuss these methods in detail in the coming sections.
 
 The following methods are useful in converting the case of the characters in a string:
 
-### i. lower()
+### lower()
 
 All cased characters are converted into lowercase.
 
@@ -3534,7 +3534,7 @@ All cased characters are converted into lowercase.
 'python'
 ```
 
-### ii. upper()
+### upper()
 
 All cased characters are converted into uppercase.
 
@@ -3543,7 +3543,7 @@ All cased characters are converted into uppercase.
 'PYTHON'
 ```
 
-### iii. swapcase()
+### swapcase()
 
 Uppercase characters are converted into lowercase and lowercase characters are converted into uppercase.
 
@@ -3552,7 +3552,7 @@ Uppercase characters are converted into lowercase and lowercase characters are c
 'pyTHON'
 ```
 
-### iv. capitalize()
+### capitalize()
 
 First character is capitalized and rest all characters are lowercased.
 
@@ -3561,7 +3561,7 @@ First character is capitalized and rest all characters are lowercased.
 'Hello py'
 ```
 
-### v. title()
+### title()
 
 For each word present in the string, the first character is uppercased and the remaining characters are lowercased.
 
@@ -3574,7 +3574,7 @@ For each word present in the string, the first character is uppercased and the r
 
 The following methods are used to check the type of characters in a string.
 
-### i. isalpha()
+### isalpha()
 
 Returns `True` if all characters in the string are letters (`A-Z a-z`).
 
@@ -3589,7 +3589,7 @@ False  # contains whitespace
 False  # contains digit
 ```
 
-### ii. isdigit()
+### isdigit()
 
 Returns `True` if all characters in the string are digits.
 
@@ -3600,7 +3600,7 @@ False  # contains alphabets
 True
 ```
 
-### iii. isalnum()
+### isalnum()
 
 Returns `True` if all characters in the string are alphanumeric (Alphabets or Numeric).
 
@@ -3615,7 +3615,7 @@ False  # contains whitespace
 True
 ```
 
-### iv. isascii()
+### isascii()
 
 Returns `True` if the string is empty or all characters in the string are ASCII.
 
@@ -3630,7 +3630,7 @@ False
 False
 ```
 
-### v. islower()
+### islower()
 
 Returns `True` if all characters are lowercase.
 
@@ -3641,7 +3641,7 @@ True
 False
 ```
 
-### vi. isupper()
+### isupper()
 
 Returns `True` if all characters are uppercase.
 
@@ -3652,7 +3652,7 @@ True
 False
 ```
 
-### vii. isspace()
+### isspace()
 
 Returns `True` if there are only whitespace characters in the string. Some popular whitespace characters are ` ` (space), `\t` (tab), `\n` (newline), `\r` (carriage return), `\f` (form feed) and `\v` (vertical tab).
 
@@ -3661,7 +3661,7 @@ Returns `True` if there are only whitespace characters in the string. Some popul
 True
 ```
 
-### viii. istitle()
+### istitle()
 
 Returns `True` if the string is title-cased, i.e., the first character of every word in the string is uppercased and the remaining characters are lowercased.
 
@@ -3678,7 +3678,7 @@ False
 
 Split methods help in splitting/partitioning a string.
 
-### i. partition()
+### partition()
 
 `partition(sep)` method splits the string when the separator (`sep`) is encountered for the first time, and returns a tuple with three items `(string before separator, separator, string after separator)`.
 
@@ -3687,7 +3687,7 @@ Split methods help in splitting/partitioning a string.
 ('Hi', '|', 'Ed|Punk')
 ```
 
-### ii. split()
+### split()
 
 `split(sep=None, maxsplit=-1)` method splits a string into a list based on a string separator (`sep`). 
 
@@ -3719,7 +3719,7 @@ They accept an optional argument `chars` which specifies the set of characters w
 
 If no arguments are provided then `chars` defaults to ASCII whitespace and the method removes all leading and/or trailing spaces from the string.
 
-### i. lstrip()
+### lstrip()
 
 All leading (on the left) characters are removed from the string.
 
@@ -3730,7 +3730,7 @@ All leading (on the left) characters are removed from the string.
 'edpunk.cc'
 ```
 
-### ii. rstrip()
+### rstrip()
 
 All trailing (on the right) characters are removed from the string.
 
@@ -3741,7 +3741,7 @@ All trailing (on the right) characters are removed from the string.
 'www.edpunk'
 ```
 
-### iii. strip()
+### strip()
 
 All leading and trailing characters are removed from the string.
 
@@ -3775,7 +3775,7 @@ True
 
 The following string methods are useful for locating substring in a string.
 
-### i. count()
+### count()
 
 `count(sub[, start[, end]])` returns the number of non-overlapping occurrences of a substring `sub` in the range `[start, end]`. 
 
@@ -3805,7 +3805,7 @@ It has to be noted that the method counts non-overlapping occurrences, so it doe
 
 In the above example, `ala` is counted twice as the first occurence is in `valh"ala"` and the next occurance is in `"ala"la`. Although `ala` can be located again in `al"ala"`, it overlaps with the occurance `"ala"la`, hence it is not counted.  
 
-### ii. find()
+### find()
 
 `find(sub[, start[, end]])` returns the lowest index in the string where substring `sub` is located in the range `[start, end]`. 
 
@@ -3827,7 +3827,7 @@ The method returns `-1` in case the substring is not present.
 14
 ```
 
-### iii. rfind()
+### rfind()
 
 `rfind(sub[, start[, end]])` returns the highest index in the string where substring `sub` is located in the range `[start, end]`. 
 
@@ -3847,7 +3847,7 @@ The method returns `-1` in case the substring is not present.
 14
 ```
 
-### iv. index()
+### index()
 
 `index(sub[, start[, end]])` is similar to `find(sub[, start[, end]])`, but instead of returning `-1` it raises `ValueError` when the substring is not found.
 
@@ -3871,7 +3871,7 @@ ValueError: substring not found
 14
 ```
 
-### v. rindex()
+### rindex()
 
 `s.rindex(sub[, start[, end]])` is similar to `rfind(sub[, start[, end]])`, but instead of returning `-1` it raises `ValueError` when the substring is not found.
 
@@ -3890,7 +3890,7 @@ ValueError: substring not found
 14
 ```
 
-### vi. replace()
+### replace()
 
 `replace(oldsub, newsub[, count])` returns a copy of the string with all occurrences of `oldsub` substring replaced by `newsub`. 
 
