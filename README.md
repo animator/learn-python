@@ -1,4 +1,4 @@
-Table of Contents
+Learn Python - Table of Contents
 =================
 
 * [Introduction](#introduction)
