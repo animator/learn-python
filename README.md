@@ -449,8 +449,6 @@ Example imaginary literals:
 3.5e-10j
 ```
 
-#br
-
 ### Points to Note
 
 In Python,
@@ -458,13 +456,9 @@ In Python,
 - there is no specialized literal such as a complex literal. A complex number is actually represented in the program using an expression comprising a real number (integer/float numeric literal) and an imaginary number (imaginary literal). For example, `1 + 2j` consists of an integer literal (`1`) and a imaginary literal (`2j`).
 - numeric literals do not include the minus sign (`-`). `-` is actually a unary operator it combines with a numeric literal to represent negative numbers. For example, in `-3.14` the numeric literal is `3.14` and `-` is an operator.
 
-#br
-
 ## 2. Boolean Literals
 
 The reserved words `True` and `False` are also boolean literals which can be used to specify the truth value in a program.
-
-#br
 
 ## 3. String Literals
 
@@ -516,8 +510,6 @@ E = mc²
 
 In the above example, `\u00B2` is the unicode character which represents the 'SUPERSCRIPT TWO'. 
 
-#br
-
 ## 4. Special Literal
 
 `None` is a special literal which is used to denote the absence of value. 
@@ -531,8 +523,6 @@ It should not be confused with `0` as `0` is an integer literal with a defined f
 ```
 
 In the above example, the Python shell does not display any value of `a` as it is assigned as `None` which has no value.
-
-#br
 
 ## 5. Collection of Literals
 
@@ -596,8 +586,6 @@ days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Satur
 sum_6 = (1 + 2 + 3 + 4 + 5 + 6)
 ```
 
-#br
-
 ## Punctuation, Decoration and Annotation
 
 Tokens in Python which are used for punctuation, decoration and annotation are:
@@ -606,8 +594,6 @@ Tokens in Python which are used for punctuation, decoration and annotation are:
 .       ,       :
 ;       @       ->
 ```  
-
-#br
 
 ## Assignment/Binding
 
@@ -945,8 +931,6 @@ Each complex number has two parts, the real part which is a numeric integer or f
 
 The boolean data type (`bool`) is a subtype of `int`. It stores the evaluated value of expressions represented as keywords - `True` (integer value `1`) and `False` (integer value `0`).
 
-#br
-
 ## 2. Sequence Types
 
 An ordered collection of items where each item can be accessed using an integer index is known as a sequence. The following three sequence data types are available in Python:
@@ -969,15 +953,11 @@ A `tuple` is an immutable sequence of items of same or different data types whic
 
 Some example tuples are - `(1, 2, 3)`, `('abc', 23, 3.14)`, `('edpunk', 'python')`.
 
-#br
-
 ## 3. Set Type
 
 A `set` is an unordered collection of unique items of same of different data types which are enclosed in curly braces - `{ }`. 
 
 Some example sets are - `{1, 2, 3}`, `{'abc', 23, 3.14}`, `{'edpunk', 'python'}`.
-
-#br
 
 ## 4. Mapping Type
 
@@ -990,8 +970,6 @@ Keys and corresponding values are separated by colon (`:`).
 The key-value pairs are separated by comma (`,`) and enclosed within curly braces - `{ }`. 
 
 Some example dictionaries are - `{1: "a", 2: "b", 3: "c"}`, `{"name": "edpunk", "language": "python"}`.
-
-#br
 
 ## 5. Special Type
 
@@ -1054,8 +1032,6 @@ In the below example the final type of `c` is automatically determined as `float
 >>> type(c)
 <class 'float'>
 ```
-
-#br
 
 ## Explicit Type Casting
 
@@ -1444,15 +1420,11 @@ Following are some unary operators available in Python:
 -6
 ```
 
-#br
-
 ## Binary Operators
 
 Binary operators are applied on two operands. 
 
 For example, arithmetic operators (`+`, `–`, `*`, `/`) evaluate the result of mathematical computation of two values.
-
-#br
 
 ## Operators in Python
 
@@ -1489,8 +1461,6 @@ In case the operands are of type `str`, `list` or `tuple`, the `+` operator conc
 ['ed', 'punk', 'python'] 
 ```
 
-#br
-
 ## Subtraction
 
 The `-` operator subtracts the value of operand on right from the value of operand on left.
@@ -1499,8 +1469,6 @@ The `-` operator subtracts the value of operand on right from the value of opera
 >>> 2 - 3 
 -1
 ```
-
-#br
 
 ## Multiplication
 
@@ -1520,8 +1488,6 @@ In case the operands are of type `str`, `list` or `tuple`, the `*` operator retu
 ['ed', 'py', 'ed', 'py', 'ed', 'py']
 ```
 
-#br
-
 ## Division
 
 The `/` operator divides the value of operand on left by the value of operand on right and returns the real number quotient.
@@ -1533,8 +1499,6 @@ The `/` operator divides the value of operand on left by the value of operand on
 2.5  
 ```
 
-#br
-
 ## Floor Division
 
 The `//` operator divides the value of operand on left by the value of operand on right and returns the integer quotient.
@@ -1544,8 +1508,6 @@ The `//` operator divides the value of operand on left by the value of operand o
 2
 ```
 
-#br
-
 ## Modulus
 
 The `%` operator divides the value of operand on left by the value of operand on right and returns the remainder.
@@ -1554,8 +1516,6 @@ The `%` operator divides the value of operand on left by the value of operand on
 >>> 5 % 2
 1
 ```
-
-#br
 
 ## Exponent
 
@@ -1598,8 +1558,6 @@ As a sequence is an ordered collection of items, so the order in which the items
 False
 ```
 
-#br
-
 ## Not equal to
 
 The `!=` operator returns `True` if the value of operand on left is not equal to the value of operand on right.
@@ -1616,8 +1574,6 @@ True
 >>> [1, 2, 3] != [1, 2, 3]
 False
 ```
-
-#br
 
 ## Greater than
 
@@ -1681,8 +1637,6 @@ If two sequences are of unequal lengths and the smaller sequence is the starting
 True
 ```
 
-#br
-
 ## Greater than or equal to
 
 The `>=` operator returns `True` if the value of operand on left is greater than or equal to the value of operand on right.
@@ -1708,8 +1662,6 @@ True
 >>> [1, 2, 4] >= [1, 2]
 True
 ```
-
-#br
 
 ## Less than
 
@@ -1737,8 +1689,6 @@ True
 >>> [1, 2] < [1, 2, 4]
 True
 ```
-
-#br
 
 ## Less than or equal to
 
@@ -1790,8 +1740,6 @@ These operators perform the binary operation on the two operands and assign the 
 
 If `<op>` is a binary operator, then the expression `a <op>= b` containing the augmented assignment operator is equivalent to `a = a <op> b`.
 
-#br
-
 ## +=
 
 The `+=` operator adds a value (right operand) to the variable (left operand) and assigns the result to that variable.
@@ -1808,8 +1756,6 @@ The `+=` operator adds a value (right operand) to the variable (left operand) an
 'helloworld'
 ```
 
-#br
-
 ## -=
 
 The `-=` operator subtracts a value (right operand) from the variable (left operand) and assigns the result to that variable.
@@ -1820,8 +1766,6 @@ The `-=` operator subtracts a value (right operand) from the variable (left oper
 >>> a
 1
 ```
-
-#br
 
 ## *=
 
@@ -1838,8 +1782,6 @@ The `*=` operator multiplies a value (right operand) to the variable (left opera
 'hihihi'
 ```
 
-#br
-
 ## /=
 
 The `/=` operator divides the variable (left operand) by a value (right operand) and assigns the result to that variable.
@@ -1850,8 +1792,6 @@ The `/=` operator divides the variable (left operand) by a value (right operand)
 >>> a
 2.0
 ```
-
-#br
 
 ## //=
 
@@ -1864,8 +1804,6 @@ The `//=` operator floor divides the variable (left operand) by a value (right o
 2
 ```
 
-#br
-
 ## **=
 
 The `**=` operator raises the variable (left operand) to a power (right operand) and assigns the result to that variable.
@@ -1876,8 +1814,6 @@ The `**=` operator raises the variable (left operand) to a power (right operand)
 >>> a
 16
 ```
-
-#br
 
 ## %=
 
@@ -1937,8 +1873,6 @@ True
 True
 ```
 
-#br
-
 ## not
 
 The logical state of an operand can be reversed (`False` to `True`, and vice versa) using the logical `not` operator.
@@ -1950,8 +1884,6 @@ True
 >>> bool(not n)
 False
 ```
-
-#br
 
 ## or
 
@@ -1965,8 +1897,6 @@ True
 >>> False or False
 False
 ```
-
-#br
 
 ## and
 
@@ -2062,8 +1992,6 @@ Some valid expressions are provided below:
 
 As shown above, standalone literals (like `10`) and variables (like `a`) are considered as expressions, but standalone operators are not expressions.
 
-#br
-
 ## Chained Expression
 
 Comparison operators can be chained together in Python. 
@@ -2073,8 +2001,6 @@ For example, `lower <= age <= upper` is a valid chained expression which is equi
 `lower <= age and age <= upper`. 
 
 If `a`, `b`, `c`, …, `y`, `z` are expressions and `op1`, `op2`, …, `opN` are comparison operators, then the chained expression `a op1 b op2 c ... y opN z` is equivalent to `a op1 b and b op2 c and ... y opN z`.
-
-#br
 
 ## Conditional Expression
 
@@ -2118,8 +2044,6 @@ The table below presents the precedence of operators in Python from highest to l
 | `or` | Boolean `OR` |
 | `:=` | Assignment expression |
 
-#br
-
 ## Exercise
 
 ### Example 1
@@ -2135,8 +2059,6 @@ Step: `*` has higher precedence over `-`
 = `15 - 8`  
 = `7`
 
-#br
-
 ### Example 2
 
 Evaluate the expression 
@@ -2150,8 +2072,6 @@ Step: `-` and `+` have the same order of precedence so the expression is evaluat
 = `13 + 4`  
 = `17`
 
-#br
-
 ### Example 3
 
 Evaluate the expression 
@@ -2164,8 +2084,6 @@ Parantesized expression `(...)` has the highest precedence so `+` is evaluated f
 `15 - (2 + 4)`  
 = `15 - 6`  
 = `9`
-
-#br
 
 ### Example 4
 
@@ -2191,8 +2109,6 @@ Evaluate the expression
 `6 + 2.25 - 2`  
 = `6.25`
 
-#br
-
 ### Example 5
 
 Evaluate the expression 
@@ -2212,8 +2128,6 @@ Evaluate the expression
 `+` and `-` evaluation  
 `4 - 4 + 20`  
 = `20`
-
-#br
 
 ### Example 6
 
@@ -2273,8 +2187,6 @@ Some common syntax errors are:
 - Incorrect position of keyword
 - Incorrect block indentation
 
-#br
-
 ## Script Mode
 
 When a code containing syntactically incorrect statement is executed using script mode via IDLE, an error dialog box is displayed.
@@ -2286,8 +2198,6 @@ On closing the dialog box, the incorrect part of the code, the potential cause o
 ![Syntax Error Highlighted](images/0702b.png)
 
 This error has to be rectified to execute the program correctly.
-
-#br
 
 ## Interactive Mode
 
@@ -2320,8 +2230,6 @@ Some runtime error examples are:
 - **TypeError**: Raised while performing an operation on incompatible types.
 - **IndentationError**: Raised when the indentation of a statement or code block is incorrect.
 
-#br
-
 ## Examples
 
 ### ZeroDivisionError
@@ -2339,8 +2247,6 @@ Traceback (most recent call last):
 ZeroDivisionError: division by zero
 ```
 
-#br
-
 ### NameError
 
 ``` python
@@ -2355,8 +2261,6 @@ Traceback (most recent call last):
 NameError: name 'd' is not defined
 ```
 
-#br
-
 ### KeyError
 
 ``` python
@@ -2370,8 +2274,6 @@ Traceback (most recent call last):
     print(d[3])
 KeyError: 3
 ```
-
-#br
 
 ### TypeError
 
@@ -2542,8 +2444,6 @@ Traceback (most recent call last):
 ValueError: The value of b cannot be zero
 ```
 
-#br
-
 ## assert
 
 An `assert` statement is often used during code development to act like a safety valve which notifies the programmer in case the test expression is evaluated as `False`. 
@@ -2706,8 +2606,6 @@ The control flow view of the above code is:
 
 Let us go through some programming problems which utilize selection statements.
 
-#br
-
 ### Absolute Value
 
 Write a program to output the magnitude of difference between two numbers using conditional statement.
@@ -2733,8 +2631,6 @@ Enter 1st number: 12
 Enter 2nd number: 15
 The difference of 12 and 15 is 3
 ```
-
-#br
 
 ### Sorting 3 Numbers
 
@@ -2767,8 +2663,6 @@ Enter 2nd number: 2
 Enter 3rd number: 6
 The numbers in sorted order: 2 , 6 , 9
 ```
-
-#br
 
 ### Divisibility
 
@@ -2811,8 +2705,6 @@ This process can be demonstrated using the below flowchart:
 
 Let us go through some code examples to demonstrate how `for` statement can be used to iterate over sequences.
 
-#br
-
 ## List Iteration
 
 ### Code
@@ -2835,8 +2727,6 @@ Toyota
 BMW
 Volkswagen
 ```
-
-#br
 
 ## Tuple Iteration
 
@@ -2861,8 +2751,6 @@ BMW
 Volkswagen
 ```
 
-#br
-
 ## String Iteration
 
 ### Code
@@ -2883,8 +2771,6 @@ h
 o
 n
 ```
-
-#br
 
 ## Range Iteration
 
@@ -2925,8 +2811,6 @@ for i in range(5):
 20
 ```
 
-#br
-
 ### Example #2
 
 Print all integers from 2 to 5 including the boundary values.
@@ -2946,8 +2830,6 @@ for i in range(2, 6):
 4
 5
 ```
-
-#br
 
 ### Example #3
 
@@ -2977,8 +2859,6 @@ for i in range(2, 10):
 9
 ```
 
-#br
-
 ### Example #4
 
 Print the index of all occurrences of `o` in `python programming`.
@@ -2999,13 +2879,9 @@ for i in range(len(s)):
 9
 ```
 
-#br
-
 ## Exercises
 
 Let us go through some programming problems which utilize the `for` iteration statement.
-
-#br
 
 ### Compound Interest
 
@@ -3033,8 +2909,6 @@ Enter the annual interest rate: 5
 Enter the loan duration (in years): 3
 Total interest payable: 78812.5
 ```
-
-#br
 
 ### Factorial
 
@@ -3097,13 +2971,9 @@ while i<len(cars):
 
 In the above example, the test condition is `i<len(cars)` and the update statement is `i+=1`.
 
-#br
-
 ## Exercises
 
 Let us go through some programming problems which utilize the `while` iteration statement.
-
-#br
 
 ### Compound Interest
 
@@ -3132,8 +3002,6 @@ Enter the annual interest rate: 5
 Enter the loan duration (in years): 3
 Total interest payable: 78812.5
 ```
-
-#br
 
 ### Factorial
 
@@ -3220,8 +3088,6 @@ File "<ipython-input-20-068861cce0a8>", line 1
 SyntaxError: unexpected EOF while parsing
 ```
 
-#br
-
 ### 2. Skipping Code Execution
 
 `pass` can be used to skip code execution for certain cases. 
@@ -3247,8 +3113,6 @@ for i in l:
 5 is not divisible by 3
 ```
 
-#br
-
 ### Placeholders
 
 `pass` can be used to create valid empty functions and classes as placeholders which can be modified in the future versions of code.
@@ -3260,8 +3124,6 @@ def emptyFunction():
 class EmptyClass:
     pass
 ```
-
-#br
 
 ## break
 
@@ -3304,8 +3166,6 @@ while i <10:
 3
 4
 ```
-
-#br
 
 ## continue
 
@@ -3366,8 +3226,6 @@ for n in range(1, 11):
 9 ! = 362880
 10 ! = 3628800
 ```
-
-#br
 
 ## Nested Loop - break
 
@@ -3430,8 +3288,6 @@ multiline
 String'''
 ```
 
-#br
-
 ## Escape Characters
 
 The backslash (`\`) character can be used in a string to escape characters that otherwise have a special meaning, such as newline, linefeed, or the quote character.
@@ -3451,8 +3307,6 @@ The backslash (`\`) character can be used in a string to escape characters that 
 
 Although `\'` and `\"` can be used to specify quote characters, Python allows embedding double quotes inside a single-quoted string (`'My name is "Python".'`) and single quotes inside a double-quoted string (`"Python's World"`).
 
-#br
-
 ## Unicode Support
 
 Python string objects support Unicode characters. 
@@ -3465,8 +3319,6 @@ E = mc²
 ```
 
 In the above example, `\u00B2` is the unicode character which represents the 'SUPERSCRIPT TWO'. 
-
-#br
 
 ## Other Types to String
 
@@ -3523,8 +3375,6 @@ The built-in function `len()` returns the length of a string which is useful dur
 
 We can perform various operations on a string (sequence of characters) such as slicing, membership, concatenation and repetition.
 
-#br
-
 ## Slicing
 
 In Python, a character in a string can be easily accessed using its index.
@@ -3575,8 +3425,6 @@ The slice operator also allows the usage of a third index which is known as step
 
 In the above example, the substring begins at the start of the string, takes a step size of `2` skipping `e` and ends at the last character again skipping the 4th character `l`.
 
-#br
-
 ## Membership
 
 `in` and `not in` operators can be used to determine whether a substring is present/not present in a string.
@@ -3588,8 +3436,6 @@ True
 >>> "lp" not in s
 True
 ```
-
-#br
 
 ## Concatenation
 
@@ -3603,8 +3449,6 @@ The `+` operator can be used to join two strings.
 >>> s1 + "World"
 'HelloWorld'
 ```
-
-#br
 
 ## Repetition
 
@@ -3667,8 +3511,6 @@ For each word present in the string, the first character is uppercased and the r
 >>> "hello python".title()
 'Hello Python'
 ```
-
-#br
 
 ## 2. Check Characters
 
@@ -3774,8 +3616,6 @@ False
 False
 ```
 
-#br
-
 ## 3. Split Methods
 
 Split methods help in splitting/partitioning a string.
@@ -3812,8 +3652,6 @@ If `maxsplit` is provided, at most `maxsplit` number of splits are performed and
 >>> "Hi|Ed|Punk|v2".split('|', 2)
 ['Hi', 'Ed', 'Punk|v2']
 ```
-
-#br
 
 ## 4. Strip Methods
 
@@ -3856,8 +3694,6 @@ All leading and trailing characters are removed from the string.
 'edpunk'
 ```
 
-#br
-
 ## 5. Check Prefix/Suffix
 
 `startswith()` and `endswith()` methods are used check whether a string starts or ends with the provided substring (or a tuple of substrings).
@@ -3876,8 +3712,6 @@ True
 >>> "Py Hello".endswith(("o","n"))
 True
 ```
-
-#br
 
 ## 6. Search/Replace Methods
 
@@ -4189,8 +4023,6 @@ False
 True    
 ```
 
-#br
-
 ## Concatenation
 
 `+` operator can be used to join two lists to create a new list.
@@ -4211,8 +4043,6 @@ True
 ['BMW', 'Z4', 2019, 'Red']  
 ```
 
-#br
-
 ## Repetition
 
 The `*` operator repeats the items of a list the number of times as specified by the integer operand.
@@ -4222,8 +4052,6 @@ The `*` operator repeats the items of a list the number of times as specified by
 >>> l*3
 [1, 2, 1, 2, 1, 2]
 ```
-
-#br
 
 ## Slicing
 
@@ -4360,8 +4188,6 @@ for i in range(len(l)):
 5 True
 ```
 
-#br
-
 This method is also useful when you need to modify the items of a list (without altering the length of list) during traversal.
 
 For example, let us convert each item of the list into a string.
@@ -4382,8 +4208,6 @@ print(l)
 ```
 ['BMW', 'Z4', '2019', '4', 'Red', 'True']
 ```
-
-#br
 
 A `while` statement can be used to traverse a list by iterating on the value of index till the last item index.
 
@@ -4424,8 +4248,6 @@ Built-in functions `max()`, `min()` and `sum()` are used to calculate the maximu
 18
 ```
 
-#br
-
 ## Adding Items
 
 `append()` method adds an item (passed as an argument) to the end of a list.
@@ -4455,8 +4277,6 @@ If the item has to be added at a particular index, `insert()` method can be used
 ['T', 'C', 2, 4, 2.5, 'SE']  
 ```
 
-#br
-
 ## Locating Items
 
 An item `x` can be located in a list using the `index(x[, i[, j]])` method which returns the first occurrence of the item at or after index `i` and before index `j`. 
@@ -4483,8 +4303,6 @@ In case `i` and `j` are not specified they default to `i=0` and `j=len(l)`.
 >>> l.count("it")
 2
 ```
-
-#br
 
 ## Removing Items
 
@@ -4524,8 +4342,6 @@ If an index is provided, `pop()` method removes the item at that index, else the
 ['T', 'C', 4, 'S']
 ```
 
-#br
-
 ## Reversing Items
 
 `reverse()` method can be used to reverse a list in-place.
@@ -4547,8 +4363,6 @@ If you do not wish to modify the existing list and create a new list with items 
 >>> l
 ['T', 'C', 2, 4, 'S']
 ```
-
-#br
 
 ## Sorting Items
 
@@ -4804,8 +4618,6 @@ Maximum : 9.0
 Mean : 4.2
 ```
 
-#br
-
 ## Linear Search
 
 Write a program to enter a list and then check if the number entered by a user is present in that list.
@@ -4854,8 +4666,6 @@ Enter item: 7
 Enter search value: 1
 Search value not found
 ```
-
-#br
 
 ## Frequency of Elements
 
@@ -5088,8 +4898,6 @@ False
 True    
 ```
 
-#br
-
 ## Concatenation
 
 `+` operator can be used to join two tuples to create a new tuple.
@@ -5101,8 +4909,6 @@ True
 ('BMW', 'Z4', 2019, 'Red')
 ```
 
-#br
-
 ## Repetition
 
 The `*` operator creates a new tuple with items of a tuple repeated the number of times as specified by the integer operand.
@@ -5112,8 +4918,6 @@ The `*` operator creates a new tuple with items of a tuple repeated the number o
 >>> t*3
 (1, 2, 1, 2, 1, 2)
 ```
-
-#br
 
 ## Tuple Slicing
 
@@ -5192,8 +4996,6 @@ Red
 True
 ```
 
-#br
-
 ## Location or Index Based Traversal
 
 In location based or index based traversal the value of index starts at `0` and increments as long as it is lesser than the length of the tuple. 
@@ -5221,8 +5023,6 @@ Z4
 Red
 True
 ```
-
-#br
 
 A `while` statement can be used to traverse a tuple by iterating on the value of index.
 
@@ -5447,8 +5247,6 @@ A sequence of `key: value` pairs separated by commas in braces - `{}`.
 {'yr': 20, 'name': 'Ed', 18: True}
 ```
 
-#br
-
 ## Sequence of (key, value) Tuples
 
 A sequence of (key, value) tuples can be passed as an argument to the `dict()` function.
@@ -5460,8 +5258,6 @@ A sequence of (key, value) tuples can be passed as an argument to the `dict()` f
 >>> d
 {'yr': 20, 'name': 'Ed', 18: True}
 ```
-
-#br
 
 ## Keyword/Named Arguments
 
@@ -5475,8 +5271,6 @@ Keys and values can be passed as keyword arguments to the `dict()` function.
 ```
 
 One of the limitations of this method is that the keys of the dictionary are only of type string and their names must be within the namespace of an identifier.
-
-#br
 
 ## Key and Value Lists
 
@@ -5494,8 +5288,6 @@ The zipped iterator can be passed as an argument to the `dict()` to create a new
 >>> dict(zip(m, n))
 {'yr': 20, 'name': 'Ed', 18: True}
 ```
-
-#br
 
 ## Keys with Default Value
 
@@ -5520,8 +5312,6 @@ The zipped iterator can be passed as an argument to the `dict()` to create a new
 >>> d["yr"]
 20
 ```
-
-#br
 
 ## get()
 
@@ -5560,8 +5350,6 @@ In case key `x` already exists, assignment updates or overwrites the value corre
 {'yr': 20, 18: True, 'name': 'Py'}
 ```
 
-#br
-
 ## update()
 
 `update()` method can be used to add new items or update existing items in a `dict`. 
@@ -5581,8 +5369,6 @@ This method accepts the following:
 {'yr': 15, 18: False, 'name': 'Ed'}
 ```
 
-#br
-
 ### 2. Sequence of (key, value) pairs
 
 ``` python
@@ -5593,8 +5379,6 @@ This method accepts the following:
 {'yr': 15, 18: True, 'name': 'Ed'}
 ```
 
-#br
-
 ### 3. Keyworded arguments
 
 ``` python
@@ -5603,8 +5387,6 @@ This method accepts the following:
 >>> d
 {'yr': 15, 18: True, 'name': 'Ed'}
 ```
-
-#br
 
 ## setdefault()
 
@@ -5640,8 +5422,6 @@ If no default value is provided, the value is set as `None`.
 {'yr': 20, 18: True}
 ```
 
-#br
-
 ## clear()
 
 `clear()` method can be used to clear all values of a dictionary.
@@ -5653,8 +5433,6 @@ If no default value is provided, the value is set as `None`.
 >>> d
 {}
 ```
-
-#br
 
 ## pop()
 
@@ -5678,8 +5456,6 @@ KeyError: 'name'
 >>> d.pop("name", "Punk")
 'Punk'
 ```
-
-#br
 
 ## popitem()
 
@@ -5720,8 +5496,6 @@ Similarly, `not in` can be used to determine the absence of a `key`.
 >>> "name" not in d
 True
 ```
-
-#br
 
 ## Union
 
@@ -5767,8 +5541,6 @@ name : Ed
 18 : True
 ```
 
-#br
-
 ## Traversing Using Dictionary Methods
 
 Dictionary methods `items()`, `keys()` and `values()` can be used to fetch the items, keys and values in a dictionary, respectively.
@@ -5803,8 +5575,6 @@ name
 18
 ```
 
-#br
-
 #### Code
 
 ``` python
@@ -5821,8 +5591,6 @@ for value in d.values():
 Ed
 True
 ```
-
-#br
 
 #### Code
 
@@ -5853,8 +5621,6 @@ name : Ed
 3
 ```
 
-#br
-
 ## Min and Max
 
 The `min()` and `max()` built-in functions return the minimum and maximum value among the keys of a dictionary. 
@@ -5875,8 +5641,6 @@ In case of string keys, they return the first and last occurring strings alphabe
 >>> max(d)
 3
 ```
-
-#br
 
 ## Copy
 
@@ -5957,8 +5721,6 @@ n - 1
 d - 1
 a - 2
 ```
-
-#br
 
 ## Salary Book
 
@@ -6164,8 +5926,6 @@ Enter name: Python
 Hello, Python
 ```
 
-#br
-
 ## print()
   
 The built-in `print()` function can be used to display an output (value of variables, expressions, etc.) on the standard output.
@@ -6187,11 +5947,7 @@ print("Area:", area)
 Area: 50
 ```
 
-#br
-
 Both, `input()` and `print()` functions are covered in detail in the chapter **Input & Output**.
-
-#br
 
 ## open()
 
@@ -6313,8 +6069,6 @@ The following frequently used mathematical constants are available in `math` mod
 >>> math.tau
 6.283185307179586
 ```
-
-#br
 
 ## Functions
 
@@ -6563,8 +6317,6 @@ It can either be an absolute path or a relative path as shown below:
 - `'../fname.txt'` is the relative path of a text file outside the current directory where the python script is being executed.
 - `'/Users/edpunk/Documents/fname.txt'` is the absolute path of a text file which can be opened by the python script from any location as long as it is in the same system.
 
-#br
-
 ### mode
 
 `mode` is an optional string parameter which specifies the mode in which the file has to be opened. It defaults to `'r'` which means open for reading in text mode.
@@ -6586,8 +6338,6 @@ The available modes are:
 - `'w+b'` : Opens the file in binary read and write mode. It creates a new file or truncates the contents of the file if it already exists.
 - `'a+'` : Opens the file in read and append mode. It creates a new file if it does not exist. If the file already exists, new data is automatically added at the end of the file after existing data.
 - `'a+b'` : Opens the file in binary read and append mode.
-
-#br
 
 After opening a file and performing some file operations, it can be safely closed using the `close()` method.
 
@@ -6637,8 +6387,6 @@ Thank You
 >>> f.close()
 ```
 
-#br
-
 ### readline()
 
 `readline(size = -1)` method without any arguments is used to read and return one line at a time from the given file. 
@@ -6673,8 +6421,6 @@ Thank You
 >>> f.close()
 ```
 
-#br
-
 Since `readline()` returns one row at a time, it can be used in a `while` statement to iterate over the data row-wise. Once it reaches the end of file it returns an empty string.
 
 #### Code
@@ -6702,8 +6448,6 @@ Hello World
 Thank You
 ```
 
-#br
-
 `for` statement can also be used to traverse the file row-wise without any requirement of the `readline()` method. Simply iterating over the file object returns the data one row at a time.
 
 #### Code
@@ -6726,8 +6470,6 @@ Hello World
 Thank You
 ```
 
-#br
-
 ### readlines()
 
 `readlines()` method returns a list of strings representing the lines (along with the newline character) of text file content.
@@ -6749,8 +6491,6 @@ Thank You
 ['Hello World\n', 'Thank You']
 ```
 
-#br
-
 ## 2. Random Access
 
 The following two methods can be used on a file object to randomly access contents of a file:
@@ -6768,8 +6508,6 @@ Let us consider the same file `info.txt` for the below example:
 >>> f.tell()
 4
 ```
-
-#br
 
 ### seek()
 
@@ -6893,8 +6631,6 @@ where:
 >>> f.close()
 ```
 
-#br
-
 ## Loading Data
 
 The `load()` function can be used to read the pickled representation of an object or data from a file.
@@ -6911,8 +6647,6 @@ where `file` is an open file object (opened in binary read mode `rb`).
 >>> l
 [['Anita', 'Maths', 83], ['Amar', 'Maths', 95], ['Ani', 'Maths', 90]]
 ```
-
-#br
 
 ## Example: Traversing a Binary File
 
@@ -7085,8 +6819,6 @@ with open('marks.csv',
 ['Ira', 'Science', '99.0']
 ```
 
-#br
-
 ### Example 2
 
 Let us write a program to read the contents of `marks2.csv`. 
@@ -7126,8 +6858,6 @@ with open('marks2.csv',
 ['Ira', 'Physics|Chemistry|Biology', '99.0']
 ```
 
-#br
-
 ## Writing CSV File
 
 `csv.writer(csvfile, delimiter=',', quotechar='"')` function returns a writer object which converts data in form of a list into delimited strings which is passed down to the file object for writing. 
@@ -7165,8 +6895,6 @@ with open('marks.csv', 'w',
         writer.writerow(row)
 ```
 
-#br
-
 #### Solution #2: Using writerows()
 
 ``` python
@@ -7190,8 +6918,6 @@ with open('marks.csv', 'w',
     #Writing Data
     writer.writerows(marks)
 ```
-
-#br
 
 #### Output - marks.csv
 
@@ -7230,8 +6956,6 @@ def adder(f, s, t = None):
     return s
 ```
 
-#br
-
 ## Function Header
 
 ``` python
@@ -7247,8 +6971,6 @@ The function name is followed by a pair of parenthesis `( )`.
 In case any parameters are required by the function, they are enclosed inside the parentheses. `f, s, t = None` are the three parameters of the function.
 
 Finally, the function header ends with a colon.
-
-#br
 
 ## Function Body
 
@@ -7396,8 +7118,6 @@ tres()
 30
 ```
 
-#br
-
 In case a variable is defined inside a function with the same name as that of a global variable, then the variable is considered as a local variable and all references made to the variable point to this local variable. 
 
 #### Code
@@ -7426,8 +7146,6 @@ tres()
 5
 30
 ```
-
-#br
 
 Any changes made to a global variable inside a code block or a function can modify it for that session. This can have an impact on all the code blocks/functions that access and use it.
 
@@ -7486,8 +7204,6 @@ print(l)
 [1, 2, 3]
 [2, 4, 6]
 ```
-
-#br
 
 ## Dictionary
 
@@ -7575,8 +7291,6 @@ print(st)
 60
 ```
 
-#br
-
 The `as` keyword can also be used to create an alias which makes it easier and more manageable to use in the program.
 
 #### Code
@@ -7596,8 +7310,6 @@ print(st)
 60
 ```
 
-#br
-
 Instead of loading all the functions in a module, the `from` statement can be used to access only specified functions.
 
 #### Code
@@ -7613,8 +7325,6 @@ print(sa)
 ```
 40
 ```
-
-#br
 
 To import all functions and global variables in the module the `*` wildcard character can be used.
 
@@ -7632,8 +7342,6 @@ st = tripler(20)
 40
 60
 ```
-
-#br
 
 The above method of using `*` to import the contents of a module is not recommended as it can clutter the namespace and cause issues if there are conflicts between the identifiers defined by the programmer and those defined in the module/package.
 # Executable Scripts/Modules
