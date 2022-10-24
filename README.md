@@ -1,4 +1,6 @@
-## Programming Languages
+# Introduction
+
+## Introduction to Programming Languages
 
 In today's digital era, we depend on computers, smartphones and the internet to perform a plethora of tasks, like:
 
@@ -21,7 +23,7 @@ There are many high-level programming languages that are currently in wide use.
 
 Some of the popular languages are Java, C, C++, C#, Go, Swift, JavaScript, PHP, Dart, Kotlin and Python.
 
-## Python Programming Language
+## Introduction to Python
 
 Guido van Rossum started the development of Python in December 1989. He released the first version (0.9.9) of Python for general public on February 20, 1991. 
 
@@ -93,7 +95,7 @@ Python programmers also have at their disposal the vast ecosystem of more than 2
 
 Some of the most popular web development frameworks (django, flask, etc.) are written in Python. This coupled with the availablity of packages to connect to any database makes Python a great choice for web application development.
 
-## Windows
+## Installing Python in Windows
 
 Let's start with the Python 3 installation process on Windows operating system.
 
@@ -123,7 +125,7 @@ Python 3.9 is now successfully installed on your computer.
 
 ![Step 3: Verify Installation](images/0201d.png)
 
-## macOS (Apple)
+## Installing Python in macOS (Apple)
 
 Let's start with the Python 3 installation process on macOS operating system.
 
@@ -149,7 +151,7 @@ Once the setup is complete, click on the `Launchpad -> IDLE` to launch the Pytho
 
 Python 3.9 is now successfully installed on your computer.
 
-## Python Execution Modes
+## Execution Modes
 
 After installing the latest version of the Python interpreter, we can now write and execute some basic Python codes.
 
@@ -158,7 +160,7 @@ There are two ways to execute a Python program:
 1. **Interactive Mode**: When the IDLE application is launched, the Python interpreter or the Python shell pops up on the screen. User can interact with the Python interpreter and execute statements (single line or multiline code snippets) directly in this Python shell.
 2. **Script Mode**: This is the most commonly used method for executing a Python program. The entire Python program is written and saved in a file (`.py` extension) which can be executed using the IDLE application.
 
-## Interactive Mode
+## Interactive Mode of Execution
 
 Let us execute some basic Python statements and interact with the Python shell.
 
@@ -220,15 +222,13 @@ Interactive mode is not just restricted to basic arithmetic or assignments. Let 
 'Hello, world!'
 ```
 
-### Conclusion
-
 The complete functionality of Python is easily accessible to a user via the **Interactive Mode**. 
 
 This makes it convenient for testing and instant execution of small code snippets (single line or few lines of code), a feature not available in compiled languages like C, C++ and Java. 
 
 But, the statements cannot be saved for future use and have to retyped for re-execution. This disadvantage is overcome by the use of Python in **Script Mode** as described in the next section.
 
-## Script Mode
+## Script Mode of Execution
 
 To write reusable codes, script mode is the most preferred mode of code execution.
 
@@ -266,7 +266,9 @@ print(a)
 
 Now, when you run the script you will observe that the value of `a`, that is `4`, is now displayed on the console.
 
-## Tokens
+# Python Fundamentals
+
+## Tokens: Introduction
 
 When a Python code is executed, the Python interpreter reads each logical line and breaks it into a sequence of lexical units. 
 
@@ -278,35 +280,7 @@ These lexical units are better known as **tokens** - the smallest individual uni
 - **Delimiters** : Symbols that denote grouping, punctuation, and assignment/binding.
 - **Operators** : Symbols that can operate on data and compute results.
 
-## Character Set
-
-A set of valid characters that a programming language recognizes is known as its **character set**. 
-
-Python is a new age programming language which supports Unicode encoding standard. The default encoding for Python source code is UTF-8 (Unicode Transformation Format – 8-bit) which enables developers to use Unicode characters not only as literals, but also as identifiers. 
-
-This makes Python one of the very few programming languages that support multiple languages as shown in the example below:
-
-**Code**
-
-``` python
-message = "हिन्दी में print करे"
-print(message)
-
-क = 1  # Devanagari Letter KA
-ক = 2  # Bengali Letter KA
-க = 3  # Tamil Letter KA
-ક = 4  # Gujarati Letter KA
-print(क + ক + க + ક)
-```
-
-**Output**
-
-```
-हिन्दी में print करे
-10
-```
-
-## Keywords
+## Tokens: Keywords
 
 Keywords are reserved words that have special meaning when processed by the Python interpreter. They are case-sensitive and cannot be used for naming identifiers (class, function, variable or structure names).
 
@@ -327,7 +301,7 @@ The list of keywords in Python are provided below:
 | `assert` | `return` | `yield` |
 | `async` | `await` | |
 
-## Identifiers
+## Tokens: Identifiers
 
 Identifiers are used for defining the names of Python objects such as variables, functions, classes, modules, etc. The naming convention for identifiers is as follows:
 
@@ -348,7 +322,7 @@ It is also a good practice (although not compulsory) to follow the following pro
 - Identifiers starting with an underscore have special meaning in a program.
 - Variable, function and method names should be in lowercase characters, with underscores separating multiple words like `area_of_square`, `area_of_triangle`, etc.
 
-## Literals
+## Tokens: Literals
 
 Literals are tokens in the source code which represent fixed or constant values. They are often used in assignment statements for initializing variables or in comparison expressions.
 
@@ -535,7 +509,7 @@ Some example collection of literals (displays) are provided below:
 
 List, set and dictionary will be covered in detail in later chapters.
 
-## Operators
+## Tokens: Operators
 
 Operators are tokens which can be combined with values and variables to create expressions which evaluate to a single value. Python supports a rich set of operators:
 
@@ -550,7 +524,7 @@ Operators are tokens which can be combined with values and variables to create e
 
 Each of the above operators are covered in detail in the chapter - Operators.
 
-## Delimiters
+## Tokens: Delimiters
 
 Delimiters are tokens which are useful for organizing a program and are used in statements, expressions, functions, literal collections, and various other code structures.
 
@@ -608,6 +582,34 @@ The assignment or binding delimiters are used for binding objects to names via a
 Except `=`, the rest of the tokens have an operator followed by `=` character. 
 
 These delimiters are also known as augmented assignment operators as they perform an operation in combination with assignment.
+
+## Character Set
+
+A set of valid characters that a programming language recognizes is known as its **character set**. 
+
+Python is a new age programming language which supports Unicode encoding standard. The default encoding for Python source code is UTF-8 (Unicode Transformation Format – 8-bit) which enables developers to use Unicode characters not only as literals, but also as identifiers. 
+
+This makes Python one of the very few programming languages that support multiple languages as shown in the example below:
+
+**Code**
+
+``` python
+message = "हिन्दी में print करे"
+print(message)
+
+क = 1  # Devanagari Letter KA
+ক = 2  # Bengali Letter KA
+க = 3  # Tamil Letter KA
+ક = 4  # Gujarati Letter KA
+print(क + ক + க + ક)
+```
+
+**Output**
+
+```
+हिन्दी में print करे
+10
+```
 
 ## Blocks and Indentation
 
@@ -740,7 +742,9 @@ else:
     print("x is not less than 10")
 ```
 
-## Objects and Variables
+# Variables, Objects & Data Types
+
+## What are Objects & Variables?
 
 A program is a sequence of instructions which often acts on information (data) provided by the user. 
 
@@ -823,7 +827,7 @@ In the above example, the ID of `a` changes as it points to a new object (`2`).
 
 Also, when `a` is assigned to `b`, instead of creating a new copy, `b` points to the same object as `a`.
 
-## Creating a Variable
+## Variables & Assignment Statements
 
 A variable is uniquely identified by a name (identifier) and follows the same naming convention:
 
@@ -981,7 +985,7 @@ Some example dictionaries are - `{1: "a", 2: "b", 3: "c"}`, `{"name": "edpunk", 
 
 It is neither `0` nor `False` as these are defined finite values, whereas `None` implies nothingness.
 
-## Type Checking
+## Type Checking: Checking the Data Type of a Python Object
 
 The built-in `type()` function can be used to fetch the data type of an object.
 
@@ -1150,7 +1154,7 @@ Creates a `set` from an iterable of type `str`, `tuple`, `list` or `range`.
 {0, 1, 2, 3, 4, 5}
 ```
 
-## Mutability & Immutability
+## Mutable & Immutable Data Types
 
 ### Immutable Data Types
 
@@ -1265,7 +1269,9 @@ True
 
 In the above examples, the `id` of the objects (`list`, `dict`, `set`) do not change, which implies that no new objects are created and the original objects are modified.
 
-## Standard Input - input()
+# Input / Output
+
+## How to Accept User Input
 
 `input()` function is used to accept new input data from the user. 
 
@@ -1305,7 +1311,7 @@ Enter pi: 3.14
 3.14
 ```
 
-## Standard Output - print()
+## Displaying Output
 
 The built-in `print()` function is used to display an output (value of variables, expressions, etc.) on the standard output.
 
@@ -1400,11 +1406,13 @@ print("Hello, " + "world!")
 4,7.0;Hello, world!
 ```
 
-### Summary
+### Note
 
 All non-keyword arguments or expressions are converted to strings and written to the output stream by the `print()` function. They are separated by `sep` and followed by `end`. An empty `print()` invocation writes `end` parameter (an empty line as `end` defaults to the newline character `'\n'`).
 
-## Types of Operators
+# Operators & Expressions
+
+## Introduction to Operators
 
 Operators are symbols that perform a single simple task or operation on one or more values resulting in a single evaluated value. 
 
@@ -1986,7 +1994,7 @@ True
 False
 ```
 
-## Expression
+## Expressions
 
 Literals (constants), identifiers (variables) and operators can be combined to form an expression which always evaluates to a single value. 
 
@@ -2037,7 +2045,7 @@ If the above condition `cond` evaluates to `True`, then the variable `var` is as
 -1
 ```
 
-## Precedence of Operators
+## Operator Precedence with Examples
 
 While studying mathematics in middle school, we came across the **BODMAS** (Bracket, Of, Division, Multiplication, Addition, and Subtraction) rule which helps us in understanding how mathematical expressions are computed in the presence of multiple operators (`of`, `x`, `/`, `+`, `-`).
 
@@ -2182,6 +2190,8 @@ Boolean `NOT` is evaluated
 Boolean `AND` is evaluated  
 `True and True`  
 = `True`
+
+# Errors & Exception Handling
 
 ## Error Types
 
@@ -2549,7 +2559,9 @@ finally:
     [code block always executed]
 ```
 
-## Control Flow Statements
+# Control Flow
+
+## Introduction to Control Flow
 
 A simple Python program can be treated as a block of code where each statement is executed by the Python interpreter in a sequential order from top to bottom. 
 
@@ -2572,7 +2584,7 @@ They can be categorized as:
 - Recursion - Calling a method/function in the same method/function
 - Exception Handling
 
-## Sequential
+## Sequential Flow
 
 By default the code statements in Python are executed in Sequential order.
 
@@ -2593,7 +2605,7 @@ The above code will be executed in the following sequential order:
 
 ![Sequential Flow of Code](images/0802b.png)
 
-## Selection: if..else
+## Selection Statements: if .. else
 
 Selection statements, also known as Decision making statements, control the flow of a program based on the outcome of one or many test expression(s). If the condition is satisfied (`True`) then the code block is executed. There is also a provision to execute another code block if the condition is not satisfied.
 
@@ -3294,7 +3306,9 @@ for n in range(2, 40):
 37 is prime
 ```
 
-## Creating a String
+# Strings
+
+## Strings: Introduction & Creation
 
 A String (`str`) is an **immutable** sequence of Unicode characters which is used to handle textual data in Python.
 
@@ -3364,7 +3378,7 @@ In case you want to create a string object from other data types, just use the b
 '10.0'
 ```
 
-## Accessing Characters
+## Accessing Characters of a String
 
 Python strings are "immutable", i.e., the state (value) of the objects cannot be modified after they are created. 
 
@@ -3494,15 +3508,24 @@ The `*` operator repeats a string the number of times as specified by the intege
 'HelloHelloHello'
 ```
 
-## String Methods
+## Introduction to String Methods
 
-Apart from the built-in function `len()` which returns the length of the string, String objects have access to several specialized functions (methods) which are described below:
+Apart from the built-in function `len()` which returns the length of the string, String objects have access to several specialized functions (methods) that can:
 
-### 1. Convert Case
+1. Convert Case of Strings
+2. Check Characters of a String
+3. Split a String
+4. Strip Characters from a String
+5. Checking for Prefix or Suffix in a String
+6. Find & Replace Characters in a String
+
+Let us discuss these methods in detail in the coming sections.
+
+## Convert Case of Strings
 
 The following methods are useful in converting the case of the characters in a string:
 
-#### i. lower()
+### i. lower()
 
 All cased characters are converted into lowercase.
 
@@ -3511,7 +3534,7 @@ All cased characters are converted into lowercase.
 'python'
 ```
 
-#### ii. upper()
+### ii. upper()
 
 All cased characters are converted into uppercase.
 
@@ -3520,7 +3543,7 @@ All cased characters are converted into uppercase.
 'PYTHON'
 ```
 
-#### iii. swapcase()
+### iii. swapcase()
 
 Uppercase characters are converted into lowercase and lowercase characters are converted into uppercase.
 
@@ -3529,7 +3552,7 @@ Uppercase characters are converted into lowercase and lowercase characters are c
 'pyTHON'
 ```
 
-#### iv. capitalize()
+### iv. capitalize()
 
 First character is capitalized and rest all characters are lowercased.
 
@@ -3538,7 +3561,7 @@ First character is capitalized and rest all characters are lowercased.
 'Hello py'
 ```
 
-#### v. title()
+### v. title()
 
 For each word present in the string, the first character is uppercased and the remaining characters are lowercased.
 
@@ -3547,11 +3570,11 @@ For each word present in the string, the first character is uppercased and the r
 'Hello Python'
 ```
 
-### 2. Check Characters
+## Check Characters of a String
 
 The following methods are used to check the type of characters in a string.
 
-#### i. isalpha()
+### i. isalpha()
 
 Returns `True` if all characters in the string are letters (`A-Z a-z`).
 
@@ -3566,7 +3589,7 @@ False  # contains whitespace
 False  # contains digit
 ```
 
-#### ii. isdigit()
+### ii. isdigit()
 
 Returns `True` if all characters in the string are digits.
 
@@ -3577,7 +3600,7 @@ False  # contains alphabets
 True
 ```
 
-#### iii. isalnum()
+### iii. isalnum()
 
 Returns `True` if all characters in the string are alphanumeric (Alphabets or Numeric).
 
@@ -3592,7 +3615,7 @@ False  # contains whitespace
 True
 ```
 
-#### iv. isascii()
+### iv. isascii()
 
 Returns `True` if the string is empty or all characters in the string are ASCII.
 
@@ -3607,7 +3630,7 @@ False
 False
 ```
 
-#### v. islower()
+### v. islower()
 
 Returns `True` if all characters are lowercase.
 
@@ -3618,7 +3641,7 @@ True
 False
 ```
 
-#### vi. isupper()
+### vi. isupper()
 
 Returns `True` if all characters are uppercase.
 
@@ -3629,7 +3652,7 @@ True
 False
 ```
 
-#### vii. isspace()
+### vii. isspace()
 
 Returns `True` if there are only whitespace characters in the string. Some popular whitespace characters are ` ` (space), `\t` (tab), `\n` (newline), `\r` (carriage return), `\f` (form feed) and `\v` (vertical tab).
 
@@ -3638,7 +3661,7 @@ Returns `True` if there are only whitespace characters in the string. Some popul
 True
 ```
 
-#### viii. istitle()
+### viii. istitle()
 
 Returns `True` if the string is title-cased, i.e., the first character of every word in the string is uppercased and the remaining characters are lowercased.
 
@@ -3651,11 +3674,11 @@ False
 False
 ```
 
-### 3. Split Methods
+## Split a String
 
 Split methods help in splitting/partitioning a string.
 
-#### i. partition()
+### i. partition()
 
 `partition(sep)` method splits the string when the separator (`sep`) is encountered for the first time, and returns a tuple with three items `(string before separator, separator, string after separator)`.
 
@@ -3664,7 +3687,7 @@ Split methods help in splitting/partitioning a string.
 ('Hi', '|', 'Ed|Punk')
 ```
 
-#### ii. split()
+### ii. split()
 
 `split(sep=None, maxsplit=-1)` method splits a string into a list based on a string separator (`sep`). 
 
@@ -3688,7 +3711,7 @@ If `maxsplit` is provided, at most `maxsplit` number of splits are performed and
 ['Hi', 'Ed', 'Punk|v2']
 ```
 
-### 4. Strip Methods
+## Strip Characters from a String
 
 Strip methods are useful in removing leading and/or trailing characters in a string. 
 
@@ -3696,7 +3719,7 @@ They accept an optional argument `chars` which specifies the set of characters w
 
 If no arguments are provided then `chars` defaults to ASCII whitespace and the method removes all leading and/or trailing spaces from the string.
 
-#### i. lstrip()
+### i. lstrip()
 
 All leading (on the left) characters are removed from the string.
 
@@ -3707,7 +3730,7 @@ All leading (on the left) characters are removed from the string.
 'edpunk.cc'
 ```
 
-#### ii. rstrip()
+### ii. rstrip()
 
 All trailing (on the right) characters are removed from the string.
 
@@ -3718,7 +3741,7 @@ All trailing (on the right) characters are removed from the string.
 'www.edpunk'
 ```
 
-#### iii. strip()
+### iii. strip()
 
 All leading and trailing characters are removed from the string.
 
@@ -3729,7 +3752,7 @@ All leading and trailing characters are removed from the string.
 'edpunk'
 ```
 
-### 5. Check Prefix/Suffix
+## Check Prefix or Suffix in a String
 
 `startswith()` and `endswith()` methods are used check whether a string starts or ends with the provided substring (or a tuple of substrings).
 
@@ -3748,11 +3771,11 @@ True
 True
 ```
 
-### 6. Search/Replace Methods
+## Find & Replace Characters in a String
 
 The following string methods are useful for locating substring in a string.
 
-#### i. count()
+### i. count()
 
 `count(sub[, start[, end]])` returns the number of non-overlapping occurrences of a substring `sub` in the range `[start, end]`. 
 
@@ -3782,7 +3805,7 @@ It has to be noted that the method counts non-overlapping occurrences, so it doe
 
 In the above example, `ala` is counted twice as the first occurence is in `valh"ala"` and the next occurance is in `"ala"la`. Although `ala` can be located again in `al"ala"`, it overlaps with the occurance `"ala"la`, hence it is not counted.  
 
-#### ii. find()
+### ii. find()
 
 `find(sub[, start[, end]])` returns the lowest index in the string where substring `sub` is located in the range `[start, end]`. 
 
@@ -3804,7 +3827,7 @@ The method returns `-1` in case the substring is not present.
 14
 ```
 
-#### iii. rfind()
+### iii. rfind()
 
 `rfind(sub[, start[, end]])` returns the highest index in the string where substring `sub` is located in the range `[start, end]`. 
 
@@ -3824,7 +3847,7 @@ The method returns `-1` in case the substring is not present.
 14
 ```
 
-#### iv. index()
+### iv. index()
 
 `index(sub[, start[, end]])` is similar to `find(sub[, start[, end]])`, but instead of returning `-1` it raises `ValueError` when the substring is not found.
 
@@ -3848,7 +3871,7 @@ ValueError: substring not found
 14
 ```
 
-#### v. rindex()
+### v. rindex()
 
 `s.rindex(sub[, start[, end]])` is similar to `rfind(sub[, start[, end]])`, but instead of returning `-1` it raises `ValueError` when the substring is not found.
 
@@ -3867,7 +3890,7 @@ ValueError: substring not found
 14
 ```
 
-#### vi. replace()
+### vi. replace()
 
 `replace(oldsub, newsub[, count])` returns a copy of the string with all occurrences of `oldsub` substring replaced by `newsub`. 
 
@@ -3933,7 +3956,9 @@ o
 n
 ```
 
-## Creating a List
+# List
+
+## What is a Python List? How to Create a List?
 
 The most common and widely used collections in Python are **lists** which store an ordered group of objects (of any datatype) which might have some logical relation. This marks a considerable difference from arrays (in traditional languages) and makes Python an ideal language for handling real-life data which is not type-bound.  
 
@@ -3956,8 +3981,6 @@ In this list:
 This method of creating a list from a collection of literals is known as **list display**.
 
 Notice, how this list contains items of multiple data types - `str`, `int` and `bool`.
-
-### list()
 
 Apart from the list display shown above, the built-in `list()` function can also be used to create new lists.
 
@@ -3983,7 +4006,7 @@ If a string, tuple or set is passed as an argument, `list()` functions converts 
 [1, 2, 3, 4]
 ```
 
-## Accessing Items
+## Accessing Items of a List
 
 Lists use zero-based indexing, where 0 is the index of the first element and `len(list) - 1` is the index of the last element.
 
@@ -4024,7 +4047,7 @@ True
 4
 ```
 
-## Modifying an Item
+## Modifying a List
 
 As lists are mutable, the assignment operator can be used to modify or replace a single item in the list at a given index.
 
@@ -4035,7 +4058,7 @@ As lists are mutable, the assignment operator can be used to modify or replace a
 ['BMW', 'Z4', 'Black']
 ```
 
-## Removing an Item
+## Removing Item from a List
 
 `del` statement can be used to delete an item at a given index of a list.
 
@@ -4275,9 +4298,7 @@ Red
 True
 ```
 
-## List Methods & Functions
-
-### Simple Aggregations
+## Built-in Functions that can be used for a List
 
 Built-in functions `max()`, `min()` and `sum()` are used to calculate the maximum, minimum and sum of items in a list, respectively.  
 
@@ -4291,7 +4312,20 @@ Built-in functions `max()`, `min()` and `sum()` are used to calculate the maximu
 18
 ```
 
-### Adding Items
+## Introduction to List Methods
+
+List objects have access to several specialized functions (methods) that can be used to:
+
+1. Add Items to a List
+2. Remove Items from a List
+3. Count or Locate Items in a List
+4. Sort a List 
+5. Reverse a List
+6. Copy the Contents of a List
+
+Let us discuss these methods in detail in the coming sections.
+
+## Adding Items to a List
 
 `append()` method adds an item (passed as an argument) to the end of a list.
 
@@ -4320,34 +4354,7 @@ If the item has to be added at a particular index, `insert()` method can be used
 ['T', 'C', 2, 4, 2.5, 'SE']  
 ```
 
-### Locating Items
-
-An item `x` can be located in a list using the `index(x[, i[, j]])` method which returns the first occurrence of the item at or after index `i` and before index `j`. 
-
-In case `i` and `j` are not specified they default to `i=0` and `j=len(l)`.
-
-``` python
->>> l = [34, 4, 6, 23, 4]
->>> l.index(4)
-1
->>> l.index(4, 3)
-4
->>> l.index(6, 1, 4)
-2
-```
-
-`count()` method can be used to count the occurrence(s) of an item in a list.
-
-``` python
->>> l = [34, 4, 6, 23]
->>> l.count(4)
-1
->>> l = ["it", "is", "it", "I"]
->>> l.count("it")
-2
-```
-
-### Removing Items
+## Removing Items from a List
 
 `clear()` method removes all items from the list.
 
@@ -4385,7 +4392,34 @@ If an index is provided, `pop()` method removes the item at that index, else the
 ['T', 'C', 4, 'S']
 ```
 
-### Reversing Items
+## Counting or Locating Items in a List
+
+An item `x` can be located in a list using the `index(x[, i[, j]])` method which returns the first occurrence of the item at or after index `i` and before index `j`. 
+
+In case `i` and `j` are not specified they default to `i=0` and `j=len(l)`.
+
+``` python
+>>> l = [34, 4, 6, 23, 4]
+>>> l.index(4)
+1
+>>> l.index(4, 3)
+4
+>>> l.index(6, 1, 4)
+2
+```
+
+`count()` method can be used to count the occurrence(s) of an item in a list.
+
+``` python
+>>> l = [34, 4, 6, 23]
+>>> l.count(4)
+1
+>>> l = ["it", "is", "it", "I"]
+>>> l.count("it")
+2
+```
+
+## Reversing Items
 
 `reverse()` method can be used to reverse a list in-place.
 
@@ -4407,7 +4441,7 @@ If you do not wish to modify the existing list and create a new list with items 
 ['T', 'C', 2, 4, 'S']
 ```
 
-### Sorting Items
+## Sorting a List
 
 Python lists have a built-in `sort()` method which sorts the items in-place using `<` comparisons between items. 
 
@@ -4445,33 +4479,6 @@ If you do not wish to modify the existing list and create a new list with sorted
 >>> new_l = sorted(l)
 >>> new_l
 [4, 6, 23, 34]
-```
-
-## Nested List
-
-A list of lists is also known as a nested list.
-
-Previously, we learnt how to create a list of attributes of a particular vehicle available for sale in a dealership.
-
-Let us now create a nested list containing some details of vehicles available for sale.
-
-``` python
-# Make Model Year No_of_wheels
-l = [["Kia", "Sonnet", 2019, 4],
-  ["Toyota", "Camry", 2018, 4],
-  ["BMW", "Z4", 2015, 4],
-  ["BMW", "S1000", 2016, 2],
-  ["KTM", "390", 2019, 2],
-  ]
-```
-
-Thus, nested list is useful in representing a dataset where each item is a list (datum) containing the attributes of an observation.
-
-`l[i][j]` is the syntax to fetch the `j+1th` item of the list at index `i` of the nested list `l`.
-
-``` python
->>> l[2][1]
-'Z4'
 ```
 
 ## Copying a List
@@ -4544,6 +4551,33 @@ False
 [1, 2, 3, 4]
 >>> old_l
 [1, 2, 3]
+```
+
+## Nested List
+
+A list of lists is also known as a nested list.
+
+Previously, we learnt how to create a list of attributes of a particular vehicle available for sale in a dealership.
+
+Let us now create a nested list containing some details of vehicles available for sale.
+
+``` python
+# Make Model Year No_of_wheels
+l = [["Kia", "Sonnet", 2019, 4],
+  ["Toyota", "Camry", 2018, 4],
+  ["BMW", "Z4", 2015, 4],
+  ["BMW", "S1000", 2016, 2],
+  ["KTM", "390", 2019, 2],
+  ]
+```
+
+Thus, nested list is useful in representing a dataset where each item is a list (datum) containing the attributes of an observation.
+
+`l[i][j]` is the syntax to fetch the `j+1th` item of the list at index `i` of the nested list `l`.
+
+``` python
+>>> l[2][1]
+'Z4'
 ```
 
 ## List Comprehension
@@ -4815,9 +4849,13 @@ Frequency of Elements
 6 - 2
 ```
 
-## Creating a Tuple
+# Tuple
+
+## List vs Tuple
 
 Tuples are like lists, with a difference - they are immutable. This means that once initialized a user cannot modify its value, which makes it a useful feature to ensure the sanctity of data and guarantee that it is not being modified by the program.
+
+## How to Create Tuple?
 
 Tuples are declared using parentheses `( )`, with successive items separated by a comma `,`.
 
@@ -4853,7 +4891,7 @@ If a string, tuple or set is passed as an argument, `tuple()` functions converts
 (1, 2, 3, 4)
 ```
 
-### Singleton
+## What is a Singleton?
 
 In case a tuple has only 1 item, it is known as a singleton. 
 
@@ -4881,7 +4919,7 @@ It is a good practice to include a trailing comma to avoid the Python interprete
 <class 'tuple'>
 ```
 
-## Accessing Items
+## Accessing Items of a Tuple
 
 Tuples use zero-based indexing, where 0 is the index of the first element and `len(tuple) - 1` is the index of the last element.
 
@@ -5100,11 +5138,7 @@ Red
 True
 ```
 
-## Tuple Methods & Functions
-
-`tuple` supports all the features available in a `list`, barring the methods/operations which try to modify it.
-
-### Simple Aggregations
+## Built-in Functions that can be used for a Tuple
 
 Built-in functions `max()`, `min()` and `sum()` can be used to calculate the maximum, minimum and sum of items in a tuple, respectively.
 
@@ -5118,7 +5152,9 @@ Built-in functions `max()`, `min()` and `sum()` can be used to calculate the max
 18
 ```
 
-### Locating Items
+## Locating Items in a Tuple 
+
+As compared to a `list`, `tuple` supports only methods that do not try to modify it.
 
 An item `x` can be located in a tuple using the `index(x[, i[, j]])` method which returns the first occurrence of the item at or after index `i` and before index `j`. In case `i` and `j` are not specified they default to `i=0` and `j=len(t)`.
 
@@ -5132,6 +5168,8 @@ An item `x` can be located in a tuple using the `index(x[, i[, j]])` method whic
 2
 ```
 
+## Counting the Occurrence of an Item
+
 `count()` method can be used to count the occurrence(s) of an item in a tuple.
 
 ``` python
@@ -5143,7 +5181,7 @@ An item `x` can be located in a tuple using the `index(x[, i[, j]])` method whic
 2
 ```
 
-### Reversing Items
+## New Tuple with Reversed Items
 
 To create a new tuple with items in reverse order, use the built-in function `reversed()` nested in the built-in `tuple()`.
 
@@ -5156,7 +5194,7 @@ To create a new tuple with items in reverse order, use the built-in function `re
 ('T', 'C', 2, 4, 'S')
 ```
 
-### Sorting Items
+## New Tuple with Sorted Items
 
 To create a new tuple with sorted items, use the built-in `sorted(x,[key, reverse])` function which returns a new sorted tuple. 
 
@@ -5203,7 +5241,9 @@ t = (
 'Z4'
 ```
 
-As compared to a nested list, a nested tuple is useful in representing a dataset (such as a table fetched from a database) where it is important to ensure the sanctity of data as the code cannot modify it because tuples are immutable.# Pitfalls of Extending a Tuple
+As compared to a nested list, a nested tuple is useful in representing a dataset (such as a table fetched from a database) where it is important to ensure the sanctity of data as the code cannot modify it because tuples are immutable.
+
+## Understanding the Immutable Nature of Tuples
 
 Just like lists, the `+=` operation works for a tuple and adds new item(s) to it.  
 
@@ -5216,8 +5256,6 @@ Just like lists, the `+=` operation works for a tuple and adds new item(s) to it
 
 But tuples are immutable right?  
 Then how are we able to modify it.
-
-### List
 
 To understand it better, let us revisit what happens when we apply `+=` operator on a list.
 
@@ -5232,8 +5270,6 @@ True
 ```
 
 In case of a list, the modified list `l` still points at the same object.
-
-### Tuple
 
 Now, let us add items to a tuple.
 
@@ -5266,6 +5302,8 @@ Traceback (most recent call last):
 AttributeError: 'tuple' object has no attribute 'extend'
 ```
 
+# Dictionary
+
 ## What is a Dictionary?
 
 Python provides a mapping type collection which contains keys, and values corresponding to those keys. 
@@ -5274,7 +5312,7 @@ This collection is known as a `dictionary` (type `dict`) , where each key is uni
 
 Dictionaries are indexed by keys (any immutable type - numbers, string, tuple) as compared to lists which are indexed by a range of numbers.
 
-## Creating a Dictionary
+## How to Create a Dictionary
 
 An empty dictionary can be created using a pair of braces - `{}` or using the built-in function `dict()` which is also a constructor.
 
@@ -5357,7 +5395,7 @@ The zipped iterator can be passed as an argument to the `dict()` to create a new
 {'yr': 0, 'name': 0, 18: 0}
 ```
 
-## Accessing Dictionary Items
+## Accessing Items (Key:Value) of a Dictionary
 
 ### Index Operator []
 
@@ -5389,7 +5427,7 @@ True
 
 This is an elegant method of fetching a value from a dictionary and it should be used in real life software codes as it never raises a `KeyError`.
 
-## Updating/Adding Items
+## Updating a Dictionary
 
 ### Index Operator []
 
@@ -5414,7 +5452,7 @@ In case key `x` already exists, assignment updates or overwrites the value corre
 
 This method accepts the following:
 
-#### 1. Dictionary
+**1. Dictionary**
 
 ``` python
 >>> d = {"yr": 20, 18: True}
@@ -5427,7 +5465,7 @@ This method accepts the following:
 {'yr': 15, 18: False, 'name': 'Ed'}
 ```
 
-#### 2. Sequence of (key, value) pairs
+**2. Sequence of (key, value) pairs**
 
 ``` python
 >>> d = {"yr": 20, 18: True}
@@ -5437,7 +5475,7 @@ This method accepts the following:
 {'yr': 15, 18: True, 'name': 'Ed'}
 ```
 
-#### 3. Keyworded arguments
+**3. Keyworded arguments**
 
 ``` python
 >>> d = {"yr": 20, 18: True}
@@ -5467,7 +5505,7 @@ If no default value is provided, the value is set as `None`.
 {'yr': 20, 18: True, 'name': 'Ed'}
 ```
 
-## Removing an Item
+## Removing an Item (Key:Value) from a Dictionary
 
 ### del
 
@@ -5670,7 +5708,7 @@ name : Ed
 18 : True
 ```
 
-## Dictionary Methods & Functions
+## Built-in Functions for a Dictionary
 
 ### Number of Items
 
@@ -5704,7 +5742,7 @@ In case of string keys, they return the first and last occurring strings alphabe
 3
 ```
 
-### Copy
+## Creating a Copy of a Dictionary
 
 A new copy of a dictionary can be made using `copy()` method:
 
@@ -5820,6 +5858,8 @@ Anil Raj - 12000
 Dinesh Kumar - 15000
 Sam Singh - 10000
 ```
+
+# Python Standard Library
 
 ## Built-in Functions
 
@@ -6085,7 +6125,7 @@ Converts the integer Unicode code point into the corresponding Unicode string.
 'β'
 ```
 
-## Built-in Modules
+## What are Built-in Modules?
 
 Apart from built-in functions, the **Python Standard Library** also contains a wide range of built-in modules which are a group of functions organized based on functionality. 
 
@@ -6095,7 +6135,7 @@ Some of the commonly used modules are mentioned below:
 - `random` - Generate pseudo-random numbers
 - `statistics` - Statistical functions
 
-### Accessing Modules
+**Accessing Modules**
 
 A module can be accessed in a program using the `import` statement.
 
@@ -6119,7 +6159,7 @@ Instead of loading all the functions in a module, the `from` statement can be us
 9.0
 ```
 
-## math
+## math Module
 
 `math` module provides mathematical functions and constants as defined by the C standard.
 
@@ -6245,7 +6285,7 @@ where `0! = 1`
 120
 ```
 
-## random
+## random Module
 
 `random` module provides access to functions which can generate random numbers.
 
@@ -6285,7 +6325,7 @@ where `0! = 1`
 12
 ```
 
-## statistics
+## statistics Module
 
 `statistics` module provides functions that are useful for calculating mathematical statistics of numeric (Real-valued) data.
 
@@ -6325,7 +6365,9 @@ If there are multiple modes with the same count, the first occurrence in the seq
 'a'
 ```
 
-## Need for File Handling
+# File Handling
+
+## File Handling in Python - Introduction & Overview
 
 So far we have written programs which accept input from the user via keyboard and display the generated output on the standard output (console).
 
@@ -6339,11 +6381,11 @@ Just like words can be written on a piece of paper, information can be stored on
 
 Python comes with the in-built ability to interact with files. Through file handling, Python programs can read a file to provide input data and output the results into a file for later use.
 
-## File Types
+## Text Files vs Binary Files - Use Case, File Formats, Examples
 
 Primarily, there are two types of files:
 
-### Text File
+**Text File**
 
 A text file is the simplest way to store information in a human readable text format (sequence of ASCII or Unicode characters), which includes numeric values. 
 
@@ -6358,7 +6400,7 @@ Although text files do not have any structure, there are international standards
 - `.xml` and `.json` are popular web data exchange formats.
 - `.html` files are text files with contents written in the Hypertext Markup Language designed to display contents in a web browser.
 
-### Binary File
+**Binary File**
 
 Although the contents of a text file is human readable, in reality this information is stored on the disk in form of machine readable bytes (1s and 0s) one character at a time. This makes the format simple to be operated by any application, but it is less efficient and consumes more memory (greater file size).
 
@@ -6383,7 +6425,7 @@ A text or binary file can be opened using the built-in `open(file_name, mode='r'
 
 The parameters of the function are explained below:
 
-#### file_name
+**`file_name`**
 
 `file_name` is a required string parameter specifying the path of the file to be opened.
 
@@ -6393,27 +6435,29 @@ It can either be an absolute path or a relative path as shown below:
 - `'../fname.txt'` is the relative path of a text file outside the current directory where the python script is being executed.
 - `'/Users/edpunk/Documents/fname.txt'` is the absolute path of a text file which can be opened by the python script from any location as long as it is in the same system.
 
-#### mode
+**`mode`**
 
 `mode` is an optional string parameter which specifies the mode in which the file has to be opened. It defaults to `'r'` which means open for reading in text mode.
 
 The available modes are:
 
-- `'r'` : Opens the file for reading (default).
-- `'t'` : Opens the file in text mode (default).
-- `'w'` : Opens the file for writing, truncating (emptying) the file if it already exists.
-- `'x'` : Same as `'w'`, but it fails if the file already exists.
-- `'a'` : Opens the file for writing, where any new data is added at the end. It creates a new file if the file does not exists.
-- `'b'` : Opens the file in binary mode.
-- `'rb'` : Opens the file in binary and read-only mode.
-- `'wb'` : Opens the file for writing in binary mode, truncating (emptying) the file if it already exists.
-- `'+'` : Allows both read and write operations on a file.
-- `'r+'` : Opens the file in read and write mode. It throws an error in case the file does not exists. If the file already exists, new data is overwritten on top of the existing data if the position of stream is not moved to the end of the file.
-- `'r+b'` : Opens the file in binary read and write mode. It does not truncate the file if it already exists.
-- `'w+'` : Opens the file in read and write mode. It creates a new file or truncates the contents of the file if it already exists.
-- `'w+b'` : Opens the file in binary read and write mode. It creates a new file or truncates the contents of the file if it already exists.
-- `'a+'` : Opens the file in read and append mode. It creates a new file if it does not exist. If the file already exists, new data is automatically added at the end of the file after existing data.
-- `'a+b'` : Opens the file in binary read and append mode.
+| `mode` | purpose |
+| -- | -- | 
+| `'r'` | Opens the file for reading (default). |
+| `'t'` | Opens the file in text mode (default). |
+| `'w'` | Opens the file for writing, truncating (emptying) the file if it already exists. |
+| `'x'` | Same as `'w'`, but it fails if the file already exists. |
+| `'a'` | Opens the file for writing, where any new data is added at the end. It creates a new file if the file does not exists. |
+| `'b'` | Opens the file in binary mode. |
+| `'rb'` | Opens the file in binary and read-only mode. |
+| `'wb'` | Opens the file for writing in binary mode, truncating (emptying) the file if it already exists. |
+| `'+'` | Allows both read and write operations on a file. |
+| `'r+'` | Opens the file in read and write mode. It throws an error in case the file does not exists. If the file already exists, new data is overwritten on top of the existing data if the position of stream is not moved to the end of the file. |
+| `'r+b'` | Opens the file in binary read and write mode. It does not truncate the file if it already exists. |
+| `'w+'` | Opens the file in read and write mode. It creates a new file or truncates the contents of the file if it already exists. |
+| `'w+b'` | Opens the file in binary read and write mode. It creates a new file or truncates the contents of the file if it already exists. |
+| `'a+'` | Opens the file in read and append mode. It creates a new file if it does not exist. If the file already exists, new data is automatically added at the end of the file after existing data. |
+| `'a+b'` | Opens the file in binary read and append mode. |
 
 After opening a file and performing some file operations, it can be safely closed using the `close()` method.
 
@@ -6428,7 +6472,7 @@ f.close()
 
 Opening a file using the `open()` function creates and returns a file object on which the following activities can be performed:
 
-### 1. Sequential Reading
+### Sequential Reading
 
 The following three methods can be used on a file object to sequentially read the contents of a file:
 
@@ -6568,7 +6612,7 @@ Thank You
 ['Hello World\n', 'Thank You']
 ```
 
-### 2. Random Access
+### Ad-hoc Reading
 
 The following two methods can be used on a file object to randomly access contents of a file:
 
@@ -6627,7 +6671,7 @@ Let us consider the same file `info.txt` for the below example:
 'Thank You'
 ```
 
-## File Writing
+## Writing a File
 
 The following modes support file writing:
 
@@ -6681,7 +6725,7 @@ Thank You
 
 Note the empty line at the end which is added due to the `\n` at the end of the last string.
 
-## Pickle
+## Reading & Writing Binary Files using `pickle` Module
 
 In Python, the protocols to read and write binary files (`.dat` or `.pickle` file extension) have been implemented in the built-in `pickle` module.
 
@@ -6826,7 +6870,7 @@ File contents after appending:
 End of file reached
 ```
 
-## CSV
+## Reading & Writing a CSV File using `csv` Module
 
 Comma-separated value (CSV) file format is one of the most common data serialization and exchange format where each row is a set of values separated by a delimiter.
 
@@ -7009,6 +7053,8 @@ Akash;Science;92.0
 Ira;Science;99.0
 ```
 
+# User Defined Functions, Modules & Packages
+
 ## User Defined Functions
 
 The built-in functions and modules of the Python Standard Library add tremendous value by performing generic operations and can be utilised by developers for any task. 
@@ -7132,7 +7178,7 @@ The values of `sm1` and `sm2` after executing the script are:
 30
 ```
 
-## Variable Scope
+## Scope of Variables
 
 In Python, every variable has a well defined scope, i.e., it is accessible by a part of the program and it cannot be accessed from outside its scope. 
 
@@ -7261,7 +7307,7 @@ tres()
 15
 ```
 
-## Passing Mutable Objects
+## Passing Objects of Mutable Type to a Function
 
 When mutable objects (`list`, `dict`) are provided as an argument to a function, any modification made to the corresponding parameters in the body of the function leads to the modification of the original object. 
 
@@ -7313,7 +7359,7 @@ print(d)
 {'a': 2, 'b': 4, 'c': 6}
 ```
 
-## Creating a Module
+## What is a Module? How to Create a Module?
 
 Once a function is defined in the Python interpreter, it can be called any number of times. But, these function definitions are lost upon exiting the interpreter. 
 
@@ -7431,7 +7477,7 @@ st = tripler(20)
 
 The above method of using `*` to import the contents of a module is not recommended as it can clutter the namespace and cause issues if there are conflicts between the identifiers defined by the programmer and those defined in the module/package.
 
-## Executable Scripts/Modules
+## Executable Scripts / Modules
 
 Apart from containing definitions, a module can also contain block of code which is executed whenever the stand-alone script is run in script mode. The block has to be enclosed in an `if` statement as shown below:
 
@@ -7483,7 +7529,7 @@ Now, the block will execute only if the script is executed directly and not when
 20
 ```
 
-## Creating a Package
+## What is a Package? Introduction to PyPi. How to Create a Python Package?
 
 A collection of modules which can work together to provide a common functionality is known as a **package**. 
 
