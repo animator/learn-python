@@ -1,5 +1,7 @@
-Learn Python by [EdPunk](https://edpunk.com)
+Learn Python
 =================
+by **Ankit Mahato**  
+*Version 2022.10*
 
 # Introduction
 
