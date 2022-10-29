@@ -1,7 +1,23 @@
-Learn Python
+![Learn Python 3 Logo](images/learn-python.png)
+
+Learn Python 3
 =================
 by **Ankit Mahato**  
 *Version 2022.10*
+
+# How to read this book?
+
+This book can be consumed in 3 ways:
+
+## A nice web interface
+[Link]()
+
+## A Downloadable PDF
+[Link]()
+
+## Directly on GitHub
+[Link]()
+
 
 # Introduction
 
