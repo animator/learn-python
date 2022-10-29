@@ -2,3 +2,4 @@
 .DS_Store
 bump.ipynb
 gh-md-toc.sh
+build/
