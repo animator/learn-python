@@ -3,3 +3,7 @@
 bump.ipynb
 gh-md-toc.sh
 build/
+images/book/
+test*
+*.tex
+package.json
