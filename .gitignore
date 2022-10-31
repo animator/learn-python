@@ -7,3 +7,7 @@ images/book/
 test*
 *.tex
 package.json
+book.pdf
+cover.pdf
+README-pdf.md
+style.theme
