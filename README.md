@@ -2,7 +2,7 @@
 
 Learn Python 3
 =================
-by **Ankit Mahato**  
+by **Ankit Mahato** [[About](https://animator.github.io)]  
 *Version 2022.10*
 
 # How to read this book?
