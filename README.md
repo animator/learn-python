@@ -13,7 +13,7 @@ This book can be consumed in 3 ways:
 
 - A nice web interface - [Link](https://animator.github.io/learn-python/)
 ![Learn Python 3 Website](images/web.png)
-- A Downloadable PDF - [Link](https://github.com/animator/learn-python/blob/main/pdf/learn-python-v2022.10.pdf)
+- A Downloadable PDF - [Link](https://github.com/animator/learn-python/raw/main/pdf/learn-python-v2022.10.pdf)
 ![Learn Python 3 PDF](images/pdf.png)
 - Directly on GitHub - [Link](https://github.com/animator/learn-python)
 
