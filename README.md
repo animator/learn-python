@@ -211,7 +211,7 @@ A **software** is a collection of programs where each program provides a sequenc
 
 These instructions have to be provided in **machine language** or **low level language** (0s and 1s) that is difficult to read or write for a human being. 
 
-This led to the invention of **high-level programming languages** in which programs can be easily written and managed. The human-readable programs written using high-level languages are converted into computer-readable machine code or bytecode using **compilers** or **interpreters**.
+This led to the invention of **high-level programming languages** in which programs can be easily written and managed. The human-readable programs written using high-level languages are converted into computer-readable machine code or byte-code using **compilers** or **interpreters**.
 
 There are many high-level programming languages that are currently in wide use. 
 
@@ -287,7 +287,7 @@ Python programmers also have at their disposal the vast ecosystem of more than 2
 
 **6. Web Application Development**
 
-Some of the most popular web development frameworks (django, flask, etc.) are written in Python. This coupled with the availablity of packages to connect to any database makes Python a great choice for web application development.
+Some of the most popular web development frameworks (django, flask, etc.) are written in Python. This coupled with the availability of packages to connect to any database makes Python a great choice for web application development.
 
 ## Installing Python in Windows
 
@@ -2300,7 +2300,7 @@ Evaluate the expression
 
 **Solution**
 
-Parantesized expression `(...)` has the highest precedence so `+` is evaluated first  
+Parenthesized expression `(...)` has the highest precedence so `+` is evaluated first  
 `15 - (2 + 4)`  
 = `15 - 6`  
 = `9`
@@ -2725,7 +2725,7 @@ Exception handling is the process of properly handling an exception which can po
 
 When an error occurs, the program throws an exception. 
 
-The runtime system attempts to find an **exception handler**, a block of code that can handle a particular type of error. Once located, the suitable exception handler **catches the exeception** and executes the code block which can attempt to recover from the error. In case the error is unrecoverable, the handler provides a way to gently exit the program.
+The runtime system attempts to find an **exception handler**, a block of code that can handle a particular type of error. Once located, the suitable exception handler **catches the exception** and executes the code block which can attempt to recover from the error. In case the error is unrecoverable, the handler provides a way to gently exit the program.
 
 The `try` statement in Python specifies the exception handlers and/or cleanup code for a code block. 
 
@@ -2734,7 +2734,7 @@ The various parts of a try statement are:
 - `try` block: The block of statements within which an exception might be thrown.
 - `except` clause(s): One or more exception handlers. Each `except` clause handles a particular type of exception. In case an exception of a particular type occurs in the `try` block, the corresponding `except` clause code block is executed.
 - `else` clause: An optional `else` clause can also be included after the last `except` block. In case no exception is raised, none of the `except` blocks are executed. In this case, the `else` code block is executed.
-- `finally` clause: An optional `finally` clause can be added at the end of the try statement which includes a block of statements that are executed regardless of whether or not any error occured inside the try block. This block is usually setup for code cleanup and closing all open file objects.
+- `finally` clause: An optional `finally` clause can be added at the end of the try statement which includes a block of statements that are executed regardless of whether or not any error occurred inside the try block. This block is usually setup for code cleanup and closing all open file objects.
 
 Here's the general form of these statements:
 
@@ -3997,7 +3997,7 @@ It has to be noted that the method counts non-overlapping occurrences, so it doe
 2
 ```
 
-In the above example, `ala` is counted twice as the first occurence is in `valh"ala"` and the next occurance is in `"ala"la`. Although `ala` can be located again in `al"ala"`, it overlaps with the occurance `"ala"la`, hence it is not counted.  
+In the above example, `ala` is counted twice as the first occurrence is in `valh"ala"` and the next occurrence is in `"ala"la`. Although `ala` can be located again in `al"ala"`, it overlaps with the occurrence `"ala"la`, hence it is not counted.  
 
 ### find()
 
@@ -4639,7 +4639,7 @@ If you do not wish to modify the existing list and create a new list with items 
 
 Python lists have a built-in `sort()` method which sorts the items in-place using `<` comparisons between items. 
 
-The method also accepts 2 keyworded arguments:  
+The method also accepts 2 key-worded arguments:  
 - `key` is used to specify a function which is called on each list element prior to making the comparisons. 
 - `reverse` is a boolean which specifies whether the list is to be sorted in descending order.
 
@@ -5481,7 +5481,7 @@ In case of a tuple, the modified tuple is actually a completely new tuple with c
 
 The original tuple is not modified as it is immutable. But, as `t` is no longer pointing to the original tuple, it is freed from memory.
 
-Thus, it is recommended that instead of `+=`, `append()` and `extend()` methods should be employed to add new items programatically as it will raise an error in case the code is trying to modify a tuple.
+Thus, it is recommended that instead of `+=`, `append()` and `extend()` methods should be employed to add new items programmatically as it will raise an error in case the code is trying to modify a tuple.
 
 ``` python
 >>> l = ["Hi", "Ed", "Punk"]
@@ -5669,7 +5669,7 @@ This method accepts the following:
 {'yr': 15, 18: True, 'name': 'Ed'}
 ```
 
-**3. Keyworded arguments**
+**3. Key-worded arguments**
 
 ``` python
 >>> d = {"yr": 20, 18: True}
@@ -7557,9 +7557,9 @@ print(d)
 
 Once a function is defined in the Python interpreter, it can be called any number of times. But, these function definitions are lost upon exiting the interpreter. 
 
-To solve this problem we can create a python script with the function definitions at the beginning of teh file, followed by the rest of the code which includes statements invoking the defined functions.
+To solve this problem we can create a python script with the function definitions at the beginning of the file, followed by the rest of the code which includes statements invoking the defined functions.
 
-But, this process is tedious and not managable as what makes user-defined functions powerful is that the programmer can - **Write once, and use many times**.
+But, this process is tedious and not manageable as what makes user-defined functions powerful is that the programmer can - **Write once, and use many times**.
 
 Instead of repeating the function definition again and again for each new program, one can put all the function definitions in a file from which the required function can be imported and invoked either in script mode or interactive mode. 
 
@@ -7746,6 +7746,6 @@ restaurant/
 
 A package is simply the directory containing sub-packages and modules, but when this package or a collection of packages are made available for others to use (eg. via PyPI) it is known as a **library**. 
 
-For example, `restaurant` can be called a library if it provides reusable codes to manage a restaurant and is built using multiple packages which handle the various aspects of a restaurant like human resource management, inventory management, order fulfilment and billing, etc.
+For example, `restaurant` can be called a library if it provides reusable codes to manage a restaurant and is built using multiple packages which handle the various aspects of a restaurant like human resource management, inventory management, order fulfillment and billing, etc.
 
 One should note that the above definition is not strict and often the terms package and library are used interchangeably.
