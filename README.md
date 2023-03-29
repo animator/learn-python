@@ -6375,11 +6375,12 @@ Converts the integer Unicode code point into the corresponding Unicode string.
 
 Apart from built-in functions, the **Python Standard Library** also contains a wide range of built-in modules which are a group of functions organized based on functionality. 
 
-Some of the commonly used modules are mentioned below:
+Some commonly used modules are:
 
 - `math` - Mathematical functions
 - `random` - Generate pseudo-random numbers
 - `statistics` - Statistical functions
+- `copy` - Create shallow and deep copy of objects
 
 **Accessing Modules**
 
@@ -6610,6 +6611,67 @@ If there are multiple modes with the same count, the first occurrence in the seq
 >>> mode(["a", "b", "a", "c"])
 'a'
 ```
+
+## copy Module
+
+### Limitation of Shallow Copy
+
+`copy()` method does not recurse to create copies of the child objects, so if the child objects are mutable (example nested list) any modification in the child object will get reflected in the both the parent objects.
+
+``` python
+>>> old_list = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+
+# Copying old list into a new list
+>>> new_list = old_list.copy()
+
+# Checking if both lists are pointing to the same object
+>>> id(new_list)==id(old_list)
+False
+
+# Checking if items of both lists are pointing to the same objects
+>>> [id(new_list[idx])==id(old_list[idx]) for idx in range(len(old_list))]
+[True, True, True]
+
+# Modify new list
+>>> new_list[1][1] = 0
+>>> new_list
+[[1, 2, 3], [4, 0, 6], [7, 8, 9]]
+>>> old_list
+[[1, 2, 3], [4, 0, 6], [7, 8, 9]]
+```
+
+As we can see in the output, `new_list[1][1]` was modified which is reflected in both `new_list` and `old_list`.
+
+The `copy` module provides the `deepcopy()` function which is helpful in mitigating this issue.
+
+### Deep Copy - deepcopy(x[, memo])
+
+Deep copy overcomes the shortcomings of `copy()` and recursively creates copies of the child objects found in the original list. This leads to the creation of an independent copy of the original.
+
+``` python
+>>> import copy
+>>> old_list = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+
+# Copying old list into a new list
+>>> new_list = copy.deepcopy(old_list)
+
+# Checking if both lists are pointing to the same object
+>>> id(new_list)==id(old_list)
+False
+
+# Checking if items of both lists are pointing to the same objects
+>>> [id(new_list[idx])==id(old_list[idx]) for idx in range(len(old_list))]
+[False, False, False]
+
+# Modify new list
+>>> new_list[1][1] = 0
+>>> new_list
+[[1, 2, 3], [4, 0, 6], [7, 8, 9]]
+>>> old_list
+[[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+```
+
+Note the change in the `id()` equality of the children for `[True, True, True]` to `[False, False, False]`. As we can see in the output, `new_list[1][1]` was modified which gets reflected only in the `new_list`.
 
 # File Handling
 
