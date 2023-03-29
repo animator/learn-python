@@ -658,7 +658,7 @@ The backslash (`\`) character can be used in a string literal to escape characte
 | `\"` | Double quote (`"`) |
 | `\a` | ASCII Bell (BEL) |
 | `\b` | ASCII Backspace (BS) |
-| `\f` | ASCII Formfeed (FF) |
+| `\f` | ASCII Form-feed (FF) |
 | `\n` | ASCII Linefeed (LF) |
 | `\r` | ASCII Carriage Return (CR) |
 | `\t` | ASCII Horizontal Tab (TAB) |
@@ -3539,7 +3539,7 @@ The backslash (`\`) character can be used in a string to escape characters that 
 | `\"` | Double quote (`"`) |
 | `\a` | ASCII Bell (BEL) |
 | `\b` | ASCII Backspace (BS) |
-| `\f` | ASCII Formfeed (FF) |
+| `\f` | ASCII Form-feed (FF) |
 | `\n` | ASCII Linefeed (LF) |
 | `\r` | ASCII Carriage Return (CR) |
 | `\t` | ASCII Horizontal Tab (TAB) |
@@ -6181,7 +6181,7 @@ Python has built-in functions to handle various aspects of datatypes such as che
 
 `type()` and `isinstance()` builtin functions are used for checking the data type of objects.  
 
-Check out the **Type Checking** section in the chapter **Variable, Objects & Data Types** to learn more about it in detail.
+Check out [Type Checking](#type-checking) section in the chapter [Variable, Objects & Data Types](#variables-objects--data-types) to learn more about it in detail.
 
 ### Built-in Type Functions
 
@@ -6202,7 +6202,7 @@ The following functions are often used to assign a default value or create an em
 | `frozenset()` | `frozenset()` |
 | `dict()` | `{}` |
 
-The **Type Casting** section of the chapter **Variable, Objects & Data Types** covers these functions in detail in case any argument is passed.
+The [Type Casting](#type-casting) section of the chapter [Variable, Objects & Data Types](#variables-objects--data-types) covers these functions in detail in case any argument is passed.
 
 ## I/O Functions
 
