@@ -5811,6 +5811,38 @@ In case of common keys between the two operands (dictionaries), the values of th
 
 In the above example, both `d` and `n` shared a common key `yr`. The value corresponding to `yr` in `n` gets priority.
 
+The `|=` (union) augmented assignment operator can be used to update the dictionary with keys and values from another dictionary or an iterable of (key, value) pairs.
+
+``` python
+>>> d = {"book": "Python", "year": 1990}
+>>> dnew = {"author": "Guido"}
+>>> d |= dnew
+>>> d
+{'book': 'Python', 'year': 1990, 'author': 'Guido'}
+```
+
+If both the dictionaries share a common key, then the value corresponding to the key in the right operand is the updated value.
+
+``` python
+>>> d = {"book": "Python", "year": 1990}
+>>> dnew = {"author": "Guido", "year": 2000}
+>>> d |= dnew
+>>> d
+{'book': 'Python', 'year': 2000, 'author': 'Guido'}
+```
+
+In the above example, both `d` and `dnew` shared a common key `year`. The value (`1990`) corresponding to `year` in `d` is updated with the new value.
+
+The `|=` operator also works in case the right operand is an iterable instead of a dictionary as shown in the example below.
+
+``` python
+>>> d = {"book": "Python", "year": 1990}
+>>> inew = [("author", "Guido"), ("year", 2000)]
+>>> d |= inew
+>>> d
+{'book': 'Python', 'year': 2000, 'author': 'Guido'}
+```
+
 ## Traversing a Dictionary
 
 Compared to position based indexing of `list` or `tuple`, dictionaries are indexed based on the key.
