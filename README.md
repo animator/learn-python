@@ -5968,6 +5968,26 @@ In case of string keys, they return the first and last occurring strings alphabe
 3
 ```
 
+### list() 
+
+To get the list of all keys in a dictionary, use the `list()` built-in function.
+
+``` python
+>>> d = {"book": "Python", "year": 1990, "author": "Guido"}
+>>> list(d)
+['book', 'year', 'author']
+```
+
+### sorted()
+
+To get a sorted list of keys, you can use the `sorted()` built-in function.
+
+``` python
+>>> d = {"book": "Python", "year": 1990, "author": "Guido"}
+>>> sorted(d)
+['author', 'book', 'year']
+```
+
 ## Creating a Copy of a Dictionary
 
 A new copy of a dictionary can be made using `copy()` method:
