@@ -5,7 +5,8 @@ We value your participation in this open source project. This page will give you
 ## Important Note
 
 - Do not raise issues or send PRs for changing issue template, adding header-footer, badges or any buttons.  
-- Do not raise issues or send PRs for for any website changes. 
+- Do not raise issues or send PRs for for any website changes.  
+- Do not choose an entire topic or a whole bunch of sections. Just choose a single small section for which you will be contributing when you raise a new issue.
 
 ## How can I contribute?
 
@@ -31,6 +32,7 @@ You can check out some content ideas below.
 ## Process
 
 **Step 1**: Raise a **new issue** that you want to "Add <Your content title> content". We will assign the issue to you and label it.  
+**Do not choose an entire topic or a whole bunch of sections. Just choose a single small section for which you will be contributing when you raise a new issue.**  
 **Step 2**: Star and fork THIS repository.  
 **Step 3**: Now in your fork, go the correct topic folder as provided in the links above.  
 **Step 4**: Edit `index.md` file to add the title of the content and the corresponding file name where the content will be available in this folder.  
