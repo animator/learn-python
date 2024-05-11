@@ -38,7 +38,7 @@ You can check out some content ideas below.
 **Step 6**: Raise a PR with your changes. Accept the pledge that the content is original and not stolen from any other source.  
 **Step 7**: Wait for review and PR merge.
 
-### Some Content Ideas
+## Some Content Ideas
 
 - **NumPy**: Introduction, Arrays, Indexing and Slicing, Operations on Arrays, Concatenating Arrays, Reshaping Arrays, Splitting Arrays, Statistical Operations on Arrays, Loading Arrays from Files, Saving NumPy Arrays in Files, etc.  
 - **Pandas**: Introduction, Importing and Exporting Data, DataFrames, Pandas Series Vs NumPy ndarray, Descriptive Statistics, Data Aggregations, Sorting a DataFrame, Group by Functions, Altering the Index, Other DataFrame Operations, Handling Missing Values, Import and Export of Data between Pandas and MySQL, Pandas plotting, etc.  
@@ -47,6 +47,6 @@ You can check out some content ideas below.
 - **API Development**: Building APIs using FastAPI, CRUD API Development, etc.  
 - **Advanced Python**: OOP In Python, Generators, List Comprehensions, Lambda functions, In-depth Function Arguments, Regular Expressions, Exception Handling, Partial functions, Code Introspection, Closures, Decorators, Map, Filter, Reduce, etc.  
 
-### Any doubt?
+## Any doubt?
 
 In case you are new to the open source ecosystem, we would be more than happy to guide you through the entire process. Just join our [Discord server](https://bit.ly/heyfoss) and drop a message in relevant channel.
