@@ -1,3 +1,3 @@
 # List of sections
 
-- [Section title](filename.md)
+- [Hangman game](Hangma.md)
