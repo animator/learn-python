@@ -1,3 +1,1 @@
-# List of sections
-
-- [Section title](filename.md)
+# Pandas (Python's Powerful Data Analysis Library)
