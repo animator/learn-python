@@ -90,4 +90,57 @@ The number of elements in kwargs = 5
 A dictionary with keys and values is obtained.
 
 ## Decorators (@decorators)
-Now that we understand what first class object, *args, **kwargs is, we can move to decorators.
+Now that we understand what first class object, *args, **kwargs is, we can move to decorators. Decorators are used to perform a task that needs to be performed for existing functions. If some task has to be performed for each function, we can write a function which will perform the task without us having to make changes in each function. 
+
+**Sample Code:**
+```
+import time
+def multiplication(a,b):
+  start=time.time()
+  c=a*b
+  total=time.time()-start
+  print("Time taken for execution of multiplication",total)
+  return c
+
+def addition(a,b):
+  start=time.time()
+  c=a+b
+  total=time.time()-start
+  print("Time taken for execution of addition ",total)
+  return c
+
+multiplication(4,5)
+addition(4,5)
+```
+
+In the above code, we had to calculate time and print the execution time seperately for each function leading to repeatation of code. This is where decorators come in handy.
+The same functionality can be achieved with the help of a decorator.
+
+**Here's how:**
+```
+import time
+def time_find(function):
+    def wrapper(*args, **kwargs):
+        starttime=time.time()
+        function(*args, **kwargs)
+        total=time.time()-starttime
+        print(f"Time Taken by {function.__name__} to run is ",total)
+    return wrapper
+
+@time_find #to use a decorator, simply use @<decorator name> above a function.
+def multiply(a, b):
+    print(a*b)
+
+@time_find 
+def addition(a,b):
+    print(a+b)
+    
+multiply(4,5)
+addition(4,5)
+```
+
+The above method eleminates redundant code and makes the code cleaner. You may have observed that we have used *args and **kwargs in the wrapper function. This is so that this decorator function is flexible for all types of functions and their parameters and this way it can find out the execution time of any function with as many parameters as needed, we just need to use our decorator @time_find. 
+
+
+
+
