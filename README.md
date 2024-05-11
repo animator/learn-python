@@ -1,11 +1,11 @@
+[![Discord Server Invite](https://img.shields.io/badge/DISCORD-JOIN%20SERVER-green?style=for-the-badge&logo=discord&logoColor=white)](https://bit.ly/heyfoss)
+
 ![Learn Python 3 Logo](images/learn-python.png)
 
 Learn Python 3
 =================
 by **Ankit Mahato** [[About](https://animator.github.io)]  
 *Version 2022.10*
-
-[![Discord Server Invite](https://img.shields.io/badge/DISCORD-JOIN%20SERVER-brightgreen?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/2s49SCNfyJ)
 
 # How to read this book?
 
