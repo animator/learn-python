@@ -32,9 +32,9 @@ You can check out some content ideas below.
 
 **Step 1**: Raise a **new issue** that you want to "Add <Your content title> content". We will assign the issue to you and label it.  
 **Step 2**: Star and fork THIS repository.  
-**Step 3**: Now in your fork, go the correct topic folder as provided in the links above. 
-**Step 4**: Edit `index.md` file to add the title of the content and the corresponding file name where the content will be available in this folder.
-**Step 5**: Add the content in the file.
+**Step 3**: Now in your fork, go the correct topic folder as provided in the links above.  
+**Step 4**: Edit `index.md` file to add the title of the content and the corresponding file name where the content will be available in this folder.  
+**Step 5**: Add the content in the file.  
 **Step 6**: Raise a PR with your changes. Accept the pledge that the content is original and not stolen from any other source.  
 **Step 7**: Wait for review and PR merge.
 
