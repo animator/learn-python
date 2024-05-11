@@ -45,6 +45,7 @@ You can check out some content ideas below.
 - **Plotting & Visualization**: Matplotlib, Seaborn, Customisation of Plots (Marker, colour, Line width and Line Style), Line chart, Bar Chart, Histogram, Scatter Chart, Plotting Quartiles and Box plot, Pie Chart, etc.  
 - **Data Science & Machine Learning**: Scikit-learn, TensorFlow, PyTorch, regression, classification, clustering, ensemble model, deep learning, etc.  
 - **API Development**: Building APIs using FastAPI, CRUD API Development, etc.  
+- **Web Scrapping**: beautifulsoup, requests, etc.  
 - **Advanced Python**: OOP In Python, Generators, List Comprehensions, Lambda functions, In-depth Function Arguments, Regular Expressions, Exception Handling, Partial functions, Code Introspection, Closures, Decorators, Map, Filter, Reduce, etc.  
 
 ## Any doubt?
