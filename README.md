@@ -202,7 +202,7 @@ Table of Contents
 
 ## Introduction to Programming Languages
 
-In today's digital era, we depend on computers, smartphones and the internet to perform a plethora of tasks, like:
+In today's digital era, we depend on computers, smartphones, and the internet to perform a plethora of tasks, like:
 
 - A mathematical task, such as finding the square root of a number or solving a set of simultaneous equations.
 - A text-based task such as reading a document and performing search/replace.
@@ -215,17 +215,17 @@ Softwares play an important role as they translate human activity into correspon
 
 A **software** is a collection of programs where each program provides a sequence of instructions specifying how the computer should act. 
 
-These instructions have to be provided in **machine language** or **low level language** (0s and 1s) that is difficult to read or write for a human being. 
+These instructions have to be provided in **machine language** or **low-level language** (0s and 1s) that is difficult to read or write for a human being. 
 
-This led to the invention of **high-level programming languages** in which programs can be easily written and managed. The human-readable programs written using high-level languages are converted into computer-readable machine code or byte-code using **compilers** or **interpreters**.
+This led to the invention of **high-level programming languages** in which programs can be easily written and managed. The human-readable programs written using high-level languages are converted into computer-readable machine code or byte code using **compilers** or **interpreters**.
 
 There are many high-level programming languages that are currently in wide use. 
 
-Some of the popular languages are Java, C, C++, C#, Go, Swift, JavaScript, PHP, Dart, Kotlin and Python.
+Some of the popular languages are Java, C, C++, C#, Go, Swift, JavaScript, PHP, Dart, Kotlin, and Python.
 
 ## Introduction to Python
 
-Guido van Rossum started the development of Python in December 1989. He released the first version (0.9.9) of Python for general public on February 20, 1991. 
+Guido van Rossum started the development of Python in December 1989. He released the first version (0.9.9) of Python for the general public on February 20, 1991. 
 
 The language evolved over the next few decades and so did its definition, the current version of which is stated below:  
 
@@ -235,11 +235,11 @@ Let us break down and analyze the above definition to gain a better understandin
 
 **High-level**
 
-Python is a **high-level programming language** which can be used to write a program in natural language (english) making it readable, writable, shareable and manageable. 
+Python is a **high-level programming language** that can be used to write a program in a natural language (English) making it readable, writable, shareable, and manageable. 
 
-While developing a Python program one is not required to handle the various components of computer architecture like registers, memory addresses and call stacks which have to be handled if an assembly language or a low-level language is used for development. 
+While developing a Python program one is not required to handle the various components of computer architecture like registers, memory addresses, and call stacks which have to be handled if an assembly language or a low-level language is used for development. 
 
-Python includes high-level language features like variables, data structures (lists, dictionaries, etc.), objects, expressions, modules, classes, functions, loops, threads, file handling, string handling, error handling and other computer science abstraction concepts.  
+Python includes high-level language features like variables, data structures (lists, dictionaries, etc.), objects, expressions, modules, classes, functions, loops, threads, file handling, string handling, error handling, and other computer science abstraction concepts.  
 
 **Interpreted**
 
@@ -247,7 +247,7 @@ In traditional programming languages like C or C++, codes are compiled into comp
 
 Python is an **interpreted language** where the Python interpreter reads and executes the program line by line. 
 
-The process is more time consuming compared to compiled code execution, but allows faster development as one does not have to go through the entire compilation step during testing and debugging. Also, the code can run on any platform as long as it has a valid Python installation (which includes interpreter) as there is no generation of platform dependent binaries.
+The process is more time consuming compared to compiled code execution but allows faster development as one does not have to go through the entire compilation step during testing and debugging. Also, the code can run on any platform as long as it has a valid Python installation (which includes an interpreter) as there is no generation of platform-dependent binaries.
 
 **Object-oriented**
 
@@ -259,7 +259,7 @@ In Python, everything (`int`, `list`, `dict`, etc.) is an object. We will cover 
 
 **Dynamic Semantics**
 
-As Python is an interpreted language in which the code is executed line-by-line, a python statement or expression is evaluated during run-time. This allows **dynamic typing** (type of a variable can change over its lifetime) and creation of dynamic objects during run-time, which provides more flexibility, usability and fewer lines of code as compared to statically-typed compiled languages like C/C++.
+As Python is an interpreted language in which the code is executed line-by-line, a Python statement or expression is evaluated during run-time. This allows **dynamic typing** (type of a variable can change over its lifetime) and the creation of dynamic objects during run-time, which provides more flexibility, usability, and fewer lines of code as compared to statically-typed compiled languages like C/C++.
 
 ## Advantages of Python
 
@@ -271,33 +271,33 @@ The Python programming language is easy to learn with low technical and conceptu
 
 **2. Clear Syntax & Fewer Lines of Code**
 
-Python's simple and easy to learn syntax increases code readability and leads to fewer lines of code. 
+Python's simple and easy-to-learn syntax increases code readability and leads to fewer lines of code. 
 
-A typical task which requires an average of twenty lines of code in C and seven in Java can often be done with just one line in Python. 
+A typical task that requires an average of twenty lines of code in C and seven in Java can often be done with just one line in Python. 
 
-Also, due to fewer lines of code the chances of making any error is significantly reduced.
+Also, due to fewer lines of code, the chances of making any error is significantly reduced.
 
 **3. Open Source**
 
-Python is an open source programming language, so anyone can view and contribute to its source code.
+Python is an open-source programming language, so anyone can view and contribute to its source code.
 
 **4. Portable & Platform Independent**
 
-The Python programming language is portable & platform independent as it can work on any Linux, MacOS or Windows device.
+The Python programming language is portable & platform independent as it can work on any Linux, MacOS, or Windows device.
 
 **5. Standard Library & Python Packages**
 
 Python has a rich and extensive Standard Library, a collection of predefined functions for various tasks. 
 
-Python programmers also have at their disposal the vast ecosystem of more than 250,000 community contributed libraries in the Python Package Index (PyPI), where one can find a solution to every conceivable task.
+Python programmers also have at their disposal the vast ecosystem of more than 250,000 community-contributed libraries in the Python Package Index (PyPI), where one can find a solution to every conceivable task.
 
 **6. Web Application Development**
 
-Some of the most popular web development frameworks (django, flask, etc.) are written in Python. This coupled with the availability of packages to connect to any database makes Python a great choice for web application development.
+Some of the most popular web development frameworks (Django, Flask, etc.) are written in Python. This coupled with the availability of packages to connect to any database makes Python a great choice for web application development.
 
 ## Installing Python in Windows
 
-Let's start with the Python 3 installation process on Windows operating system.
+Let's start with the Python 3 installation process on the Windows operating system.
 
 **Step 1: Download Installer**
 
@@ -311,13 +311,13 @@ Once the download is complete double-click and run it.
 
 ![Step 2: Install Python 3](images/0201b.png)
 
-Select the checkbox ✅ `Add Python 3.9 to PATH`. This will enable you to install python packages and run python script via command-line.
+Select the checkbox ✅ `Add Python 3.9 to PATH`. This will enable you to install Python packages and run Python scripts via the command-line.
 
 Hit 🛡️ `Install Now` and complete the setup.
 
 **Step 3: Verify Installation**
 
-Once the setup is complete, click on the `Start` menu and open `Python 3.9 -> IDLE (Python 3.9 64 bit)` to launch the Python interpreter.
+Once the setup is complete, click on the `Start` menu and open `Python 3.9 -> IDLE (Python 3.9 64-bit)` to launch the Python interpreter.
 
 ![Step 3: Launch Python Interpreter](images/0201c.png)
 
@@ -327,7 +327,7 @@ Python 3.9 is now successfully installed on your computer.
 
 ## Installing Python in macOS (Apple)
 
-Let's start with the Python 3 installation process on macOS operating system.
+Let's start with the Python 3 installation process on the macOS operating system.
 
 **Step 1: Download Installer**
 
@@ -357,7 +357,7 @@ After installing the latest version of the Python interpreter, we can now write 
 
 There are two ways to execute a Python program:
 
-1. **Interactive Mode**: When the IDLE application is launched, the Python interpreter or the Python shell pops up on the screen. User can interact with the Python interpreter and execute statements (single line or multiline code snippets) directly in this Python shell.
+1. **Interactive Mode**: When the IDLE application is launched, the Python interpreter or the Python shell pops up on the screen. Users can interact with the Python interpreter and execute statements (single-line or multiline code snippets) directly in this Python shell.
 2. **Script Mode**: This is the most commonly used method for executing a Python program. The entire Python program is written and saved in a file (`.py` extension) which can be executed using the IDLE application.
 
 ## Interactive Mode of Execution
@@ -370,7 +370,7 @@ To launch the IDLE application click `[Windows Start Menu Button] -> [Python 3.9
 
 ![Launch IDLE](images/0201c.png)
 
-The Python interpreter or the Python shell will pop-up on the screen.
+The Python interpreter or the Python shell will pop up on the screen.
 
 ![Python Shell](images/0201d.png)
 
@@ -424,9 +424,9 @@ Interactive mode is not just restricted to basic arithmetic or assignments. Let 
 
 The complete functionality of Python is easily accessible to a user via the **Interactive Mode**. 
 
-This makes it convenient for testing and instant execution of small code snippets (single line or few lines of code), a feature not available in compiled languages like C, C++ and Java. 
+This makes it convenient for testing and instant execution of small code snippets (single line or few lines of code), a feature not available in compiled languages like C, C++, and Java. 
 
-But, the statements cannot be saved for future use and have to retyped for re-execution. This disadvantage is overcome by the use of Python in **Script Mode** as described in the next section.
+But, the statements cannot be saved for future use and have to be retyped for re-execution. This disadvantage is overcome by the use of Python in **Script Mode** as described in the next section.
 
 ## Script Mode of Execution
 
@@ -472,13 +472,13 @@ Now, when you run the script you will observe that the value of `a`, that is `4`
 
 When a Python code is executed, the Python interpreter reads each logical line and breaks it into a sequence of lexical units. 
 
-These lexical units are better known as **tokens** - the smallest individual units of a program. They are the building blocks of a Python code and can be classified into one of the following categories:
+These lexical units are better known as **tokens** - the smallest individual units of a program. They are the building blocks of Python code and can be classified into one of the following categories:
 
-- **Keywords** : Reserved words that convey special meaning when processed by the Python interpreter.
-- **Identifiers** : Names defined by the programmer to refer to objects that can represent variables, functions, classes, etc.
-- **Literals** : Values specified in the program which belong to exactly one of the Python's built-in data types.
-- **Delimiters** : Symbols that denote grouping, punctuation, and assignment/binding.
-- **Operators** : Symbols that can operate on data and compute results.
+- **Keywords**: Reserved words that convey special meaning when processed by the Python interpreter.
+- **Identifiers**: Names defined by the programmer to refer to objects that can represent variables, functions, classes, etc.
+- **Literals**: Values specified in the program that belong to exactly one of Python's built-in data types.
+- **Delimiters**: Symbols that denote grouping, punctuation, and assignment/binding.
+- **Operators**: Symbols that can operate on data and compute results.
 
 ## Tokens: Keywords
 
@@ -517,10 +517,10 @@ Some points to keep in mind while naming identifiers:
 
 It is also a good practice (although not compulsory) to follow the following procedure while naming identifiers:
 
-- Identifiers should be named carefully with an emphasis on clarity and readability. For example, in a program that calculates the area of a rectangle, a good choice for identifier names are - `length`, `breadth` and `area`.
-- Class names should start with uppercase character.
+- Identifiers should be named carefully with an emphasis on clarity and readability. For example, in a program that calculates the area of a rectangle, a good choice for identifier names are - `length`, `breadth`, and `area`.
+- Class names should start with an uppercase character.
 - Identifiers starting with an underscore have special meaning in a program.
-- Variable, function and method names should be in lowercase characters, with underscores separating multiple words like `area_of_square`, `area_of_triangle`, etc.
+- Variable, function, and method names should be in lowercase characters, with underscores separating multiple words like `area_of_square`, `area_of_triangle`, etc.
 
 ## Tokens: Literals
 
@@ -577,19 +577,19 @@ Thus, it can be observed that number `27` can be written in the program as `27` 
 
 An optional character `_` (underscore) is also allowed in an integer literal to group digits for enhanced readability. 
 
-One underscore can occur between digits, and after base specifiers like `0o`. 
+One underscore can occur between digits and after base specifiers like `0o`. 
 
 They are ignored while determining the actual numerical value of the literal. 
 
-Some valid underscore usages are - `10_00_00_000`, `0b_1110_0101`, `0x23_123`.
+Some valid underscore usages are - `10_00_00_000`, `0b_1110_0101`, and `0x23_123`.
 
 #### Floating Point Literals
 
-Floating point literals are real numbers present in the source code. They contain fractional component and/or exponential component.
+Floating point literals are real numbers present in the source code. They contain fractional components and/or exponential components.
 
 The fractional component includes the digits after the decimal point (`.`).
 
-Example floating point literals:
+Example floating-point literals:
 
 ```
 3.4
@@ -599,7 +599,7 @@ Example floating point literals:
 3.4e-2
 ```
 
-In the above example, `.4` is equivalent to `0.4` and `8.` is equivalent to `8.0`.
+In the above example, `.4` is equivalent to `0.4`, and `8.` is equivalent to `8.0`.
 
 The exponential component can be identified by the letter `e` or `E` followed by an optional sign (`+` or `-`) and digits (`0-9`). This exponent is equivalent to multiplying the real number with the power of `10`. 
 
@@ -624,8 +624,8 @@ Example imaginary literals:
 
 In Python,
 
-- there is no specialized literal such as a complex literal. A complex number is actually represented in the program using an expression comprising a real number (integer/float numeric literal) and an imaginary number (imaginary literal). For example, `1 + 2j` consists of an integer literal (`1`) and a imaginary literal (`2j`).
-- numeric literals do not include the minus sign (`-`). `-` is actually a unary operator it combines with a numeric literal to represent negative numbers. For example, in `-3.14` the numeric literal is `3.14` and `-` is an operator.
+- there is no specialized literal such as a complex literal. A complex number is actually represented in the program using an expression comprising a real number (integer/float numeric literal) and an imaginary number (imaginary literal). For example, `1 + 2j` consists of an integer literal (`1`) and an imaginary literal (`2j`).
+- numeric literals do not include the minus sign (`-`). `-` is actually a unary operator it combines with a numeric literal to represent negative numbers. For example, in `-3.14` the numeric literal is `3.14`, and `-` is an operator.
 
 ### Boolean Literals
 
@@ -2740,7 +2740,7 @@ The various parts of a try statement are:
 - `try` block: The block of statements within which an exception might be thrown.
 - `except` clause(s): One or more exception handlers. Each `except` clause handles a particular type of exception. In case an exception of a particular type occurs in the `try` block, the corresponding `except` clause code block is executed.
 - `else` clause: An optional `else` clause can also be included after the last `except` block. In case no exception is raised, none of the `except` blocks are executed. In this case, the `else` code block is executed.
-- `finally` clause: An optional `finally` clause can be added at the end of the try statement which includes a block of statements that are executed regardless of whether or not any error occurred inside the try block. This block is usually setup for code cleanup and closing all open file objects.
+- `finally` clause: An optional `finally` clause can be added at the end of the try statement which includes a block of statements that are executed regardless of whether or not any error occurred inside the try block. This block is usually set up for code cleanup and closing all open file objects.
 
 Here's the general form of these statements:
 
@@ -2765,7 +2765,7 @@ finally:
 
 A simple Python program can be treated as a block of code where each statement is executed by the Python interpreter in a sequential order from top to bottom. 
 
-But, in real world we would like to have some control over the execution of code such as:
+But, in the real world, we would like to have some control over the execution of code such as:
 
 - skip or execute a block (set of statements) based on certain conditions
 - execute a block repeatedly
@@ -2807,16 +2807,16 @@ The above code will be executed in the following sequential order:
 
 ## Selection Statements: if .. else
 
-Selection statements, also known as Decision making statements, control the flow of a program based on the outcome of one or many test expression(s). If the condition is satisfied (`True`) then the code block is executed. There is also a provision to execute another code block if the condition is not satisfied.
+Selection statements, also known as Decision-making statements, control the flow of a program based on the outcome of one or many test expression(s). If the condition is satisfied (`True`) then the code block is executed. There is also a provision to execute another code block if the condition is not satisfied.
 
 This process can be demonstrated using the below flowchart:
 
 ![Selection Flow](images/0803a.png)
 
-Python supports `if` compound statement which provides this control. The `if` statement comprises:
+Python supports the `if` compound statement which provides this control. The `if` statement comprises:
 
 - `if` keyword followed by the test expression, a colon `:` and an indented block of code which gets executed if the condition is satisfied
-- (optional) one or many `elif` clause followed by their test conditions and their corresponding code blocks
+- (optional) one or many `elif` clauses followed by their test conditions and their corresponding code blocks
 - (optional) `else` clause and the corresponding code block which gets executed if none of the above conditions (`if`, `elif`) are satisfied
 
 An example `if` statement is provided below:
@@ -3125,7 +3125,7 @@ Let us go through some programming problems which utilize the `for` iteration st
 
 **1. Compound Interest**
 
-Write a program to calculate the total compound interest payable for given principal, interest rate (compounded annually) and total time (in years).
+Write a program to calculate the total compound interest payable for a given principal, interest rate (compounded annually), and total time (in years).
 
 **Code**
 
@@ -3179,7 +3179,7 @@ n! : 720
 
 `while` statement repeatedly executes a code block as long as the test condition is satisfied. 
 
-Usually there is a statement at the end of the code block which updates the value of the variable being used in the test expression, so the the loop does not execute infinitely. 
+Usually, there is a statement at the end of the code block that updates the value of the variable being used in the test expression, so the the loop does not execute infinitely. 
 
 A flowchart of the process is provided below:
 
@@ -3518,7 +3518,7 @@ They can be specified by enclosing within:
 - Double quotes: `"embedded 'single' quotes are allowed"`
 - Triple quotes: `'''Three single quotes'''`, `"""Three double quotes"""`. 
 
-Triple quoted strings can also span multiple lines.
+Triple-quoted strings can also span multiple lines.
 
 Some examples are provided below:
 
@@ -3557,16 +3557,16 @@ Although `\'` and `\"` can be used to specify quote characters, Python allows em
 
 Python string objects support Unicode characters. 
 
-A unicode character can be specified as `\u` followed by the 4 letter unicode (`\uXXXX`).
+A Unicode character can be specified as `\u` followed by the 4-letter unicode (`\uXXXX`).
 
 ``` python
 >>> print("E = mc\u00B2")
 E = mc²
 ```
 
-In the above example, `\u00B2` is the unicode character which represents the 'SUPERSCRIPT TWO'. 
+In the above example, `\u00B2` is the Unicode character which represents the 'SUPERSCRIPT TWO'. 
 
-### Other Types to String
+### Other Types of String
 
 In case you want to create a string object from other data types, just use the built-in `str()` function as follows:
 
@@ -7298,9 +7298,9 @@ with open('marks2.csv',
 
 ### Writing CSV File
 
-`csv.writer(csvfile, delimiter=',', quotechar='"')` function returns a writer object which converts data in form of a list into delimited strings which is passed down to the file object for writing. 
+`csv.writer(csvfile, delimiter=',', quotechar='"')` function returns a writer object which converts data in the form of a list into delimited strings which is passed down to the file object for writing. 
 
-All non-string data in the list are automatically converted into string before it is written.
+All non-string data in the list are automatically converted into strings before it is written.
 
 The methods `writerow(row)` or `writerows(rows)` can be used to write a row (list of strings) or list of rows to a CSV file.
 
@@ -7369,26 +7369,26 @@ Ira;Science;99.0
 
 # User Defined Functions, Modules & Packages
 
-## User Defined Functions
+## User-Defined Functions
 
-The built-in functions and modules of the Python Standard Library add tremendous value by performing generic operations and can be utilised by developers for any task. 
+The built-in functions and modules of the Python Standard Library add tremendous value by performing generic operations and can be utilized by developers for any task. 
 
-But, at times a programmer needs to perform a set of operations for a specific task multiple times. In such cases instead of rewriting the statements again and again, the block of code can be wrapped into a function which can be called anytime in the scope of the program.
+But, at times a programmer needs to perform a set of operations for a specific task multiple times. In such cases instead of rewriting the statements again and again, the block of code can be wrapped into a function that can be called anytime in the scope of the program.
 
 **User-defined functions** make the program more:
 
-- **Organized**, as a block of code is now replaced by a single function call which performs a specific task.
+- **Organized**, as a block of code is now replaced by a single function call that performs a specific task.
 - **Manageable**, due to reduction of code length.
-- **Reusable**, as the user defined function can be used anywhere in the current program or it can also be imported in another program.
+- **Reusable**, as the user-defined function can be used anywhere in the current program or it can also be imported into another program.
 
 ## Function Structure
 
-Let us take a deep dive into a user defined function (provided below) and understand its various components:
+Let us take a deep dive into a user-defined function (provided below) and understand its various components:
 
 ``` python
 def adder(f, s, t = None):
     """
-    Returns the sum of f, s and t.
+    Returns the sum of f, s, and t.
     If t is not provided, 
     return the sum of f and s. 
     """
@@ -7418,11 +7418,11 @@ Finally, the function header ends with a colon.
 
 The body of the function consists of one or more Python statements which have the same amount of indentation (4 spaces) from the function header.
 
-It is a good practice to include the documentation string at the beginning of the function body that briefly explains how it works. This docstring can either be a single-line or a multiline string literal. In the above example the docstring is:
+It is a good practice to include the documentation string at the beginning of the function body that briefly explains how it works. This docstring can either be a single-line or a multiline string literal. In the above example, the docstring is:
 
 ``` python
     """
-    Returns the sum of f, s and t.
+    Returns the sum of f, s, and t.
     If t is not provided, 
     return the sum of f and s. 
     """
@@ -7444,14 +7444,14 @@ The code block finally ends with a `return` statement which returns one or more 
 
 In the above example the value of `s` is returned which is the sum.
 
-A missing `return` statement or a `return` statement returning no value implies that the function returns `None`. These functions are known as void functions which display the result of statements via `print()` function. 
+A missing `return` statement or a `return` statement returning no value implies that the function returns `None`. These functions are known as void functions which display the result of statements via the `print()` function. 
 
 ## Parameters and Arguments
 
 ``` python
 def adder(f, s, t = None):
     """
-    Returns the sum of f, s and t.
+    Returns the sum of f, s, and t.
     If t is not provided, 
     return the sum of f and s. 
     """
@@ -7471,17 +7471,17 @@ sm1 = adder(fst, snd, trd)
 sm2 = adder(fst, snd)
 ```
 
-`f`, `s` and `t` are known as positional parameters as they have a defined position in the function definition. 
+`f`, `s`, and `t` are known as positional parameters as they have a defined position in the function definition. 
 
-Also there is a provision to assign a default value to a parameter using `=`. 
+Also, there is a provision to assign a default value to a parameter using `=`. 
 
 In the above example `t` has a default value of `None`.
 
-Arguments are the values passed to a function (or method) when it is called. In the above example `fst`, `snd` and `trd` are the arguments. Since `t` has a default value, the function can be invoked with or without the `trd` argument as shown for `sm2`.
+Arguments are the values passed to a function (or method) when it is called. In the above example `fst`, `snd`, and `trd` are the arguments. Since `t` has a default value, the function can be invoked with or without the `trd` argument as shown for `sm2`.
 
 Argument values are assigned to the corresponding function parameters that are available as local variables inside the function. 
 
-Thus, value of `fst` is assigned to `f` and `snd` is assigned to `s`. In case there is no third argument, `t` has the default value `None`.
+Thus, the value of `fst` is assigned to `f`, and `snd` is assigned to `s`. In case there is no third argument, `t` has the default value `None`.
 
 The values of `sm1` and `sm2` after executing the script are:
 
@@ -7494,7 +7494,7 @@ The values of `sm1` and `sm2` after executing the script are:
 
 ## Scope of Variables
 
-In Python, every variable has a well defined scope, i.e., it is accessible by a part of the program and it cannot be accessed from outside its scope. 
+In Python, every variable has a well-defined scope, i.e., it is accessible by a part of the program and it cannot be accessed from outside its scope. 
 
 Based on their scope, there are two types of variables:
 
@@ -7517,7 +7517,7 @@ def triple(a):
 # inside the function 
 triple(3)
 
-# Throws an error as result is 
+# Throws an error as a result is 
 # not accessible outside the scope 
 # of function triple()
 print("outside:", result)
@@ -7536,9 +7536,9 @@ NameError: name 'result' is not defined
 
 Variables defined outside any function or code block are known as global variables. 
 
-They are often used to specify mathematical constants, file path or other such values and can be accessed anywhere in the source code (by functions or code blocks).
+They are often used to specify mathematical constants, file paths, or other such values and can be accessed anywhere in the source code (by functions or code blocks).
 
-Below example demonstrates how the global variable `n` can be accessed by all the functions.
+The below example demonstrates how the global variable `n` can be accessed by all the functions.
 
 **Code**
 
@@ -7675,9 +7675,9 @@ print(d)
 
 ## What is a Module? How to Create a Module?
 
-Once a function is defined in the Python interpreter, it can be called any number of times. But, these function definitions are lost upon exiting the interpreter. 
+Once a function is defined in the Python interpreter, it can be called any number of times. However, these function definitions are lost upon exiting the interpreter. 
 
-To solve this problem we can create a python script with the function definitions at the beginning of the file, followed by the rest of the code which includes statements invoking the defined functions.
+To solve this problem we can create a Python script with the function definitions at the beginning of the file, followed by the rest of the code which includes statements invoking the defined functions.
 
 But, this process is tedious and not manageable as what makes user-defined functions powerful is that the programmer can - **Write once, and use many times**.
 
@@ -7845,7 +7845,7 @@ Now, the block will execute only if the script is executed directly and not when
 
 ## What is a Package? Introduction to PyPi. How to Create a Python Package?
 
-A collection of modules which can work together to provide a common functionality is known as a **package**. 
+A collection of modules that can work together to provide a common functionality is known as a **package**. 
 
 These modules are present in a folder along with the `__init__.py` file which tells Python that this folder is a package. 
 
@@ -7864,8 +7864,8 @@ restaurant/
     inventory.py
 ```
 
-A package is simply the directory containing sub-packages and modules, but when this package or a collection of packages are made available for others to use (eg. via PyPI) it is known as a **library**. 
+A package is simply the directory containing sub-packages and modules, but when this package or a collection of packages is made available for others to use (eg. via PyPI) it is known as a **library**. 
 
-For example, `restaurant` can be called a library if it provides reusable codes to manage a restaurant and is built using multiple packages which handle the various aspects of a restaurant like human resource management, inventory management, order fulfillment and billing, etc.
+For example, `restaurant` can be called a library if it provides reusable codes to manage a restaurant and is built using multiple packages that handle the various aspects of a restaurant like human resource management, inventory management, order fulfillment, and billing, etc.
 
 One should note that the above definition is not strict and often the terms package and library are used interchangeably.
