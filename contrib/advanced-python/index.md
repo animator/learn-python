@@ -1,3 +1,3 @@
 # List of sections
 
-- [Decorators/\*args/**kwargs](decorator-kwargs-args)
+- [Decorators/\*args/**kwargs](decorator-kwargs-args.md)
