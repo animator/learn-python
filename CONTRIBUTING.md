@@ -34,7 +34,7 @@ You can check out some content ideas below.
 **Step 2**: Star and fork THIS repository.  
 **Step 3**: Now in your fork, go the correct topic folder as provided in the links above.  
 **Step 4**: Edit `index.md` file to add the title of the content and the corresponding file name where the content will be available in this folder.  
-**Step 5**: Add the content in the file.  
+**Step 5**: Add the content in markdown format in the file (extension `.md`).  
 **Step 6**: Raise a PR with your changes. Accept the pledge that the content is original and not stolen from any other source.  
 **Step 7**: Wait for review and PR merge.
 
