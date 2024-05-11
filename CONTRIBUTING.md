@@ -9,7 +9,7 @@ We value your participation in this open source project. This page will give you
 
 ## How can I contribute?
 
-You can contribute to this project by adding content on a new topic or improving existing content.  
+You can contribute to this project by adding content on a new topic or improving existing content (in the `README.md` file).  
 
 The list of topics for which we are looking for content are provided below along with the location where the content has to be added:
 
