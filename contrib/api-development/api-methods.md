@@ -40,3 +40,17 @@
 
 - **CONNECT**:
     - The CONNECT method is used to establish a tunnel to the server using a proxy. It does not typically require a request body and is neither safe nor idempotent.
+
+### Definitions:
+
+- **CRUD**:
+    - CRUD stands for Create, Read, Update, and Delete, representing the four basic functions of persistent storage. These operations are commonly used in database and RESTful API designs.
+
+- **Accepts Request Body**:
+    - Indicates whether the HTTP method typically accepts a request body containing data to be processed or modified. If yes, the method may require the client to include data in the request body.
+
+- **Idempotent**:
+    - An idempotent operation means that making the same request multiple times will produce the same result as making it once. In the context of HTTP methods, an idempotent method does not change the server state after multiple identical requests.
+
+- **Safe**:
+    - A safe operation does not modify the state of the server or its resources. It only retrieves data without causing any side effects. Safe methods are typically used for read-only operations.
