@@ -1,3 +1,3 @@
 # List of sections
 
-- [Section title](filename.md)
+- [mini-projects](guess_the_word.py)
