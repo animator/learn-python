@@ -1,3 +1,3 @@
 # List of sections
 
-- [Hangman game](Hangma.md)
+- [Hangman game](Hangman.md)
