@@ -1,3 +1,3 @@
 # List of sections
 
-- [Section title](filename.md)
+- [Installing Matplotlib](matplotlib_installation.md)
