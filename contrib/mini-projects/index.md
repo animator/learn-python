@@ -1,3 +1,3 @@
 # List of sections
 
-- [Section title](filename.md)
+- [Section title](Quiz_game.md)
