@@ -308,9 +308,7 @@ while flag == 0:
 
         time.sleep(2)
 
-    # The code continues similarly for the other genres of quizzes
 
-    # The comments provide explanations for each section of the code
 
     elif genre == "6":
 
