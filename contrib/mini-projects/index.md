@@ -1,3 +1,3 @@
 # List of sections
 
-- [Section title](Quiz_game.md)
+- [Basic Quiz Game](Quiz_game.md)
