@@ -225,7 +225,7 @@ Some of the popular languages are Java, C, C++, C#, Go, Swift, JavaScript, PHP, 
 
 ## Introduction to Python
 
-Guido van Rossum started the development of Python in December 1989. He released the first version (0.9.9) of Python for general public on February 20, 1991. 
+Guido van Rossum started the development of Python in December 1989. He released the first version (0.9.0) of Python for general public on February 20, 1991. 
 
 The language evolved over the next few decades and so did its definition, the current version of which is stated below:  
 
