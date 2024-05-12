@@ -23,3 +23,9 @@ print(matplotlib.__version__)
 
 
 ```
+
+Output:
+
+```
+3.4.3
+```
