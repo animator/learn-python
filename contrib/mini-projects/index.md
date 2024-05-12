@@ -1,3 +1,3 @@
 # List of sections
 
-- [Section title](filename.md)
+- [rock,paper and scissors](pythonmini1.md)
