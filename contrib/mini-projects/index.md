@@ -1,3 +1,3 @@
 # List of sections
 
-- [Section title](filename.md)
+- [Tic-tac-toe Game](tic-tac-toe.md)
