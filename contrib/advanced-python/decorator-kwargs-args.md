@@ -93,7 +93,7 @@ A dictionary with keys and values is obtained.
 Now that we understand what first class object, *args, **kwargs is, we can move to decorators. Decorators are used to perform a task that needs to be performed for existing functions. If some task has to be performed for each function, we can write a function which will perform the task without us having to make changes in each function. 
 
 **Sample Code:**
-```
+```python
 import time
 def multiplication(a,b):
   start=time.time()
@@ -117,7 +117,7 @@ In the above code, we had to calculate time and print the execution time seperat
 The same functionality can be achieved with the help of a decorator.
 
 **Here's how:**
-```
+```python
 import time
 def time_find(function):
     def wrapper(*args, **kwargs):
