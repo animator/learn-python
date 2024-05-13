@@ -1,3 +1,3 @@
 # Installing NumPy
 
-- [Installing NumPy](installing numpy.md)
+- [Installing NumPy](installing-numpy.md)
