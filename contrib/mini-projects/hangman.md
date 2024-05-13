@@ -1,5 +1,7 @@
 # Hangman Game
 
+> Hangman is a word-guessing game where one player thinks of a word and the other player tries to guess it by suggesting letters within a limited number of attempts. The guessing player wins if they can reveal all the letters in the word before exceeding the maximum allowed incorrect guesses.
+
 This is a simple Hangman game implemented in Python. 
 
 ### How to Play
@@ -35,32 +37,37 @@ class Hangman:
 
     __MAX_INCORRECT_GUESSES = 6
 
+ #Initialize the Hangman game.
     def __init__(self):
-        #Initialize the Hangman game.
+       
         self.word = random.choice(self.__word_list)
         self.word_length = len(self.word)
         self.word_display = ['_' for _ in self.word]
         self.incorrect_guesses = 0
         self.guessed_letters = []
 
+#Display a welcome message to the player.
     def welcome(self):
-        #Display a welcome message to the player.
+        
         print('Welcome to Hangman!')
         print(f'The word has {self.word_length} letters.')
         print('Try to guess the word one letter at a time.')
 
+ #Display the current state of the word with correctly guessed letters revealed.
     def display_word(self):
-      #Display the current state of the word with correctly guessed letters revealed.
+     
         print(' '.join(self.word_display))
 
+ #Update the word_display to reveal correctly guessed letters.
     def update_word_display(self, letter):
-        #Update the word_display to reveal correctly guessed letters.
+       
         for i in range(len(self.word)):
             if self.word[i] == letter:
                 self.word_display[i] = letter
 
+#Start the Hangman game.
     def play_game(self):
-        #Start the Hangman game.
+        
         self.welcome()
 
         while True:
@@ -92,10 +99,6 @@ class Hangman:
             else:
                 print('Incorrect guess.')
                 self.incorrect_guesses += 1
-
-# Example usage:
-hangman_game = Hangman()
-hangman_game.play_game()
 
  ```
 
