@@ -1,6 +1,6 @@
 [![Discord Server Invite](https://img.shields.io/badge/DISCORD-JOIN%20SERVER-5663F7?style=for-the-badge&logo=discord&logoColor=white)](https://bit.ly/heyfoss)
 
-This project is an participating in GSSoC 2024.
+This project is participating in GSSoC 2024.
 
 ![gssoc-logo](https://github.com/foss42/awesome-generative-ai-apis/assets/1382619/670b651a-15d7-4869-a4d1-6613df09fa37)
 
@@ -225,7 +225,7 @@ Some of the popular languages are Java, C, C++, C#, Go, Swift, JavaScript, PHP, 
 
 ## Introduction to Python
 
-Guido van Rossum started the development of Python in December 1989. He released the first version (0.9.9) of Python for general public on February 20, 1991. 
+Guido van Rossum started the development of Python in December 1989. He released the first version (0.9.0) of Python for general public on February 20, 1991. 
 
 The language evolved over the next few decades and so did its definition, the current version of which is stated below:  
 
