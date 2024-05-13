@@ -1,4 +1,4 @@
 # List of sections
 
 - [Section title](filename.md)
-- [Sorting Algorithms](soritng-algorithms.md)
+- [Sorting Algorithms](sorting-algorithms.md)
