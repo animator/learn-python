@@ -1,6 +1,9 @@
 # Pandas Series Vs NumPy ndarray
 
 NumPy ndarray and Pandas Series are two fundamental data structures in Python for handling and manipulating data. While they share some similarities, they also have distinct characteristics that make them suitable for different tasks.
+
+While both NumPy ndarray and Pandas Series are essential tools for data manipulation in Python, Choosing between them depends on the nature of your data and the specific tasks you need to perform.
+
 ## NumPy ndarray (n-dimensional array)
 
 NumPy is short form for Numerical Python, provides a powerful array object called `ndarray`, which is the backbone of many scientific and mathematical Python libraries. 
