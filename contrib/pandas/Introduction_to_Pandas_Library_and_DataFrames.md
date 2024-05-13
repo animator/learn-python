@@ -1,5 +1,7 @@
 # Introduction_to_Pandas_Library_and_DataFrames
 
+<img src = "panda_image.jpeg"/>
+
 
 > Content Creator - Krishna Kaushik
 
