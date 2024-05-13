@@ -27,46 +27,51 @@ and `main.py` contains basic code.
 ```import random
 
 class Hangman:
-    word_list = ['apple', 'banana', 'cherry', 'date', 'elderberry',
+    __word_list = ['apple', 'banana', 'cherry', 'date', 'elderberry',
                  'fig', 'grape', 'honeydew', 'kiwi', 'lemon', 'mango', 'nectarine',
                  'orange', 'papaya', 'quince', 'raspberry', 'strawberry', 'tangerine',
                  'watermelon', 'blueberry', 'blackberry', 'cranberry', 'boysenberry',
                  'pineapple', 'coconut', 'pear', 'plum', 'apricot', 'guava']
 
-    MAX_INCORRECT_GUESSES = 6
+    __MAX_INCORRECT_GUESSES = 6
 
     def __init__(self):
-        self.word = random.choice(self.word_list)
+        #Initialize the Hangman game.
+        self.word = random.choice(self.__word_list)
         self.word_length = len(self.word)
         self.word_display = ['_' for _ in self.word]
         self.incorrect_guesses = 0
         self.guessed_letters = []
 
     def welcome(self):
+        #Display a welcome message to the player.
         print('Welcome to Hangman!')
         print(f'The word has {self.word_length} letters.')
         print('Try to guess the word one letter at a time.')
 
     def display_word(self):
+      #Display the current state of the word with correctly guessed letters revealed.
         print(' '.join(self.word_display))
 
     def update_word_display(self, letter):
+        #Update the word_display to reveal correctly guessed letters.
         for i in range(len(self.word)):
             if self.word[i] == letter:
                 self.word_display[i] = letter
 
     def play_game(self):
+        #Start the Hangman game.
         self.welcome()
 
         while True:
-            print(f'\nIncorrect guesses left: {self.MAX_INCORRECT_GUESSES - self.incorrect_guesses}')
+            print(f'\nIncorrect guesses left: {self.__MAX_INCORRECT_GUESSES - self.incorrect_guesses}')
             self.display_word()
 
             if '_' not in self.word_display:
                 print('Congratulations! You guessed the word correctly!')
                 break
 
-            if self.incorrect_guesses >= self.MAX_INCORRECT_GUESSES:
+            if self.incorrect_guesses >= self.__MAX_INCORRECT_GUESSES:
                 print(f'Sorry, you ran out of guesses. The word was {self.word}. Better luck next time!')
                 break
 
@@ -87,6 +92,11 @@ class Hangman:
             else:
                 print('Incorrect guess.')
                 self.incorrect_guesses += 1
+
+# Example usage:
+hangman_game = Hangman()
+hangman_game.play_game()
+
  ```
 
 
