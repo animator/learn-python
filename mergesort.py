@@ -11,6 +11,7 @@ def mergeSort(array):
         i = j = k = 0
 
 
+    
         while i < len(L) and j < len(M):
             if L[i] < M[j]:
                 array[k] = L[i]
