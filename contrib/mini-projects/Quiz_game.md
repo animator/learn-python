@@ -2,9 +2,24 @@
 
 This is a simple quiz game where players can choose from different genres of quizzes such as Sports, Entertainment, Physics, Chemistry, and Biology. Each genre contains five questions related to the chosen category. Players input their answers, and the program provides feedback on whether the answer is correct or incorrect along with the final score.
 
+## Prerequisite
+1. Basic Python
+2. Decision Control
+3. Nested Loops
+4. List data structure
+## Source Code
+
+### Importing necessary libraries
+
 ```python
 
 import time
+
+```
+
+### Main Code
+
+```python
 
 print("******************WELCOME TO ULTIMATE QUIZ GAME******************")
 
@@ -38,6 +53,10 @@ while flag == 0:
 
         score = 0
 
+```
+
+### Creating list of questions, options and correct answer
+```python
         # Questions, options, and answers for each genre
         quiz_data = [
             # Sports
@@ -76,6 +95,12 @@ while flag == 0:
              ("What is the basic unit of heredity?", ["1. Chromosome", "2. Gene", "3. Allele"], "2")]
         ]
 
+```
+
+### Iterating over each item in the list above based on selected genre
+
+```pyhton
+
         # Iterate over each question, display options, and check answers
         for question, options, answer in quiz_data[int(genre) - 1]:
             print(f"\nQuestion: {question}")
@@ -87,7 +112,10 @@ while flag == 0:
                 score += 1
             else:
                 print("Incorrect!")
+```
+### Giving the final score
 
+```python
         # Print final score
         print(f"\nYour score is: {score}/5")
         time.sleep(2)  # Pause for 2 seconds before returning to the menu
