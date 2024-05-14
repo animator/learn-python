@@ -6,9 +6,9 @@ Functions in Python are so called first class objects, which means they can be t
 
 ```python
 def func1():
-  def func2():
-    print("Printing from the inner function, func2")
-  return func2
+    def func2():
+        print("Printing from the inner function, func2")
+    return func2
 
 ```
 Assigning func1 to function_call object
@@ -17,7 +17,7 @@ function_call=func1()
 ```
 Calling the function
 ```python
->> function_call()
+>>> function_call()
 ```
 **Output**
 ```
@@ -50,8 +50,8 @@ Now that you have understood why \* is used, we can take a look at *args. *args 
 *args makes python functions flexible to handle dynamic arguments.
 ```python
 def test1(*args):
-  print(args)
-  print(f"The number of elements in args = {len(args)}")
+    print(args)
+    print(f"The number of elements in args = {len(args)}")
 a=list(range(0,10))
 test1(*a)
 ```
@@ -64,8 +64,8 @@ If in the test1 we do not use \* in the argument
 
 ```python
 def test1(*args):
-  print(args)
-  print(f"The number of elements in args = {len(args)}")
+    print(args)
+    print(f"The number of elements in args = {len(args)}")
 a=list(range(0,10))
 test1(a)
 ```
@@ -78,8 +78,8 @@ The number of elements in args = 1
 **kwargs stands for keyword arguments. This is used for key and value pairs and similar to *args, this makes functions flexible enough to handle dynamic key value pairs in arguments.
 ```python
 def test2(**kwargs):
-  print(kwargs)
-  print(f"The number of elements in kwargs = {len(kwargs)}")
+    print(kwargs)
+    print(f"The number of elements in kwargs = {len(kwargs)}")
 test2(a=1,b=2,c=3,d=4,e=5)
 ```
 The above snippet uses some key-value pairs and out test2 function gives the following output:
@@ -96,18 +96,18 @@ Now that we understand what first class object, *args, **kwargs is, we can move 
 ```python
 import time
 def multiplication(a,b):
-  start=time.time()
-  c=a*b
-  total=time.time()-start
-  print("Time taken for execution of multiplication",total)
-  return c
+    start=time.time()
+    c=a*b
+    total=time.time()-start
+    print("Time taken for execution of multiplication",total)
+    return c
 
 def addition(a,b):
-  start=time.time()
-  c=a+b
-  total=time.time()-start
-  print("Time taken for execution of addition ",total)
-  return c
+    start=time.time()
+    c=a+b
+    total=time.time()-start
+    print("Time taken for execution of addition ",total)
+    return c
 
 multiplication(4,5)
 addition(4,5)
