@@ -4,15 +4,15 @@ We value your participation in this open source project. This page will give you
 
 ## Important Note
 
-- Do not raise issues or send PRs for changing issue template, adding header-footer, badges or any buttons.  
-- Do not raise issues or send PRs for for any website changes.  
+- Do not raise issues or send PRs for changing issue templates, or adding header-footer, badges, or any buttons.  
+- Do not raise issues or send PRs for any website changes.  
 - Do not choose an entire topic or a whole bunch of sections. Just choose a single small section for which you will be contributing when you raise a new issue.
 
 ## How can I contribute?
 
 You can contribute to this project by adding content on a new topic or improving existing content (in the `README.md` file).  
 
-The list of topics for which we are looking for content are provided below along with the location where the content has to be added:
+The list of topics for which we are looking for content is provided below along with the location where the content has to be added:
 
 - Advanced Python - [Link](https://github.com/animator/learn-python/tree/main/contrib/advanced-python)  
 - Pandas - [Link](https://github.com/animator/learn-python/tree/main/contrib/pandas)  
@@ -34,7 +34,7 @@ You can check out some content ideas below.
 **Step 1**: Raise a **new issue** that you want to "Add <Your content title> content". We will assign the issue to you and label it.  
 **Do not choose an entire topic or a whole bunch of sections. Just choose a single small section for which you will be contributing when you raise a new issue.**  
 **Step 2**: Star and fork THIS repository.  
-**Step 3**: Now in your fork, go the correct topic folder as provided in the links above.  
+**Step 3**: Now in your fork, go to the correct topic folder as provided in the links above.  
 **Step 4**: Edit `index.md` file to add the title of the content and the corresponding file name where the content will be available in this folder.  
 **Step 5**: Add the content in markdown format in the file (extension `.md`).  
 **Step 6**: Raise a PR with your changes. Accept the pledge that the content is original and not stolen from any other source.  
@@ -44,7 +44,7 @@ You can check out some content ideas below.
 
 - **NumPy**: Introduction, Arrays, Indexing and Slicing, Operations on Arrays, Concatenating Arrays, Reshaping Arrays, Splitting Arrays, Statistical Operations on Arrays, Loading Arrays from Files, Saving NumPy Arrays in Files, etc.  
 - **Pandas**: Introduction, Importing and Exporting Data, DataFrames, Pandas Series Vs NumPy ndarray, Descriptive Statistics, Data Aggregations, Sorting a DataFrame, Group by Functions, Altering the Index, Other DataFrame Operations, Handling Missing Values, Import and Export of Data between Pandas and MySQL, Pandas plotting, etc.  
-- **Plotting & Visualization**: Matplotlib, Seaborn, Customisation of Plots (Marker, colour, Line width and Line Style), Line chart, Bar Chart, Histogram, Scatter Chart, Plotting Quartiles and Box plot, Pie Chart, etc.  
+- **Plotting & Visualization**: Matplotlib, Seaborn, Customisation of Plots (Marker, color, Line width, and Line Style), Line chart, Bar Chart, Histogram, Scatter Chart, Plotting Quartiles and Box plot, Pie Chart, etc.  
 - **Data Science & Machine Learning**: Scikit-learn, TensorFlow, PyTorch, regression, classification, clustering, ensemble model, deep learning, etc.  
 - **API Development**: Building APIs using FastAPI, CRUD API Development, etc.  
 - **Web Scrapping**: beautifulsoup, requests, etc.  
@@ -52,4 +52,4 @@ You can check out some content ideas below.
 
 ## Any doubt?
 
-In case you are new to the open source ecosystem, we would be more than happy to guide you through the entire process. Just join our [Discord server](https://bit.ly/heyfoss) and drop a message in relevant channel.
+In case you are new to the open-source ecosystem, we are happy to guide you through the entire process. Just join our [Discord server](https://bit.ly/heyfoss) and drop a message in the relevant channel.
