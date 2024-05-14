@@ -1,0 +1,56 @@
+## Introduction
+A Lambda function in Python is a small, anonymous function defined using the `lambda` keyword. Unlike regular functions defined using the `def` keyword, Lambda functions can have any number of arguments but only one expression. The expression is evaluated and returned. Lambda functions are often used for short, simple operations and are commonly utilized as arguments to higher-order functions like `map()`, `filter()`, and `sorted()`.
+This helps you to write concise code. 
+## Syntax
+
+The syntax of a Lambda function is as follows:
+lambda arguments : expression
+
+## Examples of Lambda function
+```python 
+x = lambda x:x**2
+print(x(2)) 
+```
+## Output
+``` Output
+4
+```
+## When to use lambda functions
+Lambda functions are best suited for situations where you need a small, simple function for a short period and are not going to reuse it elsewhere. Lambda functions are commonly used as arguments for higher-order functions such as map(), filter(), sorted(), and reduce(). They provide a concise way to define simple functions inline.
+## Difference between Def function and lambda function
+The def function is useful for taking multiple expressions,  it is used for writing multiple lines of code. We can use comments and function descriptions for easy readability.
+
+## Example of writing function using def keyword
+```python
+def square_numbers(numbers):
+    """
+    This function takes a list of numbers and returns a new list with each number squared.
+    """
+    squared_numbers = []
+    for number in numbers:
+        squared_numbers.append(number ** 2)
+    return squared_numbers
+numbers = [1, 2, 3, 4, 5]
+squared = square_numbers(numbers)
+print(squared)
+
+```
+## Output
+```Output
+1 4 9 16 25
+```
+## Example of writing function using lambda
+```python
+numbers = [1, 2, 3, 4, 5]
+squared = list(map(lambda x: x ** 2, numbers))
+print(squared)  # Output: [1, 4, 9, 16, 25]
+```
+## Output
+```Output
+1 4 9 16 25
+```
+
+
+
+
+ 
