@@ -1,6 +1,3 @@
-
-Here's how it looks:
-
 # Rock Paper Scissors Game
 
 This is a simple implementation of the classic rock-paper-scissors game in Python.
