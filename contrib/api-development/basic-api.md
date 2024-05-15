@@ -1,6 +1,6 @@
-Certainly! Here's the entire markdown file for the simple Book Management API:
+simple Book Management API:
 
-````markdown
+
 # Book Management API
 
 ## Overview
@@ -14,7 +14,7 @@ The base URL for accessing the Book Management API is `https://api.bookmanager.c
 ## Authentication
 
 Authentication is not required for accessing public endpoints such as retrieving books. However, for creating, updating, or deleting books, users must authenticate using an API key or token.
-
+````markdown
 ## Endpoints
 
 ### Get All Books
