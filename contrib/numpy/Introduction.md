@@ -19,7 +19,7 @@ Ensure Python is installed in your system. If not you can install it from here([
 pip install numpy
 ```
 
-# Importing NumPy
+## Importing NumPy
 
 To access NumPy functions, import it with the alias `np`:
 
