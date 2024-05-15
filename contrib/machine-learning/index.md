@@ -1,3 +1,3 @@
 # List of sections
 
-- [Section title](filename.md)
+- [Naive Bayes Classifiers](Naive_Bayes_Classifiers.md)
