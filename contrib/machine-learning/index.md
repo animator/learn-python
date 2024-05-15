@@ -1,3 +1,3 @@
 # List of sections
 
-- [Section title](filename.md)
+- [LINEAR REGRESSION](Linear_Regression.md)
