@@ -53,7 +53,7 @@ for choice in choices:
     rb.pack()
 ```
 - Here, we create the main window for the game using `tkinter.Tk()`. We set the title to "Rock Paper Scissors".
-- We define a StringVar to store the user's choice and set the default choice to "rock".
+- We define a `StringVar` to store the user's choice and set the default choice to "rock".
 - We create radio buttons for the user to choose from ("rock", "paper", "scissors") and pack them into the main window.
 ```
 ```
@@ -71,8 +71,8 @@ result_label.pack()
 computer_label = tk.Label(root, text="", font=("Helvetica", 12))
 computer_label.pack()
 ```
-- We create a "Play" button that triggers the play_game() function when clicked, using tkinter.Button.
-- We create two labels to display the result of the game (result_label) and the computer's choice (computer_label). Both labels initially display no text and are packed into the main window.
+- We create a "Play" button that triggers the `play_game()` function when clicked, using `tkinter.Button`.
+- We create two labels to display the result of the game (`result_label`) and the computer's choice (`computer_label`). Both labels initially display no text and are packed into the main window.
 ```
 ```
 
@@ -80,5 +80,5 @@ computer_label.pack()
 ```python
 root.mainloop()
 ```
-- Finally, we start the Tkinter event loop using root.mainloop(), which keeps the GUI window open and responsive until the user closes it.
+- Finally, we start the Tkinter event loop using `root.mainloop()`, which keeps the GUI window open and responsive until the user closes it.
 - 
