@@ -39,7 +39,7 @@ class Weathercondition:
 
             base_url = "https://api.openweathermap.org/data/2.5/weather?"
 
-            api_key = "77ad31e7533acafbb84df531bd681311"
+            api_key = "--"
 
             place_url = base_url + "appid=" + api_key + "&q=" + self.place
             self.response = requests.get(place_url).json()
