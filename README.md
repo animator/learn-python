@@ -325,6 +325,40 @@ Python 3.9 is now successfully installed on your computer.
 
 ![Step 3: Verify Installation](images/0201d.png)
 
+# Installing Python in Linux
+Let's start with the Python 3 installation process on Linux operating system.
+
+**Step 1: Check for Pre-installed Python**
+Open a terminal window (usually Ctrl+Alt+T) and type
+`python3 --version`
+![Step 1: Check for Pre-installed Python](images\py_ver_chk.png)
+If Python is already installed, you'll see the version number. If not, proceed to the next step.
+
+**Step 2: Install Python Using the Package Manager**
+The specific package manager command
+
+epends on your Linux distribution:
+
+*Debian/Ubuntu-based systems (e.g., Ubuntu, Mint, elementary OS)*
+
+`sudo apt update  # Update package lists (recommended)`
+![Step 2: Update package lists](images\linux_update.png)
+`sudo apt install python3.x  # Install Python 3.x, x is python version number`
+![Step 2: Install Python 3.x](images\install_py.png)
+
+Generally, it asks for additional diskspace and we generally continue by typing Y and then enter.
+![Step 2: config](images\py_conf.png)
+![Step 2: Finishing installtion](images\proc_py_in.png)
+*Red Hat/CentOS/Fedora-based systems (e.g., CentOS, Fedora, Red Hat)*
+
+`sudo dnf update  # Update package lists (recommended)` 
+`sudo dnf install python3  # Install Python 3.x, x is python version number`
+
+**Step 3: Verify Installation**
+Once the installation is complete, type the following command to confirm
+`python3 --version  # Should display the installed Python 3 version`
+![Step 3: Verify Installation](images\af_in_ver.png)
+
 ## Installing Python in macOS (Apple)
 
 Let's start with the Python 3 installation process on macOS operating system.
