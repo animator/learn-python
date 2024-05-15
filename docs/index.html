@@ -7560,6 +7560,75 @@ Enter b: <span class="hljs-number">5</span>
             <p>One should note that the above definition is not strict and often the terms package and library are used
                 interchangeably.</p>
         </div>
+        <div class="content">
+            <div class="content__inner">
+                <h1 id="backtracking">Backtracking<a aria-hidden class="header-link" tabindex="-1"
+                    href="#backtracking">#</a></h1>
+                <p>
+                    Backtracking is a problem-solving technique used in algorithm design. The idea behind backtracking is to explore all possible candidate solutions to a problem and "backtrack" when a solution is found to be invalid or when all possible solutions have been explored.</p>
+                <h2 id="N queens sum">N Queens Sum<a aria-hidden class="header-link" tabindex="-1"
+                        href="#N queens sum">#</a></h2>
+                <p>The N Queens problem is a classic problem in Backtracking. The objective is to
+                    place N queens on an NxN chessboard in such a way that no two queens attack each other. This means
+                    that no two queens can share the same row, column, or diagonal.</p>
+                <p>Here's a Python solution to the N Queens problem:</p>
+                <pre><code>def is_safe(board, row, col, N):
+        # Check if there's a queen in the same column
+        for i in range(row):
+            if board[i][col] == 1:
+                return False
+        
+        # Check upper diagonal on left side
+        for i, j in zip(range(row, -1, -1), range(col, -1, -1)):
+            if board[i][j] == 1:
+                return False
+        
+        # Check upper diagonal on right side
+        for i, j in zip(range(row, -1, -1), range(col, N)):
+            if board[i][j] == 1:
+                return False
+        
+        return True
+    
+    def solve_n_queens_util(board, row, N):
+        if row >= N:
+            return True
+        
+        for i in range(N):
+            if is_safe(board, row, i, N):
+                board[row][i] = 1
+                if solve_n_queens_util(board, row + 1, N):
+                    return True
+                board[row][i] = 0
+        
+        return False
+    
+    def solve_n_queens(N):
+        board = [[0] * N for _ in range(N)]
+        if not solve_n_queens_util(board, 0, N):
+            print("Solution does not exist")
+            return False
+        
+        print("Solution exists. The board configuration is:")
+        for row in board:
+            print(row)
+    
+    # Example usage
+    N = 4
+    solve_n_queens(N)
+    </code></pre>
+    <h2 id="N-queens-sum">output is:<a aria-hidden class="header-link" tabindex="-1"
+        href="#N-queens-sum">#</a></h2>
+        <pre><code>Solution exists. The board configuration is:
+            [1, 0, 0, 0, 0]
+            [0, 0, 1, 0, 0]
+            [0, 0, 0, 0, 1]
+            [0, 1, 0, 0, 0]
+            [0, 0, 0, 1, 0]</code></pre>
+            <p> Here is_safe() function returns true if there is no quuen in the same row , same column and in the same diagonal and hence we can place our current queen in specified position.</p>
+            </div>
+            
+        </div> 
     </main>
     <div class="top-bar" data-js="top-bar"><button class="top-bar__menu-toggle-button"
             data-js="top-bar-menu-toggle-button"><svg class="top-bar__menu-toggle-button-menu-svg" viewBox="0 0 16 16"
@@ -7830,9 +7899,24 @@ Enter b: <span class="hljs-number">5</span>
                             Package? Introduction to PyPi. How to Create a Python Package?</a></li>
                 </ul>
             </li>
+            <li>
+                <a href="#backtracking">Backtracking</a>
+                <ul>
+                    <li><a href="#N-queens-sum">N Queens Sum</a></li>
+                    <!-- Add more nested sections if necessary -->
+                </ul>
+            </li>
+
+           
+            
         </ul>
     </div>
+   
+   
+   
     <script>(() => { "use strict"; function t(t, e) { for (; null !== t && !0 !== e(t);)t = t.parentElement; return t } function e(t) { const { activeClassName: e, contentElement: o, menuElement: i, scrollMarginTopOffset: l, topBarElement: r } = t; function c() { return Array.prototype.slice.call(o.querySelectorAll("[id]")) } function u() { const t = c(), e = t[t.length - 1], n = window.innerHeight - (r.offsetHeight + l) - (o.offsetHeight - e.offsetTop); n < 0 ? o.removeAttribute("style") : o.style.paddingBottom = `${n}px` } let s; u(), window.addEventListener("resize", (function () { window.clearTimeout(s), s = window.setTimeout((function () { u() }), 200) })), window.addEventListener("scroll", (function () { const t = c(), o = function (t) { const { idElements: e, scrollMarginTop: n } = t, o = e.slice().reverse(), i = window.scrollY; for (const t of o) if (t.offsetTop - n - 2 <= i) return t.getAttribute("id"); return null }({ idElements: t, scrollMarginTop: r.offsetHeight + l }); n({ activeClassName: e, element: i, id: o }); const u = function (t) { const { activeId: e, idElements: n } = t; if (null === e) return null; const o = n.findIndex((function (t) { return t.getAttribute("id") === e })), i = n.slice(0, o + 1).reverse().find((function (t) { return "H1" === t.tagName })); if (void 0 !== i) return i.getAttribute("id"); const l = n.find((function (t) { return "H1" === t.tagName })); if (void 0 === l) return null; return l.getAttribute("id") }({ activeId: o, idElements: t }); n({ activeClassName: e, element: r, id: u }) })) } function n(t) { const { element: e, id: n, activeClassName: o } = t, i = e.querySelector(`.${o}`); if (null !== i && i.classList.remove(o), null === n) return; const l = e.querySelector(`[href="#${null === n ? "" : n}"]`); null !== l && l.classList.add(o) } !function () { const n = document.querySelector('[data-js="content"]'), o = document.querySelector('[data-js="top-bar"]'), i = document.querySelector('[data-js="top-bar-menu-toggle-button"]'), l = document.querySelector('[data-js="top-bar-title-link"]'), r = document.querySelector('[data-js="menu"]'); null !== i && function (e) { const { breakpoint: n, topBarMenuToggleButtonElement: o, visibleClassName: i } = e; function l() { document.body.classList.toggle(i) } o.addEventListener("click", l), window.addEventListener("click", (function (e) { !1 !== document.body.classList.contains(i) && (window.innerWidth >= n || null === t(e.target, (function (t) { return t === o })) && l()) })), window.addEventListener("keydown", (function (t) { "Escape" === t.key && l() })) }({ breakpoint: 1600, topBarMenuToggleButtonElement: i, visibleClassName: "--menu-visible" }), null !== r && null !== l && function (t) { const { topBarTitleLinkElement: e, menuElement: n } = t; e.addEventListener("click", (function (t) { !0 !== t.metaKey && !0 !== t.shiftKey && (t.preventDefault(), history.pushState("", document.title, `${window.location.pathname}${window.location.search}`), window.scrollTo({ top: 0 }), n.scrollTo({ top: 0 })) })) }({ menuElement: r, topBarTitleLinkElement: l }), null !== r && function (e, n) { function o(t) { const o = e.querySelector(`[href="${t}"]`); if (null === o) return; const i = o.getBoundingClientRect(), l = null === n ? 0 : n.offsetHeight, r = window.innerHeight; if (i.top >= l && i.bottom <= r) return; const c = 1 * window.parseFloat(window.getComputedStyle(document.documentElement).fontSize); e.scrollTo({ top: Math.max(0, o.offsetTop - c) }) } function i() { const t = window.location.hash; "" !== t ? o(t) : e.scrollTo({ top: 0 }) } window.addEventListener("click", (function (n) { const i = n.target; if ("A" !== i.tagName) return; const l = i.getAttribute("href"); null !== l && null === t(i, (function (t) { return t === e })) && o(l) })), window.addEventListener("popstate", i), i() }(r, o), null !== r && null !== n && null !== o && e({ activeClassName: "--scroll-spy-active", contentElement: n, menuElement: r, scrollMarginTopOffset: 40, topBarElement: o }) }() })();</script>
+    
+    
 </body>
 
 </html>
