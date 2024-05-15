@@ -54,8 +54,7 @@ equation = StringVar()
 expression_field = Entry(window, textvariable=equation, border=5) 
 
 expression_field.grid(columnspan=4, ipadx=70)
-
-# create a Buttons  
+ 
 b1 = Button(window, text=' 1 ', fg='black', bg='beige',command=lambda: press(1), height=1, width=7) 
 
 b1.grid(row=2, column=0) 
