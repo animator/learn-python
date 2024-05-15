@@ -22,35 +22,61 @@ The def function is useful for taking multiple expressions,  it is used for writ
 
 ## Example of writing function using def keyword
 ```python
-def square_numbers(numbers):
-    """
-    This function takes a list of numbers and returns a new list with each number squared.
-    """
-    squared_numbers = []
-    for number in numbers:
-        squared_numbers.append(number ** 2)
-    return squared_numbers
-numbers = [1, 2, 3, 4, 5]
-squared = square_numbers(numbers)
-print(squared)
+def add_def(x, y):
+    return x + y
+
+# Usage
+result = add_def(3, 5)
+print(result)
 
 ```
 ## Output
 ```Output
-1 4 9 16 25
+8
 ```
 ## Example of writing function using lambda
 ```python
+add_lambda = lambda x, y: x + y
+result = add_lambda(3, 5)
+print(result)
+```
+## Output
+```Output
+8
+```
+Now let us see some most frequent use of lambda functions
+## Lambda function using map()
+The map() function applies a given function to all items in an input list (or any other iterable) and returns a map object (which can be converted to a list, set, etc.)
+``` python
 numbers = [1, 2, 3, 4, 5]
 squared = list(map(lambda x: x ** 2, numbers))
 print(squared)  # Output: [1, 4, 9, 16, 25]
 ```
 ## Output
 ```Output
-1 4 9 16 25
+[1, 4, 9, 16, 25]
 ```
+## Using filter()
+```python
+numbers = [1, 2, 3, 4, 5]
+even_numbers = list(filter(lambda x: x % 2 == 0, numbers))
+print(even_numbers) 
+```
+## Output
+```Output
+2 4
+```
+## Using reduce()
+```python
+from functools import reduce
 
-
-
-
- 
+numbers = [1, 2, 3, 4, 5]
+product = reduce(lambda x, y: x * y, numbers)
+print(product)  # Output: 120
+```
+## Output
+```Output
+120
+```
+## Conclusion
+Lambda functions are a powerful Python feature that provides a concise and expressive way to create small, anonymous functions. It offers flexibility and convenience in situations where defining a named function would be overkill or impractical. While they can make code more concise, they can also make it less readable, especially when used for complex logic. In such cases, it's often better to define a named function using the def keyword, as it promotes clarity, reusability, and easier debugging.
