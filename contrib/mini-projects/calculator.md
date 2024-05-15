@@ -125,4 +125,8 @@ Decimal.grid(row=6, column=3)
 
 window.mainloop() 
 
+
+
+OUTPUT:
+
 ![image](https://github.com/Sagarika-Dubey/learn-python/assets/141268973/4ebff207-14f9-4eff-aa08-b16340588a6e)
