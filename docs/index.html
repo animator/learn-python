@@ -1042,7 +1042,21 @@
                         <li><a href="#what-is-a-package-introduction-to-pypi-how-to-create-a-python-package">What is a
                                 Package? Introduction to PyPi. How to Create a Python Package?</a></li>
                     </ul>
+                   
+                        
+                     
+                    </li>
+
                 </li>
+                <li>
+                    <a href="#backtracking">Backtracking</a>
+                    <ul>
+                        <li><a href="#N-queens-sum">N Queens Sum</a></li>
+                        <li><a href="#sudoko-solver">Sudoku Solver</a></li>
+                    </ul>
+                </li>
+              
+                
             </ul>
             <h1 id="introduction">Introduction<a aria-hidden class="header-link" tabindex="-1"
                     href="#introduction">#</a></h1>
@@ -7560,14 +7574,14 @@ Enter b: <span class="hljs-number">5</span>
             <p>One should note that the above definition is not strict and often the terms package and library are used
                 interchangeably.</p>
         </div>
-        <div class="content">
+      
             <div class="content__inner">
                 <h1 id="backtracking">Backtracking<a aria-hidden class="header-link" tabindex="-1"
                     href="#backtracking">#</a></h1>
                 <p>
                     Backtracking is a problem-solving technique used in algorithm design. The idea behind backtracking is to explore all possible candidate solutions to a problem and "backtrack" when a solution is found to be invalid or when all possible solutions have been explored.</p>
-                <h2 id="N queens sum">N Queens Sum<a aria-hidden class="header-link" tabindex="-1"
-                        href="#N queens sum">#</a></h2>
+                <h2 id="N-queens-sum">N Queens Sum<a aria-hidden class="header-link" tabindex="-1"
+                        href="#N-queens-sum">#</a></h2>
                 <p>The N Queens problem is a classic problem in Backtracking. The objective is to
                     place N queens on an NxN chessboard in such a way that no two queens attack each other. This means
                     that no two queens can share the same row, column, or diagonal.</p>
@@ -7575,17 +7589,17 @@ Enter b: <span class="hljs-number">5</span>
                 <pre><code>def is_safe(board, row, col, N):
         # Check if there's a queen in the same column
         for i in range(row):
-            if board[i][col] == 1:
+            if board[i][col] ==<span class="hljs-number">1</span>:
                 return False
         
         # Check upper diagonal on left side
-        for i, j in zip(range(row, -1, -1), range(col, -1, -1)):
+        for i, j in zip(range(row, <span class="hljs-number">-1</span>, <span class="hljs-number">-1</span>), range(col, <span class="hljs-number">-1</span>, <span class="hljs-number">-1</span>)):
             if board[i][j] == 1:
                 return False
         
         # Check upper diagonal on right side
-        for i, j in zip(range(row, -1, -1), range(col, N)):
-            if board[i][j] == 1:
+        for i, j in zip(range(row, <span class="hljs-number">-1</span>, <span class="hljs-number">-1</span>), range(col, N)):
+            if board[i][j] == <span class="hljs-number">1</span>:
                 return False
         
         return True
@@ -7596,16 +7610,16 @@ Enter b: <span class="hljs-number">5</span>
         
         for i in range(N):
             if is_safe(board, row, i, N):
-                board[row][i] = 1
+                board[row][i] =  <span class="hljs-number">1</span>
                 if solve_n_queens_util(board, row + 1, N):
                     return True
-                board[row][i] = 0
+                board[row][i] =  <span class="hljs-number">0</span>
         
         return False
     
     def solve_n_queens(N):
-        board = [[0] * N for _ in range(N)]
-        if not solve_n_queens_util(board, 0, N):
+        board = [[<span class="hljs-number">0</span>] * N for _ in range(N)]
+        if not solve_n_queens_util(board,  <span class="hljs-number">0</span>, N):
             print("Solution does not exist")
             return False
         
@@ -7614,19 +7628,129 @@ Enter b: <span class="hljs-number">5</span>
             print(row)
     
     # Example usage
-    N = 4
+    N = <span class="hljs-number">4</span>
     solve_n_queens(N)
     </code></pre>
     <h2 id="N-queens-sum">output is:<a aria-hidden class="header-link" tabindex="-1"
         href="#N-queens-sum">#</a></h2>
         <pre><code>Solution exists. The board configuration is:
-            [1, 0, 0, 0, 0]
-            [0, 0, 1, 0, 0]
-            [0, 0, 0, 0, 1]
-            [0, 1, 0, 0, 0]
-            [0, 0, 0, 1, 0]</code></pre>
+            [<span class="hljs-number"> 1, 0, 0, 0, 0</span> ]
+            [<span class="hljs-number"> 0, 0, 1, 0, 0</span> ]
+            [<span class="hljs-number"> 0, 0, 0, 0, 1</span> ]
+            [<span class="hljs-number"> 0, 1, 0, 0, 0</span> ]
+            [<span class="hljs-number"> 0, 0, 0, 1, 0</span> ]
+           </code></pre>
             <p> Here is_safe() function returns true if there is no quuen in the same row , same column and in the same diagonal and hence we can place our current queen in specified position.</p>
-            </div>
+
+            <h2 id="sudoko-solver">Sudoko Solver<a aria-hidden class="header-link" tabindex="-1"
+                href="#sudoko-solver">#</a></h2>
+        <p>Sudoku is a logic-based combinatorial number-placement puzzle. The objective is to fill a 9x9 grid with digits   from 1 to 9 by obeying the following  rules:</p>
+        <p>1.Each row should contain distinct numbers from 1-9</p>
+        <p>2.Each column should contain distinct numbers from 1-9</p>
+        <p>3.Each 3x3 grid should contain distinct numbers from 1-9</p>
+        <p>Here's a Python solution to the Sudoko Solver problem:</p>
+
+        <pre>
+            <code> def solve_sudoku(board):
+    # Find the next empty cell
+    empty_cell = find_empty_cell(board)
+    
+    # If there are no empty cells left, the puzzle is solved
+    if not empty_cell:
+        return True
+    
+    row, col = empty_cell
+    
+    # Try placing numbers from 1 to 9
+    for num in range(<span class="hljs-number">1</span>, <span class="hljs-number">10</span>):
+        if is_valid_move(board, row, col, num):
+            # If the move is valid, place the number
+            board[row][col] = num
+            
+            # Recursively solve the puzzle with the new number
+            if solve_sudoku(board):
+                return True
+            
+            # If the puzzle cannot be solved with this number, backtrack
+            board[row][col] = <span class="hljs-number">0</span>
+            
+    # If no number works, backtrack
+    return False
+
+def find_empty_cell(board):
+    # Find the first empty cell (cell with 0 value)
+    for row in range(<span class="hljs-number">9</span>):
+        for col in range(<span class="hljs-number">9</span>):
+            if board[row][col] == <span class="hljs-number">0</span>:
+                return (row, col)
+    # If no empty cell is found, return None
+    return None
+
+def is_valid_move(board, row, col, num):
+    # Check if the number is not present in the same row
+    if num in board[row]:
+        return False
+    
+    # Check if the number is not present in the same column
+    for i in range(<span class="hljs-number">9</span>):
+        if board[i][col] == num:
+            return False
+    
+    # Check if the number is not present in the same 3x3 grid
+    start_row, start_col = <span class="hljs-number">3</span> * (row // <span class="hljs-number">3</span>), <span class="hljs-number">3</span> * (col // <span class="hljs-number">3</span>)
+    for i in range(<span class="hljs-number">3</span>):
+        for j in range(<span class="hljs-number">3</span>):
+            if board[i + start_row][j + start_col] == num:
+                return False
+    
+    # If all conditions are satisfied, the move is valid
+    return True
+
+# Example usage:
+board = [
+    [<span class="hljs-number">5</span>, <span class="hljs-number">3</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">7</span> , <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>],
+    [<span class="hljs-number">6</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">9</span>, <span class="hljs-number">5</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>],
+    [<span class="hljs-number">0</span>, <span class="hljs-number">9</span>, <span class="hljs-number">8</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">6</span>, <span class="hljs-number">0</span>],
+    [<span class="hljs-number">8</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">6</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">3</span>],
+    [<span class="hljs-number">4</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">8</span>, <span class="hljs-number">0</span>, <span class="hljs-number">3</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">1</span>],
+    [<span class="hljs-number">7</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">2</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">6</span>],
+    [<span class="hljs-number">0</span>, <span class="hljs-number">6</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">2</span>, <span class="hljs-number">8</span>, <span class="hljs-number">0</span>],
+    [<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">4</span>, <span class="hljs-number">1</span>, <span class="hljs-number">9</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">5</span>],
+    [<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">8</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">7</span>, <span class="hljs-number">9</span>]
+]
+
+if solve_sudoku(board):
+    print("Sudoku puzzle solved successfully:")
+    for row in board:
+        print(row)
+else:
+    print("No solution exists for the given Sudoku puzzle.")
+
+            </code>
+        </pre>
+        <h2>output is</h2>
+        <pre><code>Sudoku puzzle solved successfully:
+[<span class="hljs-number">5</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">6</span>, <span class="hljs-number">7</span>, <span class="hljs-number">8</span>, <span class="hljs-number">9</span>, <span class="hljs-number">1</span>, <span class="hljs-number">2</span>]
+[<span class="hljs-number">6</span>, <span class="hljs-number">7</span>, <span class="hljs-number">2</span>, <span class="hljs-number">1</span>, <span class="hljs-number">9</span>, <span class="hljs-number">5</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">8</span>]
+[<span class="hljs-number">1</span>, <span class="hljs-number">9</span>, <span class="hljs-number">8</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">2</span>, <span class="hljs-number">5</span>, <span class="hljs-number">6</span>, <span class="hljs-number">7</span>]
+[<span class="hljs-number">8</span>, <span class="hljs-number">5</span>, <span class="hljs-number">9</span>, <span class="hljs-number">7</span>, <span class="hljs-number">6</span>, <span class="hljs-number">1</span>, <span class="hljs-number">4</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>]
+[<span class="hljs-number">4</span>, <span class="hljs-number">2</span>, <span class="hljs-number">6</span>, <span class="hljs-number">8</span>, <span class="hljs-number">5</span>, <span class="hljs-number">3</span>, <span class="hljs-number">7</span>, <span class="hljs-number">9</span>, <span class="hljs-number">1</span>]
+[<span class="hljs-number">7</span>, <span class="hljs-number">1</span>, <span class="hljs-number">3</span>, <span class="hljs-number">9</span>, <span class="hljs-number">2</span>, <span class="hljs-number">4</span>, <span class="hljs-number">8</span>, <span class="hljs-number">5</span>, <span class="hljs-number">6</span>]
+[<span class="hljs-number">9</span>, <span class="hljs-number">6</span>, <span class="hljs-number">1</span>, <span class="hljs-number">5</span>, <span class="hljs-number">3</span>, <span class="hljs-number">7</span>, <span class="hljs-number">2</span>, <span class="hljs-number">8</span>, <span class="hljs-number">4</span>]
+[<span class="hljs-number">2</span>, <span class="hljs-number">8</span>, <span class="hljs-number">7</span>, <span class="hljs-number">4</span>, <span class="hljs-number">1</span>, <span class="hljs-number">9</span>, <span class="hljs-number">6</span>, <span class="hljs-number">3</span>, <span class="hljs-number">5</span>]
+[<span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>, <span class="hljs-number">2</span>, <span class="hljs-number">8</span>, <span class="hljs-number">6</span>, <span class="hljs-number">1</span>, <span class="hljs-number">7</span>, <span class="hljs-number">9</span>]
+            </code>
+        </pre>
+        <p>1.solve_sudoku(board): This is the main function that solves the Sudoku puzzle recursively. It uses backtracking to explore all possible solutions.</p>
+
+         <p>2. find_empty_cell(board): This function finds the first empty cell (cell with value 0) in the Sudoku board. If no empty cell is found, it returns None.</p>
+            
+          <p>3.  is_valid_move(board, row, col, num): This function checks if it's valid to place a number (num) in a given row and column of the Sudoku board. It checks if the number is not present in the same row, column, or 3x3 grid.
+            
+            </p>
+
+
+
             
         </div> 
     </main>
@@ -7903,7 +8027,7 @@ Enter b: <span class="hljs-number">5</span>
                 <a href="#backtracking">Backtracking</a>
                 <ul>
                     <li><a href="#N-queens-sum">N Queens Sum</a></li>
-                    <!-- Add more nested sections if necessary -->
+                    <li><a href="#sudoko-solver">Sudoku Solver</a></li>
                 </ul>
             </li>
 
