@@ -1,34 +1,33 @@
+arr = list(map(int, input("Enter the array elements : ").split()))
+
 import math
 
-def jumpSearch( arr , x , n ):
-	
-	step = math.sqrt(n)
-	
+def jump_search(arr, target):
+    n = len(arr)
+    arr.sort()  # Ensure array is sorted
+    step = int(math.sqrt(n))
+    prev = 0
 
-	prev = 0
-	while arr[int(min(step, n)-1)] < x:
-		prev = step
-		step += math.sqrt(n)
-		if prev >= n:
-			return -1
-	
+    while arr[min(step, n)-1] < target:
+        prev = step
+        step += int(math.sqrt(n))
+        if prev >= n:
+            return -1
 
-	while arr[int(prev)] < x:
-		prev += 1
-		
+    while arr[prev] < target:
+        prev += 1
+        if prev == min(step, n):
+            return -1
 
-		if prev == min(step, n):
-			return -1
-	
-	if arr[int(prev)] == x:
-		return prev
-	
-	return -1
+    if arr[prev] == target:
+        return prev
 
-arr = list(map(int,input("Enter the array elements: ").split()))
-x = int(input("enter the number to search: "))
-n = len(arr)
+    return -1
 
-index = jumpSearch(arr, x, n)
+target = int(input("Enter the number to search for: "))
 
-print("Number" , x, "is at index" ,"%.0f"%index)
+index = jump_search(arr, target)
+if index != -1:
+    print(f"{target} found at index {index}.")
+else:
+    print(f"{target} not found in the array.")
