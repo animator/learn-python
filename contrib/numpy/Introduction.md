@@ -21,7 +21,7 @@ pip install numpy
 
 ## Importing NumPy
 
-To access NumPy functions, import it with the alias `np`:
+To access NumPy functions, import it with the alias `np`.
 
 ```python
 import numpy as np
