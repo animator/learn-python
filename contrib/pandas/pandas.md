@@ -11,14 +11,14 @@ __Step 1: Launch Command Prompt__
 
 To open the Start menu, press the Windows key or click the Start button. To access the Command Prompt, type “cmd” in the search bar, click the displayed app, or use Windows key + r, enter “cmd,” and press Enter.
 
-![alt text](https://media.geeksforgeeks.org/wp-content/uploads/20231206151658/pppp.png)
+![cmd](https://github.com/deekshithapalla/learn-python/assets/159523774/af499d2d-a04a-453d-a27e-0d4eefa64748)
 
 __Step 2:Run the command__
 
 Pandas can be installed using PIP by use of the following command in Command Prompt.
     pip install pandas
 
-![alt text](https://media.geeksforgeeks.org/wp-content/uploads/20231206152811/pandas.png)
+![run](https://github.com/deekshithapalla/learn-python/assets/159523774/ed891260-52da-4151-aadf-d248fe6562e0)
 
 __How to verify whether Pandas is Installed or not:__
 
