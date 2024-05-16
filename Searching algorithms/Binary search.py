@@ -1,30 +1,31 @@
-def binarySearch(arr, low, high, x):
 
-    if high >= low:
+def binary_search(arr, target):
+    low = 0
+    high = len(arr) - 1
 
-        mid = low + (high - low) // 2
+    while low <= high:
+        mid = (low + high) // 2
+        mid_val = arr[mid]
 
-        if arr[mid] == x:
+        if mid_val == target:
             return mid
-
-        elif arr[mid] > x:
-            return binarySearch(arr, low, mid-1, x)
-
+        elif mid_val < target:
+            low = mid + 1
         else:
-            return binarySearch(arr, mid + 1, high, x)
+            high = mid - 1
 
+    return -1
+
+def main():
+    arr = list(map(int, input("Enter the array elements: ").split()))
+    arr.sort()
+    target = int(input("Enter the number to search for: "))
+
+    index = binary_search(arr, target)
+    if index != -1:
+        print(f"{target} found at index {index}.")
     else:
-        return -1
+        print(f"{target} not found.")
 
-
-if __name__ == '__main__':
-    arr = list(map(int,input("Enter the array elements: ").split()))
-    x = int(input("enter the number to search: "))
-    
-    # Function call
-    result = binarySearch(arr, 0, len(arr)-1, x)
-    
-    if result != -1:
-        print("Element is present at index", result)
-    else:
-        print("Element is not present in array")
+if __name__ == "__main__":
+    main()
