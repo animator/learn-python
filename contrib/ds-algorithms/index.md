@@ -1,3 +1,3 @@
 # List of sections
 
-- [Sorting Algorithms](Sorting Algorithms.md)
+- [Sorting Algorithms](SortingAlgorithms.md)
