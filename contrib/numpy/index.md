@@ -1,3 +1,3 @@
 # List of sections
 
-- [Introduction](Introduction.md)
+- [Introduction](introduction.md)
