@@ -26,7 +26,6 @@ This guide will walk you through a fundamental neural network implementation in 
 
 | `Neuron` cells forming the humand nervous system | `Perceptron` inspired from human brain |
 | :----------------------------------------------- | -------------------------------------: |
-| <img align="left" width="300" height="150" src="https://bit.ly/neu-ron"> | <img align="right" width="300" height="150" src="https://bit.ly/nn-perceptron"> |
 | Neurons are nerve cells that send messages all over your body to allow you to do everything from breathing to talking, eating, walking, and thinking. |  The perceptron is a mathematical model of a biological neuron. Performing heavy computations to think like humans. |
 | Neuron collects signals from dendrites. | The first layer is knownn as Input Layer, acting like dendritres to receive the input signal. |
 | Synapses are the connections between neurons where signals are transmitted. | Weights represent synapses. |
@@ -44,27 +43,16 @@ Neurons in ANNs are organized into layers:
 * **Input Layer:** Receives the raw data.
 * **(n) Hidden Layers:** (Optional) Intermediate layers where complex transformations occur. They learn to detect patterns and features in the data.
 * **Output Layer:** Produces the final result (prediction or classification).
-<p align="center">
-  <img width="400" height="250" src="https://bit.ly/nn-architecture">
-</p>
 
 ### Weights and Biases
 - For each input $(x_i)$, a weight $(w_i)$ is associated with it. Weights, multiplied with input units $(w_i \cdot x_i)$, determine the influence of one neuron's output on another.
 - A bias $(b_i)$ is added to help influence the end product, giving the equation as $(w_i \cdot x_i + b_i)$.
 - During training, the network adjusts these weights and biases to minimize errors and improve its predictions.
 
-<p align="center">
-  <img width="300" height="300" src="https://bit.ly/nn-WnB">
-</p>
-
 ### Activation Functions
 - An activation function is applied to the result to introduce non-linearity in the model, allowing ANNs to learn more complex relationships from the data.
 - The resulting equation: $y = f(g(x))$, determines whether the neuron will "fire" or not, i.e., if its output will be used as input for the next neuron.
 - Common activation functions include the sigmoid function, tanh (hyperbolic tangent), and ReLU (Rectified Linear Unit).
-
-<p align="center">
-  <img width="400" height="200" src="https://miro.medium.com/max/1280/1*xYCVODGB7RwJ9RynebB2qw.gif">
-</p>
 
 ### Forward and Backward Propagation
 - **Flow of Information:** All the above steps are part of Forward Propagation. It gives the output equation as $y = f\left(\sum_{i=1}^n w_i x_i + b_i\right)$
@@ -74,10 +62,6 @@ Neurons in ANNs are organized into layers:
   \delta_{ij}(E) = \frac{\partial E}{\partial w_{ij}} = \frac{\partial E}{\partial \hat{y}_j} \cdot \frac{\partial \hat{y}_j}{\partial \theta_j} \cdot \frac{\partial \theta_j}{\partial w_{ij}}
   $
   where $E$ is the error, $\hat{y}_j$ is the predicted output, $\theta_j$ is the input to the activation function of the $j^{th}$ neuron, and $w_{ij}$ is the weight from neuron $i$ to neuron $j$.
-
-<p align="center">
-  <img width="400" height="200" src="https://bit.ly/nn-FnB">
-</p>
 
 
 ## Building From Scratch
@@ -167,6 +151,3 @@ To understand how well our model is learning, let's visualize the training loss 
 model = NeuralNetwork(input_size, hidden_layers, hidden_neurons, output_size)
 model.train(X, y, 100)
 ```
-<p align="center">
-  <img width="500" height="300" src="https://bit.ly/nn-output">
-</p>
