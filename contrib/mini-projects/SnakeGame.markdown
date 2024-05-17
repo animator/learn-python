@@ -1,16 +1,4 @@
----
-jupyter:
-  colab:
-  kernelspec:
-    display_name: Python 3
-    name: python3
-  language_info:
-    name: python
-  nbformat: 4
-  nbformat_minor: 0
----
 
-::: {.cell .code colab="{\"base_uri\":\"https://localhost:8080/\"}" id="hOfFUL-BmVYE" outputId="2816bbdc-5ba6-4696-8ae1-2fd67638bfd7"}
 ``` python
 from tkinter import *
 import random
@@ -129,7 +117,3 @@ if __name__ == "__main__":
     game.mainloop()
 ```
 
-::: {.output .stream .stdout}
-    hi
-:::
-:::
