@@ -56,3 +56,8 @@ Output:
 1   John  28
 ```
 
+### Usage of Pandas DataFrame:
+
+- Can be used to store and analyze financial data, such as stock prices, trading data, and economic data.
+- Can be used to store and analyze sensor data, such as data from temperature sensors, motion sensors, and GPS sensors.
+- Can be used to store and analyze log data, such as web server logs, application logs, and system logs
