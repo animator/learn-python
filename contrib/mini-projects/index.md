@@ -1,3 +1,3 @@
 # List of sections
 
-- [Section title](filename.md)
+- [QR Code Encoder Decoder](qr_code_encoder_decoder.md)
