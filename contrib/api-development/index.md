@@ -1,3 +1,3 @@
 # List of sections
 
-- [Section title](filename.md)
+- [API Methods](api-methods.md)
