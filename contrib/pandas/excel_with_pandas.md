@@ -5,11 +5,20 @@ The Pandas DataFrame is a two-dimensional, size-mutable, and possibly heterogene
 In the real world, Pandas DataFrames are formed by importing datasets from existing storage, which can be a Excel file, a SQL database or CSV file. Pandas DataFrames may be constructed from lists, dictionaries, or lists of dictionaries, etc.
 
 
+Features of Pandas `DataFrame`:
+
+- **Size mutable**: DataFrames are mutable in size, meaning that new rows and columns can be added or removed as needed.
+- **Labeled axes**: DataFrames have labeled axes, which makes it easy to keep track of the data.
+- **Arithmetic operations**: DataFrames support arithmetic operations on rows and columns.
+- **High performance**: DataFrames are highly performant, making them ideal for working with large datasets.
+
+
 ### Installation of libraries
 
 `pip install pandas` <br/>
 `pip install xlrd`
 
+- **Note**: The `xlrd` library is used for Excel operations.
 
 Example for reading data from an Excel File:
 
