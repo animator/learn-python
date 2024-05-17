@@ -21,10 +21,10 @@ d = pd.DataFrame(l)
 print(d)
 ```
 Output:
-'''python
+```python
     Name  Age
 0   John   12
-'''
+```
 
 - **Note:** The above program can also be used for loading/retrieving the data.
 
@@ -43,9 +43,9 @@ print(L)
 ```
 
 Output:
-'''python
+```python
     Name  Age
 0   Bob   12
 1   John  28
-'''
+```
 
