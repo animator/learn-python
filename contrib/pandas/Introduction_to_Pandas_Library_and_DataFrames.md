@@ -1,8 +1,5 @@
 # Introduction_to_Pandas_Library_and_DataFrames
 
-<img src = "panda_image.jpeg"/>
-
-
 > Content Creator - Krishna Kaushik
 
 **As you have learnt Python Programming , now it's time for some applications.**
