@@ -1,20 +1,8 @@
----
-jupyter:
-  colab:
-  kernelspec:
-    display_name: Python 3
-    name: python3
-  language_info:
-    name: python
-  nbformat: 4
-  nbformat_minor: 0
----
 
-::: {.cell .markdown id="WpcHLEIgeEdz"}
 **PYTHON OOP CONCEPTS**
 :::
 
-::: {.cell .markdown id="3j1W5YpNeEmS"}
+
 In Python object-oriented Programming (OOPs) is a programming paradigm
 that uses objects and classes in programming. It aims to implement
 real-world entities like inheritance, polymorphisms, encapsulation, etc.
@@ -36,37 +24,40 @@ can access this data.
 5.  Inheritance in Python
 
 6.  Data Abstraction in Python
-:::
+    :::
 
-::: {.cell .markdown id="3KQXMPlVeEyT"}
+
 Python Class A class is a collection of objects. A class contains the
 blueprints or the prototype from which the objects are being created. It
 is a logical entity that contains some attributes and methods.
-:::
 
-::: {.cell .code execution_count="2" id="6CdZhHSMerae"}
-``` python
+
+
+```python
 #Simple Class in Python
 class Dog:
     pass
 ```
+
 :::
 
-::: {.cell .markdown id="y5t7jyHAfAHl"}
+
 **Python Objects** In object oriented programming Python, The object is
 an entity that has a state and behavior associated with it. It may be
 any real-world object like a mouse, keyboard, chair, table, pen, etc.
 Integers, strings, floating-point numbers, even arrays, and
 dictionaries, are all objects.
-:::
 
-::: {.cell .code execution_count="3" id="u8Y0G-hse-lm"}
-``` python
+
+
+
+```python
 obj = Dog()
 ```
-:::
 
-::: {.cell .markdown id="_FtRAPlNfLkb"}
+
+
+
 **The Python **init** Method **
 
 The **init** method is similar to constructors in C++ and Java. It is
@@ -74,8 +65,9 @@ run as soon as an object of a class is instantiated. The method is
 useful to do any initialization you want to do with your object.
 :::
 
-::: {.cell .code execution_count="4" colab="{\"base_uri\":\"https://localhost:8080/\"}" id="aMmXUxLHfSz6" outputId="ed23bfbd-445a-4d02-ebba-c210471e0af2"}
-``` python
+
+
+```python
 class Dog:
 
     # class attribute
@@ -98,15 +90,7 @@ print("My name is {}".format(Rodger.name))
 print("My name is {}".format(Tommy.name))
 ```
 
-::: {.output .stream .stdout}
-    Rodger is a mammal
-    Tommy is also a mammal
-    My name is Rodger
-    My name is Tommy
-:::
-:::
 
-::: {.cell .markdown id="YFMnh417fZI6"}
 **Inheritance**
 
 In Python object oriented Programming, Inheritance is the capability of
@@ -117,17 +101,18 @@ base class or parent class.
 
 Types of Inheritances:
 
--   Single Inheritance
+- Single Inheritance
 
--   Multilevel Inheritance
+- Multilevel Inheritance
 
--   Multiple Inheritance
+- Multiple Inheritance
 
--   Hierarchial Inheritance
-:::
+- Hierarchial Inheritance
+  :::
 
-::: {.cell .code execution_count="6" colab="{\"base_uri\":\"https://localhost:8080/\"}" id="PeQoseXogE2f" outputId="9b3a069e-c6f0-41b0-b5f3-704aa0f95160"}
-``` python
+
+
+```python
 #Single Inheritance
 # Parent class
 class Animal:
@@ -159,14 +144,10 @@ dog.make_sound()
 cat.make_sound()
 ```
 
-::: {.output .stream .stdout}
-    Buddy says Woof
-    Whiskers says Meow
-:::
-:::
 
-::: {.cell .code execution_count="7" colab="{\"base_uri\":\"https://localhost:8080/\"}" id="CKEMq39BgSu9" outputId="b252ac43-6116-4a88-9ac9-0475f54e63c0"}
-``` python
+
+
+```python
 #Multilevel Inheritance
 # Parent class
 class Animal:
@@ -195,15 +176,11 @@ german_shepherd.bark()   # Accessing method from the Dog class
 german_shepherd.guard()  # Accessing method from the GermanShepherd class
 ```
 
-::: {.output .stream .stdout}
-    Rocky speaks
-    Rocky barks
-    Rocky guards
-:::
-:::
 
-::: {.cell .code execution_count="8" colab="{\"base_uri\":\"https://localhost:8080/\"}" id="wZ5qxZXBgdQ6" outputId="cd1c9d75-790c-49b3-8040-3334b896d779"}
-``` python
+
+
+
+```python
 #Hierarchial Inheritance
 # Parent class
 class Animal:
@@ -234,16 +211,9 @@ cat.speak()  # Accessing method from the Animal class
 cat.meow()   # Accessing method from the Cat class
 ```
 
-::: {.output .stream .stdout}
-    Buddy speaks
-    Buddy barks
-    Whiskers speaks
-    Whiskers meows
-:::
-:::
 
-::: {.cell .code execution_count="9" colab="{\"base_uri\":\"https://localhost:8080/\"}" id="8nPMri12glO5" outputId="a3c93e8c-f10f-4cd7-c402-3500342c9e28"}
-``` python
+
+```python
 #Multiple Inheritance
 # Parent class 1
 class Herbivore:
@@ -269,20 +239,16 @@ omnivore.eat_meat()    # Accessing method from Carnivore
 omnivore.eat()         # Accessing method from Omnivore
 ```
 
-::: {.output .stream .stdout}
-    Eating plants
-    Eating meat
-    Eating everything
-:::
-:::
 
-::: {.cell .markdown id="KSw-WMePgvCa"}
+
+
 **Polymorphism** In object oriented Programming Python, Polymorphism
 simply means having many forms
 :::
 
-::: {.cell .code execution_count="10" colab="{\"base_uri\":\"https://localhost:8080/\"}" id="cIYtM2_Pg8Ja" outputId="e887848d-060a-4317-a805-cfb0ca4e187f"}
-``` python
+
+
+```python
 class Bird:
 
     def intro(self):
@@ -315,17 +281,8 @@ obj_ost.intro()
 obj_ost.flight()
 ```
 
-::: {.output .stream .stdout}
-    There are many types of birds.
-    Most of the birds can fly but some cannot.
-    There are many types of birds.
-    Sparrows can fly.
-    There are many types of birds.
-    Ostriches cannot fly.
-:::
-:::
 
-::: {.cell .markdown id="NzsPIifmg-FI"}
+
 **Python Encapsulation**
 
 In Python object oriented programming, Encapsulation is one of the
@@ -336,10 +293,8 @@ and can prevent the accidental modification of data. To prevent
 accidental change, an object's variable can only be changed by an
 object's method. Those types of variables are known as private
 variables.
-:::
 
-::: {.cell .code execution_count="11" colab="{\"base_uri\":\"https://localhost:8080/\"}" id="etbhALMHhGb9" outputId="75f27d20-7cee-4c85-b722-b9beb5ffe2b8"}
-``` python
+```python
 class Car:
     def __init__(self, make, model, year):
         self._make = make  # Encapsulated attribute with single underscore
@@ -385,23 +340,17 @@ my_car.increment_odometer(50)
 print("Odometer Reading after increment:", my_car.get_odometer_reading())
 ```
 
-::: {.output .stream .stdout}
-    Make: Toyota
-    Model: Camry
-    Year: 2021
-    Odometer Reading: 100
-    Odometer Reading after increment: 150
-:::
-:::
 
-::: {.cell .markdown id="hJkQ9Tn5hUEV"}
+
+
 **Data Abstraction** It hides unnecessary code details from the user.
 Also, when we do not want to give out sensitive parts of our code
 implementation and this is where data abstraction came.
-:::
 
-::: {.cell .code execution_count="12" colab="{\"base_uri\":\"https://localhost:8080/\"}" id="FoMRMWEEhc-Z" outputId="3a77fd0d-8116-4997-c35f-dfebfc786b72"}
-``` python
+
+
+
+```python
 from abc import ABC, abstractmethod
 
 # Abstract class defining the interface for a Shape
@@ -451,8 +400,3 @@ print(f"{rectangle.name}: Area = {rectangle.area()}, Perimeter = {rectangle.peri
 print(f"{circle.name}: Area = {circle.area()}, Perimeter = {circle.perimeter()}")
 ```
 
-::: {.output .stream .stdout}
-    Rectangle: Area = 20, Perimeter = 18
-    Circle: Area = 28.259999999999998, Perimeter = 18.84
-:::
-:::
