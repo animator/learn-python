@@ -1,6 +1,6 @@
 Confusion Matrix - A confusion matrix is a fundamental performance evaluation tool used in machine learning to assess the accuracy of a classification model. It is an N x N matrix, where N represents the number of target classes.
 
-For binary classification, it results in a 2 x 2 matrix that outlines four key parameters: 
+For binary classification, it results in a 2 x 2 matrix that outlines four key parameters:
 1. True Positive (TP) - The predicted value matches the actual value, or the predicted class matches the actual class. 
 For example - the actual value was positive, and the model predicted a positive value.
 2. True Negative (TN) - The predicted value matches the actual value, or the predicted class matches the actual class. 
