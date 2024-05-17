@@ -24,12 +24,13 @@ New class means a new type of object that is defined by the user. Each class can
 
 ### Class Definition Syntax:
 
-''' class ClassName:
-   # Statement-1
+'''python
+class ClassName:
+   Statement-1
    .
    .
    .
-   # Statement-N 
+   Statement-N 
 
 #### Example of an empty class:
 '''
@@ -60,26 +61,22 @@ When we call a method of this object as myobject.method(arg1, arg2), this is aut
 ## **The Python __init__ Method**
 The __init__ method is similar to constructors in C++ and Java. It is run as soon as an object of a class is instantiated. The method is useful to do any initialization you want to do with your object. Now let us define a class and create some objects using the self and __init__ method.
 
-'''
+'''python
 class Dog:
 
-    # class attribute
+    
     attr1 = "mammal"
 
-    # Instance attribute
+    
     def __init__(self, name):
         self.name = name
 
-
-# Object instantiation
 Rodger = Dog("Rodger")
 Tommy = Dog("Tommy")
 
-# Accessing class attributes
 print("Rodger is a {}".format(Rodger.__class__.attr1))
 print("Tommy is also a {}".format(Tommy.__class__.attr1))
 
-# Accessing instance attributes
 print("My name is {}".format(Rodger.name))
 print("My name is {}".format(Tommy.name))
 
@@ -97,25 +94,21 @@ Here, The Dog class is defined with two attributes:
 The speak method is defined within the Dog class. This method prints a string that includes the name of the dog instance.
 The driver code starts by creating two instances of the Dog class: Rodger and Tommy. The __init__ method is called for each instance to initialize their name attributes with the provided names. The speak method is called in both instances (Rodger.speak() and Tommy.speak()), causing each dog to print a statement with its name.
 
-'''
+'''python
 class Dog:
 
-    # class attribute
     attr1 = "mammal"
 
-    # Instance attribute
     def __init__(self, name):
         self.name = name
         
     def speak(self):
         print("My name is {}".format(self.name))
 
-# Driver code
-# Object instantiation
+
 Rodger = Dog("Rodger")
 Tommy = Dog("Tommy")
 
-# Accessing class methods
 Rodger.speak()
 Tommy.speak()
 
@@ -138,11 +131,10 @@ In Python object oriented Programming, Inheritance is the capability of one clas
 
 Above, we have created two classes i.e. Person (parent class) and Employee (Child Class). The Employee class inherits from the Person class. We can use the methods of the person class through the employee class as seen in the display function in the above code. A child class can also modify the behavior of the parent class as seen through the details() method.
 
-'''
+'''python
 # parent class
 class Person(object):
 
-    # __init__ is known as the constructor
     def __init__(self, name, idnumber):
         self.name = name
         self.idnumber = idnumber
@@ -155,13 +147,11 @@ class Person(object):
         print("My name is {}".format(self.name))
         print("IdNumber: {}".format(self.idnumber))
     
-# child class
 class Employee(Person):
     def __init__(self, name, idnumber, salary, post):
         self.salary = salary
         self.post = post
 
-        # invoking the __init__ of the parent class
         Person.__init__(self, name, idnumber)
         
     def details(self):
@@ -170,11 +160,8 @@ class Employee(Person):
         print("Post: {}".format(self.post))
 
 
-# creation of an object variable or an instance
 a = Employee('Rahul', 886012, 200000, "Intern")
 
-# calling a function of the class Person using
-# its instance
 a.display()
 a.details()
 
@@ -186,7 +173,7 @@ IdNumber: 886012
 Post: Intern
 
 Here is another code for better understanding
-'''
+'''python
 class Employee:
 
     raise_amt = 1.04
@@ -253,7 +240,7 @@ In object oriented Programming Python, Polymorphism simply means having many for
 ### **Polymorphism in Python***
 This code demonstrates the concept of Python oops inheritance and method overriding in Python classes. It shows how subclasses can override methods defined in their parent class to provide specific behavior while still inheriting other methods from the parent class.
 
-'''
+'''python
 class Bird:
   
     def intro(self):
@@ -301,48 +288,39 @@ By using encapsulation, you can control how the data within an object is accesse
 A class in Python is an example of encapsulation, as it encapsulates data (attributes) and functions (methods) that operate on that data within a single unit.
 
 Here is an example to illustrate encapsulation:
-'''
+'''python
 class Car:
     def __init__(self, make, model, year):
-        self.__make = make  # Private variable
-        self.__model = model  # Private variable
-        self.__year = year  # Private variable
+        self.__make = make 
+        self.__model = model 
+        self.__year = year 
 
-    # Getter method for make
     def get_make(self):
         return self.__make
 
-    # Setter method for make
     def set_make(self, make):
         self.__make = make
 
-    # Getter method for model
     def get_model(self):
         return self.__model
 
-    # Setter method for model
     def set_model(self, model):
         self.__model = model
 
-    # Getter method for year
     def get_year(self):
         return self.__year
 
-    # Setter method for year
     def set_year(self, year):
         self.__year = year
 
-    # Method to display car details
     def display_info(self):
         return f"{self.__year} {self.__make} {self.__model}"
 
-# Creating an instance of the Car class
 my_car = Car("Toyota", "Corolla", 2020)
 
-# Accessing and modifying data through methods
-print(my_car.display_info())  # Output: 2020 Toyota Corolla
+print(my_car.display_info())  
 my_car.set_year(2021)
-print(my_car.get_year())  # Output: 2021
+print(my_car.get_year()) 
 
 ## **Data Abstraction **
 Data abstraction in Python hides unnecessary details from the user, focusing only on the essential features. This is especially useful when we want to shield sensitive parts of our code implementation. Data abstraction can be achieved through the use of abstract classes.
@@ -350,7 +328,7 @@ Data abstraction in Python hides unnecessary details from the user, focusing onl
 An abstract class is a class that cannot be instantiated and typically includes one or more abstract methods. These methods are declared, but contain no implementation. Subclasses of the abstract class must provide implementations for all abstract methods.
 
 Here is an example to illustrate data abstraction using abstract classes in Python:
-'''
+'''python
 from abc import ABC, abstractmethod
 
 class Animal(ABC):
@@ -366,13 +344,9 @@ class Cat(Animal):
     def make_sound(self):
         return "Meow"
 
-# Trying to instantiate the abstract class will raise an error
-# animal = Animal()  # This will raise a TypeError
-
-# Creating instances of the concrete subclasses
 dog = Dog()
 cat = Cat()
 
-print(dog.make_sound())  # Output: Bark
-print(cat.make_sound())  # Output: Meow
+print(dog.make_sound())  
+print(cat.make_sound())  
 
