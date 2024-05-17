@@ -26,8 +26,6 @@ Output:
 0   John   12
 ```
 
-- **Note:** The above program can also be used for loading/retrieving the data.
-
 
 Example for Inserting Data into Excel File:
 
