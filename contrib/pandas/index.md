@@ -1,3 +1,3 @@
-# Introduction to pandas and data frames in pandas
+# List of sections
 
-### File name  -"Introduction_to_Pandas_Library_and_DataFrames.md"
+* Introduction_to_Pandas_Library_and_DataFrames.md
