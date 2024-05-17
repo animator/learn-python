@@ -7,7 +7,7 @@ In the real world, Pandas DataFrames are formed by importing datasets from exis
 
 ### Installation of libraries
 
-`pip install pandas`
+`pip install pandas` <br/>
 `pip install xlrd`
 
 
