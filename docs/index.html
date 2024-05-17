@@ -957,6 +957,36 @@
                         <li><a href="#sample-programs-1">Sample Programs</a></li>
                     </ul>
                 </li>
+                 <li><a href="#tree-data-structure">Tree Data Structure</a>
+                    <ul>
+                        <li><a herf="#what-is-tree">What is a Tree?</a></li>
+                        <li><a herf="#terms-related-to-tree">Terms related to Tree Data Structure</a></li>
+                        <li><a herf="#implementation-of-tree">Implementation of Tree</a></li>
+                        <li><a herf="#types-of-trees">Types of Tree</a></li>
+                        <li><a herf="#binary-tree">Binary Tree</a>
+                            <ul>
+                                <li><a herf="#tree-traversal">Tree traversal</a>
+                                <ul>
+                                    <li><a herf="#preorder-traversal">Pre-order Traversal</a></li>
+                                    <li><a herf="#postorder-traversal">Post-order Traversal</a></li>
+                                    <li><a herf="#inorder-traversal">Inorder Traversal</a></li>
+                                </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li><a herf="#binary-search-tree">Binary Search Tree</a>
+                            <ul>
+                                <li><a herf="#searching-in-bst">Searching in BST</a></li>
+                                <li><a herf="#insertion-in-bst">Insertion in BST</a></li>
+                                <li><a herf="#deletion-in-bst">Deletion in BST</a></li>
+                            </ul>
+                        </li>
+                        <li><a herf="#avl-tree">AVL Tree</a></li>
+                        <li><a herf="#red-black-tree">Red-Black Tree</a></li>
+                        <li><a herf="#b-trees">B Tree</a></li>
+                        <li><a herf="#b+tree">B+ Tree</a></li>
+                    </ul>
+                </li>
                 <li><a href="#python-standard-library">Python Standard Library</a>
                     <ul>
                         <li><a href="#built-in-functions">Built-in Functions</a></li>
@@ -6046,6 +6076,380 @@ Anil Raj - 12000
 Dinesh Kumar - 15000
 Sam Singh - 10000
 </code></pre>
+             <h1 id="tree-data-structure">Tree Data Structure<a aria-hidden class="header-link" tabindex="-1" 
+                href="#tree-data-structure">#</a></h1>
+            <h2 id="what-is-tree">What is a Tree?<a aria-hidden class="header-link" tabindex="-1"
+                href="#what-is-tree">#</a></h2>
+            <p>A tree is a non-linear abstract data type with a hierarchy-based structure. It consists of nodes (where the data is stored) that are connected via links. The tree data structure stems from a single node called a root node and has subtrees connected to the root.</p>
+            <p><img src="images/tree.png" alt="Basic Tree Structure"></p>
+            <h2 id="terms-related-to-tree">Terms Related to Tree Data Structure<a aria-hidden class="header-link" tabindex="-1"
+                href="#terms-related-to-tree">#</a></h2>
+            <p>Some basic terms related to Tree Data Structure are:</p>
+            <ul>
+                <li><b>Root: </b>The root node is the topmost node in the tree hierarchy. In other words, the root node is the one that doesn't have any parent. In the above structure, node numbered 1 is the root node of the tree. If a node is directly linked to some other node, it would be called a parent-child relationship.</li>
+                <li><b>Child node: </b>If the node is a descendant of any node, then the node is known as a child node.</li>
+                <li><b>Parent: </b>If the node contains any sub-node, then that node is said to be the parent of that sub-node.</li>
+                <li><b>Sibling: </b>The nodes that have the same parent are known as siblings.</li>
+                <li><b>Leaf Node: </b>The node of the tree, which doesn't have any child node, is called a leaf node. A leaf node is the bottom-most node of the tree. There can be any number of leaf nodes present in a general tree. Leaf nodes can also be called external nodes.</li>
+                <li><b>Internal nodes: </b>A node has atleast one child node known as an internal</li>
+                <li><b>Ancestor node: </b>An ancestor of a node is any predecessor node on a path from the root to that node. The root node doesn't have any ancestors. In the tree shown in the above image, nodes 1, 2, and 5 are the ancestors of node 10.</li>
+                <li><b>Descendant: </b>The immediate successor of the given node is known as a descendant of a node. In the above figure, 10 is the descendant of node 5.</li>
+            </ul>
+            <p>Properties of Tree Data Structure</p>
+            <ul>
+                <li><b>Recursive data structure: </b>The tree is also known as a recursive data structure. A tree can be defined as recursively because the distinguished node in a tree data structure is known as a root node. The root node of the tree contains a link to all the roots of its subtrees. Recursion means reducing something in a self-similar manner. So, this recursive property of the tree data structure is implemented in various applications.</li>
+                <li><b>Number of edges: </b>If there are n nodes, then there would n-1 edges. Each arrow in the structure represents the link or path. Each node, except the root node, will have atleast one incoming link known as an edge. There would be one link for the parent-child relationship.</li>
+                <li><b>Depth of node x: </b>The depth of node x can be defined as the length of the path from the root to the node x. One edge contributes one-unit length in the path. So, the depth of node x can also be defined as the number of edges between the root node and the node x. The root node has 0 depth.</li>
+                <li><b>Height of node x:</b>The height of node x can be defined as the longest path from the node x to the leaf node.</li>
+            </ul>
+            <h2 id="implementation-of-tree">Implementation of Tree<a aria-hidden class="header-link" tabindex="-1"
+                href="#implementation-of-tree">#</a></h2>
+            <p>The tree data structure can be created by creating the nodes dynamically with the help of the pointers. The tree in the memory can be represented as shown below:</p>
+            <p><img src="images/Memorytree.png" alt="Tree in Memory"></p>
+            <p>In Python, the structure of a node can be defined as:</p>
+            <pre><code class="hljs language-python">
+                <span class>class Node:</span>
+                <span class>def __init__(self, data):</span>
+                <span class>self.data = data</span>
+                <span class>self.left = None</span>
+                <span class>self.right = None</span>
+            </code></pre>
+            <p>The above structure can only be defined for the binary trees because the binary tree can have utmost two children, and generic trees can have more than two children. The structure of the node for generic trees would be different as compared to the binary tree.</p>
+            <h2 id="types-of-tree">Types of Tree<a aria-hidden class="header-link" tabindex="-1"
+                href="#types-of-tree">#</a></h2>
+            <p>There are various types of trees that are used in different applications. Some of the most common types of trees are:</p>
+            <ol type="1">
+                <li><a herf="#binary-tree">Binary Tree</a><li>
+                <li><a herf="#binary-search-tree">Binary Search Tree</a></li>
+                <li><a herf="#avl-tree">AVL Tree</a></li>
+                <li><a herf="#red-black-tree">Red-Black Tree</a></li>
+                <li><a herf="#b-tree">B Tree</a></li>
+                <li><a herf="b+tree">B+ Tree</a></li>
+            </ol>
+            <h2 id="binary-tree">Binary Tree<a aria-hidden class="header-link" tabindex="-1"
+                href="#binary-tree">#</a></h2>
+            <p> Here, binary name itself suggests two numbers, i.e., 0 and 1. In a binary tree, each node in a tree can have utmost two child nodes. Here, utmost means whether the node has 0 nodes, 1 node or 2 nodes. Binary Trees are general trees in which the root node can only hold up to maximum 2 subtrees: left subtree and right subtree.</p>
+            <p><img src="images/binary-tree.png" alt="A Binary Tree"></p>
+            <br>
+            <h3 id="tree-traversal">Tree Traversal<a aria-hidden class="header-link" tabindex="-1"
+                href="#tree-traversal">#</a></h3>
+            <p>Traversal is a process to visit all the nodes of a tree and may print their values too. Because, all nodes are connected via edges (links) we always start from the root (head) node. That is, we cannot randomly access a node in a tree. There are three ways which we use to traverse a tree: </p>
+            <ul>
+                <li><a href="#preorder-traversal">Pre-order Traversal</li>
+                <li><a href="#postorder-traversal">Post-order Traversal</li>
+                <li><a href="#inorder-traversal">Inorder Traversal</li>        
+            </ul>
+            <br>
+            <h3 id="preorder-traversal">Pre-order Traversal<a aria-hidden class="header-link" tabindex="-1"
+                href="#preorder-traversal">#</a></h3>
+            <p>In this traversal method, the root node is visited first, then the left subtree and finally the right subtree.</p>
+            <p>Algorithm:</p>
+            <ol type="1">
+                <li>Repeat Steps 2 to 4 while TREE != NULL</li>
+                <li>Write TREE.DATA</li>
+                <li>PREORDER(TREE.LEFT)</li>
+                <li>PREORDER(TREE.RIGHT)
+                    [END OF LOOP]
+                </li>
+                <li>END</li>
+            </ol>
+            <p></p>
+            <p>Python Code:</p>
+            <pre><code class="hljs language-python">def Preorder_Traversal(root):
+    if root:
+        print(root.data)
+        Preorder_Traversal(root.left)
+        Preorder_Traversal(root.right)
+</code></pre>
+            <p>Example:</p>
+            <p><img src="images/preorder-traversal.png" alt="Example of Pre-order Traversal"></p>
+            <p></p>
+            <h3 id="postorder-traversal">Post-order Traversal<a aria-hidden class="header-link" tabindex="-1"
+                href="#postorder-traversal">#</a></h3>
+            <p>In this traversal method, the root node is visited last, hence the name. First we traverse the left subtree, then the right subtree and finally the root node.</p>
+            <p>Algorithm:</p>
+            <p>Until all nodes are traversed-
+            <ol type="1">
+                <li>Recursively traverse left subtree.</li>
+                <li>Recursively traverse right subtree.</li>
+                <li>Visit root node.</li>
+            </ol>
+            <p></p>
+            <p>Python Code:</p>
+            <pre><code class="hljs language-python">def Postorder_Traversal(root):
+    if root:
+        Postorder_Traversal(root.left)
+        Postorder_Traversal(root.right)
+        print(root.data)
+</code></pre>
+            <p>Example:</p>
+            <p><img src="images/postorder-traversal.png" alt="Example of Post-order Traversal"></p>
+            <p></p>
+            <h3 id="inorder-traversal">Inorder Traversal<a aria-hidden class="header-link" tabindex="-1"
+                href="#inorder-traversal">#</a></h3>
+            <p>In this traversal method, the left subtree is visited first, then the root and later the right sub-tree. We should always remember that every node may represent a subtree itself.</p>
+            <p>Algorithm:</p>
+            <ol type="1">
+                <li>Recursively traverse left subtree.</li>
+                <li>Visit root node.</li>
+                <li>Recursively traverse right subtree.</li>
+            </ol>
+            <p></p>
+            <p>Python Code:</p>
+            <pre><code class="hljs language-python">def Inorder_Traversal(root):
+    if root:
+        Inorder_Traversal(root.left)
+        print(root.data)
+        Inorder_Traversal(root.right)
+</code></pre>
+            <p>Example:</p>
+            <p><img src="images/inorder-traversal.png" alt="Example of Inorder Traversal"></p>
+            <p></p>
+            <h2 id="binary-search-tree">Binary Search Tree<a aria-hidden class="header-link" tabindex="-1"
+                href="#binary-search-tree">#</a></h2>
+            <p>A binary search tree follows some order to arrange the elements. In a Binary search tree, the value of left node must be smaller than the parent node, and the value of right node must be greater than the parent node. This rule is applied recursively to the left and right subtrees of the root.</p>
+            <h4>Advantages of BST:</h4>
+            <ul>
+                <li>Searching an element in the Binary search tree is easy as we always have a hint that which subtree has the desired element.</li>
+                <li>As compared to array and linked lists, insertion and deletion operations are faster in BST.</li>
+            </ul>
+            <h4>Basic Operations of BST</h4>
+            <ul>
+                <li><a href="searching-in-bst">Searching in BST</a></li>
+                <li><a href="insertion-in-bst">Insertion in BST</a></li>
+                <li><a href="deletion-in-bst">Deletion in BST</a></li>
+            </ul>
+            <h3 id="searching-in-bst">Searching in BST<a aria-hidden class="header-link" tabindex="-1"
+                href="#searching-in-bst">#</a></h3>
+            <p>Searching means to find or locate a specific element or node in a data structure. In Binary search tree, searching a node is easy because elements in BST are stored in a specific order. The steps of searching a node in Binary Search tree are listed as follows</p>
+            <ol type="1">
+                <li>First, compare the element to be searched with the root element of the tree.</li>
+                <li>If root is matched with the target element, then return the node's location.</li>
+                <li>If it is not matched, then check whether the item is less than the root element, if it is smaller than the root element, then move to the left subtree.</li>
+                <li>If it is larger than the root element, then move to the right subtree.</li>
+                <li>Repeat the above procedure recursively until the match is found.</li>
+                <li>If the element is not found or not present in the tree, then return NULL</li>
+            </ol>
+            <p>Example: </p>
+            <p><img src="images/searching-bst.gif" alt="Searching in BST"></p>
+            <p>Suppose we have to find a number n in the above binary tree. So first we will compare n with the root of the tree. If the n is equal to the root then return the node's location. If n is smaller than the root, search in the left subtree or if n is larger than the root, search in the right subtree. Search recursively in the subtree until the node with same data is found. If not present in the tree, return "NOT FOUND!"</p>
+            <p></p>
+            <h3 id="insertion-in-bst">Insertion in BST<a aria-hidden class="header-link" tabindex="-1"
+                href="#insertion-in-bst">#</a></h3>
+            <p>A new key in BST is always inserted at the leaf. To insert an element in BST, we have to start searching from the root node; if the node to be inserted is less than the root node, then search for an empty location in the left subtree. Else, search for the empty location in the right subtree and insert the data. Insert in BST is similar to searching, as we always have to maintain the rule that the left subtree is smaller than the root, and right subtree is larger than the root.</p>
+            <p>Example:</p>
+            <p><img src="images/insertion-bst0.png" alt="Insertion in BST"></p>
+            <p><img src="images/insertion-bst.png" alt="Insertion in BST"></p>
+            <p></p>
+            <h3 id="deletion-in-bst">Deletion in BST<a aria-hidden class="header-link" tabindex="-1"
+                href="#deletion-in-bst">#</a></h3>
+            <p>In a binary search tree, we must delete a node from the tree by keeping in mind that the property of BST is not violated. To delete a node from BST, there are three possible situations occur:</p>
+            <ul>
+                <li>The node to be deleted is the leaf node</li>
+                <li>The node to be deleted has only one child</li>
+                <li>The node to be deleted has two children</li>
+            </ul>
+            <p><b>The node to be deleted is the leaf node</b></p>
+            <p>It is the simplest case to delete a node in BST. Here, we have to replace the leaf node with NULL and simply free the allocated space.</p>
+            <p><img src="images/deletion-bst0.png" alt="Deletion in BST"></p> 
+            <p><b>The node to be deleted has only one child</b></p>
+            <p>In this case, we have to replace the target node with its child, and then delete the child node. It means that after replacing the target node with its child node, the child node will now contain the value to be deleted. So, we simply have to replace the child node with NULL and free up the allocated space.</p>
+            <p><img src="images/deletion-bst1.png" alt="Deletion in BST"></p>
+            <p><b>The node to be deleted has two children</b></p>
+            <p>This case of deleting a node in BST is a bit complex among other two cases. In such a case, the steps to be followed are listed as follows:</p>
+            <ol type="1">
+                <li>Find the inorder successor of the node to be deleted</li>
+                <li>Replace that node with the inorder successor until the target node is not placed at the leaf node</li>
+                <li>Replace the node with NULL and free up the allocated space</li>
+            </ol>
+            <p><img src="images/deletion-bst2.png" alt="Deletion in BST"></p>
+            <h3>Complexity of the above operations</h3>
+            <p>1. Time Complexity</p>
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>Operations</th>
+                        <th>Best case time complexity</th>
+                        <th>Average case time complexity</th>
+                        <th>Worst case time complexity</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Insertion</td>
+                        <td>O(log n)</td>
+                        <td>O(log n)</td>
+                        <td>O(n)</td>
+                    </tr>
+                    <tr>
+                        <td>Deletion</td>
+                        <td>O(log n)</td>
+                        <td>O(log n)</td>
+                        <td>O(n)</td>
+                    </tr>
+                    <tr>
+                        <td>Searching</td>
+                        <td>O(log n)</td>
+                        <td>O(log n)</td>
+                        <td>O(n)</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p>2. Space Complexity</p>
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>Operations</th>
+                        <th>Space complexity</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Insertion</td>
+                        <td>O(n)</td>
+                    </tr>
+                    <tr>
+                        <td>Deletion</td>
+                        <td>O(n)</td>
+                    </tr>
+                    <tr>
+                        <td>Searching</td>
+                        <td>O(n)</td>
+                    </tr>
+                </tbody>
+            </table>
+            <h2 id="avl-tree">AVL Tree<a aria-hidden class="header-link" tabindex="-1"
+                href="avl-tree">#</a></h2>
+            <p>AVL Tree can be defined as height balanced binary search tree in which each node is associated with a balance factor which is calculated by subtracting the height of its right sub-tree from that of its left sub-tree.</p>
+            <p>Tree is said to be balanced if balance factor of each node is in between -1 to 1, otherwise, the tree will be unbalanced and need to be balanced.</p>
+            <p><b>Balance Factor (k) = height (left(k)) - height (right(k))</b></p>
+            <p>If balance factor of any node is 1, it means that the left sub-tree is one level higher than the right sub-tree.If balance factor of any node is 0, it means that the left sub-tree and right sub-tree contain equal height.If balance factor of any node is -1, it means that the left sub-tree is one level lower than the right sub-tree.</p>
+            <br>
+            <p><b>Importance of AVL Tree</b></p>
+            <p>AVL tree controls the height of the binary search tree by not letting it to be skewed. The time taken for all operations in a binary search tree of height h is O(h). However, it can be extended to O(n) if the BST becomes skewed (i.e. worst case). By limiting this height to log n, AVL tree imposes an upper bound on each operation to be O(log n) where n is the number of nodes.</p>
+            <br>
+            <h3>Operations in AVL:</h3>
+            <p><b>1. Insertion in AVL Tree</b></p>
+            <p>Insertion in AVL tree is performed in the same way as it is performed in a binary search tree. However, it may lead to violation in the AVL tree property and therefore the tree may need balancing. The tree can be balanced by applying rotations.</p>
+            <p><b>1. Deletion in AVL Tree</b></p>
+            <p>Deletion can also be performed in the same way as it is performed in a binary search tree. Deletion may also disturb the balance of the tree therefore, various types of rotations are used to rebalance the tree.</p>
+            <br>
+            <p>Complexity of Operations</p>
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>Algorithm</th>
+                        <th>Average case</th>
+                        <th>Worst case</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Space Complexity</td>
+                        <td>O(n)</td>
+                        <td>O(n)</td>
+                    </tr>
+                    <tr>
+                        <td>Search</td>
+                        <td>O(log n)</td>
+                        <td>O(log n)</td>
+                    </tr>
+                    <tr>
+                        <td>Insert</td>
+                        <td>O(log n)</td>
+                        <td>O(log n)</td>
+                    </tr>
+                    <tr>
+                        <td>Delete</td>
+                        <td>O(log n)</td>
+                        <td>O(log n)</td>
+                    </tr>
+                </tbody>
+            </table>
+            <br>
+            <h3>AVL Rotations</h3>
+            <p>Using Insertion and Deletion Operation may disturb the balance of the Tree, therefore we use different AVL Rotations to restore the balance of the Tree</p>
+            <p>The four types of AVL Rotations are:</p>
+            <ul>
+                <li>LL Rotation</li>
+                <li>RR Rotation</li>
+                <li>LR Rotation</li>
+                <li>RL Rotation</li>
+            </ul>
+            <br>
+            <br>
+            <p><b>1. LL Rotation</b></p>
+            <p>When BST becomes unbalanced, due to a node is inserted into the left subtree of the left subtree of C, then we perform LL rotation, LL rotation is clockwise rotation, which is applied on the edge below a node having balance factor 2.</p>
+            <p><img src="images/ll-rotation-avl.png" alt="LL Rotation"></p>
+            <br>
+            <p><b>2. RR Rotation</b></p>
+            <p>When BST becomes unbalanced, due to a node is inserted into the right subtree of the right subtree of A, then we perform RR rotation, RR rotation is an anticlockwise rotation, which is applied on the edge below a node having balance factor -2</p>
+            <p><img src="images/rr-rotation-avl.png" alt="RR Rotation"></p>
+            <br>
+            <p><b>3. LR Rotation</b></p>
+            <p>Double rotations are bit tougher than single rotation which has already explained above. LR rotation = RR rotation + LL rotation, i.e., first RR rotation is performed on subtree and then LL rotation is performed on full tree, by full tree we mean the first node from the path of inserted node whose balance factor is other than -1, 0, or 1.</p>
+            <p><img src="images/lr-rotation-avl.png" alt="RR Rotation"></p>
+            <br>
+            <p><b>4. RL Rotation</b></p>
+            <p>Double rotations are bit tougher than single rotation which has already explained above. R L rotation = LL rotation + RR rotation, i.e., first LL rotation is performed on subtree and then RR rotation is performed on full tree, by full tree we mean the first node from the path of inserted node whose balance factor is other than -1, 0, or 1.</p>
+            <p><img src="images/rl-rotation-avl.png" alt="RR Rotation"></p>
+            <br><br>
+            <h2 id="red-black-tree">Red-Black Tree<a aria-hidden class="header-link" tabindex="-1"
+                href="red-black-tree">#</a></h2>
+            <p>The red-Black tree is a binary search tree. The prerequisite of the red-black tree is that we should know about the binary search tree. In a binary search tree, the values of the nodes in the left subtree should be less than the value of the root node, and the values of the nodes in the right subtree should be greater than the value of the root node. </p>
+            <p>Each node in the Red-black tree contains an extra bit that represents a color to ensure that the tree is balanced during any operations performed on the tree like insertion, deletion, etc. In a binary search tree, the searching, insertion and deletion take O(log2n) time in the average case, O(1) in the best case and O(n) in the worst case.</p>
+            <br>
+            <p><b>Properties of Red-Black tree</b></p>
+            <ul>
+                <li>It is a self-balancing Binary Search tree. Here, self-balancing means that it balances the tree itself by either doing the rotations or recoloring the nodes.</li>
+                <li>This tree data structure is named as a Red-Black tree as each node is either Red or Black in color. Every node stores one extra information known as a bit that represents the color of the node. For example, 0 bit denotes the black color while 1 bit denotes the red color of the node. Other information stored by the node is similar to the binary tree, i.e., data part, left pointer and right pointer.</li>
+                <li>In the Red-Black tree, the root node is always black in color.</li>
+                <li>In a binary tree, we consider those nodes as the leaf which have no child. In contrast, in the Red-Black tree, the nodes that have no child are considered the internal nodes and these nodes are connected to the NIL nodes that are always black in color. The NIL nodes are the leaf nodes in the Red-Black tree.</li>
+                <li>If the node is Red, then its children should be in Black color. In other words, we can say that there should be no red-red parent-child relationship.</li>
+                <li>Every path from a node to any of its descendant's NIL node should have same number of black nodes.</li>
+                <li>Every AVL tree can be a Red-Black tree if we color each node either by Red or Black color. But every Red-Black tree is not an AVL because the AVL tree is strictly height-balanced while the Red-Black tree is not completely height-balanced.</li>
+            </ul>   
+            <br><br>
+            <h2 id="b-tree">B Tree<a aria-hidden class="header-link" tabindex="-1"
+                href="b-tree">#</a></h2>
+            <p>B Tree is a specialized m-way tree that can be widely used for disk access. A B-Tree of order m can have at most m-1 keys and m children. One of the main reason of using B tree is its capability to store large number of keys in a single node and large key values by keeping the height of the tree relatively small.</p>
+            <p>A B tree of order m contains all the properties of an M way tree. In addition, it contains the following properties:</p>
+            <ul>
+                <li>Every node in a B-Tree contains at most m children.</li>
+                <li>Every node in a B-Tree except the root node and the leaf node contain at least m/2 children.</li>
+                <li>The root nodes must have at least 2 nodes.</li>
+                <li>All leaf nodes must be at the same level.</li>
+            </ul>
+            <p><img src="images/b-tree.png" alt="B Tree"></p>
+            <h3>Appliations of B Tree</h3>
+            <p>B tree is used to index the data and provides fast access to the actual data stored on the disks since, the access to value stored in a large database that is stored on a disk is a very time consuming process.</p>
+            <p>Searching an un-indexed and unsorted database containing n key values needs O(n) running time in worst case. However, if we use B Tree to index this database, it will be searched in O(log n) time in worst case.</p>
+            <br><br>
+            <h2 id="b+tree">B+ Tree<a aria-hidden class="header-link" tabindex="-1"
+                href="b+tree">#</a></h2>
+            <p>B+ Tree is an extension of B Tree which allows efficient insertion, deletion and search operations.</p>
+            <p>In B Tree, Keys and records both can be stored in the internal as well as leaf nodes. Whereas, in B+ tree, records (data) can only be stored on the leaf nodes while internal nodes can only store the key values.</p>   
+            <p>The leaf nodes of a B+ tree are linked together in the form of a singly linked lists to make the search queries more efficient.</p>    
+            <p>B+ Tree are used to store the large amount of data which can not be stored in the main memory. Due to the fact that, size of main memory is always limited, the internal nodes (keys to access records) of the B+ tree are stored in the main memory whereas, leaf nodes are stored in the secondary memory.</p>
+            <p><img src="images/b+tree.png" alt="B+ Tree"></p>
+            <h3>Properties of B+ Tree</h3>
+            <ul>
+                <li>Every node in a B+ Tree, except root, will hold a maximum of m children and (m-1) keys, and a minimum of [m/2] children and [(m-1)/2] keys, since the order of the tree is m.</li>
+                <li>Height of the tree remains balanced and less as compare to B tree.</li>
+                <li>We can access the data stored in a B+ tree sequentially as well as directly.</li>
+                <li>Keys are used for indexing.</li>
+                <li></li>
+            </ul>Faster search queries as the data is stored only on the leaf nodes.
+            <h3>Advantages of B+ Tree</h3>
+            <ol type="1">
+                <li>Records can be fetched in equal number of disk accesses.</li>
+                <li>The root node must have no less than two children and at least one search key.</li>
+                <li>All the paths in a B tree must end at the same level, i.e. the leaf nodes must be at the same level.</li>
+                <li>A B+ tree always maintains sorted data.</li>
+            </ol>
+            <p>The operations supported in B+ trees are Insertion, deletion and searching with the time complexity of O(log n) for every operation.</p>
+            <p>They are almost similar to the B tree operations as the base idea to store data in both data structures is same. However, the difference occurs as the data is stored only in the leaf nodes of a B+ trees, unlike B trees.</p>
+            <br>
             <h1 id="python-standard-library">Python Standard Library<a aria-hidden class="header-link" tabindex="-1"
                     href="#python-standard-library">#</a></h1>
             <h2 id="built-in-functions">Built-in Functions<a aria-hidden class="header-link" tabindex="-1"
