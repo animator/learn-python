@@ -1,4 +1,7 @@
 """
+Slot Machine Game using Python 
+
+
 Slot Machine Game Guide
 
 What is this Game?
