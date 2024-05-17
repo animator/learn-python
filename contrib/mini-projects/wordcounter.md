@@ -30,7 +30,7 @@ The provided code defines a Python function count_words(sentence) aimed at count
   It then calls the count_words function, passing the user's input as an argument, and stores the returned word count in the variable number_of_words.
   Finally, it prints out the number of words in the sentence.
 
-        def count_words(sentence):
+      def count_words(sentence):
             # Split the sentence into words
             words = sentence.split()
     
@@ -39,8 +39,8 @@ The provided code defines a Python function count_words(sentence) aimed at count
     
             return word_count
 
-        # Example usage:
-        sentence = input("Enter a sentence: ")
-        number_of_words = count_words(sentence)
-        print("Number of words:", number_of_words)
+      # Example usage:
+      sentence = input("Enter a sentence: ")
+      number_of_words = count_words(sentence)
+      print("Number of words:", number_of_words)
 
