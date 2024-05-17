@@ -54,8 +54,8 @@ This project is a QR code encoder and decoder application built using Python and
 
 ## Project Structure
 
-- `qr_code_encoder_decoder.py`: Main application script containing the Tkinter GUI and logic for encoding and decoding QR codes.
-- `qr_code_encoder_decoder.md`: Project documentation.
+- `qr_code_project.py`: Main application script containing the Tkinter GUI and logic for encoding and decoding QR codes.
+- `readme.md`: Project documentation.
 
 ## Libraries Used
 
