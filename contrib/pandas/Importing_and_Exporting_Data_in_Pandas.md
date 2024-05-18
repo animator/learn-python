@@ -22,24 +22,6 @@ import pandas as pd
 titanic_df= pd.read_csv("https://raw.githubusercontent.com/kRiShNa-429407/learn-python/main/contrib/pandas/Titanic.csv")
 titanic_df
 ```
-
-
-
-
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
