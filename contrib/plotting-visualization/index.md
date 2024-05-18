@@ -1,4 +1,4 @@
 # List of sections
 
 - [Installing Matplotlib](matplotlib_installation.md)
-- [Matplotlib fundamentals](fundamentals_matplotlib.md)
+- [Matplotlib fundamentals](Matplotlib_fundamentals.md)
