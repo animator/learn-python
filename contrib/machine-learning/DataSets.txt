@@ -1,1 +1,0 @@
-Data sets that are used in making this Movie Recommended System -: https://drive.google.com/drive/folders/1cHQFeg3lRb_5c8qIy2xiL-HlWqlKNsuf?usp=drive_link
