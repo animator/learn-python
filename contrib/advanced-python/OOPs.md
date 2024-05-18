@@ -36,7 +36,7 @@ class Dog:
     pass
 ```
 
-:::
+
 
 
 **Python Objects** In object oriented programming Python, The object is
@@ -49,9 +49,9 @@ dictionaries, are all objects.
 ```python
 obj = Dog()
 ```
+This creates an instance for class Dog
 
-
-**The Python **init** Method **
+**The Python **init** Method** 
 
 The **init** method is similar to constructors in C++ and Java. It is
 run as soon as an object of a class is instantiated. The method is
@@ -80,7 +80,7 @@ print("Tommy is also a {}".format(Tommy.__class__.attr1))
 print("My name is {}".format(Rodger.name))
 print("My name is {}".format(Tommy.name))
 ```
-
+In the above mentioned code, init method is used to initialize the name.
 
 **Inheritance**
 
@@ -131,7 +131,7 @@ cat = Cat("Whiskers")
 dog.make_sound()
 cat.make_sound()
 ```
-
+The above code depicts the Single Inheritance, in case of single inheritance there's only a single base class and a derived class. Here, Dog and Cat are the derived classes with Animal as the parent class. They can access the methods of the base class or derive their own methods.
 
 
 
@@ -163,7 +163,7 @@ german_shepherd.speak()  # Accessing method from the Animal class
 german_shepherd.bark()   # Accessing method from the Dog class
 german_shepherd.guard()  # Accessing method from the GermanShepherd class
 ```
-
+Multilevel inheritance is a concept in object-oriented programming where a class inherits properties and behaviors from another class, which itself may inherit from another class. In other words, it involves a chain of inheritance where a subclass inherits from a superclass, and that subclass can then become a superclass for another subclass.Its similar to GrandFather ,Father and Son .In the above code,Animal class is the superclass, Dog is derived from Animal and Dog is the parent of GermanShepherd. GermenShepherd is the child class of Dog. GermenShepherd can access methods of both Animal and Dog.
 
 
 ```python
@@ -196,7 +196,7 @@ dog.bark()   # Accessing method from the Dog class
 cat.speak()  # Accessing method from the Animal class
 cat.meow()   # Accessing method from the Cat class
 ```
-
+Hierarchical inheritance is a type of inheritance in object-oriented programming where one class serves as a superclass for multiple subclasses. In this inheritance model, each subclass inherits properties and behaviors from the same superclass, creating a hierarchical tree-like structure.
 
 ```python
 #Multiple Inheritance
@@ -223,7 +223,7 @@ omnivore.eat_plants()  # Accessing method from Herbivore
 omnivore.eat_meat()    # Accessing method from Carnivore
 omnivore.eat()         # Accessing method from Omnivore
 ```
-
+Multiple inheritance is a concept in object-oriented programming where a class can inherit properties and behaviors from more than one parent class. This means that a subclass can have multiple immediate parent classes, allowing it to inherit features from each of them. 
 
 **Polymorphism** In object oriented Programming Python, Polymorphism
 simply means having many forms
@@ -260,7 +260,7 @@ obj_spr.flight()
 obj_ost.intro()
 obj_ost.flight()
 ```
-
+Poly stands for 'many' and morphism for 'forms'. In the above code, method flight() has many forms.
 
 **Python Encapsulation**
 
@@ -374,4 +374,6 @@ circle = Circle("Circle", 3)
 print(f"{rectangle.name}: Area = {rectangle.area()}, Perimeter = {rectangle.perimeter()}")
 print(f"{circle.name}: Area = {circle.area()}, Perimeter = {circle.perimeter()}")
 ```
-
+To implement Data Abstraction , we have to import abc . ABC stands for Abstract Base Class . All those classes which want to implement data abstraction have to inherit from ABC. 
+@abstractmethod is a decorator provided by the abc module, which stands for "abstract method". It's used to define abstract methods within abstract base classes (ABCs). An abstract method is a method declared in a class, but it does not contain an implementation. Instead, it serves as a placeholder, and its concrete implementation must be provided by subclasses.
+Abstract methods can be implemented by the derived classes.
