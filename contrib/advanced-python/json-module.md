@@ -68,7 +68,6 @@ print(students_dict['name'])
 
 ```json
 {"id": "01", "name": "Yatharth", "department": "Computer Science Engineering"}
-Yatharth
 ```
 
 ## 2. Python load JSON file.
