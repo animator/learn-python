@@ -6,7 +6,7 @@ A common use case for a stripplot is to compare the distribution of a continuous
 
 ## Python program to illustrate Stripplot using inbuilt data-set given in seaborn 
 
-```sh
+```python
 # Python program to illustrate Plotting categorical scatter plots with Seaborn 
   
 # importing the required module 
@@ -35,7 +35,7 @@ plt.show()
 <img src="https://media.geeksforgeeks.org/wp-content/uploads/seaborn1.png" width="500" height="300" />
 
 ## Using iris dataset
-```sh
+```python
 # Python program to illustrate Stripplot using inbuilt data-set given in seaborn 
   
 # importing the required module 
