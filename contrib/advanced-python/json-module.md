@@ -2,7 +2,7 @@
 
 ## What is JSON?
 
-- <a href="https://www.json.org/json-en.html">JSON (JavaScript Object Notation)</a> is a format for structuring data.
+- [JSON]("https://www.json.org/json-en.html") (JavaScript Object Notation)  is a format for structuring data.
 - JSON is a lightweight, text-based data interchange format that is completely language-independent.
 - Similar to XML, JSON is a format for structuring data commonly used by web applications to communicate with each other.
 
@@ -14,7 +14,7 @@
 age = 21
 ```
 
-- When we use `age`, it gets replaced with `21`. However, <i>age doesn't contain 21, it contains the address of the memory location where 21 is stored</i>.
+- When we use `age`, it gets replaced with `21`. However, *age doesn't contain 21, it contains the address of the memory location where 21 is stored*.
 
 - While this works locally, transferring this data, such as through an API, poses a challenge. Sending your computer’s entire memory with the addresses is impractical and insecure. This is where JSON comes to the rescue.
 
@@ -67,7 +67,7 @@ print(students_dict['name'])
 - Ouput:
 
 ```json
-{'id': '01', 'name': 'Yatharth', 'department': 'Computer Science Engineering'}
+{"id": "01", "name": "Yatharth", "department": "Computer Science Engineering"}
 Yatharth
 ```
 
@@ -114,16 +114,15 @@ f.close()
 - Ouput
 
 ```json
-{'id': '01', 'name': 'Yatharth', 'department': 'Computer Science Engineering'}
-{'id': '02', 'name': 'Raj', 'department': 'Mechanical Engineering'}
+{"id": "01", "name": "Yatharth", "department": "Computer Science Engineering"}
+{"id": "02", "name": "Raj", "department": "Mechanical Engineering"}
 ```
 - `json.load()`: Reads JSON data from a file object and deserializes it into a Python object.
 - `json.loads()`: Deserializes JSON data from a string into a Python object.
-<hr>
 
-### Addtiotnal Context
+
+## Addtiotnal Context
 Relation between python data types and json data types is given in table below.
-</br>
 
 | Python Object   | JSON Object |
 |-----------------|-------------|
@@ -287,8 +286,5 @@ write_json(y)
   }
 }
 ```
-
-</br>
-<hr>
 
 The Python json module simplifies the handling of JSON data, offering a bridge between Python data structures and JSON representations, vital for data exchange and storage in modern applications.
