@@ -10,7 +10,7 @@ def main():
 
         choice = input("Enter your choice: ")
 
-        if choice == '1':
+        if choice == '1': 
             print()
             n_tasks = int(input("How may task you want to add: "))
             
