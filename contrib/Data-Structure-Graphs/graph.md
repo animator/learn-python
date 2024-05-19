@@ -32,7 +32,7 @@ Graph is a non-linear data structure consisting of vertices and edges. It is a p
 ## Representation of Graphs
 There are two ways to store a graph:
 
-1. **Adjacency Matrix**
+1. **Adjacency Matrix:**
 In this method, the graph is stored in the form of the 2D matrix where rows and columns denote vertices. Each entry in the matrix represents the weight of the edge between those vertices. 
 
 ```python
@@ -64,7 +64,7 @@ for row in adj_matrix:
 
 ```
 
-2. **Adjacency List**
+2. **Adjacency List:**
 In this method, the graph is represented as a collection of linked lists. There is an array of pointer which points to the edges connected to that vertex. 
 
 ```python
