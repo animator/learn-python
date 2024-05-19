@@ -4,7 +4,7 @@ Scientific computing and data analysis require the critical feature of being abl
 ## Here are the methods available:
 
 ### 1. numpy.loadtxt(): 
-The loadtxt function allows you to load data from a text file.You can specify various parameters such as the file name, data type, delimiter,
+The `loadtxt` function allows you to load data from a text file.You can specify various parameters such as the file name, data type, delimiter,
 and more. It reads the file line by line, splits it at the specified delimiter, and converts the values into an array.
 
 - #### Syntax:
