@@ -1,26 +1,25 @@
 # Loading Arrays From Files
-The ability to load data from various file formats is a critical feature for scientific computing and data analysis. 
-NumPy provides several functions to read data from different file types and convert them into ndarrays. 
-This section will cover how to load ndarrays from common file formats, including CSV, TSV, and binary files.
+Scientific computing and data analysis require the critical feature of being able to load data from different file formats. NumPy has several functionalities for reading data from various file types and converting them into arrays. This part of the content will show how one can load arrays from standard file formats.
 
-### Here are the methods available:
+## Here are the methods available:
 
-`numpy.loadtxt`: The loadtxt function allows you to load data from a text file.You can specify various parameters such as the file name, data type, delimiter,
+### 1. numpy.loadtxt(): 
+The loadtxt function allows you to load data from a text file.You can specify various parameters such as the file name, data type, delimiter,
 and more. It reads the file line by line, splits it at the specified delimiter, and converts the values into an array.
 
-- **Syntax:**
+- #### Syntax:
   ```python
   numpy.loadtxt(fname, dtype = float, delimiter=None, converters=None, skiprows=0, usecols=None)
   ```
 
-  `fname` : Name of the file <br>
-  `dtype` : Data type of the resulting array. (By default is float) <br>
-  `delimiter`: String or character separating columns; default is any whitespace. <br>
-  `converters`: Dictionary mapping column number to a function to convert that column's string to a float. <br>
-  `skiprows`: Number of lines to skip at the beginning of the file. <br>
-  `usecols`: Which columns to read starting from 0.
+  **fname** : Name of the file <br>
+  **dtype** : Data type of the resulting array. (By default is float) <br>
+  **delimiter**: String or character separating columns; default is any whitespace. <br>
+  **converters**: Dictionary mapping column number to a function to convert that column's string to a float. <br>
+  **skiprows**: Number of lines to skip at the beginning of the file. <br>
+  **usecols**: Which columns to read starting from 0.
 
-- **Example for `loadtxt`:**
+- #### Example for `loadtxt`:
 
   **example.txt** <br>
   
@@ -38,30 +37,78 @@ and more. It reads the file line by line, splits it at the specified delimiter, 
   [1 2 3 4 5]
   ```
   
+<br>
 
-`numpy.genfromtxt`:  The genfromtxt function is similar to loadtxt but provides more flexibility. It handles missing values (such as NaNs), allows custom converters
+### 2. numpy.genfromtxt:  
+The `genfromtxt` function is similar to loadtxt but provides more flexibility. It handles missing values (such as NaNs), allows custom converters
 for data parsing, and can handle different data types within the same file. It’s particularly useful for handling complex data formats.
 
-- **Syntax:**
+- #### Syntax:
   ```python
   numpy.genfromtxt(fname, dtype=float, delimiter=None, skip_header=0, skip_footer=0, converters=None, missing_values=None, filling_values=None, usecols=None)
   ```
 
-  `fname` : Name of the file <br>
-  `dtype` : Data type of the resulting array. (By default is float) <br>
-  `delimiter`: String or character separating columns; default is any whitespace. <br>
-  `skip_header`: Number of lines to skip at the beginning of the file.<br>
-  `skip_footer`: Number of lines to skip at the end of the file.<br>
-  `converters`: Dictionary mapping column number to a function to convert that column's string to a float. <br>
-  `missing_values`: Set of strings corresponding to missing data.<br>
-  `filling_values`: Value used to fill in missing data. Default is NaN.<br>
-  `usecols`: Which columns to read starting from 0.
+  **fname** : Name of the file <br>
+  **dtype** : Data type of the resulting array. (By default is float) <br>
+  **delimiter**: String or character separating columns; default is any whitespace. <br>
+  **skip_header**: Number of lines to skip at the beginning of the file.<br>
+  **skip_footer**: Number of lines to skip at the end of the file.<br>
+  **converters**: Dictionary mapping column number to a function to convert that column's string to a float. <br>
+  **missing_values**: Set of strings corresponding to missing data.<br>
+  **filling_values**: Value used to fill in missing data. Default is NaN.<br>
+  **usecols**: Which columns to read starting from 0.
 
-- **Examples for `genfromtxt`:**
+- #### Example for `genfromtxt`:
+
+   **example.txt** <br>
+  
+  ![image](https://github.com/Santhosh-Siddhardha/learn-python/assets/103999924/3f9cdd91-4255-4e30-923d-f29c5f237798)
 
 
-`numpy.fromfile`: The fromfile function reads binary data directly from a file into a NumPy array. It doesn’t assume any specific format or delimiter;
-instead, it interprets the raw binary data according to the specified data type.
+  **Code** <br>
+  ```python
+  import numpy as np 
+  arr = np.genfromtxt("example.txt", dtype='str', usecols=1) 
+  print(arr) 
+  ```
 
-`numpy.load`: Load arrays saved in NumPy’s native binary format (.npy or .npz). These files preserve the array structure, data types, and metadata.
+  **Output**<br>
+  ```python
+  ['Name' 'Kohli' 'Dhoni' 'Rohit']
+  ```
+  
+<br>
+
+
+### 3. numpy.load
+`load` method is used to load arrays saved in NumPy’s native binary format (.npy or .npz). These files preserve the array structure, data types, and metadata.
 It’s an efficient way to store and load large arrays.
+
+- #### Syntax:
+  ```python
+  numpy.load(fname, mmap_mode=None, encoding='ASCII')
+  ```
+
+  **fname** : Name of the file <br>
+  **mmap_mode** : Memory-map the file using the given mode (r, r+, w+, c).(By Default None) <br>
+  **encoding**:Encoding is used when reading Python2 strings only. (By Default ASCII) <br>
+
+- #### Example for `load`:
+
+  **Code** <br>
+  ```python
+  import numpy as np
+  arr = np.array(['a','b','c'])
+  np.savez('data.npz', array=arr)
+  # stores arr in data.npz in NumPy's native binary format
+  data = np.load('data.npz')
+  print(data['array'])
+  ```
+
+  **Output**<br>
+  ```python
+  ['a' 'b' 'c']
+  ```
+<br>
+
+These methods empower users to seamlessly integrate data into their scientific workflows, whether from text files or binary formats.
