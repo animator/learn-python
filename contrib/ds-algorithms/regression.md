@@ -15,10 +15,10 @@ Used for predicting continuous values like house prices, stock prices, etc.
 ```python
 from sklearn.linear_model import LinearRegression
 from sklearn.model_selection import train_test_split
-from sklearn.datasets import load_boston
+from sklearn.datasets import load_diabetes
 
 # Load dataset
-data = load_boston()
+data = load_diabetes()
 X = data.data
 y = data.target
 
@@ -39,18 +39,18 @@ predictions = model.predict(X_test)
 Logistic Regression is used for binary classification problems. It predicts the probability that a given input point belongs to a certain class.
 
 ### Use Case
-Used for classification tasks like spam detection, cancer detection, etc.
+Used for simple classification tasks like spam detection, cancer detection, etc.
 
 ### Code Sample
 ```python
 from sklearn.linear_model import LogisticRegression
 from sklearn.model_selection import train_test_split
-from sklearn.datasets import load_breast_cancer
+from sklearn.datasets import load_diabetes
 
-# Load dataset
-data = load_breast_cancer()
+# Load dataset and create a binary target variable
+data = load_diabetes()
 X = data.data
-y = data.target
+y = (data.target > data.target.mean()).astype(int)  # Binary target
 
 # Split data
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
@@ -108,7 +108,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.datasets import load_diabetes
 
 # Load dataset
-data = load_skincancer()
+data = load_diabetes()
 X = data.data
 y = data.target
 
@@ -138,7 +138,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.datasets import load_diabetes
 
 # Load dataset
-data = load_boston()
+data = load_diabetes()
 X = data.data
 y = data.target
 
@@ -168,7 +168,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.datasets import load_diabetes
 
 # Load dataset
-data = load_titanic()
+data = load_diabetes()
 X = data.data
 y = data.target
 
@@ -290,7 +290,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.datasets import load_diabetes
 
 # Load dataset
-data = load_titanic()
+data = load_diabetes()
 X = data.data
 y = data.target
 
@@ -328,7 +328,7 @@ y = data.target
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
 # Initialize and train model
-model = RandomForestRegressor(n_estimators=120)
+model = RandomForestRegressor(n_estimators=100)
 model.fit(X_train, y_train)
 
 # Predict
@@ -338,9 +338,9 @@ predictions = model.predict(X_test)
 ## 12. Gradient Boosting Regression
 
 ### Description
-Gradient Boosting Regression builds an ensemble of
+Gradient
 
- trees in a stage-wise fashion, where each tree tries to correct the errors of the previous one.
+ Boosting Regression builds an ensemble of trees in a stage-wise fashion, where each tree tries to correct the errors of the previous one.
 
 ### Use Case
 Used for high predictive accuracy in various applications.
@@ -352,7 +352,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.datasets import load_diabetes
 
 # Load dataset
-data = load_birds()
+data = load_diabetes()
 X = data.data
 y = data.target
 
@@ -383,7 +383,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.datasets import load_diabetes
 
 # Load dataset
-data = load_data1()
+data = load_diabetes()
 X = data.data
 y = data.target
 
@@ -413,7 +413,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.datasets import load_diabetes
 
 # Load dataset
-data = load_mapdate()
+data = load_diabetes()
 X = data.data
 y = data.target
 
@@ -444,7 +444,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.datasets import load_diabetes
 
 # Load dataset
-data = load_breastcancer()
+data = load_diabetes()
 X = data.data[:, 0]  # Use only one feature for simplicity
 y = data.target
 
@@ -457,4 +457,5 @@ model.fit(X_train, y_train)
 
 # Predict
 predictions = model.predict(X_test)
+
 ```
