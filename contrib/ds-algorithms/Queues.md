@@ -9,7 +9,7 @@ Queues offer efficient implementations for various scenarios. They are often use
 
 <hr>
 
-<img width="1214" alt="Screenshot 2024-05-18 at 10 16 30 PM" src="https://github.com/PilotAxis/learn-python/assets/109688855/e4be7297-d3a0-4fc3-a0f1-81262acc85d9">
+<img width="500" alt="Screenshot 2024-05-18 at 10 16 30 PM" src="https://github.com/PilotAxis/learn-python/assets/109688855/e4be7297-d3a0-4fc3-a0f1-81262acc85d9">
 
 
 ## Real Life Examples of Queues
