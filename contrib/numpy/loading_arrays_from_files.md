@@ -14,7 +14,7 @@ and more. It reads the file line by line, splits it at the specified delimiter, 
 
   **fname** : Name of the file <br>
   **dtype** : Data type of the resulting array. (By default is float) <br>
-  **delimiter**: String or character separating columns; default is any whitespace. <br>
+  **delimiter**: String or character separating columns. (By default is whitespace) <br>
   **converters**: Dictionary mapping column number to a function to convert that column's string to a float. <br>
   **skiprows**: Number of lines to skip at the beginning of the file. <br>
   **usecols**: Which columns to read starting from 0.
@@ -27,8 +27,9 @@ and more. It reads the file line by line, splits it at the specified delimiter, 
 
   **Code** <br>
   ```python
-  import numpy as np 
-  arr = np.loadtxt("loadtxt.txt", dtype=int) 
+  import numpy as np
+  
+  arr = np.loadtxt("example.txt", dtype=int) 
   print(arr) 
   ```
 
@@ -39,20 +40,18 @@ and more. It reads the file line by line, splits it at the specified delimiter, 
   
 <br>
 
-### 2. numpy.genfromtxt:  
+### 2. numpy.genfromtxt():  
 The `genfromtxt` function is similar to loadtxt but provides more flexibility. It handles missing values (such as NaNs), allows custom converters
 for data parsing, and can handle different data types within the same file. It’s particularly useful for handling complex data formats.
 
 - #### Syntax:
   ```python
-  numpy.genfromtxt(fname, dtype=float, delimiter=None, skip_header=0, skip_footer=0, converters=None, missing_values=None, filling_values=None, usecols=None)
+  numpy.genfromtxt(fname, dtype=float, delimiter=None, converters=None, missing_values=None, filling_values=None, usecols=None)
   ```
 
   **fname** : Name of the file <br>
   **dtype** : Data type of the resulting array. (By default is float) <br>
   **delimiter**: String or character separating columns; default is any whitespace. <br>
-  **skip_header**: Number of lines to skip at the beginning of the file.<br>
-  **skip_footer**: Number of lines to skip at the end of the file.<br>
   **converters**: Dictionary mapping column number to a function to convert that column's string to a float. <br>
   **missing_values**: Set of strings corresponding to missing data.<br>
   **filling_values**: Value used to fill in missing data. Default is NaN.<br>
@@ -67,7 +66,8 @@ for data parsing, and can handle different data types within the same file. It�
 
   **Code** <br>
   ```python
-  import numpy as np 
+  import numpy as np
+  
   arr = np.genfromtxt("example.txt", dtype='str', usecols=1) 
   print(arr) 
   ```
@@ -80,7 +80,7 @@ for data parsing, and can handle different data types within the same file. It�
 <br>
 
 
-### 3. numpy.load
+### 3. numpy.load():
 `load` method is used to load arrays saved in NumPy’s native binary format (.npy or .npz). These files preserve the array structure, data types, and metadata.
 It’s an efficient way to store and load large arrays.
 
@@ -90,7 +90,7 @@ It’s an efficient way to store and load large arrays.
   ```
 
   **fname** : Name of the file <br>
-  **mmap_mode** : Memory-map the file using the given mode (r, r+, w+, c).(By Default None) <br>
+  **mmap_mode** : Memory-map the file using the given mode (r, r+, w+, c)(By Default None).Memory-mapping only works with arrays stored in a binary file on disk, not with compressed archives like .npz.<br>
   **encoding**:Encoding is used when reading Python2 strings only. (By Default ASCII) <br>
 
 - #### Example for `load`:
@@ -98,10 +98,11 @@ It’s an efficient way to store and load large arrays.
   **Code** <br>
   ```python
   import numpy as np
+  
   arr = np.array(['a','b','c'])
-  np.savez('data.npz', array=arr)
-  # stores arr in data.npz in NumPy's native binary format
-  data = np.load('data.npz')
+  np.savez('example.npz', array=arr)  # stores arr in data.npz in NumPy's native binary format
+ 
+  data = np.load('example.npz')
   print(data['array'])
   ```
 
