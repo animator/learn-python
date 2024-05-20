@@ -65,6 +65,7 @@ Way 2: Using `dtype()`
     # Output: int32
 ```
 
+Note: `np.intc()` has the same function as `int32()`.
 ## Example for float type
 
 Way 1: Using function `float_()`
@@ -101,8 +102,32 @@ Note: `np.single()` has the same function as `float32()`.
 
 ## Example for boolean type
 
+``` python
+    import numpy as np
+
+    x = np.bool_(1)
+
+    print(x)
+    print(x.dtype)
+
+    # Output: 
+    # True
+    # bool
+```
 ## Example for unsigned integer type
 
+``` python
+    import numpy as np
+
+    x = np.uintc(1)
+
+    print(x)
+    print(x.dtype)
+
+    # Output: 
+    # 1
+    # uint32
+```
 ## Example for complex type
 
 ## Example for datetime type
