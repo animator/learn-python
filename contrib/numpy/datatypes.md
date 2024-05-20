@@ -216,6 +216,20 @@ The `timedelta64()` used to find the difference between the `datetime64()`. The 
     # 366 days
     # timedelta64[D]
 ```
+## Additional Data Type (`longdouble`)
+`longdouble` is a data type that provides higher precision than the standard double-precision floating-point (`float64`) type.
+
+``` python
+    import numpy as np
+
+    arr = np.longdouble([1.222222, 4.44, 45.55])
+
+    print(arr, arr.dtype)
+
+    # Output: 
+    # [1.222222 4.44 45.55] float128
+```
+
 # Data Type Conversion
 `astype()` function is used to the NumPy object from one type to another type.
 
