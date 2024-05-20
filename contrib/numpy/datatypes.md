@@ -46,8 +46,10 @@ Way 1: Using function `int_()`
     import numpy as np
 
     arr = np.int_([2,4,6])
-    
+    # Size: int8, int16, int32, int64
+
     print(arr.dtype())
+
     # Output: int64
 ```
 
@@ -56,12 +58,46 @@ Way 2: Using `dtype()`
     import numpy as np
 
     arr = np.array([2,4,6], dtype='i4')
+    # Size: i1, i2, i4, i8
 
     print(arr.dtype)
 
-    # Output: int8
+    # Output: int32
 ```
+
 ## Example for float type
+
+Way 1: Using function `float_()`
+``` python
+    import numpy as np
+
+    arr = np.float_(1)
+    # Size: float8, float16, float32, float64
+
+    print(arr)
+    print(arr.dtype())
+
+    # Output: 
+    # 1.0
+    # float64
+```
+
+Way 2: Using `dtype()`
+``` python
+    import numpy as np
+
+    arr = np.array([2,4,6], dtype='f4')
+    # Size: f1, f2, f4, f8
+
+    print(arr)
+    print(arr.dtype)
+
+    # Output:
+    # [1. 2. 3. 4.]
+    # float32
+```
+
+Note: `np.single()` has the same function as `float32()`.
 
 ## Example for boolean type
 
