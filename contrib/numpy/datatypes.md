@@ -168,7 +168,18 @@ The `datetime64()` is used to define the date, month and year.
 ## Example for string type
 
 ## Example for object type
+``` python
+    import numpy as np
 
+    arr = np.object_([1, 2, 3, 4])
+
+    print(arr)
+    print(arr.dtype)
+
+    # Output: 
+    # [1, 2, 3, 4]
+    # object
+```
 ## Example for unicode string type
 
 ## Example for timedelta type
