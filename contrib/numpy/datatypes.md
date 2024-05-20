@@ -136,7 +136,7 @@ Complex type is a combination of real number + imaginary number. The `complex_()
 
     x = np.complex_(1)
     # Size: complex64, complex128
-    
+
     print(x)
     print(x.dtype)
 
@@ -146,6 +146,24 @@ Complex type is a combination of real number + imaginary number. The `complex_()
 ```
 
 ## Example for datetime type
+The `datetime64()` is used to define the date, month and year.
+
+``` python
+    import numpy as np
+
+    x = np.datetime64('1970-05')
+    y = np.datetime64('2024-20-05')
+    z = np.datetime64('2024')
+    
+    print(x,x.dtype)
+    print(y,y.dtype)
+    print(z,z.dtype)
+
+    # Output: 
+    # 1970-05 datetime64[M]
+    # 1970-01-11 datetime64[D]
+    # 1970 datetime64[Y]
+```
 
 ## Example for string type
 
