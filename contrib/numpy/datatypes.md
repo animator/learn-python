@@ -128,7 +128,22 @@ Note: `np.single()` has the same function as `float32()`.
     # 1
     # uint32
 ```
+
 ## Example for complex type
+Complex type is a combination of real number + imaginary number. The `complex_()` is used to define the complex type NumPy object.
+``` python
+    import numpy as np
+
+    x = np.complex_(1)
+    # Size: complex64, complex128
+    
+    print(x)
+    print(x.dtype)
+
+    # Output: 
+    # (1+0j)
+    # complex128
+```
 
 ## Example for datetime type
 
