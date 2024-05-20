@@ -151,8 +151,8 @@ The `datetime64()` is used to define the date, month and year.
 ``` python
     import numpy as np
 
-    x = np.datetime64('1970-05')
-    y = np.datetime64('2024-20-05')
+    x = np.datetime64('2024-05')
+    y = np.datetime64('2024-05-20')
     z = np.datetime64('2024')
     
     print(x,x.dtype)
@@ -160,9 +160,9 @@ The `datetime64()` is used to define the date, month and year.
     print(z,z.dtype)
 
     # Output: 
-    # 1970-05 datetime64[M]
-    # 1970-01-11 datetime64[D]
-    # 1970 datetime64[Y]
+    # 2024-05 datetime64[M]
+    # 2024-20-05 datetime64[D]
+    # 2024 datetime64[Y]
 ```
 
 ## Example for string type
@@ -172,6 +172,21 @@ The `datetime64()` is used to define the date, month and year.
 ## Example for unicode string type
 
 ## Example for timedelta type
+The `timedelta64()` used to find the difference between the `datetime64()`. The arguments for timedelta64 are a number, to represent the number of units, and a date/time unit, such as (D)ay, (M)onth, (Y)ear, (h)ours, (m)inutes, or (s)econds. The timedelta64 data type also accepts the string “NAT” in place of the number for a “Not A Time” value.
 
+``` python
+    import numpy as np
+
+    x = np.datetime64('2024-05-20')
+    y = np.datetime64('2023-05-20')
+    res = x - y
+
+    print(res)
+    print(res.dtype)
+
+    # Output: 
+    # 366 days
+    # timedelta64[D]
+```
 # Data Type Conversion
 
