@@ -166,6 +166,15 @@ The `datetime64()` is used to define the date, month and year.
 ```
 
 ## Example for string type
+``` python
+    import numpy as np
+
+    arr = np.str_("roopa")
+
+    print(arr.dtype)
+
+    # Output: <U5
+```
 
 ## Example for object type
 ``` python
@@ -181,7 +190,15 @@ The `datetime64()` is used to define the date, month and year.
     # object
 ```
 ## Example for unicode string type
+``` python
+    import numpy as np
 
+    arr = np.array(['apple', 'banana', 'cherry'])
+
+    print(arr.dtype)
+
+    # Output: <U6
+```
 ## Example for timedelta type
 The `timedelta64()` used to find the difference between the `datetime64()`. The arguments for timedelta64 are a number, to represent the number of units, and a date/time unit, such as (D)ay, (M)onth, (Y)ear, (h)ours, (m)inutes, or (s)econds. The timedelta64 data type also accepts the string “NAT” in place of the number for a “Not A Time” value.
 
@@ -200,4 +217,3 @@ The `timedelta64()` used to find the difference between the `datetime64()`. The 
     # timedelta64[D]
 ```
 # Data Type Conversion
-
