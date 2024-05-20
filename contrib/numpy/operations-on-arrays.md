@@ -111,7 +111,7 @@ print("Utilizing the % operator:", result_1)
 
 **Output:**
 ```
-Utilizing the % operator: [0 1 1 5]
+Utilizing the ** operator: [0 1 1 5]
 ```
 
 <br>
