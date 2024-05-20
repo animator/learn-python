@@ -1,7 +1,3 @@
-<script type="text/javascript" async
-  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
-</script>
-
 # Binomial Distribution
 
 ## Introduction
@@ -16,16 +12,16 @@ The binomial distribution is a discrete probability distribution that describes 
 
 The binomial distribution is defined by the probability mass function (PMF):
 
-\[ P(X = k) = \binom{n}{k} p^k (1 - p)^{n - k} \]
+P(X = k) = (n choose k) p^k (1 - p)^(n - k)
 
 where:
-- \(\binom{n}{k}\) is the binomial coefficient, calculated as \(\frac{n!}{k!(n-k)!}\).
+- (n choose k) is the binomial coefficient, calculated as n! / (k!(n-k)!).
 
 ## Properties of Binomial Distribution
 
-- **Mean:** \( \mu = np \)
-- **Variance:** \( \sigma^2 = np(1 - p) \)
-- **Standard Deviation:** \( \sigma = \sqrt{np(1 - p)} \)
+- **Mean:** μ = np
+- **Variance:** σ² = np(1 - p)
+- **Standard Deviation:** σ = √(np(1 - p))
 
 ## Python Implementation
 
