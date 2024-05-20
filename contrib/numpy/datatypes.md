@@ -14,6 +14,17 @@ Numpy supports the following data types:
 - `S` - string
 - `U` - unicode string
 
+## dtype() Function
+The `dtype()` function returns the type of the NumPy array object.
+``` python
+    import numpy as np
+
+    arr = np.array([1, 2, 3, 4])
+
+    print(arr.dtype)
+    
+    # Output: int64
+```
 ## Example for integer type
 
 ## Example for float type
@@ -33,3 +44,6 @@ Numpy supports the following data types:
 ## Example for unicode string type
 
 ## Example for timedelta type
+
+# Data Type Conversion
+
