@@ -14,6 +14,9 @@ Numpy supports the following data types:
 - `S` - string
 - `U` - unicode string
 
+
+_Referred from: W3schools_
+
 ## dtype() Function
 The `dtype()` function returns the type of the NumPy array object.
 
