@@ -217,3 +217,34 @@ The `timedelta64()` used to find the difference between the `datetime64()`. The 
     # timedelta64[D]
 ```
 # Data Type Conversion
+`astype()` function is used to the NumPy object from one type to another type.
+
+It creates a copy of the array and allows to specify the data type of our choice.
+
+## Example 1
+
+``` python
+    import numpy as np
+
+    x = np.array([1.2, 3.4, 5.6])
+    y = x.astype(int)
+
+    print(y,y.dtype)
+
+    # Output: 
+    # [1 3 5] int64
+```
+
+## Example 2
+
+``` python
+    import numpy as np
+
+    x = np.array([1, 3, 0])
+    y = x.astype(bool)
+
+    print(y,y.dtype)
+
+    # Output: 
+    # [True True False] bool
+```
