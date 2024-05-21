@@ -19,8 +19,6 @@ The datetime module supplies classes for manipulating dates and times. The main 
 
 Example:
 ```bash
-python
-Copy code
 import datetime
 # Get the current date and time
 now = datetime.datetime.now()
@@ -42,8 +40,6 @@ You can specify various format codes to dictate how the output string should be 
   
 Example:
 ```bash
-python
-Copy code
 import datetime
 
 now = datetime.datetime.now()
@@ -57,8 +53,6 @@ allows you to specify the format of the input string.
 
 Example:
 ```bash
-python
-Copy code
 import datetime
 
 date_string = "2024-05-15 13:45:30"
@@ -72,8 +66,6 @@ number of days between two dates or adding a certain period to a date.
 
 Example:
 ```bash
-python
-Copy code
 import datetime
 
 date1 = datetime.datetime(2024, 5, 15, 12, 0, 0)
@@ -96,8 +88,6 @@ operations across different time zones.
 
 Example:
 ```bash
-python
-Copy code
 import datetime
 import pytz
 
@@ -115,8 +105,6 @@ or past dates based on a given date.
 
 Example:
 ```bash
-python
-Copy code
 import datetime
 
 today = datetime.date.today()
