@@ -138,7 +138,7 @@ Index  </br>name </br> age </br> gender</br>  state    </br>     Salary </br>  c
 </br>
 -nlargest()
 	df.nlargest() //returns first n rows ordered by columns in descending order  
-</br>
+<br>
 -eval()
     df.eval('D = B + C', inplace = True)  //to evaluate operation like sum,multiplication of two columns in dataframe 
 
