@@ -2,12 +2,6 @@ Working with DataFrames
 
 
 
-
-
-
-
-
-
 Topics covered:
 
 -What is a dataframe 
@@ -44,14 +38,16 @@ Topics covered:
 
 4.Manipulation of Dataframes with simple examples
 
-consider a dataset 
+consider a dataset with attributes
 
-Index  name  age  gender  state         Salary   code     Amount
-1      Ram   30    M      telangana     20000    500070    400
-2      Jack  25    M      maharastra    45000    635377    600
-3      Riya  45    F      kerala        60000    536456    745
-4      Mike  35    M      Bihar         50000    725523    800
-5      Jill  56    F      Rajasthan     43500    656372    970   
+Index
+name
+age 
+gender 
+state
+Salary 
+code  
+Amount
 
 
 *Filtering rows
