@@ -50,41 +50,33 @@ Index  </br>name </br> age </br> gender</br>  state    </br>     Salary </br>  c
 
 *Filtering rows
     filtered_df = df[df['age'] > 30]
-
-</br>
+<br>
 *Selecting columns
     selected_columns_df = df[['name', 'age']]
-
-</br>
+<br>
 *Grouping and aggregating data
     agg_df = df.groupby('gender')['age'].mean()
-</br>
-
+<br>
 *Sorting data
     sorted_df = df.sort_values(by='age', ascending=False)
-
-</br>
+<br>
 *loc and iloc
   loc-it is label based
     df.loc[0:5,"state"] //it gives first five states 
   iloc-it is integer based
     df.iloc[0:5,0:3]    //it prints first 5 rows and 3 columns 
-</br>
-
+<br>
 *Indexing and retrieving data 
    -df['age'].mean()
    -df[df['age']==30].mean() //average of all columns that have age value=30
-</br>
-
+<br>
 *Inserting rows
    df.insert(loc=len(df.columns).column="salary".value="Amount")
-
-</br>
+<br>
 *Deleting columns
    df.drop(["Age","Amount"],axis=1) 
-
-</br>
-</br>
+<br>
+<br>
 *Basic Functions used to manipulate Dataframes
 </br>
 
