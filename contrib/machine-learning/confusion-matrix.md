@@ -1,4 +1,6 @@
-Confusion Matrix - A confusion matrix is a fundamental performance evaluation tool used in machine learning to assess the accuracy of a classification model. It is an N x N matrix, where N represents the number of target classes.
+## Confusion Matrix 
+
+A confusion matrix is a fundamental performance evaluation tool used in machine learning to assess the accuracy of a classification model. It is an N x N matrix, where N represents the number of target classes.
 
 For binary classification, it results in a 2 x 2 matrix that outlines four key parameters:
 1. True Positive (TP) - The predicted value matches the actual value, or the predicted class matches the actual class. 
@@ -20,15 +22,18 @@ To implement the confusion matrix in Python, we can use the confusion_matrix() f
 The function returns a 2D array that represents the confusion matrix.
 We can also visualize the confusion matrix using a heatmap.
 
+```python
 # Import necessary libraries
 import numpy as np
-from sklearn.metrics import confusion_matrix,classification_report
+from sklearn.metrics import confusion_matrix, classification_report
 import seaborn as sns
 import matplotlib.pyplot as plt 
 
 # Create the NumPy array for actual and predicted labels
-actual = np.array(['Apple', 'Apple', 'Apple', 'Not Apple', 'Apple', 'Not Apple', 'Apple', 'Apple', 'Not Apple', 'Not Apple'])
-predicted = np.array(['Apple', 'Not Apple', 'Apple', 'Not Apple', 'Apple', 'Apple', 'Apple', 'Apple', 'Not Apple', 'Not Apple'])
+actual = np.array(['Apple', 'Apple', 'Apple', 'Not Apple', 'Apple',
+                   'Not Apple', 'Apple', 'Apple', 'Not Apple', 'Not Apple'])
+predicted = np.array(['Apple', 'Not Apple', 'Apple', 'Not Apple', 'Apple',
+                      'Apple', 'Apple', 'Apple', 'Not Apple', 'Not Apple'])
 
 # Compute the confusion matrix
 cm = confusion_matrix(actual,predicted)
@@ -46,8 +51,11 @@ plt.show()
 
 # Classifications Report based on Confusion Metrics
 print(classification_report(actual, predicted))
+```
 
-# Results 
+### Results 
+
+```
 1. Confusion Matrix:
 [[5 1]
 [1 3]]
@@ -59,3 +67,4 @@ Not Apple       0.75      0.75      0.75         4
 accuracy                            0.80        10
 macro avg       0.79      0.79      0.79        10
 weighted avg    0.80      0.80      0.80        10
+```
