@@ -1,3 +1,7 @@
 # List of sections
 
+- [Regression in Machine Learning](Regression.md)
+- [Confusion Matrix](confusion-matrix.md)
+- [Support Vector Machine Algorithm](support-vector-machine.md)
+- [Artificial Neural Network from the Ground Up](ArtificialNeuralNetwork.md)
 - [TensorFlow.md](tensorFlow.md)
