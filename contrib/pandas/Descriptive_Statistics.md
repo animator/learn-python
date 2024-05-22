@@ -10,13 +10,11 @@ Data scientists utilize descriptive statistics to uncover patterns, identify out
 ```python
 import pandas as pd
 import numpy as np
-```
 
-
-```python
 df = pd.read_csv("Age-Income-Dataset.csv")
 df
 ```
+
 |     | Age         | Income |
 | --- | ----------- | ------ |
 | 0   | Young       | 25000  |
@@ -70,13 +68,9 @@ df
 | 48  | Young       | 68400  |
 | 49  | Middle Age  | 51700  |
 
-
-
 ```python
 df.describe()
 ```
-
-
 
 |       | Income      |
 |-------|-------------|
@@ -101,18 +95,17 @@ $$ \overline{x} = \frac{\sum\limits_{i=1}^{n} x_i}{n} $$
 * $\sum$ (sigma) represents the summation symbol, indicating we add up all the values from i=1 to n.
 * $n$ represents the total number of values in the dataset.
 
-
-
 ```python
 df['Income'].mean()
 ```
 
+#### Result
 
-
-
+```
 50966.0
+```
 
-
+#### Without pandas
 
 
 ```python
@@ -131,12 +124,10 @@ def mean_f(df):
 mean_f(df)
 ```
 
-Without pandas Library -> 
-Average of Income is 50966.0 
+Average of Income:
 
-With pandas Library -> 
-50966.0
-    
+- Without pandas Library -> 50966.0 
+- With pandas Library -> 50966.0
 
 ### Median
 
@@ -163,21 +154,17 @@ $$ M = \frac{x_{n/2} + x_{(n/2)+1}}{2} $$
 * n represents the total number of observations in the dataset.
 * $x$ represents the individual value.
 
-
-
-
-
 ```python
 df['Income'].median()
 ```
 
+#### Result
 
-
-
+```
 46850.0
+```
 
-
-
+#### Without pandas
 
 ```python
 def median_f(df):
@@ -198,17 +185,14 @@ def median_f(df):
 median_f(df)
 ```
 
-Median without library ->
-Median of Income is 49850.0  \
-Median with library ->
-46850.0
-    
+Median of Income:
+
+- Median without library -> 49850.0  
+- Median with library -> 46850.0  
 
 ### Mode
 
-
 The mode is a measure of central tendency that represents the value or values that occur most frequently in a dataset. Unlike the mean and median, which focus on the average or middle value, the mode identifies the most common value(s) in the dataset.
-
 
 ```python
 def mode_f(df):
@@ -240,17 +224,17 @@ def mode_f(df):
 mode_f(df)
 ```
 
+#### Result
+
+```
 Column: Age
-Without pandas Library ->  \
+Without pandas Library ->
 Mode of Age is Old
 
-With pandas Library ->  \
-0    Old \
+With pandas Library ->
+0    Old
 Name: Age, dtype: object
-    
-
-
-
+```
 
 ### Standard Deviation
 
@@ -264,18 +248,17 @@ $$s = \sqrt{\frac{\sum(x_i-\overline{x})^{2}}{n-1}}$$
 * $\overline{x}$ (x bar) represents the mean value of the dataset.
 * $n$ represents the total number of values in the dataset.
 
-
 ```python
 df['Income'].std()
 ```
 
+#### Result
 
-
-
+```
 21096.683267707253
+```
 
-
-
+#### Without pandas
 
 ```python
 import math
@@ -304,17 +287,17 @@ With pandas library: ->
 Std : 20884.6509187968
     
 
+### Count
 
 ```python
 df['Income'].count()
 ```
 
+#### Result
 
-
-
+```
 50
-
-
+```
 
 ### Minimum
 
@@ -323,13 +306,13 @@ df['Income'].count()
 df['Income'].min()
 ```
 
+#### Result
 
-
-
+```
 15000
+```
 
-
-
+#### Without pandas
 
 ```python
 def min_f(df):
@@ -354,13 +337,13 @@ With pandas Library-> 15000
 df['Income'].max()
 ```
 
+#### Result
 
-
-
+```
 93000
+```
 
-
-
+#### Without pandas
 
 ```python
 def max_f(df):
@@ -374,8 +357,8 @@ def max_f(df):
 max_f(df) 
 ```
 
-    Without pandas Library-> 93000
-    With pandas Library-> 93000
+Without pandas Library-> 93000  
+With pandas Library-> 93000
     
 
 ### Percentile
@@ -385,25 +368,23 @@ max_f(df)
 df['Income'].quantile(0.25)
 ```
 
+#### Result
 
-
-
+```
 33475.0
-
-
-
+```
 
 ```python
 df['Income'].quantile(0.75)
 ```
 
+#### Result
 
-
-
+```
 65400.0
+```
 
-
-
+#### Without pandas
 
 ```python
 def percentile_f(df,percentile):
@@ -432,9 +413,6 @@ df = pd.read_csv('Iris.csv')
 df.head(5)
 ```
 
-
-
-
 |   | Id | SepalLengthCm | SepalWidthCm | PetalLengthCm | PetalWidthCm | Species     |
 |---|----|---------------|--------------|---------------|--------------|-------------|
 | 0 | 1  | 5.1           | 3.5          | 1.4           | 0.2          | Iris-setosa |
@@ -442,9 +420,6 @@ df.head(5)
 | 2 | 3  | 4.7           | 3.2          | 1.3           | 0.2          | Iris-setosa |
 | 3 | 4  | 4.6           | 3.1          | 1.5           | 0.2          | Iris-setosa |
 | 4 | 5  | 5.0           | 3.6          | 1.4           | 0.2          | Iris-setosa |
-
-
-
 
 ```python
 df.drop(['Id','Species'],axis=1,inplace= True)
@@ -463,12 +438,9 @@ $$ COV(X,Y) = \frac{\sum\limits_{i=1}^{n} (X_i - \overline{X}) (Y_i - \overline{
 * $\overline{X}$ and $\overline{Y}$ represent the mean values for variables X and Y, respectively.
 * $n$ represents the total number of observations in the dataset.
 
-
-
 ```python
 df.cov()
 ```
-
 
 |                   | SepalLengthCm  | SepalWidthCm  | PetalLengthCm   | PetalWidthCm |
 |-------------------|--------------  |---------------|-----------------|--------------|
@@ -477,7 +449,7 @@ df.cov()
 | **PetalLengthCm** | 1.273682       | -0.321713     | 3.113179        | 1.296387     |
 | **PetalWidthCm**  | 0.516904       | -0.117981     | 1.296387        | 0.582414     |
 
-
+#### Without pandas
 
 ```python
 def cov_f(df):
@@ -496,27 +468,29 @@ def cov_f(df):
 cov_f(df)
 ```
 
-Covariance of SepalLengthCm and SepalLengthCm is : 0.6856935123042504 \
-Covariance of SepalLengthCm and SepalWidthCm is : -0.03926845637583892 \
-Covariance of SepalLengthCm and PetalLengthCm is : 1.2736823266219246 \
+#### Result
+
+```
+Covariance of SepalLengthCm and SepalLengthCm is : 0.6856935123042504 
+Covariance of SepalLengthCm and SepalWidthCm is : -0.03926845637583892 
+Covariance of SepalLengthCm and PetalLengthCm is : 1.2736823266219246 
 Covariance of SepalLengthCm and PetalWidthCm is : 0.5169038031319911 
 
-Covariance of SepalWidthCm and SepalLengthCm is : -0.03926845637583892 \
-Covariance of SepalWidthCm and SepalWidthCm is : 0.1880040268456377 \
-Covariance of SepalWidthCm and PetalLengthCm is : -0.32171275167785235 \
+Covariance of SepalWidthCm and SepalLengthCm is : -0.03926845637583892 
+Covariance of SepalWidthCm and SepalWidthCm is : 0.1880040268456377 
+Covariance of SepalWidthCm and PetalLengthCm is : -0.32171275167785235 
 Covariance of SepalWidthCm and PetalWidthCm is : -0.11798120805369115 
 
-Covariance of PetalLengthCm and SepalLengthCm is : 1.2736823266219246 \
-Covariance of PetalLengthCm and SepalWidthCm is : -0.32171275167785235 \
-Covariance of PetalLengthCm and PetalLengthCm is : 3.113179418344519 \
+Covariance of PetalLengthCm and SepalLengthCm is : 1.2736823266219246 
+Covariance of PetalLengthCm and SepalWidthCm is : -0.32171275167785235 
+Covariance of PetalLengthCm and PetalLengthCm is : 3.113179418344519 
 Covariance of PetalLengthCm and PetalWidthCm is : 1.2963874720357946
 
-Covariance of PetalWidthCm and SepalLengthCm is : 0.5169038031319911 \
-Covariance of PetalWidthCm and SepalWidthCm is : -0.11798120805369115 \
-Covariance of PetalWidthCm and PetalLengthCm is : 1.2963874720357946 \
+Covariance of PetalWidthCm and SepalLengthCm is : 0.5169038031319911 
+Covariance of PetalWidthCm and SepalWidthCm is : -0.11798120805369115 
+Covariance of PetalWidthCm and PetalLengthCm is : 1.2963874720357946 
 Covariance of PetalWidthCm and PetalWidthCm is : 0.5824143176733781
-
-
+````
 
 ### Correlation
 
@@ -526,9 +500,6 @@ $$r = \frac{n(\sum xy) - (\sum x)(\sum y)}{\sqrt{n(\sum x^2) - (\sum x)^2} \cdot
 
 * r represents the correlation coefficient.
 * n is the number of data points.
-
-
-
 
 ```python
 df.corr()
@@ -541,6 +512,7 @@ df.corr()
 | **PetalLengthCm** | 0.871754      | -0.420516    | 1.000000      | 0.962757     |
 | **PetalWidthCm**  | 0.817954      | -0.356544    | 0.962757      | 1.000000     |
 
+#### Without using pandas
 
 ```python
 import math
@@ -576,24 +548,26 @@ def corr_f(df):
 corr_f(df)
 ```
 
-Correlation of SepalLengthCm and SepalLengthCm :1.0 \
-Correlation of SepalLengthCm and SepalWidthCm :-0.10936924995067286 \
-Correlation of SepalLengthCm and PetalLengthCm :0.8717541573048861 \
+#### Result
+
+```
+Correlation of SepalLengthCm and SepalLengthCm :1.0
+Correlation of SepalLengthCm and SepalWidthCm :-0.10936924995067286
+Correlation of SepalLengthCm and PetalLengthCm :0.8717541573048861
 Correlation of SepalLengthCm and PetalWidthCm :0.8179536333691775
 
-Correlation of SepalWidthCm and SepalLengthCm :-0.10936924995067286 \
-Correlation of SepalWidthCm and SepalWidthCm :1.0 \
-Correlation of SepalWidthCm and PetalLengthCm :-0.42051609640118826 \
+Correlation of SepalWidthCm and SepalLengthCm :-0.10936924995067286
+Correlation of SepalWidthCm and SepalWidthCm :1.0
+Correlation of SepalWidthCm and PetalLengthCm :-0.42051609640118826
 Correlation of SepalWidthCm and PetalWidthCm :-0.3565440896138223
 
-Correlation of PetalLengthCm and SepalLengthCm :0.8717541573048861 \
-Correlation of PetalLengthCm and SepalWidthCm :-0.42051609640118826 \
-Correlation of PetalLengthCm and PetalLengthCm :1.0 \
+Correlation of PetalLengthCm and SepalLengthCm :0.8717541573048861
+Correlation of PetalLengthCm and SepalWidthCm :-0.42051609640118826
+Correlation of PetalLengthCm and PetalLengthCm :1.0
 Correlation of PetalLengthCm and PetalWidthCm :0.9627570970509656
 
-Correlation of PetalWidthCm and SepalLengthCm :0.8179536333691775 \
-Correlation of PetalWidthCm and SepalWidthCm :-0.3565440896138223 \
-Correlation of PetalWidthCm and PetalLengthCm :0.9627570970509656 \
+Correlation of PetalWidthCm and SepalLengthCm :0.8179536333691775
+Correlation of PetalWidthCm and SepalWidthCm :-0.3565440896138223
+Correlation of PetalWidthCm and PetalLengthCm :0.9627570970509656
 Correlation of PetalWidthCm and PetalWidthCm :1.0
-    
-    
+```
