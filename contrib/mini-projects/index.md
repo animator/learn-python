@@ -1,3 +1,3 @@
 # List of sections
 
-- [TO DO LIST](todolist.md)
+- [TO DO LIST](todolist)
