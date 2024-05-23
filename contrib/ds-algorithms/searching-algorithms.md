@@ -1,85 +1,112 @@
-# Searching Algorithms
+## Learning Searching Algorithms 
+Searching algorithms are essential tools in computer science used to locate specific items within a collection of data. These algorithms are designed to efficiently navigate through data structures to find the desired information, making them fundamental in various applications such as databases, web search engines, and more.
+**Searching** is the fundamental process of locating a specific element or item within a collection of data. This collection of data can take various forms, such as arrays, lists, trees, or other structured representations. The primary objective of searching is to determine whether the desired element exists within the data, and if so, to identify its precise location or retrieve it. It plays an important role in various computational tasks and real-world applications, including information retrieval, data analysis, decision-making processes, and more.
 
-Searching algorithms are techniques used to locate specific items within a collection of data. These algorithms are fundamental in computer science and are employed in various applications, from databases to web search engines.
 
-## Real Life Example of Searching
-- Searching for a word in a dictionary
-- Searching for a specific book in a library
-- Searching for a contact in your phone's address book
-- Searching for a file on your computer, etc.
+## 1. Linear Search
 
-# Some common searching techniques
+Linear Search is a method for searching an element in a collection of elements. In Linear Search, each element of the collection is visited one by one in a sequential fashion to find the desired element. Linear Search is also known as Sequential Search.
 
-# 1. Linear Search
+In Linear Search Algorithm, 
 
-Linear search, also known as sequential search, is a straightforward searching algorithm that checks each element in a collection until the target element is found or the entire collection has been traversed. It is simple to implement but becomes inefficient for large datasets.
-
-**Algorithm Overview:**
-- **Sequential Checking:** The algorithm iterates through each element in the collection, starting from the first element.
-- **Comparing Elements:** At each iteration, it compares the current element with the target element.
-- **Finding the Target:** If the current element matches the target, the search terminates, and the index of the element is returned.
-- **Completing the Search:** If the entire collection is traversed without finding the target, the algorithm indicates that the element is not present.
-
-## Linear Search Code in Python
+Every element is considered as a potential match for the key and checked for the same.
+If any element is found equal to the key, the search is successful and the index of that element is returned.
+If no element is found equal to the key, the search yields “No match found”.
 
 ```python
-def linear_search(arr, target):
-    for i in range(len(arr)):
-        if arr[i] == target:
-            return i
-    return -1
-
-arr = [5, 3, 8, 1, 2]
-target = 8
-result = linear_search(arr, target)
-if result != -1:
-    print(f"Element {target} found at index {result}.")
-else:
-    print(f"Element {target} not found.")
+LinearSearch(list, key)  
+  for each item in the list  
+    if item == value  
+      return its index position  
+   return -1  
 ```
+####Python Program
+```python
+def linear_Search(list1, n, key):  
+  
+    # Searching list1 sequentially  
+    for i in range(0, n):  
+        if (list1[i] == key):  
+            return i  
+    return -1  
+  
+  
+list1 = [1 ,3, 5, 4, 7, 9]  
+key = 7  
+  
+n = len(list1)  
+res = linear_Search(list1, n, key)  
+if(res == -1):  
+    print("Element not found")  
+else:  
+    print("Element found at index: ", res)  
+```
+######output
+Element found at index:  4
 
-## Complexity Analysis
-- **Time Complexity**: O(n)
-- **Space Complexity**: O(1)
+## 2. Binary Search
+Binary search is a search algorithm used to find the position of a target value within a sorted array. It works by repeatedly dividing the search interval in half until the target value is found or the interval is empty. The search interval is halved by comparing the target element with the middle value of the search space.
+####Conditions to apply Binary Search Algorithm in a Data Structure:
+ To apply Binary Search algorithm:
 
-</br>
-<hr>
-</br>
+- The data structure must be sorted.
+-  Access to any element of the data structure takes constant time.
 
-# 2. Binary Search
+####In this algorithm, 
 
-Binary search is an efficient searching algorithm that works on sorted collections. It repeatedly divides the search interval in half until the target element is found or the interval is empty. Binary search is significantly faster than linear search but requires the collection to be sorted beforehand.
 
-**Algorithm Overview:**
-- **Initial State:** Binary search starts with the entire collection as the search interval.
-- **Divide and Conquer:** At each step, it calculates the middle element of the current interval and compares it with the target.
-- **Narrowing Down the Interval:** If the middle element is equal to the target, the search terminates successfully. Otherwise, it discards half of the search interval based on the comparison result.
-- **Repeating the Process:** The algorithm repeats this process on the remaining half of the interval until the target is found or the interval is empty.
+- Divide the search space into two halves by finding the middle index “mid”. 
 
-## Binary Search Code in Python (Iterative)
+
+- Compare the middle element of the search space with the key. 
+- If the key is found at middle element, the process is terminated.
+- If the key is not found at middle element, choose which half will be used as the next search space.
+- If the key is larger than the middle element, then the right side is used for next search.
 
 ```python
-def binary_search(arr, target):
-    low = 0
-    high = len(arr) - 1
+# Python3 code to implement iterative Binary
+# Search.
+
+
+# It returns location of x in given array arr
+def binarySearch(arr, low, high, x):
+
     while low <= high:
-        mid = (low + high) // 2
-        if arr[mid] == target:
+
+        mid = low + (high - low) // 2
+
+        # Check if x is present at mid
+        if arr[mid] == x:
             return mid
-        elif arr[mid] < target:
+
+        # If x is greater, ignore left half
+        elif arr[mid] < x:
             low = mid + 1
+
+        # If x is smaller, ignore right half
         else:
             high = mid - 1
+
+    # If we reach here, then the element
+    # was not present
     return -1
 
-arr = [1, 3, 5, 7, 9, 11, 13, 15, 17, 19]
-target = 13
-result = binary_search(arr, target)
-if result != -1:
-    print(f"Element {target} found at index {result}.")
-else:
-    print(f"Element {target} not found.")
+
+# Driver Code
+if __name__ == '__main__':
+    arr = [2, 3, 4, 10, 40]
+    x = 10
+
+    # Function call
+    result = binarySearch(arr, 0, len(arr)-1, x)
+    if result != -1:
+        print("Element is present at index", result)
+    else:
+        print("Element is not present in array")
+
 ```
+######Output
+Element is present at index 3
 
 ## Binary Search Code in Python (Recursive)
 
@@ -158,4 +185,16 @@ else:
 </br>
 <hr>
 </br>
+# Summary
+##Applications of Searching:##
 
+Searching algorithms have numerous applications across various fields. Here are some common applications:
+
+####Information Retrieval:
+Search engines like Google, Bing, and Yahoo use sophisticated searching algorithms to retrieve relevant information from vast amounts of data on the web.
+####Database Systems:
+Searching is fundamental in database systems for retrieving specific data records based on user queries, improving efficiency in data retrieval.
+
+####Networking: 
+In networking, searching algorithms are used for routing packets efficiently through networks, finding optimal paths, and managing network resources.
+####and a lot more......
