@@ -38,3 +38,57 @@ print(arr1)
 ```python
 [1,2,3,4,5]
 ```
+### 2. numpy.savez():
+
+The `np.savez` function saves multiple NumPy arrays into a single file with a `.npz` extension. Each array is stored with a unique name.
+
+#### Syntax :
+
+  ```python
+numpy.savez(file, *args, **kwds)
+  ```
+- **file** : Name of the file.
+- **args** : Arrays to be saved.( If arrays are unnamed, they are stored with default names like arr_0, arr_1, etc.)
+- **kwds** : Named arrays to be saved.
+
+#### Example :
+
+```python
+import numpy as np
+
+arr1 = np.array([1,2,3,4,5])
+arr2 = np.array(['a','b','c','d'])
+arr3 = np.array([1.2,3.4,5])
+np.savez('example.npz', a1=arr1, a2=arr2, a3 = arr3) #saves arrays in npz format
+
+```
+
+Inorder to load the array from example.npz
+
+```python
+
+arr = np.load('example.npz')
+print(arr['a1'])
+print(arr['a2'])
+print(arr['a3'])
+
+```
+**Output** :
+```python
+[1 2 3 4 5]
+['a' 'b' 'c' 'd']
+[1.2 3.4 5. ]
+```
+
+### 3. np.savetxt()
+
+The `np.savetxt` function saves a NumPy array to a text file, such as `.txt` or `.csv`. This format is human-readable and can be used for interoperability with other tools.
+
+#### Syntax :
+
+  ```python
+numpy.savetxt(fname, X, fmt='%.18e', delimiter=' ', newline='\n', header='', footer='', comments='# ', encoding=None)
+  ```
+- **fname** : Name of the file.
+- **X** : Array to be saved.
+- **kwds** : Named arrays to be saved.
