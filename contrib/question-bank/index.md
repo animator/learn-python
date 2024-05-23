@@ -1,3 +1,3 @@
 # List of sections
 
-- [Pattern Problems](patternproblem)
+- [Pattern Problems](patternproblem.md)
