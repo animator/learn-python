@@ -1,3 +1,4 @@
 # List of sections
 
-- [Section title](filename.md)
+- [Installing NumPy](installing-numpy.md)
+- [Introduction](introduction.md)
