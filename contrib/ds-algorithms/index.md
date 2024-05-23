@@ -1,6 +1,6 @@
 # List of sections
 
-- [Section title](filename.md)
+- [Queues in Python](Queues.md)
 - [Sorting Algorithms](sorting-algorithms.md)
 - [Recursion and Backtracking](recursion.md)
 - [Divide and Conquer Algorithm](divide-and-conquer-algorithm.md)
