@@ -1,5 +1,6 @@
 # List of sections
 
+- [Binomial Distribution](binomial_distribution.md)
 - [Regression in Machine Learning](Regression.md)
 - [Confusion Matrix](confusion-matrix.md)
 - [Decision Tree Learning](Decision-Tree.md)
