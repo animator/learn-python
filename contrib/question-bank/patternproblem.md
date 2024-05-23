@@ -93,7 +93,7 @@ for k in range(0, n):
     print()
 ```
 
-**6. star pyramid **
+**6. star pyramid**
 ```
     *
    ***
