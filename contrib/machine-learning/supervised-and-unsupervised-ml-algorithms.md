@@ -74,3 +74,4 @@ Unsupervised learning algorithms work with unlabeled data. The model tries to le
 - Helps in understanding the relationship between items.
 - Measures like support, confidence, and lift are used.
 
+![Association Rules](https://media.licdn.com/dms/image/D5612AQHzuT5mbz42Mw/article-cover_image-shrink_720_1280/0/1699439045884?e=1721865600&v=beta&t=gz429JzGDnn9j1-xHueH7inYDy1_v0HZ5Wdt6Og1MpY)
