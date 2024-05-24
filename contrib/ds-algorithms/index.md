@@ -2,6 +2,8 @@
 
 - [Section title](filename.md)
 - [Time Space Complexity](time-space-complexity.md)
+- [Queues in Python](Queues.md)
+- [Graphs](graph.md)
 - [Sorting Algorithms](sorting-algorithms.md)
 - [Recursion and Backtracking](recursion.md)
 - [Divide and Conquer Algorithm](divide-and-conquer-algorithm.md)
