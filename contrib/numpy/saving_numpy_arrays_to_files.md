@@ -87,8 +87,40 @@ The `np.savetxt` function saves a NumPy array to a text file, such as `.txt` or 
 #### Syntax :
 
   ```python
-numpy.savetxt(fname, X, fmt='%.18e', delimiter=' ', newline='\n', header='', footer='', comments='# ', encoding=None)
+numpy.savetxt(fname, X, delimiter=' ', newline='\n', header='', footer='', encoding=None)
   ```
 - **fname** : Name of the file.
 - **X** : Array to be saved.
-- **kwds** : Named arrays to be saved.
+- **delimiter** : It is a Optional parameter,This is a character or string that is used to separate columns.(By Default it is " ")
+- **newline** : It is a Optional parameter, Character for seperating lines.(By Default it is "\n")
+- **header** : It is a Optional parameter, String that is written at beginning of the file.
+- **footer** : It is a Optional parameter, String that is written at ending of the file.
+- **encoding** : It is a Optional parameter, Encoding of the output file. (By Default it is None)
+
+#### Example :
+
+```python
+import numpy as np
+
+arr = np.array([1.1,2.2,3,4.4,5])
+np.savetxt("example.txt",arr) #saves the array in example.txt
+
+```
+
+Inorder to load the array from example.txt
+
+```python
+
+arr1 = np.loadtxt("example.txt")
+print(arr1)
+
+```
+**Output** :
+```python
+[1.1 2.2 3. 4.4 5. ]
+```
+
+
+By using these methods, you can efficiently save and load NumPy arrays in various formats suitable for your needs.
+
+
