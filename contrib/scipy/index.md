@@ -1,4 +1,4 @@
 # List of sections
 
-- [Installation of Scipy and its key uses]( Installation_of_Scipy_&_its_key_uses.md)
+- [Installation of Scipy and its key uses](installation_features.md)
 
