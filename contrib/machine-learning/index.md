@@ -7,3 +7,4 @@
 - [Support Vector Machine Algorithm](support-vector-machine.md)
 - [Artificial Neural Network from the Ground Up](ArtificialNeuralNetwork.md)
 - [TensorFlow.md](tensorFlow.md)
+- [Types of optimizers](Types_of_optimizers.md)
