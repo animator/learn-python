@@ -1,7 +1,5 @@
-Sure, here's a more detailed explanation for each optimizer, including the mathematical formulation, intuition, advantages, and disadvantages, along with the Python implementation.
 
 ---
-
 # Optimizers in Machine Learning
 
 Optimizers are algorithms or methods used to change the attributes of your neural network such as weights and learning rate in order to reduce the losses. Optimization algorithms help to minimize (or maximize) an objective function (also called a loss function) which is simply a mathematical function dependent on the model's internal learnable parameters which are used in computing the target values from the set of features.
