@@ -1,8 +1,8 @@
 # BMI Calculator
 
 ## Overview
-This Python script calculates and interprets the Body Mass Index (BMI) based on user input for weight and height. The BMI is calculated using the formula:
-\[ \text{BMI} = \frac{\text{weight (kg)}}{(\text{height (m)})^2} \]
+This Python script calculates and interprets the Body Mass Index (BMI) based on user input for weight and height. The BMI is calculated using the formula: 
+$BMI = \frac{weight \: (kg)}{(height \: (m))^2}$
 
 
 ## Functions
@@ -45,7 +45,7 @@ The main part of the script prompts the user for their weight and height, calcul
 7. Handle any `ValueError` exceptions if the user enters invalid input.
 
 ## Usage
-To run the script, execute the following command in your terminal or command prompt:
+To run the script,save the file as ```bmi_calculator.py``` and execute the following command in your terminal or command prompt:
 
 ```sh
 python bmi_calculator.py
