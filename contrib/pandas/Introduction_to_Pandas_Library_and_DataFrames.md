@@ -1,8 +1,5 @@
 # Introduction_to_Pandas_Library_and_DataFrames
 
-
-> Content Creator - Krishna Kaushik
-
 **As you have learnt Python Programming , now it's time for some applications.**
 
 - Machine Learning and Data Science is the emerging field of today's time , to work in this this field your first step should be `Data Science` as Machine Learning is all about data.
@@ -110,42 +107,15 @@ You can also create a DataFrame by using `pd.DataFrame()` and passing it a Pytho
 # Let's create
 cars_with_colours = pd.DataFrame({"Cars" : ["BMW","Audi","Thar","Honda"],
                                 "Colour" : ["Black","White","Red","Green"]})
-cars_with_colours
+print(cars_with_colours)
 ```
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Cars</th>
-      <th>Colour</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>BMW</td>
-      <td>Black</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>Audi</td>
-      <td>White</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>Thar</td>
-      <td>Red</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>Honda</td>
-      <td>Green</td>
-    </tr>
-  </tbody>
-</table>
-</div>
 
-
+        Cars Colour
+    0    BMW  Black
+    1   Audi  White
+    2   Thar    Red
+    3  Honda  Green
+    
 
 The dictionary key is the `column name` and value are the `column data`.
 
@@ -194,42 +164,15 @@ age
 
 record = pd.DataFrame({"Student_Name":students , 
                       "Age" :age})
-record
+print(record)
 ```
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Student_Name</th>
-      <th>Age</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>Ram</td>
-      <td>19</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>Mohan</td>
-      <td>20</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>Krishna</td>
-      <td>21</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>Shivam</td>
-      <td>24</td>
-    </tr>
-  </tbody>
-</table>
-</div>
 
-
+      Student_Name  Age
+    0          Ram   19
+    1        Mohan   20
+    2      Krishna   21
+    3       Shivam   24
+    
 
 
 ```python
@@ -269,53 +212,19 @@ record.dtypes
 
 
 ```python
-record.describe()  # It only display the results for numeric data
+print(record.describe())  # It only display the results for numeric data
 ```
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Age</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>count</th>
-      <td>4.000000</td>
-    </tr>
-    <tr>
-      <th>mean</th>
-      <td>21.000000</td>
-    </tr>
-    <tr>
-      <th>std</th>
-      <td>2.160247</td>
-    </tr>
-    <tr>
-      <th>min</th>
-      <td>19.000000</td>
-    </tr>
-    <tr>
-      <th>25%</th>
-      <td>19.750000</td>
-    </tr>
-    <tr>
-      <th>50%</th>
-      <td>20.500000</td>
-    </tr>
-    <tr>
-      <th>75%</th>
-      <td>21.750000</td>
-    </tr>
-    <tr>
-      <th>max</th>
-      <td>24.000000</td>
-    </tr>
-  </tbody>
-</table>
-</div>
 
-
+                 Age
+    count   4.000000
+    mean   21.000000
+    std     2.160247
+    min    19.000000
+    25%    19.750000
+    50%    20.500000
+    75%    21.750000
+    max    24.000000
+    
 
 #### 3. Use `.info()` to find information about the dataframe
 
@@ -333,9 +242,3 @@ record.info()
      1   Age           4 non-null      int64 
     dtypes: int64(1), object(1)
     memory usage: 196.0+ bytes
-    
-
-
-```python
-
-```
