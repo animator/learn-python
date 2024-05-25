@@ -4,7 +4,7 @@ Pandas is a robust Python library that is available as free source. The Pandas l
 
 While working with data, it is common to come across time series data. Pandas is a very handy tool for dealing with time series data. Pandas is a strong Python data analysis toolkit that provides a wide range of date and time data processing options. Many data science jobs require working with time series data, time zones, and date arithmetic, and pandas simplifies these processes.
 
-Features of Pandas `Data_Time`:
+Features of Pandas `Date_Time`:
 
 - **Parsing dates and times**: Pandas provides a number of functions for parsing dates and times from strings, including `to_datetime()` and `parse_dates()`. These functions can handle a variety of date and time formats, Unix timestamps, and human-readable formats.
 
