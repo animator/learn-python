@@ -12,60 +12,31 @@
 
 *You could export it as a .csv file and then import it using ``pd.read_csv()``.*
 
-*In this case, the exported .csv file is called `Titanic.csv`*
+*In this case, the exported .csv file is called `car-sales.csv`*
 
 
 ```python
 ## Importing Titanic Data set 
 import pandas as pd
 
-titanic_df= pd.read_csv("https://raw.githubusercontent.com/kRiShNa-429407/learn-python/main/contrib/pandas/Datasets/Titanic.csv")
-print(titanic_df)
+car_sales_df= pd.read_csv("https://raw.githubusercontent.com/kRiShNa-429407/learn-python/main/contrib/pandas/Datasets/car-sales.csv")
+print(car_sales_df)
 ```
 
-          pclass  survived                                             name  \
-    0          1         1                    Allen, Miss. Elisabeth Walton   
-    1          1         1                   Allison, Master. Hudson Trevor   
-    2          1         0                     Allison, Miss. Helen Loraine   
-    3          1         0             Allison, Mr. Hudson Joshua Creighton   
-    4          1         0  Allison, Mrs. Hudson J C (Bessie Waldo Daniels)   
-    ...      ...       ...                                              ...   
-    1304       3         0                             Zabour, Miss. Hileni   
-    1305       3         0                            Zabour, Miss. Thamine   
-    1306       3         0                        Zakarian, Mr. Mapriededer   
-    1307       3         0                              Zakarian, Mr. Ortin   
-    1308       3         0                               Zimmerman, Mr. Leo   
-    
-             sex    age  sibsp  parch  ticket      fare    cabin embarked boat  \
-    0     female  29.00      0      0   24160  211.3375       B5        S    2   
-    1       male   0.92      1      2  113781  151.5500  C22 C26        S   11   
-    2     female   2.00      1      2  113781  151.5500  C22 C26        S  NaN   
-    3       male  30.00      1      2  113781  151.5500  C22 C26        S  NaN   
-    4     female  25.00      1      2  113781  151.5500  C22 C26        S  NaN   
-    ...      ...    ...    ...    ...     ...       ...      ...      ...  ...   
-    1304  female  14.50      1      0    2665   14.4542      NaN        C  NaN   
-    1305  female    NaN      1      0    2665   14.4542      NaN        C  NaN   
-    1306    male  26.50      0      0    2656    7.2250      NaN        C  NaN   
-    1307    male  27.00      0      0    2670    7.2250      NaN        C  NaN   
-    1308    male  29.00      0      0  315082    7.8750      NaN        S  NaN   
-    
-           body                        home.dest  
-    0       NaN                     St Louis, MO  
-    1       NaN  Montreal, PQ / Chesterville, ON  
-    2       NaN  Montreal, PQ / Chesterville, ON  
-    3     135.0  Montreal, PQ / Chesterville, ON  
-    4       NaN  Montreal, PQ / Chesterville, ON  
-    ...     ...                              ...  
-    1304  328.0                              NaN  
-    1305    NaN                              NaN  
-    1306  304.0                              NaN  
-    1307    NaN                              NaN  
-    1308    NaN                              NaN  
-    
-    [1309 rows x 14 columns]
+         Make Colour  Odometer (KM)  Doors       Price
+    0  Toyota  White         150043      4   $4,000.00
+    1   Honda    Red          87899      4   $5,000.00
+    2  Toyota   Blue          32549      3   $7,000.00
+    3     BMW  Black          11179      5  $22,000.00
+    4  Nissan  White         213095      4   $3,500.00
+    5  Toyota  Green          99213      4   $4,500.00
+    6   Honda   Blue          45698      4   $7,500.00
+    7   Honda   Blue          54738      4   $7,000.00
+    8  Toyota  White          60000      4   $6,250.00
+    9  Nissan  White          31600      4   $9,700.00
     
 
-The dataset I am using here for your reference is taken from the same repository i.e ``learn-python`` (https://raw.githubusercontent.com/kRiShNa-429407/learn-python/main/contrib/pandas/Datasets/Titanic.csv) I uploaded it in the Datasets folder,you can use it from there.
+The dataset I am using here for your reference is taken from the same repository i.e ``learn-python`` (https://raw.githubusercontent.com/kRiShNa-429407/learn-python/main/contrib/pandas/Datasets/car-sales.csv) I uploaded it in the Datasets folder,you can use it from there.
 
 You can also place the filename with its path in `pd.read_csv()`.
 
@@ -92,12 +63,12 @@ You can also place the filename with its path in `pd.read_csv()`.
 
 ### Exporting a dataframe to a CSV
 
-**We haven't made any changes yet to the ``titanic_df`` DataFrame but let's try to export it.**
+**We haven't made any changes yet to the ``car_sales_df`` DataFrame but let's try to export it.**
 
 
 ```python
 #Export the titanic_df DataFrame to csv
-titanic_df.to_csv("exported_titanic.csv")  
+car_sales_df.to_csv("exported_car_sales_df.csv")  
 ```
 
 Running this will save a file called ``exported_titanic.csv`` to the current folder.
