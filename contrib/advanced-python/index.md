@@ -5,3 +5,4 @@
 - [Regular Expressions in Python](regular_expressions.md)
 - [JSON module](json-module.md)
 - [OOPs](OOPs.md)
+- [Map Function](map-function.md)
