@@ -76,7 +76,7 @@ ax.set_title("Number of cars sold in various years")
 plt.show()
 ```
 
-![Title and axis labels](images\title_and_axis_labels.png)
+![Title and axis labels](images/title_and_axis_labels.png)
 
 Here, we have created a `matplotlib.pyplot.subplots()` object which returns a `Figure` object `fig` as well as an `Axes` object `ax` both of which are used for customizing the bar plot. `ax.set_xlabel`, `ax.set_ylabel` and `ax.set_title` are respectively used for adding labels of X, Y axis and adding title to the graph.
 
