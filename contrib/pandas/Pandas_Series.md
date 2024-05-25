@@ -138,7 +138,7 @@ output:
 
 ### Modifying elements and indexes 
 *  <series_object>[indexes]=< new data value >
-*  <series_object>[start:end]=< new data value >
+*  <series_object>[start : end]=< new data value >
 *  <series_object>.index=[new indexes]
 
 **Note: Series object are value-mutable but size immutable objects.**
@@ -187,7 +187,7 @@ If you dont provide any value to n the by default it give results for n=5.
 #### Few extra functions:
 * <series_object>.sort_values()    return the series object in ascending order of the values.
 * <series_object>.sort_index()    return the series object in ascending order of the index.
-* <series_object>.sort_drop(<index to remove>)    return the series with the  deleted index that you removed and corresponding value.
+* <series_object>.sort_drop(<index_to_remove>)    return the series with the  deleted index that you removed and corresponding value.
 
 
 
