@@ -100,8 +100,7 @@ Out[12]: 0 NaN
          dtype: float64
 ```
 Notice that in addition to casting the integer array to floating point, Pandas automati‐
-cally converts the None to a NaN value. (Be aware that there is a proposal to add a
-native integer NA to Pandas in the future; as of this writing, it has not been included.)
+cally converts the None to a NaN value. 
 
 --- 
 ## Operating on Null Values
