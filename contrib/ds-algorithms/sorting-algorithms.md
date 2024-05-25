@@ -327,3 +327,162 @@ print("Sorted array:", arr)  # Output: [3, 9, 10, 27, 38, 43, 82]
 </br>
 <hr>
 </br>
+
+# 5. Insertion Sort
+
+Insertion sort is a straightforward and efficient sorting algorithm for small datasets. It builds the final sorted array one element at a time. It is much like sorting playing cards in your hands: you take one card at a time and insert it into its correct position among the already sorted cards.
+
+**Algorithm Overview:**
+- **Start from the Second Element:** Begin with the second element, assuming the first element is already sorted.
+- **Compare with Sorted Subarray:** Take the current element and compare it with elements in the sorted subarray (the part of the array before the current element).
+- **Insert in Correct Position:** Shift all elements in the sorted subarray that are greater than the current element to one position ahead. Insert the current element into its correct position.
+- **Repeat Until End:** Repeat this process for all elements in the array.
+
+## Example with Visualization
+Let's sort the list `[5, 3, 8, 1, 2]` using insertion sort.
+
+**Step-by-Step Visualization:**
+**Initial List:** `[5, 3, 8, 1, 2]`
+
+1. **Pass 1:**
+   - Current element: 3
+   - Compare 3 with 5, move 5 to the right: `[5, 5, 8, 1, 2]`
+   - Insert 3 in its correct position: `[3, 5, 8, 1, 2]`
+
+2. **Pass 2:**
+   - Current element: 8
+   - 8 is already in the correct position: `[3, 5, 8, 1, 2]`
+    
+3. **Pass 3:**
+   - Current element: 1
+   - Compare 1 with 8, move 8 to the right: `[3, 5, 8, 8, 2]`
+   - Compare 1 with 5, move 5 to the right: `[3, 5, 5, 8, 2]`
+   - Compare 1 with 3, move 3 to the right: `[3, 3, 5, 8, 2]`
+   - Insert 1 in its correct position: `[1, 3, 5, 8, 2]`
+    
+4. **Pass 4:**
+   - Current element: 2
+   - Compare 2 with 8, move 8 to the right: `[1, 3, 5, 8, 8]`
+   - Compare 2 with 5, move 5 to the right: `[1, 3, 5, 5, 8]`
+   - Compare 2 with 3, move 3 to the right: `[1, 3, 3, 5, 8]`
+   - Insert 2 in its correct position: `[1, 2, 3, 5, 8]`
+
+## Insertion Sort Code in Python
+
+
+```python
+
+def insertion_sort(arr):
+    # Traverse from 1 to len(arr)
+    for i in range(1, len(arr)):
+        key = arr[i]
+        # Move elements of arr[0..i-1], that are greater than key,
+        # to one position ahead of their current position
+        j = i - 1
+        while j >= 0 and key < arr[j]:
+            arr[j + 1] = arr[j]
+            j -= 1
+        arr[j + 1] = key
+
+# Example usage
+arr = [5, 3, 8, 1, 2]
+insertion_sort(arr)
+print("Sorted array:", arr)  # Output: [1, 2, 3, 5, 8]
+```
+## Complexity Analysis
+  - **Worst Case:** `𝑂(𝑛^2)` comparisons and swaps. This occurs when the array is in reverse order.
+  - **Best Case:** `𝑂(𝑛)` comparisons and `𝑂(1)` swaps. This happens when the array is already sorted.
+  - **Average Case:** `𝑂(𝑛^2)` comparisons and swaps. This is the expected number of comparisons and swaps over all possible input sequences.
+
+
+</br>
+<hr>
+</br>
+
+# 6. Heap Sort
+
+Heap Sort is an efficient comparison-based sorting algorithm that uses a binary heap data structure. It divides its input into a sorted and an unsorted region and iteratively shrinks the unsorted region by extracting the largest (or smallest) element and moving it to the sorted region.
+
+**Algorithm Overview:**
+- **Build a Max Heap:** Convert the array into a max heap, a complete binary tree where the value of each node is greater than or equal to the values of its children.
+- **Heapify:** Ensure that the subtree rooted at each node satisfies the max heap property. This process is called heapify.
+- **Extract Maximum:** Swap the root (the maximum element) with the last element of the heap and reduce the heap size by one. Restore the max heap property by heapifying the root.
+- **Repeat:** Continue extracting the maximum element and heapifying until the entire array is sorted.
+
+## Example with Visualization
+
+Let's sort the list `[5, 3, 8, 1, 2]` using heap sort.
+
+1. **Build Max Heap:**
+   - Initial array: `[5, 3, 8, 1, 2]`
+   - Start heapifying from the last non-leaf node.
+   - Heapify at index 1: `[5, 3, 8, 1, 2]` (no change, children are already less than the parent)
+   - Heapify at index 0: `[8, 3, 5, 1, 2]` (swap 5 and 8 to make 8 the root)
+
+2. **Heapify Process:**
+   - Heapify at index 0: `[8, 3, 5, 1, 2]` (no change needed, already a max heap)
+
+3. **Extract Maximum:**
+   - Swap root with the last element: `[2, 3, 5, 1, 8]`
+   - Heapify at index 0: `[5, 3, 2, 1, 8]` (swap 2 and 5)
+     
+4. **Repeat Extraction:**
+   - Swap root with the second last element: `[1, 3, 2, 5, 8]`
+   - Heapify at index 0: `[3, 1, 2, 5, 8]` (swap 1 and 3)
+   - Swap root with the third last element: `[2, 1, 3, 5, 8]`
+   - Heapify at index 0: `[2, 1, 3, 5, 8]` (no change needed)
+   - Swap root with the fourth last element: `[1, 2, 3, 5, 8]`
+
+After all extractions, the array is sorted: `[1, 2, 3, 5, 8]`.
+
+## Heap Sort Code in Python
+
+```python
+def heapify(arr, n, i):
+    largest = i  # Initialize largest as root
+    left = 2 * i + 1  # left child index
+    right = 2 * i + 2  # right child index
+
+    # See if left child of root exists and is greater than root
+    if left < n and arr[largest] < arr[left]:
+        largest = left
+
+    # See if right child of root exists and is greater than root
+    if right < n and arr[largest] < arr[right]:
+        largest = right
+
+    # Change root, if needed
+    if largest != i:
+        arr[i], arr[largest] = arr[largest], arr[i]  # swap
+
+        # Heapify the root.
+        heapify(arr, n, largest)
+
+def heap_sort(arr):
+    n = len(arr)
+
+    # Build a maxheap.
+    for i in range(n // 2 - 1, -1, -1):
+        heapify(arr, n, i)
+
+    # One by one extract elements
+    for i in range(n - 1, 0, -1):
+        arr[i], arr[0] = arr[0], arr[i]  # swap
+        heapify(arr, i, 0)
+
+# Example usage
+arr = [5, 3, 8, 1, 2]
+heap_sort(arr)
+print("Sorted array:", arr)  # Output: [1, 2, 3, 5, 8]
+```
+
+## Complexity Analysis
+ - **Worst Case:** `𝑂(𝑛log𝑛)`. Building the heap takes `𝑂(𝑛)` time, and each of the 𝑛 element extractions takes `𝑂(log𝑛)` time.
+ - **Best Case:** `𝑂(𝑛log𝑛)`. Even if the array is already sorted, heap sort will still build the heap and perform the extractions.
+ - **Average Case:** `𝑂(𝑛log𝑛)`. Similar to the worst-case, the overall complexity remains `𝑂(𝑛log𝑛)` because each insertion and deletion in a heap takes `𝑂(log𝑛)` time, and these operations are performed 𝑛 times.
+
+</br>
+<hr>
+</br>
+
+
