@@ -6,6 +6,8 @@ Optimizers are algorithms or methods used to change the attributes of your neura
 
 ## Types of Optimizers
 
+
+
 ### 1. Gradient Descent 
 
 **Explanation:**
@@ -15,19 +17,20 @@ Gradient Descent is the simplest and most commonly used optimization algorithm. 
 
 The update rule for the parameter vector θ in gradient descent is represented by the equation:
 
-- \(theta_new = theta_old - alpha * gradient/)
+- $$\theta_{\text{new}} = \theta_{\text{old}} - \alpha \cdot \nabla J(\theta)$$
 
 Where:
-- theta_old is the old parameter vector.
-- theta_new is the updated parameter vector.
-- alpha is the learning rate.
-- gradient is the gradient of the objective function with respect to the parameters.
+- θold is the old parameter vector.
+-  θnew is the updated parameter vector.
+- alpha(α) is the learning rate.
+-  ∇J(θ) is the gradient of the objective function with respect to the parameters.
+
 
 
 **Intuition:**
 - At each iteration, we calculate the gradient of the cost function.
 - The parameters are updated in the opposite direction of the gradient.
-- The size of the step is controlled by the learning rate \( \alpha \).
+- The size of the step is controlled by the learning rate α.
 
 **Advantages:**
 - Simple to implement.
@@ -58,9 +61,10 @@ SGD is a variation of gradient descent where we use only one training example to
 
 **Mathematical Formulation:**
 
-- \(theta = theta - alpha * dJ(theta; x_i, y_i) / d(theta)/)
+-  $$θ = θ - α \cdot \frac{∂J (θ; xᵢ, yᵢ)}{∂θ}$$
 
-\( x_i, y_i \) are a single training example and its target.
+
+- xᵢ, yᵢ are a single training example and its target.
 
 **Intuition:**
 - At each iteration, a random training example is selected.
@@ -98,7 +102,8 @@ Mini-Batch Gradient Descent is a variation where instead of a single training ex
 
 **Mathematical Formulation:**
 
-- theta = theta - alpha * (1/k) * sum(dJ(theta; x_i, y_i) / d(theta))
+- $$θ = θ - α \cdot \frac{1}{k} \sum_{i=1}^{k} \frac{∂J (θ; xᵢ, yᵢ)}{∂θ}$$
+
 
 Where:
 - \( k \) is the batch size.
@@ -141,14 +146,13 @@ Momentum helps accelerate gradient vectors in the right directions, thus leading
 
 **Mathematical Formulation:**
 
-- v_t = gamma * v_{t-1} + alpha * dJ(theta) / d(theta)
-
-- theta = theta - v_t
+- $$v_t = γ \cdot v_{t-1} + α \cdot ∇J(θ)$$
+- $$θ = θ - v_t$$
 
 where:
 
 - \( v_t \) is the velocity.
-- \( \gamma \) is the momentum term, typically set between 0.9 and 0.99.
+- γ is the momentum term, typically set between 0.9 and 0.99.
 
 **Intuition:**
 - At each iteration, the gradient is calculated.
@@ -182,9 +186,11 @@ NAG is a variant of the gradient descent with momentum. It looks ahead by a step
 
 **Mathematical Formulation:**
 
-- v_t = gamma * v_{t-1} + alpha * dJ(theta - gamma * v_{t-1}) / d(theta)
+- $$v_t = γv_{t-1} + α \cdot ∇J(θ - γ \cdot v_{t-1})$$
 
-- theta = theta - v_t
+- $$θ = θ - v_t$$
+
+
 
 
 **Intuition:**
@@ -220,13 +226,13 @@ AdaGrad adapts the learning rate to the parameters, performing larger updates fo
 
 **Mathematical Formulation:**
 
-- G_t = G_{t-1} + (dJ(theta) / d(theta)) ⊙ (dJ(theta) / d(theta))
+- $$G_t = G_{t-1} + (∂J(θ)/∂θ)^2$$
 
-- theta = theta - (alpha / sqrt(G_t + epsilon)) * (dJ(theta) / d(theta))
+- $$θ = θ - \frac{α}{\sqrt{G_t + ε}} \cdot ∇J(θ)$$
 
 Where:
-- \( G_t \) is the sum of squares of the gradients up to time step \( t \).
-- \( \epsilon \) is a small constant to avoid division by zero.
+- \(G_t\)   is the sum of squares of the gradients up to time step \( t \).
+- ε is a small constant to avoid division by zero.
 
 **Intuition:**
 - Accumulates the sum of the squares of the gradients for each parameter.
@@ -263,13 +269,13 @@ RMSprop modifies AdaGrad to perform well in non-convex settings by using a movin
 
 **Mathematical Formulation:**
 
-E[g^2]_t = beta * E[g^2]_{t-1} + (1 - beta) * (dJ(theta) / d(theta)) ⊙ (dJ(theta) / d(theta))
+-                                                    E[g²]ₜ = βE[g²]ₜ₋₁ + (1 - β)(∂J(θ) / ∂θ)² 
 
-theta = theta - (alpha / sqrt(E[g^2]_t + epsilon)) * (dJ(theta) / d(theta))
+- $$θ = θ - \frac{α}{\sqrt{E[g^2]_t + ε}} \cdot ∇J(θ)$$
 
 Where:
-- \( E[g^2]_t \) is the exponentially decaying average of past squared gradients.
-- \( \beta \) is the decay rate.
+-  \( E[g^2]_t \)  is the exponentially decaying average of past squared gradients.
+- β is the decay rate.
 
 **Intuition:**
 - Keeps a running average of the squared gradients.
@@ -304,20 +310,16 @@ Adam (Adaptive Moment Estimation) combines the advantages of both RMSprop and Ad
 
 **Mathematical Formulation:**
 
-- m_t = beta1 * m_{t-1} + (1 - beta1) * (dJ(theta) / d(theta))
-
-- v_t = beta2 * v_{t-1} + (1 - beta2) * ((dJ(theta) / d(theta))^2)
-
-- hat_m_t = m_t / (1 - beta1^t)
-
-- hat_v_t = v_t / (1 - beta2^t)
-
-- theta = theta - (alpha * hat_m_t) / (sqrt(hat_v_t) + epsilon)
+- $$m_t = β_1m_{t-1} + (1 - β_1)(∂J(θ)/∂θ)$$
+- $$v_t = β_2v_{t-1} + (1 - β_2)(∂J(θ)/∂θ)^2$$
+- $$\hat{m}_t = \frac{m_t}{1 - β_1^t}$$
+- $$\hat{v}_t = \frac{v_t}{1 - β_2^t}$$
+- $$θ = θ - \frac{α\hat{m}_t}{\sqrt{\hat{v}_t} + ε}$$
 
 Where:
-- \( m_t \) is the first moment (mean) of the gradient.
-- \( v_t \) is the second moment (uncentered variance) of the gradient.
-- \( \beta_1, \beta_2 \) are the decay rates for the moment estimates.
+- \( m<sub>t \) is the first moment (mean) of the gradient.
+- \( v<sub>t \) is the second moment (uncentered variance) of the gradient.
+- β_1.β_2 are the decay rates for the moment estimates.
 
 **Intuition:**
 - Keeps track of both the mean and the variance of the gradients.
