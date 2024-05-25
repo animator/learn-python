@@ -7,3 +7,4 @@
 - [Operations on Arrays in NumPy](operations-on-arrays.md)
 - [Loading Arrays from Files](loading_arrays_from_files.md)
 - [Saving Numpy Arrays into FIles](saving_numpy_arrays_to_files.md)
+- [Concatenation of Arrays](concatenation_of_arrays.md)
