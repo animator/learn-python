@@ -17,6 +17,49 @@ When a recursive function is called, the following sequence of events occurs:
 - Stack Management: Each recursive call is placed on the call stack. The stack keeps track of each function call, its argument, and the point to return to once the call completes.
 - Unwinding the Stack: When the base case is eventually met, the function returns a value, and the stack starts unwinding, returning values to previous function calls until the initial call is resolved.
 
+# Python Code: Factorial using Recursion
+
+```python
+def fact(n):
+    if n == 0 or n == 1:
+        return 1
+    return n * fact(n - 1)
+
+if __name__ == "__main__":
+    n = int(input("Enter a positive number: "))
+    print("Factorial of", n, "is", fact(n))
+```
+
+## Explanation
+
+This Python script calculates the factorial of a given number using recursion.
+
+- **Function `fact(n)`:**
+  - The function takes an integer `n` as input and calculates its factorial.
+  - It checks if `n` is 0 or 1. If so, it returns 1 (since the factorial of 0 and 1 is 1).
+  - Otherwise, it returns `n * fact(n - 1)`, which means it recursively calls itself with `n - 1` until it reaches either 0 or 1.
+
+- **Main Section:**
+  - The main section prompts the user to enter a positive number.
+  - It then calls the `fact` function with the input number and prints the result.
+
+### Example : Let n = 4
+
+
+The recursion unfolds as follows:
+1. When `fact(4)` is called, it computes `4 * fact(3)`.
+2. Inside `fact(3)`, it computes `3 * fact(2)`.
+3. Inside `fact(2)`, it computes `2 * fact(1)`.
+4. `fact(1)` returns 1 (`if` statement executes), which is received by `fact(2)`, resulting in `2 * 1` i.e. `2`.
+5. Back to `fact(3)`, it receives the value from `fact(2)`, giving `3 * 2` i.e. `6`.
+6. `fact(4)` receives the value from `fact(3)`, resulting in `4 * 6` i.e. `24`.
+7. Finally, `fact(4)` returns 24 to the main function.
+
+
+#### So, the result is 24.
+
+
+
 # What is Stack Overflow in Recursion
 
 Stack overflow is an error that occurs when the call stack memory limit is exceeded. During execution of recursion calls they are simultaneously stored in a recursion stack waiting for the recursive function to be completed. Without a base case, the function would call itself indefinitely, leading to a stack overflow.
