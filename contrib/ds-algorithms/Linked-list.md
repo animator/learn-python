@@ -25,10 +25,12 @@ Let's code something
 
 The smallest Unit: Node
 
+    ```python
     class Node:
         def __init__(self, data):
             self.data = data  # Assigns the given data to the node
             self.next = None  # Initialize the next attribute to null 
+    ```
 
 Now, we will see the types of linked list.
  
@@ -44,20 +46,24 @@ There are mainly four types of linked list,
 Simply think it is a chain of nodes in which each node remember(contains) the addresses of it next node.
 
 ### Creating a linked list class
-
+    ```python
     class LinkedList:
         def __init__(self):
             self.head = None  # Initialize head as None
+    ```
 
 ### Inserting a new node at the beginning of a linked list
 
+    ```python
     def insertAtBeginning(self, new_data):
         new_node = Node(new_data)  # Create a new node 
         new_node.next = self.head  # Next for new node becomes the   current head
         self.head = new_node  # Head now points to the new node
+    ```
 
 ### Inserting a new node at the end of a linked list
 
+```python    
     def insertAtEnd(self, new_data):
         new_node = Node(new_data)  # Create a new node
         if self.head is None:
@@ -67,9 +73,10 @@ Simply think it is a chain of nodes in which each node remember(contains) the ad
         while last.next:  # Otherwise, traverse the list to find the last node
             last = last.next
         last.next = new_node  # Make the new node the next node of the last node
-
+```
 ### Inserting a new node at the middle of a linked list 
 
+```python
     def insertAtPosition(self, data, position):
         new_node = Node(data)
         if position <= 0: #check if position is valid or not
@@ -89,21 +96,23 @@ Simply think it is a chain of nodes in which each node remember(contains) the ad
             return
         new_node.next = current_node.next  #connect the intermediate node
         current_node.next = new_node
-
+```
 ### Printing the Linked list 
 
+```python
     def printList(self):
         temp = self.head # Start from the head of the list
         while temp:
             print(temp.data,end=' ') # Print the data in the current node
             temp = temp.next # Move to the next node
         print()  # Ensures the output is followed by a new line
-
+```
 
 Lets complete the code and create a linked list.
 
 Connect all the code.
 
+```python
     if __name__ == '__main__':
         llist = LinkedList()
         
@@ -121,7 +130,7 @@ Connect all the code.
         llist.insertAtPosition(9,4)  ## 1 2 3 <9> 4 10 7
         # Print the list
         llist.printList()
-    
+```    
     
 ## output:
 1 2 3 9 4 10 7
@@ -129,14 +138,15 @@ Connect all the code.
 
 ### Deleting a node from the beginning of a linked list
 check the list is empty otherwise shift the head to next node.
-
+```python
     def deleteFromBeginning(self):
         if self.head is None:
             return "The list is empty" # If the list is empty, return this string
         self.head = self.head.next  # Otherwise, remove the head by making the next node the new head
-
+```
 ### Deleting a node from the end of a linked list
 
+```python
     def deleteFromEnd(self):
         if self.head is None:
             return "The list is empty" 
@@ -147,6 +157,7 @@ check the list is empty otherwise shift the head to next node.
         while temp.next.next:  # Otherwise, go to the second-last node
             temp = temp.next
         temp.next = None  # Remove the last node by setting the next pointer of the second-last node to None
+        ```
 
 
 ### Search in a linked list 
