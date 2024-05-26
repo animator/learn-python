@@ -199,7 +199,8 @@ check the list is empty otherwise shift the head to next node.
         # Print the list
         llist.printList()
 ``` 
-##Output
+## Output:
+
 2 3 56 9 4 10 
 
 
