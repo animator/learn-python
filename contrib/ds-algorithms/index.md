@@ -8,3 +8,4 @@
 - [Searching Algorithms](searching-algorithms.md)
 - [Greedy Algorithms](greedy-algorithms.md)
 - [Dynamic Programming](dynamic-programming.md)
+- [Linked list](Linked-list.md)
