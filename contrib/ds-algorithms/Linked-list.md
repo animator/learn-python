@@ -207,13 +207,9 @@ check the list is empty otherwise shift the head to next node.
 
 ## Real Life uses of Linked List
 1. Music Player – Songs in the music player are linked to the previous and next songs. So you can play songs either from starting or ending of the list.
-<br>
 2. GPS navigation systems- Linked lists can be used to store and manage a list of locations and routes, allowing users to easily navigate to their desired destination.
-<br>
 3. Task Scheduling- Operating systems use linked lists to manage task scheduling, where each process waiting to be executed is represented as a node in the list.
-<br>
 4. Speech Recognition-  Speech recognition software uses linked lists to represent the possible phonetic pronunciations of a word, where each possible pronunciation is represented as a node in the list.
-<br>
 and more....
 
 
