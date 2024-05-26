@@ -25,12 +25,12 @@ Let's code something
 
 The smallest Unit: Node
 
-    ```python
+```python
     class Node:
         def __init__(self, data):
             self.data = data  # Assigns the given data to the node
             self.next = None  # Initialize the next attribute to null 
-    ```
+```
 
 Now, we will see the types of linked list.
  
@@ -46,20 +46,20 @@ There are mainly four types of linked list,
 Simply think it is a chain of nodes in which each node remember(contains) the addresses of it next node.
 
 ### Creating a linked list class
-    ```python
+```python
     class LinkedList:
         def __init__(self):
             self.head = None  # Initialize head as None
-    ```
+```
 
 ### Inserting a new node at the beginning of a linked list
 
-    ```python
+```python
     def insertAtBeginning(self, new_data):
         new_node = Node(new_data)  # Create a new node 
         new_node.next = self.head  # Next for new node becomes the   current head
         self.head = new_node  # Head now points to the new node
-    ```
+```
 
 ### Inserting a new node at the end of a linked list
 
@@ -171,6 +171,7 @@ check the list is empty otherwise shift the head to next node.
             current = current.next
             position += 1
         return f"Value '{value}' not found in the list" 
+<<<<<<< HEAD
 ```
 
 ```python
@@ -218,3 +219,5 @@ and more....
 
 
 
+=======
+>>>>>>> beba33d28736209440c9d9cb4784426a9d38ce9b
