@@ -171,21 +171,3 @@ check the list is empty otherwise shift the head to next node.
             current = current.next
             position += 1
         return f"Value '{value}' not found in the list" 
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
