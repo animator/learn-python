@@ -104,28 +104,27 @@ Lets complete the code and create a linked list.
 
 Connect all the code.
 
-if __name__ == '__main__':
-    llist = LinkedList()
-
-    # Insert words at the beginning
-    llist.insertAtBeginning(4) # <4>
-    llist.insertAtBeginning(3) # <3> 4
-    llist.insertAtBeginning(2) # <2> 3 4
-    llist.insertAtBeginning(1) # <1> 2 3 4
-
-    # Insert a word at the end
-    llist.insertAtEnd(10)  # 1 2 3 4 <10>
-    llist.insertAtEnd(7)   # 1 2 3 4 10 <7>
-
-    #Insert at a random position 
-    llist.insertAtPosition(9,4)  ## 1 2 3 <9> 4 10 7
-    # Print the list
-    llist.printList()
+    if __name__ == '__main__':
+        llist = LinkedList()
+        
+        # Insert words at the beginning
+        llist.insertAtBeginning(4) # <4>
+        llist.insertAtBeginning(3) # <3> 4
+        llist.insertAtBeginning(2) # <2> 3 4
+        llist.insertAtBeginning(1) # <1> 2 3 4
+    
+        # Insert a word at the end
+        llist.insertAtEnd(10)  # 1 2 3 4 <10>
+        llist.insertAtEnd(7)   # 1 2 3 4 10 <7>
+    
+        #Insert at a random position 
+        llist.insertAtPosition(9,4)  ## 1 2 3 <9> 4 10 7
+        # Print the list
+        llist.printList()
     
     
-
-    output:
-    1 2 3 9 4 10 7
+## output:
+1 2 3 9 4 10 7
 
 
 ### Deleting a node from the beginning of a linked list
