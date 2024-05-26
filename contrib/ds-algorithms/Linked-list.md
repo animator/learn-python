@@ -157,11 +157,11 @@ check the list is empty otherwise shift the head to next node.
         while temp.next.next:  # Otherwise, go to the second-last node
             temp = temp.next
         temp.next = None  # Remove the last node by setting the next pointer of the second-last node to None
-        ```
+```
 
 
 ### Search in a linked list 
-
+```python
     def search(self, value):
         current = self.head  # Start with the head of the list
         position = 0  # Counter to keep track of the position
@@ -171,14 +171,43 @@ check the list is empty otherwise shift the head to next node.
             current = current.next
             position += 1
         return f"Value '{value}' not found in the list" 
+```
+
+```python
+    if __name__ == '__main__':
+        llist = LinkedList()
+        
+        # Insert words at the beginning
+        llist.insertAtBeginning(4) # <4>
+        llist.insertAtBeginning(3) # <3> 4
+        llist.insertAtBeginning(2) # <2> 3 4
+        llist.insertAtBeginning(1) # <1> 2 3 4
     
+        # Insert a word at the end
+        llist.insertAtEnd(10)  # 1 2 3 4 <10>
+        llist.insertAtEnd(7)   # 1 2 3 4 10 <7>
+    
+        #Insert at a random position 
+        llist.insertAtPosition(9,4)  # 1 2 3 <9> 4 10 7
+        llist.insertAtPositon(56,4)  # 1 2 3 <56> 9 4 10 7
+
+        #delete at the beginning 
+        llist.deleteFromBeginning()  # 2 3 56 9 4 10 7
+
+        #delete at the end
+        llist.deleteFromEnd()  # 2 3 56 9 4 10
+        # Print the list
+        llist.printList()
+``` 
 
 
 
-
-
-
-
+## Real Life uses of Linked List
+Music Player – Songs in the music player are linked to the previous and next songs. So you can play songs either from starting or ending of the list.
+GPS navigation systems- Linked lists can be used to store and manage a list of locations and routes, allowing users to easily navigate to their desired destination.
+Task Scheduling- Operating systems use linked lists to manage task scheduling, where each process waiting to be executed is represented as a node in the list.
+Speech Recognition-  Speech recognition software uses linked lists to represent the possible phonetic pronunciations of a word, where each possible pronunciation is represented as a node in the list.
+and more....
 
 
 
