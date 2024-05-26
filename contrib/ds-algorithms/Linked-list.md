@@ -171,7 +171,6 @@ check the list is empty otherwise shift the head to next node.
             current = current.next
             position += 1
         return f"Value '{value}' not found in the list" 
-<<<<<<< HEAD
 ```
 
 ```python
@@ -219,5 +218,3 @@ and more....
 
 
 
-=======
->>>>>>> beba33d28736209440c9d9cb4784426a9d38ce9b
