@@ -24,4 +24,16 @@ Stacks are widely used in Computer Science:
 - Evaluating expressions
 - Checking the nesting of parentheses in an expression
 - *Backtracking* algorithms (Recursion)
+
 Understanding these applications is essential for Software Development.
+
+**Operations On A Stack**
+
+Key operations on a stack include:
+- **PUSH** - It is the process of inserting a new element on the top of a stack.
+- **OVERFLOW** - A situation when we are pushing an item in a stack that is full.
+- **POP** - It is the process of deleting an element from the top of a stack.
+- **UNDERFLOW** - A situation when we are popping item from an empty stack.
+- **PEEK** - It is the process of getting the most recent value of stack *(i.e. the value at the top of the stack)*
+- **ISEMPTY** - It is the function which return true if stack is empty else false.
+- **SHOW** -Displaying stack items.
