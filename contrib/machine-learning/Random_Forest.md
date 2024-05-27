@@ -1,7 +1,8 @@
-Random Forest
+# Random Forest
+
 Random Forest is a versatile machine learning algorithm capable of performing both regression and classification tasks. It is an ensemble method that operates by constructing a multitude of decision trees during training and outputting the average prediction of the individual trees (for regression) or the mode of the classes (for classification).
 
-Table of Contents
+## Table of Contents
 Introduction
 How Random Forest Works
 Advantages and Disadvantages
@@ -13,51 +14,54 @@ Hyperparameter Tuning
 Regression Example
 Conclusion
 References
-Introduction
+
+## Introduction
 Random Forest is an ensemble learning method used for classification and regression tasks. It is built from multiple decision trees and combines their outputs to improve the model's accuracy and control over-fitting.
 
-How Random Forest Works
-Bootstrap Sampling:
-Random subsets of the training dataset are created with replacement. Each subset is used to train an individual tree.
-Decision Trees:
-Multiple decision trees are trained on these subsets.
-Feature Selection:
-At each split in the decision tree, a random selection of features is chosen. This randomness helps create diverse trees.
-Voting/Averaging:
+## How Random Forest Works
+### 1. Bootstrap Sampling:
+* Random subsets of the training dataset are created with replacement. Each subset is used to train an individual tree.
+### 2. Decision Trees:
+* Multiple decision trees are trained on these subsets.
+### 3. Feature Selection:
+* At each split in the decision tree, a random selection of features is chosen. This randomness helps create diverse trees.
+### 4. Voting/Averaging:
 For classification, the mode of the classes predicted by individual trees is taken (majority vote).
 For regression, the average of the outputs of the individual trees is taken.
-Detailed Working Mechanism
-Step 1: Bootstrap Sampling: Each tree is trained on a random sample of the original data, drawn with replacement (bootstrap sample). This means some data points may appear multiple times in a sample while others may not appear at all.
-Step 2: Tree Construction: Each node in the tree is split using the best split among a random subset of the features. This process adds an additional layer of randomness, contributing to the robustness of the model.
-Step 3: Aggregation: For classification tasks, the final prediction is based on the majority vote from all the trees. For regression tasks, the final prediction is the average of all the tree predictions.
-Advantages and Disadvantages
-Advantages
-Robustness: Reduces overfitting and generalizes well due to the law of large numbers.
-Accuracy: Often provides high accuracy because of the ensemble method.
-Versatility: Can be used for both classification and regression tasks.
-Handles Missing Values: Can handle missing data better than many other algorithms.
-Feature Importance: Provides estimates of feature importance, which can be valuable for understanding the model.
-Disadvantages
-Complexity: More complex than individual decision trees, making interpretation difficult.
-Computational Cost: Requires more computational resources due to multiple trees.
-Training Time: Can be slow to train compared to simpler models, especially with large datasets.
-Hyperparameters
-Key Hyperparameters
-n_estimators: The number of trees in the forest.
-max_features: The number of features to consider when looking for the best split.
-max_depth: The maximum depth of the tree.
-min_samples_split: The minimum number of samples required to split an internal node.
-min_samples_leaf: The minimum number of samples required to be at a leaf node.
-bootstrap: Whether bootstrap samples are used when building trees. If False, the whole dataset is used to build each tree.
-Tuning Hyperparameters
+### Detailed Working Mechanism
+* #### Step 1: Bootstrap Sampling:
+ Each tree is trained on a random sample of the original data, drawn with replacement (bootstrap sample). This means some data points may appear multiple times in a sample while others may not appear at all.
+* #### Step 2: Tree Construction:
+ Each node in the tree is split using the best split among a random subset of the features. This process adds an additional layer of randomness, contributing to the robustness of the model.
+#### Step 3: Aggregation:
+ For classification tasks, the final prediction is based on the majority vote from all the trees. For regression tasks, the final prediction is the average of all the tree predictions.
+### Advantages and Disadvantages
+#### Advantages
+* Robustness: Reduces overfitting and generalizes well due to the law of large numbers.
+* Accuracy: Often provides high accuracy because of the ensemble method.
+* Versatility: Can be used for both classification and regression tasks.
+* Handles Missing Values: Can handle missing data better than many other algorithms.
+* Feature Importance: Provides estimates of feature importance, which can be valuable for understanding the model.
+#### Disadvantages
+* Complexity: More complex than individual decision trees, making interpretation difficult.
+* Computational Cost: Requires more computational resources due to multiple trees.
+* Training Time: Can be slow to train compared to simpler models, especially with large datasets.
+### Hyperparameters
+#### Key Hyperparameters
+* n_estimators: The number of trees in the forest.
+* max_features: The number of features to consider when looking for the best split.
+* max_depth: The maximum depth of the tree.
+* min_samples_split: The minimum number of samples required to split an internal node.
+* min_samples_leaf: The minimum number of samples required to be at a leaf node.
+* bootstrap: Whether bootstrap samples are used when building trees. If False, the whole dataset is used to build each tree.
+##### Tuning Hyperparameters
 Hyperparameter tuning can significantly improve the performance of a Random Forest model. Common techniques include Grid Search and Random Search.
 
-Code Examples
-Classification Example
+### Code Examples
+#### Classification Example
 Below is a simple example of using Random Forest for a classification task with the Iris dataset.
 
-python
-Copy code
+'''
 import numpy as np
 import pandas as pd
 from sklearn.datasets import load_iris
@@ -85,11 +89,14 @@ y_pred = clf.predict(X_test)
 accuracy = accuracy_score(y_test, y_pred)
 print(f"Accuracy: {accuracy * 100:.2f}%")
 print("Classification Report:\n", classification_report(y_test, y_pred))
-Feature Importance
+
+'''
+
+#### Feature Importance
 Random Forest provides a way to measure the importance of each feature in making predictions.
 
-python
-Copy code
+
+'''
 import matplotlib.pyplot as plt
 
 # Get feature importances
@@ -108,11 +115,11 @@ plt.bar(range(X.shape[1]), importances[indices], align='center')
 plt.xticks(range(X.shape[1]), indices)
 plt.xlim([-1, X.shape[1]])
 plt.show()
-Hyperparameter Tuning
+'''
+#### Hyperparameter Tuning
 Using Grid Search for hyperparameter tuning.
 
-python
-Copy code
+'''
 from sklearn.model_selection import GridSearchCV
 
 # Define the parameter grid
