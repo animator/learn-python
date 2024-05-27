@@ -40,7 +40,7 @@ Key operations on a stack include:
   
 **IMPLEMENTING STACKS IN PYTHON**
 
-'''
+```
 def isEmpty(S):
     
     if len(S) == 0:
@@ -103,11 +103,11 @@ print("Pop operation:", Pop(stack))
 
 print("Stack after Pop operation:")
 Show(stack)
-'''
+```
 
 This would output:
 
-'''
+```
 Stack after Push operations:
 
 (Top) 15 < 10 < 5 <
@@ -119,4 +119,4 @@ Pop operation: 15
 Stack after Pop operation:
 
 (Top) 10 < 5 <
-'''
+```
