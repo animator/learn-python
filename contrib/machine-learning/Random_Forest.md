@@ -2,18 +2,30 @@
 
 Random Forest is a versatile machine learning algorithm capable of performing both regression and classification tasks. It is an ensemble method that operates by constructing a multitude of decision trees during training and outputting the average prediction of the individual trees (for regression) or the mode of the classes (for classification).
 
-## Table of Contents
-Introduction
-How Random Forest Works
-Advantages and Disadvantages
-Hyperparameters
-Code Examples
-Classification Example
-Feature Importance
-Hyperparameter Tuning
-Regression Example
-Conclusion
-References
+
+- [Random Forest](#random-forest)
+  - [Introduction](#introduction)
+  - [How Random Forest Works](#how-random-forest-works)
+    - [1. Bootstrap Sampling:](#1-bootstrap-sampling)
+    - [2. Decision Trees:](#2-decision-trees)
+    - [3. Feature Selection:](#3-feature-selection)
+    - [4. Voting/Averaging:](#4-votingaveraging)
+    - [Detailed Working Mechanism](#detailed-working-mechanism)
+      - [Step 3: Aggregation:](#step-3-aggregation)
+    - [Advantages and Disadvantages](#advantages-and-disadvantages)
+      - [Advantages](#advantages)
+      - [Disadvantages](#disadvantages)
+    - [Hyperparameters](#hyperparameters)
+      - [Key Hyperparameters](#key-hyperparameters)
+        - [Tuning Hyperparameters](#tuning-hyperparameters)
+    - [Code Examples](#code-examples)
+      - [Classification Example](#classification-example)
+      - [Feature Importance](#feature-importance)
+      - [Hyperparameter Tuning](#hyperparameter-tuning)
+      - [Regression Example](#regression-example)
+    - [Conclusion](#conclusion)
+    - [References](#references)
+
 
 ## Introduction
 Random Forest is an ensemble learning method used for classification and regression tasks. It is built from multiple decision trees and combines their outputs to improve the model's accuracy and control over-fitting.
