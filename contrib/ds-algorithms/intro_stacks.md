@@ -15,7 +15,7 @@ In Data Structures and Algorithms, a stack is a linear data structure that compl
 
 **BANGLES IN A HAND** - When a person wears bangles, the last bangle worn is the first one to be removed.
 
-## APPLICATIONS OF A STACK
+## APPLICATIONS OF STACKS
 
 Stacks are widely used in Computer Science:
 - *Function call* management
