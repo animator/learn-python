@@ -41,31 +41,40 @@ Key operations on a stack include:
 **IMPLEMENTING STACKS IN PYTHON**
 
 def isEmpty(S):
+    
     if len(S) == 0:
         return True
+    
     else:
-        return False
+        
+       return False
 
 def Push(S, item):
     S.append(item)
 
 def Pop(S):
+    
     if isEmpty(S):
         return "Underflow"
+    
     else:
         val = S.pop()
         return val
 
 def Peek(S):
+    
     if isEmpty(S):
         return "Underflow"
+    
     else:
         top = len(S) - 1
         return S[top]
 
 def Show(S):
+    
     if isEmpty(S):
         print("Sorry, No items in Stack")
+    
     else:
         print("(Top)", end=' ')
         t = len(S) - 1
@@ -77,6 +86,7 @@ def Show(S):
 This code defines a stack data structure along with functions to manipulate it. To provide output, we would need to use these functions to interact with the stack.
 
 Here's an example:
+        
         stack = []
 
 Push(stack, 5)
