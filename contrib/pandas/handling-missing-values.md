@@ -1,34 +1,28 @@
 # Handling Missing Values in Pandas
 
-**Upuntil now we're working on complete data i.e not having any missing values. But in real life it is the one of the main problem.**
-
-*Many datasets arrive with missing data either because it exists and was not collected or it never existed.*
+In real life, many datasets arrive with missing data either because it exists and was not collected or it never existed.
 
 In Pandas missing data is represented by two values:
 
 * `None` : None is simply is `keyword` refer as empty or none.
 * `NaN` : Acronym for `Not a Number`.
 
-**There are several useful functions for detecting, removing, and replacing null values in Pandas DataFrame :**
+There are several useful functions for detecting, removing, and replacing null values in Pandas DataFrame:
 
-1. isnull()
-2. notnull()
-3. dropna()
-4. fillna()
-5. replace()
+1. `isnull()`
+2. `notnull()`
+3. `dropna()`
+4. `fillna()`
+5. `replace()`
 
 ## 2. Checking for missing values using `isnull()` and `notnull()`
 
 Let's import pandas and our fancy car-sales dataset having some missing values.
 
-
 ```python
 import pandas as pd
-```
 
-
-```python
-car_sales_missing_df = pd.read_csv("https://raw.githubusercontent.com/kRiShNa-429407/learn-python/main/contrib/pandas/Datasets/car-sales-missing-data.csv")
+car_sales_missing_df = pd.read_csv("Datasets/car-sales-missing-data.csv")
 print(car_sales_missing_df)
 ```
 
@@ -128,7 +122,7 @@ Note here:
 * `True` means no `NaN` values
 * `False` means for `NaN` values
 
-#### A little note here : `isnull()` means having null values so it gives boolean `True` for NaN values. And `notnull()` means having no null values so it gives `True` for no NaN value.
+`isnull()` means having null values so it gives boolean `True` for NaN values. And `notnull()` means having no null values so it gives `True` for no NaN value.
 
 ## 2. Filling missing values using `fillna()`, `replace()`.
 
@@ -191,18 +185,15 @@ print(car_sales_missing_df.bfill())
 
 #### Filling a null values using `replace()` method
 
-**Now we are going to replace the all Nan value in the data frame with -125 value**
+Now we are going to replace the all `NaN` value in the data frame with -125 value
 
-*For this we will need numpy also*
+For this we will also need numpy
 
 
 ```python
 import numpy as np
-```
 
-
-```python
-print(car_sales_missing_df.replace(to_replace = np.nan, value = -125) )
+print(car_sales_missing_df.replace(to_replace = np.nan, value = -125))
 ```
 
          Make Colour  Odometer  Doors    Price
@@ -220,7 +211,7 @@ print(car_sales_missing_df.replace(to_replace = np.nan, value = -125) )
 
 ## 3. Dropping missing values using `dropna()`
 
-**In order to drop a null values from a dataframe, we used `dropna()` function this function drop Rows/Columns of datasets with Null values in different ways.**
+In order to drop a null values from a dataframe, we used `dropna()` function this function drop Rows/Columns of datasets with Null values in different ways.
 
 #### Dropping rows with at least 1 null value. 
 
@@ -270,4 +261,4 @@ print(car_sales_missing_df.dropna(axis = 1))
 
 Now we drop a columns which have at least 1 missing values.
 
-**Here the dataset becomes empty after dropna() because each column as atleast 1 null value so it remove that columns resulting in an empty dataframe.**
+Here the dataset becomes empty after `dropna()` because each column as atleast 1 null value so it remove that columns resulting in an empty dataframe.
