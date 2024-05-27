@@ -89,8 +89,7 @@ This code defines a stack data structure along with functions to manipulate it. 
 
 Here's an example:
 ```
-        
-        stack = []
+stack = []
 
 Push(stack, 5)
 Push(stack, 10)
