@@ -3,6 +3,9 @@
 Hashing is a technique used to uniquely identify a specific object from a group of similar objects. 
 It involves transforming input data into a fixed-size value or key, typically through a hash function, which is used to index data for efficient retrieval.
 
+Hashing is the process of converting input data of arbitrary size into a fixed-size value, usually an integer, which can be used as an index in an array. The primary purpose of hashing is to facilitate quick data retrieval.
+
+
 ## Algorithm Overview:
 
 1. **Hash Function:** A function that converts input data into a fixed-size hash code. The hash function should distribute the keys uniformly across the hash table to minimize collisions.
@@ -11,7 +14,11 @@ It involves transforming input data into a fixed-size value or key, typically th
 
 ## Key Concepts:
   - **Hash Function:** Converts input (key) into an integer (hash code).
-  - **Hash Table:** An array where the key-value pairs are stored.
+  - **Hash Table:** An array where the key-value pairs are stored.<br>
+       **Basic Operations :**<br>
+             - **insert :** Add a new key-value pair.<br>
+             - **Delete :** Remove a key-value pair.<br>
+             - **Search :** Retrieve the value associated with a given key.<br>
   - **Collision Handling:**
        - **Chaining:** Each array index points to a list of entries that map to the same index.
        - **Open Addressing:** Finds the next available index using methods like linear probing, quadratic probing, or double hashing.
@@ -84,3 +91,12 @@ Let's insert and search key-value pairs in the hash table.
    - **Insertion:** Average case 𝑂(1), worst case 𝑂(𝑛) in case of collisions.
    - **Search:** Average case 𝑂(1), worst case 𝑂(𝑛) in case of collisions.
    - **Deletion:** Average case 𝑂(1), worst case 𝑂(𝑛) in case of collisions.
+
+
+## Practical Applications
+   - **Dictionaries and Sets:** Python’s built-in dict and set types use hash tables.
+   - **Database Indexing:** Efficiently retrieve records from a database.
+   - **Caching:** Store results of expensive function calls to speed up subsequent calls.
+
+## Conclusion
+Hashing and hash tables are essential components of efficient data structures, allowing for quick data access and management. Python’s standard library provides robust tools for implementing and using hash tables, making it easier to handle large sets of data efficiently.
