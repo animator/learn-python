@@ -61,13 +61,14 @@ Hyperparameter tuning can significantly improve the performance of a Random Fore
 #### Classification Example
 Below is a simple example of using Random Forest for a classification task with the Iris dataset.
 
-'''
+```
 import numpy as np
 import pandas as pd
 from sklearn.datasets import load_iris
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score, classification_report
+
 
 # Load dataset
 iris = load_iris()
@@ -90,13 +91,13 @@ accuracy = accuracy_score(y_test, y_pred)
 print(f"Accuracy: {accuracy * 100:.2f}%")
 print("Classification Report:\n", classification_report(y_test, y_pred))
 
-'''
+```
 
 #### Feature Importance
 Random Forest provides a way to measure the importance of each feature in making predictions.
 
 
-'''
+```
 import matplotlib.pyplot as plt
 
 # Get feature importances
@@ -115,11 +116,11 @@ plt.bar(range(X.shape[1]), importances[indices], align='center')
 plt.xticks(range(X.shape[1]), indices)
 plt.xlim([-1, X.shape[1]])
 plt.show()
-'''
+```
 #### Hyperparameter Tuning
 Using Grid Search for hyperparameter tuning.
 
-'''
+```
 from sklearn.model_selection import GridSearchCV
 
 # Define the parameter grid
@@ -138,11 +139,11 @@ grid_search.fit(X_train, y_train)
 
 # Print the best parameters
 print("Best parameters found: ", grid_search.best_params_)
-Regression Example
+```
+#### Regression Example
 Below is a simple example of using Random Forest for a regression task with the Boston housing dataset.
 
-python
-Copy code
+```
 import numpy as np
 import pandas as pd
 from sklearn.datasets import load_boston
@@ -171,10 +172,11 @@ mse = mean_squared_error(y_test, y_pred)
 r2 = r2_score(y_test, y_pred)
 print(f"Mean Squared Error: {mse:.2f}")
 print(f"R^2 Score: {r2:.2f}")
-Conclusion
+```
+### Conclusion
 Random Forest is a powerful and flexible machine learning algorithm that can handle both classification and regression tasks. Its ability to create an ensemble of decision trees leads to robust and accurate models. However, it is important to be mindful of the computational cost associated with training multiple trees.
 
-References
+### References
 Scikit-learn Random Forest Documentation
 Wikipedia: Random Forest
 Machine Learning Mastery: Introduction to Random Forest
