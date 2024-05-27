@@ -7,7 +7,7 @@ In Data Structures and Algorithms, a stack is a linear data structure that compl
 - The last item inserted in a stack is the first one to be deleted.
 - Therefore, a stack is called a **Last-In-First-Out (LIFO)** data structure.
 
-**Real Life Examples Of Stacks**
+## Real Life Examples Of Stacks
 
 **Pile Of Books** - Suppose a set of books are placed one over the other in a pile. When you remove books from the pile, the topmost book will be removed first. Similarly, when you have to add a book to the pile, the book will be placed at the top of the file.
 
@@ -15,11 +15,11 @@ In Data Structures and Algorithms, a stack is a linear data structure that compl
 
 **Bangles In A Hand** - When a person wears bangles, the last bangle worn is the first one to be removed.
 
-**Applications Of A Stack**
+## Applications Of A Stack
 
 Stacks are widely used in Computer Science:
 - *Function call* management
-- maintaining the *UNDO* list for the application
+- Maintaining the *UNDO* list for the application
 - Web browser *history management*
 - Evaluating expressions
 - Checking the nesting of parentheses in an expression
@@ -27,7 +27,7 @@ Stacks are widely used in Computer Science:
 
 Understanding these applications is essential for Software Development.
 
-**Operations On A Stack**
+## Operations On A Stack
 
 Key operations on a stack include:
 - **PUSH** - It is the process of inserting a new element on the top of a stack.
@@ -38,7 +38,7 @@ Key operations on a stack include:
 - **ISEMPTY** - It is the function which return true if stack is empty else false.
 - **SHOW** -Displaying stack items.
   
-**IMPLEMENTING STACKS IN PYTHON**
+## IMPLEMENTING STACKS IN PYTHON
 
 ```python
 def isEmpty(S):
@@ -122,6 +122,4 @@ Stack after Pop operation:
 (Top) 10 < 5 <
 ```
 
-**CONCLUSION**
 
-In conclusion, the stack data structure plays a pivotal role in Computer Science and Software development. It's fundamental principles and versatile applications make it an indispensable tool for efficient algorithm design and implementation.
