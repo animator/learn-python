@@ -1,4 +1,4 @@
-###Decision Trees
+---Decision Trees---
 
 **Introduction**
 Decision Tree is a supervised machine learning model, which means the model learns from labeled data. Decision trees are popular in machine learning because they are easy to understand and interpret. This can perform both regression and classification tasks. But most of the time decision trees are used for classification tasks. Decision tree performs classification tasks like predicting spam mails, etc and regression tasks like predicting house price, etc. Decision trees are flexible and can accept both categorical and continuous data for features. The type of target variable (categorical or continuous) depends on whether we’re performing a classification or regression task. Some of the decision tree algorithms are ID3, Random tree and more.
