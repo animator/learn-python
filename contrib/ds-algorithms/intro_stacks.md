@@ -83,10 +83,12 @@ def Show(S):
             print(S[t], "<", end=' ')
             t -= 1
         print()
+```
 
 This code defines a stack data structure along with functions to manipulate it. To provide output, we would need to use these functions to interact with the stack.
 
 Here's an example:
+```
         
         stack = []
 
