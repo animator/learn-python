@@ -1,13 +1,13 @@
 # STACKS IN PYTHON
 In Data Structures and Algorithms, a stack is a linear data structure that complies with the Last In, First Out (LIFO) rule. It works by use of two fundamental techniques: *PUSH* which inserts an element on top of the stack and *POP* which takes out the topmost element.This concept is similar to a stack of plates in a cafeteria. Stacks are usually used for handling function calls, expression evaluation, and parsing in programming. Indeed, they are efficient in managing memory as well as tracking program state. On top of that, stacks can be implemented either via arrays or linked lists. Their simplicity coupled with adaptability has made them an integral part of many Computer Science and Software Development applications across the globe.
 
-**Points To Be Remembered :-**
+**POINTS TO BE REMEMBERED :-**
 - A stack is a collection of data items that can be accessed at only one end, called *TOP*.
 - Items can be inserted and deleted in a stack only at the *TOP*.
 - The last item inserted in a stack is the first one to be deleted.
 - Therefore, a stack is called a **Last-In-First-Out (LIFO)** data structure.
 
-## Real Life Examples Of Stacks
+## REAL LIFE EXAMPLES OF STACKS
 
 **Pile Of Books** - Suppose a set of books are placed one over the other in a pile. When you remove books from the pile, the topmost book will be removed first. Similarly, when you have to add a book to the pile, the book will be placed at the top of the file.
 
@@ -15,7 +15,7 @@ In Data Structures and Algorithms, a stack is a linear data structure that compl
 
 **Bangles In A Hand** - When a person wears bangles, the last bangle worn is the first one to be removed.
 
-## Applications Of A Stack
+## APPLICATIONS OF A STACK
 
 Stacks are widely used in Computer Science:
 - *Function call* management
@@ -27,7 +27,7 @@ Stacks are widely used in Computer Science:
 
 Understanding these applications is essential for Software Development.
 
-## Operations On A Stack
+## OPERATIONS ON A STACK
 
 Key operations on a stack include:
 - **PUSH** - It is the process of inserting a new element on the top of a stack.
