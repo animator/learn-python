@@ -106,9 +106,6 @@ print("Stack after Pop operation:")
 Show(stack)
 ```
 
-**CONCLUSION**
-
-In conclusion, the stack data structure plays a pivotal role in Computer Science and Software development. It's fundamental principles and versatile applications make it an indispensable tool for efficient algorithm design and implementation.
 This would output:
 
 ```
@@ -124,3 +121,7 @@ Stack after Pop operation:
 
 (Top) 10 < 5 <
 ```
+
+**CONCLUSION**
+
+In conclusion, the stack data structure plays a pivotal role in Computer Science and Software development. It's fundamental principles and versatile applications make it an indispensable tool for efficient algorithm design and implementation.
