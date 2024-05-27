@@ -24,5 +24,4 @@ Stacks are widely used in Computer Science:
 - Evaluating expressions
 - Checking the nesting of parentheses in an expression
 - *Backtracking* algorithms (Recursion)
-
 Understanding these applications is essential for Software Development.
