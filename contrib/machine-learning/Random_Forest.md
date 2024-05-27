@@ -23,8 +23,8 @@ Random Forest is a versatile machine learning algorithm capable of performing bo
       - [Feature Importance](#feature-importance)
       - [Hyperparameter Tuning](#hyperparameter-tuning)
       - [Regression Example](#regression-example)
-    - [Conclusion](#conclusion)
-    - [References](#references)
+  - [Conclusion](#conclusion)
+  - [References](#references)
 
 
 ## Introduction
@@ -185,10 +185,10 @@ r2 = r2_score(y_test, y_pred)
 print(f"Mean Squared Error: {mse:.2f}")
 print(f"R^2 Score: {r2:.2f}")
 ```
-### Conclusion
+## Conclusion
 Random Forest is a powerful and flexible machine learning algorithm that can handle both classification and regression tasks. Its ability to create an ensemble of decision trees leads to robust and accurate models. However, it is important to be mindful of the computational cost associated with training multiple trees.
 
-### References
+## References
 Scikit-learn Random Forest Documentation
 Wikipedia: Random Forest
 Machine Learning Mastery: Introduction to Random Forest
