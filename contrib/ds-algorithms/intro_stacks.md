@@ -8,6 +8,9 @@ In Data Structures and Algorithms, a stack is a linear data structure that compl
 - Therefore, a stack is called a **Last-In-First-Out (LIFO)** data structure.
 
 **Real Life Examples Of Stacks**
+
 **Pile Of Books** - Suppose a set of books are placed one over the other in a pile. When you remove books from the pile, the topmost book will be removed first. Similarly, when you have to add a book to the pile, the book will be placed at the top of the file.
+
 **Pile Of Plates** - The first plate begins the pile. The second plate is placed on the top of the first plate and the third plate is placed on the top of the second plate, and so on. In general, if you want to add a plate to the pile, you can keep it on the top of the pile. Similarly, if you want to remove a plate, you can remove the plate from the top of the pile.
+
 **Bangles In A Hand** - When a person wears bangles, the last bangle worn is the first one to be removed.
