@@ -40,7 +40,7 @@ Key operations on a stack include:
   
 **IMPLEMENTING STACKS IN PYTHON**
 
-```
+```python
 def isEmpty(S):
     
     if len(S) == 0:
@@ -88,7 +88,7 @@ def Show(S):
 This code defines a stack data structure along with functions to manipulate it. To provide output, we would need to use these functions to interact with the stack.
 
 Here's an example:
-```
+```python
 stack = []
 
 Push(stack, 5)
