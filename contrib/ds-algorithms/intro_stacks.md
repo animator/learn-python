@@ -37,3 +37,69 @@ Key operations on a stack include:
 - **PEEK** - It is the process of getting the most recent value of stack *(i.e. the value at the top of the stack)*
 - **ISEMPTY** - It is the function which return true if stack is empty else false.
 - **SHOW** -Displaying stack items.
+  
+**IMPLEMENTING STACKS IN PYTHON**
+
+def isEmpty(S):
+    if len(S) == 0:
+        return True
+    else:
+        return False
+
+def Push(S, item):
+    S.append(item)
+
+def Pop(S):
+    if isEmpty(S):
+        return "Underflow"
+    else:
+        val = S.pop()
+        return val
+
+def Peek(S):
+    if isEmpty(S):
+        return "Underflow"
+    else:
+        top = len(S) - 1
+        return S[top]
+
+def Show(S):
+    if isEmpty(S):
+        print("Sorry, No items in Stack")
+    else:
+        print("(Top)", end=' ')
+        t = len(S) - 1
+        while t >= 0:
+            print(S[t], "<", end=' ')
+            t -= 1
+        print()
+
+This code defines a stack data structure along with functions to manipulate it. To provide output, we would need to use these functions to interact with the stack.
+
+Here's an example:
+        stack = []
+
+Push(stack, 5)
+Push(stack, 10)
+Push(stack, 15)
+
+print("Stack after Push operations:")
+Show(stack)
+
+print("Peek operation:", Peek(stack))
+
+print("Pop operation:", Pop(stack))
+
+print("Stack after Pop operation:")
+Show(stack)
+
+
+This would output:
+
+
+Stack after Push operations:
+(Top) 15 < 10 < 5 < 
+Peek operation: 15
+Pop operation: 15
+Stack after Pop operation:
+(Top) 10 < 5 <
