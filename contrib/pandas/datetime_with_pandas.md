@@ -115,3 +115,52 @@ Output:
 2024-05-24
 2024-05-25
 ```
+
+### Pandas `DateTime` is Efficient than Built-in `DateTime` library in various aspects like:
+
+- **In pandas, you may add a time delta to a full column of dates in a single action, but Python's datetime requires a loop.**
+
+Example using Pandas DateTime:
+
+```python
+import pandas as pd
+
+dates = pd.DataFrame(pd.date_range('2023-01-01', periods=100000, freq='T'))
+dates += pd.Timedelta(days=1)
+print(dates)
+```
+
+Output:
+```python
+                    0
+0     2023-01-02 00:00:00
+1     2023-01-02 00:01:00
+2     2023-01-02 00:02:00
+3     2023-01-02 00:03:00
+4     2023-01-02 00:04:00
+...                   ...
+99995 2023-03-12 10:35:00
+99996 2023-03-12 10:36:00
+99997 2023-03-12 10:37:00
+99998 2023-03-12 10:38:00
+99999 2023-03-12 10:39:00
+```
+
+Example using Built-In datetime library:
+
+```python
+from datetime import datetime, timedelta
+
+dates = [datetime(2023, 1, 1) + timedelta(minutes=i) for i in range(100000)]
+dates = [date + timedelta(days=1) for date in dates]
+```
+
+Output:
+```The output is very large to display and taking more time to display```
+
+
+- **Pandas employs NumPy's datetime64 dtype, which takes up a set amount of bytes (usually 8 bytes per date), to store datetime data more compactly and efficiently.**
+- **Each datetime object in Python takes up extra memory since it contains not only the date and time but also the additional metadata and overhead associated with Python objects.**
+
+- **Pandas Offers a wide range of convenient functions and methods for date manipulation, extraction, and conversion, such as `pd.to_datetime()`, `date_range()`, `timedelta_range()`, and more.**
+- **datetime library requires manual implementation for many of these operations, leading to longer and less efficient code.**
