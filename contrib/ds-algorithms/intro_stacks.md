@@ -14,3 +14,14 @@ In Data Structures and Algorithms, a stack is a linear data structure that compl
 **Pile Of Plates** - The first plate begins the pile. The second plate is placed on the top of the first plate and the third plate is placed on the top of the second plate, and so on. In general, if you want to add a plate to the pile, you can keep it on the top of the pile. Similarly, if you want to remove a plate, you can remove the plate from the top of the pile.
 
 **Bangles In A Hand** - When a person wears bangles, the last bangle worn is the first one to be removed.
+
+**Applications Of A Stack**
+Stacks are widely used in Computer Science:
+- *Function call* management
+- maintaining the *UNDO* list for the application
+- Web browser *history management*
+- Evaluating expressions
+- Checking the nesting of parentheses in an expression
+- *Backtracking* algorithms (Recursion)
+
+Understanding these applications is essential for Software Development.
