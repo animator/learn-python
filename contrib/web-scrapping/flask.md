@@ -1,7 +1,3 @@
-Sure, here's the guide without Markdown formatting:
-
----
-
 # Introduction to Flask: A Python Web Framework
 
 ## Table of Contents
