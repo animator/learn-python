@@ -10,6 +10,7 @@ Decision trees are tree like structures. Tree is formed using nodes and edges. N
 Root Node: This the top most node and starting point of the tree. It has no parent node but can have multiple child nodes. This node represents independent attribute.
 Internal Nodes: This node has parent node and child nodes. These nodes are in between the root node and leaf nodes. This node represents independent attribute. Internal nodes specifically focus on the decision or question being asked about that attribute.
 Leaf Nodes or Terminal Nodes: These are end points of the tree, representing the final outcome or prediction. They have a parent node but no child nodes. This node represents the target variable or dependent attribute.
+
 ![image](https://github.com/sarayusreeyadavpadala/learn-python/assets/134043600/bf2ffe03-6ae8-4c4e-962b-dbfc261d097b)
 
 **Decision Tree Structure Formation**
@@ -74,9 +75,14 @@ information gain are,
 In these cases, we cannot get good results by using information gain. That’s why we use gain ratio. Gain Ratio is a measure that takes into account both the information gain and the number of outcomes of a
 feature to determine the best feature to split on. Gain ratio calculated using information gain and split entropy. The formula is given as,
                                Gain Ratio(A) = Information Gain(A) / Split Information(A)
-                              where split info = ![image](https://github.com/sarayusreeyadavpadala/learn-python/assets/134043600/36fcaf57-4487-49ab-9ffc-176c5be264c4)
-                              D(i) is the probability of each outcome i in the attribute
+                               
+where split info = ![image](https://github.com/sarayusreeyadavpadala/learn-python/assets/134043600/36fcaf57-4487-49ab-9ffc-176c5be264c4)
+D(i) is the probability of each outcome i in the attribute                            
+                              
+                              
 The lower the value of split info, the better the split is considered to be.
+
 So, these are the three ways to find or selecting the best split.
+
 We can implement decision trees using scikit-learn and TensorFlow. Will cover some more concepts on decision tree like advantages and disadvantages, implementation using scikit-learn and TensorFlow,
 Advanced concepts, random forest, etc. These are the basic concepts of Decision Trees. Thus how, we can create decision tree.
