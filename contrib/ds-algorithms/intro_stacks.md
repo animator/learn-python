@@ -108,8 +108,13 @@ This would output:
 
 
 Stack after Push operations:
-(Top) 15 < 10 < 5 < 
+
+(Top) 15 < 10 < 5 <
+
 Peek operation: 15
+
 Pop operation: 15
+
 Stack after Pop operation:
+
 (Top) 10 < 5 <
