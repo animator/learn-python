@@ -281,9 +281,9 @@ The given method will update an existing student record and if student doesnt ex
 Swagger UI automatically generates UI for API tesing. Just write ``/docs`` with the URL and UI mode of Swagger UI will be launched.
 
 Following Screenshot shows the Swagger UI
-![App Screenshot](/assets/image.png)
+![App Screenshot](assets/image.png)
 
 Here is how I tested ``POST`` method in UI:
-![Screenshot](/assets/image2.png)
+![Screenshot](assets/image2.png)
 
 That's all for FastAPI for now.... Happy Learning! 
