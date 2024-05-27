@@ -126,6 +126,6 @@ Stack after Pop operation:
 
 - **Worst case**: `O(n)` This occurs when the stack is full, it is dominated by the usage of Show operation.
 - **Best case**: `O(1)` When the operations like isEmpty, Push, Pop and Peek are used, they have a constant time complexity of O(1).
-- **Average case**: `< O(n)` The average space complexity is likely to be lower than O(n), as the stack is not always full.
+- **Average case**: `O(n)` The average complexity is likely to be lower than O(n), as the stack is not always full.
 
 
