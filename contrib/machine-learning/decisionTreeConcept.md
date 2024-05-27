@@ -36,6 +36,7 @@ test condition and records in Dt are distributed to the children based on the ou
 How do we split those attributes? Using some popular measures, we can easily find the best split.
 
 **Measures for Selecting the Best Split**
+
 There are three main ways to find the best split in a decision tree algorithm. They are,
 1. Information Gain
 2. Gini Impurity
@@ -77,6 +78,7 @@ feature to determine the best feature to split on. Gain ratio calculated using i
                                Gain Ratio(A) = Information Gain(A) / Split Information(A)
                                
 where split info = ![image](https://github.com/sarayusreeyadavpadala/learn-python/assets/134043600/36fcaf57-4487-49ab-9ffc-176c5be264c4)
+
 D(i) is the probability of each outcome i in the attribute                            
                               
                               
