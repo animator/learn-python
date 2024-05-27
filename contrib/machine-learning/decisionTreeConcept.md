@@ -26,8 +26,10 @@ node t and Y = {Y1, Y2, …., Yn} be the class labels.
 The recursive definition of Hunt’s algorithm
 
 Step 1: If all the records in Dt belong to the same class Yt, then t is a leaf node labeled as Yt.
+
 Step 2: If Dt contains records that belong to more than one class, an attribute test condition is selected to partition the records into smaller subsets. A child node is created for each outcome of the
 test condition and records in Dt are distributed to the children based on the outcomes. The algorithm is then recursively applied to each child node.
+
 ![image](https://github.com/sarayusreeyadavpadala/learn-python/assets/134043600/030c673e-841f-4aab-8b51-f6aa5c103a5f)
 
 How do we split those attributes? Using some popular measures, we can easily find the best split.
@@ -42,6 +44,7 @@ _Information Gain:_
 
 Before going to information gain, we need to understand entropy. Entropy basically tells us how impure a collection of data is. Here, impure means non-homogeneity. Entropy is the measurement of
 homogeneity. Information gain is calculated using entropy. The formula of entropy is given as,
+
 ![image](https://github.com/sarayusreeyadavpadala/learn-python/assets/134043600/c01b83b0-0858-4500-89a4-d4b186ef2146)
 
 Here, ‘S’ is the dataset. Positive and negative examples are the class labels.
@@ -50,6 +53,7 @@ In decision trees, information gain measures how much a specific feature helps y
 splitting. Information Gain values are numerical scores between 0 and 1 that tell you how much a specific feature (attribute) in your data helps you learn about the target variable. Higher Information gain
 (closer to 1) means when you split the data based on this feature, the entropy of the data reduces significantly. Lower information gain (closer to 0) means when splitting on this feature doesn't do much 
 to separate the data points into distinct categories. Information gain of 0 means the feature doesn’t provide any information about the target variable. Here’s the formula for information gain,
+
 ![image](https://github.com/sarayusreeyadavpadala/learn-python/assets/134043600/6323d84f-f2a9-4261-ba28-e25c71cef3ef)
 
 Thus, we can split the dataset using information gain and entropy.
@@ -58,6 +62,7 @@ _Gini Impurity:_
 
 This is another way to find the best split. Gini impurity is the measure of the impurity or disorder in a set of elements. If G=0, then it indicates a perfectly pure node. If G=0.5, then it indicates 
 maximum impurity. The gini impurity is calculated as follows,
+
 ![image](https://github.com/sarayusreeyadavpadala/learn-python/assets/134043600/5cad7821-35f8-4287-8ed8-95282d70a068)
 
 _Gain Ratio:_
@@ -69,9 +74,8 @@ information gain are,
 In these cases, we cannot get good results by using information gain. That’s why we use gain ratio. Gain Ratio is a measure that takes into account both the information gain and the number of outcomes of a
 feature to determine the best feature to split on. Gain ratio calculated using information gain and split entropy. The formula is given as,
                                Gain Ratio(A) = Information Gain(A) / Split Information(A)
-                                              Where, split info = ![image](https://github.com/sarayusreeyadavpadala/learn-python/assets/134043600/21da8b78-12a0-42bb-9683-dcf1e8c2ab89)
-                                               D(i) is the probability of each outcome i in the attribute                         
-                                                                          
+                              where split info = ![image](https://github.com/sarayusreeyadavpadala/learn-python/assets/134043600/36fcaf57-4487-49ab-9ffc-176c5be264c4)
+                              D(i) is the probability of each outcome i in the attribute
 The lower the value of split info, the better the split is considered to be.
 So, these are the three ways to find or selecting the best split.
 We can implement decision trees using scikit-learn and TensorFlow. Will cover some more concepts on decision tree like advantages and disadvantages, implementation using scikit-learn and TensorFlow,
