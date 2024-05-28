@@ -6,13 +6,13 @@
 
 `Labels` is used to label Slices of pie
 example:
-
-    import matplotlib.pyplot as plt
-    contri=[17,8.8,12.75,14]
-    houses=["vidya","riya","sneha","narmita"]
-    plt.pie(contri,labels=houses)
-    plt.show()
-
+```python
+import matplotlib.pyplot as plt
+contri=[17,8.8,12.75,14]
+houses=["vidya","riya","sneha","narmita"]
+plt.pie(contri,labels=houses)
+plt.show()
+```
 * `autopct` is used to add formatted slice percentages to the pie chart.
 
   * `autopct  string format`   
