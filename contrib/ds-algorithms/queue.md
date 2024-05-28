@@ -318,12 +318,12 @@ Below is the table of time and space complexities of various queue operations us
 
 | Method       | Time Complexity | Space Complexity |
 |:------------:|:------------:|:------------:|
-| `enqueue`    |  O(1)  |  O(1)  |
-| `dequeue`    |  O(n)  |  O(1)  |
-| `peek`       |  O(1)  |  O(1)  |
-| `isFull`     |  O(1)  |  O(1)  |
-| `isEmpty`    |  O(1)  |  O(1)  |
-| `display`    |  O(n)  |  O(1)  |
+| `enqueue()`    |  O(1)  |  O(1)  |
+| `dequeue()`    |  O(n)  |  O(1)  |
+| `peek()`       |  O(1)  |  O(1)  |
+| `isFull()`     |  O(1)  |  O(1)  |
+| `isEmpty()`    |  O(1)  |  O(1)  |
+| `display()`    |  O(n)  |  O(1)  |
 
 
 This table given below shows the time and space complexities of various queue operations using linked list:
