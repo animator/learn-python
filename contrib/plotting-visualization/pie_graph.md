@@ -102,7 +102,7 @@ example:
 eg:
 
 
-```
+```python
 import matplotlib.pyplot as plt
 contri=[17,8.8,12.75,14]
 colr = ['red', 'yellow', 'green', 'blue']
