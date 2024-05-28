@@ -76,7 +76,6 @@ colr = ['red', 'yellow', 'green', 'blue']
 example:
 ```
 wedge_properties = {'edgecolor': 'black','linewidth': 2,'linestyle': 'dashed','alpha': 0.7}   
-
 ```
 * `textprops` is used to change the properties of the text.
 
