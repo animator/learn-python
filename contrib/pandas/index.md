@@ -7,4 +7,4 @@
 - [Excel using Pandas DataFrame](excel_with_pandas.md)
 - [Importing and Exporting Data in Pandas](import-export.md)
 - [Handling Missing Values in Pandas](handling-missing-values.md)
-- [NumPy Array Iteration](numpy_array_iteration.md)
+
