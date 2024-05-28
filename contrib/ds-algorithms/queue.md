@@ -972,6 +972,96 @@ Then the `front` and `rear` are set to -1.
         - **return None** Return `None` as there are no elements in the queue
     - **return self.queue[self.front]** Returns the front item of the queue
 
+**Example 1:** If the queue is completely empty,
+
+<div style="text-align:center;">
+<div style="display:inline-flex;">
+<div style="display:flex; flex-direction: column; align-items: center;">
+<div style="position:relative; display:inline-flex; width: 40px; border: 1px solid black; background-color: #DBE0E5; text-align:center; line-height: 1.5;">
+    <div style="flex: 1; color: #DBE0E5;">1</div>
+</div>
+<div>0</div>
+</div>
+
+<div style="display:flex; flex-direction: column; align-items: center;">
+<div style="position:relative; display:inline-flex; width: 40px; border: 1px solid black; background-color: #DBE0E5; text-align:center; line-height: 1.5;">
+    <div style="flex: 1; color: #DBE0E5;">2</div>
+</div>
+<div>1</div>
+</div>
+
+<div style="display:flex; flex-direction: column; align-items: center;">
+<div style="position:relative; display:inline-flex; width: 40px; border: 1px solid black; background-color: #DBE0E5; text-align:center; line-height: 1.5;">
+    <div style="flex: 1; color: #DBE0E5;">3</div>
+</div>
+<div>2</div>
+</div>
+
+<div style="display:flex; flex-direction: column; align-items: center;">
+<div style="position:relative; display:inline-flex; width: 40px; border: 1px solid black; background-color: #DBE0E5; text-align:center; line-height: 1.5;">
+    <div style="flex: 1; color: #DBE0E5;">4</div>
+</div>
+<div>3</div>
+</div>
+
+<div style="display:flex; flex-direction: column; align-items: center;">
+<div style="position:relative; display:inline-flex; width: 40px; border: 1px solid black; background-color: #DBE0E5; text-align:center; line-height: 1.5;">
+    <div style="flex: 1; color: #DBE0E5;">5</div>
+</div>
+<div>4</div>
+</div>
+</div>
+<div>front=-1</div>
+<div>rear=-1</div>
+</div><br>
+
+Since there is no front item, the function prints `Queue Underflow` and returns.
+
+**Example 2:** When the queue has some elements in it,
+
+<div style="text-align:center;">
+<div style="display:inline-flex;">
+<div style="display:flex; flex-direction: column; align-items: center;">
+<div style="position:relative; display:inline-flex; width: 48px; border: 1px solid black; background-color: #DBE0E5; text-align:center; line-height: 1.5;">
+    <div style="flex: 1;">1</div>
+</div>
+<div>0</div>
+<div>front=0</div>
+</div>
+
+<div style="display:flex; flex-direction: column; align-items: center;">
+<div style="position:relative; display:inline-flex; width: 48px; border: 1px solid black; background-color: #DBE0E5; text-align:center; line-height: 1.5;">
+    <div style="flex: 1;">2</div>
+</div>
+<div>1</div>
+</div>
+
+<div style="display:flex; flex-direction: column; align-items: center;">
+<div style="position:relative; display:inline-flex; width: 48px; border: 1px solid black; background-color: #DBE0E5; text-align:center; line-height: 1.5;">
+    <div style="flex: 1;">3</div>
+</div>
+<div>2</div>
+</div>
+
+<div style="display:flex; flex-direction: column; align-items: center;">
+<div style="position:relative; display:inline-flex; width: 48px; border: 1px solid black; background-color: #DBE0E5; text-align:center; line-height: 1.5;">
+    <div style="flex: 1;">4</div>
+</div>
+<div>3</div>
+<div>rear=3</div>
+</div>
+
+<div style="display:flex; flex-direction: column; align-items: center;">
+<div style="position:relative; display:inline-flex; width: 48px; border: 1px solid black; background-color: #DBE0E5; text-align:center; line-height: 1.5;">
+    <div style="flex: 1; color: #DBE0E5;">5</div>
+</div>
+<div>4</div>
+</div>
+</div>
+</div><br>
+
+Here, the function returns the front element i.e., 1.
+
 - **def isFull(self):** Defines a method `isFull()` which takes one parameter, `self` (an instance of the `Queue` class)
     - **return self.rear == self.size-1** If `rear` is equal to `size-1`, then it means queue is full and there is no space for a new item. If this condition is true, then function returns `True`, otherwise returns `False`.
 
@@ -1587,6 +1677,80 @@ Is the queue empty? True
 - **def isEmpty(self):** Defines the `isEmpty()` method which takes one parameter, `self` (an instance of the `Queue` class)
     - **return self.head==None** If `head` is equal to `None`, then it means that the queue is empty. Hence, if the condition holds, the function returns `True` and `False`, otherwise.
 
+**Example 1:** If the queue is completely empty, `head` would be `None`.
+
+<div style="display:flex; flex-direction: column; align-items: center;">
+<div style="width:60px; border: 1px solid black; background-color: #DBE0E5; text-align:center; line-height: 1.5;">
+    <div>None</div>
+</div>
+<div>head</div>
+</div><br>
+
+Since `head` is `None`, the function returns `True`.
+
+**Example 2:** If the queue already has some elements in it,
+
+<div style="text-align:center;">
+<div style="display:inline-flex;">
+<div style="display:flex; flex-direction: column; align-items: center;">
+<div style="position:relative; display:inline-flex; width: 40px; border: 1px solid black; background-color: #DBE0E5; text-align:center; line-height: 1.5;">
+    <div style="flex: 1;">100</div>
+</div>
+<div>head</div>
+</div>
+
+<div style="height: 21px; display: inline-flex; justify-content: center; align-items: center;">
+    <svg style="width: 30px; height: 30px;">
+        <line x1="0" y1="15" x2="30" y2="15" style="stroke: black; stroke-width: 2;" />
+        <polygon points="30,15 20,10 20,20" style="fill: black;" />
+    </svg>
+</div>
+
+<div style="display:flex; flex-direction: column; align-items: center;">
+<div style="position:relative; display:inline-flex; width: 60px; border: 1px solid black; background-color: #DBE0E5; text-align:center; line-height: 1.5;">
+    <div style="flex: 1;">3</div>
+    <div style="width: 1px; height:21px; background-color: black; margin: 0 10px;"></div>
+    <div style="flex: 1;">200</div>
+</div>
+<div>100</div>
+</div>
+
+<div style="height: 21px; display: inline-flex; justify-content: center; align-items: center;">
+    <svg style="width: 30px; height: 30px;">
+        <line x1="0" y1="15" x2="30" y2="15" style="stroke: black; stroke-width: 2;" />
+        <polygon points="30,15 20,10 20,20" style="fill: black;" />
+    </svg>
+</div>
+
+<div style="display:flex; flex-direction: column; align-items: center;">
+<div style="position:relative; display:inline-flex; width: 60px; border: 1px solid black; background-color: #DBE0E5; text-align:center; line-height: 1.5;">
+    <div style="flex: 1;">2</div>
+    <div style="width: 1px; height:21px; background-color: black; margin: 0 10px;"></div>
+    <div style="flex: 1;">300</div>
+</div>
+<div>200</div>
+</div>
+
+<div style="height: 21px; display: inline-flex; justify-content: center; align-items: center;">
+    <svg style="width: 30px; height: 30px;">
+        <line x1="0" y1="15" x2="30" y2="15" style="stroke: black; stroke-width: 2;" />
+        <polygon points="30,15 20,10 20,20" style="fill: black;"/>
+    </svg>
+</div>
+
+<div style="display:flex; flex-direction: column; align-items: center;">
+<div style="position:relative; display:inline-flex; width: 60px; border: 1px solid black; background-color: #DBE0E5; text-align:center; line-height: 1.5;">
+    <div style="flex: 1;">  1</div>
+    <div style="width: 1px; height:21px; background-color: black; margin: 0 10px;"></div>
+    <div style="flex: 1;">Null</div>
+</div>
+<div>300</div>
+</div>
+</div>
+</div><br>
+
+Here, `head` is not `None`, hence, the function returns `False`.
+
 - **def display(self):** Defines the `display()` method which takes one parameter, `self` (an instance of the `Queue` class)
     - **if self.head is None:** Checks if the `head` is `None`
         - **print("Queue Underflow")** Prints `Queue Underflow` as the queue has no elements.
@@ -1597,6 +1761,274 @@ Is the queue empty? True
             - **print(temp.data, end="->")** Prints the value stored at the node pointed to by `temp`
             - **temp = temp.next** Move the `temp` variable forward to point at the next node
         - **print("None")** Prints `None` to signify the end of the queue
+
+**Example 1:** If the queue is completely empty, `head` would be `None`.
+
+<div style="display:flex; flex-direction: column; align-items: center;">
+<div style="width:60px; border: 1px solid black; background-color: #DBE0E5; text-align:center; line-height: 1.5;">
+    <div>None</div>
+</div>
+<div>head</div>
+</div><br>
+
+Since `head` is `None`, the function prints `Queue Underflow` and returns.
+
+**Example 2:** Let a queue be created as shown below
+
+<div style="text-align:center;">
+<div style="display:inline-flex;">
+<div style="display:flex; flex-direction: column; align-items: center;">
+<div style="position:relative; display:inline-flex; width: 60px; border: 1px solid black; background-color: #DBE0E5; text-align:center; line-height: 1.5;">
+<div style="flex: 1;">100</div>
+</div>
+<div>head</div>
+</div>
+
+<div style="height: 21px; display: inline-flex; justify-content: center; align-items: center;">
+<svg style="width: 30px; height: 30px;">
+<line x1="0" y1="15" x2="30" y2="15" style="stroke: black; stroke-width: 2;" />
+<polygon points="30,15 20,10 20,20" style="fill: black;" />
+</svg>
+</div>
+
+<div style="display:flex; flex-direction: column; align-items: center;">
+<div style="position:relative; display:inline-flex; width: 60px; border: 1px solid black; background-color: #DBE0E5; text-align:center; line-height: 1.5;">
+    <div style="flex: 1;">1</div>
+    <div style="width: 1px; height:21px; background-color: black; margin: 0 10px;"></div>
+    <div style="flex: 1;">200</div>
+</div>
+<div>100</div>
+</div>
+
+<div style="height: 21px; display: inline-flex; justify-content: center; align-items: center;">
+    <svg style="width: 30px; height: 30px;">
+        <line x1="0" y1="15" x2="30" y2="15" style="stroke: black; stroke-width: 2;" />
+        <polygon points="30,15 20,10 20,20" style="fill: black;" />
+    </svg>
+</div>
+
+<div style="display:flex; flex-direction: column; align-items: center;">
+<div style="position:relative; display:inline-flex; width: 60px; border: 1px solid black; background-color: #DBE0E5; text-align:center; line-height: 1.5;">
+    <div style="flex: 1;">2</div>
+    <div style="width: 1px; height:21px; background-color: black; margin: 0 10px;"></div>
+    <div style="flex: 1;">300</div>
+</div>
+<div>200</div>
+</div>
+
+<div style="height: 21px; display: inline-flex; justify-content: center; align-items: center;">
+    <svg style="width: 30px; height: 30px;">
+        <line x1="0" y1="15" x2="30" y2="15" style="stroke: black; stroke-width: 2;" />
+        <polygon points="30,15 20,10 20,20" style="fill: black;" />
+    </svg>
+</div>
+
+<div style="display:flex; flex-direction: column; align-items: center;">
+<div style="position:relative; display:inline-flex; width: 60px; border: 1px solid black; background-color: #DBE0E5; text-align:center; line-height: 1.5;">
+    <div style="flex: 1;">3</div>
+    <div style="width: 1px; height:21px; background-color: black; margin: 0 10px;"></div>
+    <div style="flex: 1;">Null</div>
+</div>
+<div>300</div>
+</div>
+</div>
+</div><br>
+
+A temporary variable `temp` is created and is assigned the value of `head`.
+
+<div style="display:flex; flex-direction: column; align-items: center;">
+<div style="position:relative; display:inline-flex; width: 60px; border: 1px solid black; background-color: #DBE0E5; text-align:center; line-height: 1.5;">
+<div style="flex: 1;">100</div>
+</div>
+<div>temp</div>
+</div><br>
+
+This `temp` variable keeps moving forward node by node, printing its data as it goes.
+
+
+<div style="text-align:center;">
+<div style="display:inline-flex;">
+<div style="display:flex; flex-direction: column; align-items: center;">
+<div style="position:relative; display:inline-flex; width: 60px; border: 1px solid black; background-color: #DBE0E5; text-align:center; line-height: 1.5;">
+<div style="flex: 1;">100</div>
+</div>
+<div>head</div>
+</div>
+
+<div style="height: 21px; display: inline-flex; justify-content: center; align-items: center;">
+<svg style="width: 30px; height: 30px;">
+<line x1="0" y1="15" x2="30" y2="15" style="stroke: black; stroke-width: 2;" />
+<polygon points="30,15 20,10 20,20" style="fill: black;" />
+</svg>
+</div>
+
+<div style="display:flex; flex-direction: column; align-items: center;">
+<div style="position:relative; display:inline-flex; width: 60px; border: 1px solid black; background-color: #DBE0E5; text-align:center; line-height: 1.5;">
+    <div style="flex: 1;">1</div>
+    <div style="width: 1px; height:21px; background-color: black; margin: 0 10px;"></div>
+    <div style="flex: 1;">200</div>
+</div>
+<div>100</div>
+<div>temp</div>
+</div>
+
+<div style="height: 21px; display: inline-flex; justify-content: center; align-items: center;">
+    <svg style="width: 30px; height: 30px;">
+        <line x1="0" y1="15" x2="30" y2="15" style="stroke: black; stroke-width: 2;" />
+        <polygon points="30,15 20,10 20,20" style="fill: black;" />
+    </svg>
+</div>
+
+<div style="display:flex; flex-direction: column; align-items: center;">
+<div style="position:relative; display:inline-flex; width: 60px; border: 1px solid black; background-color: #DBE0E5; text-align:center; line-height: 1.5;">
+    <div style="flex: 1;">2</div>
+    <div style="width: 1px; height:21px; background-color: black; margin: 0 10px;"></div>
+    <div style="flex: 1;">300</div>
+</div>
+<div>200</div>
+</div>
+
+<div style="height: 21px; display: inline-flex; justify-content: center; align-items: center;">
+    <svg style="width: 30px; height: 30px;">
+        <line x1="0" y1="15" x2="30" y2="15" style="stroke: black; stroke-width: 2;" />
+        <polygon points="30,15 20,10 20,20" style="fill: black;" />
+    </svg>
+</div>
+
+<div style="display:flex; flex-direction: column; align-items: center;">
+<div style="position:relative; display:inline-flex; width: 60px; border: 1px solid black; background-color: #DBE0E5; text-align:center; line-height: 1.5;">
+    <div style="flex: 1;">3</div>
+    <div style="width: 1px; height:21px; background-color: black; margin: 0 10px;"></div>
+    <div style="flex: 1;">Null</div>
+</div>
+<div>300</div>
+</div>
+</div>
+</div><br>
+
+<div style="text-align:center;">
+<div style="display:inline-flex;">
+<div style="display:flex; flex-direction: column; align-items: center;">
+<div style="position:relative; display:inline-flex; width: 60px; border: 1px solid black; background-color: #DBE0E5; text-align:center; line-height: 1.5;">
+<div style="flex: 1;">100</div>
+</div>
+<div>head</div>
+</div>
+
+<div style="height: 21px; display: inline-flex; justify-content: center; align-items: center;">
+<svg style="width: 30px; height: 30px;">
+<line x1="0" y1="15" x2="30" y2="15" style="stroke: black; stroke-width: 2;" />
+<polygon points="30,15 20,10 20,20" style="fill: black;" />
+</svg>
+</div>
+
+<div style="display:flex; flex-direction: column; align-items: center;">
+<div style="position:relative; display:inline-flex; width: 60px; border: 1px solid black; background-color: #DBE0E5; text-align:center; line-height: 1.5;">
+    <div style="flex: 1;">1</div>
+    <div style="width: 1px; height:21px; background-color: black; margin: 0 10px;"></div>
+    <div style="flex: 1;">200</div>
+</div>
+<div>100</div>
+</div>
+
+<div style="height: 21px; display: inline-flex; justify-content: center; align-items: center;">
+    <svg style="width: 30px; height: 30px;">
+        <line x1="0" y1="15" x2="30" y2="15" style="stroke: black; stroke-width: 2;" />
+        <polygon points="30,15 20,10 20,20" style="fill: black;" />
+    </svg>
+</div>
+
+<div style="display:flex; flex-direction: column; align-items: center;">
+<div style="position:relative; display:inline-flex; width: 60px; border: 1px solid black; background-color: #DBE0E5; text-align:center; line-height: 1.5;">
+    <div style="flex: 1;">2</div>
+    <div style="width: 1px; height:21px; background-color: black; margin: 0 10px;"></div>
+    <div style="flex: 1;">300</div>
+</div>
+<div>200</div>
+<div>temp</div>
+</div>
+
+<div style="height: 21px; display: inline-flex; justify-content: center; align-items: center;">
+    <svg style="width: 30px; height: 30px;">
+        <line x1="0" y1="15" x2="30" y2="15" style="stroke: black; stroke-width: 2;" />
+        <polygon points="30,15 20,10 20,20" style="fill: black;" />
+    </svg>
+</div>
+
+<div style="display:flex; flex-direction: column; align-items: center;">
+<div style="position:relative; display:inline-flex; width: 60px; border: 1px solid black; background-color: #DBE0E5; text-align:center; line-height: 1.5;">
+    <div style="flex: 1;">3</div>
+    <div style="width: 1px; height:21px; background-color: black; margin: 0 10px;"></div>
+    <div style="flex: 1;">Null</div>
+</div>
+<div>300</div>
+</div>
+</div>
+</div><br>
+
+<div style="text-align:center;">
+<div style="display:inline-flex;">
+<div style="display:flex; flex-direction: column; align-items: center;">
+<div style="position:relative; display:inline-flex; width: 60px; border: 1px solid black; background-color: #DBE0E5; text-align:center; line-height: 1.5;">
+<div style="flex: 1;">100</div>
+</div>
+<div>head</div>
+</div>
+
+<div style="height: 21px; display: inline-flex; justify-content: center; align-items: center;">
+<svg style="width: 30px; height: 30px;">
+<line x1="0" y1="15" x2="30" y2="15" style="stroke: black; stroke-width: 2;" />
+<polygon points="30,15 20,10 20,20" style="fill: black;" />
+</svg>
+</div>
+
+<div style="display:flex; flex-direction: column; align-items: center;">
+<div style="position:relative; display:inline-flex; width: 60px; border: 1px solid black; background-color: #DBE0E5; text-align:center; line-height: 1.5;">
+    <div style="flex: 1;">1</div>
+    <div style="width: 1px; height:21px; background-color: black; margin: 0 10px;"></div>
+    <div style="flex: 1;">200</div>
+</div>
+<div>100</div>
+</div>
+
+<div style="height: 21px; display: inline-flex; justify-content: center; align-items: center;">
+    <svg style="width: 30px; height: 30px;">
+        <line x1="0" y1="15" x2="30" y2="15" style="stroke: black; stroke-width: 2;" />
+        <polygon points="30,15 20,10 20,20" style="fill: black;" />
+    </svg>
+</div>
+
+<div style="display:flex; flex-direction: column; align-items: center;">
+<div style="position:relative; display:inline-flex; width: 60px; border: 1px solid black; background-color: #DBE0E5; text-align:center; line-height: 1.5;">
+    <div style="flex: 1;">2</div>
+    <div style="width: 1px; height:21px; background-color: black; margin: 0 10px;"></div>
+    <div style="flex: 1;">300</div>
+</div>
+<div>200</div>
+</div>
+
+<div style="height: 21px; display: inline-flex; justify-content: center; align-items: center;">
+    <svg style="width: 30px; height: 30px;">
+        <line x1="0" y1="15" x2="30" y2="15" style="stroke: black; stroke-width: 2;" />
+        <polygon points="30,15 20,10 20,20" style="fill: black;" />
+    </svg>
+</div>
+
+<div style="display:flex; flex-direction: column; align-items: center;">
+<div style="position:relative; display:inline-flex; width: 60px; border: 1px solid black; background-color: #DBE0E5; text-align:center; line-height: 1.5;">
+    <div style="flex: 1;">3</div>
+    <div style="width: 1px; height:21px; background-color: black; margin: 0 10px;"></div>
+    <div style="flex: 1;">Null</div>
+</div>
+<div>300</div>
+<div>temp</div>
+</div>
+</div>
+</div><br>
+
+```python
+OUTPUT: 1--2--3
+```` 
 
 
 ## Complexity Analysis
