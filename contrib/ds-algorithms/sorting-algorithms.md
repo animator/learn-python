@@ -2,14 +2,15 @@
 
 In computer science, a sorting algorithm takes a collection of items and arranges them in a specific order. This order is usually determined by comparing the items using a defined rule.
 
-## Real Life Example of Sorting
+Real Life Example of Sorting
+
 - Sorting a deck of cards
 - Sorting names in alphabetical order
 - Sorting a list of items, etc.
 
-# Some common sorting techniques
+Some common sorting techniques:
 
-# 1. Bubble Sort
+## 1. Bubble Sort
 
 Bubble sort is a basic sorting technique that iteratively steps through a list, comparing neighboring elements. If elements are out of order, it swaps them. While easy to understand, bubble sort becomes inefficient for large datasets due to its slow execution time.
 
@@ -21,7 +22,7 @@ Bubble sort is a basic sorting technique that iteratively steps through a list, 
 - **Repeating Until Sorted:** The algorithm continues making passes through the list until no more swaps are needed. This indicates the entire list is sorted.
 
 
-## Bubble Sort Code in Python
+### Bubble Sort Code in Python
 
 ```python
 def bubble_sort(arr):
@@ -35,7 +36,8 @@ arr = [5, 3, 8, 1, 2]
 bubble_sort(arr)
 print("Sorted array:", arr)  # Output: [1, 2, 3, 5, 8]
 ```
-## Example with Visualization
+
+### Example with Visualization
 
 Let's sort the list `[5, 3, 8, 1, 2]` using bubble sort.
 
@@ -53,17 +55,13 @@ Let's sort the list `[5, 3, 8, 1, 2]` using bubble sort.
    - Comparing neighbors: `[1, 2, 3, 5, 8]`
    - No swapping needed, the list is already sorted.
 
-## Complexity Analysis
+### Complexity Analysis
 
 - **Worst Case:** `O(n^2)` comparisons and swaps. This happens when the list is in reverse order, and we need to make maximum swaps.
 - **Best Case:** `O(n)` comparisons. This occurs when the list is already sorted, but we still need O(n^2) swaps because of the nested loops.
 - **Average Case:** `O(n^2)` comparisons and swaps. This is the expected number of comparisons and swaps over all possible input sequences.
 
-</br>
-<hr>
-</br>
-
-# 2. Selection Sort
+## 2. Selection Sort
 
 Selection sort is a simple sorting algorithm that divides the input list into two parts: a sorted sublist and an unsorted sublist. The algorithm repeatedly finds the smallest (or largest, depending on sorting order) element from the unsorted sublist and moves it to the sorted sublist. It's not efficient for large datasets but performs better than bubble sort due to fewer swaps.
 
@@ -73,7 +71,7 @@ Selection sort is a simple sorting algorithm that divides the input list into tw
 - **Expanding the Sorted Sublist:** As elements are moved to the sorted sublist, it expands until all elements are sorted.
 - **Repeating Until Sorted:** The process continues until the entire list is sorted.
 
-## Example with Visualization
+### Example with Visualization
 
 Let's sort the list `[5, 3, 8, 1, 2]` using selection sort.
 
@@ -97,7 +95,7 @@ Let's sort the list `[5, 3, 8, 1, 2]` using selection sort.
    - Find the minimum: `5`
    - No swapping needed, the list is already sorted.
 
-## Selection Sort Code in Python
+### Selection Sort Code in Python
 
 ```python
 def selection_sort(arr):
@@ -114,15 +112,13 @@ selection_sort(arr)
 print("Sorted array:", arr)  # Output: [1, 2, 3, 5, 8]
 ```
 
-## Complexity Analysis
+### Complexity Analysis
+
 - **Worst Case**: `O(n^2)` comparisons and O(n) swaps. This occurs when the list is in reverse order, and we need to make maximum comparisons and swaps.
 - **Best Case**: `O(n^2)` comparisons and O(n) swaps. This happens when the list is in sorted order, but the algorithm still needs to iterate through all elements for comparisons.
 - **Average Case**: `O(n^2)` comparisons and O(n) swaps. This is the expected number of comparisons and swaps over all possible input sequences.
-</br>
-<hr>
-</br>
 
-# 3. Quick Sort
+## 3. Quick Sort
 Quick sort is a popular divide-and-conquer sorting algorithm known for its efficiency on average. It works by selecting a 'pivot' element from the array and partitioning the other elements into two sub-arrays according to whether they are less than or greater than the pivot. The sub-arrays are then recursively sorted.
 
 **Algorithm Overview:**
@@ -131,29 +127,24 @@ Quick sort is a popular divide-and-conquer sorting algorithm known for its effic
 - **Recursion:** Apply the above steps recursively to the sub-arrays formed by partitioning until the base case is reached. The base case is usually when the size of the sub-array becomes 0 or 1, indicating it is already sorted.
 - **Base Case:** If the sub-array size becomes 0 or 1, it is already sorted.
 
-## Example with Visualization
+### Example with Visualization
 
 Let's sort the list `[5, 3, 8, 1, 2]` using quick sort.
 
 1. **Initial Array:** `[5, 3, 8, 1, 2]`
-
 2. **Choose Pivot:** Let's choose the last element, `2`, as the pivot.
-
 3. **Partitioning:**
    - We'll partition the array around the pivot `2`. All elements less than `2` will be placed to its left, and all elements greater than `2` will be placed to its right.
-
    - After partitioning, the array becomes `[1, 2, 5, 3, 8]`. The pivot element, `2`, is now in its correct sorted position.
-
 4. **Recursion:**
    - Now, we recursively sort the sub-arrays `[1]` and `[5, 3, 8]`.
      - For the sub-array `[5, 3, 8]`, we choose `8` as the pivot and partition it.
      - After partitioning, the sub-array becomes `[3, 5, 8]`. The pivot element, `8`, is now in its correct sorted position.
-
-
 5. **Concatenation:**
    - Concatenating the sorted sub-arrays `[1]`, `[2]`, `[3, 5, 8]`, we get the final sorted array `[1, 2, 3, 5, 8]`.
 
-## Quick Sort Code in Python (Iterative)
+### Quick Sort Code in Python (Iterative)
+
 ```python
 def partition(arr, low, high):
     pivot = arr[high]
@@ -180,7 +171,8 @@ quick_sort_iterative(arr)
 print("Sorted array:", arr)  # Output: [3, 9, 10, 27, 38, 43, 82]
 
 ```
-## Quick Sort Code in Python (Recursive)
+
+### Quick Sort Code in Python (Recursive)
 
 ```python
 def quick_sort(arr):
@@ -196,17 +188,15 @@ arr = [5, 3, 8, 1, 2]
 sorted_arr = quick_sort(arr)
 print("Sorted array:", sorted_arr)  # Output: [1, 2, 3, 5, 8]
 ```
-## Complexity Analysis
+
+### Complexity Analysis
 
 - **Worst Case**: The worst-case time complexity of quick sort is `O(n^2)`. This occurs when the pivot selection consistently results in unbalanced partitioning, such as choosing the smallest or largest element as the pivot.
 -**Best Case**: The best-case time complexity is `O(n log n)`. This happens when the pivot selection leads to well-balanced partitioning, halving the array size in each recursive call.
 - **Average Case**: The average-case time complexity is `O(n log n)`. This is the expected time complexity when the pivot selection results in reasonably balanced partitioning across recursive calls.
 - **Space Complexity**: Quick sort has an `O(log n)` space complexity for the recursion stack, as it recursively sorts sub-arrays.
-</br>
-<hr>
-</br>
 
-# 4. Merge Sort
+## 4. Merge Sort
 
 Merge sort is a divide-and-conquer algorithm that recursively divides the input list into smaller sublists until each sublist contains only one element. Then, it repeatedly merges adjacent sublists while maintaining the sorted order until there is only one sublist remaining, which represents the sorted list.
 
@@ -214,7 +204,7 @@ Merge sort is a divide-and-conquer algorithm that recursively divides the input 
 - **Divide:** Split the input list into smaller sublists recursively until each sublist contains only one element.
 - **Merge:** Repeatedly merge adjacent sublists while maintaining the sorted order until there is only one sublist remaining, which represents the sorted list.
 
-## Example with Visualization
+### Example with Visualization
 
 Let's sort the list `[38, 27, 43, 3, 9, 82, 10]` using merge sort.
 
@@ -233,7 +223,7 @@ Let's sort the list `[38, 27, 43, 3, 9, 82, 10]` using merge sort.
 3. **Final Sorted List:**
    - `[3, 9, 10, 27, 38, 43, 82]`
 
-## Merge Sort Code in Python (Iterative)
+### Merge Sort Code in Python (Iterative)
 
 ```python
 def merge_sort_iterative(arr):
@@ -280,7 +270,9 @@ arr = [38, 27, 43, 3, 9, 82, 10]
 merge_sort_iterative(arr)
 print("Sorted array:", arr)  # Output: [3, 9, 10, 27, 38, 43, 82]
 ```
-## Merge Sort Code in Python (Recursive)
+
+### Merge Sort Code in Python (Recursive)
+
 ```python
 def merge_sort(arr):
     if len(arr) > 1:
@@ -320,10 +312,156 @@ arr = [38, 27, 43, 3, 9, 82, 10]
 merge_sort(arr)
 print("Sorted array:", arr)  # Output: [3, 9, 10, 27, 38, 43, 82]
 ```
-## Complexity Analysis
+
+### Complexity Analysis
 - **Time Complexity**: `O(n log n)` for all cases. Merge sort always divides the list into halves until each sublist contains only one element, and then merges them back together, resulting in O(n log n) time complexity.
 - **Space Complexity**: `O(n)` auxiliary space. In the iterative version, merge sort uses additional space for creating temporary sublists during merging operations.
 
-</br>
-<hr>
-</br>
+## 5. Insertion Sort
+
+Insertion sort is a straightforward and efficient sorting algorithm for small datasets. It builds the final sorted array one element at a time. It is much like sorting playing cards in your hands: you take one card at a time and insert it into its correct position among the already sorted cards.
+
+**Algorithm Overview:**
+- **Start from the Second Element:** Begin with the second element, assuming the first element is already sorted.
+- **Compare with Sorted Subarray:** Take the current element and compare it with elements in the sorted subarray (the part of the array before the current element).
+- **Insert in Correct Position:** Shift all elements in the sorted subarray that are greater than the current element to one position ahead. Insert the current element into its correct position.
+- **Repeat Until End:** Repeat this process for all elements in the array.
+
+### Example with Visualization
+Let's sort the list `[5, 3, 8, 1, 2]` using insertion sort.
+
+**Step-by-Step Visualization:**
+**Initial List:** `[5, 3, 8, 1, 2]`
+
+1. **Pass 1:**
+   - Current element: 3
+   - Compare 3 with 5, move 5 to the right: `[5, 5, 8, 1, 2]`
+   - Insert 3 in its correct position: `[3, 5, 8, 1, 2]`
+
+2. **Pass 2:**
+   - Current element: 8
+   - 8 is already in the correct position: `[3, 5, 8, 1, 2]`
+    
+3. **Pass 3:**
+   - Current element: 1
+   - Compare 1 with 8, move 8 to the right: `[3, 5, 8, 8, 2]`
+   - Compare 1 with 5, move 5 to the right: `[3, 5, 5, 8, 2]`
+   - Compare 1 with 3, move 3 to the right: `[3, 3, 5, 8, 2]`
+   - Insert 1 in its correct position: `[1, 3, 5, 8, 2]`
+    
+4. **Pass 4:**
+   - Current element: 2
+   - Compare 2 with 8, move 8 to the right: `[1, 3, 5, 8, 8]`
+   - Compare 2 with 5, move 5 to the right: `[1, 3, 5, 5, 8]`
+   - Compare 2 with 3, move 3 to the right: `[1, 3, 3, 5, 8]`
+   - Insert 2 in its correct position: `[1, 2, 3, 5, 8]`
+
+### Insertion Sort Code in Python
+
+
+```python
+
+def insertion_sort(arr):
+    # Traverse from 1 to len(arr)
+    for i in range(1, len(arr)):
+        key = arr[i]
+        # Move elements of arr[0..i-1], that are greater than key,
+        # to one position ahead of their current position
+        j = i - 1
+        while j >= 0 and key < arr[j]:
+            arr[j + 1] = arr[j]
+            j -= 1
+        arr[j + 1] = key
+
+# Example usage
+arr = [5, 3, 8, 1, 2]
+insertion_sort(arr)
+print("Sorted array:", arr)  # Output: [1, 2, 3, 5, 8]
+```
+
+### Complexity Analysis
+  - **Worst Case:** `𝑂(𝑛^2)` comparisons and swaps. This occurs when the array is in reverse order.
+  - **Best Case:** `𝑂(𝑛)` comparisons and `𝑂(1)` swaps. This happens when the array is already sorted.
+  - **Average Case:** `𝑂(𝑛^2)` comparisons and swaps. This is the expected number of comparisons and swaps over all possible input sequences.
+
+## 6. Heap Sort
+
+Heap Sort is an efficient comparison-based sorting algorithm that uses a binary heap data structure. It divides its input into a sorted and an unsorted region and iteratively shrinks the unsorted region by extracting the largest (or smallest) element and moving it to the sorted region.
+
+**Algorithm Overview:**
+- **Build a Max Heap:** Convert the array into a max heap, a complete binary tree where the value of each node is greater than or equal to the values of its children.
+- **Heapify:** Ensure that the subtree rooted at each node satisfies the max heap property. This process is called heapify.
+- **Extract Maximum:** Swap the root (the maximum element) with the last element of the heap and reduce the heap size by one. Restore the max heap property by heapifying the root.
+- **Repeat:** Continue extracting the maximum element and heapifying until the entire array is sorted.
+
+### Example with Visualization
+
+Let's sort the list `[5, 3, 8, 1, 2]` using heap sort.
+
+1. **Build Max Heap:**
+   - Initial array: `[5, 3, 8, 1, 2]`
+   - Start heapifying from the last non-leaf node.
+   - Heapify at index 1: `[5, 3, 8, 1, 2]` (no change, children are already less than the parent)
+   - Heapify at index 0: `[8, 3, 5, 1, 2]` (swap 5 and 8 to make 8 the root)
+
+2. **Heapify Process:**
+   - Heapify at index 0: `[8, 3, 5, 1, 2]` (no change needed, already a max heap)
+
+3. **Extract Maximum:**
+   - Swap root with the last element: `[2, 3, 5, 1, 8]`
+   - Heapify at index 0: `[5, 3, 2, 1, 8]` (swap 2 and 5)
+     
+4. **Repeat Extraction:**
+   - Swap root with the second last element: `[1, 3, 2, 5, 8]`
+   - Heapify at index 0: `[3, 1, 2, 5, 8]` (swap 1 and 3)
+   - Swap root with the third last element: `[2, 1, 3, 5, 8]`
+   - Heapify at index 0: `[2, 1, 3, 5, 8]` (no change needed)
+   - Swap root with the fourth last element: `[1, 2, 3, 5, 8]`
+
+After all extractions, the array is sorted: `[1, 2, 3, 5, 8]`.
+
+### Heap Sort Code in Python
+
+```python
+def heapify(arr, n, i):
+    largest = i  # Initialize largest as root
+    left = 2 * i + 1  # left child index
+    right = 2 * i + 2  # right child index
+
+    # See if left child of root exists and is greater than root
+    if left < n and arr[largest] < arr[left]:
+        largest = left
+
+    # See if right child of root exists and is greater than root
+    if right < n and arr[largest] < arr[right]:
+        largest = right
+
+    # Change root, if needed
+    if largest != i:
+        arr[i], arr[largest] = arr[largest], arr[i]  # swap
+
+        # Heapify the root.
+        heapify(arr, n, largest)
+
+def heap_sort(arr):
+    n = len(arr)
+
+    # Build a maxheap.
+    for i in range(n // 2 - 1, -1, -1):
+        heapify(arr, n, i)
+
+    # One by one extract elements
+    for i in range(n - 1, 0, -1):
+        arr[i], arr[0] = arr[0], arr[i]  # swap
+        heapify(arr, i, 0)
+
+# Example usage
+arr = [5, 3, 8, 1, 2]
+heap_sort(arr)
+print("Sorted array:", arr)  # Output: [1, 2, 3, 5, 8]
+```
+
+### Complexity Analysis
+ - **Worst Case:** `𝑂(𝑛log𝑛)`. Building the heap takes `𝑂(𝑛)` time, and each of the 𝑛 element extractions takes `𝑂(log𝑛)` time.
+ - **Best Case:** `𝑂(𝑛log𝑛)`. Even if the array is already sorted, heap sort will still build the heap and perform the extractions.
+ - **Average Case:** `𝑂(𝑛log𝑛)`. Similar to the worst-case, the overall complexity remains `𝑂(𝑛log𝑛)` because each insertion and deletion in a heap takes `𝑂(log𝑛)` time, and these operations are performed 𝑛 times.
