@@ -8,3 +8,5 @@
 - [Artificial Neural Network from the Ground Up](ArtificialNeuralNetwork.md)
 - [TensorFlow.md](tensorFlow.md)
 - [Introduction of Scikit Learn](Scikit_Learn_Intro.md)
+- [PyTorch.md](pytorch.md)
+- [Types of optimizers](Types_of_optimizers.md)
