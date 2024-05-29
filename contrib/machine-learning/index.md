@@ -9,3 +9,4 @@
 - [TensorFlow.md](tensorFlow.md)
 - [PyTorch.md](pytorch.md)
 - [Types of optimizers](Types_of_optimizers.md)
+- [Introduction to ML and k-NN](introandknn.md)
