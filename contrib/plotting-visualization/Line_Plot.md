@@ -142,3 +142,4 @@ plt.show()
 ```
 
 #### OUTPUT:-
+![example line plot (output)](images/lineplot.png)
