@@ -25,22 +25,6 @@
 
 </details>
 
-<table>
-<tr><th>Table 1 Heading 1 </th><th>Table 1 Heading 2</th></tr>
-<tr><td>
-
-|Table 1| Middle | Table 2|
-|--|--|--|
-|a| not b|and c |
-
-</td><td>
-
-|b|1|2|3| 
-|--|--|--|--|
-|a|s|d|f|
-
-</td></tr> </table>
-
 ## Introduction
 
 Convolutional Neural Networks (CNNs) are a specialized type of artificial neural network designed primarily for processing structured grid data like images. CNNs are particularly powerful for tasks involving image recognition, classification, and computer vision. They have revolutionized these fields, outperforming traditional neural networks by leveraging their unique architecture to capture spatial hierarchies in images.
@@ -79,35 +63,8 @@ The convolutional layer is the core building block of a CNN. The layer's paramet
 
 #### Input Shape
 The dimensions of the input image, including the number of channels (e.g., 3 for RGB images & 1 for Grayscale images).
-<div>
-  <p align='left'>
-    <table>
-        <caption>1 and 0</caption>
-        <tbody>
-            <tr> <td>1</td><td>0</td><td>1</td><td>1</td><td>1</td> </tr>
-            <tr> <td>1</td><td>0</td><td>1</td><td>0</td><td>1</td> </tr>
-            <tr> <td>1</td><td>0</td><td>1</td><td>0</td><td>1</td> </tr>
-            <tr> <td>1</td><td>0</td><td>1</td><td>0</td><td>1</td> </tr>
-            <tr> <td>1</td><td>0</td><td>1</td><td>0</td><td>1</td> </tr>
-            <tr> <td>1</td><td>0</td><td>1</td><td>0</td><td>1</td> </tr>
-            <tr> <td>1</td><td>0</td><td>1</td><td>1</td><td>1</td> </tr>
-        </tbody>
-    </table>
-  </p>
-  <p align='right'>
-    <table>
-        <caption>9</caption>
-        <tbody>
-        <tr> <td>0</td><td>1</td><td>1</td><td>1</td><td>0</td> </tr>
-        <tr> <td>0</td><td>1</td><td>0</td><td>1</td><td>0</td> </tr>
-        <tr> <td>0</td><td>1</td><td>1</td><td>1</td><td>0</td> </tr>
-        <tr> <td>0</td><td>0</td><td>0</td><td>1</td><td>0</td> </tr>
-        <tr> <td>0</td><td>0</td><td>0</td><td>1</td><td>0</td> </tr>
-        <tr> <td>0</td><td>0</td><td>0</td><td>1</td><td>0</td> </tr>
-        <tr> <td>0</td><td>0</td><td>0</td><td>1</td><td>0</td> </tr>
-        </tbody>
-    </table>
-  </p>
+<div align='center'>
+    <img src='assets/cnn-input_shape.png' width='800'></img>
 </div>
 
 - The input matrix represents a simplified binary image of handwritten digits, 
@@ -121,39 +78,8 @@ where '1' denotes the presence of ink and '0' represents the absence of ink.
 
 #### Strides
 The step size with which the filter moves across the input image.
-<div style="display: flex; justify-content: space-around; align-items: center;">
-    <table>
-        <caption>3</caption>
-        <tbody>
-            <tr> <td style='border: 1px solid red;'>0</td><td style='border: 1px solid red;'>1</td><td>1
-            </td><td style='border: 1px solid blue;'>1</td><td style='border: 1px solid blue;'>0</td> </tr>
-            <tr> <td style='border: 1px solid red;'>0</td><td style='border: 1px solid red;'>1</td><td>0
-            </td><td style='border: 1px solid blue;'>1</td><td style='border: 1px solid blue;'>0</td> </tr>
-            <tr> <td>0</td><td>1</td><td>1</td><td>1</td><td>0</td> </tr>
-            <tr> <td>0</td><td>0</td><td>0</td><td>1</td><td>0</td> </tr>
-            <tr> <td style='border: 1px solid green;'>0</td><td style='border: 1px solid green;'>0</td><td>0
-            </td><td style='border: 1px solid yellow;'>1</td><td style='border: 1px solid yellow;'>0</td> </tr>
-            <tr> <td style='border: 1px solid green;'>0</td><td style='border: 1px solid green;'>0</td><td>0
-            </td><td style='border: 1px solid yellow;'>1</td><td style='border: 1px solid yellow;'>0</td> </tr>
-            <tr> <td>0</td><td>0</td><td>0</td><td>1</td><td>0</td> </tr>
-        </tbody>
-    </table>
-    <table>
-        <caption>2</caption>
-        <tbody>
-            <tr> <td style='border: 1px solid red;'>0</td><td style='border: 1px solid red;'>1
-            </td><td style='border: 1px solid blue;'>1</td><td style='border: 1px solid blue;'>1</td><td>0</td> </tr>
-            <tr> <td style='border: 1px solid red;'>0</td><td style='border: 1px solid red;'>1
-            </td><td style='border: 1px solid blue;'>0</td><td style='border: 1px solid blue;'>1</td><td>0</td> </tr>
-            <tr> <td>0</td><td>1</td><td>1</td><td>1</td><td>0</td> </tr>
-            <tr> <td style='border: 1px solid green;'>0</td><td style='border: 1px solid green;'>0
-            </td><td style='border: 1px solid yellow;'>0</td><td style='border: 1px solid yellow;'>1</td><td>0</td> </tr>
-            <tr> <td style='border: 1px solid green;'>0</td><td style='border: 1px solid green;'>0
-            </td><td style='border: 1px solid yellow;'>0</td><td style='border: 1px solid yellow;'>1</td><td>0</td> </tr>
-            <tr> <td>0</td><td>0</td><td>0</td><td>1</td><td>0</td> </tr>
-            <tr> <td>0</td><td>0</td><td>0</td><td>1</td><td>0</td> </tr>
-        </tbody>
-    </table>
+<div align='center'>
+    <img src='assets/cnn-strides.png' width='800'></img>
 </div>
 
 - This visualization will help you understand how the filter (kernel) moves acroos the input matrix with stride values of 3 and 2.
@@ -168,33 +94,8 @@ The step size with which the filter moves across the input image.
 
 #### Padding
 Determines whether the output size is the same as the input size ('same') or reduced ('valid').
-<div style="display: flex; justify-content: space-around; align-items: center;">
-    <table>
-        <caption>padding='same'</caption>
-        <tbody>
-            <tr style="background-color: #4E0315;"> <td style="background-color: #4E0315;">0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td style="background-color: #4E0315;">0</td> </tr>
-            <tr> <td style="background-color: #4E0315;">0</td><td>0</td><td>1</td><td>1</td><td>1</td><td>0</td><td style="background-color: #4E0315;">0</td> </tr>
-            <tr> <td style="background-color: #4E0315;">0</td><td>0</td><td>1</td><td>0</td><td>1</td><td>0</td><td style="background-color: #4E0315;">0</td> </tr>
-            <tr> <td style="background-color: #4E0315;">0</td><td>0</td><td>1</td><td>1</td><td>1</td><td>0</td><td style="background-color: #4E0315;">0</td> </tr>
-            <tr> <td style="background-color: #4E0315;">0</td><td>0</td><td>0</td><td>0</td><td>1</td><td>0</td><td style="background-color: #4E0315;">0</td> </tr>
-            <tr> <td style="background-color: #4E0315;">0</td><td>0</td><td>0</td><td>0</td><td>1</td><td>0</td><td style="background-color: #4E0315;">0</td> </tr>
-            <tr> <td style="background-color: #4E0315;">0</td><td>0</td><td>0</td><td>0</td><td>1</td><td>0</td><td style="background-color: #4E0315;">0</td> </tr>
-            <tr> <td style="background-color: #4E0315;">0</td><td>0</td><td>0</td><td>0</td><td>1</td><td>0</td><td style="background-color: #4E0315;">0</td> </tr>
-            <tr style="background-color: #4E0315;"> <td style="background-color: #4E0315;">0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td style="background-color: #4E0315;">0</td> </tr>
-        </tbody>
-    </table>
-    <table>
-        <caption>padding='valid'</caption>
-        <tbody>
-        <tr> <td>0</td><td>1</td><td>1</td><td>1</td><td>0</td> </tr>
-        <tr> <td>0</td><td>1</td><td>0</td><td>1</td><td>0</td> </tr>
-        <tr> <td>0</td><td>1</td><td>1</td><td>1</td><td>0</td> </tr>
-        <tr> <td>0</td><td>0</td><td>0</td><td>1</td><td>0</td> </tr>
-        <tr> <td>0</td><td>0</td><td>0</td><td>1</td><td>0</td> </tr>
-        <tr> <td>0</td><td>0</td><td>0</td><td>1</td><td>0</td> </tr>
-        <tr> <td>0</td><td>0</td><td>0</td><td>1</td><td>0</td> </tr>
-        </tbody>
-    </table>
+<div align='center'>
+    <img src='assets/cnn-padding.png' width='800'></img>
 </div>
 
 - `Same` padding is preferred in earlier layers to preserve spatial and edge information, as it can help the network learn more detailed features.
@@ -205,31 +106,8 @@ Determines whether the output size is the same as the input size ('same') or red
 
 #### Filters
 Small matrices that slide over the input data to extract features.
-<div style="display: flex; justify-content: space-around; align-items: center;">
-    <table>
-        <caption>closed loop</caption>
-        <tbody>
-            <tr style="background-color: lightgreen;"> <td>1</td><td>1</td><td>1</td> </tr>
-            <tr> <td style="background-color: lightgreen;">1</td><td>0</td><td style="background-color: lightgreen;">1</td> </tr>
-            <tr style="background-color: lightgreen;"> <td>1</td><td>1</td><td>1</td> </tr>
-        </tbody>
-    </table>
-    <table>
-        <caption>vertical line</caption>
-        <tbody>
-        <tr> <td>0</td><td style="background-color: lightgreen;">1</td><td>0</td> </tr>
-        <tr> <td>0</td><td style="background-color: lightgreen;">1</td><td>0</td> </tr>
-        <tr> <td>0</td><td style="background-color: lightgreen;">1</td><td>0</td> </tr>
-        </tbody>
-    </table>
-    <table>
-        <caption>both diagonals</caption>
-        <tbody>
-        <tr> <td style="background-color: lightgreen;">1</td><td>0</td><td style="background-color: lightgreen;">1</td> </tr>
-        <tr> <td>0</td><td style="background-color: lightgreen;">1</td><td>0</td> </tr>
-        <tr> <td style="background-color: lightgreen;">1</td><td>0</td><td style="background-color: lightgreen;">1</td> </tr>
-        </tbody>
-    </table>
+<div align='center'>
+    <img src='assets/cnn-filters.png' width='800'></img>
 </div>
 
 - The first filter aims to detect closed loops within the input image, being highly relevant for recognizing digits with circular or oval shapes, such as '0', '6', '8', or '9'.
@@ -242,37 +120,8 @@ Small matrices that slide over the input data to extract features.
 
 #### Output
 A set of feature maps that represent the presence of different features in the input.
-<div style="display: flex; justify-content: space-around; align-items: center;">
-    <table>
-        <caption>('valid', 1)</caption>
-        <tbody>
-            <tr> <td>4</td><td>0</td><td>4</td> </tr>
-            <tr> <td>2</td><td>5</td><td>-3</td> </tr>
-            <tr> <td>2</td><td>5</td><td>-3</td> </tr>
-            <tr> <td>0</td><td>3</td><td>2</td> </tr>
-            <tr> <td>0</td><td>3</td><td>2</td> </tr>
-        </tbody>
-    </table>
-    <table>
-    <caption>('same', 1)</caption>
-        <tbody>
-            <tr> <td>2</td><td>2</td><td>4</td><td>2</td><td>2</td> </tr>
-            <tr> <td>3</td><td>4</td><td>8</td><td>4</td><td>3</td> </tr>
-            <tr> <td>2</td><td>2</td><td>5</td><td>3</td><td>3</td> </tr>
-            <tr> <td>1</td><td>2</td><td>5</td><td>3</td><td>3</td> </tr>
-            <tr> <td>0</td><td>0</td><td>3</td><td>2</td><td>3</td> </tr>
-            <tr> <td>0</td><td>0</td><td>3</td><td>2</td><td>3</td> </tr>
-            <tr> <td>0</td><td>0</td><td>2</td><td>1</td><td>2</td> </tr>
-        </tbody>
-    </table>
-    <table>
-    <caption>('valid', 2)</caption>
-        <tbody>
-            <tr> <td>4</td><td>4</td> </tr>
-            <tr> <td>2</td><td>3</td> </tr>
-            <tr> <td>0</td><td>2</td> </tr>
-        </tbody>
-    </table>
+<div align='center'>
+    <img src='assets/cnn-ouputs.png' width='800'></img>
 </div>
 
 - With no padding and a stride of 1, the 3x3 filter moves one step at a time across the 7x5 input matrix. The filter can only move within the original boundaries of the input, resulting in a smaller 5x3 output matrix. This configuration is useful when you want to reduce the spatial dimensions of the feature map while preserving the exact spatial relationships between features.
@@ -289,69 +138,29 @@ Pooling layers reduce the dimensionality of each feature map while retaining the
 - **Pooling Size:** The size of the pooling window (e.g., 2x2).
 - **Strides:** The step size for the pooling operation.
 - **Output:** A reduced feature map highlighting the most important features.
-<div style="display: flex; justify-content: space-around; align-items: center;">
-    <table>
-    <caption>((2,2), 1)</caption>
-        <tbody>
-            <tr> <td>4</td><td>8</td><td>8</td><td>4</td> </tr>
-            <tr> <td>4</td><td>8</td><td>8</td><td>4</td> </tr>
-            <tr> <td>2</td><td>5</td><td>5</td><td>3</td> </tr>
-            <tr> <td>2</td><td>5</td><td>5</td><td>3</td> </tr>
-            <tr> <td>0</td><td>3</td><td>3</td><td>3</td> </tr>
-            <tr> <td>0</td><td>3</td><td>3</td><td>3</td> </tr>
-        </tbody>
-    </table>
-    <table>
-    <caption>((3,3) 2)</caption>
-        <tbody>
-            <tr> <td>8</td><td>8</td> </tr>
-            <tr> <td>5</td><td>5</td> </tr>
-            <tr> <td>3</td><td>3</td> </tr>
-        </tbody>
-    </table>
+<div align='center'>
+    <img src='assets/cnn-pooling.png' width='800'></img>
 </div>
 
 - The high values (8) indicate that the "closed loop" filter found a strong match in those regions.
-
 - First matrix of size 6x4 represents a downsampled version of the input.
-
 - While the second matrix with 3x2, resulting in more aggressive downsampling.
-
-
-<br>
 
 ### Flatten Layer
 The flatten layer converts the 2D matrix data to a 1D vector, which can be fed into a fully connected (dense) layer.
 - **Input Shape:** The 2D feature maps from the previous layer.
 - **Output:** A 1D vector that represents the same data in a flattened format.
-<div style="display: flex; justify-content: space-around; align-items: center;">
-    <table>
-    <caption>After max pooling (with kernel size = 3 and stride = 1)</caption>
-        <tbody>
-            <tr></tr>
-            <tr> 
-                <td>8</td><td>8</td><td>8</td><td>8</td><td>8</td><td>8</td> 
-                <td>5</td><td>5</td><td>5</td><td>5</td><td>5</td><td>5</td> 
-                <td>3</td><td>3</td><td>3</td>
-            </tr>
-        </tbody>
-    </table>
+<div align='center'>
+    <img src='assets/cnn-flattened.png' width='800'></img>
 </div>
-
-<br>
 
 ### Dropout Layer
 Dropout is a regularization technique to prevent overfitting in neural networks by randomly setting a fraction of input units to zero at each update during training time.
 - **Input Shape:** The data from the previous layer.
 - **Dropout Rate:** The fraction of units to drop (e.g., 0.5 for 50% dropout).
 - **Output:** The same shape as the input, with some units set to zero.
-<div style="display: flex; justify-content: space-around; align-items: center;">
-    <table>
-    <caption>dropout rate = 0.3</caption>
-    <tbody> <tr> </tr>
-    <tr>  <td>8</td><td>8</td><td>0</td><td>8</td><td>0</td><td>0</td> <td>5</td><td>0</td><td>5</td><td>0</td><td>5</td><td>5</td> <td>0</td><td>3</td><td>3</td> </tr>
-    </tbody>
-    </table>
+<div align='center'>
+    <img src='assets/cnn-dropout.png' width='800'></img>
 </div>
 
 - The updated 0 values represents the dropped units.
@@ -402,9 +211,8 @@ class CNN:
         # Output dimensions
         conv_height = (height - filter_size[0]) // strides[0] + 1
         conv_width = (width - filter_size[1]) // strides[1] + 1
-        
         output_matrix = np.zeros((conv_height, conv_width, channels))
-        
+
         # Convolution Operation
         for i in range(0, height - filter_size[0] + 1, strides[0]):
             for j in range(0, width - filter_size[1] + 1, strides[1]):
@@ -443,7 +251,7 @@ class CNN:
         return input_matrix * dropout_mask
 ```
 
-Run the below command to generate output, based on random input and filter matrices.  
+Run the below command to generate output with random input and filter matrices, depending on the given size.
 
 ```python
 input_shape = (5, 5)
