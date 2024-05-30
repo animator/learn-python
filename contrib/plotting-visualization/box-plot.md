@@ -22,6 +22,7 @@ We can create the box plot of the data to determine the following-
 ## Creating Box Plots using Matplotlib
 
 By using inbuilt funtion boxplot() of pyplot module of matplotlib - 
+
 Syntax - matplotlib.pyplot.boxplot(data,notch=none,vert=none,patch_artist,widths=none)  
 
 1. data: The data should be an array or sequence of arrays which will be plotted.
