@@ -63,7 +63,8 @@ The convolutional layer is the core building block of a CNN. The layer's paramet
 
 #### Input Shape
 The dimensions of the input image, including the number of channels (e.g., 3 for RGB images & 1 for Grayscale images).
-<div style="display: flex; justify-content: space-around; align-items: center;">
+<div>
+  <p align='left'>
     <table>
         <caption>1 and 0</caption>
         <tbody>
@@ -76,6 +77,8 @@ The dimensions of the input image, including the number of channels (e.g., 3 for
             <tr> <td>1</td><td>0</td><td>1</td><td>1</td><td>1</td> </tr>
         </tbody>
     </table>
+  </p>
+  <p align='right'>
     <table>
         <caption>9</caption>
         <tbody>
@@ -88,6 +91,7 @@ The dimensions of the input image, including the number of channels (e.g., 3 for
         <tr> <td>0</td><td>0</td><td>0</td><td>1</td><td>0</td> </tr>
         </tbody>
     </table>
+  </p>
 </div>
 
 - The input matrix represents a simplified binary image of handwritten digits, 
