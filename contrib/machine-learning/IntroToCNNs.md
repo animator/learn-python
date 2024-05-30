@@ -25,6 +25,22 @@
 
 </details>
 
+<table>
+<tr><th>Table 1 Heading 1 </th><th>Table 1 Heading 2</th></tr>
+<tr><td>
+
+|Table 1| Middle | Table 2|
+|--|--|--|
+|a| not b|and c |
+
+</td><td>
+
+|b|1|2|3| 
+|--|--|--|--|
+|a|s|d|f|
+
+</td></tr> </table>
+
 ## Introduction
 
 Convolutional Neural Networks (CNNs) are a specialized type of artificial neural network designed primarily for processing structured grid data like images. CNNs are particularly powerful for tasks involving image recognition, classification, and computer vision. They have revolutionized these fields, outperforming traditional neural networks by leveraging their unique architecture to capture spatial hierarchies in images.
