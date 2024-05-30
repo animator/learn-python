@@ -10,3 +10,4 @@
 - [PyTorch.md](pytorch.md)
 - [Types of optimizers](Types_of_optimizers.md)
 - [Grid Search](grid-search.md)
+- [Box Plot](box-plot.md)
