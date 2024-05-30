@@ -26,25 +26,15 @@
 </details>
 
 ## Introduction
-
 Convolutional Neural Networks (CNNs) are a specialized type of artificial neural network designed primarily for processing structured grid data like images. CNNs are particularly powerful for tasks involving image recognition, classification, and computer vision. They have revolutionized these fields, outperforming traditional neural networks by leveraging their unique architecture to capture spatial hierarchies in images.
 
 ### Why CNNs are Superior to Traditional Neural Networks
-
-1. **Localized Receptive Fields**:
-   - CNNs use convolutional layers that apply filters to local regions of the input image. This localized connectivity ensures that the network learns spatial hierarchies and patterns, such as edges and textures, which are essential for image recognition tasks.
-
-2. **Parameter Sharing**:
-   - In CNNs, the same filter (set of weights) is used across different parts of the input, significantly reducing the number of parameters compared to fully connected layers in traditional neural networks. This not only lowers the computational cost but also mitigates the risk of overfitting.
-
-3. **Translation Invariance**:
-   - Due to the shared weights and pooling operations, CNNs are inherently invariant to translations of the input image. This means that they can recognize objects even when they appear in different locations within the image.
-
-4. **Hierarchical Feature Learning**:
-   - CNNs automatically learn a hierarchy of features from low-level features like edges to high-level features like shapes and objects. Traditional neural networks, on the other hand, require manual feature extraction which is less effective and more time-consuming.
+1. **Localized Receptive Fields**: CNNs use convolutional layers that apply filters to local regions of the input image. This localized connectivity ensures that the network learns spatial hierarchies and patterns, such as edges and textures, which are essential for image recognition tasks.
+2. **Parameter Sharing**: In CNNs, the same filter (set of weights) is used across different parts of the input, significantly reducing the number of parameters compared to fully connected layers in traditional neural networks. This not only lowers the computational cost but also mitigates the risk of overfitting.
+3. **Translation Invariance**: Due to the shared weights and pooling operations, CNNs are inherently invariant to translations of the input image. This means that they can recognize objects even when they appear in different locations within the image.
+4. **Hierarchical Feature Learning**: CNNs automatically learn a hierarchy of features from low-level features like edges to high-level features like shapes and objects. Traditional neural networks, on the other hand, require manual feature extraction which is less effective and more time-consuming.
 
 ### Use Cases of CNNs
-
 - **Image Classification**: Identifying objects within an image (e.g., classifying a picture as containing a cat or a dog).
 - **Object Detection**: Detecting and locating objects within an image (e.g., finding faces in a photo).
 - **Image Segmentation**: Partitioning an image into segments or regions (e.g., dividing an image into different objects and background).
@@ -55,7 +45,6 @@ Convolutional Neural Networks (CNNs) are a specialized type of artificial neural
 ### Let's start by understanding the basic architecture of CNNs.
 
 ## CNN Architecture
-
 Convolution layers, pooling layers, and fully connected layers are just a few of the many building blocks that CNNs use to automatically and adaptively learn spatial hierarchies of information through backpropagation.
 
 ### Convolutional Layer
@@ -67,14 +56,10 @@ The dimensions of the input image, including the number of channels (e.g., 3 for
     <img src='assets/cnn-input_shape.png' width='800'></img>
 </div>
 
-- The input matrix represents a simplified binary image of handwritten digits, 
-where '1' denotes the presence of ink and '0' represents the absence of ink.
-
+- The input matrix is a binary image of handwritten digits, 
+where '1' marks the pixels containing the digit (ink/grayscale area) and '0' marks the background pixels (empty space).
 - The first matrix shows the represnetation of 1 and 0, which can be depicted as a vertical line and a closed loop.
-
 - The second matrix represents 9, combining the loop and line.
-
-<br>
 
 #### Strides
 The step size with which the filter moves across the input image.
@@ -82,15 +67,10 @@ The step size with which the filter moves across the input image.
     <img src='assets/cnn-strides.png' width='800'></img>
 </div>
 
-- This visualization will help you understand how the filter (kernel) moves acroos the input matrix with stride values of 3 and 2.
-
+- This visualization will help you understand how the filter (kernel) moves acroos the input matrix with stride values of (3,3) and (2,2).
 - A stride of 1 means the filter moves one step at a time, ensuring it covers the entire input matrix. 
-
 - However, with larger strides (like 3 or 2 in this example), the filter may not cover all elements, potentially missing some information.
-
 - While this might seem like a drawback, higher strides are often used to reduce computational cost and decrease the output size, which can be beneficial in speeding up the training process and preventing overfitting.
-
-<br>
 
 #### Padding
 Determines whether the output size is the same as the input size ('same') or reduced ('valid').
@@ -99,10 +79,8 @@ Determines whether the output size is the same as the input size ('same') or red
 </div>
 
 - `Same` padding is preferred in earlier layers to preserve spatial and edge information, as it can help the network learn more detailed features.
-
 - Choose `valid` padding when focusing on the central input region or requiring specific output dimensions.
-
-<br>
+- Padding value can be determined by $ ( f - 1 ) \over 2 $, where f isfilter size
 
 #### Filters
 Small matrices that slide over the input data to extract features.
@@ -111,9 +89,7 @@ Small matrices that slide over the input data to extract features.
 </div>
 
 - The first filter aims to detect closed loops within the input image, being highly relevant for recognizing digits with circular or oval shapes, such as '0', '6', '8', or '9'.
-
 - The next filter helps in detecting vertical lines, crucial for identifying digits like '1', '4', '7', and parts of other digits that contain vertical strokes.
-
 - The last filter shows how to detect diagonal lines in the input image, useful for identifying the slashes present in digits like '1', '7', or parts of '4' and '9'.
 
 <br>
@@ -125,12 +101,21 @@ A set of feature maps that represent the presence of different features in the i
 </div>
 
 - With no padding and a stride of 1, the 3x3 filter moves one step at a time across the 7x5 input matrix. The filter can only move within the original boundaries of the input, resulting in a smaller 5x3 output matrix. This configuration is useful when you want to reduce the spatial dimensions of the feature map while preserving the exact spatial relationships between features.
-
 - By adding zero padding to the input matrix, it is expanded to 9x7, allowing the 3x3 filter to "fit" fully on the edges and corners. With a stride of 1, the filter still moves one step at a time, but now the output matrix is the same size (7x5) as the original input. Same padding is often preferred in early layers of a CNN to preserve spatial information and avoid rapid feature map shrinkage.
-
 - Without padding, the 3x3 filter operates within the original input matrix boundaries, but now it moves two steps at a time (stride 2). This significantly reduces the output matrix size to 3x2. Larger strides are employed to decrease computational cost and the output size, which can be beneficial in speeding up the training process and preventing overfitting. However, they might miss some finer details due to the larger jumps.
+- The output dimension of a CNN model is given by, $$ n_{out} = { n_{in} + (2 \cdot p) - k \over s } $$
+where, <br>
+    n<sub>in</sub> = number of input features   <br>
+    p = padding <br>
+    k = kernel size <br>
+    s = stride
 
-<br>
+- Also, the number of trainable parameters for each layer is given by, $ (n_c \cdot [k \cdot k] \cdot f) + f $
+<br> where, <br>
+    n<sub>c</sub> = number of input channels  <br>
+    k x k = kernel size <br>
+    f = number of filters   <br>
+    an additional f is added for bias
 
 ### Pooling Layer
 Pooling layers reduce the dimensionality of each feature map while retaining the most critical information. The most common form of pooling is max pooling.
