@@ -37,22 +37,22 @@ Syntax - matplotlib.pyplot.boxplot(data,notch=none,vert=none,patch_artist,widths
 
 ## Implementation of Box Plot in Python
 
-# Import libraries
+### Import libraries
 import matplotlib.pyplot as plt
 import numpy as np 
 
-# Creating dataset
+### Creating dataset
 np.random.seed(10)
 data = np.random.normal(100, 20, 200) 
 fig = plt.figure(figsize =(10, 7))
 
-# Creating plot
+### Creating plot
 plt.boxplot(data)
 
-# show plot
+### show plot
 plt.show()
 
-# Implementation of Multiple Box Plot in Python
+### Implementation of Multiple Box Plot in Python
 import matplotlib.pyplot as plt  
 import numpy as np  
 np.random.seed(10)  
@@ -66,42 +66,37 @@ ax = figure.add_axes([0, 0, 1, 1])
 bp = ax.boxplot(dataSet)  
 plt.show()  
 
-# Implementation of Box Plot with Outliers (visual representation of the sales distribution for each product, and the outliers highlight months with exceptionally high or low sales)
+## Implementation of Box Plot with Outliers (visual representation of the sales distribution for each product, and the outliers highlight months with exceptionally high or low sales)
 import matplotlib.pyplot as plt
 import numpy as np
 
-# Data for monthly sales
+### Data for monthly sales
 product_A_sales = [100, 110, 95, 105, 115, 90, 120, 130, 80, 125, 150, 200]
 product_B_sales = [90, 105, 100, 98, 102, 105, 110, 95, 112, 88, 115, 250]
 product_C_sales = [80, 85, 90, 78, 82, 85, 88, 92, 75, 85, 200, 95]
 
-# Introducing outliers 
+### Introducing outliers 
 product_A_sales.extend([300, 80])
 product_B_sales.extend([50, 300])
 product_C_sales.extend([70, 250])
 
-# Creating a box plot with outliers
+### Creating a box plot with outliers
 plt.boxplot([product_A_sales, product_B_sales, product_C_sales], sym='o')
 plt.title('Monthly Sales Performance by Product with Outliers')
 plt.xlabel('Products')
 plt.ylabel('Sales')
 plt.show()
 
-# Implementation of Grouped Box Plot (to compare the exam scores of students from three different classes (A, B, and C))
+## Implementation of Grouped Box Plot (to compare the exam scores of students from three different classes (A, B, and C))
 import matplotlib.pyplot as plt
 import numpy as np
 class_A_scores = [75, 80, 85, 90, 95]
 class_B_scores = [70, 75, 80, 85, 90]
 class_C_scores = [65, 70, 75, 80, 85]
 
-# Creating a grouped box plot
+## Creating a grouped box plot
 plt.boxplot([class_A_scores, class_B_scores, class_C_scores], labels=['Class A', 'Class B', 'Class C'])
 plt.title('Exam Scores by Class')
 plt.xlabel('Classes')
 plt.ylabel('Scores')
 plt.show()
-
-
-
-
-
