@@ -8,8 +8,8 @@ For example - Imagine you have the exam scores of students from three classes. A
 The data can be distributed between five key ranges, which are as follows - 
 1. Minimum: Q1-1.5*IQR
 2. 1st quartile (Q1): 25th percentile
-3. Median:50th percentile
-4. 3rd quartile(Q3):75th percentile
+3. Median: 50th percentile
+4. 3rd quartile(Q3): 75th percentile
 5. Maximum: Q3+1.5*IQR
 
 ## Purpose of Box Plots
