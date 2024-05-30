@@ -11,6 +11,7 @@ Let us consider that the model accepts the below three parameters in the form of
 1. Number of hidden layers [2, 4]
 2. Number of neurons in every layer [5, 10]
 3. Number of epochs [10, 50]
+
 If we want to try out two options for every parameter input (as specified in square brackets above), it estimates different combinations. For instance, one possible combination can be [2, 5, 10]. Finding such combinations manually would be a headache.
 Now, suppose that we had ten different parameters as input, and we would like to try out five possible values for each and every parameter. It would need manual input from the programmer's end every time we like to alter the value of a parameter, re-execute the code, and keep a record of the outputs for every combination of the parameters.
 Grid Search automates that process, as it accepts the possible value for every parameter and executes the code in order to try out each and every possible combination outputs the result for the combinations and outputs the combination having the best accuracy.
