@@ -1,7 +1,10 @@
 # Time and Space Complexity
 
 We can solve a problem using one or more algorithms. It's essential to learn how to compare the performance of different algorithms and select the best one for a specific task.
-Therefore, it is highly required to use a method to compare the solutions in order to judge which one is more optimal. <br>The method must be:
+
+Therefore, it is highly required to use a method to compare the solutions in order to judge which one is more optimal.
+
+The method must be:
 
 - Regardless of the system or its settings on which the algorithm is executing.
 - Demonstrate a direct relationship with the quantity of inputs.
@@ -35,9 +38,7 @@ $$
 
 Graphical representation of Big Oh:
 
-![BigOh Notation Graph](./images/Time-And-Space-Complexity-BigOh.png)
-
-Image Credit: www.programiz.com
+![BigOh Notation Graph](images/Time-And-Space-Complexity-BigOh.png)
 
 ### 2. Big Omega (Ω) Notation
 
@@ -51,9 +52,7 @@ $$
 
 Graphical representation of Big Omega:
 
-![BigOmega Notation Graph](./images/Time-And-Space-Complexity-BigOmega.png)
-
-Image Credit: www.programiz.com
+![BigOmega Notation Graph](images/Time-And-Space-Complexity-BigOmega.png)
 
 ### 3. Big Theta (Θ) Notation
 
@@ -67,61 +66,64 @@ $$
 
 Graphical representation of Big Theta:
 
-![Big Theta Notation Graph](./images/Time-And-Space-Complexity-BigTheta.png)
-
-
-Image Credit: www.programiz.com
-
+![Big Theta Notation Graph](images/Time-And-Space-Complexity-BigTheta.png)
 
 ## Best Case, Worst Case and Average Case
+
 ### 1. Best-Case Scenario:
+
 The best-case scenario refers to the situation where an algorithm performs optimally, achieving the lowest possible time or space complexity. It represents the most favorable conditions under which an algorithm operates.
 
 #### Characteristics:
--  Represents the minimum time or space required by an algorithm to solve a problem.
+
+- Represents the minimum time or space required by an algorithm to solve a problem.
 - Occurs when the input data is structured in such a way that the algorithm can exploit its strengths fully.
 - Often used to analyze the lower bound of an algorithm's performance.
 
 #### Example:
-Consider the `linear search algorithm` where we're searching for a `target element` in an array. The best-case scenario occurs when the target element is found `at the very beginning of the array`. In this case, the algorithm would only need to make one comparison, resulting in a time complexity of O(1).
 
+Consider the `linear search algorithm` where we're searching for a `target element` in an array. The best-case scenario occurs when the target element is found `at the very beginning of the array`. In this case, the algorithm would only need to make one comparison, resulting in a time complexity of `O(1)`.
 
 ### 2. Worst-Case Scenario:
+
 The worst-case scenario refers to the situation where an algorithm performs at its poorest, achieving the highest possible time or space complexity. It represents the most unfavorable conditions under which an algorithm operates.
 
 #### Characteristics:
+
 - Represents the maximum time or space required by an algorithm to solve a problem.
 - Occurs when the input data is structured in such a way that the algorithm encounters the most challenging conditions.
 - Often used to analyze the upper bound of an algorithm's performance.
 
 #### Example:
-Continuing with the `linear search algorithm`, the worst-case scenario occurs when the `target element` is either not present in the array or located `at the very end`. In this case, the algorithm would need to iterate through the entire array, resulting in a time complexity of O(n), where n is the size of the array.
 
+Continuing with the `linear search algorithm`, the worst-case scenario occurs when the `target element` is either not present in the array or located `at the very end`. In this case, the algorithm would need to iterate through the entire array, resulting in a time complexity of `O(n)`, where `n` is the size of the array.
 
 ### 3. Average-Case Scenario:
+
 The average-case scenario refers to the expected performance of an algorithm over all possible inputs, typically calculated as the arithmetic mean of the time or space complexity.
 
 #### Characteristics:
+
 - Represents the typical performance of an algorithm across a range of input data.
 - Takes into account the distribution of inputs and their likelihood of occurrence.
 - Provides a more realistic measure of an algorithm's performance compared to the best-case or worst-case scenarios.
 
 #### Example:
-- For the `linear search algorithm`, the average-case scenario considers the probability distribution of the target element's position within the array. If the `target element is equally likely to be found at any position in the array`, the average-case time complexity would be O(n/2), as the algorithm would, on average, need to search halfway through the array.
 
+For the `linear search algorithm`, the average-case scenario considers the probability distribution of the target element's position within the array. If the `target element is equally likely to be found at any position in the array`, the average-case time complexity would be `O(n/2)`, as the algorithm would, on average, need to search halfway through the array.
 
 ## Space Complexity
+
 The memory space that a code utilizes as it is being run is often referred to as space complexity. Additionally, space complexity depends on the machine, therefore rather than using the typical memory units like MB, GB, etc., we will express space complexity using the Big O notation. 
 
 #### Examples of Space Complexity
+
 1. `Constant Space Complexity (O(1))`: Algorithms that operate on a fixed-size array or use a constant number of variables have O(1) space complexity.
-
 2. `Linear Space Complexity (O(n))`: Algorithms that store each element of the input array in a separate variable or data structure have O(n) space complexity.
-
 3. `Quadratic Space Complexity (O(n^2))`: Algorithms that create a two-dimensional array or matrix with dimensions based on the input size have O(n^2) space complexity.
 
-
 #### Analyzing Space Complexity
+
 To analyze space complexity:
 
 - Identify the variables, data structures, and recursive calls used by the algorithm.
@@ -130,18 +132,23 @@ To analyze space complexity:
 
 ## Examples to calculate time and space complexity
 
-#### 1. Print all elements of given array :
+#### 1. Print all elements of given array
+
 Consider each line takes one unit of time to run. So, to simply iterate over an array to print all elements it will take `O(n)` time, where n is the size of array.
+
 Code:
+
 ```python
 arr = [1,2,3,4] #1
 for x in arr:   #2
     print(x)    #3
 ```
-Here, the 1st statement executes only once. So, it takes one unit of time to run. The for loop consisting of 2nd and 3rd statements executes 4 times.
+
+Here, the 1st statement executes only once. So, it takes one unit of time to run. The for loop consisting of 2nd and 3rd statements executes 4 times.  
 Also, as the code dosen't take any additional space except the input arr its Space Complexity is O(1) constant.
 
 #### 2. Linear Search
+
 Linear search is a simple algorithm for finding an element in an array by sequentially checking each element until a match is found or the end of the array is reached. Here's an example of calculating the time and space complexity of linear search:
 
 ```python
@@ -156,17 +163,20 @@ arr = [1, 3, 5, 7, 9]
 target = 5
 print(linear_search(arr, target))
 ```
-`Time Complexity Analysis:`
-The for loop iterates through the entire array, which takes O(n) time in the worst case, where n is the size of the array.
-Inside the loop, each operation takes constant time (O(1)).
+
+**Time Complexity Analysis**
+
+The for loop iterates through the entire array, which takes O(n) time in the worst case, where n is the size of the array.  
+Inside the loop, each operation takes constant time (O(1)).  
 Therefore, the time complexity of linear search is `O(n)`.
 
+**Space Complexity Analysis**
 
-`Space Complexity Analysis:`
 The space complexity of linear search is `O(1)` since it only uses a constant amount of additional space for variables regardless of the input size.
 
 
 #### 3. Binary Search
+
 Binary search is an efficient algorithm for finding an element in a sorted array by repeatedly dividing the search interval in half. Here's an example of calculating the time and space complexity of binary search:
 
 ```python
@@ -190,18 +200,21 @@ def binary_search(arr, target):
 arr = [1, 3, 5, 7, 9]
 target = 5
 print(binary_search(arr, target))
-
 ```
-`Time Complexity Analysis:`
-The initialization of left and right takes constant time (O(1)).
-The while loop runs for log(n) iterations in the worst case, where n is the size of the array.
-Inside the loop, each operation takes constant time (O(1)).
+
+**Time Complexity Analysis**
+
+The initialization of left and right takes constant time (O(1)).  
+The while loop runs for log(n) iterations in the worst case, where n is the size of the array.  
+Inside the loop, each operation takes constant time (O(1)).  
 Therefore, the time complexity of binary search is `O(log n)`.
 
-`Space Complexity Analysis:`
+**Space Complexity Analysis**
+
 The space complexity of binary search is `O(1)` since it only uses a constant amount of additional space for variables regardless of the input size.
 
 #### 4. Fibbonaci Sequence
+
 Let's consider an example of a function that generates Fibonacci numbers up to a given index and stores them in a list. In this case, the space complexity will not be constant because the size of the list grows with the Fibonacci sequence.
 
 ```python
@@ -219,9 +232,12 @@ n = 10
 fib_sequence = fibonacci_sequence(n)
 print(fib_sequence)
 ```
-`Time Complexity Analysis:`
+
+**Time Complexity Analysis**
+
 The while loop iterates until the length of the Fibonacci sequence list reaches n, so it takes `O(n)` iterations in the `worst case`.Inside the loop, each operation takes constant time (O(1)).
 
-`Space Complexity Analysis:`
-The space complexity of this function is not constant because it creates and stores a list of Fibonacci numbers.
+**Space Complexity Analysis**
+
+The space complexity of this function is not constant because it creates and stores a list of Fibonacci numbers.  
 As n grows, the size of the list also grows, so the space complexity is O(n), where n is the index of the last Fibonacci number generated.
