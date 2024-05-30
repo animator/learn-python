@@ -1,10 +1,6 @@
-# Pandas DateTime
+# Working with Date & Time in Pandas
 
-Pandas is a robust Python library that is available as free source. The Pandas library is used to manipulate and analyse data. Pandas are made up of data structures and functions that allow for efficient data processing.
-
-While working with data, it is common to come across time series data. Pandas is a very handy tool for dealing with time series data. Pandas is a strong Python data analysis toolkit that provides a wide range of date and time data processing options. Many data science jobs require working with time series data, time zones, and date arithmetic, and pandas simplifies these processes.
-
-Features of Pandas `Date_Time`:
+While working with data, it is common to come across data containing date and time. Pandas is a very handy tool for dealing with such data and provides a wide range of date and time data processing options.
 
 - **Parsing dates and times**: Pandas provides a number of functions for parsing dates and times from strings, including `to_datetime()` and `parse_dates()`. These functions can handle a variety of date and time formats, Unix timestamps, and human-readable formats.
 
@@ -12,13 +8,9 @@ Features of Pandas `Date_Time`:
 
 - **Visualizing dates and times**: Pandas provides a number of functions for visualizing dates and times, including `plot()`, `hist()`, and `bar()`. These functions can be used to create line charts, histograms, and bar charts of date and time data.
 
+### `Timestamp` function
 
-
-### Installation of libraries
-
-`pip install pandas`
-
-- **Note**: There is no need to install a seperate library for date_time operations, pandas module itself has built-in functions.
+The timestamp function in Pandas is used to convert a datetime object to a Unix timestamp. A Unix timestamp is a numerical representation of datetime.
 
 Example for retrieving day, month and year from given date:
 
@@ -35,14 +27,12 @@ print('Day is: ', d)
 ```
 
 Output:
+
 ```python
 Year is:  2024
 Month is:  5
 Day is:  5
 ```
-
-- **Note**: The timestamp function in Pandas is used to convert a datetime object to a Unix timestamp. A Unix timestamp is a numerical representation of datetime.
-
 
 Example for extracting time related data from given date:
 
@@ -57,12 +47,15 @@ print('Quarter is: ', ts.quarter)
 ```
 
 Output:
+
 ```python
 Hour is:  12
 Minute is:  0
 Weekday is:  1
 Quarter is:  4
 ```
+
+### `Timestamp.now()`
 
 Example for getting current date and time:
 
@@ -78,6 +71,8 @@ Output:
 Current date and time is:  2024-05-25 11:48:25.593213
 ```
 
+### `date_range` function
+
 Example for generating dates' for next five days:
 
 ```python
@@ -89,6 +84,7 @@ for i in ts:
 ```
 
 Output:
+
 ```python
 2024-05-25
 2024-05-26
@@ -116,11 +112,11 @@ Output:
 2024-05-25
 ```
 
-### Pandas `DateTime` is Efficient than Built-in `DateTime` library in various aspects like:
+### Built-in vs pandas date & time operations
 
-- **In pandas, you may add a time delta to a full column of dates in a single action, but Python's datetime requires a loop.**
+In `pandas`, you may add a time delta to a full column of dates in a single action, but Python's datetime requires a loop.
 
-Example using Pandas DateTime:
+Example in Pandas:
 
 ```python
 import pandas as pd
@@ -146,7 +142,7 @@ Output:
 99999 2023-03-12 10:39:00
 ```
 
-Example using Built-In datetime library:
+Example using Built-in datetime library:
 
 ```python
 from datetime import datetime, timedelta
@@ -155,12 +151,8 @@ dates = [datetime(2023, 1, 1) + timedelta(minutes=i) for i in range(100000)]
 dates = [date + timedelta(days=1) for date in dates]
 ```
 
-Output:
-```The output is very large to display and taking more time to display```
+Why use pandas functions?
 
-
-- **Pandas employs NumPy's datetime64 dtype, which takes up a set amount of bytes (usually 8 bytes per date), to store datetime data more compactly and efficiently.**
-- **Each datetime object in Python takes up extra memory since it contains not only the date and time but also the additional metadata and overhead associated with Python objects.**
-
-- **Pandas Offers a wide range of convenient functions and methods for date manipulation, extraction, and conversion, such as `pd.to_datetime()`, `date_range()`, `timedelta_range()`, and more.**
-- **datetime library requires manual implementation for many of these operations, leading to longer and less efficient code.**
+- Pandas employs NumPy's datetime64 dtype, which takes up a set amount of bytes (usually 8 bytes per date), to store datetime data more compactly and efficiently.
+- Each datetime object in Python takes up extra memory since it contains not only the date and time but also the additional metadata and overhead associated with Python objects.
+- Pandas Offers a wide range of convenient functions and methods for date manipulation, extraction, and conversion, such as `pd.to_datetime()`, `date_range()`, `timedelta_range()`, and more. datetime library requires manual implementation for many of these operations, leading to longer and less efficient code.
