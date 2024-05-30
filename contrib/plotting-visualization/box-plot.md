@@ -67,7 +67,7 @@ ax = figure.add_axes([0, 0, 1, 1])
 bp = ax.boxplot(dataSet)  
 plt.show()  
 
-## Implementation of Box Plot with Outliers (visual representation of the sales distribution for each product, and the outliers highlight months with exceptionally high or low sales)
+### Implementation of Box Plot with Outliers (visual representation of the sales distribution for each product, and the outliers highlight months with exceptionally high or low sales)
 import matplotlib.pyplot as plt
 import numpy as np
 
@@ -88,7 +88,7 @@ plt.xlabel('Products')
 plt.ylabel('Sales')
 plt.show()
 
-## Implementation of Grouped Box Plot (to compare the exam scores of students from three different classes (A, B, and C))
+### Implementation of Grouped Box Plot (to compare the exam scores of students from three different classes (A, B, and C))
 import matplotlib.pyplot as plt
 import numpy as np
 class_A_scores = [75, 80, 85, 90, 95]
