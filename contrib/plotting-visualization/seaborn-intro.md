@@ -25,3 +25,17 @@ conda install seaborn
 ```bash
 conda install seaborn -c conda-forge
 ```
+
+## Dependencies
+### Supported Python versions
+- Python 3.8+
+
+### Mandatory Dependencies
+ - [numpy](https://numpy.org/)
+ - [pandas](https://pandas.pydata.org/)
+ - [matplotlib](https://matplotlib.org/)
+
+### Optional Dependencies
+ - [statsmodels](https://www.statsmodels.org/stable/index.html) for advanced regression plots
+ - [scipy](https://scipy.org/) for clustering matrices and some advanced options
+ - [fastcluster](https://pypi.org/project/fastcluster/) for faster clustering of large matrices
