@@ -31,7 +31,7 @@ plt.show()
 ```
 When executed, this will show the following line plot:
 
-![Basic line Chart](contrib/plotting-visualization/images/simple_line.png)
+![Basic line Chart](images/simple_line.png)
 
 
 ## Curved line
@@ -49,7 +49,7 @@ plt.show()
 ```
 When executed, this will show the following Curved line plot:
 
-![Curved line](contrib/plotting-visualization/images/line-curve.png)
+![Curved line](images/line-curve.png)
 
 
 ## Line with Labels
@@ -74,7 +74,7 @@ plt.show()
 ```
 When executed, this will show the following line with labels plot:
 
-![line with labels](contrib/plotting-visualization/images/line-labels.png)
+![line with labels](images/line-labels.png)
 
 ## Multiple lines
 
@@ -100,7 +100,7 @@ plt.show()
 ```
 When executed, this will show the following Multiple lines plot:
 
-![multiple lines](contrib/plotting-visualization/images/two-lines.png)
+![multiple lines](images/two-lines.png)
 
 
 ## Dotted line
@@ -126,7 +126,7 @@ plt.show()
 
 When executed, this will show the following Dotted line plot:
 
-![dotted lines](contrib/plotting-visualization/images/dot-line.png)
+![dotted lines](images/dot-line.png)
 
 ## Line ticks
 
@@ -162,7 +162,7 @@ plt.show()
 
 When executed, this will show the following line ticks plot:
 
-![line ticks](contrib/plotting-visualization/images/line-ticks.png)
+![line ticks](images/line-ticks.png)
 
 ## Line with asymptote
 
@@ -218,7 +218,7 @@ plt.show()
 
 When executed, this will show the following Line with asymptote plot:
 
-![Line with asymptote](contrib/plotting-visualization/images/line-asymptote.png)
+![Line with asymptote](images/line-asymptote.png)
 
 ## Line with text scale
 
@@ -263,6 +263,6 @@ plt.show()
 ```
 When executed, this will show the following Line with text scale plot:
 
-![Line with text scale](contrib/plotting-visualization/images/line-with-text-scale.png)
+![Line with text scale](images/line-with-text-scale.png)
 
 
