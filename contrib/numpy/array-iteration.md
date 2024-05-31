@@ -7,7 +7,7 @@ Understanding these methods is crucial for performing operations on array elemen
 
 - Iterating using basic `for` loop.
   
-**Single-dimensional array iteration**:
+### Single-dimensional array
 
 Iterating over a single-dimensional array is straightforward using a basic `for` loop
 
@@ -18,11 +18,18 @@ arr = np.array([1, 2, 3, 4, 5])
 for i in arr:
     print(i)
 ```
-**Output** :
+
+#### Output
+
 ```python
-[ 1 2 3 4 5 ]
+1
+2
+3
+4
+5
 ```
-**Multi-dimensional array**:
+
+### Multi-dimensional array
 
 Iterating over multi-dimensional arrays, each iteration returns a sub-array along the first axis.
 
@@ -32,14 +39,16 @@ marr = np.array([[1, 2, 3], [4, 5, 6], [7, 8, 9]])
 for arr in marr:
     print(arr)
 ```
-**Output** :
+
+#### Output
+
 ```python
 [1 2 3]
 [4 5 6]
 [7 8 9]
 ```
 
-## 2. Iterating with nditer
+## 2. Iterating with `nditer`
 
 - `nditer` is a powerful iterator provided by NumPy for iterating over multi-dimensional arrays.
 - In each interation it gives each element.
@@ -51,7 +60,9 @@ arr = np.array([[1, 2, 3], [4, 5, 6]])
 for i in np.nditer(arr):
     print(i)
 ```
-**Output** :
+
+#### Output
+
 ```python
 1
 2
@@ -61,7 +72,7 @@ for i in np.nditer(arr):
 6
 ```
 
-## 3. Iterating with ndenumerate
+## 3. Iterating with `ndenumerate`
 
 - `ndenumerate` allows you to iterate with both the index and the value of each element.
 - It gives index and value as output in each iteration
@@ -74,7 +85,7 @@ for index,value in np.ndenumerate(arr):
     print(index,value)
 ```
 
-**Output** : 
+#### Output
 
 ```python
 (0, 0) 1
@@ -86,7 +97,6 @@ for index,value in np.ndenumerate(arr):
 ## 4. Iterating with flat
 
 - The `flat` attribute returns a 1-D iterator over the array.
-- 
 
 ```python
 import numpy as np
@@ -96,7 +106,7 @@ for element in arr.flat:
     print(element)
 ```
 
-**Output** :
+#### Output
 
 ```python
 1
@@ -105,5 +115,6 @@ for element in arr.flat:
 4
 ```
 
-Understanding the various ways to iterate over NumPy arrays can significantly enhance your data processing efficiency. 
+Understanding the various ways to iterate over NumPy arrays can significantly enhance your data processing efficiency.
+
 Whether you are working with single-dimensional or multi-dimensional arrays, NumPy provides versatile tools to iterate and manipulate array elements effectively.
