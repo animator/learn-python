@@ -1,3 +1,4 @@
 # List of sections
 
-- [Installing Matplotlib](matplotlib_installation.md)
+- [Installing Matplotlib](matplotlib-installation.md)
+- [Bar Plots in Matplotlib](matplotlib-bar-plots.md)

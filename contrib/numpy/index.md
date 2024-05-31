@@ -8,4 +8,5 @@
 - [Loading Arrays from Files](loading_arrays_from_files.md)
 - [Saving Numpy Arrays into FIles](saving_numpy_arrays_to_files.md)
 - [Sorting NumPy Arrays](sorting-array.md)
-- [NumPy Array Iteration](numpy_array_iteration.md)
+- [NumPy Array Iteration](array-iteration.md)
+- [Concatenation of Arrays](concatenation-of-arrays.md)
