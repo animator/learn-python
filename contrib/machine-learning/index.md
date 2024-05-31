@@ -12,3 +12,4 @@
 - [Types of optimizers](Types_of_optimizers.md)
 - [PyTorch Fundamentals](PyTorch_Fundamentals.md)
 - [Logistic Regression](logistic-regression.md)
+- [Running tensors on GPUs](Use_GPU_In_PyTorch.md)
