@@ -58,11 +58,143 @@ Text is converted to numerical representations called tokens, and each token is 
 At each layer, each token is then contextualized within the scope of the context window with other tokens via a parallel multi-head attention mechanism 
 allowing the signal for key tokens to be amplified and less important tokens to be diminished.
 
-### HuggingFace
+### Tensorflow
+Tensorflow provides the transformer encoder and decoder block that can be implemented by the specification of the user. Although, the transformer is not provided as a standalone to be imported and executed, the user has to create the model first. They also have a tutorial on how to implement the transformer from scratch for machine translation and can be found [here](https://www.tensorflow.org/text/tutorials/transformer).
 
-### Tensorflow and Keras
+More information on [encoder](https://www.tensorflow.org/api_docs/python/tfm/nlp/layers/TransformerEncoderBlock) and [decoder](https://www.tensorflow.org/api_docs/python/tfm/nlp/layers/TransformerDecoderBlock) block mentioned in the code.
+
+Imports:
+```
+import tensorflow as tf
+import tensorflow_models as tfm
+```
+
+Adding word embeddings and positional encoding:
+```
+class PositionalEmbedding(tf.keras.layers.Layer):
+    def __init__(self, vocab_size, d_model):
+        super().__init__()
+        self.d_model = d_model
+        self.embedding = tf.keras.layers.Embedding(vocab_size, d_model, mask_zero=True) 
+        self.pos_encoding = tfm.nlp.layers.RelativePositionEmbedding(hidden_size=d_model)
+  
+    def compute_mask(self, *args, **kwargs):
+        return self.embedding.compute_mask(*args, **kwargs)
+  
+    def call(self, x):
+        length = tf.shape(x)[1]
+        x = self.embedding(x)
+        x = x + self.pos_encoding[tf.newaxis, :length, :]
+        return x
+```
+
+Creating the encoder for the transformer:
+```
+class Encoder(tf.keras.layers.Layer):
+    def __init__(self, num_layers, d_model, num_heads,
+                 dff, vocab_size, dropout_rate=0.1):
+        super().__init__()
+    
+        self.d_model = d_model
+        self.num_layers = num_layers
+    
+        self.pos_embedding = PositionalEmbedding(
+            vocab_size=vocab_size, d_model=d_model)
+    
+        self.enc_layers = [
+            tfm.nlp.layers.TransformerEncoderBlock(output_last_dim=d_model,
+                         num_attention_heads=num_heads,
+                         inner_dim=dff,
+                         inner_activation="relu",
+                         inner_dropout=dropout_rate)
+            for _ in range(num_layers)]
+        self.dropout = tf.keras.layers.Dropout(dropout_rate)
+
+    def call(self, x):
+        x = self.pos_embedding(x, length=2048)
+        x = self.dropout(x)
+    
+        for i in range(self.num_layers):
+          x = self.enc_layers[i](x)
+    
+        return x
+```
+
+Creating the decoder for the transformer:
+```
+class Decoder(tf.keras.layers.Layer):
+    def __init__(self, num_layers, d_model, num_heads, dff, vocab_size,
+                 dropout_rate=0.1):
+        super(Decoder, self).__init__()
+    
+        self.d_model = d_model
+        self.num_layers = num_layers
+    
+        self.pos_embedding = PositionalEmbedding(vocab_size=vocab_size,
+                                                 d_model=d_model)
+        self.dropout = tf.keras.layers.Dropout(dropout_rate)
+        self.dec_layers = [
+            tfm.nlp.layers.TransformerDecoderBlock(num_attention_heads=num_heads,
+                         intermediate_size=dff,
+                         intermediate_activation="relu",
+                         dropout_rate=dropout_rate)
+            for _ in range(num_layers)]
+  
+    def call(self, x, context):
+        x = self.pos_embedding(x)
+        x = self.dropout(x)
+    
+        for i in range(self.num_layers):
+            x  = self.dec_layers[i](x, context)
+  
+        return x
+```
+
+Combining the encoder and decoder to create the transformer:
+```
+class Transformer(tf.keras.Model):
+    def __init__(self, num_layers, d_model, num_heads, dff,
+                 input_vocab_size, target_vocab_size, dropout_rate=0.1):
+        super().__init__()
+        self.encoder = Encoder(num_layers=num_layers, d_model=d_model,
+                               num_heads=num_heads, dff=dff,
+                               vocab_size=input_vocab_size,
+                               dropout_rate=dropout_rate)
+      
+        self.decoder = Decoder(num_layers=num_layers, d_model=d_model,
+                               num_heads=num_heads, dff=dff,
+                               vocab_size=target_vocab_size,
+                               dropout_rate=dropout_rate)
+      
+        self.final_layer = tf.keras.layers.Dense(target_vocab_size)
+
+    def call(self, inputs):
+        context, x  = inputs
+    
+        context = self.encoder(context)
+        x = self.decoder(x, context)
+        logits = self.final_layer(x)
+    
+        return logits
+```
+
+Model initialization that be used for training and inference:
+```
+transformer = Transformer(
+      num_layers=num_layers,
+      d_model=d_model,
+      num_heads=num_heads,
+      dff=dff,
+      input_vocab_size=tokenizers.pt.get_vocab_size().numpy(),
+      target_vocab_size=tokenizers.en.get_vocab_size().numpy(),
+      dropout_rate=dropout_rate
+)
+```
 
 ### PyTorch
+
+
+### HuggingFace
 
 ## Application
 The transformer has had great success in natural language processing (NLP). Many large language models such as GPT-2, GPT-3, GPT-4, Claude, BERT, XLNet, RoBERTa and ChatGPT demonstrate the ability of transformers to perform a wide variety of such NLP-related tasks, and have the potential to find real-world applications.
