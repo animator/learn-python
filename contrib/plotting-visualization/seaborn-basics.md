@@ -20,7 +20,7 @@ sns.relplot(
 ```
 Below is the output for the above code snippet:
 
-![Seaborn intro image](images/seaborn-basics.png)
+![Seaborn intro image](images/seaborn-basics1.png)
 
 ```Python
 # Load an example dataset
