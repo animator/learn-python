@@ -2,7 +2,7 @@
 
 When a function calls itself to solve smaller instances of the same problem until a specified condition is fulfilled is called recursion. It is used for tasks that can be divided into smaller sub-tasks.
 
-# How Recursion Works
+## How Recursion Works
 
 To solve a problem using recursion we must define:
 - Base condition :- The condition under which recursion ends.
@@ -17,7 +17,7 @@ When a recursive function is called, the following sequence of events occurs:
 - Stack Management: Each recursive call is placed on the call stack. The stack keeps track of each function call, its argument, and the point to return to once the call completes.
 - Unwinding the Stack: When the base case is eventually met, the function returns a value, and the stack starts unwinding, returning values to previous function calls until the initial call is resolved.
 
-# Python Code: Factorial using Recursion
+## Python Code: Factorial using Recursion
 
 ```python
 def fact(n):
@@ -30,7 +30,7 @@ if __name__ == "__main__":
     print("Factorial of", n, "is", fact(n))
 ```
 
-## Explanation
+### Explanation
 
 This Python script calculates the factorial of a given number using recursion.
 
@@ -43,8 +43,7 @@ This Python script calculates the factorial of a given number using recursion.
   - The main section prompts the user to enter a positive number.
   - It then calls the `fact` function with the input number and prints the result.
 
-### Example : Let n = 4
-
+#### Example : Let n = 4
 
 The recursion unfolds as follows:
 1. When `fact(4)` is called, it computes `4 * fact(3)`.
@@ -55,48 +54,26 @@ The recursion unfolds as follows:
 6. `fact(4)` receives the value from `fact(3)`, resulting in `4 * 6` i.e. `24`.
 7. Finally, `fact(4)` returns 24 to the main function.
 
-
 #### So, the result is 24.
 
-
-
-# What is Stack Overflow in Recursion
+#### What is Stack Overflow in Recursion?
 
 Stack overflow is an error that occurs when the call stack memory limit is exceeded. During execution of recursion calls they are simultaneously stored in a recursion stack waiting for the recursive function to be completed. Without a base case, the function would call itself indefinitely, leading to a stack overflow.
 
-# Example
-
-- Factorial of a Number
-
-   The factorial of i natural numbers is nth integer multiplied by factorial of (i-1) numbers. The base case is if i=0 we return 1 as factorial of 0 is 1.
-   
-```python
-def factorial(i):
-  #base case
-  if i==0 :
-    return 1
-  #recursive case
-  else :
-    return i * factorial(i-1)
-i = 6
-print("Factorial of i is :", factorial(i))  # Output- Factorial of i is :720 
-```
-# What is Backtracking
+## What is Backtracking
 
 Backtracking is a recursive algorithmic technique used to solve problems by exploring all possible solutions and discarding those that do not meet the problem's constraints. It is particularly useful for problems involving combinations, permutations, and finding paths in a grid.
 
-# How Backtracking Works
+## How Backtracking Works
 
 - Incremental Solution Building: Solutions are built one step at a time.
 - Feasibility Check: At each step, a check is made to see if the current partial solution is valid.
 - Backtracking: If a partial solution is found to be invalid, the algorithm backtracks by removing the last added part of the solution and trying the next possibility.
 - Exploration of All Possibilities: The process continues recursively, exploring all possible paths, until a solution is found or all possibilities are exhausted.
 
-# Example
+## Example: Word Search
 
-- Word Search
-
-   Given a 2D grid of characters and a word, determine if the word exists in the grid. The word can be constructed from letters of sequentially adjacent cells, where "adjacent" cells are horizontally or vertically neighboring. The same letter cell may not be used more than once.
+Given a 2D grid of characters and a word, determine if the word exists in the grid. The word can be constructed from letters of sequentially adjacent cells, where "adjacent" cells are horizontally or vertically neighboring. The same letter cell may not be used more than once.
 
 Algorithm for Solving the Word Search Problem with Backtracking:
 - Start at each cell: Attempt to find the word starting from each cell.
