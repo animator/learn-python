@@ -56,7 +56,9 @@ The sine and cosine functions of different frequencies:
 ### Theory
 Text is converted to numerical representations called tokens, and each token is converted into a vector via looking up from a word embedding table. 
 At each layer, each token is then contextualized within the scope of the context window with other tokens via a parallel multi-head attention mechanism 
-allowing the signal for key tokens to be amplified and less important tokens to be diminished.
+allowing the signal for key tokens to be amplified and less important tokens to be diminished. 
+
+The transformer uses an encoder-decoder architecture. The encoder extracts features from an input sentence, and the decoder uses the features to produce an output sentence. Some architectures use full encoders and decoders, autoregressive encoders and decoders, or combination of both. This depends on the usage and context of the input.
 
 ### Tensorflow
 Tensorflow provides the transformer encoder and decoder block that can be implemented by the specification of the user. Although, the transformer is not provided as a standalone to be imported and executed, the user has to create the model first. They also have a tutorial on how to implement the transformer from scratch for machine translation and can be found [here](https://www.tensorflow.org/text/tutorials/transformer).
@@ -192,9 +194,29 @@ transformer = Transformer(
 ```
 
 ### PyTorch
+Unlike Tensorflow, PyTorch provides the full implementation of the transformer model that can be executed on the go. More information can be found [here](https://pytorch.org/docs/stable/_modules/torch/nn/modules/transformer.html#Transformer). A full implementation of the model can be found [here](https://github.com/pytorch/examples/tree/master/word_language_model).
 
+Imports:
+```python
+import torch
+import torch.nn as nn
+```
+
+Initializing the model:
+```python
+transformer = nn.Transformer(nhead=16, num_encoder_layers=8)
+```
+
+Sample Implementation:
+```python
+src = torch.rand((10, 32, 512))
+tgt = torch.rand((20, 32, 512))
+
+output = transformer(src, tgt)
+```
 
 ### HuggingFace
+
 
 ## Application
 The transformer has had great success in natural language processing (NLP). Many large language models such as GPT-2, GPT-3, GPT-4, Claude, BERT, XLNet, RoBERTa and ChatGPT demonstrate the ability of transformers to perform a wide variety of such NLP-related tasks, and have the potential to find real-world applications.
