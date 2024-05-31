@@ -2,4 +2,4 @@
 
 - [Installing Matplotlib](matplotlib-installation.md)
 - [Bar Plots in Matplotlib](matplotlib-bar-plots.md)
-- [Pie Charts in Matplotlib](matplotlib-pie-charts.md)
+- [Pie Charts in Matplotlib](pie-chart.md)
