@@ -11,3 +11,4 @@
 - [Types of optimizers](Types_of_optimizers.md)
 - [Logistic Regression](logistic-regression.md)
 - [Apriori Algorithm](Apriori-Algorithm.md)
+- [Grid Search](grid-search.md)
