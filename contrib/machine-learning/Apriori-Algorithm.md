@@ -13,9 +13,10 @@ Suppose there are the two transactions: A= {1,2,3,4,5}, and B= {2,3,7}, in these
 ## Apriori Algorithm has three parts
 1. Support: It is one of the two basic parameters of association rules. It is the ratio of the number of transactions containing both x and
 y in All sample of dataset D to all transactions. If we have two data x and y that need to be analyzed for correlation, then the
-corresponding support degree is:
+corresponding support degree is: <br>
 
-**Support**(x, y) = `P(xy) = num(xy) / num(All Samples)`
+**Support**(x, y) = P(xy) = num(xy) / num(All Samples)
+
 
 $$
 Support(X \Rightarrow Y) = P(X \cup Y) = \frac{\text{count}(X \cup Y)}{|D|}
