@@ -152,3 +152,76 @@ This is easy to understand algorithm. Among association rule learning algorithms
 The main disadvantage is the slow process, to create candidates, the algorithm must continually search the database; this operation consumes a significant amount of time and memory, particularly if the pattern is very lengthy.
 
 ## Python Implementation of Apriori Algorithm <br>
+### 1. Importing the libraries <br>
+Before importing the libraries, we will use the below line of code to install the `apyori` package to use further, as Spyder IDE does not contain it: <br>
+```python
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+from apyori import apriori
+```
+
+### 2. Read data and Display <br>
+```python
+store_data = pd.read_csv("store_data.csv", header=None)
+display(store_data.head())
+print(store_data.shape)
+```
+![image](https://github.com/Chandana-756/learn-python/assets/94692989/847623d4-c6a4-4459-adf6-171eb44eae9b)
+
+### 3. Preprocessing on Data <br>
+Here we need a data in form of list for Apriori Algorithm. <br>
+```python
+records = []
+for i in range(1, 7501):
+    records.append([str(store_data.values[i, j]) for j in range(0, 20)])
+```
+
+### 4. Training the Apriori Model on the dataset <br>
+```python
+association_rules = apriori(records, min_support=0.0045, min_confidence=0.2, min_lift=3, min_length=2)
+association_results = list(association_rules)
+```
+In the above code, the first line ,apriori function returns the output as the rules. It takes the following parameters:
+
+transactions: A list of transactions.<br>
+min_support= To set the minimum support float value. Here we have used 0.003 that is calculated by taking 3 transactions per customer each week to the total number of transactions.<br>
+min_confidence: To set the minimum confidence value. Here we have taken 0.2. It can be changed as per the business problem.<br>
+min_lift= To set the minimum lift value.<br>
+min_length= It takes the minimum number of products for the association.<br>
+max_length = It takes the maximum number of products for the association.<br>
+
+### 5. How many relation derived <br>
+```python
+print("There are {} Relation derived.".format(len(association_results)))
+```
+![image](https://github.com/Chandana-756/learn-python/assets/94692989/f03bf3e8-4951-409e-9959-965969658815)
+
+### 6. Association Rules Derived
+```python
+for i in range(0, len(association_results)):
+    print(association_results[i][0])
+```
+![image](https://github.com/Chandana-756/learn-python/assets/94692989/79937e13-ac78-468f-9e11-54cd65ec0bed)
+
+### 7. Rules Generated
+```python
+for item in association_results:
+    # first index of the inner list
+    # Contains base item and add item
+    pair = item[0]
+    items = [x for x in pair]
+    print("Rule: " + items[0] + " -> " + items[1])
+
+    # second index of the inner list
+    print("Support: " + str(item[1]))
+
+    # third index of the list located at 0th
+    # of the third index of the inner list
+
+    print("Confidence: " + str(item[2][0][2]))
+    print("Lift: " + str(item[2][0][3]))
+    print("=====================================")
+```
+![image](https://github.com/Chandana-756/learn-python/assets/94692989/544da68e-e9ab-4d4f-835d-4318880bad41)
+
