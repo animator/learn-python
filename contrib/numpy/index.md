@@ -3,7 +3,7 @@
 - [Installing NumPy](installing-numpy.md)
 - [Introduction](introduction.md)
 - [NumPy Data Types](datatypes.md)
-- [Numpy Array Shape and Reshape](array_reshape.md)
+- [Numpy Array Shape and Reshape](reshape-array.md)
 - [Basic Mathematics](basic_math.md)
 - [Operations on Arrays in NumPy](operations-on-arrays.md)
 - [Loading Arrays from Files](loading_arrays_from_files.md)
