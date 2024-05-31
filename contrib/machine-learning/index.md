@@ -10,3 +10,4 @@
 - [Introduction of Scikit Learn](Scikit_Learn_Intro.md)
 - [PyTorch.md](pytorch.md)
 - [Types of optimizers](Types_of_optimizers.md)
+- [PyTorch Fundamentals](PyTorch_Fundamentals.md)
