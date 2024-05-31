@@ -64,13 +64,13 @@ Tensorflow provides the transformer encoder and decoder block that can be implem
 More information on [encoder](https://www.tensorflow.org/api_docs/python/tfm/nlp/layers/TransformerEncoderBlock) and [decoder](https://www.tensorflow.org/api_docs/python/tfm/nlp/layers/TransformerDecoderBlock) block mentioned in the code.
 
 Imports:
-```
+```python
 import tensorflow as tf
 import tensorflow_models as tfm
 ```
 
 Adding word embeddings and positional encoding:
-```
+```python
 class PositionalEmbedding(tf.keras.layers.Layer):
     def __init__(self, vocab_size, d_model):
         super().__init__()
@@ -89,7 +89,7 @@ class PositionalEmbedding(tf.keras.layers.Layer):
 ```
 
 Creating the encoder for the transformer:
-```
+```python
 class Encoder(tf.keras.layers.Layer):
     def __init__(self, num_layers, d_model, num_heads,
                  dff, vocab_size, dropout_rate=0.1):
@@ -121,7 +121,7 @@ class Encoder(tf.keras.layers.Layer):
 ```
 
 Creating the decoder for the transformer:
-```
+```python
 class Decoder(tf.keras.layers.Layer):
     def __init__(self, num_layers, d_model, num_heads, dff, vocab_size,
                  dropout_rate=0.1):
@@ -151,7 +151,7 @@ class Decoder(tf.keras.layers.Layer):
 ```
 
 Combining the encoder and decoder to create the transformer:
-```
+```python
 class Transformer(tf.keras.Model):
     def __init__(self, num_layers, d_model, num_heads, dff,
                  input_vocab_size, target_vocab_size, dropout_rate=0.1):
@@ -179,7 +179,7 @@ class Transformer(tf.keras.Model):
 ```
 
 Model initialization that be used for training and inference:
-```
+```python
 transformer = Transformer(
       num_layers=num_layers,
       d_model=d_model,
