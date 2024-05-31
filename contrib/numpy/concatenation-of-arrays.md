@@ -20,31 +20,39 @@ Args:
 
 ### Example
 
+#### Concatenate along axis 0
+
 ```python
 import numpy as np
 #creating 2 arrays
 arr1 = np.array([1 2 3],[7 8 9])
 arr2 = np.array([4 5 6],[10 11 12])
 
-#concatenate along axis 0
 result_1 = np.concatenate((arr1, arr2), axis=0)
-print("Concatenation along axis 0:")
 print(result_1)
-""" Output- Concatenation along axis 0:
+```
+
+#### Output
+```
 [[ 1  2  3]
  [ 7  8  9]
  [ 4  5  6]
- [10 11 12]] """
-
-#concatenate along axis 1
-result_2 = np.concatenate((arr1, arr2), axis=1)
-print("Concatenation along axis 1:")
-print(result_2)
-""" Output- Concatenation along axis 1:
-[[ 1 2 3 4 5 6 ]
- [ 7 8 9 10 11 12]] """
-
+ [10 11 12]]
 ```
+
+#### Concatenate along axis 1
+
+```python
+result_2 = np.concatenate((arr1, arr2), axis=1)
+print(result_2)
+```
+
+#### Output
+```
+[[ 1 2 3 4 5 6 ]
+ [ 7 8 9 10 11 12]]
+```
+
 ## np.vstack
 
 Vertical stacking of arrays (row-wise).
@@ -59,6 +67,7 @@ Args:
 - arrays: Sequence of arrays to stack.
 
 ### Example
+
 ```python
 import numpy as np
 #create arrays
@@ -67,12 +76,16 @@ arr2 = np.array([4 5 6],[10 11 12])
 
 result = np.vstack((arr1, arr2))
 print(result)
-"""output-
+```
+
+#### Output
+```
 [[ 1  2  3]
  [ 7  8  9]
  [ 4  5  6]
- [10 11 12]] """
+ [10 11 12]]
 ```
+
 ## 3. np.hstack
 
 Stacks arrays horizontally (column-wise).
@@ -96,9 +109,12 @@ arr2 = np.array([4 5 6],[10 11 12])
 
 result = np.hstack((arr1, arr2))
 print(result)
-"""output-
+```
+
+#### Output
+```
 [[ 1  2  3] [ 4  5  6]
- [ 7  8  9] [10 11 12]]  """
+ [ 7  8  9] [10 11 12]]
 ```
 
 ## np.dstack 
@@ -123,14 +139,17 @@ arr2 = np.array([4 5 6],[10 11 12])
 
 result = np.dstack((arr1, arr2))
 print(result)
-""" output-
+```
+
+#### Output
+```
 [[[ 1  4]
   [ 2  5]
   [ 3  6]]
 
  [[ 7 10]
   [ 8 11]
-  [ 9 12]]] """
+  [ 9 12]]]
 ```
 
 ## np.stack
@@ -154,12 +173,15 @@ arr2 = np.array([4 5 6],[10 11 12])
 
 result = np.stack((arr1, arr2), axis=0)
 print(result)
-""" output-
+```
+
+#### Output
+```
 [[[ 1  2  3]
   [ 7  8  9]]
 
  [[ 4  5  6]
-  [10 11 12]]] """
+  [10 11 12]]]
 ```
 
 # Concatenation with Mixed Dimensions
@@ -168,28 +190,34 @@ When concatenating arrays with different shapes, it's often necessary to reshape
 
 ## Example
 
+#### Concatenate along axis 0
+
 ```python
 arr1 = np.array([[1, 2, 3], [4, 5, 6]])
 arr2 = np.array([7, 8, 9])
 
-# Concatenate along axis 0
 result_0= np.concatenate((arr1, arr2[np.newaxis, :]), axis=0)
-print("Concatenation along axis 0:")
 print(result_0)
-""" output-
-Concatenation along axis 0:
+```
+
+#### Output
+```
 [[1 2 3]
  [4 5 6]
- [7 8 9]] """
+ [7 8 9]]
+``` 
 
-# Concatenate along axis 1
+#### Concatenate along axis 1
+
+```python
 result_1 = np.concatenate((arr1, arr2[:, np.newaxis]), axis=1)
-print("\nConcatenation along axis 1:")
 print(result_1)
-""" output-
-Concatenation along axis 1:
+```
+
+#### Output
+```
 [[1 2 3 7]
- [4 5 6 8]] """
+ [4 5 6 8]]
 ```
 
 
