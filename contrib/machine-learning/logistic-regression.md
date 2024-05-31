@@ -113,9 +113,3 @@ print("Classification Report:\n", class_report)
 ## Conclusion
 
 Logistic regression is a fundamental classification technique that is easy to implement and interpret. It is a powerful tool for binary classification problems and provides a probabilistic framework for predicting binary outcomes.
-
-## References
-
-- [Scikit-learn Documentation](https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression)
-- [Wikipedia: Logistic Regression](https://en.wikipedia.org/wiki/Logistic_regression)
-- [Towards Data Science: Understanding Logistic Regression](https://towardsdatascience.com/understanding-logistic-regression-9b02c2aec102)
