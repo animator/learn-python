@@ -10,4 +10,8 @@
 - [PyTorch.md](pytorch.md)
 - [Types of optimizers](Types_of_optimizers.md)
 - [Logistic Regression](logistic-regression.md)
+
 -[Types_of_Cost_Functions](Types_of_Cost_Functions.md)
+
+- [Grid Search](grid-search.md)
+
