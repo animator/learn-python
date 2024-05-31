@@ -12,7 +12,7 @@ MSE is one of the most commonly used cost functions, particularly in regression 
 
 **Mathematical Formulation:**
 The MSE is defined as:
-$$ MSE = \frac{1}{n} \sum_{i=1}^{n} (y_i - \hat{y}_i)^2 $$
+$$MSE = \frac{1}{n} \sum_{i=1}^{n} (y_i - \hat{y}_i)^2$$
 Where:
 - \( n \) is the number of samples.
 - \( y_i \) is the actual value.
@@ -41,7 +41,7 @@ MAE is another commonly used cost function for regression tasks. It measures the
 
 **Mathematical Formulation:**
 The MAE is defined as:
-$$ MAE = \frac{1}{n} \sum_{i=1}^{n} |y_i - \hat{y}_i| $$
+$$MAE = \frac{1}{n} \sum_{i=1}^{n} |y_i - \hat{y}_i|$$
 Where:
 - \( n \) is the number of samples.
 - \( y_i \) is the actual value.
@@ -70,8 +70,11 @@ def mean_absolute_error(y_true, y_pred):
 Cross-entropy loss is commonly used in binary classification problems. It measures the dissimilarity between the true and predicted probability distributions.
 
 **Mathematical Formulation:**
+
 For binary classification, the cross-entropy loss is defined as:
-$$ \text{Cross-Entropy} = -\frac{1}{n} \sum_{i=1}^{n} [y_i \log(\hat{y}_i) + (1 - y_i) \log(1 - \hat{y}_i)] $$
+
+$$\text{Cross-Entropy} = -\frac{1}{n} \sum_{i=1}^{n} [y_i \log(\hat{y}_i) + (1 - y_i) \log(1 - \hat{y}_i)]$$
+
 Where:
 - \( n \) is the number of samples.
 - \( y_i \) is the actual class label (0 or 1).
@@ -100,8 +103,11 @@ def binary_cross_entropy(y_true, y_pred):
 For multiclass classification problems, the cross-entropy loss is adapted to handle multiple classes.
 
 **Mathematical Formulation:**
+
 The multiclass cross-entropy loss is defined as:
-$$ \text{Cross-Entropy} = -\frac{1}{n} \sum_{i=1}^{n} \sum_{c=1}^{C} y_{i,c} \log(\hat{y}_{i,c}) $$
+
+$$\text{Cross-Entropy} = -\frac{1}{n} \sum_{i=1}^{n} \sum_{c=1}^{C} y_{i,c} \log(\hat{y}_{i,c})$$
+
 Where:
 - \( n \) is the number of samples.
 - \( C \) is the number of classes.
@@ -131,8 +137,11 @@ def categorical_cross_entropy(y_true, y_pred):
 Hinge loss is commonly used in support vector machines (SVMs) for binary classification tasks. It penalizes misclassifications by a linear margin.
 
 **Mathematical Formulation:**
+
 For binary classification, the hinge loss is defined as:
-$$ \text{Hinge Loss} = \frac{1}{n} \sum_{i=1}^{n} \max(0, 1 - y_i \cdot \hat{y}_i) $$
+
+$$\text{Hinge Loss} = \frac{1}{n} \sum_{i=1}^{n} \max(0, 1 - y_i \cdot \hat{y}_i)$$
+
 Where:
 - \( n \) is the number of samples.
 - \( y_i \) is the actual class label (-1 or 1).
@@ -165,17 +174,16 @@ Huber loss is a combination of MSE and MAE, providing a compromise between the t
 The Huber loss is defined as:
 
 
-$$
-\text{Huber Loss} = \frac{1}{n} \sum_{i=1}^{n} \left\{
+$$\text{Huber Loss} = \frac{1}{n} \sum_{i=1}^{n} \left\{
 \begin{array}{ll}
 \frac{1}{2} (y_i - \hat{y}_i)^2 & \text{if } |y_i - \hat{y}_i| \leq \delta \\
 \delta(|y_i - \hat{y}_i| - \frac{1}{2} \delta) & \text{otherwise}
 \end{array}
-\right.
-$$
+\right.$$
+
 Where:
 - \( n \) is the number of samples.
-- \( \delta \) is a threshold parameter.
+- \(delta\) is a threshold parameter.
 
 **Advantages:**
 - Provides a smooth loss function.
@@ -200,8 +208,11 @@ def huber_loss(y_true, y_pred, delta):
 Log-Cosh loss is a smooth approximation of the MAE and is less sensitive to outliers than MSE. It provides a smooth transition from quadratic for small errors to linear for large errors.
 
 **Mathematical Formulation:**
+
 The Log-Cosh loss is defined as:
-$$ \text{Log-Cosh Loss} = \frac{1}{n} \sum_{i=1}^{n} \log(\cosh(y_i - \hat{y}_i)) $$
+
+$$\text{Log-Cosh Loss} = \frac{1}{n} \sum_{i=1}^{n} \log(\cosh(y_i - \hat{y}_i))$$
+
 Where:
 - \( n \) is the number of samples.
 
