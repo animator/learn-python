@@ -15,7 +15,9 @@ Suppose there are the two transactions: A= {1,2,3,4,5}, and B= {2,3,7}, in these
 y in All sample of dataset D to all transactions. If we have two data x and y that need to be analyzed for correlation, then the
 corresponding support degree is: <br>
 
-**Support**(x, y) = P(xy) = num(xy) / num(All Samples)
+$$
+Support(x, y) = P(xy) = num(xy) / num(All Samples)
+$$
 
 
 $$
@@ -48,7 +50,7 @@ $$
 
 > **Note:**
 >
-> Lift uses 1 as the target value to show the relationship between x and y. If the value is greater than 1, then \( x \Rightarrow y ) is a valid strong association rule. Conversely, ( x \Rightarrow y ) is an invalid strong association rule. When the value is equal to 1, however, there is a special case, that is, x and y are at independence, at the time ( P(x|y) = P(x) ), so Lift( x \Rightarrow y) = 1.
+> Lift uses 1 as the target value to show the relationship between x and y. If the value is greater than 1, then x => y is a valid strong association rule. Conversely, x => y is an invalid strong association rule. When the value is equal to 1, however, there is a special case, that is, x and y are at independence, at the time P(x|y) = P(x) , so Lift(x => y) = 1.
 
 
 ## Steps for Apriori Algorithm
@@ -151,6 +153,10 @@ This is easy to understand algorithm. Among association rule learning algorithms
 
 ## Disadvantages of Apriori Algorithm <br>
 The main disadvantage is the slow process, to create candidates, the algorithm must continually search the database; this operation consumes a significant amount of time and memory, particularly if the pattern is very lengthy.
+
+> **Note:**
+>
+> The time complexity and space complexity of the apriori algorithm is O(2<sup>D</sup>), which is very high. Here D represents the horizontal width present in the database.
 
 ## Python Implementation of Apriori Algorithm <br>
 ### 1. Importing the libraries <br>
