@@ -134,8 +134,13 @@ class_B_scores = [70, 75, 80, 85, 90]
 class_C_scores = [65, 70, 75, 80, 85]
 
 ### Creating a grouped box plot
+
 plt.boxplot([class_A_scores, class_B_scores, class_C_scores], labels=['Class A', 'Class B', 'Class C'])
+
 plt.title('Exam Scores by Class')
+
 plt.xlabel('Classes')
+
 plt.ylabel('Scores')
+
 plt.show()
