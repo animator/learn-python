@@ -11,3 +11,4 @@
 - [PyTorch.md](pytorch.md)
 - [Types of optimizers](Types_of_optimizers.md)
 - [PyTorch Fundamentals](PyTorch_Fundamentals.md)
+- [Logistic Regression](logistic-regression.md)
