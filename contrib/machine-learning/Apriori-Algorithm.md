@@ -130,3 +130,25 @@ The two proccesses will be repeated for C3, but this time we will create the C3
 We will now construct the L3 table. The C3 table above shows that there is only one possible combinations of itemsets for which the support count is equal to the required minimum. As a result, {A, B, C} will be the only combination that the L3 has. <br>
 
 Step-4: Finding the association rules for the subsets
+In order to produce the association rules, we must first make a new table containing all potential rules from the combination {A, B.C} that has occurred. We will use formula sup(A ^B)/A to determine the Confidence for each rule. We will eliminate the rules with confidence levels below the 50% threshold after determining the confidence value for each rule.
+
+Consider the below table:
+
+| Rules      | Support  | Confidence                              |
+|------------|----------|-----------------------------------------|
+| A ^ B → C  | 2        | Sup{(A ^B) ^C}/sup(A ^B)= 2/4=0.5=50%   |
+| B ^ C → A  | 2        | Sup{(B^C) ^A}/sup(B ^C)= 2/4=0.5=50%    |
+| A ^ C → B  | 2        | Sup{(A ^C) ^B}/sup(A ^C)= 2/4=0.5=50%   |
+| C → A ^B   | 2        | Sup{(C^( A ^B)}/sup(C)= 2/5=0.4=40%     |
+| A -> B ^ C | 2        | Sup{(A^( B ^C)}/sup(A)= 2/6=0.33=33.33% |
+| B → B ^ C  | 2        | Sup{(B^( B ^C)}/sup(B)= 2/7=0.28=28%    |
+
+The first three rules— A ^ B → C, B ^ C → A, and A ^ C → B can be considered as the strong association rules for the given situation because the specified threshold or minimal confidence is 50%. <br>
+
+## Advantages of Apriori Algorithm <br>
+This is easy to understand algorithm. Among association rule learning algorithms, this is the simplest and most straightforward algorithm. The resulting rules are simple to understand and express to the end-user.
+
+## Disadvantages of Apriori Algorithm <br>
+The main disadvantage is the slow process, to create candidates, the algorithm must continually search the database; this operation consumes a significant amount of time and memory, particularly if the pattern is very lengthy.
+
+## Python Implementation of Apriori Algorithm <br>
