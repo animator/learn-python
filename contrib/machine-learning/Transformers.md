@@ -1,8 +1,9 @@
 # Transformers
 ## Introduction
 A transformer is a deep learning architecture developed by Google and based on the multi-head attention mechanism. It is based on the softmax-based attention 
-mechanism. Before transformers, predecessors of attention mechanism were added to gated recurrent neural networks, such as LSTMs and gated recurrent units (GRUs), which 
-processed datasets sequentially. Dependency on previous token computations prevented them from being able to parallelize the attention mechanism.
+mechanism. Before transformers, predecessors of attention mechanism were added to gated recurrent neural networks, such as LSTMs and gated recurrent units (GRUs), which processed datasets sequentially. Dependency on previous token computations prevented them from being able to parallelize the attention mechanism.
+
+Transformers are a revolutionary approach to natural language processing (NLP). Unlike older models, they excel at understanding long-range connections between words. This "attention" mechanism lets them grasp the context of a sentence, making them powerful for tasks like machine translation, text summarization, and question answering. Introduced in 2017, transformers are now the backbone of many large language models, including tools you might use every day. Their ability to handle complex relationships in language is fueling advancements in AI across various fields.
 
 ## Model Architecture
 <p align="center"><img src="https://github.com/SAM-DEV007/learn-python/assets/60264918/c290ed33-46ff-4b80-8212-47cfe7fbceb3" alt="Model Architecture" /></p>
