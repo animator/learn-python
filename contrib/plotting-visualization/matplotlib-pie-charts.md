@@ -13,6 +13,8 @@ houses=["vidya","riya","sneha","narmita"]
 plt.pie(contri,labels=houses)
 plt.show()
 ```
+![basic pie graph](images/basic-pie-graph.png)
+
 * `autopct` is used to add formatted slice percentages to the pie chart.
 
   * `autopct  string format`   
