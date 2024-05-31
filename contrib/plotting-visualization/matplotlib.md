@@ -41,8 +41,9 @@ plt.tight_layout()
 plt.show()
 ```
 
-![img](scatterplot.png)
 
+
+![scatterplot](https://github.com/Harshita297/learn-python/assets/122027571/aa57eb31-4377-4f75-9a97-e4fa7a54a938)
 
 
 ### 3.] Bar plot
@@ -60,7 +61,8 @@ plt.ylabel("Y values")
 
 plt.show()
 ```
-![img](barplot.png)
+![barplot](https://github.com/Harshita297/learn-python/assets/122027571/00cea3cd-a962-4bfe-b158-921389ee564c)
+
 
 
 ### 4.] Histogram
@@ -77,8 +79,11 @@ plt.ylabel("Frequency Distribution")
 
 plt.show()
 ```
+![histogram](https://github.com/Harshita297/learn-python/assets/122027571/32470819-bac5-4bb2-9f36-79521fa40bf3)
 
-![img](histogram.png)
+
+
+
 
 
 
