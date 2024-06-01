@@ -12,8 +12,9 @@ To make this process of data visualization easier and clearer, matplotlib librar
 
 ## Starting with Matplotlib
 
-### 1.] Install and import the neccasary libraries - mayplotlib.pylplot
-```python
+### 1. Install and import the neccasary libraries - mayplotlib.pylplot
+
+```bash
 pip install matplotlib
 ```
 
@@ -22,9 +23,7 @@ import maptplotlib.pyplot as plt
 import numpy as np
 ```
 
-
-
-### 2.] Scatter plot
+### 2. Scatter plot
 Scatter plot is a type of plot that uses the cartesian coordinates between x and y to describe the relation between them. It uses dots to represent relation between the data variables of the data set.
 
 ```python
@@ -41,12 +40,9 @@ plt.tight_layout()
 plt.show()
 ```
 
+![scatterplot](images/scatterplot.png)
 
-
-![scatterplot](https://github.com/Harshita297/learn-python/assets/122027571/aa57eb31-4377-4f75-9a97-e4fa7a54a938)
-
-
-### 3.] Bar plot
+### 3. Bar plot
 Bar plot is a type of plot that plots the frequency distrubution of the categorical variables. Each entity of the categoric variable is represented as a bar. The size of the bar represents its numeric value.
 
 ```python
@@ -61,11 +57,10 @@ plt.ylabel("Y values")
 
 plt.show()
 ```
-![barplot](https://github.com/Harshita297/learn-python/assets/122027571/00cea3cd-a962-4bfe-b158-921389ee564c)
 
+![barplot](images/barplot.png)
 
-
-### 4.] Histogram
+### 4. Histogram
 Histogram is the representation of frequency distribution of qualitative data. The height of each rectangle defines the amount, or how often that variable appears.
 
 ```python
@@ -79,14 +74,7 @@ plt.ylabel("Frequency Distribution")
 
 plt.show()
 ```
-![histogram](https://github.com/Harshita297/learn-python/assets/122027571/32470819-bac5-4bb2-9f36-79521fa40bf3)
 
-
-
-
-
-
-
-
+![histogram](images/histogram.png)
 
 
