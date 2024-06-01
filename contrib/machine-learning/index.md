@@ -1,5 +1,6 @@
 # List of sections
 
+- [Introduction to scikit-learn](sklearn-introduction.md)
 - [Binomial Distribution](binomial-distribution.md)
 - [Regression in Machine Learning](regression.md)
 - [Confusion Matrix](confusion-matrix.md)
