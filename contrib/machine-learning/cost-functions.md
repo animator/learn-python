@@ -14,9 +14,9 @@ MSE is one of the most commonly used cost functions, particularly in regression 
 The MSE is defined as:
 $$MSE = \frac{1}{n} \sum_{i=1}^{n} (y_i - \hat{y}_i)^2$$
 Where:
-- \( n \) is the number of samples.
-- \( y_i \) is the actual value.
-- \( y^i\) is the predicted value.
+- `n` is the number of samples.
+- $y_i$ is the actual value.
+- $\hat{y}_i$ is the predicted value.
 
 **Advantages:**
 - Sensitive to large errors due to squaring.
@@ -43,9 +43,9 @@ MAE is another commonly used cost function for regression tasks. It measures the
 The MAE is defined as:
 $$MAE = \frac{1}{n} \sum_{i=1}^{n} |y_i - \hat{y}_i|$$
 Where:
-- \( n \) is the number of samples.
-- \( y_i \) is the actual value.
-- \( y^i\) is the predicted value.
+- `n` is the number of samples.
+- $y_i$ is the actual value.
+- $\hat{y}_i$ is the predicted value.
 
 **Advantages:**
 - Less sensitive to outliers compared to MSE.
@@ -76,9 +76,9 @@ For binary classification, the cross-entropy loss is defined as:
 $$\text{Cross-Entropy} = -\frac{1}{n} \sum_{i=1}^{n} [y_i \log(\hat{y}_i) + (1 - y_i) \log(1 - \hat{y}_i)]$$
 
 Where:
-- \( n \) is the number of samples.
-- \( y_i \) is the actual class label (0 or 1).
-- \( y^i\)  is the predicted probability of the positive class.
+- `n` is the number of samples.
+- $y_i$ is the actual class label (0 or 1).
+- $\hat{y}_i$  is the predicted probability of the positive class.
 
 
 **Advantages:**
@@ -109,11 +109,10 @@ The multiclass cross-entropy loss is defined as:
 $$\text{Cross-Entropy} = -\frac{1}{n} \sum_{i=1}^{n} \sum_{c=1}^{C} y_{i,c} \log(\hat{y}_{i,c})$$
 
 Where:
-- \( n \) is the number of samples.
-- \( C \) is the number of classes.
-- \( y_{i,c} \) is the indicator function for the true class of sample \( i \).
-
-- (y^i,c) is the predicted probability of sample \( i \) belonging to class \( c \).
+- `n` is the number of samples.
+- `C` is the number of classes.
+- $y_{i,c}$ is the indicator function for the true class of sample `i`.
+- $\hat{y}_{i,c}$ is the predicted probability of sample `i` belonging to class `c`.
 
 **Advantages:**
 - Handles multiple classes effectively.
@@ -143,9 +142,9 @@ For binary classification, the hinge loss is defined as:
 $$\text{Hinge Loss} = \frac{1}{n} \sum_{i=1}^{n} \max(0, 1 - y_i \cdot \hat{y}_i)$$
 
 Where:
-- \( n \) is the number of samples.
-- \( y_i \) is the actual class label (-1 or 1).
-- \( \hat{y}_i \) is the predicted score for sample \( i \).
+- `n` is the number of samples.
+- $y_i$ is the actual class label (-1 or 1).
+- $\hat{y}_i$ is the predicted score for sample \( i \).
 
 **Advantages:**
 - Encourages margin maximization in SVMs.
@@ -182,8 +181,8 @@ $$\text{Huber Loss} = \frac{1}{n} \sum_{i=1}^{n} \left\{
 \right.$$
 
 Where:
-- \( n \) is the number of samples.
-- \(delta\) is a threshold parameter.
+- `n` is the number of samples.
+- $\delta$ is a threshold parameter.
 
 **Advantages:**
 - Provides a smooth loss function.
@@ -214,7 +213,7 @@ The Log-Cosh loss is defined as:
 $$\text{Log-Cosh Loss} = \frac{1}{n} \sum_{i=1}^{n} \log(\cosh(y_i - \hat{y}_i))$$
 
 Where:
-- \( n \) is the number of samples.
+- `n` is the number of samples.
 
 **Advantages:**
 - Smooth and differentiable everywhere.
@@ -234,5 +233,3 @@ def logcosh_loss(y_true, y_pred):
 ```
 
 These implementations provide various options for cost functions suitable for different machine learning tasks. Each function has its advantages and disadvantages, making them suitable for different scenarios and problem domains.
-
---- 
