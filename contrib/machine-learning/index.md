@@ -9,4 +9,4 @@
 - [TensorFlow.md](tensorFlow.md)
 - [PyTorch.md](pytorch.md)
 - [Types of optimizers](Types_of_optimizers.md)
-- [Random Forest](Random_Forest.md)
+- [Random Forest](random-forest.md)
