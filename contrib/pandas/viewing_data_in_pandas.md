@@ -1,6 +1,6 @@
 # View the top rows of the frame 
 
-# Pandas Dataframe/Series.head() method:
+**Pandas Dataframe/Series.head() method**:
 
  The pandas library in Python provides a convenient method called head() that allows you to view the first few rows of a DataFrame. Let me explain how it works:
 * The head() function returns the first n rows of a DataFrame or Series.
@@ -27,7 +27,7 @@
 'tiger'
 # View the bottom rows of the frame 
 
-# Pandas Dataframe/Series.tail() method:
+**Pandas Dataframe/Series.tail() method**:
 
 The tail function in Python displays the last five rows of the dataframe by default. It takes in a single parameter: the number of rows. We can use this parameter to display the number of rows of our choice.
 * The tail() function returns the last n rows of a DataFrame or Series.
@@ -55,7 +55,7 @@ The tail function in Python displays the last five rows of the dataframe by defa
 'coconut'
 # View basic statistical details
 
-# Pandas DataFrame describe() Method
+**Pandas DataFrame describe() Method**:
 
 Pandas describe() is used to view some basic statistical details like percentile, mean, std, etc. of a data frame or a series of numeric values.Descriptive statistics include those that summarize the central tendency, dispersion and shape of a dataset’s distribution, excluding NaN values.
 
