@@ -1,24 +1,27 @@
 # Line Chart in Matplotlib
 
 A line chart is a simple way to visualize data where we connect individual data points. It helps us to see trends and patterns over time or across categories. 
-<br> This type of chart is particularly useful for: </br>
-* Comparing Data: Comparing multiple datasets on the same axes.
-* Highlighting Changes: Illustrating changes and patterns in data.
-* Visualizing Trends: Showing trends over time or other continuous variables.
+
+This type of chart is particularly useful for:
+- Comparing Data: Comparing multiple datasets on the same axes.
+- Highlighting Changes: Illustrating changes and patterns in data.
+- Visualizing Trends: Showing trends over time or other continuous variables.
 
 ## Prerequisites
-Line plots can be created in Python with Matplotlib's ``pyplot`` library. To build a line plot, first import ``Matplotlib``. It is a standard convention to import Matplotlib's pyplot library as ``plt``.
-```
-import matplotlib.pyplot as plt
 
+Line plots can be created in Python with Matplotlib's `pyplot` library. To build a line plot, first import `matplotlib`. It is a standard convention to import Matplotlib's pyplot library as `plt`.
+
+```python
+import matplotlib.pyplot as plt
 ```
 
 ## Creating a simple Line Plot
 
 First import matplotlib and numpy, these are useful for charting.
-<br> You can use the ``plot(x,y)`` method to create a line chart.</br>
 
-```
+You can use the `plot(x,y)` method to create a line chart.
+
+```python
 import matplotlib.pyplot as plt
 import numpy as np
 
@@ -29,6 +32,7 @@ y = 2*x + 1
 plt.plot(x, y)
 plt.show()
 ```
+
 When executed, this will show the following line plot:
 
 ![Basic line Chart](images/simple_line.png)
@@ -36,8 +40,9 @@ When executed, this will show the following line plot:
 
 ## Curved line
 
-The ``plot()`` method also works for other types of line charts. It doesn’t need to be a straight line, y can have any type of values.
-```
+The `plot()` method also works for other types of line charts. It doesn’t need to be a straight line, y can have any type of values.
+
+```python
 import matplotlib.pyplot as plt
 import numpy as np
 
@@ -47,6 +52,7 @@ y = 2**x + 1
 plt.plot(x, y)  
 plt.show()
 ```
+
 When executed, this will show the following Curved line plot:
 
 ![Curved line](images/line-curve.png)
@@ -54,8 +60,9 @@ When executed, this will show the following Curved line plot:
 
 ## Line with Labels
 
-To know what you are looking at, you need meta data. Labels are a type of meta data. They show what the chart is about. The chart has an ``x label``, ``y label`` and ``title``.
-```
+To know what you are looking at, you need meta data. Labels are a type of meta data. They show what the chart is about. The chart has an `x label`, `y label` and `title`.
+
+```python
 import matplotlib.pyplot as plt
 import numpy as np
 
@@ -72,15 +79,16 @@ plt.title("With Labels")
 
 plt.show()
 ```
+
 When executed, this will show the following line with labels plot:
 
 ![line with labels](images/line-labels.png)
 
 ## Multiple lines
 
-More than one line can be in the plot. To add another line, just call the ``plot(x,y)`` function again. In the example below we have two different values for ``y(y1,y2)`` that are plotted onto the chart.
+More than one line can be in the plot. To add another line, just call the `plot(x,y)` function again. In the example below we have two different values for `y(y1,y2)` that are plotted onto the chart.
 
-```
+```python
 import matplotlib.pyplot as plt
 import numpy as np
 
@@ -98,6 +106,7 @@ plt.plot(x, y1,
 
 plt.show()
 ```
+
 When executed, this will show the following Multiple lines plot:
 
 ![multiple lines](images/two-lines.png)
@@ -105,9 +114,9 @@ When executed, this will show the following Multiple lines plot:
 
 ## Dotted line
 
-Lines can be in the form of dots like the image below. Instead of calling ``plot(x,y)`` call the ``scatter(x,y)`` method. The ``scatter(x,y)`` method can also be used to (randomly) plot points onto the chart.
+Lines can be in the form of dots like the image below. Instead of calling `plot(x,y)` call the `scatter(x,y)` method. The `scatter(x,y)` method can also be used to (randomly) plot points onto the chart.
 
-```
+```python
 import matplotlib.pyplot as plt
 import numpy as np
 
@@ -130,9 +139,9 @@ When executed, this will show the following Dotted line plot:
 
 ## Line ticks
 
-You can change the ticks on the plot. Set them on the ``x-axis``, ``y-axis`` or even change their color. The line can be more thick and have an alpha value.
+You can change the ticks on the plot. Set them on the `x-axis`, `y-axis` or even change their color. The line can be more thick and have an alpha value.
 
-```
+```python
 import matplotlib.pyplot as plt
 import numpy as np
 
@@ -166,9 +175,9 @@ When executed, this will show the following line ticks plot:
 
 ## Line with asymptote
 
-An asymptote can be added to the plot. To do that, use ``plt.annotate()``. There’s lso a dotted line in the plot below. You can play around with the code to see how it works.
+An asymptote can be added to the plot. To do that, use `plt.annotate()`. There’s lso a dotted line in the plot below. You can play around with the code to see how it works.
 
-```
+```python
 import matplotlib.pyplot as plt
 import numpy as np
 
@@ -222,9 +231,9 @@ When executed, this will show the following Line with asymptote plot:
 
 ## Line with text scale
 
-It doesn’t have to be a numeric scale. The scale can also contain textual words like the example below. In ``plt.yticks()`` we just pass a list with text values. These values are then show against the ``y axis``.
+It doesn’t have to be a numeric scale. The scale can also contain textual words like the example below. In `plt.yticks()` we just pass a list with text values. These values are then show against the `y axis`.
 
-```
+```python
 import matplotlib.pyplot as plt
 import numpy as np
 
@@ -261,6 +270,7 @@ ax.spines['left'].set_position(('data', 0))
 
 plt.show()
 ```
+
 When executed, this will show the following Line with text scale plot:
 
 ![Line with text scale](images/line-with-text-scale.png)
