@@ -2,7 +2,7 @@
 
 - [Pandas Introduction and Dataframes in Pandas](introduction.md)
 - [Pandas Series Vs NumPy ndarray](pandas_series_vs_numpy_ndarray.md)
-- [Viewing data in pandas](viewing_data_in_pandas.md)
+- [Viewing data in pandas](viewing-data.md)
 - [Pandas Descriptive Statistics](Descriptive_Statistics.md)
 - [Group By Functions with Pandas](GroupBy_Functions_Pandas.md)
 - [Excel using Pandas DataFrame](excel_with_pandas.md)
