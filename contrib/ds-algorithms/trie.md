@@ -27,7 +27,7 @@ Node Class have mainly two components
 
 Code Block of Node Class :
 
-```
+```python
 class Node:
     def __init__(self):
         self.alphabets = [None] * 26  
@@ -40,7 +40,7 @@ Now we need to implement Trie. We create another class named Trie with some meth
 
 Code Implementation of Initialization:
 
-```
+```python
 class Trie:
     def __init__(self):
         self.root = Node()
@@ -51,7 +51,7 @@ class Trie:
 1. **Insertion**: Inserts the word into the Trie. This method takes `word` as parameter. For each character in the word, it checks if there is a corresponding child node. If not, it creates a new `Node`. After processing all the characters in word, it increments the `end_of_word` value of the last node.
 
 Code Implementation of Insertion: 
-```
+```python
 def insert(self, word):
         node = self.root
         for char in word:
@@ -69,7 +69,7 @@ There are two cases in Searching:
 - *Word found*: It happens when the search word is present in the Trie. This case will occur, when the `end_of_word` value is greater than `0` of the node after traversing the whole word.
 
 Code Implementation of Searching:
-```
+```python
  def Search(self, word):
         node = self.root
         for char in word:
@@ -84,7 +84,7 @@ Code Implementation of Searching:
 
 Code Implementation of Deletion:
 
-```
+```python
 def delete(self, word):
         node = self.root
         for char in word:
@@ -96,7 +96,7 @@ def delete(self, word):
 
 Python Code to implement Trie:
 
-```
+```python
 class Node:
     def __init__(self):
         self.alphabets = [None] * 26  
