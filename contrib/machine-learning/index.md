@@ -13,3 +13,4 @@
 - [PyTorch Fundamentals](PyTorch_Fundamentals.md)
 - [Logistic Regression](logistic-regression.md)
 - [Running Tensors on GPUs](Use_GPU_In_PyTorch.md)
+- [Grid Search](grid-search.md)
