@@ -28,7 +28,9 @@ Syntax - DataFrame.aggregate(func, axis=0, *args, **kwargs)
 
 Parameters - 
 1. func - callable, string, dictionary, or list of string/callables. Function to use for aggregating the data. If a function, must either work when passed a DataFrame or when passed to DataFrame.apply. For a DataFrame, can pass a dict, if the keys are DataFrame column names.
+
 2. axis - (default 0) {0 or ‘index’, 1 or ‘columns’} 0 or ‘index’: apply function to each column. 1 or ‘columns’: apply function to each row.
+
 3. *args, **kwargs - Optional arguments to be passed to the aggregation functions.
 
 ## Implementation in Python
@@ -50,4 +52,5 @@ print(x)
 
 Returns the sum of each row 
       x     y
+      
 sum  120  1454
