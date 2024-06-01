@@ -4,4 +4,6 @@
 - [Introducing Matplotlib](matplotlib-introduction.md)
 - [Bar Plots in Matplotlib](matplotlib-bar-plots.md)
 - [Pie Charts in Matplotlib](matplotlib-pie-charts.md)
-- [Line Charts in Matplotlib](matplotlib-line-plot.md)
+- [Line Charts in Matplotlib](matplotlib-line-plots.md)
+- [Introduction to Seaborn and Installation](seaborn-intro.md)
+- [Getting started with Seaborn](seaborn-basics.md)
