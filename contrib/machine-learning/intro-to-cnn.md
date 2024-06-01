@@ -1,30 +1,5 @@
 # Understanding Convolutional Neural Networks (CNN)
 
-## Table of Contents
-<details>
-<summary>Click to expand</summary>
-
-- [Introduction](#introduction)
-- [CNN Architecture](#cnn-architecture)
-  - <details>
-    <summary><a href='#convolutional-layer'>Convolutional Layer</a></summary>
-
-    - [Input Shape](#input-shape)
-    - [Stride](#strides)
-    - [Padding](#padding)
-    - [Filter](#filters)
-    - [Output](#output)
-
-    </details>
-
-- [Pooling Layer](#pooling-layer)
-- [Flatten Layer](#flatten-layer)
-- [Dropout Layer](#dropout-layer)
-
-- [Implementation](#implementation)
-
-</details>
-
 ## Introduction
 Convolutional Neural Networks (CNNs) are a specialized type of artificial neural network designed primarily for processing structured grid data like images. CNNs are particularly powerful for tasks involving image recognition, classification, and computer vision. They have revolutionized these fields, outperforming traditional neural networks by leveraging their unique architecture to capture spatial hierarchies in images.
 
@@ -52,9 +27,7 @@ The convolutional layer is the core building block of a CNN. The layer's paramet
 
 #### Input Shape
 The dimensions of the input image, including the number of channels (e.g., 3 for RGB images & 1 for Grayscale images).
-<div align='center'>
-    <img src='assets/cnn-input_shape.png' width='800'></img>
-</div>
+![image](assets/cnn-input_shape.png)
 
 - The input matrix is a binary image of handwritten digits, 
 where '1' marks the pixels containing the digit (ink/grayscale area) and '0' marks the background pixels (empty space).
@@ -63,9 +36,7 @@ where '1' marks the pixels containing the digit (ink/grayscale area) and '0' mar
 
 #### Strides
 The step size with which the filter moves across the input image.
-<div align='center'>
-    <img src='assets/cnn-strides.png' width='800'></img>
-</div>
+![image](assets/cnn-strides.png)
 
 - This visualization will help you understand how the filter (kernel) moves acroos the input matrix with stride values of (3,3) and (2,2).
 - A stride of 1 means the filter moves one step at a time, ensuring it covers the entire input matrix. 
@@ -74,9 +45,7 @@ The step size with which the filter moves across the input image.
 
 #### Padding
 Determines whether the output size is the same as the input size ('same') or reduced ('valid').
-<div align='center'>
-    <img src='assets/cnn-padding.png' width='800'></img>
-</div>
+![image](assets/cnn-padding.png)
 
 - `Same` padding is preferred in earlier layers to preserve spatial and edge information, as it can help the network learn more detailed features.
 - Choose `valid` padding when focusing on the central input region or requiring specific output dimensions.
@@ -84,37 +53,31 @@ Determines whether the output size is the same as the input size ('same') or red
 
 #### Filters
 Small matrices that slide over the input data to extract features.
-<div align='center'>
-    <img src='assets/cnn-filters.png' width='800'></img>
-</div>
+![image](assets/cnn-filters.png)
 
 - The first filter aims to detect closed loops within the input image, being highly relevant for recognizing digits with circular or oval shapes, such as '0', '6', '8', or '9'.
 - The next filter helps in detecting vertical lines, crucial for identifying digits like '1', '4', '7', and parts of other digits that contain vertical strokes.
 - The last filter shows how to detect diagonal lines in the input image, useful for identifying the slashes present in digits like '1', '7', or parts of '4' and '9'.
 
-<br>
-
 #### Output
 A set of feature maps that represent the presence of different features in the input.
-<div align='center'>
-    <img src='assets/cnn-ouputs.png' width='800'></img>
-</div>
+![image](assets/cnn-ouputs.png)
 
 - With no padding and a stride of 1, the 3x3 filter moves one step at a time across the 7x5 input matrix. The filter can only move within the original boundaries of the input, resulting in a smaller 5x3 output matrix. This configuration is useful when you want to reduce the spatial dimensions of the feature map while preserving the exact spatial relationships between features.
 - By adding zero padding to the input matrix, it is expanded to 9x7, allowing the 3x3 filter to "fit" fully on the edges and corners. With a stride of 1, the filter still moves one step at a time, but now the output matrix is the same size (7x5) as the original input. Same padding is often preferred in early layers of a CNN to preserve spatial information and avoid rapid feature map shrinkage.
 - Without padding, the 3x3 filter operates within the original input matrix boundaries, but now it moves two steps at a time (stride 2). This significantly reduces the output matrix size to 3x2. Larger strides are employed to decrease computational cost and the output size, which can be beneficial in speeding up the training process and preventing overfitting. However, they might miss some finer details due to the larger jumps.
 - The output dimension of a CNN model is given by, $$ n_{out} = { n_{in} + (2 \cdot p) - k \over s } $$
-where, <br>
-    n<sub>in</sub> = number of input features   <br>
-    p = padding <br>
-    k = kernel size <br>
+where,  
+    n<sub>in</sub> = number of input features   
+    p = padding  
+    k = kernel size  
     s = stride
 
-- Also, the number of trainable parameters for each layer is given by, $ (n_c \cdot [k \cdot k] \cdot f) + f $
-<br> where, <br>
-    n<sub>c</sub> = number of input channels  <br>
-    k x k = kernel size <br>
-    f = number of filters   <br>
+- Also, the number of trainable parameters for each layer is given by, $ (n_c \cdot [k \cdot k] \cdot f) + f $  
+where,  
+    n<sub>c</sub> = number of input channels  
+    k x k = kernel size  
+    f = number of filters   
     an additional f is added for bias
 
 ### Pooling Layer
@@ -135,18 +98,14 @@ Pooling layers reduce the dimensionality of each feature map while retaining the
 The flatten layer converts the 2D matrix data to a 1D vector, which can be fed into a fully connected (dense) layer.
 - **Input Shape:** The 2D feature maps from the previous layer.
 - **Output:** A 1D vector that represents the same data in a flattened format.
-<div align='center'>
-    <img src='assets/cnn-flattened.png' width='800'></img>
-</div>
+![image](assets/cnn-flattened.png)
 
 ### Dropout Layer
 Dropout is a regularization technique to prevent overfitting in neural networks by randomly setting a fraction of input units to zero at each update during training time.
 - **Input Shape:** The data from the previous layer.
 - **Dropout Rate:** The fraction of units to drop (e.g., 0.5 for 50% dropout).
 - **Output:** The same shape as the input, with some units set to zero.
-<div align='center'>
-    <img src='assets/cnn-dropout.png' width='800'></img>
-</div>
+![image](assets/cnn-dropout.png)
 
 - The updated 0 values represents the dropped units.
 
