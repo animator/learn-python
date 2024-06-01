@@ -1,5 +1,6 @@
 # List of sections
 
+- [Time & Space Complexity](time-space-complexity.md)
 - [Queues in Python](Queues.md)
 - [Graphs](graph.md)
 - [Sorting Algorithms](sorting-algorithms.md)
