@@ -49,6 +49,5 @@ print(x)
 ## Output
 
 Returns the sum of each row 
-
       x     y
 sum  120  1454
