@@ -11,3 +11,4 @@
 - [Types of optimizers](Types_of_optimizers.md)
 - [Logistic Regression](logistic-regression.md)
 - [Clustering](clustering.md)
+- [Grid Search](grid-search.md)
