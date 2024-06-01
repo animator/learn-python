@@ -2,19 +2,6 @@
 
 Clustering is an unsupervised machine learning technique that groups a set of objects in such a way that objects in the same group (called a cluster) are more similar to each other than to those in other groups (clusters). This README provides an overview of clustering, including its fundamental concepts, types, algorithms, and how to implement it using Python.
 
-## Table of Contents
-
-1. [Introduction](#introduction)
-2. [Concepts](#concepts)
-3. [Types of Clustering](#types-of-clustering)
-4. [Clustering Algorithms](#clustering-algorithms)
-5. [Implementation](#implementation)
-    - [Using Scikit-learn](#using-scikit-learn)
-    - [Code Example](#code-example)
-6. [Evaluation Metrics](#evaluation-metrics)
-7. [Conclusion](#conclusion)
-8. [References](#references)
-
 ## Introduction
 
 Clustering is a technique used to find inherent groupings within data without pre-labeled targets. It is widely used in exploratory data analysis, pattern recognition, image analysis, information retrieval, and bioinformatics.
@@ -107,9 +94,3 @@ print(data.head())
 ## Conclusion
 
 Clustering is a powerful technique for discovering structure in data. Understanding different clustering algorithms and their evaluation metrics is crucial for selecting the appropriate method for a given problem.
-
-## References
-
-- [Scikit-learn Documentation](https://scikit-learn.org/stable/modules/clustering.html)
-- [Wikipedia: Cluster Analysis](https://en.wikipedia.org/wiki/Cluster_analysis)
-- [Towards Data Science: A Comprehensive Guide to Clustering](https://towardsdatascience.com/a-comprehensive-guide-to-clustering-9789897f8b88)
