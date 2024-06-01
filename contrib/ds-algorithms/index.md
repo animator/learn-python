@@ -10,3 +10,5 @@
 - [Greedy Algorithms](greedy-algorithms.md)
 - [Dynamic Programming](dynamic-programming.md)
 - [Linked list](linked-list.md)
+- [Sliding Window Technique](sliding-window.md)
+- [Trie](trie.md)

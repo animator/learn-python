@@ -7,4 +7,5 @@
 - [Regular Expressions in Python](regular_expressions.md)
 - [JSON module](json-module.md)
 - [Map Function](map-function.md)
+- [Exception Handling in Python](exception-handling.md)
 - [Closures](closures.md)
