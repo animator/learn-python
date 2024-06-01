@@ -1,6 +1,6 @@
 # Exception Handling in Python
 
-Exception handling is a way of managing errors that may occur during program execution, through which you can handle exceptions gracefully. Python's exception handling mechanism has been designed to avoid unexpected termination of the program and offer a means to either regain control after an error or display meaningful messages to the user.
+Exception Handling is a way of managing the errors that may occur during a program execution. Python's exception handling mechanism has been designed to avoid the unexpected termination of the program, and offer to either regain control after an error or display a meaningful message to the user.
 
 - **Error** - An error is a mistake or an incorrect result produced by a program. It can be a syntax error, a logical error, or a runtime error. Errors are typically fatal, meaning they prevent the program from continuing to execute.
 - **Exception** - An exception is an event that occurs during the execution of a program that disrupts the normal flow of instructions. Exceptions are typically unexpected and can be handled by the program to prevent it from crashing or terminating abnormally. It can be runtime, input/output or system exceptions. Exceptions are designed to be handled by the program, allowing it to recover from the error and continue executing.
@@ -35,7 +35,7 @@ Here's an example to explain this:
 
 ```python
 try:
-    # code that might raise an exception
+    # Code that might raise an exception
     result = 10 / 0
 except:
     print("An error occured!")
@@ -72,7 +72,7 @@ Output
 Oops! You tried to divide by zero.
 ```
 
-If you comment on the line `result = 10 / 0`, then the output will be
+If you comment on the line `result = 10 / 0`, then the output will be:
 
 ```markdown
 There's a variable named 'undefined_variable' that hasn't been defined yet.
