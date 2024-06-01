@@ -10,4 +10,4 @@
 - [Greedy Algorithms](greedy-algorithms.md)
 - [Dynamic Programming](dynamic-programming.md)
 - [Linked list](linked-list.md)
-- [Trie](Trie.md)
+- [Trie](trie.md)
