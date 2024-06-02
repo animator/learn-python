@@ -40,6 +40,7 @@ Syntax - matplotlib.pyplot.boxplot(data,notch=none,vert=none,patch_artist,widths
 10. bootstrap: It accepts the integer value, which specifies the range of the notched boxplot.
 
 ## Implementation of Box Plot in Python
+
 # Import libraries
 
 import matplotlib.pyplot as plt
