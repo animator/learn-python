@@ -7,3 +7,4 @@
 - [Line Charts in Matplotlib](matplotlib-line-plots.md)
 - [Introduction to Seaborn and Installation](seaborn-intro.md)
 - [Getting started with Seaborn](seaborn-basics.md)
+- [Box Plots in Matplotlib](matplotlib-box-plots.md)
