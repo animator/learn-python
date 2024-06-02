@@ -3,7 +3,7 @@
 ## Introduction to Object detection
 Object detection, a fascinating field at the intersection of computer vision and image processing, focuses on identifying and localizing instances of specific semantic objects (such as humans, buildings, or cars) within digital images and videos
 
-![Object Detection](https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/file-uploads/blogs/22606/images/3fa2e-b5a1-06ca-5fe6-dd660dffd8a_crosswalk-1.webp) 
+
 
 ## Approaches to Object Detection
 
@@ -26,12 +26,12 @@ There are two main approaches to object detection using machine learning:
 - Faster R-CNN introduced the concept of an RPN to generate region proposals, which significantly improved accuracy.
 - Mask R-CNN extends Faster R-CNN by adding a mask prediction branch for pixel-level segmentation in addition to bounding boxes and class labels.
 
-![Two-Stage Object Detection](https://lh3.googleusercontent.com/drive-viewer/AKGpiha2UJ0T7AnRtvNa7dQtzRIJqzvrPwiOzwBBOYs2DwxK-WTwvUP9GuVOQx_MWKjAsB6mENd9zeSBNJVpemj11uWp-CyxMQtNqRQ=s1600-rw-v1)
+![Two-Stage Object Detection](images/2.png)
     
 
 2. **Single-Stage Detectors**:These models directly predict bounding boxes and class labels for objects in a single step. For instance, one-stage detectors like YOLO (You Only Look Once) and SSD (Single Shot MultiBox Detector) achieve this by dividing the image into a grid and predicting bounding boxes and class probabilities for each grid cell. YOLO, in particular, is renowned for its real-time performance
 
-![Single-Stage Object Detection](https://lh3.googleusercontent.com/drive-viewer/AKGpihYfQ_EcSLmtOtZ25Qv2U-8P0-olkVnwsxdStjwdIb9MNgEYUN5ZkezvpH541dfVDOl0EvSVKas98VOHnLxVhgz4ZSLNhIYypl4=s1600-rw-v1)
+![Single-Stage Object Detection](images/1.png)
 
 ## Deep Learning Models for Object Detection
 
