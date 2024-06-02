@@ -26,12 +26,12 @@ There are two main approaches to object detection using machine learning:
 - Faster R-CNN introduced the concept of an RPN to generate region proposals, which significantly improved accuracy.
 - Mask R-CNN extends Faster R-CNN by adding a mask prediction branch for pixel-level segmentation in addition to bounding boxes and class labels.
 
-![Two-Stage Object Detection](images/2.png)
+![Two-Stage Object Detection](/images/2.png)
     
 
 2. **Single-Stage Detectors**:These models directly predict bounding boxes and class labels for objects in a single step. For instance, one-stage detectors like YOLO (You Only Look Once) and SSD (Single Shot MultiBox Detector) achieve this by dividing the image into a grid and predicting bounding boxes and class probabilities for each grid cell. YOLO, in particular, is renowned for its real-time performance
 
-![Single-Stage Object Detection](images/1.png)
+![Single-Stage Object Detection](/images/1.png)
 
 ## Deep Learning Models for Object Detection
 
