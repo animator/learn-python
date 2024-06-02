@@ -41,26 +41,19 @@ Syntax - matplotlib.pyplot.boxplot(data,notch=none,vert=none,patch_artist,widths
 
 ## Implementation of Box Plot in Python
 
-# Import libraries
-
+```Python
 import matplotlib.pyplot as plt
-
 import numpy as np 
 
 # Creating dataset
-
 np.random.seed(10)
-
 data = np.random.normal(100, 20, 200) 
-
 fig = plt.figure(figsize =(10, 7))
 
-### Creating plot
-
+# Creating plot
 plt.boxplot(data)
 
-### show plot
-
+# Show plot
 plt.show()
 
 ![image](https://github.com/Vrisha213/learn-python/assets/74671946/0e61fa72-56de-43ba-a93d-25a0f3c7ae43)
