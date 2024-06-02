@@ -57,104 +57,78 @@ plt.boxplot(data)
 plt.show()
 ```
 
-# Output
+## Output
 ![image](https://github.com/Vrisha213/learn-python/assets/74671946/0e61fa72-56de-43ba-a93d-25a0f3c7ae43)
 
 ### Implementation of Multiple Box Plot in Python
 
 ```Python
 import matplotlib.pyplot as plt  
-
 import numpy as np  
 
 np.random.seed(10)  
-
 dataSet1 = np.random.normal(100, 10, 220) 
-
 dataSet2 = np.random.normal(80, 20, 200) 
-
 dataSet3 = np.random.normal(60, 35, 220)  
-
 dataSet4 = np.random.normal(50, 40, 200)  
-
 dataSet = [dataSet1, dataSet2, dataSet3, dataSet4]  
 
 figure = plt.figure(figsize =(10, 7))  
-
 ax = figure.add_axes([0, 0, 1, 1])  
-
 bp = ax.boxplot(dataSet)  
 
 plt.show()  
 ```
 
-# Output
+## Output
 ![image](https://github.com/Vrisha213/learn-python/assets/74671946/b6a745f4-8380-42fe-ac2a-483fd952d75f)
 
 ### Implementation of Box Plot with Outliers (visual representation of the sales distribution for each product, and the outliers highlight months with exceptionally high or low sales)
 
 ```Python
 import matplotlib.pyplot as plt
-
 import numpy as np
 
-### Data for monthly sales
-
+# Data for monthly sales
 product_A_sales = [100, 110, 95, 105, 115, 90, 120, 130, 80, 125, 150, 200]
-
 product_B_sales = [90, 105, 100, 98, 102, 105, 110, 95, 112, 88, 115, 250]
-
 product_C_sales = [80, 85, 90, 78, 82, 85, 88, 92, 75, 85, 200, 95]
 
-### Introducing outliers 
-
+# Introducing outliers 
 product_A_sales.extend([300, 80])
-
 product_B_sales.extend([50, 300])
-
 product_C_sales.extend([70, 250])
 
-### Creating a box plot with outliers
-
+# Creating a box plot with outliers
 plt.boxplot([product_A_sales, product_B_sales, product_C_sales], sym='o')
-
 plt.title('Monthly Sales Performance by Product with Outliers')
-
 plt.xlabel('Products')
-
 plt.ylabel('Sales')
 
 plt.show()
 ```
 
-# Output
+## Output
 ![image](https://github.com/Vrisha213/learn-python/assets/74671946/492238b8-af94-4c0c-ac6e-1c02e3fd6709)
 
 ### Implementation of Grouped Box Plot (to compare the exam scores of students from three different classes (A, B, and C))
 
 ```Python
 import matplotlib.pyplot as plt
-
 import numpy as np
 
 class_A_scores = [75, 80, 85, 90, 95]
-
 class_B_scores = [70, 75, 80, 85, 90]
-
 class_C_scores = [65, 70, 75, 80, 85]
 
-### Creating a grouped box plot
-
+# Creating a grouped box plot
 plt.boxplot([class_A_scores, class_B_scores, class_C_scores], labels=['Class A', 'Class B', 'Class C'])
-
 plt.title('Exam Scores by Class')
-
 plt.xlabel('Classes')
-
 plt.ylabel('Scores')
 
 plt.show()
 ```
 
-# Output
+## Output
 ![image](https://github.com/Vrisha213/learn-python/assets/74671946/7cbf0fe6-f204-47b7-a91c-a42afb62af02)
