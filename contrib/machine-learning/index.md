@@ -18,3 +18,4 @@
 - [Types_of_Cost_Functions](cost-functions.md)
 - [Clustering](clustering.md)
 - [Grid Search](grid-search.md)
+- [Tensors on GPUs](Use_GPU_In_PyTorch.md)
