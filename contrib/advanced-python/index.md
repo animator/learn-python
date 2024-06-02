@@ -7,4 +7,6 @@
 - [Regular Expressions in Python](regular_expressions.md)
 - [JSON module](json-module.md)
 - [Map Function](map-function.md)
+- [Protocols](protocols.md)
+- [Exception Handling in Python](exception-handling.md)
 - [Python's GIL and Concurrency](GIL_Concurrency.md)
