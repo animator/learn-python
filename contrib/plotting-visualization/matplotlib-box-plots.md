@@ -55,6 +55,7 @@ plt.boxplot(data)
 
 # Show plot
 plt.show()
+'''
 
 ![image](https://github.com/Vrisha213/learn-python/assets/74671946/0e61fa72-56de-43ba-a93d-25a0f3c7ae43)
 
