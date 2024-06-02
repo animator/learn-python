@@ -2,31 +2,6 @@
 
 Random Forest is a versatile machine learning algorithm capable of performing both regression and classification tasks. It is an ensemble method that operates by constructing a multitude of decision trees during training and outputting the average prediction of the individual trees (for regression) or the mode of the classes (for classification).
 
-
-- [Random Forest](#random-forest)
-  - [Introduction](#introduction)
-  - [How Random Forest Works](#how-random-forest-works)
-    - [1. Bootstrap Sampling:](#1-bootstrap-sampling)
-    - [2. Decision Trees:](#2-decision-trees)
-    - [3. Feature Selection:](#3-feature-selection)
-    - [4. Voting/Averaging:](#4-votingaveraging)
-    - [Detailed Working Mechanism](#detailed-working-mechanism)
-      - [Step 3: Aggregation:](#step-3-aggregation)
-    - [Advantages and Disadvantages](#advantages-and-disadvantages)
-      - [Advantages](#advantages)
-      - [Disadvantages](#disadvantages)
-    - [Hyperparameters](#hyperparameters)
-      - [Key Hyperparameters](#key-hyperparameters)
-        - [Tuning Hyperparameters](#tuning-hyperparameters)
-    - [Code Examples](#code-examples)
-      - [Classification Example](#classification-example)
-      - [Feature Importance](#feature-importance)
-      - [Hyperparameter Tuning](#hyperparameter-tuning)
-      - [Regression Example](#regression-example)
-  - [Conclusion](#conclusion)
-  - [References](#references)
-
-
 ## Introduction
 Random Forest is an ensemble learning method used for classification and regression tasks. It is built from multiple decision trees and combines their outputs to improve the model's accuracy and control over-fitting.
 
@@ -41,9 +16,9 @@ Random Forest is an ensemble learning method used for classification and regress
 For classification, the mode of the classes predicted by individual trees is taken (majority vote).
 For regression, the average of the outputs of the individual trees is taken.
 ### Detailed Working Mechanism
-* #### Step 1: Bootstrap Sampling:
+#### Step 1: Bootstrap Sampling:
  Each tree is trained on a random sample of the original data, drawn with replacement (bootstrap sample). This means some data points may appear multiple times in a sample while others may not appear at all.
-* #### Step 2: Tree Construction:
+#### Step 2: Tree Construction:
  Each node in the tree is split using the best split among a random subset of the features. This process adds an additional layer of randomness, contributing to the robustness of the model.
 #### Step 3: Aggregation:
  For classification tasks, the final prediction is based on the majority vote from all the trees. For regression tasks, the final prediction is the average of all the tree predictions.
@@ -73,7 +48,7 @@ Hyperparameter tuning can significantly improve the performance of a Random Fore
 #### Classification Example
 Below is a simple example of using Random Forest for a classification task with the Iris dataset.
 
-```
+```python
 import numpy as np
 import pandas as pd
 from sklearn.datasets import load_iris
@@ -109,7 +84,7 @@ print("Classification Report:\n", classification_report(y_test, y_pred))
 Random Forest provides a way to measure the importance of each feature in making predictions.
 
 
-```
+```python
 import matplotlib.pyplot as plt
 
 # Get feature importances
@@ -132,7 +107,7 @@ plt.show()
 #### Hyperparameter Tuning
 Using Grid Search for hyperparameter tuning.
 
-```
+```python
 from sklearn.model_selection import GridSearchCV
 
 # Define the parameter grid
@@ -155,7 +130,7 @@ print("Best parameters found: ", grid_search.best_params_)
 #### Regression Example
 Below is a simple example of using Random Forest for a regression task with the Boston housing dataset.
 
-```
+```python
 import numpy as np
 import pandas as pd
 from sklearn.datasets import load_boston
