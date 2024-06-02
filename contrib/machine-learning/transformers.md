@@ -430,4 +430,11 @@ These may include:
 - Text generation
 - Biological sequence analysis
 - Computer code generation
-- Video analysis
+
+## Bibliography
+- [Attention Is All You Need](https://arxiv.org/pdf/1706.03762)
+- [Tensorflow Tutorial](https://www.tensorflow.org/text/tutorials/transformer)
+- [Tensorflow Models Docs](https://www.tensorflow.org/api_docs/python/tfm/nlp/layers)
+- [Wikipedia](https://en.wikipedia.org/wiki/Transformer_(deep_learning_architecture))
+- [HuggingFace](https://huggingface.co/docs/transformers/en/index)
+- [PyTorch](https://pytorch.org/docs/stable/generated/torch.nn.Transformer.html)
