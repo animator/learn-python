@@ -7,7 +7,7 @@ Transformers are a revolutionary approach to natural language processing (NLP). 
 
 ## Model Architecture
 <p align="center">
-    <img src="https://github.com/SAM-DEV007/learn-python/assets/60264918/c290ed33-46ff-4b80-8212-47cfe7fbceb3" alt="Model Architecture" /><br>
+    <img src="assets/transformer-architecture.png" alt="Model Architecture" /><br>
 Source: <a href="https://arxiv.org/pdf/1706.03762">Attention Is All You Need</a> - Figure 1
 </p>
 
