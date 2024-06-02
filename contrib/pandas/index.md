@@ -1,6 +1,7 @@
 # List of sections
 
 - [Pandas Introduction and Dataframes in Pandas](introduction.md)
+- [Viewing data in pandas](viewing-data.md)
 - [Pandas Series Vs NumPy ndarray](pandas-series-vs-numpy-ndarray.md)
 - [Pandas Descriptive Statistics](descriptive-statistics.md)
 - [Group By Functions with Pandas](groupby-functions.md)
