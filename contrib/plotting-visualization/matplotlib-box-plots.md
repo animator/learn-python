@@ -1,6 +1,6 @@
 # Box Plot 
 
-A box plot represents the distribution of a dataset in a graph. It displays the summary statistics of a dataset, including the minimum, first quartile (Q1), median (Q2), third quartile (Q3), and maximum. The box represents the interquartile range (IQR) between the first and third quartiles, while whiskers extend from the box to the minimum and maximum values. Outliers, if present, may be displayed as individual points beyond the whiskers.
+A box plot represents the distribution of a dataset in a graph. It displays the summary statistics of a dataset, including the minimum, first quartile (Q1), median (Q2), third quartile (Q3) and maximum. The box represents the interquartile range (IQR) between the first and third quartiles, while whiskers extend from the box to the minimum and maximum values. Outliers, if present, may be displayed as individual points beyond the whiskers.
 
 For example - Imagine you have the exam scores of students from three classes. A box plot is a way to show how these scores are spread out.
 
