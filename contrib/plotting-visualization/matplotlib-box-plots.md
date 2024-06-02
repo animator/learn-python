@@ -39,7 +39,7 @@ Syntax - matplotlib.pyplot.boxplot(data,notch=none,vert=none,patch_artist,widths
 9. order: It sets the order of the boxplot.
 10. bootstrap: It accepts the integer value, which specifies the range of the notched boxplot.
 
-## Implementation of Box Plot in Python
+### Implementation of Box Plot in Python
 
 ```Python
 import matplotlib.pyplot as plt
@@ -57,7 +57,7 @@ plt.boxplot(data)
 plt.show()
 ```
 
-## Output
+### Output
 ![image](https://github.com/Vrisha213/learn-python/assets/74671946/0e61fa72-56de-43ba-a93d-25a0f3c7ae43)
 
 ### Implementation of Multiple Box Plot in Python
@@ -80,7 +80,7 @@ bp = ax.boxplot(dataSet)
 plt.show()  
 ```
 
-## Output
+### Output
 ![image](https://github.com/Vrisha213/learn-python/assets/74671946/b6a745f4-8380-42fe-ac2a-483fd952d75f)
 
 ### Implementation of Box Plot with Outliers (visual representation of the sales distribution for each product, and the outliers highlight months with exceptionally high or low sales)
@@ -108,7 +108,7 @@ plt.ylabel('Sales')
 plt.show()
 ```
 
-## Output
+### Output
 ![image](https://github.com/Vrisha213/learn-python/assets/74671946/492238b8-af94-4c0c-ac6e-1c02e3fd6709)
 
 ### Implementation of Grouped Box Plot (to compare the exam scores of students from three different classes (A, B, and C))
@@ -130,5 +130,5 @@ plt.ylabel('Scores')
 plt.show()
 ```
 
-## Output
+### Output
 ![image](https://github.com/Vrisha213/learn-python/assets/74671946/7cbf0fe6-f204-47b7-a91c-a42afb62af02)
