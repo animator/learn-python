@@ -10,4 +10,4 @@
 - [Protocols](protocols.md)
 - [Exception Handling in Python](exception-handling.md)
 - [Generators](generators.md)
-- [List Comprehension](#list_comprehension.md)
+- [List Comprehension](list_comprehension.md)
