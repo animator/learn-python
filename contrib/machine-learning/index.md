@@ -16,4 +16,4 @@
 - [Types_of_Cost_Functions](cost-functions.md)
 - [Clustering](clustering.md)
 - [Grid Search](grid-search.md)
-- [Overview of Flask framework & Deploying ML model using Flask](Flask-guide.md)
+- [Overview of Flask framework & Deploying ML model using Flask](flask-guide.md)
