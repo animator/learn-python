@@ -57,10 +57,12 @@ plt.boxplot(data)
 plt.show()
 ```
 
+# Output
 ![image](https://github.com/Vrisha213/learn-python/assets/74671946/0e61fa72-56de-43ba-a93d-25a0f3c7ae43)
 
 ### Implementation of Multiple Box Plot in Python
 
+```Python
 import matplotlib.pyplot as plt  
 
 import numpy as np  
@@ -84,11 +86,14 @@ ax = figure.add_axes([0, 0, 1, 1])
 bp = ax.boxplot(dataSet)  
 
 plt.show()  
+```
 
+# Output
 ![image](https://github.com/Vrisha213/learn-python/assets/74671946/b6a745f4-8380-42fe-ac2a-483fd952d75f)
 
 ### Implementation of Box Plot with Outliers (visual representation of the sales distribution for each product, and the outliers highlight months with exceptionally high or low sales)
 
+```Python
 import matplotlib.pyplot as plt
 
 import numpy as np
@@ -120,11 +125,14 @@ plt.xlabel('Products')
 plt.ylabel('Sales')
 
 plt.show()
+```
 
+# Output
 ![image](https://github.com/Vrisha213/learn-python/assets/74671946/492238b8-af94-4c0c-ac6e-1c02e3fd6709)
 
 ### Implementation of Grouped Box Plot (to compare the exam scores of students from three different classes (A, B, and C))
 
+```Python
 import matplotlib.pyplot as plt
 
 import numpy as np
@@ -146,5 +154,7 @@ plt.xlabel('Classes')
 plt.ylabel('Scores')
 
 plt.show()
+```
 
+# Output
 ![image](https://github.com/Vrisha213/learn-python/assets/74671946/7cbf0fe6-f204-47b7-a91c-a42afb62af02)
