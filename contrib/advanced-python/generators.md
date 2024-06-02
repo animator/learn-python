@@ -1,8 +1,8 @@
-# Generators Under Advanced Python
+# Generators
 
 ## Introduction
 
-Generators in Python are a sophisticated feature that enables the creation of iterators without the need to construct a full list in memory. They allow you to generate values on-the-fly, which is particularly beneficial for working with large datasets or infinite sequences. In this README, we'll explore generators in depth, covering their types, mathematical formulation, advantages, disadvantages, and implementation examples.
+Generators in Python are a sophisticated feature that enables the creation of iterators without the need to construct a full list in memory. They allow you to generate values on-the-fly, which is particularly beneficial for working with large datasets or infinite sequences. We will explore generators in depth, covering their types, mathematical formulation, advantages, disadvantages, and implementation examples.
 
 ## Function Generators
 
