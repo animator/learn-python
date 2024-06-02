@@ -2,3 +2,4 @@
 
 - [Section title](filename.md)
 - [Introduction to Flask](flask.md)
+- [Introduction to Beautiful Soup](beautifulSoup.md)
