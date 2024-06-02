@@ -7,4 +7,4 @@
 - [Regular Expressions in Python](regular_expressions.md)
 - [JSON module](json-module.md)
 - [Map Function](map-function.md)
-- [Eval function](eval_function.md)
+- [Understanding Eval function](eval_function.md)
