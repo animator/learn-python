@@ -13,3 +13,4 @@
 - [Stacks in Python](stacks.md)
 - [Sliding Window Technique](sliding-window.md)
 - [Trie](trie.md)
+- [Dijkstra's Algorithm](Dijkstra's_algorithm.md)
