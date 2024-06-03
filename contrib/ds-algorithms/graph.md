@@ -231,7 +231,7 @@ Dijkstra’s algorithm is a popular algorithms for solving many single-source sh
 ## Working of Dijkstra's Algorithm
 The algorithm will generate the shortest path from node 0 to all the other nodes in the graph.
 
-![Dijkstra](/docs/images/g1.png)
+![Dijkstra](images/g1.png)
 
 
 For this graph, we will assume that the weight of the edges represents the distance between two nodes.
@@ -386,8 +386,8 @@ The algorithm proceeds as follows:
 
 **Complexity Analysis:**
 
-- **Time Complexity:** O($V^2$) in the worst case, where V is the number of vertices. This can be improved to O(V^2) with some optimizations.
-- **Auxiliary Space:** O(V), where V is the number of vertices and E is the number of edges in the graph.
+- **Time Complexity:** O($V^2$) in the worst case, where V is the number of vertices. This can be improved to O($V^2$) with some optimizations.
+- **Auxiliary Space:** $O(V)$, where V is the number of vertices and E is the number of edges in the graph.
 
 <br>
 <br>
@@ -408,7 +408,7 @@ In order to detect whether a negative cycle exists or not, relax all the edge on
 
 ## Working of Bellman-Ford Algorithm to Detect the Negative cycle in the graph:
 
-![bell](/docs/images/g10.png)
+![bell](images/g10.png)
 - `Step 1:` Initialize a distance array Dist[] to store the shortest distance for each vertex from the source vertex. Initially distance of source will be 0 and Distance of other vertices will be infinity.
 
 - `Step 2:` Start relaxing the edges, during 1st Relaxation: <br>
@@ -536,45 +536,45 @@ The Floyd Warshall Algorithm is an all pair shortest path algorithm unlike Dijks
 
 
 
-![fig](/docs/images/g2.png)
+![fig](images/g2.png)
 - `Step 1:` Initialize the Distance[][] matrix using the input graph such that Distance[i][j]= weight of edge from i to j, also Distance[i][j] = Infinity if there is no edge from i to j.
 
-![fig 1](/docs/images/g3.png)
+![fig 1](images/g3.png)
 
 - `Step 2:`Treat node A as an intermediate node and calculate the Distance[][] for every {i,j} node pair using the formula: <br>
 = Distance[i][j] = minimum (Distance[i][j], (Distance from i to A) + (Distance from A to j ))<br>
 = Distance[i][j] = minimum (Distance[i][j], Distance[i][A] + Distance[A][j])
 
 
-![fig 2](/docs/images/g4.png)
+![fig 2](images/g4.png)
 
 - `Step 3:` Treat node B as an intermediate node and calculate the Distance[][] for every {i,j} node pair using the formula:<br>
 = Distance[i][j] = minimum (Distance[i][j], (Distance from i to B) + (Distance from B to j ))<br>
 = Distance[i][j] = minimum (Distance[i][j], Distance[i][B] + Distance[B][j])
 
 
-![fig 3](/docs/images/g5.png)
+![fig 3](images/g5.png)
 - `Step 4:` Treat node C as an intermediate node and calculate the Distance[][] for every {i,j} node pair using the formula:<br>
 = Distance[i][j] = minimum (Distance[i][j], (Distance from i to C) + (Distance from C to j ))<br>
 = Distance[i][j] = minimum (Distance[i][j], Distance[i][C] + Distance[C][j])
 
-![fig 4](/docs/images/g6.png)
+![fig 4](images/g6.png)
 
 - `Step 5:` Treat node D as an intermediate node and calculate the Distance[][] for every {i,j} node pair using the formula:<br>
 = Distance[i][j] = minimum (Distance[i][j], (Distance from i to D) + (Distance from D to j ))<br>
 = Distance[i][j] = minimum (Distance[i][j], Distance[i][D] + Distance[D][j])
 
-![fig 5](/docs/images/g7.png)
+![fig 5](images/g7.png)
 
 - `Step 6:` Treat node E as an intermediate node and calculate the Distance[][] for every {i,j} node pair using the formula:<br>
 = Distance[i][j] = minimum (Distance[i][j], (Distance from i to E) + (Distance from E to j ))<br>
 = Distance[i][j] = minimum (Distance[i][j], Distance[i][E] + Distance[E][j])
 
-![fig 6](/docs/images/g8.png)
+![fig 6](images/g8.png)
 
 - `Step 7:` Since all the nodes have been treated as an intermediate node, we can now return the updated Distance[][] matrix as our answer matrix.
 
-![fig 7](/docs/images/g9.png)
+![fig 7](images/g9.png)
 
 
 
