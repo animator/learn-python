@@ -2,7 +2,7 @@
 * A scatter plot is a type of data visualization that uses dots to show values for two variables, with one variable on the x-axis and the other on the y-axis. It's useful for identifying relationships, trends, and correlations, as well as spotting clusters and outliers.
 * The dots on the plot shows how the variables are related. A scatter plot is made with the matplotlib library's `scatter() method`.
 ## Syntax
-**Here's how to write code for the scatter() method:**
+**Here's how to write code for the `scatter() method`:**
 ```
 matplotlib.pyplot.scatter (x_axis_value, y_axis_value, s = None, c = None, vmin = None, vmax = None, marker = None, cmap = None, alpha = None, linewidths = None, edgecolors = None)
 
@@ -30,7 +30,7 @@ plt.show()
 
 When executed, this will show the following Scatter plot:
 
-
+![Basic line Chart](images/simple_scatter.png)
 
 ## Compare Plots
 
@@ -55,6 +55,8 @@ plt.show()
 
 When executed, this will show the following Compare Scatter plot:
 
+![Compare Plots](images/scatter_compare.png)
+
 ## Colors in Scatter plot
 You can set your own color for each scatter plot with the `color` or the `c` argument:
 
@@ -75,10 +77,12 @@ plt.show()
 
 When executed, this will show the following Colors Scatter plot:
 
+![Colors in Scatter plot](images/scatter_color.png)
+
 ## Color Each Dot
 You can even set a specific color for each dot by using an array of colors as value for the `c` argument:
 
-``**Note:** You cannot use the `color` argument for this, only the `c` argument.``
+``Note: You cannot use the `color` argument for this, only the `c` argument.``
 
 ```
 import matplotlib.pyplot as plt
@@ -95,6 +99,8 @@ plt.show()
 
 When executed, this will show the following Color Each Dot:
 
+![Color Each Dot](images/scatter_coloreachdot.png)
+
 ## ColorMap
 The Matplotlib module has a number of available colormaps.
 
@@ -102,8 +108,7 @@ A colormap is like a list of colors, where each color has a value that ranges fr
 
 Here is an example of a colormap:
 
-
-
+![ColorMap](images/img_colorbar.png)
 
 This colormap is called 'viridis' and as you can see it ranges from 0, which is a purple color, up to 100, which is a yellow color.
 
@@ -127,7 +132,7 @@ plt.show()
 
 When executed, this will show the following Scatter ColorMap:
 
-
+![Scatter ColorMap](images/scatter_colormap1.png)
 
 You can include the colormap in the drawing by including the `plt.colorbar()` statement:
 
@@ -148,7 +153,7 @@ plt.show()
 
 When executed, this will show the following Scatter ColorMap using `plt.colorbar()`:
 
-
+![Scatter ColorMap1](images/scatter_colormap2.png)
 
 
 
