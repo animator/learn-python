@@ -5,6 +5,7 @@ It is not a single algorithm but a family of algorithms where all of them share 
 
 ## Bayes’ Theorem:
 Bayes’ Theorem finds the probability of an event occurring given the probability of another event that has already occurred. Bayes’ theorem is stated mathematically as the following equation:
+
 ![img.png](img.png)
 
 where A and B are events and P(B) ≠ 0
@@ -30,6 +31,7 @@ In the context of a Naive Bayes classifier, we are interested in finding the mos
 Consider a simple example where we want to classify emails as "spam" or "not spam" based on features like the presence of certain keywords.
 
 #### Training Data
+
 ![img_1.png](img_1.png)
 
 ##### Calculating Priors:
@@ -67,10 +69,14 @@ P(Spam|Keywords) > P(Not Spam|Keywords), we classify the new email as "Spam".
 
 #### 1. Gaussian Naive Bayes: 
 In Gaussian Naive Bayes, continuous values associated with each feature are assumed to be distributed according to a Gaussian distribution. A Gaussian distribution is also called Normal distribution When plotted, it gives a bell shaped curve which is symmetric about the mean of the feature values as shown below:
+
 ![img_2.png](img_2.png)
+
 * Assumption: Each feature follows a Gaussian distribution.
 * Formula: The likelihood of the features given the class is computed using the Gaussian (normal) distribution formula:
+
 ![img_3.png](img_3.png)
+
 where 𝜇𝐶 and 𝜎𝐶 are the mean and standard deviation of the feature 𝑥𝑖 for class C.
 
 
@@ -103,6 +109,7 @@ Feature vectors represent the frequencies with which certain events have been ge
 Typically used for discrete features, especially for text (or document) classification problems like spam detection, where features represent word counts.
 * Assumption: Features represent the number of times events (e.g., words) occur.
 * Formula: The likelihood of the features given the class is computed using the multinomial distribution formula:
+
 ![img_3.png](img_3.png)
 
 where n(c,xi) is the count of feature 𝑥𝑖 in class 𝐶, N(C) is the total count of all features in class C, n is the number of features, and 𝛼 is a smoothing parameter.
@@ -112,6 +119,7 @@ In the multivariate Bernoulli event model, features are independent booleans (bi
 Used for binary/boolean features, where features represent binary occurrences (e.g., word presence/absence in text).
 * Assumption: Features are binary (e.g., word presence/absence).
 * Formula: The likelihood of the features given the class is computed using the Bernoulli distribution formula:
+
 ![img_4.png](img_4.png)
 
 where 𝑝(𝑖,𝐶) is the probability of feature 𝑥𝑖 being 1 in class C.
