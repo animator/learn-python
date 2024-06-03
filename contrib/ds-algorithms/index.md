@@ -1,5 +1,6 @@
 # List of sections
 
+- [Time & Space Complexity](time-space-complexity.md)
 - [Queues in Python](Queues.md)
 - [Graphs](graph.md)
 - [Sorting Algorithms](sorting-algorithms.md)
@@ -8,3 +9,7 @@
 - [Searching Algorithms](searching-algorithms.md)
 - [Greedy Algorithms](greedy-algorithms.md)
 - [Dynamic Programming](dynamic-programming.md)
+- [Linked list](linked-list.md)
+- [Stacks in Python](stacks.md)
+- [Sliding Window Technique](sliding-window.md)
+- [Trie](trie.md)

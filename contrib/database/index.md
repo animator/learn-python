@@ -1,3 +1,4 @@
 # List of sections
 
-- [Section title](filename.md)
+- [Introduction to MySQL and Queries](intro_mysql_queries.md)
+- [SQLAlchemy and Aggregation Functions](sqlalchemy-aggregation.md)
