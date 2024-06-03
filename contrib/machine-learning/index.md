@@ -18,3 +18,4 @@
 - [Types_of_Cost_Functions](cost-functions.md)
 - [Clustering](clustering.md)
 - [Grid Search](grid-search.md)
+- [Aggregation of tensors in PyTorch](Aggregation_In_PyTorch.md)
