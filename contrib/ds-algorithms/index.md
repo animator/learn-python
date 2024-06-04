@@ -13,3 +13,4 @@
 - [Stacks in Python](stacks.md)
 - [Sliding Window Technique](sliding-window.md)
 - [Trie](trie.md)
+- [Heap](heap.md)
