@@ -67,11 +67,12 @@ The K-means algorithm follows an iterative approach to optimize cluster formatio
 	print("Predicted cluster for new data:", predicted_cluster)
 
  ### Output:
- Before Implementing K-Means Clustering :
+ Before Implementing K-Means Clustering 
 ![Before Implementing K-Means Clustering](https://miro.medium.com/v2/resize:fit:640/format:webp/1*jnyQxmEj7rFhazeMH7KXVg.png)
                     
  
- After Implementing K-Means Clustering:![enter image description here](https://miro.medium.com/v2/resize:fit:640/format:webp/1*H3L3EH3Jh6kWFmbec0ewKA.png)
+ After Implementing K-Means Clustering
+ ![enter image description here](https://miro.medium.com/v2/resize:fit:640/format:webp/1*H3L3EH3Jh6kWFmbec0ewKA.png)
 ## Conclusion
 **K-Means** can be applied to data that has a smaller number of dimensions, is numeric, and is continuous or can be used to find groups that have not been explicitly labeled in the data. As an example, it can be used for Document Classification, Delivery Store Optimization, or Customer Segmentation.
 
