@@ -160,3 +160,14 @@ The patterns will not match the cases and will trigger the wildcard case for the
 >>> get_class(Pet('Tommy', 'Dog'))
 Invalid
 ```
+
+### Nested Patterns
+
+### Complex Patterns
+#### Wildcard
+
+#### Guard
+
+## Summary
+
+## Further Reading
