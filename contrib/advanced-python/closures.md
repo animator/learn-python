@@ -98,4 +98,4 @@ The **i**=*i* argument in the closure function is used to capture the current va
 For more examples related to closures, [click here](https://dev.to/bshadmehr/understanding-closures-in-python-a-comprehensive-tutorial-11ld).
 
 ## Summary
-Closures in Python provide a powerful mechanism for encapsulating state and behavior, enabling more flexible and modular code. Understanding and effectively using closures enables the creation of function factories, allows functions to have state, and facilitates functional programming techniques.
+Closures in Python provide a powerful mechanism for encapsulating state and behavior, enabling more flexible and modular code. Understanding and effectively using closures enables the creation of function factories, allows functions to have state, and facilitates functional programming techniques
