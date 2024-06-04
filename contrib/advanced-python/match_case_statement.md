@@ -191,10 +191,60 @@ More than two points
 ```
 
 ### Complex Patterns
+Complex patterns are also supported in the pattern matching sequence. The complex does not mean complex numbers but rather the structure which makes the readibility to seem complex.
+
 #### Wildcard
+The wildcard used till now are in the form of `case _` where the wildcard case is used if no match is found. Furthermore, the wildcard `_` can also be used as a placeholder in complex patterns.
+
+```python
+def wildcard(value: tuple) -> None:
+    match value:
+        case ('Bob', age, 'Mechanic'):
+            print(f'Bob is mechanic of age {age}')
+        case ('Bob', age, _):
+            print(f'Bob is not a mechanic of age {age}')
+```
+O/P:
+
+The value in the above snippet is a tuple with `(Name, Age, Job)`. If the job is Mechanic and the name is Bob, the first case is triggered. But if the job is different and not a mechanic, then the other case is triggered with the wildcard.
+```
+>>> wildcard(('Bob', 18, 'Mechanic'))
+Bob is mechanic of age 18
+
+>>> wildcard(('Bob', 21, 'Engineer'))
+Bob is not a mechanic of age 21
+```
 
 #### Guard
+A `guard` is when an `if` is added to a pattern. The evaluation depends on the truth value of the guard.
+
+`nums` is the tuple which contains two integers. A guard is the first case where it checks whether the first number is greater or equal to the second number in the tuple. If it is false, then it moves to the second case, where it concludes that the first number is smaller than the second number.
+```python
+def guard(nums: tuple) -> None:
+    match nums:
+        case (x, y) if x >= y:
+            print(f'{x} is greater or equal than {y}')
+        case (x, y):
+            print(f'{x} is smaller than {y}')
+        case _:
+            print('Invalid')
+```
+O/P:
+```
+>>> guard((1, 2))
+1 is smaller than 2
+
+>>> guard((2, 1))
+2 is greater or equal than 1
+
+>>> guard((1, 1))
+1 is greater or equal than 1
+```
 
 ## Summary
+The match case statements provide an elegant and readible format to perform operations on pattern matching as compared to `if-else` statements. They are also more versatile as they provide additional functionalities on the pattern matching operations like unpacking, class matching, iterables and iterators. It can also use positional arguments for checking the patterns. They provide a powerful and concise way to handle multiple conditions and perform pattern matching
 
 ## Further Reading
+- [Python Match Case Statement - GeeksForGeeks](https://www.geeksforgeeks.org/python-match-case-statement/)
+- [PEP 634 – Structural Pattern Matching: Specification](https://peps.python.org/pep-0634/)
+- [PEP 636 – Structural Pattern Matching: Tutorial](https://peps.python.org/pep-0636/)
