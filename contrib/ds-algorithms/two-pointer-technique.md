@@ -130,5 +130,3 @@ Minimizes redundant operations and enhances performance, especially with large d
 ### Example
 - **Partitioning problems**: Efficiently partitions elements with minimal operations.
 
-
-These advantages make the two-pointer technique a valuable approach for many algorithmic challenges.
