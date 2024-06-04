@@ -77,3 +77,86 @@ match 'c':
         print('vowel')
 ```
 The output will be blank as a no-op occurs.
+
+### Patterns with a Literal and a Variable
+Pattern matching can be done by unpacking the assignments and also bind variables with it.
+```python
+def get_names(names: str) -> None:
+    match names:
+        case ('Bob', y):
+            print(f'Hello {y}')
+        case (x, 'John'):
+            print(f'Hello {x}')
+        case (x, y):
+            print(f'Hello {x} and {y}')
+        case _:
+            print('Invalid')
+```
+Here, the `names` is a tuple that contains two names. The `match` block unpacks the tuple and binds `x` and `y` based on the patterns. A wildcard case prints `Invalid` if the condition is not satisfied.
+
+O/P:
+
+In this example, the above code snippet with the parameter `names` as below and the respective output.
+```
+>>> get_names(('Bob', 'Max'))
+Hello Max
+
+>>> get_names(('Rob', 'John'))
+Hello Rob
+
+>>> get_names(('Rob', 'Max'))
+Hello Rob and Max
+
+>>> get_names(('Rob', 'Max', 'Bob'))
+Invalid
+```
+
+### Patterns with Classes
+Class structures can be used in `match` block for pattern matching. The class members can also be binded with a variable to perform certain operations. For the class structure:
+```python
+class Person:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+```
+The match case example illustrates the generic working as well as the binding of variables with the class members.
+```python
+def get_class(cls: Person) -> None:
+    match cls:
+        case Person(name='Bob', age=18):
+            print('Hello Bob with age 18')
+        case Person(name='Max', age=y):
+            print(f'Age is {y}')
+        case Person(name=x, age=18):
+            print(f'Name is {x}')
+        case Person(name=x, age=y):
+            print(f'Name and age is {x} and {y}')
+        case _:
+            print('Invalid')
+```
+O/P:
+```
+>>> get_class(Person('Bob', 18))
+Hello Bob with age 18
+
+>>> get_class(Person('Max', 21))
+Age is 21
+
+>>> get_class(Person('Rob', 18))
+Name is Rob
+
+>>> get_class(Person('Rob', 21))
+Name and age is Rob and 21
+```
+Now, if a new class is introduced in the above code snippet like below.
+```python
+class Pet:
+    def __init__(self, name, animal):
+        self.name = name
+        self.animal = animal
+```
+The patterns will not match the cases and will trigger the wildcard case for the original code snippet above with `get_class` function.
+```
+>>> get_class(Pet('Tommy', 'Dog'))
+Invalid
+```
