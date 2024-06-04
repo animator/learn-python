@@ -13,4 +13,3 @@
 - [Stacks in Python](stacks.md)
 - [Sliding Window Technique](sliding-window.md)
 - [Trie](trie.md)
-- [Two Pointer Technique](two-pointer-technique.md)
