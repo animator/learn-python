@@ -245,6 +245,8 @@ O/P:
 The match case statements provide an elegant and readible format to perform operations on pattern matching as compared to `if-else` statements. They are also more versatile as they provide additional functionalities on the pattern matching operations like unpacking, class matching, iterables and iterators. It can also use positional arguments for checking the patterns. They provide a powerful and concise way to handle multiple conditions and perform pattern matching
 
 ## Further Reading
+This article provides a brief introduction to the match case statements and the overview on the pattern matching operations. To know more, the below articles can be used for in-depth understanding of the topic.
+
 - [Python Match Case Statement - GeeksForGeeks](https://www.geeksforgeeks.org/python-match-case-statement/)
 - [PEP 634 – Structural Pattern Matching: Specification](https://peps.python.org/pep-0634/)
 - [PEP 636 – Structural Pattern Matching: Tutorial](https://peps.python.org/pep-0636/)
