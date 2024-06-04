@@ -162,6 +162,33 @@ Invalid
 ```
 
 ### Nested Patterns
+The patterns can be nested via various means. It can include the mix of the patterns mentioned earlier or can be symmetrical across. A basic of the nested pattern of a list with Patterns with a Literal and Variable is taken. Classes and Iterables can laso be included.
+```python
+def get_points(points: list) -> None:
+    match points:
+        case []:
+            print('Empty')
+        case [x]:
+            print(f'One point {x}')
+        case [x, y]:
+            print(f'Two points {x} and {y}')
+        case _:
+            print('More than two points')
+```
+O/P:
+```
+>>> get_points([])
+Empty
+
+>>> get_points([1])
+One point 1
+
+>>> get_points([1, 2])
+Two points 1 and 2
+
+>>> get_points([1, 2, 3])
+More than two points
+```
 
 ### Complex Patterns
 #### Wildcard
