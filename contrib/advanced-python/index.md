@@ -1,4 +1,4 @@
 # List of sections
 
 - [Decorators/\*args/**kwargs](decorator-kwargs-args.md)
-- [Type Hinting/\*args/**kwargs](Type_Hinting.md)
+- [Type Hinting](Type_Hinting.md)
