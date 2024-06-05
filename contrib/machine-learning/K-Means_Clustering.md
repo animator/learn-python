@@ -7,7 +7,7 @@ Unlike supervised learning algorithms that rely on labeled data for training, un
 ## The K-Means Objective
 Organize similar data points into clusters to unveil underlying patterns. The main objective is to minimize total intra-cluster variance or the squared function.
 
-![image](assets\knm.png)
+![image](assets/knm.png)
 ## Clusters and Centroids
 A cluster represents a collection of data points that share similar characteristics. K-means identifies a pre-determined number (k) of clusters within the dataset. Each cluster is represented by a centroid, which acts as its central point (imaginary or real).
 ## Minimizing In-Cluster Variation
@@ -15,7 +15,7 @@ The K-means algorithm strategically assigns each data point to a cluster such th
 ## The Meaning Behind "K-Means"
 The "means" in K-means refers to the averaging process used to compute the centroid, essentially finding the center of each cluster.
 ## K-Means Algorithm in Action
-![image](assets\km_.png)
+![image](assets/km_.png)
 The K-means algorithm follows an iterative approach to optimize cluster formation:
 
 1.  **Initial Centroid Placement:** The process begins with randomly selecting k centroids to serve as initial reference points for each cluster.
@@ -68,10 +68,11 @@ The K-means algorithm follows an iterative approach to optimize cluster formatio
 
  ### Output: 
  Before Implementing K-Means Clustering
-![Before Implementing K-Means Clustering](assets\km_2.png)
+![Before Implementing K-Means Clustering](assets/km_2.png)
                     
  After Implementing K-Means Clustering
- ![After Implementing K-Means Clustering](assets\km_3.png)
+ ![After Implementing K-Means Clustering](assets/km_3.png)
+ 
  Predicted cluster for new data: [0]
 ## Conclusion
 **K-Means** can be applied to data that has a smaller number of dimensions, is numeric, and is continuous or can be used to find groups that have not been explicitly labeled in the data. As an example, it can be used for Document Classification, Delivery Store Optimization, or Customer Segmentation.
