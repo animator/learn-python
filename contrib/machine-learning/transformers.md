@@ -20,9 +20,9 @@ The decoder is also composed of a stack of identical layers. In addition to the 
 
 ### Attention
 #### Scaled Dot-Product Attention
-The input consists of queries and keys of dimension $d_k$ , and values of dimension $d_v$. We compute the dot products of the query with all keys, divide each by $\sqrt d_k$ , and apply a softmax function to obtain the weights on the values.
+The input consists of queries and keys of dimension $d_k$ , and values of dimension $d_v$. We compute the dot products of the query with all keys, divide each by $\sqrt {d_k}$ , and apply a softmax function to obtain the weights on the values.
 
-> Attention(Q, K, V) = softmax(QK<sup>T</sup> / √d<sub>k</sub>) * V
+$$Attention(Q, K, V) = softmax(\dfrac{QK^T}{\sqrt{d_k}}) \times V$$
 
 #### Multi-Head Attention
 Instead of performing a single attention function with $d_{model}$-dimensional keys, values and queries, it is beneficial to linearly project the queries, keys and values h times with different, learned linear projections to $d_k$ , $d_k$ and $d_v$ dimensions, respectively. 
@@ -30,11 +30,11 @@ Instead of performing a single attention function with $d_{model}$-dimensional k
 Multi-head attention allows the model to jointly attend to information from different representation
 subspaces at different positions. With a single attention head, averaging inhibits this.
 
-> MultiHead(Q, K, V) = Concat(head<sub>1</sub>, <sub>...</sub>, head<sub>h</sub>) * W<sup>O</sup>
+$$MultiHead(Q, K, V) = Concat(head_1, _{...}, head_h) \times W^O$$
 
 where,
 
-> head<sub>i</sub> = Attention(Q * W<sub>i</sub><sup>Q</sup>, K * W<sub>i</sub><sup>K</sup>, V * W<sub>i</sub><sup>V</sup>)
+$$head_i = Attention(QW_i^Q, KW_i^K, VW_i^V)$$
 
 where the projections are parameter matrices.
 
@@ -42,20 +42,22 @@ where the projections are parameter matrices.
 It may be necessary to cut out attention links between some word-pairs. For example, the decoder for token position 
 $t$ should not have access to token position $t+1$.
 
-> MaskedAttention(Q, K, V) = softmax(M + (QK<sup>T</sup> / √d<sub>k</sub>)) * V
+$$MaskedAttention(Q, K, V) = softmax(M + \dfrac{QK^T}{\sqrt{d_k}}) \times V$$
 
 ### Feed-Forward Network
 Each of the layers in the encoder and decoder contains a fully connected feed-forward network, which is applied to each position separately and identically. This
 consists of two linear transformations with a ReLU activation in between.
-> FFN(x) = (max(0, (x * W1) + b1) * W2) + b2
+
+$$FFN(x) = max(0, xW_1 + b_1)W_2 + b_2$$
 
 ### Positional Encoding
 A positional encoding is a fixed-size vector representation that encapsulates the relative positions of tokens within a target sequence: it provides the transformer model with information about where the words are in the input sequence.
 
 The sine and cosine functions of different frequencies:
-> PE<sub>(pos,2i)</sub> = sin(pos/10000<sup>2i/dmodel</sup>)
 
-> PE<sub>(pos,2i+1)</sub> = cos(pos/10000<sup>2i/dmodel</sup>)
+$$PE<sub>(pos,2i)</sub> = \sin({\dfrac{pos}{10000^{\dfrac{2i}{d_{model}}}}})$$
+
+$$PE<sub>(pos,2i)</sub> = \cos({\dfrac{pos}{10000^{\dfrac{2i}{d_{model}}}}})$$
 
 ## Implementation
 ### Theory
