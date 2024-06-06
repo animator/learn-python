@@ -2,20 +2,6 @@
 
 Hierarchical Clustering is a method of cluster analysis that seeks to build a hierarchy of clusters. This README provides an overview of the hierarchical clustering algorithm, including its fundamental concepts, types, steps, and how to implement it using Python.
 
-## Table of Contents
-
-1. [Introduction](#introduction)
-2. [Concepts](#concepts)
-3. [Types of Hierarchical Clustering](#types-of-hierarchical-clustering)
-4. [Steps in Hierarchical Clustering](#steps-in-hierarchical-clustering)
-5. [Linkage Criteria](#linkage-criteria)
-6. [Implementation](#implementation)
-    - [Using Scikit-learn](#using-scikit-learn)
-    - [Code Example](#code-example)
-7. [Evaluation Metrics](#evaluation-metrics)
-8. [Conclusion](#conclusion)
-9. [References](#references)
-
 ## Introduction
 
 Hierarchical Clustering is an unsupervised learning method used to group similar objects into clusters. Unlike other clustering techniques, hierarchical clustering does not require the number of clusters to be specified beforehand. It produces a tree-like structure called a dendrogram, which displays the arrangement of the clusters and their sub-clusters.
@@ -111,9 +97,3 @@ print(data.head())
 ## Conclusion
 
 Hierarchical clustering is a versatile and intuitive method for clustering data. It is particularly useful when the number of clusters is not known beforehand. By understanding the different linkage criteria and evaluation metrics, one can effectively apply hierarchical clustering to various types of data.
-
-## References
-
-- [Scikit-learn Documentation](https://scikit-learn.org/stable/modules/clustering.html#hierarchical-clustering)
-- [Wikipedia: Hierarchical Clustering](https://en.wikipedia.org/wiki/Hierarchical_clustering)
-- [Towards Data Science: Hierarchical Clustering Explained](https://towardsdatascience.com/hierarchical-clustering-explained-925d9e1600c1)
