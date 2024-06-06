@@ -15,4 +15,5 @@
 - [Logistic Regression](logistic-regression.md)
 - [Types_of_Cost_Functions](cost-functions.md)
 - [Clustering](clustering.md)
+- [Hierarchical Clustering](hierarchical-clustering.md)
 - [Grid Search](grid-search.md)
