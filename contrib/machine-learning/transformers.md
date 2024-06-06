@@ -9,7 +9,6 @@ Transformers are a revolutionary approach to natural language processing (NLP). 
 
 ![Model Architecture](assets/transformer-architecture.png)
 
-
 Source: [Attention Is All You Need](https://arxiv.org/pdf/1706.03762)
 
 
@@ -21,12 +20,12 @@ The decoder is also composed of a stack of identical layers. In addition to the 
 
 ### Attention
 #### Scaled Dot-Product Attention
-The input consists of queries and keys of dimension dk, and values of dimension dv. We compute the dot products of the query with all keys, divide each by √d<sub>k</sub>, and apply a softmax function to obtain the weights on the values.
+The input consists of queries and keys of dimension $d_k$ , and values of dimension $d_v$. We compute the dot products of the query with all keys, divide each by $\sqrt d_k$ , and apply a softmax function to obtain the weights on the values.
 
 > Attention(Q, K, V) = softmax(QK<sup>T</sup> / √d<sub>k</sub>) * V
 
 #### Multi-Head Attention
-Instead of performing a single attention function with d<sub>model</sub>-dimensional keys, values and queries, it is beneficial to linearly project the queries, keys and values h times with different, learned linear projections to d<sub>k</sub>, d<sub>k</sub> and d<sub>v</sub> dimensions, respectively. 
+Instead of performing a single attention function with $d_{model}$-dimensional keys, values and queries, it is beneficial to linearly project the queries, keys and values h times with different, learned linear projections to $d_k$ , $d_k$ and $d_v$ dimensions, respectively. 
 
 Multi-head attention allows the model to jointly attend to information from different representation
 subspaces at different positions. With a single attention head, averaging inhibits this.
@@ -41,7 +40,7 @@ where the projections are parameter matrices.
 
 #### Masked Attention
 It may be necessary to cut out attention links between some word-pairs. For example, the decoder for token position 
-𝑡 should not have access to token position 𝑡+1.
+$t$ should not have access to token position $t+1$.
 
 > MaskedAttention(Q, K, V) = softmax(M + (QK<sup>T</sup> / √d<sub>k</sub>)) * V
 
