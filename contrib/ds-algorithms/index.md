@@ -13,3 +13,5 @@
 - [Stacks in Python](stacks.md)
 - [Sliding Window Technique](sliding-window.md)
 - [Trie](trie.md)
+- [Doubly Linked List](Doubly_linked-list.md)
+- [Circular Linked List](Circular_linked-list.md)
