@@ -6,10 +6,12 @@ mechanism. Before transformers, predecessors of attention mechanism were added t
 Transformers are a revolutionary approach to natural language processing (NLP). Unlike older models, they excel at understanding long-range connections between words. This "attention" mechanism lets them grasp the context of a sentence, making them powerful for tasks like machine translation, text summarization, and question answering. Introduced in 2017, transformers are now the backbone of many large language models, including tools you might use every day. Their ability to handle complex relationships in language is fueling advancements in AI across various fields.
 
 ## Model Architecture
-<p align="center">
-    <img src="assets/transformer-architecture.png" alt="Model Architecture" /><br>
-Source: <a href="https://arxiv.org/pdf/1706.03762">Attention Is All You Need</a> - Figure 1
-</p>
+
+![Model Architecture](assets/transformer-architecture.png)
+
+
+Source: [Attention Is All You Need](https://arxiv.org/pdf/1706.03762)
+
 
 ### Encoder
 The encoder is composed of a stack of identical layers. Each layer has two sub-layers. The first is a multi-head self-attention mechanism, and the second is a simple, positionwise fully connected feed-forward network. Each encoder consists of two major components: a self-attention mechanism and a feed-forward neural network. The self-attention mechanism accepts input encodings from the previous encoder and weights their relevance to each other to generate output encodings. The feed-forward neural network further processes each output encoding individually. These output encodings are then passed to the next encoder as its input, as well as to the decoders.
