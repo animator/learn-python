@@ -174,7 +174,9 @@ store_data = pd.read_csv("store_data.csv", header=None)
 display(store_data.head())
 print(store_data.shape)
 ```
-![image](https://github.com/Chandana-756/learn-python/assets/94692989/847623d4-c6a4-4459-adf6-171eb44eae9b)
+
+This code reads a CSV file without headers, shows the first few rows of the data, and prints out the number of rows and columns in the dataset.
+
 
 ### 3. Preprocessing on Data <br>
 Here we need a data in form of list for Apriori Algorithm. <br>
@@ -202,16 +204,18 @@ max_length = It takes the maximum number of products for the association.<br>
 ```python
 print("There are {} Relation derived.".format(len(association_results)))
 ```
-![image](https://github.com/Chandana-756/learn-python/assets/94692989/f03bf3e8-4951-409e-9959-965969658815)
+This code will count the number of items in association_results and print a message like "There are X Relation derived.", where X is the number of items in association_results.
 
-### 6. Association Rules Derived
+### 6. Association Rules Derived <br>
+If association_results is a list of lists, this code will print the first element of each sublist in association_results.
 ```python
 for i in range(0, len(association_results)):
     print(association_results[i][0])
 ```
-![image](https://github.com/Chandana-756/learn-python/assets/94692989/79937e13-ac78-468f-9e11-54cd65ec0bed)
 
-### 7. Rules Generated
+### 7. Rules Generated <br>
+This code iterates over a list called association_results, which contains results from an association rule mining algorithm. For each item in this list, it extracts and prints out certain details about the association rules.
+
 ```python
 for item in association_results:
     # first index of the inner list
@@ -230,5 +234,43 @@ for item in association_results:
     print("Lift: " + str(item[2][0][3]))
     print("=====================================")
 ```
-![image](https://github.com/Chandana-756/learn-python/assets/94692989/544da68e-e9ab-4d4f-835d-4318880bad41)
 
+### Here is the complete code for the apriori algorithm implementation:
+```python
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+from apyori import apriori
+
+store_data = pd.read_csv("store_data.csv", header=None)
+display(store_data.head())
+print(store_data.shape)
+
+records = []
+for i in range(1, 7501):
+    records.append([str(store_data.values[i, j]) for j in range(0, 20)])
+association_rules = apriori(records, min_support=0.0045, min_confidence=0.2, min_lift=3, min_length=2)
+association_results = list(association_rules)
+
+print("There are {} Relation derived.".format(len(association_results)))
+
+
+for i in range(0, len(association_results)):
+    print(association_results[i][0])
+
+for item in association_results:
+    # first index of the inner list
+    # Contains base item and add item
+    pair = item[0]
+    items = [x for x in pair]
+    print("Rule: " + items[0] + " -> " + items[1])
+
+    # second index of the inner list
+    print("Support: " + str(item[1]))
+
+    # third index of the list located at 0th
+    # of the third index of the inner list
+
+    print("Confidence: " + str(item[2][0][2]))
+    print("Lift: " + str(item[2][0][3]))
+    print("=====================================")
