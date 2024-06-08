@@ -11,6 +11,7 @@
 - [Introduction To Convolutional Neural Networks (CNNs)](intro-to-cnn.md)
 - [TensorFlow.md](tensorflow.md)
 - [PyTorch.md](pytorch.md)
+- [Ensemble Learning](ensemble-learning.md)
 - [Types of optimizers](types-of-optimizers.md)
 - [Logistic Regression](logistic-regression.md)
 - [Types_of_Cost_Functions](cost-functions.md)
