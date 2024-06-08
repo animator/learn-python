@@ -247,6 +247,5 @@ The match case statements provide an elegant and readible format to perform oper
 ## Further Reading
 This article provides a brief introduction to the match case statements and the overview on the pattern matching operations. To know more, the below articles can be used for in-depth understanding of the topic.
 
-- [Python Match Case Statement - GeeksForGeeks](https://www.geeksforgeeks.org/python-match-case-statement/)
 - [PEP 634 – Structural Pattern Matching: Specification](https://peps.python.org/pep-0634/)
 - [PEP 636 – Structural Pattern Matching: Tutorial](https://peps.python.org/pep-0636/)
