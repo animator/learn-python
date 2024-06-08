@@ -2,6 +2,7 @@
 
 - [OOPs](oops.md)
 - [Decorators/\*args/**kwargs](decorator-kwargs-args.md)
+- ['itertools' module](itertools.md)
 - [Type Hinting](type-hinting.md)
 - [Lambda Function](lambda-function.md)
 - [Working with Dates & Times in Python](dates_and_times.md)
