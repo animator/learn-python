@@ -20,3 +20,4 @@
 - [Grid Search](grid-search.md)
 - [Transformers](transformers.md)
 - [K-nearest neighbor (KNN)](knn.md)
+- [Aggregation of Tensors in PyTorch](Aggregation_In_PyTorch.md)
