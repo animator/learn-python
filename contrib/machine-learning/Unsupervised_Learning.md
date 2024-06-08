@@ -1,6 +1,6 @@
 # Unsupervised Learning
 Unsupervised learning is a machine learning paradigm where models are trained on unlabeled data to uncover patterns and structures inherent in the data without explicit guidance or supervision. Unlike supervised learning, which relies on labeled examples to learn from, unsupervised learning algorithms explore the data on their own, seeking to extract meaningful insights and representations.
-![enter image description here](https://miro.medium.com/v2/resize:fit:1100/format:webp/1*4J1TzHHEmNdWHUwarzbLJg.jpeg)
+![image](assets/un_1.webp)
 Three of the most popular unsupervised learning tasks are:
 
 -   **Dimensionality Reduction**— the task of reducing the number of input features in a dataset,
