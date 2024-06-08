@@ -20,3 +20,4 @@
 - [Grid Search](grid-search.md)
 - [Transformers](transformers.md)
 - [K-nearest neighbor (KNN)](knn.md)
+- [Run Tensors on GPUs](Use_GPU_In_PyTorch.md)
