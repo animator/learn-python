@@ -20,3 +20,4 @@
 - [Grid Search](grid-search.md)
 - [Transformers](transformers.md)
 - [K-nearest neighbor (KNN)](knn.md)
+- [Tensors Manipulation](Tensor_Manipulation.md)
