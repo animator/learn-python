@@ -12,6 +12,7 @@
 - [Protocols](protocols.md)
 - [Exception Handling in Python](exception-handling.md)
 - [Generators](generators.md)
+- [Closures](closures.md)
 - [Filter](filter-function.md)
 - [Reduce](reduce-function.md)
 - [List Comprehension](list-comprehension.md)
