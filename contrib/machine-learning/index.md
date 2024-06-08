@@ -17,3 +17,4 @@
 - [Clustering](clustering.md)
 - [Hierarchical Clustering](hierarchical-clustering.md)
 - [Grid Search](grid-search.md)
+- [K-nearest neighbor (KNN)](knn.md)
