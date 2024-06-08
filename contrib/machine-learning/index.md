@@ -16,4 +16,4 @@
 - [Types_of_Cost_Functions](cost-functions.md)
 - [Clustering](clustering.md)
 - [Grid Search](grid-search.md)
-- [K-nearest neighbor (KNN)](K-nearest neighbor (KNN).md)
+- [K-nearest neighbor (KNN)](knn.md)
