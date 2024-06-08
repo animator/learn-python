@@ -37,7 +37,7 @@ Gradient boosting is a powerful technique for building predictive models that ha
    2. Memory Consumption: Loading the entire training data into memory limits size, while not loading it leads to time-consuming read/write operations.
    3. Space Consumption: Pre-sorting consumes space, storing feature sorting results and split gain calculations.
    
-   XGBoosting:![enter image description here](https://miro.medium.com/v2/resize:fit:1100/format:webp/1*8Y_e29rVdBZ4pC3DFDEZDQ.png)
+   XGBoosting:![image](assets/XG_1.webp)
 ## Develop Your First XGBoost Model
 This code uses the XGBoost library to train a model on the Iris dataset, splitting the data, setting hyperparameters, training the model, making predictions, and evaluating accuracy, achieving an accuracy score of X on the testing set.
 
