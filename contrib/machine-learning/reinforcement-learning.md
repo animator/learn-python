@@ -116,7 +116,9 @@ Q-Learning is a model-free algorithm used in reinforcement learning to learn the
    - Choose an action using an exploration strategy (e.g., epsilon-greedy).
    - Take the action, observe the reward and the next state.
    - Update the Q-value of the current state-action pair using the Bellman equation:
-     \[ Q(s, a) \leftarrow Q(s, a) + \alpha \left( r + \gamma \max_{a'} Q(s', a') - Q(s, a) \right) \]
+     ```latex
+     Q(s, a) \leftarrow Q(s, a) + \alpha \left( r + \gamma \max_{a'} Q(s', a') - Q(s, a) \right)
+     ```
      where:
      - \( Q(s, a) \) is the Q-value of state \( s \) and action \( a \).
      - \( r \) is the observed reward.
@@ -139,13 +141,17 @@ Deep Q-Networks (DQN) extend Q-learning to high-dimensional state spaces using d
      - Store the transition \( (s, a, r, s') \) in the replay memory.
      - Sample a minibatch of transitions from the replay memory.
      - Compute the target Q-value for each transition:
-       \[ y_j = \begin{cases} r_j & \text{if episode terminates at step } j+1 \\
-                               r_j + \gamma \max_{a'} Q(s', a'; \theta^-) & \text{otherwise} \end{cases} \]
+       ```latex
+       y_j = \begin{cases} r_j & \text{if episode terminates at step } j+1 \\
+                               r_j + \gamma \max_{a'} Q(s', a'; \theta^-) & \text{otherwise} \end{cases}
+       ```
      where:
      - \( \theta^- \) represents the parameters of the target network.
      - \( y_j \) is the target Q-value for the \( j \)th transition.
    - Update the Q-network parameters by minimizing the temporal difference loss:
-     \[ \mathcal{L}(\theta) = \frac{1}{N} \sum_{j} (y_j - Q(s_j, a_j; \theta))^2 \]
+     ```latex
+     \mathcal{L}(\theta) = \frac{1}{N} \sum_{j} (y_j - Q(s_j, a_j; \theta))^2
+     ```
 4. Until convergence or a maximum number of episodes.
 
 ### SARSA
@@ -160,7 +166,9 @@ SARSA (State-Action-Reward-State-Action) is an on-policy temporal difference alg
      - Take action \( a \), observe the reward \( r \) and the next state \( s' \).
      - Choose the next action \( a' \) using the current policy.
      - Update the Q-value of the current state-action pair using the SARSA update rule:
-       \[ Q(s, a) \leftarrow Q(s, a) + \alpha \left( r + \gamma Q(s', a') - Q(s, a) \right) \]
+       ```latex
+       Q(s, a) \leftarrow Q(s, a) + \alpha \left( r + \gamma Q(s', a') - Q(s, a) \right)
+       ```
 3. Until convergence or a maximum number of episodes.
 
 ### REINFORCE Algorithm:
@@ -321,7 +329,7 @@ for i in range(num_rows):
         print(f"State ({i}, {j}):", Q[i, j])
 ```
 
-### Conclusion
+## Conclusion
 Congratulations on completing your journey through this comprehensive guide to reinforcement learning! Armed with this knowledge, you are well-equipped to dive deeper into the exciting world of RL, whether it's for gaming, robotics, finance, healthcare, or any other domain. Keep exploring, experimenting, and learning, and remember, the only limit to what you can achieve with reinforcement learning is your imagination.
 
 *Happy coding, and may your RL adventures be rewarding!*
