@@ -73,7 +73,7 @@ A binary tree is a non-linear data structure in which each node can have atmost 
 - **File Systems:** File systems employ binary trees to organize the folders and files, facilitating efficient search and access of files.
 - **Decision Trees:** Decision tree, a supervised learning algorithm, utilizes binary trees, with each node representing a decision and its edges showing the possible outcomes.
 - **Routing Algorithms:** In routing algorithms, binary trees are used to efficiently transfer data packets from the source to destination through a network of nodes.
-- **Searching and sorting Algorithms:** Searching algorithms like binary search and sorting algorithms like heapsort rely heavily on binary trees.
+- **Searching and sorting Algorithms:** Searching algorithms like binary search and sorting algorithms like heapsort heavily rely on binary trees.
 
 ## Implementation of Binary Tree
 
