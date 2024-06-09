@@ -100,7 +100,7 @@ print(result)
 
 ## NumPy dsplit()
 
-`numpy.dsplit()` is employed for splitting arrays along the third axis (axis=2), which is applicable for arrays with three dimensions or more.
+The`numpy.dsplit()` is employed for splitting arrays along the third axis (axis=2), which is applicable for 3D arrays and beyond.
 
 **Code**
 ```python
