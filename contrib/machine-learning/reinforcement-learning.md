@@ -116,9 +116,7 @@ Q-Learning is a model-free algorithm used in reinforcement learning to learn the
    - Choose an action using an exploration strategy (e.g., epsilon-greedy).
    - Take the action, observe the reward and the next state.
    - Update the Q-value of the current state-action pair using the Bellman equation:
-     ```latex
-     Q(s, a) \leftarrow Q(s, a) + \alpha \left( r + \gamma \max_{a'} Q(s', a') - Q(s, a) \right)
-     ```
+     <img src="https://latex.codecogs.com/svg.latex?Q(s,&space;a)&space;\leftarrow&space;Q(s,&space;a)&space;&plus;&space;\alpha&space;\left(&space;r&space;&plus;&space;\gamma&space;\max_{a'}&space;Q(s',&space;a')&space;-&space;Q(s,&space;a)&space;\right)" title="Q(s, a) \leftarrow Q(s, a) + \alpha \left( r + \gamma \max_{a'} Q(s', a') - Q(s, a) \right)" />
      where:
      - \( Q(s, a) \) is the Q-value of state \( s \) and action \( a \).
      - \( r \) is the observed reward.
@@ -141,17 +139,12 @@ Deep Q-Networks (DQN) extend Q-learning to high-dimensional state spaces using d
      - Store the transition \( (s, a, r, s') \) in the replay memory.
      - Sample a minibatch of transitions from the replay memory.
      - Compute the target Q-value for each transition:
-       ```latex
-       y_j = \begin{cases} r_j & \text{if episode terminates at step } j+1 \\
-                               r_j + \gamma \max_{a'} Q(s', a'; \theta^-) & \text{otherwise} \end{cases}
-       ```
+       <img src="https://latex.codecogs.com/svg.latex?y_j&space;=&space;\begin{cases}&space;r_j&space;&\text{if&space;episode&space;terminates&space;at&space;step&space;}&space;j&plus;1&space;\\&space;r_j&space;&plus;&space;\gamma&space;\max_{a'}&space;Q(s',&space;a';&space;\theta^-)&space;&\text{otherwise}&space;\end{cases}" title="y_j = \begin{cases} r_j &\text{if episode terminates at step } j+1 \\ r_j &+ \gamma \max_{a'} Q(s', a'; \theta^-) &\text{otherwise} \end{cases}" />
      where:
      - \( \theta^- \) represents the parameters of the target network.
      - \( y_j \) is the target Q-value for the \( j \)th transition.
    - Update the Q-network parameters by minimizing the temporal difference loss:
-     ```latex
-     \mathcal{L}(\theta) = \frac{1}{N} \sum_{j} (y_j - Q(s_j, a_j; \theta))^2
-     ```
+     <img src="https://latex.codecogs.com/svg.latex?\mathcal{L}(\theta)&space;=&space;\frac{1}{N}&space;\sum_{j}&space;(y_j&space;-&space;Q(s_j,&space;a_j;&space;\theta))^2" title="\mathcal{L}(\theta) = \frac{1}{N} \sum_{j} (y_j - Q(s_j, a_j; \theta))^2" />
 4. Until convergence or a maximum number of episodes.
 
 ### SARSA
@@ -166,9 +159,7 @@ SARSA (State-Action-Reward-State-Action) is an on-policy temporal difference alg
      - Take action \( a \), observe the reward \( r \) and the next state \( s' \).
      - Choose the next action \( a' \) using the current policy.
      - Update the Q-value of the current state-action pair using the SARSA update rule:
-       ```latex
-       Q(s, a) \leftarrow Q(s, a) + \alpha \left( r + \gamma Q(s', a') - Q(s, a) \right)
-       ```
+       <img src="https://latex.codecogs.com/svg.latex?Q(s,&space;a)&space;\leftarrow&space;Q(s,&space;a)&space;&plus;&space;\alpha&space;\left(&space;r&space;&plus;&space;\gamma&space;Q(s',&space;a')&space;-&space;Q(s,&space;a)&space;\right)" title="Q(s, a) \leftarrow Q(s, a) + \alpha \left( r + \gamma Q(s', a') - Q(s, a) \right)" />
 3. Until convergence or a maximum number of episodes.
 
 ### REINFORCE Algorithm:
