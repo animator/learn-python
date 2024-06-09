@@ -116,13 +116,13 @@ Q-Learning is a model-free algorithm used in reinforcement learning to learn the
    - Choose an action using an exploration strategy (e.g., epsilon-greedy).
    - Take the action, observe the reward and the next state.
    - Update the Q-value of the current state-action pair using the Bellman equation:
-     <img src="https://latex.codecogs.com/svg.latex?Q(s,&space;a)&space;\leftarrow&space;Q(s,&space;a)&space;&plus;&space;\alpha&space;\left(&space;r&space;&plus;&space;\gamma&space;\max_{a'}&space;Q(s',&space;a')&space;-&space;Q(s,&space;a)&space;\right)" title="Q(s, a) \leftarrow Q(s, a) + \alpha \left( r + \gamma \max_{a'} Q(s', a') - Q(s, a) \right)" />
+     <img src="https://latex.codecogs.com/svg.latex?Q(s,&space;a)&space;\leftarrow&space;Q(s,&space;a)&space;&plus;&space;\alpha&space;\left(&space;r&space;&plus;&space;\gamma&space;\max_{a'}&space;Q(s',&space;a')&space;-&space;Q(s,&space;a)&space;\right)" title="Q(s, a) \leftarrow Q(s, a) + \alpha \left( r + \gamma \max_{a'} Q(s', a') - Q(s, a) \right)" />  
      where:
-     - \( Q(s, a) \) is the Q-value of state \( s \) and action \( a \).
-     - \( r \) is the observed reward.
-     - \( s' \) is the next state.
-     - \( \alpha \) is the learning rate.
-     - \( \gamma \) is the discount factor.
+     - <img src="https://latex.codecogs.com/svg.latex?Q(s,&space;a)" title="Q(s, a)" /> is the Q-value of state <img src="https://latex.codecogs.com/svg.latex?s" title="s" /> and action<img src="https://latex.codecogs.com/svg.latex?a" title="a" />.
+     - <img src="https://latex.codecogs.com/svg.latex?r" title="r" /> is the observed reward.
+     - <img src="https://latex.codecogs.com/svg.latex?s'" title="s'" /> is the next state.
+     - <img src="https://latex.codecogs.com/svg.latex?\alpha" title="\alpha" /> is the learning rate.
+     - <img src="https://latex.codecogs.com/svg.latex?\gamma" title="\gamma" /> is the discount factor.
 3. Until convergence or a maximum number of episodes.
 
 ### Deep Q-Networks (DQN)
@@ -132,9 +132,9 @@ Deep Q-Networks (DQN) extend Q-learning to high-dimensional state spaces using d
 1. Initialize the Q-network with random weights.
 2. Initialize a target network with the same weights as the Q-network.
 3. Repeat for each episode:
-   - Initialize the environment state \( s \).
+   - Initialize the environment state <img src="https://latex.codecogs.com/svg.latex?s" title="s" />.
    - Repeat for each timestep:
-     - With probability \( \epsilon \), choose a random action. Otherwise, select the action with the highest Q-value according to the Q-network.
+     - With probability <img src="https://latex.codecogs.com/svg.latex?epsilon" title="\epsilon" />, choose a random action. Otherwise, select the action with the highest Q-value according to the Q-network.
      - Take the chosen action, observe the reward \( r \) and the next state \( s' \).
      - Store the transition \( (s, a, r, s') \) in the replay memory.
      - Sample a minibatch of transitions from the replay memory.
