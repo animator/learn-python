@@ -1,26 +1,24 @@
-# Neural Network Regression in Python
+# Neural Network Regression in Python using Scikit-learn
 
 ## Overview
 
-Neural Network Regression is a type of machine learning algorithm used to predict continuous values. Unlike classification, where the goal is to predict a category or class, regression aims to predict a specific numerical value. Neural networks are particularly powerful for regression tasks when dealing with complex, non-linear relationships in data.
+Neural Network Regression is used to predict continuous values based on input features. Scikit-learn provides an easy-to-use interface for implementing neural network models, specifically through the `MLPRegressor` class, which stands for Multi-Layer Perceptron Regressor.
 
 ## When to Use Neural Network Regression
 
 ### Suitable Scenarios
 
-1. **Complex Relationships**: When the relationship between input features and the target variable is non-linear and complex.
-2. **Large Datasets**: When you have a large dataset that can support the training of a neural network.
-3. **Feature Engineering**: When you can leverage the feature extraction capabilities of neural networks, especially in domains like image or text data.
+1. **Complex Relationships**: Ideal when the relationship between features and the target variable is complex and non-linear.
+2. **Sufficient Data**: Works well with large datasets that can support training deep learning models.
+3. **Feature Extraction**: Useful in cases where the neural network's feature extraction capabilities can be leveraged, such as with image or text data.
 
 ### Unsuitable Scenarios
 
-1. **Small Datasets**: Neural networks require substantial amounts of data to train effectively. For small datasets, simpler models like linear regression or decision trees might perform better.
-2. **Real-time Predictions**: If low-latency predictions are required and computational resources are limited, simpler models might be more efficient.
-3. **Interpretability**: If model interpretability is crucial, neural networks might not be the best choice due to their "black-box" nature.
+1. **Small Datasets**: Less effective with small datasets due to overfitting and inability to learn complex patterns.
+2. **Low-latency Predictions**: Might not be suitable for real-time applications with strict latency requirements.
+3. **Interpretability**: Not ideal when model interpretability is crucial, as neural networks are often seen as "black-box" models.
 
-## Implementing Neural Network Regression in Python
-
-We'll use TensorFlow and Keras, popular libraries for building and training neural networks in Python.
+## Implementing Neural Network Regression in Python with Scikit-learn
 
 ### Step-by-Step Implementation
 
@@ -31,9 +29,8 @@ import numpy as np
 import pandas as pd
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
-from tensorflow.keras.models import Sequential
-from tensorflow.keras.layers import Dense
-from tensorflow.keras.optimizers import Adam
+from sklearn.neural_network import MLPRegressor
+from sklearn.metrics import mean_absolute_error
 ```
 
 2. **Load and Prepare Data**
@@ -55,44 +52,33 @@ X_train = scaler.fit_transform(X_train)
 X_test = scaler.transform(X_test)
 ```
 
-3. **Build the Neural Network Model**
+3. **Build and Train the Neural Network Model**
 
 ```python
-model = Sequential()
-model.add(Dense(64, input_dim=X_train.shape[1], activation='relu'))
-model.add(Dense(64, activation='relu'))
-model.add(Dense(1))  # Output layer for regression
+# Create the MLPRegressor model
+mlp = MLPRegressor(hidden_layer_sizes=(64, 64), activation='relu', solver='adam', max_iter=500, random_state=42)
 
-model.compile(optimizer=Adam(learning_rate=0.001), loss='mse', metrics=['mae'])
+# Train the model
+mlp.fit(X_train, y_train)
 ```
 
-4. **Train the Model**
+4. **Evaluate the Model**
 
 ```python
-history = model.fit(X_train, y_train, epochs=100, batch_size=32, validation_split=0.2)
-```
+# Make predictions
+y_pred = mlp.predict(X_test)
 
-5. **Evaluate the Model**
-
-```python
-loss, mae = model.evaluate(X_test, y_test)
+# Calculate the Mean Absolute Error
+mae = mean_absolute_error(y_test, y_pred)
 print(f"Test Mean Absolute Error: {mae}")
-```
-
-6. **Make Predictions**
-
-```python
-predictions = model.predict(X_test)
 ```
 
 ### Explanation
 
-- **Data Generation and Preparation**: Synthetic data is created and split into training and test sets. The data is standardized to improve the neural network's training efficiency.
-- **Model Construction**: A simple feedforward neural network is built using Keras. It consists of two hidden layers with 64 neurons each and ReLU activation functions. The output layer has a single neuron for regression.
-- **Training**: The model is trained for 100 epochs with a batch size of 32. The Adam optimizer is used to adjust the weights.
-- **Evaluation**: The model's performance is evaluated on the test set, using Mean Absolute Error (MAE) as a metric.
-- **Prediction**: Predictions are made on the test data.
+- **Data Generation and Preparation**: Synthetic data is created, split into training and test sets, and standardized to improve the efficiency of the neural network training process.
+- **Model Construction and Training**: An `MLPRegressor` is created with two hidden layers, each containing 64 neurons and ReLU activation functions. The model is trained using the Adam optimizer for a maximum of 500 iterations.
+- **Evaluation**: The model's performance is evaluated on the test set using Mean Absolute Error (MAE) as the performance metric.
 
 ## Conclusion
 
-Neural Network Regression is a powerful tool for predicting continuous values, particularly in cases involving complex, non-linear relationships. However, they require large datasets and significant computational resources. For smaller datasets or scenarios requiring model interpretability, simpler models might be preferable. By following the steps outlined, you can build, train, and evaluate a neural network for regression tasks in Python using TensorFlow and Keras.
+Neural Network Regression with Scikit-learn's `MLPRegressor` is a powerful method for predicting continuous values in complex, non-linear scenarios. However, it's essential to ensure that you have enough data to train the model effectively and consider the computational resources required. Simpler models may be more appropriate for small datasets or when model interpretability is necessary. By following the steps outlined, you can build, train, and evaluate a neural network for regression tasks in Python using Scikit-learn.
