@@ -25,7 +25,6 @@ Reinforcement Learning (RL) is a field of Machine Learing which focuses on goal-
    - [Actor-Critic Methods](#actor-critic-methods)
 4. [Important Algorithms](#important-algorithms)
    - [Q-Learning](#q-learning) 
-   - [Deep Q-Networks](#deep-q-networks-dqn)
    - [SARSA](#sarsa)
    - [REINFORCE Algorithm](#reinforce-algorithm)
    - [Proximal Policy Optimization (PPO)](#proximal-policy-optimization-ppo)
