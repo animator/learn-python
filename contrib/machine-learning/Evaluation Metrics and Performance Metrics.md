@@ -50,9 +50,9 @@ MSE is another regression metric that calculates the average of the squared diff
 
 $$ MSE = \frac{1}{n} \sum_{i=1}^{n} (y_i - \hat{y}_i)^2 $$
 - **Parameters:**
-  - \( y_i \): Actual value of the dependent variable for the \(i\)th observation.
-  - \( \hat{y}_i \): Predicted value of the dependent variable for the \(i\)th observation.
-  - \( n \): Total number of observations.
+  - $\( y_i \)$: Actual value of the dependent variable for the \(i\)th observation.
+  - $\( \hat{y}_i \)$: Predicted value of the dependent variable for the \(i\)th observation.
+  - $\( n \)$: Total number of observations.
 
 ## 7. Root Mean Squared Error (RMSE)
 
@@ -61,16 +61,16 @@ RMSE is the square root of the MSE. It provides a measure of the spread of error
 $$ RMSE = \sqrt{\frac{1}{n} \sum_{i=1}^{n} (y_i - \hat{y}_i)^2} $$
 
 - **Parameters:**
-  - \( y_i \): Actual value of the dependent variable for the \(i\)th observation.
-  - \( \hat{y}_i \): Predicted value of the dependent variable for the \(i\)th observation.
-  - \( n \): Total number of observations.
+  - $\( y_i \)$: Actual value of the dependent variable for the \(i\)th observation.
+  - $\( \hat{y}_i \)$: Predicted value of the dependent variable for the \(i\)th observation.
+  - $\( n \)$: Total number of observations.
 
 
 ## 8. R-squared (Coefficient of Determination)
 
 The R-squared, denoted as \( R^2 \), measures the proportion of the variance in the dependent variable that is predictable from the independent variables. It indicates how well the independent variables explain the variability of the dependent variable.
 
-The formula for R-squared is:
+
 
 $$ \large R^2 = 1- \dfrac{SS_{RES}}{SS_{TOT}} = 1 - \dfrac{\sum_i(y_i - \hat y_i)^2}{\sum_i(y_i - \overline y_i)^2} $$
 
