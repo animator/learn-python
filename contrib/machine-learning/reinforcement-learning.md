@@ -57,8 +57,6 @@ Reinforcement learning involves determining the best actions to take in various 
 
 ## Key Concepts and Terminology
 
-![image](assets/rl-components.png)
-
 ### Agent
 Agent is a system or entity that learns to make decisions by interacting with an environment. The agent improves its performance by trial and error, receiving feedback from the environment in the form of rewards or punishments. 
 
@@ -118,34 +116,12 @@ Q-Learning is a model-free algorithm used in reinforcement learning to learn the
    - Update the Q-value of the current state-action pair using the Bellman equation:
      <img src="https://latex.codecogs.com/svg.latex?Q(s,&space;a)&space;\leftarrow&space;Q(s,&space;a)&space;&plus;&space;\alpha&space;\left(&space;r&space;&plus;&space;\gamma&space;\max_{a'}&space;Q(s',&space;a')&space;-&space;Q(s,&space;a)&space;\right)" title="Q(s, a) \leftarrow Q(s, a) + \alpha \left( r + \gamma \max_{a'} Q(s', a') - Q(s, a) \right)" />  
      where:
-     - <img src="https://latex.codecogs.com/svg.latex?Q(s,&space;a)" title="Q(s, a)" /> is the Q-value of state <img src="https://latex.codecogs.com/svg.latex?s" title="s" /> and action<img src="https://latex.codecogs.com/svg.latex?a" title="a" />.
+     - <img src="https://latex.codecogs.com/svg.latex?Q(s,&space;a)" title="Q(s, a)" /> is the Q-value of state <img src="https://latex.codecogs.com/svg.latex?s" title="s" /> and action <img src="https://latex.codecogs.com/svg.latex?a" title="a" />.
      - <img src="https://latex.codecogs.com/svg.latex?r" title="r" /> is the observed reward.
      - <img src="https://latex.codecogs.com/svg.latex?s'" title="s'" /> is the next state.
      - <img src="https://latex.codecogs.com/svg.latex?\alpha" title="\alpha" /> is the learning rate.
      - <img src="https://latex.codecogs.com/svg.latex?\gamma" title="\gamma" /> is the discount factor.
 3. Until convergence or a maximum number of episodes.
-
-### Deep Q-Networks (DQN)
-Deep Q-Networks (DQN) extend Q-learning to high-dimensional state spaces using deep neural networks to approximate the Q-function. It uses experience replay and target networks to improve stability and convergence.
-
-#### Algorithm:
-1. Initialize the Q-network with random weights.
-2. Initialize a target network with the same weights as the Q-network.
-3. Repeat for each episode:
-   - Initialize the environment state <img src="https://latex.codecogs.com/svg.latex?s" title="s" />.
-   - Repeat for each timestep:
-     - With probability <img src="https://latex.codecogs.com/svg.latex?epsilon" title="\epsilon" />, choose a random action. Otherwise, select the action with the highest Q-value according to the Q-network.
-     - Take the chosen action, observe the reward \( r \) and the next state \( s' \).
-     - Store the transition \( (s, a, r, s') \) in the replay memory.
-     - Sample a minibatch of transitions from the replay memory.
-     - Compute the target Q-value for each transition:
-       <img src="https://latex.codecogs.com/svg.latex?y_j&space;=&space;\begin{cases}&space;r_j&space;&\text{if&space;episode&space;terminates&space;at&space;step&space;}&space;j&plus;1&space;\\&space;r_j&space;&plus;&space;\gamma&space;\max_{a'}&space;Q(s',&space;a';&space;\theta^-)&space;&\text{otherwise}&space;\end{cases}" title="y_j = \begin{cases} r_j &\text{if episode terminates at step } j+1 \\ r_j &+ \gamma \max_{a'} Q(s', a'; \theta^-) &\text{otherwise} \end{cases}" />
-     where:
-     - \( \theta^- \) represents the parameters of the target network.
-     - \( y_j \) is the target Q-value for the \( j \)th transition.
-   - Update the Q-network parameters by minimizing the temporal difference loss:
-     <img src="https://latex.codecogs.com/svg.latex?\mathcal{L}(\theta)&space;=&space;\frac{1}{N}&space;\sum_{j}&space;(y_j&space;-&space;Q(s_j,&space;a_j;&space;\theta))^2" title="\mathcal{L}(\theta) = \frac{1}{N} \sum_{j} (y_j - Q(s_j, a_j; \theta))^2" />
-4. Until convergence or a maximum number of episodes.
 
 ### SARSA
 SARSA (State-Action-Reward-State-Action) is an on-policy temporal difference algorithm used for learning the Q-function. Unlike Q-learning, SARSA directly updates the Q-values based on the current policy.
@@ -153,11 +129,11 @@ SARSA (State-Action-Reward-State-Action) is an on-policy temporal difference alg
 #### Algorithm:
 1. Initialize Q-values arbitrarily for all state-action pairs.
 2. Repeat for each episode:
-   - Initialize the environment state \( s \).
-   - Choose an action \( a \) using the current policy (e.g., epsilon-greedy).
+   - Initialize the environment state <img src="https://latex.codecogs.com/svg.latex?s" title="s" />.
+   - Choose an action <img src="https://latex.codecogs.com/svg.latex?a" title="a" /> using the current policy (e.g., epsilon-greedy).
    - Repeat for each timestep:
-     - Take action \( a \), observe the reward \( r \) and the next state \( s' \).
-     - Choose the next action \( a' \) using the current policy.
+     - Take action <img src="https://latex.codecogs.com/svg.latex?a" title="a" />, observe the reward <img src="https://latex.codecogs.com/svg.latex?r" title="r" /> and the next state <img src="https://latex.codecogs.com/svg.latex?s'" title="s'" />.
+     - Choose the next action <img src="https://latex.codecogs.com/svg.latex?a'" title="a'" /> using the current policy.
      - Update the Q-value of the current state-action pair using the SARSA update rule:
        <img src="https://latex.codecogs.com/svg.latex?Q(s,&space;a)&space;\leftarrow&space;Q(s,&space;a)&space;&plus;&space;\alpha&space;\left(&space;r&space;&plus;&space;\gamma&space;Q(s',&space;a')&space;-&space;Q(s,&space;a)&space;\right)" title="Q(s, a) \leftarrow Q(s, a) + \alpha \left( r + \gamma Q(s', a') - Q(s, a) \right)" />
 3. Until convergence or a maximum number of episodes.
