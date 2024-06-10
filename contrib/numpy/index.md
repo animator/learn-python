@@ -11,3 +11,4 @@
 - [Sorting NumPy Arrays](sorting-array.md)
 - [NumPy Array Iteration](array-iteration.md)
 - [Concatenation of Arrays](concatenation-of-arrays.md)
+- [Statistical Operations on Arrays](statistical-operations-on-arrays)
