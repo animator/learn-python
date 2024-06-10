@@ -365,5 +365,5 @@ print("Confusion matrix: \n",confusion_matrix(y_train,y_pred))
 
 ## Conclusion
 
- Although the assumption that the features are independent of each other may limit the naive bayes model in some cases, the simplicity and efficiency of this classifier makes it a valuable and reliable model in the domain of machine learning. Naive Bayes classifiers are suitable for a wide range of classification problems.
+ We can conclude that naive bayes may limit in some cases due to the assumption that the features are independent of each other but still reliable in many cases. Naive Bayes is an efficient classifier and works even on small datasets.
   
