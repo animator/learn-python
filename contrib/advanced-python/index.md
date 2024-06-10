@@ -1,7 +1,9 @@
 # List of sections
 
-- [OOPs](OOPs.md)
+- [OOPs](oops.md)
 - [Decorators/\*args/**kwargs](decorator-kwargs-args.md)
+- ['itertools' module](itertools.md)
+- [Type Hinting](type-hinting.md)
 - [Lambda Function](lambda-function.md)
 - [Working with Dates & Times in Python](dates_and_times.md)
 - [Regular Expressions in Python](regular_expressions.md)
@@ -9,3 +11,10 @@
 - [Map Function](map-function.md)
 - [Protocols](protocols.md)
 - [Exception Handling in Python](exception-handling.md)
+- [Generators](generators.md)
+- [Match Case Statement](match-case.md)
+- [Closures](closures.md)
+- [Filter](filter-function.md)
+- [Reduce](reduce-function.md)
+- [List Comprehension](list-comprehension.md)
+- [Eval Function](eval_function.md)
