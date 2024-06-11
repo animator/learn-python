@@ -465,3 +465,99 @@ print("Sorted array:", arr)  # Output: [1, 2, 3, 5, 8]
  - **Worst Case:** `𝑂(𝑛log𝑛)`. Building the heap takes `𝑂(𝑛)` time, and each of the 𝑛 element extractions takes `𝑂(log𝑛)` time.
  - **Best Case:** `𝑂(𝑛log𝑛)`. Even if the array is already sorted, heap sort will still build the heap and perform the extractions.
  - **Average Case:** `𝑂(𝑛log𝑛)`. Similar to the worst-case, the overall complexity remains `𝑂(𝑛log𝑛)` because each insertion and deletion in a heap takes `𝑂(log𝑛)` time, and these operations are performed 𝑛 times.
+
+ ## 7. Radix Sort
+Radix Sort is a non-comparative integer sorting algorithm that sorts numbers by processing individual digits. It processes digits from the least significant digit (LSD) to the most significant digit (MSD) or vice versa. This algorithm is efficient for sorting numbers with a fixed number of digits.
+
+**Algorithm Overview:**
+- **Digit by Digit sorting:** Radix sort processes the digits of the numbers starting from either the least significant digit (LSD) or the most significant digit (MSD). Typically, LSD is used.
+- **Stable Sort:** A stable sorting algorithm like Counting Sort or Bucket Sort is used as an intermediate sorting technique. Radix Sort relies on this stability to maintain the relative order of numbers with the same digit value.
+- **Multiple passes:**  The algorithm performs multiple passes over the numbers, one for each digit, from the least significant to the most significant.
+
+### Radix Sort Code in Python
+
+```python
+def counting_sort(arr, exp):
+    n = len(arr)
+    output = [0] * n
+    count = [0] * 10
+
+    for i in range(n):
+        index = arr[i] // exp
+        count[index % 10] += 1
+
+    for i in range(1, 10):
+        count[i] += count[i - 1]
+
+    i = n - 1
+    while i >= 0:
+        index = arr[i] // exp
+        output[count[index % 10] - 1] = arr[i]
+        count[index % 10] -= 1
+        i -= 1
+
+    for i in range(n):
+        arr[i] = output[i]
+
+def radix_sort(arr):
+    max_num = max(arr)
+    exp = 1
+    while max_num // exp > 0:
+        counting_sort(arr, exp)
+        exp *= 10
+
+# Example usage
+arr = [170, 45, 75, 90]
+print("Original array:", arr)
+radix_sort(arr)
+print("Sorted array:", arr)
+```
+
+### Complexity Analysis
+ - **Time Complexity:** O(d * (n + k)) for all cases. Radix Sort always processes each digit of every number in the array.
+ - **Space Complexity:** O(n + k). This is due to the space required for:
+- The output array used in Counting Sort, which is of size n.
+- The count array used in Counting Sort, which is of size k.
+
+## 8. Counting Sort
+Counting sort is a sorting technique based on keys between a specific range. It works by counting the number of objects having distinct key values (kind of hashing). Then do some arithmetic to calculate the position of each object in the output sequence. 
+
+**Algorithm Overview:**
+- Convert the input string into a list of characters.
+- Count the occurrence of each character in the list using the collections.Counter() method.
+- Sort the keys of the resulting Counter object to get the unique characters in the list in sorted order.
+- For each character in the sorted list of keys, create a list of repeated characters using the corresponding count from the Counter object.
+- Concatenate the lists of repeated characters to form the sorted output list.
+
+
+### Counting Sort Code in Python using counter method.
+
+```python
+from collections import Counter
+
+def counting_sort(arr):
+	count = Counter(arr)
+	output = []
+	for c in sorted(count.keys()):
+		output +=  * count
+	return output
+
+arr = "geeksforgeeks"
+arr = list(arr)
+arr = counting_sort(arr)
+output = ''.join(arr)
+print("Sorted character array is", output)
+
+```
+### Counting Sort Code in Python using sorted() and reduce():
+
+```python
+from functools import reduce
+string = "geeksforgeeks"
+sorted_str = reduce(lambda x, y: x+y, sorted(string))
+print("Sorted string:", sorted_str)
+```
+
+### Complexity Analysis
+ - **Time Complexity:** O(n+k) for all cases.No matter how the elements are placed in the array, the algorithm goes through n+k times
+ - **Space Complexity:** O(max). Larger the range of elements, larger is the space complexity.
