@@ -90,11 +90,3 @@ Predicted cluster for new data: `[0]`
 
 - [Survey of Machine Learning and Data Mining Techniques used in Multimedia System](https://www.researchgate.net/publication/333457161_Survey_of_Machine_Learning_and_Data_Mining_Techniques_used_in_Multimedia_System?_tp=eyJjb250ZXh0Ijp7ImZpcnN0UGFnZSI6Il9kaXJlY3QiLCJwYWdlIjoiX2RpcmVjdCJ9fQ)
 - [A Clustering Approach for Outliers Detection in a Big Point-of-Sales Database](https://www.researchgate.net/publication/339267868_A_Clustering_Approach_for_Outliers_Detection_in_a_Big_Point-of-Sales_Database?_tp=eyJjb250ZXh0Ijp7ImZpcnN0UGFnZSI6Il9kaXJlY3QiLCJwYWdlIjoiX2RpcmVjdCJ9fQ)
-
-
-
-
- 
-
-	
-
