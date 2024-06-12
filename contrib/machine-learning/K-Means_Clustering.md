@@ -1,19 +1,25 @@
 # K-Means Clustering 
 Unsupervised Learning Algorithm for Grouping Similar Data.
+
 ## Introduction
 K-means clustering is a fundamental unsupervised machine learning algorithm that excels at grouping similar data points together. It's a popular choice due to its simplicity and efficiency in uncovering hidden patterns within unlabeled datasets.
+
 ## Unsupervised Learning
 Unlike supervised learning algorithms that rely on labeled data for training, unsupervised algorithms, like K-means, operate solely on input data (without predefined categories). Their objective is to discover inherent structures or groupings within the data.
+
 ## The K-Means Objective
 Organize similar data points into clusters to unveil underlying patterns. The main objective is to minimize total intra-cluster variance or the squared function.
 
 ![image](assets/knm.png)
 ## Clusters and Centroids
 A cluster represents a collection of data points that share similar characteristics. K-means identifies a pre-determined number (k) of clusters within the dataset. Each cluster is represented by a centroid, which acts as its central point (imaginary or real).
+
 ## Minimizing In-Cluster Variation
 The K-means algorithm strategically assigns each data point to a cluster such that the total variation within each cluster (measured by the sum of squared distances between points and their centroid) is minimized. In simpler terms, K-means strives to create clusters where data points are close to their respective centroids.
+
 ## The Meaning Behind "K-Means"
 The "means" in K-means refers to the averaging process used to compute the centroid, essentially finding the center of each cluster.
+
 ## K-Means Algorithm in Action
 ![image](assets/km_.png)
 The K-means algorithm follows an iterative approach to optimize cluster formation:
@@ -24,62 +30,66 @@ The K-means algorithm follows an iterative approach to optimize cluster formatio
 4.  **Iteration Until Convergence:** Steps 2 and 3 are repeated iteratively until a stopping criterion is met. This criterion can be either:
     -   **Centroid Stability:** No significant change occurs in the centroids' positions, indicating successful clustering.
     -   **Reaching Maximum Iterations:** A predefined number of iterations is completed.
- ##  Code
- Following is a simple implementation of K-Means.
+
+##  Code
+Following is a simple implementation of K-Means.
  
-	
-	# Generate and Visualize Sample Data
-	# import the necessary Libraries 
-	
-	import numpy as np
-	import matplotlib.pyplot as plt
+```python
+# Generate and Visualize Sample Data
+# import the necessary Libraries 
 
-    # Create data points for cluster 1 and cluster 2
-	X = -2 * np.random.rand(100, 2) 
-	X1 = 1 + 2 * np.random.rand(50, 2)
-	
-	# Combine data points from both clusters  
-	X[50:100, :] = X1
-	  
-    # Plot data points and display the plot
-	plt.scatter(X[:, 0], X[:, 1], s=50, c='b')  
-	plt.show()  
+import numpy as np
+import matplotlib.pyplot as plt
 
-	# K-Means Model Creation and Training 
-	from sklearn.cluster import KMeans
-    
-    # Create KMeans object with 2 clusters
-	kmeans = KMeans(n_clusters=2)  
-	kmeans.fit(X)  # Train the model on the data
+# Create data points for cluster 1 and cluster 2
+X = -2 * np.random.rand(100, 2) 
+X1 = 1 + 2 * np.random.rand(50, 2)
 
-	# Visualize Data Points with Centroids 
-	centroids = kmeans.cluster_centers_  # Get centroids (cluster centers)
+# Combine data points from both clusters  
+X[50:100, :] = X1
+  
+# Plot data points and display the plot
+plt.scatter(X[:, 0], X[:, 1], s=50, c='b')  
+plt.show()  
 
-	plt.scatter(X[:, 0], X[:, 1], s=50, c='b')  # Plot data points again
-	plt.scatter(centroids[0, 0], centroids[0, 1], s=200, c='g', marker='s')  # Plot centroid 1
-	plt.scatter(centroids[1, 0], centroids[1, 1], s=200, c='r', marker='s')  # Plot centroid 2
-	plt.show()  # Display the plot with centroids
+# K-Means Model Creation and Training 
+from sklearn.cluster import KMeans
 
-	# Predict Cluster Label for New Data Point 
-	new_data = np.array([-3.0, -3.0])
-	new_data_reshaped = new_data.reshape(1, -1)
-	predicted_cluster = kmeans.predict(new_data_reshaped)
-	print("Predicted cluster for new data:", predicted_cluster)
+# Create KMeans object with 2 clusters
+kmeans = KMeans(n_clusters=2)  
+kmeans.fit(X)  # Train the model on the data
 
- ### Output: 
- Before Implementing K-Means Clustering
+# Visualize Data Points with Centroids 
+centroids = kmeans.cluster_centers_  # Get centroids (cluster centers)
+
+plt.scatter(X[:, 0], X[:, 1], s=50, c='b')  # Plot data points again
+plt.scatter(centroids[0, 0], centroids[0, 1], s=200, c='g', marker='s')  # Plot centroid 1
+plt.scatter(centroids[1, 0], centroids[1, 1], s=200, c='r', marker='s')  # Plot centroid 2
+plt.show()  # Display the plot with centroids
+
+# Predict Cluster Label for New Data Point 
+new_data = np.array([-3.0, -3.0])
+new_data_reshaped = new_data.reshape(1, -1)
+predicted_cluster = kmeans.predict(new_data_reshaped)
+print("Predicted cluster for new data:", predicted_cluster)
+```
+
+### Output: 
+Before Implementing K-Means Clustering
 ![Before Implementing K-Means Clustering](assets/km_2.png)
                     
- After Implementing K-Means Clustering
- ![After Implementing K-Means Clustering](assets/km_3.png)
+After Implementing K-Means Clustering
+![After Implementing K-Means Clustering](assets/km_3.png)
  
- Predicted cluster for new data: [0]
+Predicted cluster for new data: `[0]`
+ 
 ## Conclusion
 **K-Means** can be applied to data that has a smaller number of dimensions, is numeric, and is continuous or can be used to find groups that have not been explicitly labeled in the data. As an example, it can be used for Document Classification, Delivery Store Optimization, or Customer Segmentation.
-## Reference 
-[[Survey of Machine Learning and Data Mining Techniques used in Multimedia System](https://www.researchgate.net/publication/333457161_Survey_of_Machine_Learning_and_Data_Mining_Techniques_used_in_Multimedia_System?_tp=eyJjb250ZXh0Ijp7ImZpcnN0UGFnZSI6Il9kaXJlY3QiLCJwYWdlIjoiX2RpcmVjdCJ9fQ)]
 
-[[A Clustering Approach for Outliers Detection in a Big Point-of-Sales Database](https://www.researchgate.net/publication/339267868_A_Clustering_Approach_for_Outliers_Detection_in_a_Big_Point-of-Sales_Database?_tp=eyJjb250ZXh0Ijp7ImZpcnN0UGFnZSI6Il9kaXJlY3QiLCJwYWdlIjoiX2RpcmVjdCJ9fQ)]
+## References 
+
+- [Survey of Machine Learning and Data Mining Techniques used in Multimedia System](https://www.researchgate.net/publication/333457161_Survey_of_Machine_Learning_and_Data_Mining_Techniques_used_in_Multimedia_System?_tp=eyJjb250ZXh0Ijp7ImZpcnN0UGFnZSI6Il9kaXJlY3QiLCJwYWdlIjoiX2RpcmVjdCJ9fQ)
+- [A Clustering Approach for Outliers Detection in a Big Point-of-Sales Database](https://www.researchgate.net/publication/339267868_A_Clustering_Approach_for_Outliers_Detection_in_a_Big_Point-of-Sales_Database?_tp=eyJjb250ZXh0Ijp7ImZpcnN0UGFnZSI6Il9kaXJlY3QiLCJwYWdlIjoiX2RpcmVjdCJ9fQ)
 
 
 
