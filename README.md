@@ -4649,6 +4649,15 @@ The method also accepts 2 key-worded arguments:
 - `key` is used to specify a function which is called on each list element prior to making the comparisons. 
 - `reverse` is a boolean which specifies whether the list is to be sorted in descending order.
 
+Lambda functions, also known as anonymous functions, are small, one-line functions that can be defined without a name. They are typically used when you need a simple function for a short period of time, such as when passing a function as an argument to another function (like the sort() method's key argument).
+
+The syntax for a lambda function is:
+
+lambda arguments: expression
+
+Here, arguments represent the input parameters of the function, and expression is the operation to be performed on the arguments. Lambda functions can take any number of arguments but can have only one expression.
+
+
 ``` python
 >>> l = [34, 4, 6, 23]
 >>> l.sort()
@@ -4670,6 +4679,18 @@ The method also accepts 2 key-worded arguments:
 >>> l.sort(key=str.lower)  
 >>> l
 ['ed', 'Hi', 'Oh', 'Py']
+
+>>> t = [(2, 1), (1, 3), (3, 2)]
+>>> t.sort(key=lambda x: x[1])
+>>> t
+# The list is sorted according to the numbers present at index [1].
+[(2, 1), (3, 2), (1, 3)]
+
+>>> b=[('hi',"ok",9),('hello',"good",2),('bye',"great",5)]
+>>> b.sort(key=lambda items:len(items[0]))
+>>> b
+#The list was sorted according to the length of the strings present at index [0].
+[('hi',"ok",9),('bye',"great",5),('hello',"good",2)]
 ```
 
 If you do not wish to modify the existing list and create a new list with sorted items in, use the built-in `sorted()` function which returns a new sorted list.
