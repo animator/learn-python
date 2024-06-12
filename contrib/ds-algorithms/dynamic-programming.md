@@ -51,10 +51,6 @@ print(f"The {n}th Fibonacci number is: {fibonacci(n)}.")
 - **Time Complexity**: O(n) for both approaches
 - **Space Complexity**: O(n) for the top-down approach (due to memoization), O(1) for the bottom-up approach
 
-</br>
-<hr>
-</br>
-
 # 2. Longest Common Subsequence
 
 The longest common subsequence (LCS) problem is to find the longest subsequence common to two sequences. A subsequence is a sequence that appears in the same relative order but not necessarily contiguous.
@@ -112,10 +108,6 @@ print("Length of LCS is", longestCommonSubsequence(S1, S2, m, n))
 - **Time Complexity**: O(m * n) for both approaches, where m and n are the lengths of the input sequences
 - **Space Complexity**: O(m * n) for the memoization table
 
-</br>
-<hr>
-</br>
-
 # 3. 0-1 Knapsack Problem
 
 The 0-1 knapsack problem is a classic optimization problem where the goal is to maximize the total value of items selected while keeping the total weight within a specified limit.
@@ -146,6 +138,7 @@ capacity = 50
 n = len(weights)
 print("Maximum value that can be obtained:", knapsack(weights, values, capacity, n))
 ```
+
 ## 0-1 Knapsack Problem Code in Python (Bottom-up Approach)
 
 ```python
@@ -170,13 +163,10 @@ capacity = 50
 n = len(weights)
 print(knapSack(capacity, weights, values, n))
 ```
+
 ## Complexity Analysis
 - **Time Complexity**: O(n * W) for both approaches, where n is the number of items and W is the capacity of the knapsack
 - **Space Complexity**: O(n * W) for the memoization table
-
-</br>
-<hr>
-</br>
 
 # 4. Longest Increasing Subsequence
 
@@ -190,7 +180,6 @@ The Longest Increasing Subsequence (LIS) is a task is to find the longest subseq
 ## Longest Increasing Subsequence Code in Python (Top-Down Approach using Memoization)
 
 ```python
-
 import sys
 
 def f(idx, prev_idx, n, a, dp):
@@ -241,10 +230,7 @@ def lis(arr):
 arr = [10, 22, 9, 33, 21, 50, 41, 60]
 print("Length of lis is", lis(arr))
 ```
+
 ## Complexity Analysis
 - **Time Complexity**: O(n * n) for both approaches, where n is the length of the array.
 - **Space Complexity**: O(n * n) for the memoization table in Top-Down Approach, O(n) in Bottom-Up Approach.
-
-</br>
-<hr>
-</br>
