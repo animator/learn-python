@@ -5,9 +5,9 @@
 # Import pytorch in our codespace
 import torch
 print(torch.__version__)
-```
 
-    2.3.0+cu121
+output -> 2.3.0+cu121
+```
     
 
 2.3.0 is the pytorch version and 121 is the cuda version
@@ -21,27 +21,26 @@ Now you have already seen how to create a tensor in pytorch. In this notebook i 
 # Scalar tensor ( a zero dimension tensor)
 scalar = torch.tensor(7)
 print(scalar)
-```
 
-    tensor(7)
+output -> tensor(7)
+```
     
 
 
 ```python
 # Check the dimension of the above tensor
 print(scalar.ndim)
-```
 
-    0
-    
+output -> 0
+```    
 
 
 ```python
 # To retrieve the number from the tensor we use `item()`
 print(scalar.item())
-```
 
-    7
+output -> 7
+```
     
 
 
@@ -49,27 +48,25 @@ print(scalar.item())
 # Vector (It is a single dimension tensor but contain many numbers)
 vector = torch.tensor([1,2])
 print(vector)
-```
 
-    tensor([1, 2])
-    
+output -> tensor([1, 2])
+```    
 
 
 ```python
 # Check the dimensions
 print(vector.ndim)
-```
 
-    1
-    
+output -> 1
+```   
 
 
 ```python
 # Check the shape of the vector
 print(vector.shape)
-```
 
-    torch.Size([2])
+output -> torch.Size([2])
+```
     
 
 The above returns torch.Size([2]) which means our vector has a shape of [2]. This is because of the two elements we placed inside the square brackets ([1,2])
@@ -85,30 +82,27 @@ You can tell the number of dimensions a tensor in PyTorch has by the number of s
 MATRIX = torch.tensor([[1,2],
                        [4,5]])
 print(MATRIX)
-```
 
-    tensor([[1, 2],
+output -> tensor([[1, 2],
             [4, 5]])
-    
+```    
 
 There are two brackets so it must be 2 dimensions , lets check
 
 
 ```python
 print(MATRIX.ndim)
-```
 
-    2
-    
+output -> 2
+```    
 
 
 ```python
 # Shape
 print(MATRIX.shape)
-```
 
-    torch.Size([2, 2])
-    
+output -> torch.Size([2, 2])
+```    
 
 It means MATRIX has 2 rows and 2 columns.
 
@@ -119,30 +113,27 @@ TENSOR = torch.tensor([[[1,2,3],
                         [4,5,6],
                         [7,8,9]]])
 print(TENSOR)
-```
 
-    tensor([[[1, 2, 3],
+output -> tensor([[[1, 2, 3],
              [4, 5, 6],
              [7, 8, 9]]])
-    
+```    
 
 
 ```python
 # Let's check the dimensions
 print(TENSOR.ndim)
-```
 
-    3
-    
+output -> 3
+```    
 
 
 ```python
 # shape?
 print(TENSOR.shape)
-```
 
-    torch.Size([1, 3, 3])
-    
+output -> torch.Size([1, 3, 3])
+```    
 
 The dimensions go outer to inner.
 
@@ -164,39 +155,35 @@ We can create them using `torch.rand()` and passing in the `size` parameter.
 # creating a random tensor of size (3,4)
 rand_tensor = torch.rand(size = (3,4))
 print(rand_tensor)
-```
 
-    tensor([[0.7462, 0.4950, 0.7851, 0.8277],
+output -> tensor([[0.7462, 0.4950, 0.7851, 0.8277],
             [0.6112, 0.5159, 0.1728, 0.6847],
             [0.4472, 0.1612, 0.6481, 0.3236]])
-    
+```    
 
 
 ```python
 # Check the dimensions
 print(rand_tensor.ndim)
-```
 
-    2
-    
+output -> 2
+```    
 
 
 ```python
 # Shape
 print(rand_tensor.shape)
-```
 
-    torch.Size([3, 4])
-    
+output -> torch.Size([3, 4])
+```    
 
 
 ```python
 # datatype
 print(rand_tensor.dtype)
-```
 
-    torch.float32
-    
+output -> torch.float32
+```    
 
 ### Zeros and ones
 
@@ -207,24 +194,22 @@ Here we will create a tensor of any shape filled with zeros and ones
 # Create a tensor of all zeros
 zeros = torch.zeros(size = (3,4))
 print(zeros)
-```
 
-    tensor([[0., 0., 0., 0.],
+output -> tensor([[0., 0., 0., 0.],
             [0., 0., 0., 0.],
             [0., 0., 0., 0.]])
-    
+```    
 
 
 ```python
 # create a tensor of ones
 ones = torch.ones(size = (3,4))
 print(ones)
-```
 
-    tensor([[1., 1., 1., 1.],
+output -> tensor([[1., 1., 1., 1.],
             [1., 1., 1., 1.],
             [1., 1., 1., 1.]])
-    
+```    
 
 ### Create a tensor having range of numbers
 
@@ -244,10 +229,9 @@ zero_to_ten = torch.arange(start = 0,
                            end = 10,
                            step = 1)
 print(zero_to_ten)
-```
 
-    tensor([0, 1, 2, 3, 4, 5, 6, 7, 8, 9])
-    
+output -> tensor([0, 1, 2, 3, 4, 5, 6, 7, 8, 9])
+```    
 
 # 2. Manipulating tensors (tensor operations)
 
@@ -265,10 +249,9 @@ The operations are :
 ```python
 tensor = torch.tensor([1,2,3])
 print(tensor+10)
-```
 
-    tensor([11, 12, 13])
-    
+output -> tensor([11, 12, 13])
+```    
 
 We have add 10 to each tensor element.
 
@@ -276,10 +259,9 @@ We have add 10 to each tensor element.
 ```python
 tensor1 = torch.tensor([4,5,6])
 print(tensor+tensor1)
-```
 
-    tensor([5, 7, 9])
-    
+output -> tensor([5, 7, 9])
+```    
 
 We have added two tensors , remember that addition takes place element wise.
 
@@ -288,20 +270,18 @@ We have added two tensors , remember that addition takes place element wise.
 
 ```python
 print(tensor-8)
-```
 
-    tensor([-7, -6, -5])
-    
+output -> tensor([-7, -6, -5])
+```    
 
 We've subtracted 8 from the above tensor.
 
 
 ```python
 print(tensor-tensor1)
-```
 
-    tensor([-3, -3, -3])
-    
+output -> tensor([-3, -3, -3])
+```    
 
 ### 3. Multiplication
 
@@ -309,10 +289,9 @@ print(tensor-tensor1)
 ```python
 # Multiply the tensor with 10 (element wise)
 print(tensor*10)
-```
 
-    tensor([10, 20, 30])
-    
+output -> tensor([10, 20, 30])
+```    
 
 Each element of tensor gets multiplied by 10.
 
@@ -324,18 +303,16 @@ PyTorch also has a bunch of built-in functions like `torch.mul()` (short for mul
 ```python
 # let's see them
 print(torch.add(tensor,10))
-```
 
-    tensor([11, 12, 13])
-    
+output -> tensor([11, 12, 13])
+```    
 
 
 ```python
 print(torch.mul(tensor,10))
-```
 
-    tensor([10, 20, 30])
-    
+output -> tensor([10, 20, 30])
+```    
 
 ### Matrix multiplication (is all you need)
 One of the most common operations in machine learning and deep learning algorithms (like neural networks) is matrix multiplication.
@@ -366,61 +343,41 @@ tensor2 = torch.tensor([[[1,1,1],
                          [3,3,3]]])
 
 print(tensor1) , print(tensor2)
-```
 
-    tensor([[[1, 2, 3],
+output1 -> tensor([[[1, 2, 3],
              [4, 5, 6],
              [7, 8, 9]]])
-    tensor([[[1, 1, 1],
+output2 -> tensor([[[1, 1, 1],
              [2, 2, 2],
              [3, 3, 3]]])
-    
-
-
-
-
-    (None, None)
-
-
-
+```    
 
 ```python
 # let's check the shape
 print(tensor1.shape) , print(tensor2.shape)
+
+output1 -> torch.Size([1, 3, 3])
+output2 ->torch.Size([1, 3, 3])
 ```
-
-    torch.Size([1, 3, 3])
-    torch.Size([1, 3, 3])
-    
-
-
-
-
-    (None, None)
-
-
-
 
 ```python
  # Matrix multiplication
 print(torch.matmul(tensor1, tensor2))
-```
 
-    tensor([[[14, 14, 14],
+output -> tensor([[[14, 14, 14],
              [32, 32, 32],
              [50, 50, 50]]])
-    
+```    
 
 
 ```python
 # Can also use the "@" symbol for matrix multiplication, though not recommended
 print(tensor1 @ tensor2)
-```
 
-    tensor([[[14, 14, 14],
+output -> tensor([[[14, 14, 14],
              [32, 32, 32],
              [50, 50, 50]]])
-    
+```    
 
 Note:
 
