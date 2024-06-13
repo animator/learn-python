@@ -22,10 +22,9 @@ To check if you've got access to a Nvidia GPU, you can run `!nvidia-smi` where t
 
 ```python
 !nvidia-smi
-```
 
-    /bin/bash: line 1: nvidia-smi: command not found
-    
+output -> /bin/bash: line 1: nvidia-smi: command not found
+```    
 
 As you can see that it  is showing that  `command not found error` it means currently we do'nt have colab GPU access.
 
@@ -41,9 +40,8 @@ Now to check again run the command
 
 ```python
 !nvidia-smi
-```
 
-    Fri May 31 04:01:18 2024       
+output -> Fri May 31 04:01:18 2024       
     +---------------------------------------------------------------------------------------+
     | NVIDIA-SMI 535.104.05             Driver Version: 535.104.05   CUDA Version: 12.2     |
     |-----------------------------------------+----------------------+----------------------+
@@ -63,7 +61,7 @@ Now to check again run the command
     |=======================================================================================|
     |  No running processes found                                                           |
     +---------------------------------------------------------------------------------------+
-    
+ ```   
 
 Whoo!!! now we have GPU access
 
@@ -82,13 +80,9 @@ You can test if PyTorch has access to a GPU using `torch.cuda.is_available()`.
 # Check for GPU
 import torch
 torch.cuda.is_available()
+
+output -> True
 ```
-
-
-
-
-    True
-
 
 
 If the above outputs `True`, PyTorch can see and use the GPU, if it outputs `False`, it can't see the GPU and in that case, you'll have to go back through the installation steps.
@@ -103,13 +97,9 @@ Let's create a device variable to store what kind of device is available.
 ```python
 device = "cuda" if torch.cuda.is_available else "cpu"
 device
+
+output -> 'cuda'
 ```
-
-
-
-
-    'cuda'
-
 
 
 
@@ -120,13 +110,9 @@ You can count the number of GPUs PyTorch has access to using `torch.cuda.device_
 
 ```python
 torch.cuda.device_count()
+
+output -> 1
 ```
-
-
-
-
-    1
-
 
 
 ## 3. Putting tensors on the GPU
@@ -137,10 +123,9 @@ torch.cuda.device_count()
 tensor = torch.tensor([1,2,3])
 
 print(f"Tensor is running on the :{tensor.device}")
-```
 
-    Tensor is running on the :cpu
-    
+output -> Tensor is running on the :cpu
+```    
 
 Note: By default tensors run on the 'CPU'
 
@@ -150,10 +135,9 @@ Note: By default tensors run on the 'CPU'
 tensor_on_gpu = tensor.to(device)
 
 print(f"Tensor is running on:{tensor_on_gpu.device}")
-```
 
-    Tensor is running on:cuda:0
-    
+output -> Tensor is running on:cuda:0
+```    
 
 Notice the second tensor has device=`'cuda:0'`, this means it's stored on the 0th GPU available (GPUs are 0 indexed, if two GPUs were available, they'd be `'cuda:0'` and `'cuda:1'` respectively, up to `'cuda:n'`).
 
@@ -169,7 +153,8 @@ Let's try using the `torch.Tensor.numpy()` method on our `tensor_on_gpu`.
 ```python
 # If tensor is on GPU, can't transform it to NumPy (this will error)
 tensor_on_gpu.numpy()
-```
+
+output -> 
 
 
     ---------------------------------------------------------------------------
@@ -183,7 +168,7 @@ tensor_on_gpu.numpy()
 
     TypeError: can't convert cuda:0 device type tensor to numpy. Use Tensor.cpu() to copy the tensor to host memory first.
 
-
+```
 Instead, to get a tensor back to CPU and usable with NumPy we can use Tensor.cpu().
 
 This copies the tensor to CPU memory so it's usable with CPUs
@@ -193,11 +178,7 @@ This copies the tensor to CPU memory so it's usable with CPUs
 # Instead, copy the tensor back to cpu
 tensor_back_on_cpu = tensor_on_gpu.cpu().numpy()
 tensor_back_on_cpu
+
+output -> array([1, 2, 3])
 ```
-
-
-
-
-    array([1, 2, 3])
-
 
