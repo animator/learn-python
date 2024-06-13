@@ -121,3 +121,6 @@ This code uses the XGBoost library to train a model on the Iris dataset, splitti
    ## **Conclusion**
 
 XGBoost's focus on speed, performance, and scalability has made it one of the most widely used and powerful predictive modeling algorithms available. Its ability to handle large datasets efficiently, along with its advanced features and optimizations, makes it a valuable tool in machine learning and data science.
+
+## References 
+- [Machine Learning Prediction of Turning Precision Using Optimized XGBoost Model](https://www.mdpi.com/2076-3417/12/15/7739)
