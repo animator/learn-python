@@ -6,3 +6,4 @@
 - [Path Finder](path-finder.md)
 - [Hangman Game Based on Movies](hangman_game.md)
 - [Tic-tac-toe](tic-tac-toe.md)
+- [Guess the Number](guess_the_number.md)
