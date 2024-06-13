@@ -16,5 +16,6 @@
 - [Two Pointer Technique](two-pointer-technique.md)
 - [Hashing through Linear Probing](hashing-linear-probing.md)
 - [Hashing through Chaining](hashing-chaining.md)
+- [AVL Trees](avl-trees.md)
+- [Splay Trees](splay-trees.md)
 - [Dijkstra's Algorithm](Dijkstra's_algorithm.md)
-
