@@ -4649,14 +4649,13 @@ The method also accepts 2 key-worded arguments:
 - `key` is used to specify a function which is called on each list element prior to making the comparisons. 
 - `reverse` is a boolean which specifies whether the list is to be sorted in descending order.
 
-Lambda functions, also known as anonymous functions, are small, one-line functions that can be defined without a name. They are typically used when you need a simple function for a short period of time, such as when passing a function as an argument to another function (like the sort() method's key argument).
+Lambda function are also known as anonymous functions.They are one line function without a name.We define    a compact lambda function as the key in sort method.
 
-The syntax for a lambda function is:
+Syntax of a lambda function is:
 
 lambda arguments: expression
 
-Here, arguments represent the input parameters of the function, and expression is the operation to be performed on the arguments. Lambda functions can take any number of arguments but can have only one expression.
-
+Here, arguments are the input parameters of the function, and expression is the operation to be performed on the arguments.
 
 ``` python
 >>> l = [34, 4, 6, 23]
