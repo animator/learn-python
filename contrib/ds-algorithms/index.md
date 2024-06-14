@@ -17,3 +17,5 @@
 - [Hashing through Linear Probing](hashing-linear-probing.md)
 - [Hashing through Chaining](hashing-chaining.md)
 - [Binary Tree](binary_tree.md)
+- [AVL Trees](avl-trees.md)
+- [Splay Trees](splay-trees.md)
