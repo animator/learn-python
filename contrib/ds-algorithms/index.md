@@ -19,3 +19,5 @@
 - [Binary Tree](binary_tree.md)
 - [AVL Trees](avl-trees.md)
 - [Splay Trees](splay-trees.md)
+- [Splay Trees](splay-trees.md)
+- [Dijkstra's Algorithm](dijkstra.md)
