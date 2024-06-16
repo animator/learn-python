@@ -9,3 +9,4 @@
 - [Working with Date & Time in Pandas](datetime.md)
 - [Importing and Exporting Data in Pandas](import-export.md)
 - [Handling Missing Values in Pandas](handling-missing-values.md)
+- [Data Cleaning and Preparation] (datacleaning.md)
