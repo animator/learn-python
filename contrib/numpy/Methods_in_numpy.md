@@ -1,5 +1,5 @@
 # Methods in Numpy
-# NumPy insert():
+**NumPy insert()**:
 
  The insert() method adds the values along the given axis at specified indices.
  
@@ -34,7 +34,7 @@ The insert() method takes four arguments:
  
  [0 1 4 3 4]
 
-# NumPy delete():
+**NumPy delete()**:
 
 The delete() method deletes the values at specified indices.
 
@@ -65,7 +65,7 @@ The delete() method takes four argument
 **Output**:
 
 [0 1 3]
-# NumPy append():
+**NumPy append()**:
 
 The append() method adds the values at the end of a NumPy array.
 
@@ -99,7 +99,7 @@ The append() method takes three arguments:
 
 [1 2 3 4 5 6]
 
-# NumPy flip()
+**NumPy flip()**:
 
 The flip() method reverses the order of the elements in an array.
 
@@ -132,7 +132,7 @@ The flip() method takes two arguments:
 
 [4 3 2 1 0]
 
-# NumPy flatten()
+**NumPy flatten()**:
 
 The flatten() method flattens a NumPy array without changing its data.
 
@@ -164,7 +164,7 @@ The flatten() method takes one argument:
 
 [0 1 2 3]
 
-# NumPy empty()
+**NumPy empty()**:
 
 The empty() method creates a new array of given shape and type, without initializing entries.
 
@@ -194,7 +194,7 @@ The empty() method takes the following arguments:
 
 [2.23196843e-316 0.00000000e+000 6.94042595e-310 6.94042589e-310 6.94042589e-310]
 
-# Numpy zeros()
+**Numpy zeros()** :
 
 The numpy.zeros() function returns a new array of given shape and type, with zeros. 
 
@@ -220,7 +220,7 @@ The numpy.zeros() function returns a new array of given shape and type, with zer
  [0. 0.]
  [0. 0.]]
 
- # NumPy ones()
+ **NumPy ones()**: 
 
  The ones() method creates a new array of given shape and type, filled with ones.
 
@@ -250,7 +250,7 @@ The numpy.zeros() function returns a new array of given shape and type, with zer
 
 Integer Array:  [1 1 1 1 1]
 
-# NumPy diag()
+**NumPy diag()**:
 
 The diag() method either creates a new ndarray with the given 1D array as its diagonal elements or it extracts the diagonal from the given ndarray.
 
@@ -319,7 +319,7 @@ Array1 as diagonal elements below main diagonal:
  
  [0 0 3 0]]
 
- # NumPy eye()
+ **NumPy eye()**:
 
  The eye() method creates a 2D array with 1s on the diagonal and 0s elsewhere.
 
@@ -356,7 +356,7 @@ The eye() method takes the following arguments:
  [0. 0. 1.]]
 
 
-# NumPy roll()
+**NumPy roll()**:
 
 The roll() method shifts the elements of the input arrays a given number of times.
 
@@ -389,7 +389,7 @@ The roll() method takes three arguments:
 
 [2 3 4 0 1]
 
-# NumPy ceil()
+**NumPy ceil()**:
 
 The ceil() function rounds up floating point element(s) in an array to the nearest integer greater than or equal to the array element.
 
@@ -428,7 +428,7 @@ Rounded-up values:
  
  [ 8.  9. 10.]]  
 
- # NumPy floor()
+ **NumPy floor()**
 
  The floor() function rounds down each element in an array to the nearest smallest integer.
 
@@ -457,7 +457,7 @@ The floor() function takes following arguments:
 
 [1. 2. 3. 4.]  
 
-# NumPy power()
+**NumPy power()**
 
 The power() function is used to raise the elements of an array to a specified power.
 
@@ -489,7 +489,7 @@ The power() function takes one argument:
 
 [  4  27 256]
 
-# Numpy tri()
+**Numpy tri()**
 
 The numpy.tri() function returns an array with ones at and below the k-th diagonal and zeros elsewhere, where k is the given parameter.
 
@@ -525,7 +525,7 @@ The numpy.tri() function returns an array with ones at and below the k-th diagon
   [1, 1, 1, 1, 0, 0]])
 
   
-# Numpy iscomplex()
+**Numpy iscomplex()**
 
 Returns a bool array, where True if input element is complex.
 
@@ -549,7 +549,7 @@ What is tested is whether the input has a non-zero imaginary part, not if the in
 
 array([ True, False, False, False, False,  True])
 
-# Numpy isnan()
+**Numpy isnan()**
 
 The numpy.isnan() function tests element-wise whether it is NaN or not and returns the result as a boolean array.
 
@@ -575,7 +575,7 @@ The numpy.isnan() function tests element-wise whether it is NaN or not and retur
 
 array([False, False,  True,  True])
 
-# Numpy isreal()
+**Numpy isreal()**
 
 Returns a bool array, where True if input element is real.
 
