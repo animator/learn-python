@@ -741,8 +741,33 @@
                 display: none
             }
         }
+        .github-button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    background-color: #24292e; /* GitHub black color */
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.github-button:hover {
+    background-color: #444c56; /* Slightly lighter black for hover effect */
+    transform: scale(1.05); /* Slightly increase the size on hover */
+}
+
+.github-button:active {
+    background-color: #1b1f23; /* Even darker color for active state */
+    transform: scale(1); /* Return to original size when clicked */
+}
+
+.github-button[data-icon]::before {
+    content: '★ '; /* Add a star icon before the text */
+}
+
     </style>
-    <script async defer src="https://buttons.github.io/buttons.js"></script>
+    <!-- <script async defer src="https://buttons.github.io/buttons.js"></script> -->
 </head>
 
 <body class="">
