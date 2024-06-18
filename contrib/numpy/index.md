@@ -1,4 +1,4 @@
-# List of sections
+
 
 - [Installing NumPy](installing-numpy.md)
 - [Introduction](introduction.md)
@@ -12,3 +12,5 @@
 - [NumPy Array Iteration](array-iteration.md)
 - [Concatenation of Arrays](concatenation-of-arrays.md)
 - [Methods in Numpy](Methods_in_numpy.md)
+- [Universal Functions (Ufunc)](universal-functions.md)
+
