@@ -75,7 +75,9 @@ P(Spam|Keywords) > P(Not Spam|Keywords), we classify the new email as "Spam".
 #### 1. Gaussian Naive Bayes 
 In Gaussian Naive Bayes, continuous values associated with each feature are assumed to be distributed according to a Gaussian distribution. A Gaussian distribution is also called Normal distribution When plotted, it gives a bell shaped curve which is symmetric about the mean of the feature values as shown below:
 
-![img_2.png](img_2.png)
+###### Normal Distribution:
+![img.png](img.png)
+
 
 * Assumption: Each feature follows a Gaussian distribution.
 * Formula: The likelihood of the features given the class is computed using the Gaussian (normal) distribution formula:
@@ -85,7 +87,6 @@ P(x_k | C) = \frac{1}{\sqrt{2\pi\sigma_C^2}} \exp\left(-\frac{(x_k - \mu_C)^2}{2
 $$
 
 where 𝜇𝐶 and 𝜎𝐶 are the mean and standard deviation of the feature 𝑥𝑖 for class C.
-
 
 * Python implementation of Gaussian Naive Bayes classifier using scikit-learn:
 ```python
@@ -117,7 +118,8 @@ Typically used for discrete features, especially for text (or document) classifi
 * Assumption: Features represent the number of times events (e.g., words) occur.
 * Formula: The likelihood of the features given the class is computed using the multinomial distribution formula:
 
-![img_3.png](img_3.png)
+$$ P(C_k | x) = \frac{1}{\sqrt{2\pi\sigma^2}} \exp\left(-\frac{(x - \mu)^2}{2\sigma^2}\right) $$
+
 $$
 P(x_k | C) = \frac{1}{\sqrt{2\pi\sigma_C^2}} \exp\left(-\frac{(x_k - \mu_C)^2}{2\sigma_C^2}\right)
 $$
