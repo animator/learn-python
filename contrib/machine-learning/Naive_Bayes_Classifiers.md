@@ -129,7 +129,7 @@ $$
 P(x_i | C) = {P^{x_i}}_{i,C} (1 - P_{i, C})^{(1 - x_i)}
 $$
 
-where $$P_(𝑖,𝐶)$$ is the probability of feature 𝑥𝑖 being 1 in class C.
+where P(𝑖,𝐶) is the probability of feature 𝑥𝑖 being 1 in class C.
 ## Advantages of Naive Bayes Classifier
 * Easy to implement and computationally efficient.
 * Effective in cases with a large number of features.
