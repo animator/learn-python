@@ -8,9 +8,6 @@ Bayes’ Theorem finds the probability of an event occurring given the probabili
 
 $$ P(C|X) = \frac{P(X|C) \cdot P(C)}{P(X)} $$
 
-
-![img.png](img.png)
-
 where A and B are events and P(B) ≠ 0
 
 * We are trying to find probability of event A, given the event B is true.
@@ -77,6 +74,10 @@ In Gaussian Naive Bayes, continuous values associated with each feature are assu
 
 * Assumption: Each feature follows a Gaussian distribution.
 * Formula: The likelihood of the features given the class is computed using the Gaussian (normal) distribution formula:
+
+$$
+P(C_k | x) = \frac{P(C_k) \cdot \prod_{i=1}^{n} \frac{1}{\sqrt{2 \pi \sigma_{k,i}^2}} \exp \left( -\frac{(x_i - \mu_{k,i})^2}{2 \sigma_{k,i}^2} \right)}{P(x)}
+$$
 
 ![img_3.png](img_3.png)
 
