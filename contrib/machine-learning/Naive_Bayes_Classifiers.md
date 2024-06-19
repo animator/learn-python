@@ -113,6 +113,9 @@ Typically used for discrete features, especially for text (or document) classifi
 * Formula: The likelihood of the features given the class is computed using the multinomial distribution formula:
 
 ![img_3.png](img_3.png)
+$$
+P(x_k | C) = \frac{1}{\sqrt{2\pi\sigma_C^2}} \exp\left(-\frac{(x_k - \mu_C)^2}{2\sigma_C^2}\right)
+$$
 
 where n(c,xi) is the count of feature 𝑥𝑖 in class 𝐶, N(C) is the total count of all features in class C, n is the number of features, and 𝛼 is a smoothing parameter.
 
@@ -121,6 +124,12 @@ In the multivariate Bernoulli event model, features are independent booleans (bi
 Used for binary/boolean features, where features represent binary occurrences (e.g., word presence/absence in text).
 * Assumption: Features are binary (e.g., word presence/absence).
 * Formula: The likelihood of the features given the class is computed using the Bernoulli distribution formula:
+
+$$
+P(C_k | x) = P(C_k) \prod_{i=1}^{n} P(x_i | C_k)^{x_i} (1 - P(x_i | C_k))^{(1 - x_i)}
+$$
+
+
 
 ![img_4.png](img_4.png)
 
