@@ -32,6 +32,16 @@ Consider a simple example where we want to classify emails as "spam" or "not spa
 
 #### Training Data
 
+| Email  | Keyword1    | Keyword2    | Spam    |
+|--------|-------------|-------------|---------|
+| 1      | Yes         | No          | Yes     |
+| 2      | Yes         | Yes         | Yes     |
+| 3      | No          | Yes         | No      |
+| 4      | Yes         | No          | No      |
+
+
+
+
 ![img_1.png](img_1.png)
 
 ##### Calculating Priors:
