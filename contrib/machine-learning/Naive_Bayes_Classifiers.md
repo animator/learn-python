@@ -6,7 +6,8 @@ It is not a single algorithm but a family of algorithms where all of them share 
 ## Bayes’ Theorem:
 Bayes’ Theorem finds the probability of an event occurring given the probability of another event that has already occurred. Bayes’ theorem is stated mathematically as the following equation:
 
-$$E = mc^2$$
+P(C|X) = \frac{P(X|C) \cdot P(C)}{P(X)}
+
 
 ![img.png](img.png)
 
