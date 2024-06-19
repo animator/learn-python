@@ -75,6 +75,7 @@ P(Spam|Keywords) > P(Not Spam|Keywords), we classify the new email as "Spam".
 #### 1. Gaussian Naive Bayes 
 In Gaussian Naive Bayes, continuous values associated with each feature are assumed to be distributed according to a Gaussian distribution. A Gaussian distribution is also called Normal distribution When plotted, it gives a bell shaped curve which is symmetric about the mean of the feature values as shown below:
 
+![image](https://drive.google.com/file/d/1_Ia9AFKeWjHCZFsFT_W3O1c9-bL-bcrN/view?usp=sharing)
 <svg width="100" height="100" xmlns="https://drive.google.com/file/d/1_Ia9AFKeWjHCZFsFT_W3O1c9-bL-bcrN/view?usp=sharing">
   <circle cx="50" cy="50" r="40" stroke="black" stroke-width="3" fill="red" />
 </svg>
