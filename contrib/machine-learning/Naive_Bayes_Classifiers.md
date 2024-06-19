@@ -126,14 +126,10 @@ Used for binary/boolean features, where features represent binary occurrences (e
 * Formula: The likelihood of the features given the class is computed using the Bernoulli distribution formula:
 
 $$
-P(C_k | x) = P(C_k) \prod_{i=1}^{n} P(x_i | C_k)^{x_i} (1 - P(x_i | C_k))^{(1 - x_i)}
+P(x_i | C) = {P_{i,C}}^{x_i} (1 - P_(i, C))^{(1 - x_i)}
 $$
 
-
-
-![img_4.png](img_4.png)
-
-where 𝑝(𝑖,𝐶) is the probability of feature 𝑥𝑖 being 1 in class C.
+where $$ P_(𝑖,𝐶) $$ is the probability of feature 𝑥𝑖 being 1 in class C.
 ## Advantages of Naive Bayes Classifier
 * Easy to implement and computationally efficient.
 * Effective in cases with a large number of features.
