@@ -76,12 +76,8 @@ In Gaussian Naive Bayes, continuous values associated with each feature are assu
 * Formula: The likelihood of the features given the class is computed using the Gaussian (normal) distribution formula:
 
 $$
-P(x_k | C) = \frac{1}{\sqrt{2\pi\sigma_C^2}} \exp\left(-\frac{(x - \mu_C)^2}{2\sigma_C^2}\right)
+P(x_k | C) = \frac{1}{\sqrt{2\pi\sigma_C^2}} \exp\left(-\frac{(x_k - \mu_C)^2}{2\sigma_C^2}\right)
 $$
-
-
-
-![img_3.png](img_3.png)
 
 where 𝜇𝐶 and 𝜎𝐶 are the mean and standard deviation of the feature 𝑥𝑖 for class C.
 
