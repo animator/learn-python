@@ -39,11 +39,6 @@ Consider a simple example where we want to classify emails as "spam" or "not spa
 | 3      | No          | Yes         | No      |
 | 4      | Yes         | No          | No      |
 
-
-
-
-![img_1.png](img_1.png)
-
 ##### Calculating Priors:
 
 1. P(Spam)= 2/4=0.5 
