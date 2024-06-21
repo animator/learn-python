@@ -4,14 +4,21 @@ Tree Traversal refers to the process of visiting or accessing each node of the t
 
 
 A Tree Data Structure can be traversed in following ways:
-- **Level Order Traversal or Breadth First Search or BFS**
+ - **Level Order Traversal or Breadth First Search or BFS**
  - **Depth First Search or DFS**
      - Inorder Traversal
      - Preorder Traversal
      - Postorder Traversal
+       
+  ![Tree Traversal](images/traversal.png)
+
+ 
   
 ## Binary Tree Structure
   Before diving into traversal techniques, let's define a simple binary tree node structure:
+
+![Binary Tree](images/binarytree.png)
+  
   ```python
 class Node:
    def __init__(self, key):
@@ -85,6 +92,8 @@ In this traversal method, the left subtree is visited first, then the root and l
 
 `Note :` If a binary search tree is traversed in-order, the output will produce sorted key values in an ascending order.
 
+![Inorder](images/inorder-traversal.png)
+
 **The order:**  Left -> Root -> Right
 
 ### Algorithm
@@ -116,6 +125,8 @@ def printInorder(root):
 
 In this traversal method, the root node is visited first, then the left subtree and finally the right subtree.
 
+![preorder](images/preorder-traversal.png)
+
 **The order:**  Root -> Left -> Right
 
 ### Algorithm
@@ -145,6 +156,8 @@ def printPreorder(root):
 ## 3. Postorder Traversal
 
 In this traversal method, the root node is visited last, hence the name. First we traverse the left subtree, then the right subtree and finally the root node.
+
+![postorder](images/postorder-traversal.png)
 
 **The order:**  Left -> Right -> Root
 
