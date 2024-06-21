@@ -19,3 +19,4 @@
 - [AVL Trees](avl-trees.md)
 - [Splay Trees](splay-trees.md)
 - [Dijkstra's Algorithm](dijkstra.md)
+- [FenWick and Segment Tree](Fenwick-segment-tree.md)
