@@ -19,5 +19,7 @@
 - [Hierarchical Clustering](hierarchical-clustering.md)
 - [Grid Search](grid-search.md)
 - [Transformers](transformers.md)
+- [K-Means](kmeans.md)
 - [K-nearest neighbor (KNN)](knn.md)
 - [Naive Bayes](naive-bayes.md)
+- [Neural network regression](neural-network-regression.md)
