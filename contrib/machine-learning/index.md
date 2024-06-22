@@ -25,3 +25,4 @@
 - [Naive Bayes](naive-bayes.md)
 - [Neural network regression](neural-network-regression.md)
 - [PyTorch Fundamentals](pytorch-fundamentals.md)
+- [Xgboost](xgboost.md)
