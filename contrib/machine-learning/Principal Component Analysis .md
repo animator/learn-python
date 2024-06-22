@@ -88,3 +88,8 @@ print("Transformed Data:\n", X_pca)
 #### Conclusion
 Principal Component Analysis (PCA) is a powerful tool for reducing the dimensionality of datasets while preserving as much variance as possible. It is especially useful in exploratory data analysis and preprocessing for other machine learning algorithms.
 
+#### References
+- Jolliffe, I. T. (2002). *Principal Component Analysis*. Springer Series in Statistics.
+- [PCA Explained](https://towardsdatascience.com/a-step-by-step-explanation-of-principal-component-analysis-118e7d7c15e8)
+- [Scikit-Learn PCA Documentation](https://scikit-learn.org/stable/modules/generated/sklearn.decomposition.PCA.html)
+
