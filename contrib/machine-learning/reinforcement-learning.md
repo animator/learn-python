@@ -299,3 +299,12 @@ for i in range(num_rows):
 Congratulations on completing your journey through this comprehensive guide to reinforcement learning! Armed with this knowledge, you are well-equipped to dive deeper into the exciting world of RL, whether it's for gaming, robotics, finance, healthcare, or any other domain. Keep exploring, experimenting, and learning, and remember, the only limit to what you can achieve with reinforcement learning is your imagination.
 
 *Happy coding, and may your RL adventures be rewarding!*
+
+\( Q(s, a) \leftarrow Q(s, a) + \alpha \left( r + \gamma \max_{a'} Q(s', a') - Q(s, a) \right) \)
+
+where:
+- \( Q(s, a) \) is the Q-value of state \( s \) and action \( a \).
+- \( r \) is the observed reward.
+- \( s' \) is the next state.
+- \( \alpha \) is the learning rate.
+- \( \gamma \) is the discount factor.
