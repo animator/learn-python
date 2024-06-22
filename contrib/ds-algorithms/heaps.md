@@ -1,4 +1,4 @@
-# Heaps in Python3
+# Heaps
 
 ## Definition: 
 Heaps are a crucial data structure that support efficient priority queue operations. They come in two main types: min heaps and max heaps. Python's heapq module provides a robust implementation for min heaps, and with some minor adjustments, it can also be used to implement max heaps.
@@ -34,14 +34,17 @@ smallest = heapq.heappop(min_heap)
 print("Smallest element:", smallest)
 print("Min Heap after pop:", min_heap)
 ```
+
 **Output:** 
- ```python
+
+ ```
 Min Heap: [3, 5, 10, 12]
 Smallest element: 3
 Min Heap after pop: [5, 12, 10]
 ```
 
 - **Max Heap:** To create a max heap, we can store negative values.
+
 ```python
 import heapq
 
@@ -63,23 +66,25 @@ print("Largest element:", largest)
 print("Max Heap after pop:", [-x for x in max_heap])
 
 ```
+
 **Output:**
-```python
+
+```
 Max Heap: [12, 10, 3, 5]
 Largest element: 12
 Max Heap after pop: [10, 5, 3]
 ```
 
 ## Heap Operations:
-1. **Push Operation:** Adds an element to the heap, maintaining the heap property.<br>
+1. **Push Operation:** Adds an element to the heap, maintaining the heap property.  
 ```python
 heapq.heappush(heap, item)
 ```
-2. **Pop Operation:** Removes and returns the smallest element from the heap.<br>
+2. **Pop Operation:** Removes and returns the smallest element from the heap.  
 ```python
 smallest = heapq.heappop(heap)
 ```
-3. **Heapify Operation:** Converts a list into a heap in-place.<br>
+3. **Heapify Operation:** Converts a list into a heap in-place.  
 ```python
 heapq.heapify(list)
 ```
@@ -118,7 +123,7 @@ print(heapq.heappop(li))
 ```
 
 Output:
-```python
+```
 The created heap is : [1, 3, 15, 77, 90]
 The modified heap after push is : [1, 3, 4, 15, 77, 90]
 The popped and smallest element is : 1
