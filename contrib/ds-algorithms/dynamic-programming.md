@@ -51,10 +51,6 @@ print(f"The {n}th Fibonacci number is: {fibonacci(n)}.")
 - **Time Complexity**: O(n) for both approaches
 - **Space Complexity**: O(n) for the top-down approach (due to memoization), O(1) for the bottom-up approach
 
-</br>
-<hr>
-</br>
-
 # 2. Longest Common Subsequence
 
 The longest common subsequence (LCS) problem is to find the longest subsequence common to two sequences. A subsequence is a sequence that appears in the same relative order but not necessarily contiguous.
@@ -84,13 +80,33 @@ Y = "GXTXAYB"
 print("Length of Longest Common Subsequence:", longest_common_subsequence(X, Y, len(X), len(Y)))
 ```
 
-## Complexity Analysis
-- **Time Complexity**: O(m * n) for the top-down approach, where m and n are the lengths of the input sequences
-- **Space Complexity**: O(m * n) for the memoization table
+## Longest Common Subsequence Code in Python (Bottom-Up Approach)
 
-</br>
-<hr>
-</br>
+```python
+
+def longestCommonSubsequence(X, Y, m, n):
+    L = [[None]*(n+1) for i in range(m+1)]
+    for i in range(m+1):
+        for j in range(n+1):
+            if i == 0 or j == 0:
+                L[i][j] = 0
+            elif X[i-1] == Y[j-1]:
+                L[i][j] = L[i-1][j-1]+1
+            else:
+                L[i][j] = max(L[i-1][j], L[i][j-1])
+    return L[m][n]
+
+
+S1 = "AGGTAB"
+S2 = "GXTXAYB"
+m = len(S1)
+n = len(S2)
+print("Length of LCS is", longestCommonSubsequence(S1, S2, m, n))
+```
+
+## Complexity Analysis
+- **Time Complexity**: O(m * n) for both approaches, where m and n are the lengths of the input sequences
+- **Space Complexity**: O(m * n) for the memoization table
 
 # 3. 0-1 Knapsack Problem
 
@@ -123,10 +139,98 @@ n = len(weights)
 print("Maximum value that can be obtained:", knapsack(weights, values, capacity, n))
 ```
 
+## 0-1 Knapsack Problem Code in Python (Bottom-up Approach)
+
+```python
+def knapSack(capacity, weights, values, n):
+    K = [[0 for x in range(capacity + 1)] for x in range(n + 1)]
+    for i in range(n + 1):
+        for w in range(capacity + 1):
+            if i == 0 or w == 0:
+                K[i][w] = 0
+            elif weights[i-1] <= w:
+                K[i][w] = max(values[i-1]
+                              + K[i-1][w-weights[i-1]],
+                              K[i-1][w])
+            else:
+                K[i][w] = K[i-1][w]
+
+    return K[n][capacity]
+
+values = [60, 100, 120]
+weights = [10, 20, 30]
+capacity = 50
+n = len(weights)
+print(knapSack(capacity, weights, values, n))
+```
+
 ## Complexity Analysis
-- **Time Complexity**: O(n * W) for the top-down approach, where n is the number of items and W is the capacity of the knapsack
+- **Time Complexity**: O(n * W) for both approaches, where n is the number of items and W is the capacity of the knapsack
 - **Space Complexity**: O(n * W) for the memoization table
 
-</br>
-<hr>
-</br>
+# 4. Longest Increasing Subsequence
+
+The Longest Increasing Subsequence (LIS) is a task is to find the longest subsequence that is strictly increasing, meaning each element in the subsequence is greater than the one before it. This subsequence must maintain the order of elements as they appear in the original sequence but does not need to be contiguous. The goal is to identify the subsequence with the maximum possible length.
+
+**Algorithm Overview:**
+- **Base cases:** If the sequence is empty, the LIS length is 0.
+- **Memoization:** Store the results of previously computed subproblems to avoid redundant computations.
+- **Recurrence relation:** Compute the LIS length by comparing characters of the sequences and making decisions based on their values.
+
+## Longest Increasing Subsequence Code in Python (Top-Down Approach using Memoization)
+
+```python
+import sys
+
+def f(idx, prev_idx, n, a, dp):
+	if (idx == n):
+		return 0
+
+	if (dp[idx][prev_idx + 1] != -1):
+		return dp[idx][prev_idx + 1]
+
+	notTake = 0 + f(idx + 1, prev_idx, n, a, dp)
+	take = -sys.maxsize - 1
+	if (prev_idx == -1 or a[idx] > a[prev_idx]):
+		take = 1 + f(idx + 1, idx, n, a, dp)
+
+	dp[idx][prev_idx + 1] = max(take, notTake)
+	return dp[idx][prev_idx + 1]
+
+def longestSubsequence(n, a):
+
+	dp = [[-1 for i in range(n + 1)]for j in range(n + 1)]
+	return f(0, -1, n, a, dp)
+
+a = [3, 10, 2, 1, 20]
+n = len(a)
+
+print("Length of lis is", longestSubsequence(n, a))
+
+```
+
+## Longest Increasing Subsequence Code in Python (Bottom-Up Approach)
+
+```python
+def lis(arr):
+	n = len(arr)
+	lis = [1]*n
+
+	for i in range(1, n):
+		for j in range(0, i):
+			if arr[i] > arr[j] and lis[i] < lis[j] + 1:
+				lis[i] = lis[j]+1
+
+	maximum = 0
+	for i in range(n):
+		maximum = max(maximum, lis[i])
+
+	return maximum
+
+arr = [10, 22, 9, 33, 21, 50, 41, 60]
+print("Length of lis is", lis(arr))
+```
+
+## Complexity Analysis
+- **Time Complexity**: O(n * n) for both approaches, where n is the length of the array.
+- **Space Complexity**: O(n * n) for the memoization table in Top-Down Approach, O(n) in Bottom-Up Approach.
