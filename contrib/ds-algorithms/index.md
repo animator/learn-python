@@ -16,6 +16,7 @@
 - [Two Pointer Technique](two-pointer-technique.md)
 - [Hashing through Linear Probing](hashing-linear-probing.md)
 - [Hashing through Chaining](hashing-chaining.md)
+- [Hash Tables, Sets, Maps](hash-tables.md)
 - [Binary Tree](binary-tree.md)
 - [AVL Trees](avl-trees.md)
 - [Splay Trees](splay-trees.md)
