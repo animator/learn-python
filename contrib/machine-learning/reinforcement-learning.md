@@ -113,7 +113,7 @@ Q-Learning is a model-free algorithm used in reinforcement learning to learn the
    - Choose an action using an exploration strategy (e.g., epsilon-greedy).
    - Take the action, observe the reward and the next state.
    - Update the Q-value of the current state-action pair using the Bellman equation:
-    $$ Q(s, a) \leftarrow Q(s, a) + \alpha \left( r + \gamma \max_{a'} Q(s', a') - Q(s, a) \right) $$
+    $$Q(s, a) \leftarrow Q(s, a) + \alpha \left( r + \gamma \max_{a'} Q(s', a') - Q(s, a) \right)$$
 
     where:
     - $Q(s, a)$ is the Q-value of state $s$ and action $a$.
