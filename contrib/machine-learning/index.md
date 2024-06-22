@@ -24,3 +24,4 @@
 - [K-nearest neighbor (KNN)](knn.md)
 - [Naive Bayes](naive-bayes.md)
 - [Neural network regression](neural-network-regression.md)
+- [PyTorch Fundamentals](pytorch-fundamentals.md)
