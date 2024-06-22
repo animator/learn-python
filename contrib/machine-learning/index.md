@@ -20,4 +20,4 @@
 - [Grid Search](grid-search.md)
 - [Transformers](transformers.md)
 - [K-nearest neighbor (KNN)](knn.md)
-- [PyTorch Fundamentals](PyTorch_Fundamentals.md)
+- [PyTorch Fundamentals](pytorch-fundamentals.md)
