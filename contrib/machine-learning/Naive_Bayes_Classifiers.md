@@ -73,10 +73,8 @@ P(Spam|Keywords) > P(Not Spam|Keywords), we classify the new email as "Spam".
 ## Types of Naive Bayes Classifiers
 
 #### 1. Gaussian Naive Bayes 
-In Gaussian Naive Bayes, continuous values associated with each feature are assumed to be distributed according to a Gaussian distribution. A Gaussian distribution is also called Normal distribution When plotted, it gives a bell shaped curve which is symmetric about the mean of the feature values as shown below:
+In Gaussian Naive Bayes, continuous values associated with each feature are assumed to be distributed according to a Gaussian distribution. A Gaussian distribution is also called Normal distribution When plotted, it gives a bell shaped curve which is symmetric about the mean of the feature values.
 
-###### Normal Distribution:
-![img.png](img.png)
 
 
 * Assumption: Each feature follows a Gaussian distribution.
