@@ -30,6 +30,10 @@ thread.join()
 
 print("Thread has finished execution.")
 ```
+Output :
+```
+Thread has finished execution.
+```
 **2. Performing Task with Thread:**
 We can also perform a specific task by thread by giving a function as target and its argument as arg ,as a parameter to Thread object.
 
@@ -53,6 +57,15 @@ thread.join()
 
 print("Thread has finished execution.")
 ```
+Output :
+```
+Thread: 0
+Thread: 1
+Thread: 2
+Thread: 3
+Thread: 4
+Thread has finished execution.
+```
 **3. Delaying a Task with Thread's Timer Function:**
 We can set a time for which we want a thread to start. Timer function takes 4 arguments (interval,function,args,kwargs).
 
@@ -74,6 +87,16 @@ thread.start()
 thread.join()
 
 print("Thread has finished execution.")
+```
+Output :
+```
+# after three second output will be generated
+Thread: 0
+Thread: 1
+Thread: 2
+Thread: 3
+Thread: 4
+Thread has finished execution.
 ```
 **4. Creating Multiple Threads**
 We can create and manage multiple threads to achieve concurrent execution.
@@ -99,6 +122,20 @@ thread1.join()
 thread2.join()
 
 print("Both threads have finished execution.")
+```
+Output :
+```
+Thread 1: 0
+Thread 1: 1
+Thread 2: 0
+Thread 1: 2
+Thread 1: 3
+Thread 2: 1
+Thread 2: 2
+Thread 2: 3
+Thread 2: 4
+Thread 1: 4
+Both threads have finished execution.
 ```
 
 **5. Thread Synchronization**
@@ -129,6 +166,30 @@ thread1.join()
 thread2.join()
 
 print("Both threads have finished execution.")
+```
+Output :
+```
+Thread 1: 0
+Thread 1: 1
+Thread 1: 2
+Thread 1: 3
+Thread 1: 4
+Thread 1: 5
+Thread 1: 6
+Thread 1: 7
+Thread 1: 8
+Thread 1: 9
+Thread 2: 0
+Thread 2: 1
+Thread 2: 2
+Thread 2: 3
+Thread 2: 4
+Thread 2: 5
+Thread 2: 6
+Thread 2: 7
+Thread 2: 8
+Thread 2: 9
+Both threads have finished execution.
 ```
 
 A ```lock``` object is created using threading.Lock() and The ```with lock``` statement ensures that the lock is acquired before printing and released after printing. This prevents other threads from accessing the print statement simultaneously.
