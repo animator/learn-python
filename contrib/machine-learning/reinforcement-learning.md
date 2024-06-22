@@ -113,13 +113,14 @@ Q-Learning is a model-free algorithm used in reinforcement learning to learn the
    - Choose an action using an exploration strategy (e.g., epsilon-greedy).
    - Take the action, observe the reward and the next state.
    - Update the Q-value of the current state-action pair using the Bellman equation:
-     <img src="https://latex.codecogs.com/svg.latex?Q(s,&space;a)&space;\leftarrow&space;Q(s,&space;a)&space;&plus;&space;\alpha&space;\left(&space;r&space;&plus;&space;\gamma&space;\max_{a'}&space;Q(s',&space;a')&space;-&space;Q(s,&space;a)&space;\right)" title="Q(s, a) \leftarrow Q(s, a) + \alpha \left( r + \gamma \max_{a'} Q(s', a') - Q(s, a) \right)" />  
-     where:
-     - <img src="https://latex.codecogs.com/svg.latex?Q(s,&space;a)" title="Q(s, a)" /> is the Q-value of state <img src="https://latex.codecogs.com/svg.latex?s" title="s" /> and action <img src="https://latex.codecogs.com/svg.latex?a" title="a" />.
-     - <img src="https://latex.codecogs.com/svg.latex?r" title="r" /> is the observed reward.
-     - <img src="https://latex.codecogs.com/svg.latex?s'" title="s'" /> is the next state.
-     - <img src="https://latex.codecogs.com/svg.latex?\alpha" title="\alpha" /> is the learning rate.
-     - <img src="https://latex.codecogs.com/svg.latex?\gamma" title="\gamma" /> is the discount factor.
+    $$ Q(s, a) \leftarrow Q(s, a) + \alpha \left( r + \gamma \max_{a'} Q(s', a') - Q(s, a) \right) $$
+
+    where:
+    - $Q(s, a)$ is the Q-value of state $s$ and action $a$.
+    - $r$ is the observed reward.
+    - $s'$ is the next state.
+    - $\alpha$ is the learning rate.
+    - $\gamma$ is the discount factor.
 3. Until convergence or a maximum number of episodes.
 
 ### SARSA
@@ -128,13 +129,13 @@ SARSA (State-Action-Reward-State-Action) is an on-policy temporal difference alg
 #### Algorithm:
 1. Initialize Q-values arbitrarily for all state-action pairs.
 2. Repeat for each episode:
-   - Initialize the environment state <img src="https://latex.codecogs.com/svg.latex?s" title="s" />.
-   - Choose an action <img src="https://latex.codecogs.com/svg.latex?a" title="a" /> using the current policy (e.g., epsilon-greedy).
+   - Initialize the environment state $s$.
+   - Choose an action $a$ using the current policy (e.g., epsilon-greedy).
    - Repeat for each timestep:
-     - Take action <img src="https://latex.codecogs.com/svg.latex?a" title="a" />, observe the reward <img src="https://latex.codecogs.com/svg.latex?r" title="r" /> and the next state <img src="https://latex.codecogs.com/svg.latex?s'" title="s'" />.
-     - Choose the next action <img src="https://latex.codecogs.com/svg.latex?a'" title="a'" /> using the current policy.
+     - Take action $a$, observe the reward $r$ and the next state $s'$.
+     - Choose the next action $a'$ using the current policy.
      - Update the Q-value of the current state-action pair using the SARSA update rule:
-       <img src="https://latex.codecogs.com/svg.latex?Q(s,&space;a)&space;\leftarrow&space;Q(s,&space;a)&space;&plus;&space;\alpha&space;\left(&space;r&space;&plus;&space;\gamma&space;Q(s',&space;a')&space;-&space;Q(s,&space;a)&space;\right)" title="Q(s, a) \leftarrow Q(s, a) + \alpha \left( r + \gamma Q(s', a') - Q(s, a) \right)" />
+       $$Q(s, a) \leftarrow Q(s, a) + \alpha \left( r + \gamma Q(s', a') - Q(s, a) \right)$$
 3. Until convergence or a maximum number of episodes.
 
 ### REINFORCE Algorithm:
@@ -299,12 +300,3 @@ for i in range(num_rows):
 Congratulations on completing your journey through this comprehensive guide to reinforcement learning! Armed with this knowledge, you are well-equipped to dive deeper into the exciting world of RL, whether it's for gaming, robotics, finance, healthcare, or any other domain. Keep exploring, experimenting, and learning, and remember, the only limit to what you can achieve with reinforcement learning is your imagination.
 
 *Happy coding, and may your RL adventures be rewarding!*
-
-$$ Q(s, a) \leftarrow Q(s, a) + \alpha \left( r + \gamma \max_{a'} Q(s', a') - Q(s, a) \right) $$
-
-where:
-- $Q(s, a)$ is the Q-value of state $s$ and action $a$.
-- $r$ is the observed reward.
-- $s'$ is the next state.
-- $\alpha$ is the learning rate.
-- $\gamma$ is the discount factor.
