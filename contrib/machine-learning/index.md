@@ -21,3 +21,4 @@
 - [Transformers](transformers.md)
 - [K-Means](kmeans.md)
 - [K-nearest neighbor (KNN)](knn.md)
+- [Neural network regression](neural-network-regression.md)
