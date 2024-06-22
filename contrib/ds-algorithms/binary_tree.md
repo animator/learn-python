@@ -2,7 +2,7 @@
 
 A binary tree is a non-linear data structure in which each node can have atmost two children, known as the left and the right child. It is a heirarchial data structure represented in the following way:
 
-```python
+```
                                                  A...................Level 0
                                                 / \
                                                B   C.................Level 1
@@ -25,7 +25,7 @@ A binary tree is a non-linear data structure in which each node can have atmost 
 ## Types Of Binary Trees
 
 - **Full Binary Tree:** A binary tree where each node has 0 or 2 children is a full binary tree.
-```python
+```
                                                  A
                                                 / \
                                                B   C
@@ -33,7 +33,7 @@ A binary tree is a non-linear data structure in which each node can have atmost 
                                              D   E   
 ```
 - **Complete Binary Tree:** A binary tree in which all levels are completely filled except the last level is a complete binary tree. Whenever new nodes are inserted, they are inserted from the left side.
-```python
+```
                                                   A
                                                  / \
                                                 /   \
@@ -42,7 +42,7 @@ A binary tree is a non-linear data structure in which each node can have atmost 
                                              D   E F   
 ```
 - **Perfect Binary Tree:** A binary tree in which all nodes are completely filled, i.e., each node has two children is called a perfect binary tree.
-```python
+```
                                                   A
                                                  / \
                                                 /   \
@@ -51,7 +51,7 @@ A binary tree is a non-linear data structure in which each node can have atmost 
                                              D   E F   G
 ```
 - **Skewed Binary Tree:** A binary tree in which each node has either 0 or 1 child is called a skewed binary tree. It is of two types - left skewed binary tree and right skewed binary tree.
-```python
+```
                            A                                             A
                             \                                           /
                              B                                         B
@@ -60,7 +60,7 @@ A binary tree is a non-linear data structure in which each node can have atmost 
                      Right skewed binary tree             Left skewed binary tree
 ```
 - **Balanced Binary Tree:** A binary tree in which the height difference between the left and right subtree is not more than one and the subtrees are also balanced is a balanced binary tree.
-```python
+```
                                                       A
                                                      / \
                                                     B   C
@@ -218,14 +218,14 @@ b.levelorder(root)
 root = b.delete_value(root, 20)
 print("\nLevel order traversal after deletion:", end=" ")
 b.levelorder(root)
+```
 
+#### OUTPUT
 
-'''
-OUTPUT:
+```
 Preorder traversal: 10 20 40 50 30 60 
 Inorder traversal: 40 20 50 10 60 30 
 Postorder traversal: 40 50 20 60 30 10 
 Level order traversal: 10 20 30 40 50 60 
 Level order traversal after deletion: 10 60 30 40 50 
-'''
 ```
