@@ -300,11 +300,11 @@ Congratulations on completing your journey through this comprehensive guide to r
 
 *Happy coding, and may your RL adventures be rewarding!*
 
-\( Q(s, a) \leftarrow Q(s, a) + \alpha \left( r + \gamma \max_{a'} Q(s', a') - Q(s, a) \right) \)
+$$ Q(s, a) \leftarrow Q(s, a) + \alpha \left( r + \gamma \max_{a'} Q(s', a') - Q(s, a) \right) $$
 
 where:
-- \( Q(s, a) \) is the Q-value of state \( s \) and action \( a \).
-- \( r \) is the observed reward.
-- \( s' \) is the next state.
-- \( \alpha \) is the learning rate.
-- \( \gamma \) is the discount factor.
+- $Q(s, a)$ is the Q-value of state $s$ and action $a$.
+- $r$ is the observed reward.
+- $s'$ is the next state.
+- $\alpha$ is the learning rate.
+- $\gamma$ is the discount factor.
