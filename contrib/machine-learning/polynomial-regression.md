@@ -1,22 +1,10 @@
 # Polynomial Regression
 
-Polynomial Regression is a form of regression analysis in which the relationship between the independent variable \( x \) and the dependent variable \( y \) is modeled as an \( n \)th degree polynomial. This README provides an overview of polynomial regression, including its fundamental concepts, assumptions, and how to implement it using Python.
-
-## Table of Contents
-
-1. [Introduction](#introduction)
-2. [Concepts](#concepts)
-3. [Assumptions](#assumptions)
-4. [Implementation](#implementation)
-    - [Using Scikit-learn](#using-scikit-learn)
-    - [Code Example](#code-example)
-5. [Evaluation Metrics](#evaluation-metrics)
-6. [Conclusion](#conclusion)
-7. [References](#references)
+Polynomial Regression is a form of regression analysis in which the relationship between the independent variable $x$ and the dependent variable $y$ is modeled as an $nth$ degree polynomial. This guide provides an overview of polynomial regression, including its fundamental concepts, assumptions, and how to implement it using Python.
 
 ## Introduction
 
-Polynomial Regression is used when the data shows a non-linear relationship between the independent variable \( x \) and the dependent variable \( y \). It extends the simple linear regression model by considering polynomial terms of the independent variable, allowing for a more flexible fit to the data.
+Polynomial Regression is used when the data shows a non-linear relationship between the independent variable $x$ and the dependent variable $y$ is modeled as an $nth$ degree polynomial. It extends the simple linear regression model by considering polynomial terms of the independent variable, allowing for a more flexible fit to the data.
 
 ## Concepts
 
@@ -29,10 +17,10 @@ $$
 $$
 
 Where:
-- \( y \) is the dependent variable.
-- \( x \) is the independent variable.
-- \( \beta_0, \beta_1, \ldots, \beta_n \) are the coefficients of the polynomial.
-- \( \epsilon \) is the error term.
+- $y$ is the dependent variable.
+- $x$ is the independent variable.
+- $\beta_0, \beta_1, \ldots, \beta_n$ are the coefficients of the polynomial.
+- $\epsilon$ is the error term.
 
 ### Degree of Polynomial
 
@@ -111,4 +99,4 @@ Polynomial Regression is a powerful tool for modeling non-linear relationships b
 ## References
 
 - [Scikit-learn Documentation](https://scikit-learn.org/stable/modules/linear_model.html#polynomial-regression)
-- [Wikipedia: Polynomial Regression](https://en.wikipedia.org/wiki/Polynomial_reg
+- [Wikipedia: Polynomial Regression](https://en.wikipedia.org/wiki/Polynomial_reg)
