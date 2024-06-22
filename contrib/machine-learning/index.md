@@ -20,4 +20,4 @@
 - [Grid Search](grid-search.md)
 - [Transformers](transformers.md)
 - [K-nearest neighbor (KNN)](knn.md)
-- [Neural network regression](Neural network regression.md)
+- [Neural network regression](neural-network-regression.md)
