@@ -11,4 +11,5 @@
 - [Sorting NumPy Arrays](sorting-array.md)
 - [NumPy Array Iteration](array-iteration.md)
 - [Concatenation of Arrays](concatenation-of-arrays.md)
+- [Universal Functions (Ufunc)](universal-functions.md)
 - [Statistical Functions on Arrays](statistical-functions.md)
