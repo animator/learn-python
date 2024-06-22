@@ -3,6 +3,7 @@
 - [Introduction to scikit-learn](sklearn-introduction.md)
 - [Binomial Distribution](binomial-distribution.md)
 - [Regression in Machine Learning](regression.md)
+- [Polynomial Regression](polynomial-regression.md)
 - [Confusion Matrix](confusion-matrix.md)
 - [Decision Tree Learning](decision-tree.md)
 - [Random Forest](random-forest.md)
