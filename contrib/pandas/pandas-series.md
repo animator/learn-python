@@ -256,8 +256,8 @@ Here one thing we should keep in mind that both the series object should have sa
 
 | **Functions**            | **Description**                                   |
 |--------------------------|---------------------------------------------------|
-| `<series>.head(n)`         | return the first n elements of the series                     |
-| `<series>.tail(n)`        | return the last n elements of the series                     |
+| `<series>.head(n)`       | return the first n elements of the series         |
+| `<series>.tail(n)`       | return the last n elements of the series          |
 
 ```python
 import pandas as pd
@@ -282,6 +282,7 @@ dtype: int64
 If you dont provide any value to n the by default it give results for `n=5`.
 
 ### Few extra functions
+
 | **Function**                           | **Description**                                                        |
 |----------------------------------------|------------------------------------------------------------------------|
 | `<series_object>.sort_values()`        | Return the Series object in ascending order based on its values.       |
