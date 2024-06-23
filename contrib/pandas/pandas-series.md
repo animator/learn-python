@@ -1,7 +1,6 @@
 # Pandas Series
 
-
- A series is a Panda data structures that represents a one dimensional array-like object containing an array of data and an associated array of data type labels, called index.
+A series is a Panda data structures that represents a one dimensional array-like object containing an array of data and an associated array of data type labels, called index.
 
 ## Creating a Series object:
 
@@ -14,8 +13,9 @@ import pandas as pd
 s1 = pd.Series([4, 5, 2, 3])
 print(s1)
 ```
+
+#### Output
 ```
-Output:
 0    4
 1    5
 2    2
@@ -32,8 +32,9 @@ import pandas as pd
 s2 = pd.Series({'A': 1, 'B': 2, 'C': 3})
 print(s2)
 ```
+
+#### Output
 ```
-Output:
 A    1
 B    2
 C    3
@@ -52,8 +53,9 @@ import pandas as pd
 s4 = pd.Series([1, 2, 3], index=['a', 'b', 'c'], dtype='float64')
 print(s4)
 ```
+
+#### Output
 ```
-Output:
 a    1.0
 b    2.0
 c    3.0
@@ -69,8 +71,9 @@ import pandas as pd
 s3=pd.Series([1,np.Nan,2])
 print(s3)
 ```
+
+#### Output
 ```
-Output:
 0  1.0
 1  NaN
 2  2.0
@@ -89,8 +92,9 @@ a=np.arange(1,5)  # [1,2,3,4]
 s5=pd.Series(data=a**2,index=a)
 print(s5)
 ```
+
+#### Output
 ```
-Output:
 1  1
 2  4
 3  9
@@ -111,8 +115,6 @@ dtype: int64
 | `<series>.hasnans`       | Return True if there is any NaN in the data       |
 | `<series>.empty`         | Return True if the Series object is empty         |
 
-
-
 - If you use len() on a series object then it return total number of elements in the series object whereas <series_object>.count() return only the number of non NaN elements.
 
 ##  Accessing a Series object and its elements
@@ -126,11 +128,11 @@ import pandas as pd
 s7 = pd.Series(data=[13, 45, 67, 89], index=['A', 'B', 'C', 'D'])
 print(s7['A'])
 ```
+
+#### Output
 ```
-Output:
 13
 ```
-
 
 ### Slicing a Series
 
@@ -146,15 +148,15 @@ import pandas as pd
 s = pd.Series(data=[13, 45, 67, 89], index=['A', 'B', 'C', 'D'])
 print(s[:2])
 ```
+
+#### Output
 ```
-Output:
 A    13
 B    45
 dtype: int64
-
-This example demonstrates that the first two elements (positions 0 and 1) are returned, regardless of their custom index labels.
 ```
 
+This example demonstrates that the first two elements (positions 0 and 1) are returned, regardless of their custom index labels.
 
 ## Operation on series object
 
@@ -171,8 +173,9 @@ s8['a'] = 100
 s8.index = ['x', 'y', 'z']
 print(s8)
 ```
+
+#### Output
 ```
-Output:
 x    100
 y     20
 z     30
@@ -181,25 +184,32 @@ dtype: int64
 
 **Note: Series object are value-mutable but size immutable objects.**
 
-### vector operations
+### Vector operations
 We can perform vector operations such as `+`,`-`,`/`,`%` etc.
+
+#### Addition
 ```python
 import pandas as pd
 
 s9 = pd.Series([1, 2, 3])
-print("addition:", s9 + 5)
-print("subtraction:", s9 - 2)
+print(s9 + 5)
 ```
-```
-output:
 
-addition: 
+#### Output
+```
 0    6
 1    7
 2    8
 dtype: int64
+```
 
-subtraction: 
+#### Subtraction
+```python
+print(s9 - 2)
+```
+
+#### Output
+```
 0   -1
 1    0
 2    1
@@ -207,25 +217,32 @@ dtype: int64
 ```
 
 ### Arthmetic on series object
+
+#### Addition
 ```python
 import pandas as pd
 
 s10 = pd.Series([1, 2, 3])
 s11 = pd.Series([4, 5, 6])
-print("addition:", s10 + s11)
-
-print("multiplication:", s10 * s11)
+print(s10 + s11)
 ```
-```
-output:
 
-addition: 
+#### Output
+```
 0    5
 1    7
 2    9
 dtype: int64
+```
 
-multiplication: 
+#### Multiplication
+
+```python
+print("s10 * s11)
+```
+
+#### Output
+```
 0     4
 1    10
 2    18
@@ -249,26 +266,28 @@ s12 = pd.Series([10, 20, 30, 40, 50, 60, 70, 80, 90, 100])
 print(s12.head(3))
 print(s12.tail(3))
 ```
+
+#### Output
 ```
-Output:
 0    10
 1    20
 2    30
 dtype: int64
-
 7     80
 8     90
 9    100
 dtype: int64
 ```
+
 If you dont provide any value to n the by default it give results for `n=5`.
 
-### Few extra functions:
+### Few extra functions
 | **Function**                           | **Description**                                                        |
 |----------------------------------------|------------------------------------------------------------------------|
 | `<series_object>.sort_values()`        | Return the Series object in ascending order based on its values.       |
 | `<series_object>.sort_index()`         | Return the Series object in ascending order based on its index.        |
 | `<series_object>.sort_drop(<index>)`   | Return the Series with the deleted index and its corresponding value.  |
+
 ```python
 import pandas as pd
 
@@ -277,18 +296,17 @@ print(s13.sort_values())
 print(s13.sort_index())
 print(s13.drop('a'))
 ```
+
+#### Output
 ```
-Output:
 a    1
 b    2
 c    3
 dtype: int64
-
 a    1
 b    2
 c    3
 dtype: int64
-
 c    3
 b    2
 dtype: int64
