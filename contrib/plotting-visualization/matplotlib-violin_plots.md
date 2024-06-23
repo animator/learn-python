@@ -34,7 +34,7 @@ plt.show()
 When executed, this would show the following pie chart:
 
 
-![Basic violin plot](images\violinplotnocolor.png)
+![Basic violin plot](images/violinplotnocolor.png)
 
 
 The `Violinplot` function in matplotlib.pyplot creates a violin plot, which is a graphical representation of the distribution of data across different levels of a categorical variable. Here's a breakdown of its usage:
@@ -96,7 +96,7 @@ plt.show()
 This code snippet creates a violin plot with custom colors assigned to each violin, enhancing the visual appeal and clarity of the plot.
 
 
-![Coloring violin](images\violenplotnormal.png)
+![Coloring violin](images/violenplotnormal.png)
 
 
 When customizing violin plots using `matplotlib.pyplot.subplots()`, you obtain a `Figure` object `fig` and an `Axes` object `ax`, allowing for extensive customization. Each `violin plot` consists of various components, including the `violin body`, `lines representing median and quartiles`, and `potential markers for mean and outliers`. You can customize these components using the appropriate methods and attributes of the Axes object.
