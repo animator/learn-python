@@ -125,7 +125,7 @@ def printInorder(root):
 
 In this traversal method, the root node is visited first, then the left subtree and finally the right subtree.
 
-![preorder](images/Preorder%20traversal.png))
+![preorder](images/preorder-traversal.png))
 
 **The order:**  Root -> Left -> Right
 
