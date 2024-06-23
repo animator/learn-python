@@ -29,14 +29,14 @@ async def main():
 asyncio.run(main())
 ```
 
-Output:
+#### Output
 
-	Hello, Alice
-	Goodbye, Alice
-	Hello, Bob
-	Goodbye, Bob
-
-
+```
+Hello, Alice
+Goodbye, Alice
+Hello, Bob
+Goodbye, Bob
+```
 
 You can create coroutines using `async def` and run them using `await`
 
@@ -44,6 +44,7 @@ You can create coroutines using `async def` and run them using `await`
 
 ```python
 import asyncio
+
 async def fn():
 	task=asyncio.create_task(fn2())
 	print("one")
@@ -62,17 +63,18 @@ async def fn2():
 	
 asyncio.run(fn())
 ```
-Output:
 
-	one
-	two
-	two
-	three
-	three
-	four
-	five
+#### Output
 
-
+```
+one
+two
+two
+three
+three
+four
+five
+```
 
 You can run multiple coroutines concurrently using `asyncio.gather` or `asyncio.create_task`.
 
@@ -80,7 +82,6 @@ You can run multiple coroutines concurrently using `asyncio.gather` or `asyncio.
 
 ```python
 import asyncio
-
 
 async def func1():
 	print("Function 1 started..")
@@ -112,16 +113,16 @@ async def main():
 asyncio.run(main())
 ```
 
-Output: 
+#### Output 
 
-	Function 1 started..
-	Function 2 started..
-	Function 3 started..
-	Function 3 Ended
-	Function 1 Ended
-	Function 2 Ended
-	Main Ended..
-
-
+```
+Function 1 started..
+Function 2 started..
+Function 3 started..
+Function 3 Ended
+Function 1 Ended
+Function 2 Ended
+Main Ended..
+```
 
 In this example, the func1(), func2(), and func3() functions are simulated I/O-bound tasks using `asyncio.sleep()`. They each “wait” for a different amount of time to simulate varying levels of work.
