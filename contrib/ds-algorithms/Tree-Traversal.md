@@ -17,7 +17,7 @@ A Tree Data Structure can be traversed in following ways:
 ## Binary Tree Structure
   Before diving into traversal techniques, let's define a simple binary tree node structure:
 
-![Binary Tree](images/binarytree.png)
+![Binary Tree](images/binarytree.png))
   
   ```python
 class Node:
