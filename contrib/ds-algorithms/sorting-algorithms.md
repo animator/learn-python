@@ -561,3 +561,58 @@ print("Sorted string:", sorted_str)
 ### Complexity Analysis
  - **Time Complexity:** O(n+k) for all cases.No matter how the elements are placed in the array, the algorithm goes through n+k times
  - **Space Complexity:** O(max). Larger the range of elements, larger is the space complexity.
+
+
+## 9. Cyclic Sort
+
+### Theory
+Cyclic Sort is an in-place sorting algorithm that is useful for sorting arrays where the elements are in a known range (e.g., 1 to N). The key idea behind the algorithm is that each number should be placed at its correct index. If we find a number that is not at its correct index, we swap it with the number at its correct index. This process is repeated until every number is at its correct index.
+
+### Algorithm
+- Iterate over the array from the start to the end.
+- For each element, check if it is at its correct index.
+- If it is not at its correct index, swap it with the element at its correct index.
+- Continue this process until the element at the current index is in its correct position. Move to the next index and repeat the process until the end of the array is reached.
+
+### Steps
+- Start with the first element.
+- Check if it is at the correct index (i.e., if arr[i] == i + 1).
+- If it is not, swap it with the element at the index arr[i] - 1.
+- Repeat step 2 for the current element until it is at the correct index.
+- Move to the next element and repeat the process.
+
+### Code
+
+```python
+def cyclic_sort(nums):
+    i = 0
+    while i < len(nums):
+        correct_index = nums[i] - 1
+        if nums[i] != nums[correct_index]:
+            nums[i], nums[correct_index] = nums[correct_index], nums[i]  # Swap
+        else:
+            i += 1
+    return nums
+```
+
+### Example
+```
+arr = [3, 1, 5, 4, 2]
+sorted_arr = cyclic_sort(arr)
+print(sorted_arr)
+  ```
+### Output
+```
+[1, 2, 3, 4, 5]
+```
+
+### Complexity Analysis
+**Time Complexity:** 
+
+The time complexity of Cyclic Sort is **O(n)**.
+This is because in each cycle, each element is either placed in its correct position or a swap is made. Since each element is swapped at most once, the total number of swaps (and hence the total number of operations) is linear in the number of elements.
+
+**Space Complexity:** 
+
+The space complexity of Cyclic Sort is **O(1)**. 
+This is because the algorithm only requires a constant amount of additional space beyond the input array.
