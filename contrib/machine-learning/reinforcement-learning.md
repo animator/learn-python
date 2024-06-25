@@ -2,54 +2,6 @@
 
 Reinforcement Learning (RL) is a field of Machine Learing which focuses on goal-directed learning from interaction with the environment. In RL, an agent learns to make decisions by performing actions in an environment to maximize cumulative numerical reward signal. This README aims to provide a thorough understanding of RL, covering key concepts, algorithms, applications, and resources.
 
-## Table of Contents
-
-<details>
-<summary>Click to expand</summary>
-
-1. [What is Reinforcement Learning?](#what-is-reinforcement-learning)
-2. [Key Concepts and Terminology](#key-concepts-and-terminology)
-   - [Agent](#agent)
-   - [Environment](#environment)
-   - [State](#state)
-   - [Action](#action)
-   - [Reward](#reward)
-   - [Policy](#policy)
-   - [Value Function](#value-function)
-   - [Model](#model)
-   - [Exploration vs. Exploitation](#exploration-vs-exploitation)
-3. [Types of Reinforcement Learning](#types-of-reinforcement-learning)
-   - [Model-Based vs Model-Free](#model-based-vs-model-free)
-   - [Value-Based Methods](#value-based-methods)
-   - [Policy-Based Methods](#policy-based-methods)
-   - [Actor-Critic Methods](#actor-critic-methods)
-4. [Important Algorithms](#important-algorithms)
-   - [Q-Learning](#q-learning) 
-   - [SARSA](#sarsa)
-   - [REINFORCE Algorithm](#reinforce-algorithm)
-   - [Proximal Policy Optimization (PPO)](#proximal-policy-optimization-ppo)
-   - [A2C/A3C](#a2ca3c)
-5. [Mathematical Background](#mathematical-background)
-   - [Markov Decision Processes (MDP)](#markov-decision-processes-mdps)
-   - [Bellman Equations](#bellman-equations)
-6. [Applications of Reinforcement Learning](#applications-of-reinforcement-learning)
-   - [Gaming](#gaming)
-   - [Robotics](#robotics)
-   - [Finance](#finance)
-   - [Healthcare](#healthcare)
-7. [Tools and Libraries](#tools-and-libraries)
-8. [Resources for Further Learning](#resources-for-further-learning)
-   - [Books](#books)
-   - [Online Courses](#online-courses)
-   - [Research Papers](#research-papers)
-   - [Blogs and Websites](#blogs-and-websites)
-9. [How to Start with Reinforcement Learning](#how-to-start-with-reinforcement-learning)
-   - [Prerequisites](#prerequisites)
-   - [Beginner Project](#beginner-project)
-10. [Conclusion](#conclusion)
-
-</details>
-
 ## What is Reinforcement Learning?
 
 Reinforcement learning involves determining the best actions to take in various situations to maximize a numerical reward signal. Instead of being instructed on which actions to take, the learner must explore and identify the actions that lead to the highest rewards through trial and error. After each action performed in its environment, a trainer may give feedback in the form of rewards or penalties to indicate the desirability of the resulting state. Unlike supervised learning, reinforcement learning does not depend on labeled data but instead learns from the outcomes of its actions.
@@ -175,25 +127,6 @@ In healthcare, reinforcement learning is utilized for various applications such 
 - **PyTorch:** Popular machine learning library with RL capabilities.
 - **Stable Baselines3:** A set of reliable implementations of RL algorithms in PyTorch.
 
-## Resources for Further Learning
-### Books
-- "Reinforcement Learning: An Introduction" by Sutton and Barto
-- "Deep Reinforcement Learning Hands-On" by Maxim Lapan
-
-### Online Courses
-- "Reinforcement Learning" by Udacity
-- "Fundamentals of Reinforcement Learning" by Coursera
-- "Master Reinforcement Learning and Deep RL with Python" by Udemy
-
-### Research Papers
-- [Reinforcement learning model, algorithms and its application](https://ieeexplore.ieee.org/abstract/document/6025669)
-- [A Concise Introduction to Reinforcement Learning](https://www.researchgate.net/publication/323178749_A_Concise_Introduction_to_Reinforcement_Learning)
-
-### Blogs and Websites
-- [OpenAI Blog](https://spinningup.openai.com/en/latest/)
-- [Geeks for Geeks](https://www.geeksforgeeks.org/what-is-reinforcement-learning/)
-- [Medium Blog](https://gordicaleksa.medium.com/how-to-get-started-with-reinforcement-learning-rl-4922fafeaf8c)
-
 ## How to Start with Reinforcement Learning
 
 ### Prerequisites
@@ -298,5 +231,3 @@ for i in range(num_rows):
 
 ## Conclusion
 Congratulations on completing your journey through this comprehensive guide to reinforcement learning! Armed with this knowledge, you are well-equipped to dive deeper into the exciting world of RL, whether it's for gaming, robotics, finance, healthcare, or any other domain. Keep exploring, experimenting, and learning, and remember, the only limit to what you can achieve with reinforcement learning is your imagination.
-
-*Happy coding, and may your RL adventures be rewarding!*
