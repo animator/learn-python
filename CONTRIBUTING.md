@@ -23,7 +23,7 @@ The list of topics for which we are looking for content are provided below along
 - Interacting with Databases - [Link](https://github.com/animator/learn-python/tree/main/contrib/database)  
 - Web Scrapping - [Link](https://github.com/animator/learn-python/tree/main/contrib/web-scrapping)  
 - API Development - [Link](https://github.com/animator/learn-python/tree/main/contrib/api-development)  
-- Data Structures & Algorithms - [Link](https://github.com/animator/learn-python/tree/main/contrib/ds-algorithms)  
+- Data Structures & Algorithms - [Link](https://github.com/animator/learn-python/tree/main/contrib/ds-algorithms)  **(Not accepting)**
 - Python Mini Projects - [Link](https://github.com/animator/learn-python/tree/main/contrib/mini-projects)  **(Not accepting)**
 - Python Question Bank - [Link](https://github.com/animator/learn-python/tree/main/contrib/question-bank)  **(Not accepting)**
 
