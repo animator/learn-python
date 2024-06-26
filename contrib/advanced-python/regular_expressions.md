@@ -1,16 +1,13 @@
 ## Regular Expressions in Python
-
 Regular expressions (regex) are a powerful tool for pattern matching and text manipulation.
 Python's re module provides comprehensive support for regular expressions, enabling efficient text processing and validation.
 Regular expressions (regex) are a versitile tool for matching patterns in strings. In Python, the `re` module provides support for working with regular expressions.
 
 ## 1. Introduction to Regular Expressions
-
 A regular expression is a sequence of characters defining a search pattern. Common use cases include validating input, searching within text, and extracting
 specific patterns.
 
 ## 2. Basic Syntax
-
 Literal Characters: Match exact characters (e.g., abc matches "abc").
 Metacharacters: Special characters like ., \*, ?, +, ^, $, [ ], and | used to build patterns.
 
@@ -19,7 +16,7 @@ Metacharacters: Special characters like ., \*, ?, +, ^, $, [ ], and | used to bu
 - .: Any character except newline.
 - ^: Start of the string.
 - $: End of the string.
-- \*: 0 or more repetitions.
+- *: 0 or more repetitions.
 - +: 1 or more repetitions.
 - ?: 0 or 1 repetition.
 - []: Any one character inside brackets (e.g., [a-z]).
