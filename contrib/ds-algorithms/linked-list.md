@@ -167,10 +167,10 @@ check the list is empty otherwise shift the head to next node.
         temp = self.head
         while(temp):
             nextNode = temp.next #Store the next node
-            temp.next = prev #Reverse the pointer of current node
-            prev = temp #Move `prev` one step forward
-            temp = nextNode #Move `temp` one step forward.
-        self.head = prev #Update the head pointer to last node
+            temp.next = prev # Reverse the pointer of current node
+            prev = temp # Move prev pointer one step forward
+            temp = nextNode # Move temp pointer one step forward.
+        self.head = prev # Update the head pointer to last node
 ```
 
 ### Search in a linked list 
