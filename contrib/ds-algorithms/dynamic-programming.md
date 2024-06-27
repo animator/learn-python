@@ -51,10 +51,6 @@ print(f"The {n}th Fibonacci number is: {fibonacci(n)}.")
 - **Time Complexity**: O(n) for both approaches
 - **Space Complexity**: O(n) for the top-down approach (due to memoization), O(1) for the bottom-up approach
 
-</br>
-<hr>
-</br>
-
 # 2. Longest Common Subsequence
 
 The longest common subsequence (LCS) problem is to find the longest subsequence common to two sequences. A subsequence is a sequence that appears in the same relative order but not necessarily contiguous.
@@ -84,13 +80,33 @@ Y = "GXTXAYB"
 print("Length of Longest Common Subsequence:", longest_common_subsequence(X, Y, len(X), len(Y)))
 ```
 
-## Complexity Analysis
-- **Time Complexity**: O(m * n) for the top-down approach, where m and n are the lengths of the input sequences
-- **Space Complexity**: O(m * n) for the memoization table
+## Longest Common Subsequence Code in Python (Bottom-Up Approach)
 
-</br>
-<hr>
-</br>
+```python
+
+def longestCommonSubsequence(X, Y, m, n):
+    L = [[None]*(n+1) for i in range(m+1)]
+    for i in range(m+1):
+        for j in range(n+1):
+            if i == 0 or j == 0:
+                L[i][j] = 0
+            elif X[i-1] == Y[j-1]:
+                L[i][j] = L[i-1][j-1]+1
+            else:
+                L[i][j] = max(L[i-1][j], L[i][j-1])
+    return L[m][n]
+
+
+S1 = "AGGTAB"
+S2 = "GXTXAYB"
+m = len(S1)
+n = len(S2)
+print("Length of LCS is", longestCommonSubsequence(S1, S2, m, n))
+```
+
+## Complexity Analysis
+- **Time Complexity**: O(m * n) for both approaches, where m and n are the lengths of the input sequences
+- **Space Complexity**: O(m * n) for the memoization table
 
 # 3. 0-1 Knapsack Problem
 
@@ -123,10 +139,315 @@ n = len(weights)
 print("Maximum value that can be obtained:", knapsack(weights, values, capacity, n))
 ```
 
+## 0-1 Knapsack Problem Code in Python (Bottom-up Approach)
+
+```python
+def knapSack(capacity, weights, values, n):
+    K = [[0 for x in range(capacity + 1)] for x in range(n + 1)]
+    for i in range(n + 1):
+        for w in range(capacity + 1):
+            if i == 0 or w == 0:
+                K[i][w] = 0
+            elif weights[i-1] <= w:
+                K[i][w] = max(values[i-1]
+                              + K[i-1][w-weights[i-1]],
+                              K[i-1][w])
+            else:
+                K[i][w] = K[i-1][w]
+
+    return K[n][capacity]
+
+values = [60, 100, 120]
+weights = [10, 20, 30]
+capacity = 50
+n = len(weights)
+print(knapSack(capacity, weights, values, n))
+```
+
 ## Complexity Analysis
-- **Time Complexity**: O(n * W) for the top-down approach, where n is the number of items and W is the capacity of the knapsack
+- **Time Complexity**: O(n * W) for both approaches, where n is the number of items and W is the capacity of the knapsack
 - **Space Complexity**: O(n * W) for the memoization table
 
-</br>
-<hr>
-</br>
+# 4. Longest Increasing Subsequence
+
+The Longest Increasing Subsequence (LIS) is a task is to find the longest subsequence that is strictly increasing, meaning each element in the subsequence is greater than the one before it. This subsequence must maintain the order of elements as they appear in the original sequence but does not need to be contiguous. The goal is to identify the subsequence with the maximum possible length.
+
+**Algorithm Overview:**
+- **Base cases:** If the sequence is empty, the LIS length is 0.
+- **Memoization:** Store the results of previously computed subproblems to avoid redundant computations.
+- **Recurrence relation:** Compute the LIS length by comparing characters of the sequences and making decisions based on their values.
+
+## Longest Increasing Subsequence Code in Python (Top-Down Approach using Memoization)
+
+```python
+import sys
+
+def f(idx, prev_idx, n, a, dp):
+	if (idx == n):
+		return 0
+
+	if (dp[idx][prev_idx + 1] != -1):
+		return dp[idx][prev_idx + 1]
+
+	notTake = 0 + f(idx + 1, prev_idx, n, a, dp)
+	take = -sys.maxsize - 1
+	if (prev_idx == -1 or a[idx] > a[prev_idx]):
+		take = 1 + f(idx + 1, idx, n, a, dp)
+
+	dp[idx][prev_idx + 1] = max(take, notTake)
+	return dp[idx][prev_idx + 1]
+
+def longestSubsequence(n, a):
+
+	dp = [[-1 for i in range(n + 1)]for j in range(n + 1)]
+	return f(0, -1, n, a, dp)
+
+a = [3, 10, 2, 1, 20]
+n = len(a)
+
+print("Length of lis is", longestSubsequence(n, a))
+
+```
+
+## Longest Increasing Subsequence Code in Python (Bottom-Up Approach)
+
+```python
+def lis(arr):
+	n = len(arr)
+	lis = [1]*n
+
+	for i in range(1, n):
+		for j in range(0, i):
+			if arr[i] > arr[j] and lis[i] < lis[j] + 1:
+				lis[i] = lis[j]+1
+
+	maximum = 0
+	for i in range(n):
+		maximum = max(maximum, lis[i])
+
+	return maximum
+
+arr = [10, 22, 9, 33, 21, 50, 41, 60]
+print("Length of lis is", lis(arr))
+```
+
+## Complexity Analysis
+- **Time Complexity**: O(n * n) for both approaches, where n is the length of the array.
+- **Space Complexity**: O(n * n) for the memoization table in Top-Down Approach, O(n) in Bottom-Up Approach.
+
+# 5. String Edit Distance 
+
+The String Edit Distance algorithm calculates the minimum number of operations (insertions, deletions, or substitutions) required to convert one string into another.
+
+**Algorithm Overview:**
+- **Base Cases:** If one string is empty, the edit distance is the length of the other string.
+- **Memoization:** Store the results of previously computed edit distances to avoid redundant computations.
+- **Recurrence Relation:** Compute the edit distance by considering insertion, deletion, and substitution operations.
+  
+## String Edit Distance Code in Python (Top-Down Approach with Memoization)
+```python
+def edit_distance(str1, str2, memo={}):
+    m, n = len(str1), len(str2)
+    if (m, n) in memo:
+        return memo[(m, n)]
+    if m == 0:
+        return n
+    if n == 0:
+        return m
+    if str1[m - 1] == str2[n - 1]:
+        memo[(m, n)] = edit_distance(str1[:m-1], str2[:n-1], memo)
+    else:
+        memo[(m, n)] = 1 + min(edit_distance(str1, str2[:n-1], memo),     # Insert
+                               edit_distance(str1[:m-1], str2, memo),     # Remove
+                               edit_distance(str1[:m-1], str2[:n-1], memo)) # Replace
+    return memo[(m, n)]
+
+str1 = "sunday"
+str2 = "saturday"
+print(f"Edit Distance between '{str1}' and '{str2}' is {edit_distance(str1, str2)}.")
+```
+
+#### Output
+```
+Edit Distance between 'sunday' and 'saturday' is 3.
+```
+
+## String Edit Distance Code in Python (Bottom-Up Approach)
+```python
+def edit_distance(str1, str2):
+    m, n = len(str1), len(str2)
+    dp = [[0 for _ in range(n + 1)] for _ in range(m + 1)]
+
+    for i in range(m + 1):
+        for j in range(n + 1):
+            if i == 0:
+                dp[i][j] = j
+            elif j == 0:
+                dp[i][j] = i
+            elif str1[i - 1] == str2[j - 1]:
+                dp[i][j] = dp[i - 1][j - 1]
+            else:
+                dp[i][j] = 1 + min(dp[i - 1][j], dp[i][j - 1], dp[i - 1][j - 1])
+
+    return dp[m][n]
+
+str1 = "sunday"
+str2 = "saturday"
+print(f"Edit Distance between '{str1}' and '{str2}' is {edit_distance(str1, str2)}.")
+```
+
+#### Output
+```
+Edit Distance between 'sunday' and 'saturday' is 3.
+```
+
+## **Complexity Analysis:**
+- **Time Complexity:** O(m * n) where m and n are the lengths of string 1 and string 2 respectively
+- **Space Complexity:** O(m * n) for both top-down and bottom-up approaches
+
+
+# 6. Matrix Chain Multiplication
+
+The Matrix Chain Multiplication finds the optimal way to multiply a sequence of matrices to minimize the number of scalar multiplications.
+
+**Algorithm Overview:**
+- **Base Cases:** The cost of multiplying one matrix is zero.
+- **Memoization:** Store the results of previously computed matrix chain orders to avoid redundant computations.
+- **Recurrence Relation:** Compute the optimal cost by splitting the product at different points and choosing the minimum cost.
+  
+## Matrix Chain Multiplication Code in Python (Top-Down Approach with Memoization)
+```python
+def matrix_chain_order(p, memo={}):
+    n = len(p) - 1
+    def compute_cost(i, j):
+        if (i, j) in memo:
+            return memo[(i, j)]
+        if i == j:
+            return 0
+        memo[(i, j)] = float('inf')
+        for k in range(i, j):
+            q = compute_cost(i, k) + compute_cost(k + 1, j) + p[i - 1] * p[k] * p[j]
+            if q < memo[(i, j)]:
+                memo[(i, j)] = q
+        return memo[(i, j)]
+    return compute_cost(1, n)
+
+p = [1, 2, 3, 4]
+print(f"Minimum number of multiplications is {matrix_chain_order(p)}.")
+```
+
+#### Output
+```
+Minimum number of multiplications is 18.
+```
+
+
+## Matrix Chain Multiplication Code in Python (Bottom-Up Approach)
+```python
+def matrix_chain_order(p):
+    n = len(p) - 1
+    m = [[0 for _ in range(n)] for _ in range(n)]
+
+    for L in range(2, n + 1):
+        for i in range(n - L + 1):
+            j = i + L - 1
+            m[i][j] = float('inf')
+            for k in range(i, j):
+                q = m[i][k] + m[k + 1][j] + p[i] * p[k + 1] * p[j + 1]
+                if q < m[i][j]:
+                    m[i][j] = q
+
+    return m[0][n - 1]
+
+p = [1, 2, 3, 4]
+print(f"Minimum number of multiplications is {matrix_chain_order(p)}.")
+```
+
+#### Output
+```
+Minimum number of multiplications is 18.
+```
+
+## **Complexity Analysis:**
+- **Time Complexity:** O(n^3) where n is the number of matrices in the chain. For an `array p` of dimensions representing the matrices such that the `i-th matrix` has dimensions `p[i-1] x p[i]`, n is `len(p) - 1`
+- **Space Complexity:**  O(n^2) for both top-down and bottom-up approaches
+
+# 7. Optimal Binary Search Tree
+
+The Matrix Chain Multiplication finds the optimal way to multiply a sequence of matrices to minimize the number of scalar multiplications.
+
+**Algorithm Overview:**
+- **Base Cases:** The cost of a single key is its frequency.
+- **Memoization:** Store the results of previously computed subproblems to avoid redundant computations.
+- **Recurrence Relation:** Compute the optimal cost by trying each key as the root and choosing the minimum cost.
+  
+## Optimal Binary Search Tree Code in Python (Top-Down Approach with Memoization)
+
+```python
+def optimal_bst(keys, freq, memo={}):
+    n = len(keys)
+    def compute_cost(i, j):
+        if (i, j) in memo:
+            return memo[(i, j)]
+        if i > j:
+            return 0
+        if i == j:
+            return freq[i]
+        memo[(i, j)] = float('inf')
+        total_freq = sum(freq[i:j+1])
+        for r in range(i, j + 1):
+            cost = (compute_cost(i, r - 1) + 
+                    compute_cost(r + 1, j) + 
+                    total_freq)
+            if cost < memo[(i, j)]:
+                memo[(i, j)] = cost
+        return memo[(i, j)]
+    return compute_cost(0, n - 1)
+
+keys = [10, 12, 20]
+freq = [34, 8, 50]
+print(f"Cost of Optimal BST is {optimal_bst(keys, freq)}.")
+```
+
+#### Output
+```
+Cost of Optimal BST is 142.
+```
+
+## Optimal Binary Search Tree Code in Python (Bottom-Up Approach)
+
+```python
+def optimal_bst(keys, freq):
+    n = len(keys)
+    cost = [[0 for x in range(n)] for y in range(n)]
+
+    for i in range(n):
+        cost[i][i] = freq[i]
+
+    for L in range(2, n + 1):
+        for i in range(n - L + 1):
+            j = i + L - 1
+            cost[i][j] = float('inf')
+            total_freq = sum(freq[i:j+1])
+            for r in range(i, j + 1):
+                c = (cost[i][r - 1] if r > i else 0) + \
+                    (cost[r + 1][j] if r < j else 0) + \
+                    total_freq
+                if c < cost[i][j]:
+                    cost[i][j] = c
+
+    return cost[0][n - 1]
+
+keys = [10, 12, 20]
+freq = [34, 8, 50]
+print(f"Cost of Optimal BST is {optimal_bst(keys, freq)}.")
+```
+
+#### Output
+```
+Cost of Optimal BST is 142.
+```
+
+### Complexity Analysis
+- **Time Complexity**: O(n^3) where n is the number of keys in the binary search tree.
+- **Space Complexity**: O(n^2) for both top-down and bottom-up approaches
