@@ -23,3 +23,4 @@
 - [Splay Trees](splay-trees.md)
 - [Dijkstra's Algorithm](dijkstra.md)
 - [Deque](deque.md)
+- [Tree Traversals](tree-traversal.md)
