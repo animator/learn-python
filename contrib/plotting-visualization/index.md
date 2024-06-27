@@ -10,3 +10,4 @@
 - [Seaborn Plotting Functions](seaborn-plotting.md)
 - [Getting started with Seaborn](seaborn-basics.md)
 - [Bar Plots in Plotly](plotly-bar-plots.md)
+- [Pie Charts in Plotly](plotly-pie-charts.md)
