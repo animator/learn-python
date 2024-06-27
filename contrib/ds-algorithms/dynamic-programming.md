@@ -265,8 +265,13 @@ def edit_distance(str1, str2, memo={}):
 str1 = "sunday"
 str2 = "saturday"
 print(f"Edit Distance between '{str1}' and '{str2}' is {edit_distance(str1, str2)}.")
-# Output: Edit Distance between 'sunday' and 'saturday' is 3.
 ```
+
+#### Output
+```
+Edit Distance between 'sunday' and 'saturday' is 3.
+```
+
 ## String Edit Distance Code in Python (Bottom-Up Approach)
 ```python
 def edit_distance(str1, str2):
@@ -289,8 +294,13 @@ def edit_distance(str1, str2):
 str1 = "sunday"
 str2 = "saturday"
 print(f"Edit Distance between '{str1}' and '{str2}' is {edit_distance(str1, str2)}.")
-# Output: Edit Distance between 'sunday' and 'saturday' is 3.
 ```
+
+#### Output
+```
+Edit Distance between 'sunday' and 'saturday' is 3.
+```
+
 ## **Complexity Analysis:**
 - **Time Complexity:** O(m * n) where m and n are the lengths of string 1 and string 2 respectively
 - **Space Complexity:** O(m * n) for both top-down and bottom-up approaches
@@ -324,8 +334,14 @@ def matrix_chain_order(p, memo={}):
 
 p = [1, 2, 3, 4]
 print(f"Minimum number of multiplications is {matrix_chain_order(p)}.")
-# Output: Minimum number of multiplications is 18.
 ```
+
+#### Output
+```
+Minimum number of multiplications is 18.
+```
+
+
 ## Matrix Chain Multiplication Code in Python (Bottom-Up Approach)
 ```python
 def matrix_chain_order(p):
@@ -345,12 +361,16 @@ def matrix_chain_order(p):
 
 p = [1, 2, 3, 4]
 print(f"Minimum number of multiplications is {matrix_chain_order(p)}.")
-# Output: Minimum number of multiplications is 18.
 ```
+
+#### Output
+```
+Minimum number of multiplications is 18.
+```
+
 ## **Complexity Analysis:**
 - **Time Complexity:** O(n^3) where n is the number of matrices in the chain. For an `array p` of dimensions representing the matrices such that the `i-th matrix` has dimensions `p[i-1] x p[i]`, n is `len(p) - 1`
 - **Space Complexity:**  O(n^2) for both top-down and bottom-up approaches
-
 
 # 7. Optimal Binary Search Tree
 
@@ -362,6 +382,7 @@ The Matrix Chain Multiplication finds the optimal way to multiply a sequence of 
 - **Recurrence Relation:** Compute the optimal cost by trying each key as the root and choosing the minimum cost.
   
 ## Optimal Binary Search Tree Code in Python (Top-Down Approach with Memoization)
+
 ```python
 def optimal_bst(keys, freq, memo={}):
     n = len(keys)
@@ -386,9 +407,15 @@ def optimal_bst(keys, freq, memo={}):
 keys = [10, 12, 20]
 freq = [34, 8, 50]
 print(f"Cost of Optimal BST is {optimal_bst(keys, freq)}.")
-# Output: Cost of Optimal BST is 142.
 ```
+
+#### Output
+```
+Cost of Optimal BST is 142.
+```
+
 ## Optimal Binary Search Tree Code in Python (Bottom-Up Approach)
+
 ```python
 def optimal_bst(keys, freq):
     n = len(keys)
@@ -414,12 +441,13 @@ def optimal_bst(keys, freq):
 keys = [10, 12, 20]
 freq = [34, 8, 50]
 print(f"Cost of Optimal BST is {optimal_bst(keys, freq)}.")
-# Output: Cost of Optimal BST is 142.
 ```
-## **Complexity Analysis:**
-- **Time Complexity:** O(n^3) where n is the number of keys in the binary search tree.
-- **Space Complexity:** O(n^2) for both top-down and bottom-up approaches
 
-</br>
-<hr>
-</br>
+#### Output
+```
+Cost of Optimal BST is 142.
+```
+
+### Complexity Analysis
+- **Time Complexity**: O(n^3) where n is the number of keys in the binary search tree.
+- **Space Complexity**: O(n^2) for both top-down and bottom-up approaches
