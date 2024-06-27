@@ -1,3 +1,3 @@
 # List of sections
 
-- [Naive Bayes Classifiers](Naive_Bayes_Classifiers.md)
+- [Term Frequency-Inverse Document Frequency](Tf-IDF)
