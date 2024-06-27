@@ -93,13 +93,9 @@ $$
 
 - Rain:
 
-$$
-P(Rain|Yes) = \frac{2}{6}
-$$
+$$P(Rain|Yes) = \frac{2}{6}$$
 
-$$
-P(Rain|No) = \frac{4}{4}
-$$
+$$P(Rain|No) = \frac{4}{4}$$
 
 - Overcast:
 
@@ -111,10 +107,7 @@ $$
 $$
 
 
-Here, we can see that
-  $$
-    P(Overcast|No)  = 0
-  $$
+Here, we can see that P(Overcast|No)  = 0
 This is a zero probability error! 
 
 Since probability is 0, naive bayes model fails to predict.
@@ -124,13 +117,9 @@ Since probability is 0, naive bayes model fails to predict.
   In Laplace's correction, we scale the values for 1000 instances.
   - **Calculate prior probabilities**
 
-  $$
-     P(Yes)  =  \frac{600}{1002} 
-  $$
+  $$P(Yes)  =  \frac{600}{1002}$$
   
-  $$
-     P(No)  =  \frac{402}{1002} 
-  $$
+  $$P(No)  =  \frac{402}{1002}$$
 
 - **Calculate likelihoods**
 
@@ -151,21 +140,13 @@ Since probability is 0, naive bayes model fails to predict.
 
     - **Rain:**
 
-  $$
-     P(Rain|Yes)  =  \frac{200}{600} 
-  $$
-  $$
-     P(Rain|No)  =  \frac{401}{402} 
-  $$
+  $$P(Rain|Yes)  =  \frac{200}{600}$$
+  $$P(Rain|No)  =  \frac{401}{402}$$
 
   - **Overcast:**
 
-  $$
-     P(Overcast|Yes)  =  \frac{400}{600} 
-  $$
-  $$
-     P(Overcast|No)  =  \frac{1}{402}
-  $$
+  $$P(Overcast|Yes)  =  \frac{400}{600}$$
+  $$P(Overcast|No)  =  \frac{1}{402}$$
 
 
   2. **Wind (B):** 
@@ -181,49 +162,27 @@ Since probability is 0, naive bayes model fails to predict.
 
     - **Weak:**
 
-    $$
-       P(Weak|Yes)  =  \frac{500}{600} 
-    $$
-    $$
-       P(Weak|No)  =  \frac{200}{400} 
-    $$
+    $$P(Weak|Yes)  =  \frac{500}{600}$$
+    $$P(Weak|No)  =  \frac{200}{400}$$
 
     - **Strong:**
 
-    $$
-       P(Strong|Yes)  =  \frac{100}{600} 
-    $$
-    $$
-       P(Strong|No)  =  \frac{200}{400}
-    $$
+    $$P(Strong|Yes)  =  \frac{100}{600}$$
+    $$P(Strong|No)  =  \frac{200}{400}$$
 
   - **Calculting probabilities:**
   
-  $$
-     P(PlayTennis|Yes)  =  P(Yes) * P(Overcast|Yes) * P(Weak|Yes)
-  $$
-  $$
-                 =  \frac{600}{1002} * \frac{400}{600} * \frac{500}{600} 
-  $$
-  $$
-                 =  0.3326
-  $$
+  $$P(PlayTennis|Yes)  =  P(Yes) * P(Overcast|Yes) * P(Weak|Yes)$$
+  $$=  \frac{600}{1002} * \frac{400}{600} * \frac{500}{600}$$
+  $$=  0.3326$$
 
-  $$
-     P(PlayTennis|No)  =  P(No) * P(Overcast|No) * P(Weak|No)
-  $$
-  $$
-                 =  \frac{402}{1002} * \frac{1}{402} * \frac{200}{400} 
-  $$
-  $$
-                 =  0.000499 =  0.0005
-  $$
+  $$P(PlayTennis|No)  =  P(No) * P(Overcast|No) * P(Weak|No)$$
+  $$=  \frac{402}{1002} * \frac{1}{402} * \frac{200}{400}$$
+  $$=  0.000499 =  0.0005$$
 
 
 Since ,
-$$
-     P(PlayTennis|Yes)  >  P(PlayTennis|No) 
-$$
+$$P(PlayTennis|Yes)  >  P(PlayTennis|No)$$
 we can conclude that tennis can be played if outlook is overcast and wind is weak.
 
 
