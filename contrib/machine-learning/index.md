@@ -18,6 +18,7 @@
 - [Grid Search](grid-search.md)
 - [K-Means](kmeans.md)
 - [K-nearest neighbor (KNN)](knn.md)
+- [Run Tensors on GPUs](Use_GPU_In_PyTorch.md)
 - [Xgboost](xgboost.md)
 - [Artificial Neural Network from the Ground Up](ann.md)
 - [Introduction To Convolutional Neural Networks (CNNs)](intro-to-cnn.md)
