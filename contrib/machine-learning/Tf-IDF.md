@@ -9,6 +9,7 @@ TF-IDF stands for Term Frequency Inverse Document Frequency. It is a statistical
 $$tf(t,d) = N(t) / t(d)$$
 where, 
 N(t) = Number of times term t appears in document d
+
 t(d) = Total number of terms in document d.
 
 
@@ -16,6 +17,7 @@ t(d) = Total number of terms in document d.
 $$idf(t) = log(N/ df(t))$$
 where, 
 df(t) = Number of documents containing term t
+
 N = Total number of documents
 
 * TF-IDF: The product of TF and IDF, providing a balanced measure that accounts for both the frequency of terms in a document and their rarity across the corpus. The tf-idf weight consists of two terms :- Normalized Term Frequency (tf) and Inverse Document Frequency (idf)
