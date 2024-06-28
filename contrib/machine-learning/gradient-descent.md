@@ -19,32 +19,21 @@ The core idea of Gradient Descent is to move in the direction of the steepest de
 
 ### Mathematical Formulation
 
-For a parameter \( \theta \):
-
-\[ \theta := \theta - \alpha \frac{\partial J(\theta)}{\partial \theta} \]
+For a parameter θ: `θ := θ − α(∂θ/∂J(θ))`​
 
 Where:
-- \( \theta \) is the parameter.
-- \( \alpha \) is the learning rate.
-- \( J(\theta) \) is the cost function.
+- `θ` is the parameter.
+- `α` is the learning rate.
+- `J(θ)` is the cost function.
 
 ## Hyperparameters
 
-### Learning Rate (\( \alpha \))
-
-The learning rate determines the size of the steps taken towards the minimum. 
-
-### Number of Iterations
-
-This is the number of times the algorithm will update the parameters.
-
-### Batch Size
-
-In batch gradient descent, the entire dataset is used to compute the gradient. In stochastic gradient descent, each iteration uses a single data point. Mini-batch gradient descent uses a subset of data points.
-
-### Regularization Parameter
-
-This parameter is used to prevent overfitting by adding a penalty to the cost function based on the size of the parameters.
+| Hyperparameter          | Description                                                                                     |
+|-------------------------|-------------------------------------------------------------------------------------------------|
+| Learning Rate `α` | Determines the size of the steps taken towards the minimum.                                       |
+| Number of Iterations    | Number of times the algorithm will update the parameters.                                         |
+| Batch Size              | In batch gradient descent, the entire dataset is used. In stochastic gradient descent, each iteration uses a single data point. Mini-batch gradient descent uses a subset of data points. |
+| Regularization Parameter| Prevents overfitting by adding a penalty to the cost function based on the size of the parameters.|
 
 ## Advantages and Disadvantages
 
