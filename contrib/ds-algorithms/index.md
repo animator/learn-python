@@ -22,3 +22,4 @@
 - [AVL Trees](avl-trees.md)
 - [Splay Trees](splay-trees.md)
 - [Dijkstra's Algorithm](dijkstra.md)
+- [Tree Traversals](tree-traversal.md)
