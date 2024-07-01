@@ -11,3 +11,4 @@
 - [Getting started with Seaborn](seaborn-basics.md)
 - [Bar Plots in Plotly](plotly-bar-plots.md)
 - [Pie Charts in Plotly](plotly-pie-charts.md)
+- [Scatter Plots in Plotly](plotly-scatter-plots.md)
