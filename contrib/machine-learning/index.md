@@ -27,4 +27,4 @@
 - [Transformers](transformers.md)
 - [Reinforcement Learning](reinforcement-learning.md) 
 - [Neural network regression](neural-network-regression.md)
-- [exploratory data analysis](exploratory_dataAnalysis.md)
+- [Exploratory Data Analysis](eda.md)
