@@ -7,6 +7,7 @@
 - [Line Charts in Matplotlib](matplotlib-line-plots.md)
 - [Scatter Plots in Matplotlib](matplotlib-scatter-plot.md)
 - [Violin Plots in Matplotlib](matplotlib-violin-plots.md)
+- [subplots in Matplotlib](matplotlib-sub-plot.md)
 - [Introduction to Seaborn and Installation](seaborn-intro.md)
 - [Seaborn Plotting Functions](seaborn-plotting.md)
 - [Getting started with Seaborn](seaborn-basics.md)
