@@ -1,6 +1,6 @@
 # Linked List Data Structure
 
-Link list is a linear data Structure which can be defined as collection of objects called nodes that are randomly stored in the memory.
+Linked list is a linear data Structure which can be defined as collection of objects called nodes that are randomly stored in the memory.
 A node contains two types of metadata i.e. data stored at that particular address and the pointer which contains the address of the next node in the memory. 
 
 The last element in a linked list features a null pointer.
@@ -36,10 +36,10 @@ The smallest Unit: Node
 Now, we will see the types of linked list.
  
 There are mainly four types of linked list,
-1. Singly Link list
-2. Doubly link list 
-3. Circular link list
-4. Doubly circular link list
+1. Singly linked list
+2. Doubly linked list 
+3. Circular linked list
+4. Doubly circular linked list
 
 
 ## 1. Singly linked list.
@@ -160,6 +160,18 @@ check the list is empty otherwise shift the head to next node.
         temp.next = None  # Remove the last node by setting the next pointer of the second-last node to None
 ```
 
+### Reversing the linked list
+```python
+    def reverseList(self):
+        prev = None
+        temp = self.head
+        while(temp):
+            nextNode = temp.next #Store the next node
+            temp.next = prev # Reverse the pointer of current node
+            prev = temp # Move prev pointer one step forward
+            temp = nextNode # Move temp pointer one step forward.
+        self.head = prev # Update the head pointer to last node
+```
 
 ### Search in a linked list 
 ```python
@@ -173,6 +185,8 @@ check the list is empty otherwise shift the head to next node.
             position += 1
         return f"Value '{value}' not found in the list" 
 ```
+
+Connect all the code.
 
 ```python
     if __name__ == '__main__':
@@ -197,13 +211,17 @@ check the list is empty otherwise shift the head to next node.
 
         #delete at the end
         llist.deleteFromEnd()  # 2 3 56 9 4 10
-        # Print the list
+        # Print the original list
+        llist.printList()
+        llist.reverseList() #10 4 9 56 3 2
+        # Print the reversed list
         llist.printList()
 ``` 
 ## Output:
 
-2 3 56 9 4 10 
+2 3 56 9 4 10
 
+10 4 9 56 3 2
 
 
 ## Real Life uses of Linked List
