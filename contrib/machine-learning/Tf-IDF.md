@@ -1,47 +1,55 @@
 ## TF-IDF (Term Frequency-Inverse Document Frequency)
 
 ### Introduction
-TF-IDF stands for Term Frequency Inverse Document Frequency. It is a statistical measure used to evaluate the importance of a word in a document relative to a collection of documents (corpus). It is often used in information retrieval and text mining to identify the most significant words within a document.
+TF-IDF, which stands for Term Frequency-Inverse Document Frequency, is a powerful statistical measure used in the fields of information retrieval and text mining. It helps determine the significance of a word within a single document while also considering its rarity across a collection of documents, known as a corpus. By balancing these two aspects, TF-IDF effectively highlights the most important terms that characterize the content of a document.
 
 
 ### Terminologies
-* Term Frequency (tf):It is a scoring of the frequency of word in the current  document. In document d, the frequency represents the number of instances of a given word t. Therefore, we can see that it becomes more relevant when a word appears in the text, which is rational. Since the ordering of terms is not significant, we can use a vector to describe the text in the bag of term models. For each specific term in the paper, there is an entry with the value being the term frequency.
+* Term Frequency (tf):Term Frequency (TF) measures how frequently a term appears in a document. This measure helps understand the prominence of a word within a given document. The basic idea is that the more a word appears in a document, the more important it might be considered. However, this importance is normalized by the total number of words in the document to ensure fair comparison across documents of varying lengths.
+Mathematically, the term frequency tf(t,d) of term t in document d is given by:
 $$tf(t,d) = N(t) / t(d)$$
 where, 
-N(t) = Number of times term t appears in document d, t(d) = Total number of terms in document d.
+N(t) = Number of times term t appears in document d &
+t(d) = Total number of terms in document d.
 
 
-* Inverse Document Frequency (idf):It is a scoring of how rare the word is  across documents. Mainly, it tests how relevant the word is. The key aim of the search is to locate the appropriate records that fit the demand. Since tf considers all terms equally significant, it is therefore not only possible to use the term frequencies to measure the weight of the term in the paper. For finding idf we first need to find df.
+* Inverse Document Frequency (idf):Inverse Document Frequency (IDF) measures the rarity of a term across the entire corpus. While TF highlights the local importance of a term, IDF adjusts this importance by considering the term's distribution across all documents. The core idea is that if a term appears in many documents, it might not be particularly useful for distinguishing one document from another. Conversely, terms that are rare across documents are often more discriminative.
+The IDF for a term t is calculated as:
 $$idf(t) = log(N/ df(t))$$
 where, 
-df(t) = Number of documents containing term t, N = Total number of documents
+df(t) = Number of documents containing term t &
+N = Total number of documents
 
-* TF-IDF: The product of TF and IDF, providing a balanced measure that accounts for both the frequency of terms in a document and their rarity across the corpus. The tf-idf weight consists of two terms :- Normalized Term Frequency (tf) and Inverse Document Frequency (idf)
-$$TF-IDF(t,d,D)=tf(t,d)×idf(t,D)$$
+* TF-IDF: TF-IDF is the product of TF and IDF, providing a comprehensive measure that reflects both the frequency of a term in a document and its rarity across the corpus. This combination allows TF-IDF to identify terms that are both significant within a specific document and distinctive across the entire collection of documents. 
+The TF-IDF score for a term t in document d within a corpus D is computed as:
+$$TF-IDF(t,d,D)=TF(t,d)×IDF(t,D)$$
 
 ### Applications of TF-IDF
-TF-IDF is widely used in various applications in the different fields as follows:
-* Information Retrieval
-* Content Tagging
-* Text Mining and Analysis
-* Text Similarity Measurement
-* Document Clustering and Classification
-* Natural Language Processing (NLP)
-* Recommendation Systems
+TF-IDF is widely used in various applications across different fields, including:
+* Information Retrieval: Enhancing search engines to return more relevant results.
+* Content Tagging: Automatically tagging documents with relevant keywords. 
+* Text Mining and Analysis: Identifying important words in large text corpora. 
+* Text Similarity Measurement: Comparing documents to find similarities. 
+* Document Clustering and Classification: Grouping documents into clusters and classifying them based on their content. 
+* Natural Language Processing (NLP): Improving various NLP tasks like sentiment analysis, topic modeling, etc. 
+* Recommendation Systems: Recommending content based on text analysis.
+
 
 ### Advantages
-* Simple to implement.
-* Useful for information retrieval.
-* Effective in highlighting important words.
-* Does not require labeled data.
-* Versatile across various applications.
+* Simple to Implement: TF-IDF is straightforward to compute and implement. 
+* Useful for Information Retrieval: It helps in identifying the most relevant documents for a given query. 
+* Effective in Highlighting Important Words: It balances term frequency with the rarity of terms across the corpus. 
+* Does Not Require Labeled Data: It can be applied to any text corpus without the need for labeled data. 
+* Versatile: Applicable across a wide range of text analysis tasks.
+
 
 ### Disadvantages
-* Ignores word order and context.
-* DDoes not capture semantic relationships.
-* Not effective for polysemous words. 
-* Assumes independence of terms.
-* Large vocabulary size can increase computational complexity.
+* Ignores Word Order and Context: TF-IDF treats text as a bag of words, disregarding the order and context of terms. 
+* Does Not Capture Semantic Relationships: It cannot capture the meanings and relationships between words. 
+* Not Effective for Polysemous Words: Words with multiple meanings can lead to inaccuracies. 
+* Assumes Independence of Terms: Assumes that terms are independent of each other. 
+* Large Vocabulary Size: Can increase computational complexity with very large corpora.
+
 
 ### Working
 ###### Consider a simple example with three documents:
@@ -72,4 +80,4 @@ By calculating TF-IDF for all terms across all documents, we can identify the mo
 
 
 ### Conclusion
-TF-IDF (Term Frequency-Inverse Document Frequency) is a widely used technique in text mining and information retrieval for identifying the importance of words in a document relative to a collection of documents. It effectively highlights significant terms by balancing term frequency within a document and the rarity of the term across the corpus.
+TF-IDF (Term Frequency-Inverse Document Frequency) is a robust technique in text mining and information retrieval. It adeptly balances the frequency of terms within a document with their rarity across a corpus, making it an invaluable tool for highlighting significant terms. Whether used for enhancing search engines, tagging content, analyzing texts, or improving natural language processing tasks, TF-IDF remains a cornerstone technique in the realm of text analysis.
