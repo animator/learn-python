@@ -76,7 +76,13 @@ TF-IDF is widely used in various applications across different fields, including
 
 * TF-IDF: 0.2 × 0.176 = 0.0352
 
-By calculating TF-IDF for all terms across all documents, we can identify the most significant words in each document and understand their importance relative to the entire corpus.
+###### Interpretation
+The TF-IDF scores indicate the importance of the term "cat" in each document:
+* In Document 1, "cat" has a moderate importance with a TF-IDF score of 0.0352.
+* In Document 2, "cat" does not appear, so its TF-IDF score is 0.
+* In Document 3, "cat" has a lower but significant importance with a TF-IDF score of 0.0293.
+This example shows how TF-IDF effectively balances term frequency within individual documents and the term's rarity across the entire corpus, allowing us to identify the most significant terms in context.
+
 
 
 ### Conclusion
