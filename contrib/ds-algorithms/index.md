@@ -24,3 +24,4 @@
 - [Dijkstra's Algorithm](dijkstra.md)
 - [Deque](deque.md)
 - [Tree Traversals](tree-traversal.md)
+- [Kadane's Algorithm](kadanes-algorithm.md)
