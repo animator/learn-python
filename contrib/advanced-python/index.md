@@ -21,3 +21,4 @@
 - [Magic Methods](magic-methods.md)
 - [Asynchronous Context Managers & Generators](asynchronous-context-managers-generators.md)
 - [Threading](threading.md)
+- [Descriptors](descriptors.md)
