@@ -28,3 +28,4 @@
 - [Reinforcement Learning](reinforcement-learning.md) 
 - [Neural network regression](neural-network-regression.md)
 - [Exploratory Data Analysis](eda.md)
+- [Natural Language Processing](natural-language-processing.md)
